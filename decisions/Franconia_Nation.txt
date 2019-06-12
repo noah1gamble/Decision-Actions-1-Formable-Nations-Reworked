@@ -1,0 +1,51 @@
+country_decisions = {
+
+	franconia_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = FRC }
+			NOT = { tag = HLR }
+			NOT = { tag = BAV }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = franconian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = FRC }
+			
+                        owns_core_province = 67 # Nürnberg
+                        owns_core_province = 71 # Ansbach
+                        owns_core_province = 79 # Würzburg
+						owns_core_province = 66 # Bamberg
+                        
+		}
+	 	effect = {
+			change_tag = FRC
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 67 # Nürnberg
+			if = {
+				limit = {
+					NOT = { primary_culture = franconian }
+				}
+				change_primary_culture = franconian
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

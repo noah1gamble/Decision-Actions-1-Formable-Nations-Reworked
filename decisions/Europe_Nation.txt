@@ -1,0 +1,43 @@
+country_decisions = {
+
+	europe_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = EUR }
+			OR = {
+				technology_group = western
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 30
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = EUR }
+			
+                        owns_core_province = 92 # Brabant
+                        owns_core_province = 236 # London
+                        owns_core_province = 183 # Paris
+						owns_core_province = 118 # Roma
+                        owns_core_province = 217 # Madrid
+						owns_core_province = 50 # Berlin
+						owns_core_province = 227 # Lisboa
+		}
+	 	effect = {
+			change_tag = EUR
+			add_prestige = 25
+			set_capital = 92 # Brabant
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

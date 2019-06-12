@@ -1,0 +1,29 @@
+government = feudal_monarchy
+primary_culture = danish
+religion = catholic
+technology_group = western
+capital = 12 #Sjaelland
+
+
+1397.6.17 = {
+	monarch = {
+		name = "Eric VII"
+		dynasty = Gryf
+		birth_date = 1381.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1440.4.9 = {
+	monarch = {
+		name = "Christopher III"
+		dynasty = "von Wittelsbach"
+		birth_date = 1416.2.26
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+

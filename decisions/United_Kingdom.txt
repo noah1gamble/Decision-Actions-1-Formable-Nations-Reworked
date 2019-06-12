@@ -1,0 +1,55 @@
+country_decisions = {
+
+	united_kingdom_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = UKI }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ANG }
+			OR = {
+				culture_group = british
+				primary_culture = welsh
+				primary_culture = irish
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 236		# London
+			owns_core_province = 237		# Oxfordshire
+			owns_core_province = 234		# Wessex
+			owns_core_province = 248		# Lothian
+			owns_core_province = 251		# Aberdeen
+			owns_core_province = 372 		# Ulster
+		}
+		effect = {
+				change_tag = UKI
+				add_prestige = 25
+				ai_will_do = {
+				factor = 400
+			}
+		}
+	}

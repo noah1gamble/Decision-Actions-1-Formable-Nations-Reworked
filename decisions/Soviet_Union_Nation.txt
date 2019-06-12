@@ -1,0 +1,58 @@
+country_decisions = {
+
+	soviet_union_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SOV }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = SOV }
+			NOT = { tag = EUR }
+			primary_culture = russian
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			adm_tech = 30
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = SOV }
+			
+			owns_core_province = 295			# Moskva
+			owns_core_province = 310			# Novgorod
+			owns_core_province = 280			# Kiev
+			owns_core_province = 284			# Crimea
+			owns_core_province = 276			# Minsk
+			owns_core_province = 423			# Kartli
+			owns_core_province = 456			# Turkestan
+			owns_core_province = 441			# Khiva
+			owns_core_province = 1074			# Sibir
+			owns_core_province = 294			# Tver
+			owns_core_province = 308			# Yaroslavl	
+			owns_core_province = 301			# Ryazan
+			owns_core_province = 293			# Smolensk
+			owns_core_province = 306			# Nijni-Novgorod
+			owns_core_province = 307			# Vladimir	
+						
+		}
+		effect = {
+				change_tag = SOV
+				add_prestige = 25
+				ai_will_do = {
+				factor = 400
+			}
+		}
+	}

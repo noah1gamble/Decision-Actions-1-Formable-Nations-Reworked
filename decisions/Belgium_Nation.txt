@@ -1,0 +1,68 @@
+country_decisions = {
+
+	belgium_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = BEL }
+			NOT = { tag = HLR }
+			NOT = { tag = BNL }
+			NOT = { tag = NED }
+			NOT = { tag = EUR }
+			NOT = { tag = FIB }
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+			AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 15
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = BEL }
+			
+                        owns_core_province = 92 # Brabant
+                        owns_core_province = 90 # Vlaanderen
+			owns_core_province = 93 # Liège
+			owns_core_province = 1865 # Ghent
+                        owns_core_province = 1744 # Antwerpen
+			owns_core_province = 2974 # Loon
+			owns_core_province = 1742 # Limburg
+                        owns_core_province = 1866 # Namur
+			owns_core_province = 91 # Hainaut
+                        
+		}
+	 	effect = {
+			change_tag = BEL
+			change_government = administrative_republic
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_prestige = 25
+			set_capital = 92 # Brabant
+			if = {
+				limit = {
+					NOT = { primary_culture = wallonian }
+				}
+				change_primary_culture = wallonian
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

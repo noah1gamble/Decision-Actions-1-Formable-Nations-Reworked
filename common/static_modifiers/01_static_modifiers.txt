@@ -1,0 +1,6 @@
+# modifiers
+
+dec1_formed_spain_golden_conquistador = {
+	global_colonial_growth = 50
+	treasure_fleet_income = 0.50
+}

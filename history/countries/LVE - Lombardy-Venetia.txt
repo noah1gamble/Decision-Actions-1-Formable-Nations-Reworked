@@ -1,0 +1,69 @@
+government = feudal_monarchy
+government_rank = 1
+primary_culture = lombard
+add_accepted_culture = venetian
+religion = catholic
+technology_group = western
+capital = 104 # Milano
+
+1395.1.1 = {
+	monarch = {
+		name = "Gian Galeazzo I"
+		dynasty = "Visconti"
+		birth_date = 1347.10.15
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1395.1.1 = {
+	heir = {
+		name = "Giovanni Maria"
+		monarch_name = "Giovanni Maria I"
+		dynasty = "Visconti"
+		birth_date = 1388.9.7
+		death_date = 1412.5.16
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1402.9.3 = {
+	monarch = {
+		name = "Giovanni Maria I"
+		dynasty = "Visconti"
+		birth_date = 1388.9.7
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1402.9.3 = {
+	heir = {
+		name = "Filippo Maria"
+		monarch_name = "Filippo Maria I"
+		dynasty = "Visconti"
+		birth_date = 1392.9.23
+		death_date = 1447.8.13
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1412.5.16 = {
+	monarch = {
+		name = "Filippo Maria I"
+		dynasty = "Visconti"
+		birth_date = 1392.9.23
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+

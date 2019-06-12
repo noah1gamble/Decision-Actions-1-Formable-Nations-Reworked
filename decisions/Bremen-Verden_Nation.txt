@@ -1,0 +1,44 @@
+country_decisions = {
+
+	bremen-verden_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = HRE }
+			NOT = { tag = EUR }
+			NOT = { tag = LSX }
+			NOT = { tag = NGC }
+			NOT = { tag = PRU }
+			OR = {
+				primary_culture = hannoverian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = BVE }
+			
+                        owns_core_province = 1874 # Bremen
+                        owns_core_province = 54 # Stade
+                        
+		}
+	 	effect = {
+			change_tag = BVE
+			change_government = merchant_republic
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

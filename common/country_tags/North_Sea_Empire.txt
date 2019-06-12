@@ -1,0 +1,1 @@
+NSE = "countries/North_Sea_Empire.txt"

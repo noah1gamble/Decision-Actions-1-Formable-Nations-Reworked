@@ -1,0 +1,1 @@
+EUR = "countries/Europe.txt"

@@ -1,0 +1,156 @@
+#Roman_Empire
+
+graphical_culture = easterngfx
+
+color = { 187 0 7 }
+
+historical_idea_groups = {
+	maritime_ideas
+	religious_ideas
+	defensive_ideas
+	administrative_ideas
+	trade_ideas
+	quality_ideas
+	innovativeness_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_spahi
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	"Ioannes #7" = 40
+	"Alexius #5" = 30
+	"Constantinus #10" = 20
+	"Andronikus #4" = 20
+	"Julius #1" = 20
+	"Romanus #4" = 20
+	"Demetrius #0" = 15
+	"Theodorus #2" = 15
+	"Michael #9" = 10
+	"Andreas #0" = 10
+	"Helena #0" = -10
+	"Thomas #0" = 10
+	"Isaakius #2" = 10
+	"Basileios #2" = 10
+	"Leon #6" = 10
+	"Adrianus #1" = 5
+	"Anastasius #2" = 5
+	"Herakleius #1" = 5
+	"Ioulianus #3" = 5
+	"Ioustinianus #2"= 5
+	"Ioustinus #2" = 5
+	"Konstantius #3" = 5
+	"Markus #1" = 5
+	"Nikephorus #3" = 5
+	"Theophilus #1" = 5
+	"Theodosius #3" = 5
+	"Tiberius #3" = 5
+	"Traianus #1" = 5
+	"Alexandus #1" = 5
+	"Philippus #1" = 5
+	"Athanasius #0" = 0
+	"Antonius #0" = 0
+	"Bartholomaius #0" = 0
+	"Christophorus #0" = 0
+	"Diogenes #0" = 0
+	"Dionysius #0" = 0
+	"Eirenaius #0" = 0
+	"Elpidius #0" = 0
+	"Georgius #0" = 0
+	"Gregorius #0" = 0
+	"Hektorius #0" = 0
+	"Iason #0" = 0
+	"Kyrillus #0" = 0
+	"Matthaius #0" = 0
+	"Niketas #0" = 0
+	"Nikolaos #0" = 0
+	"Nikodemus #0" = 0
+	"Sergius #0" = 0
+	"Porphyrius #0" = 0
+	"Pavlus #0" = 0
+	"Panagiotis #0" = 0
+	"Petrus #0" = 0
+	"Philemon #0" = 0
+	"Prokopius #0" = 0
+	"Stephanus #0" = 0
+	
+	"Eirene #1" = -20
+	"Theodora #1" = -20
+	"Zoe #1" = -10
+}
+
+leader_names = { 
+	Akropolites Angelos Aoinos Apokaukos Argyros
+	Basileous Batatzes Botaneiates Boumbalis
+	Choniates Choumnos
+	Diasorenos Diogenes Doukas
+	Gabras
+	Iagaris
+	Kantakuzenos Kaukadenos Komnenos
+	Laskaris
+	Melissinos Melisurgos Mikrulakes Monomakos Mouzalon
+	Nestongos
+	Palaiologos Paraspondylos Phocas Phouskarnaki Phrangopoulos Psellos
+	Rhadinos Rhangabe Rhodocanakis Romanos
+	Syropoulos
+	Tornikes
+	Zarides Zimisces
+}
+
+ship_names = {
+	Achilleus Adrianoupolis Aetos "Aghia Eirene" "Aghia Helene" "Aghia Magdalene" "Aghia Sophia" 
+	"Aghia Thekla" "Aghion Oros" "Aghios Athanasios" "Aghios Eusebios" "Aghios Ioannes" 
+	"Aghios Markos" "Aghios Maximos" "Aghios Menas" "Aghios Nikolaos" "Aghios Philippos"
+	"Aghios Sergios" "Aghios Stephanos" "Aghios Theodoros" Aigaion Aigyptos Amphitrion 
+	Angeliophoros Aniketos Apokalipsis "Apostolos Andreas" "Apostolos Pavlos" "Apostolos Petros"
+	"Archangelos Michael" "Archangelos Gabriel" Athenai Atrotos "Autokrator Rhomaion" Axiomachos
+	"Basileus Alexios" "Basileus Andronikos" "Basileus Basileios" "Basileus Basileon"
+	"Basileus Herakleios" "Basileus Ioannes" "Basileus Ioustinianos" "Basileus Isaakios" 
+	"Basileus Konstantinos" "Basileus Leon" "Basileus Manuel" "Basileus Michael" 
+	"Basileus Nikephoros" "Basileus Rhomaion" "Basileus Romanos" "Basileus Theodoros" 
+	Basilevousa "Basilissa Eirene" "Basilissa Theodora" "Basilissa Zoe" Belisarios Bosporos Byzantion
+	Chios "Christos Soter" Christophoros Chronos
+	Demetra Despotes "Despotes Moreos" "Dikephalos Aetos" "Doxa Theou" Drakon
+	Endoxos Eperos Epos "Euxinos Pontos"
+	Galaxias Gorgona Gorgopleustos
+	Hades Hektor Hellas Hellespontos Hephaistos Herakles Hermes Heroas Hydra Hygeia
+	Iason Ikaria Imvros Indikopleustes Ionia Ionion
+	Kaisar Kentavros Keravnos Keratios Kerkyra Kyriarchos "Konstantinou Polis" Korinthos Krete Kypros
+	"Leon Skleros" Lemnos Lesbos Lykia "Lykos Thalasses"
+	Makedonia Megaleion "Megas Alexandros" "Megas Konstantinos" "Mikra Asia" Morpheas
+	Naxos Nike Nikephoros
+	Odysseus Okeanos Orestes "Orge Theou" Orthodoxia "Osios Loukas" Ouranos
+	Panaghia Panther Pantokrator Panteleimon Pantodynamos Paphlagonia Pegasos Pelagos
+	Peloponnesos Perseus Polydynamos Pontos Poseidon Propontis
+	Rhodos Rhomaios Romanos
+	Samos Samothrake Sebastokrator Sikelia Soter Stratelates
+	Taxiarchis Theophilos Theophylaktos Thessalia Thessalonike Thalassokrator Thrake Thrylos Triton
+	Xiphias Xiphomachos
+	Zakynthos Zoodotis
+}
+
+army_names = {
+	"Thema Thrakes" "Thema Makedonikon" "Thema Thessalonikes" "Thema Helladikon" "Thema Opsikion" "Thema Optimaton" 
+	"Thema Paphlagonia" "Thema $PROVINCE$"
+}
+
+fleet_names = {
+	"Thema Cibyrraeoton" "Thema Cypriakon" "Thema Aigaeou Pelagous" "Thema Sicelias"
+}

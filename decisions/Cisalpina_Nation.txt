@@ -1,0 +1,59 @@
+country_decisions = {
+
+	cisalpina_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = ITA }
+			NOT = { tag = ROE }
+			NOT = { tag = ALP }
+			NOT = { tag = CIS }
+			NOT = { tag = EUR }
+			NOT = { tag = ADR }
+			OR = {
+				primary_culture = ligurian
+				primary_culture = lombard
+				primary_culture = maltese
+				primary_culture = neapolitan
+				primary_culture = piedmontese
+				primary_culture = romagnan
+				primary_culture = sardinian
+				primary_culture = sicilian
+				primary_culture = tuscan
+				primary_culture = umbrian
+				primary_culture = venetian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = CIS }
+			
+			owns_core_province = 104	# Milan
+			owns_core_province = 106	# Modena
+			owns_core_province = 108	# Verona
+			owns_core_province = 109	# Mantua
+			owns_core_province = 107 	# Brescia
+			owns_core_province = 113 	# Ferrara
+			owns_core_province = 114 	# Romagna
+			owns_core_province = 2977 	# Urbino
+			owns_core_province = 2981   # Montferrat
+}
+	 	effect = {
+			change_tag = CIS
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 104 # Milan
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}

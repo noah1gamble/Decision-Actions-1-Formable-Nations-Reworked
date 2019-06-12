@@ -1,0 +1,67 @@
+country_decisions = {
+
+	baltic_union_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = PRU }
+			NOT = { tag = TEU }
+			NOT = { tag = BTC }
+			NOT = { tag = LIT }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = lithuanian
+				primary_culture = latvian
+				primary_culture = estonian
+				primary_culture = prussian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = BTC }
+			
+                        owns_core_province = 38 # Riga
+                        owns_core_province = 36 # Reval
+                        owns_core_province = 35 # Ösel
+						owns_core_province = 37 # Livland
+                        owns_core_province = 39 # Goldingen
+						owns_core_province = 273 # Latgalia
+						owns_core_province = 272 # Vilna
+						owns_core_province = 1936 # Kovno
+						owns_core_province = 271 # Samogitia
+						owns_core_province = 40 # Memel
+		}
+	 	effect = {
+			change_tag = BTC
+			change_government = administrative_republic
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_prestige = 25
+			set_capital = 38 # Riga
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

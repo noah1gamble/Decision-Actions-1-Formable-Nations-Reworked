@@ -1,0 +1,53 @@
+country_decisions = {
+
+	angevin_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = ANG }
+			OR = {
+				primary_culture = english
+				primary_culture = welsh
+				primary_culture = scottish
+				culture_group = french
+				primary_culture = basque
+				primary_culture = breton
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = ANG }
+			
+                        owns_core_province = 236		# London
+			owns_core_province = 237		# Oxfordshire
+			owns_core_province = 234		# Wessex
+			owns_core_province = 235		# Kent
+			owns_core_province = 238		# East Anglia
+			owns_core_province = 177	# Maine
+			owns_core_province = 179	# Blois
+			owns_core_province = 182	# Vermandois
+			owns_core_province = 183	# Île-de-France
+			owns_core_province = 184	# Orléannais
+			owns_core_province = 185	# Othe
+			owns_core_province = 186	# Champagne		
+		}
+	 	effect = {
+			change_tag = ANG
+			change_government = despotic_monarchy
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

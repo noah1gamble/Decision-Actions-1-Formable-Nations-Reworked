@@ -1,0 +1,49 @@
+country_decisions = {
+
+	basque_country_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = BSQ }
+			NOT = { tag = HLR }
+			NOT = { tag = IBE }
+			NOT = { tag = SPA }
+			NOT = { tag = EUR }
+			NOT = { tag = FIB }
+			OR = {
+				primary_culture = basque
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = BSQ }
+			
+                        owns_core_province = 210 # Navarra
+                        owns_core_province = 209 # Vizcaya
+                        owns_core_province = 173 # Labourd
+		}
+	 	effect = {
+			change_tag = BSQ
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 210 # Navarra
+			if = {
+				limit = {
+					NOT = { primary_culture = basque }
+				}
+				change_primary_culture = basque
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}	

@@ -1,0 +1,57 @@
+country_decisions = {
+
+	north_sea_empire_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = NSE }
+			NOT = { tag = GBR }
+			NOT = { tag = IRE }
+			NOT = { tag = SNO }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = danish
+				primary_culture = english
+				primary_culture = scottish
+				primary_culture = norwegian
+				primary_culture = swedish
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = NSE }
+			
+                        owns_core_province = 12 # Sjaelland
+                        owns_core_province = 6 # Skane
+                        owns_core_province = 15 # Midtjylland
+						owns_core_province = 17 # Akershus
+                        owns_core_province = 24 # Agder
+						owns_core_province = 23 # Bergenshus
+						owns_core_province = 20 # Trondelag
+						owns_core_province = 236 # London
+						owns_core_province = 238 # Essex
+						owns_core_province = 243 # Lincoln
+						owns_core_province = 245 # Yorkshire
+						owns_core_province = 246 # Northumberland
+						owns_core_province = 234 # Wessex
+		}
+	 	effect = {
+			change_tag = NSE
+			change_government = despotic_monarchy
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

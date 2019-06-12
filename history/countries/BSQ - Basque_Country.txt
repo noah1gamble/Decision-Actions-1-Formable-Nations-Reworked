@@ -1,0 +1,28 @@
+government = feudal_monarchy
+primary_culture = basque
+religion = catholic
+technology_group = western
+capital = 210	# Pamplona
+
+
+1387.1.1 = {
+	monarch = {
+		name = "Carlos III"
+		dynasty = "de Évreux"
+		birth_date = 1361.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1425.1.1 = {
+	monarch = {
+		name = "Juan II"
+		dynasty = "de Trastámara"
+		birth_date = 1398.1.20
+		adm = 4
+		dip = 1
+		mil = 0
+	}
+}

@@ -1,0 +1,49 @@
+country_decisions = {
+
+	himalayan_empire_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HIN }
+			NOT = { tag = BHA }
+			NOT = { tag = TIB }
+			OR = {
+				primary_culture = nepali
+				primary_culture = tibetan
+				primary_culture = assamese
+				primary_culture = kashmiri
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = HIM }
+			
+                        owns_core_province = 2128 # Ngari
+                        owns_core_province = 557 # Katmandu
+                        owns_core_province = 554 # Baisi Rajya
+						owns_core_province = 2071 # Limbuwan
+                        owns_core_province = 565 # Bhutan
+						owns_core_province = 677 # Lhasa
+						owns_core_province = 508 # Kashmir
+						owns_core_province = 509 # Kangra
+		}
+	 	effect = {
+			change_tag = HIM
+			change_government = despotic_monarchy
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

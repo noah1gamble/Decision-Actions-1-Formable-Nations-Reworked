@@ -1,0 +1,54 @@
+country_decisions = {
+
+	maghrebia_nation = {
+		major = yes
+		potential = {
+			NOT = { exist = MGH }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ALG }
+			NOT = { tag = ARB }
+			NOT = { tag = EGY }
+			NOT = { tag = TRP }
+			OR ={
+			primary_culture = algerian
+			primary_culture = berber
+			primary_culture = moroccan
+			primary_culture = tunisian
+			
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 344	# Marrakech
+			owns_core_province = 338	# Al-Djazir
+			owns_core_province = 341	# Tunis
+			owns_core_province = 354	# Tripoli
+			owns_core_province = 336	# Tlemcen
+			owns_core_province = 343	# Fez
+			owns_core_province = 352	# Gafsa
+			owns_core_province = 2449	# Jufra		
+		}
+		effect = {
+			change_tag = MGH
+			change_government = despotic_monarchy
+			add_prestige = 25
+		}
+	ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+	
+	
+
+

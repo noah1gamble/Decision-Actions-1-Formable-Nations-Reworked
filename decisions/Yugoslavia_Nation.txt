@@ -1,0 +1,61 @@
+country_decisions = {
+
+	yugoslavia_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = YUG }
+			NOT = { tag = HLR }
+			NOT = { tag = SWI }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = croatian
+				primary_culture = serbian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 20
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = YUG }
+			
+                        owns_core_province = 141 # Serbia
+                        owns_core_province = 3002 # Visoki
+                        owns_core_province = 140 # Bosna
+                        owns_core_province = 139 # Hum
+			owns_core_province = 136 # Dalmatia
+			owns_core_province = 137 # Ragusa
+			owns_core_province = 1826 # Lika
+			owns_core_province = 131 # Zagreb
+			owns_core_province = 1767 # Slavonia
+			owns_core_province = 138 # Zeta
+			owns_core_province = 152 # Vasard
+			owns_core_province = 1827 # Raska
+			owns_core_province = 1831 # Travunia
+			owns_core_province = 1828 # Donji Kraiji
+		}
+	 	effect = {
+			change_tag = YUG
+			add_prestige = 25
+			change_government = administrative_monarchy
+			set_capital = 141 # Serbia
+			if = {
+				limit = {
+					NOT = { primary_culture = serbian }
+				}
+				change_primary_culture = serbian
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

@@ -1,0 +1,43 @@
+government = feudal_monarchy
+government_rank = 1
+technology_group = western
+primary_culture = franconian
+religion = catholic
+capital = 67	# Nürnberg
+
+# Margraves
+1398.1.1 = {
+	monarch = {
+		name = "Friedrich VI"
+		dynasty = "von Hohenzollern"
+		birth_date = 1371.9.21
+		dip = 1
+		adm = 1
+		mil = 1
+	}
+}
+
+1414.11.9 = {
+	heir = {
+		name = "Albrecht Achilles"
+		monarch_name = "Albrecht II Achilles"
+		dynasty = "von Hohenzollern"
+		birth_date = 1414.11.9
+		death_date = 1486.3.11
+		claim = 95
+		dip = 2
+		adm = 2
+		mil = 2
+	}
+}
+
+1440.9.21 = {
+	monarch = {
+		name = "Albrecht II Achilles"
+		dynasty = "von Hohenzollern"
+		birth_date = 1414.11.9
+		dip = 2
+		adm = 2
+		mil = 1
+	}
+}

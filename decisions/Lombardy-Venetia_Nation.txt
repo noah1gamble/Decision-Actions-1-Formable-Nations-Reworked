@@ -1,0 +1,56 @@
+country_decisions = {
+
+	lombardy-venetia_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HAB }
+			NOT = { tag = HLR }
+			NOT = { tag = LVE }
+			NOT = { tag = ITA }
+			NOT = { tag = IMA }
+			NOT = { tag = TSI }
+			NOT = { tag = ALP }
+			NOT = { tag = CIS }
+			NOT = { tag = EUR }
+			NOT = { tag = ADR }
+			OR = {
+				primary_culture = venetian
+				primary_culture = lombard
+				primary_culture = romagnan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = LVE }
+			
+                        owns_core_province = 104 # Milan
+                        owns_core_province = 112 # Venezia
+                        owns_core_province = 109 # Mantua
+			owns_core_province = 1862 # Cremona
+                        owns_core_province = 107 # Brescia
+			owns_core_province = 108 # Verona
+			owns_core_province = 1774 # Treviso
+			owns_core_province = 111 # Friuli
+		}
+	 	effect = {
+			change_tag = LVE
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 104 # Milan
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

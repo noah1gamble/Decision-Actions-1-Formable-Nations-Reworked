@@ -1,0 +1,66 @@
+government = feudal_monarchy
+primary_culture = castillian
+add_accepted_culture = andalucian
+add_accepted_culture = leonese
+religion = catholic
+technology_group = western
+historical_friend = POR
+historical_rival = GRA
+capital = 219 # Toledo
+
+national_focus = MIL
+
+
+
+1390.10.9 = {
+	monarch = {
+		name = "Enrique III"
+		dynasty = "de Trastámara"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1405.3.6 = {
+	heir = {
+		name = "Juan"
+		monarch_name = "Juan II"
+		dynasty = "de Trastámara"
+		birth_date = 1405.3.6
+		death_date = 1454.7.20
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1406.12.26 = {
+	monarch = {
+		name = "Juan II"
+		dynasty = "de Trastámara"
+		birth_date = 1405.3.6
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1422.1.1 = { leader = {	name = "Álvaro de Luna"	type = general	rank = 1	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1453.6.2 } }
+
+
+1425.1.5 = {
+	heir = {
+		name = "Enrique"
+		monarch_name = "Enrique IV"
+		dynasty = "de Trastámara"
+		birth_date = 1425.1.5
+		death_date = 1474.12.11
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+

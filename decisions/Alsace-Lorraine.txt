@@ -1,0 +1,53 @@
+country_decisions = {
+
+	alsace-lorraine_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = SWB }
+			NOT = { tag = HLR }
+			NOT = { tag = SWI }
+			NOT = { tag = EUR }
+			NOT = { tag = FIB }
+			NOT = { tag = BUR }
+			OR = {
+				primary_culture = swabian
+				primary_culture = burgundian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = ALL }
+			
+                        owns_core_province = 75 # Elsass
+                        owns_core_province = 188 # Metz
+                        owns_core_province = 189 # Lothringen
+			owns_core_province = 1880 # Sundgau
+		}
+	 	effect = {
+			change_tag = ALL
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 75 # Elsass
+			if = {
+				limit = {
+					NOT = { primary_culture = swabian }
+				}
+				change_primary_culture = swabian
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

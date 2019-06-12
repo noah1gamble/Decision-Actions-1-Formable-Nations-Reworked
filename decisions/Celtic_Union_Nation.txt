@@ -1,0 +1,49 @@
+country_decisions = {
+
+	celtic_union_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = GBR }
+			NOT = { tag = ENG }
+			NOT = { tag = FRA }
+			NOT = { tag = CEU }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = scottish
+				primary_culture = welsh
+				primary_culture = irish
+				primary_culture = breton
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = CEU }
+			
+                        owns_core_province = 373 # Meath
+                        owns_core_province = 375 # Munster
+                        owns_core_province = 248 # Lothian
+						owns_core_province = 252 # Highlands
+                        owns_core_province = 241 # Glamorganshire
+						owns_core_province = 169 # Armor
+						owns_core_province = 172 # Nantes
+		}
+	 	effect = {
+			change_tag = CEU
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

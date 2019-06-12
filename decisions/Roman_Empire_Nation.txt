@@ -1,0 +1,66 @@
+country_decisions = {
+
+	roman_empire_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = ITA }
+			NOT = { tag = GRE }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROE }
+			NOT = { tag = CIS }
+			NOT = { tag = EUR }
+			OR ={
+				primary_culture = ligurian
+				primary_culture = lombard
+				primary_culture = maltese
+				primary_culture = neapolitan
+				primary_culture = piedmontese
+				primary_culture = romagnan
+				primary_culture = sardinian
+				primary_culture = sicilian
+				primary_culture = tuscan
+				primary_culture = umbrian
+				primary_culture = venetian
+				primary_culture = greek
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 1
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = ROE }
+			
+                        owns_core_province = 118 # Roma
+                        owns_core_province = 2980 # Lucca
+                        owns_core_province = 121 # Napoli
+						owns_core_province = 116 # Firenze
+                        owns_core_province = 117 # Siena
+						owns_core_province = 101 # Genoa
+						owns_core_province = 112 # Venezia
+						owns_core_province = 136 # Dalmatia
+						owns_core_province = 146 # Athens
+						owns_core_province = 125 # Palermo
+						owns_core_province = 151 # Constantinople
+						owns_core_province = 149 # Edirne
+						owns_core_province = 148 # Macedonia
+						owns_core_province = 144 # Epirus
+						owns_core_province = 147 # Thessaly
+		}
+	 	effect = {
+			change_tag = ROE
+			change_government = despotic_monarchy
+			add_prestige = 25
+			set_capital = 118 # Roma
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}

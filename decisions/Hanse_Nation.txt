@@ -1,0 +1,47 @@
+country_decisions = {
+
+	hanse_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HRE }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = EPR }
+			NOT = { tag = NGC }
+			NOT = { tag = WES }
+			OR = {
+				primary_culture = pommeranian
+				primary_culture = hannoverian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = HNS }
+			
+                        owns_core_province = 44 # Hamburg
+                        owns_core_province = 1874 # Bremen
+                        owns_core_province = 45 # Lübeck
+						owns_core_province = 46 # Rostok
+		}
+	 	effect = {
+			change_tag = HNS
+			change_government = merchant_republic
+			add_prestige = 25
+			set_capital = 45 # Lübeck
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

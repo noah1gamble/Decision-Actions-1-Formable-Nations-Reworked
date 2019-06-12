@@ -1,0 +1,70 @@
+country_decisions = {
+
+	alps_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = ALP }
+			NOT = { tag = HLR }
+			NOT = { tag = HAB }
+			NOT = { tag = TSI }
+			NOT = { tag = LVE }
+			NOT = { tag = ITA } 
+			NOT = { tag = IMA }
+			NOT = { tag = AHU }
+			NOT = { tag = CIS }
+			NOT = { tag = EUR }
+			NOT = { tag = ADR }
+			OR = {
+				primary_culture = austrian
+				primary_culture = bavarian
+				primary_culture = swiss
+				primary_culture = piedmontese
+				primary_culture = lombard
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 15
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = ALP }
+			
+                        owns_core_province = 73 # Tirol
+                        owns_core_province = 110 # Trent
+                        owns_core_province = 1768 # Lienz
+			owns_core_province = 128 # Kärnten
+                        owns_core_province = 1873 # Graubünden
+			owns_core_province = 166 # Waldstätte
+			owns_core_province = 1871 # Wallis
+			owns_core_province = 165 # Bern
+			owns_core_province = 107 # Brescia
+		}
+	 	effect = {
+			change_tag = ALP
+			change_government = administrative_republic
+			add_prestige = 25
+			set_capital = 73 # Tirol
+			73 = {
+					add_base_tax = 3
+					add_base_production = 2
+					add_base_manpower = 3
+			if = {
+				limit = {
+					NOT = { primary_culture = austrian }
+				}
+				change_primary_culture = austrian
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

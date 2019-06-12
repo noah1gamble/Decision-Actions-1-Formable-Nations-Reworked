@@ -1,0 +1,50 @@
+country_decisions = {
+
+	burma_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = BRM }
+			OR = {
+				primary_culture = arakanese
+				primary_culture = burmese
+				primary_culture = chin
+				primary_culture = kachin
+				primary_culture = karen
+				primary_culture = shan
+				primary_culture = mon
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = BRM }
+			
+                        owns_core_province = 584 # Ava
+                        owns_core_province = 585 # Taungoo
+                        owns_core_province = 586 # Pegu
+						owns_core_province = 579 # Mrauk U
+                        owns_core_province = 581 # Sagaing
+						owns_core_province = 583 # Hsenwi
+						owns_core_province = 2403 # Martaban
+						owns_core_province = 2396 # Mong Kawng
+						owns_core_province = 587 # Kalaymyo
+						owns_core_province = 590 # Mohnyin
+		}
+	 	effect = {
+			change_tag = BRM
+			add_prestige = 25
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

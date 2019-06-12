@@ -1,0 +1,223 @@
+country_decisions = {
+
+	spanish_nation_diplomatically = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_spain_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			is_tutorial_active = no
+			tag = CAS
+			owns = 219
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					OR = {
+						ARA = {	junior_union_with = CAS	}
+						ARA = {	vassal_of = CAS	}
+					}
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			legitimacy = 100
+			NOT = {
+				spanish_region = {
+					owned_by = GRA
+				}
+			}
+			OR = {
+				ARA = {	
+					junior_union_with = CAS	
+					vassal_of = CAS
+				}	
+			}
+		}
+		effect = {
+			change_tag = SPA
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					ARA = {
+						ai = yes
+					}
+				}
+				inherit = ARA
+			}	
+			spanish_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = SPA
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
+
+	spanish_nation = {
+		major = yes
+		potential = {
+				#General
+			NOT = { has_country_flag = formed_spain_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+				#Not AI or Custom Nation
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+				#Tags
+			NOT = { 
+				tag = SPA
+				tag = PAP
+				tag = FRA
+				tag = KNI
+				tag = GRA
+				tag = ADU
+				tag = IBE
+				tag = EUR
+				tag = FIB
+			}
+				#Culture
+			OR = {
+				culture_group = iberian
+				primary_culture = basque
+			}
+		}		
+		allow = {
+			NOT = { exists = SPA }
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			ROOT = {
+					#Aragon
+				owns_core_province = 1750	# Alicante
+				owns_core_province = 4549	# Xativa
+				owns_core_province = 220	# Valencia
+				owns_core_province = 215	# Castello
+				owns_core_province = 2988	# Tarragona
+				owns_core_province = 214	# Zaragoza
+				owns_core_province = 4557	# Calatayud
+				owns_core_province = 211	# Huesca
+				owns_core_province = 2990	# Teruel
+				owns_core_province = 2987	# Urgell
+				owns_core_province = 213	# Barcelona
+				owns_core_province = 212	# Girona
+				owns_core_province = 197 	# Roussillon
+					#Grenada
+				owns_core_province = 222 	# Marriya
+				owns_core_province = 223 	# Garnatah
+				owns_core_province = 4546 	# Malaga
+				owns_core_province = 226 	# Jabal Tariq
+					#Balares
+				owns_core_province = 4560 	# Ibiza
+				owns_core_province = 333 	# Majorca
+				owns_core_province = 4559 	# Minorca
+					#Navarra
+				owns_core_province = 210 	# Nafarroa			
+			}
+			NOT = {
+				ANY = {
+					spanish_region = {
+						owned_by = GRA
+						owner = { religion_group = muslim 
+					}
+				}
+			}
+		}
+		provinces_to_highlight = { #Note: Roussillon, Navarra & Balares required
+			OR = {	
+					#Aragon
+				province_id = 1750	# Alicante
+				province_id = 4549	# Xativa
+				province_id = 220	# Valencia
+				province_id = 215	# Castello
+				province_id = 2988	# Tarragona
+				province_id = 214	# Zaragoza
+				province_id = 4557	# Calatayud
+				province_id = 211	# Huesca
+				province_id = 2990	# Teruel
+				province_id = 2987	# Urgell
+				province_id = 213	# Barcelona
+				province_id = 212	# Girona
+				province_id = 197 	# Roussillon
+					#Grenada
+				province_id = 222 	# Marriya
+				province_id = 223 	# Garnatah
+				province_id = 4546 	# Malaga
+				province_id = 226 	# Jabal Tariq
+					#Balares
+				province_id = 4560 	# Ibiza
+				province_id = 333 	# Majorca
+				province_id = 4559 	# Minorca
+					#Navarra
+				province_id = 210 	# Nafarroa
+				
+				AND = {
+					region = iberia_region
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		effect = {
+			change_tag = SPA
+			set_capital = 217 #Madrid
+			#government
+			SPA = {
+				217 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+				custom_tooltip = dec1_decisions_spacing
+				add_country_modifier = {
+					name = "centralization_modifier"
+					duration = 7300
+				}				
+				add_country_modifier = {
+					name = "dec1_formed_spain_golden_conquistador"
+				}
+			}
+			#claims
+			add_prestige = 25
+			add_legitimacy = 30
+			add_stability = 2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	
+	
+}

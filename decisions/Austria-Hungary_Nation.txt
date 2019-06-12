@@ -1,0 +1,59 @@
+country_decisions = {
+
+	austria-hungary_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = AHU }
+			NOT = { tag = HLR }
+			NOT = { tag = TUR }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = austrian
+				primary_culture = hungarian
+				primary_culture = czech
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = AHU }
+			
+                        owns_core_province = 134 # Wien
+                        owns_core_province = 133 # Linz
+                        owns_core_province = 128 # Kärnten
+						owns_core_province = 129 # Krain
+                        owns_core_province = 73 # Tirol
+						owns_core_province = 153 # Pest
+						owns_core_province = 1767 # Slavonia
+						owns_core_province = 1772 # Pozsony
+						owns_core_province = 155 # Bekes
+						owns_core_province = 1951 # Hunyad
+						owns_core_province = 135 # Sorpon
+		}
+	 	effect = {
+			change_tag = AHU
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 134 # Wien
+			if = {
+				limit = {
+					NOT = { primary_culture = austrian }
+				}
+				change_primary_culture = austrian
+			}
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			

@@ -1,0 +1,263 @@
+#Europe
+
+graphical_culture = westerngfx
+
+color = { 10 100 250 }
+
+historical_idea_groups = {
+	exploration_ideas
+	offensive_ideas
+	innovativeness_ideas
+	trade_ideas
+	maritime_ideas
+	administrative_ideas
+	quality_ideas
+	influence_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Johann #1" = 20
+	"Wenzel #1" = 20
+	"Anton #0" = 20
+	"Jobst #0" = 20
+	"Sigmund #0" = 20
+	"George #0" = 60
+	"Frederick #0" = 15
+	"Edward #5" = 10
+	"William #3" = 10
+	"William #3 Henry" = 10
+	"Charles #5" = 40
+	"Henri #1" = 20
+	"François #0" = 20
+	"Philippe #6" = 10
+	"Jean #2" = 10
+	"Gaston #0" = 10
+	"Carlos #0" = 40
+	"Felipe #1" = 40
+	"Fernando #5" = 40
+	"Luis #0" = 20
+	"Cosimo #0" = 40
+	"Friedrich #2" = 40
+	"Albrecht #1" = 40
+	"Friedrich #2 Wilhelm" = 40
+	"Friedrich #2 August" = 30
+	"Ferdinand #0" = 30
+	"Ferdinando #0" = 40
+	"Francesco #0" = 40
+	"Lodovico #2" = 40
+	"Carlo #4 Emmanuele" = 20
+	"Carlo #4 Felice" = 20
+	"Lodovico #2 Maria" = 20
+	"Willem #0" = 40
+	"Lodewijk #0" = 40
+	"Frederik Hendrik #0" = 20
+	"Maurits #0" = 20
+	"Filips Willem #0" = 15
+	"Hendrik Lodewijk #0" = 15
+	"Karel #0 Lodewijk" = 15
+	
+	"Margaretha #0" = -1
+	"Elizabeth #0" = -1
+	"Anne #0" = -1
+}
+
+leader_names = {
+	Albemarle Amherst Anson
+	Buckingham Braddock Byron Burgoyne Beresford Brock Benbow Blake Bedford Boscawen Baffin Button
+	Clarence "de Clifford" Cromwell Cumberland Clinton Cornwallis Clive Cabot Carleton Cavendish Cook Churchill
+	Dampier Davis Drake
+	Essex
+	Fairfax Frobisher
+	Gloucester Gilbert
+	Howe Howard Herbert Hawke Hood Hastings Hudson
+	Leicester
+	Middleton Moore
+	Northumberland Norfolk
+	Procter
+	Rooke Rodney Raleigh
+	Salisbury Somerset Suffolk Saunders Smith
+	Talbot Tarleton
+	Uxbridge
+	Warwick Wolfe
+	York
+	d'Ambleteuse d'Aulnay
+	"de Beauharnais" "de Bercy" "de Béthune" "de Boissieu" "de Bonnefoy" "de Bonneuil" "du Bosquet" "de la Bretonnière" "de Broglie"
+	"de Castaing" "de Caumartin" "de Chambly" "de Chambronne" "de Champmartin" "de Chevigny" "des Coulons" "de Crèvecoeur" "de Crussol"
+	"de Dampierre" Desgouttes Duquesne
+	"des Ecures" d'Entraigues d'Estrées
+	"du Fournay"
+	"de Galard"
+	"des Herbiers"
+	"de La Barthe" "de La Ferrandie" "de La Galissonière" "de La Mothe" "de La Motte d'Airan" "de La Porte" "Le Tellier" "de Lhéry" "de Luynes"
+	"de Marguerye" "de Maurepas"
+	"de Neufchâtel"
+	"d'Ornano"
+	"de Pellefort"
+	"de Richemont" "de Rochechouart" "de Rochemaure" "de Rieu"
+	"de Saint Chamond" "de Saint Esprit" "de Saint Germain" "de Saint Omer" "de Siorac"
+	"de Tocqueville" "de la Tour d'Auvergne" "de Tréville"
+	"d'Usson"
+	"du Valentinois" "de Vergennes" "de Vibien" "de Vigny" "de Villeneuve"
+	"Abarca de Bolea" "de Aguirre" "de Alarcón" "Álvarez de Toledo" "de Aragón" "de Austria" "de Ayala"
+	"de Bazán" "de Beaumont" "de Benavides" "de Borbón" "de Borja"
+	"Cabeza de Vaca" "Cagigal de la Vega" Campomanes "de la Cerda" Colón Coronado Cortés Dávila
+	"de Egmont" Elcano Elhuyar "Fadrique de Toledo" "Fernández de Castro" "Fernández de Córdoba" "de Figueroa" Fitz-James "Folch de Cardona" Fonseca
+	Gálvez Gómez Gravina "de Grijalva" Grimaldi "de Guzmán" "de Jovellanos" "de Leiva"
+	"Lópe de Haro" "Manrique de Lara" "Manrique de Velasco" "de Mendoza" "de Montcada" "Nuñez de Balboa"
+	"de Ojeda" Orellana Osorio Palafox Patiño Pimentel Pizarro "Ponce de León" Portocarrero
+	"de Requesens" "de Ripperdá" "de Rojas" Sastre Tellez-Girón "de la Vega" "de Zúñiga"
+	"Appiani d'Aragona" "Arborio Mella" 
+	Barberini Barzagli Boncompagni Borghese Borromeo Buonarroti "di Busca"
+	"di Campofregoso" Carafa "di Cardé" "del Carreto" Casanova Castagna
+	Castagnaro "di Cavour" Chigi Colonna Contarini Conti Corsini Cybo 
+	"Doria di Cirié" Doria-Landi Doria-Pamphili
+	d'Este 	"di Farnese" "di Ferrari"
+	"Gaetani dell'Aquila" Galilei Gambacorta Gentileschi Giustiniani Gonzaga Grimaldi
+	Ludovisi Malaspina "di Medici" Melzi Montefeltro Orsini
+	"di Paesana" "Paleologi Montferrato" Pallavicini Paradisi Petrucci Pico Pignatelli
+	"dalla Rosa" "della Rovere"
+	"di Saluzzo" "di Savoia" Sfondrati Sforza Spinola
+	"della Torre" "della Ubaldini" Vico Visconti
+	Adam Angermann Appelt Arndt Beck Becker Bening Blasius
+	Brilz Bröser Büttner Carl Dahm Deneke Eckstein Edelmann 
+	Elsner Feil Fischer Franke Giewer Haase Hafner Hertel 
+	Hirsch Höhn Kammel Keller Kessler Koeppe Kohn Krämer
+	Kuhn Lindner Mertesdorf Meyer Mick Müller Necker Noell 
+	Oelgemöller Raabe Rainer Scharfbillig Schave Scheler 
+	Schmitt Schneider Schumann Stephan Thelen Trierweiler
+	Uhlig "von Franken" "von Rothenburg" "von Schwaben"
+	"von Vitzgau" "von Weimar" Wachsmuth Wacht "von Werl"
+	Walther Wecker
+}
+
+ship_names = {
+	Achille Adventure Ajax Albemarle Alexander "Anne Gallant" Antelope "Ark Royal" Assurance Audacious "Anne Royal"
+	Bear Bellerophon Bonaventure Boyne Britannia Buckingham
+	Charles Christ Constant Convertine Culloden Cumberland Crane Crescent
+	Defence Defiance Destiny Dragon Dreadnought
+	"Edward Howard" Elizabeth Eltham Essex Expedition Eleanor Eagle
+	Foresight Foudroyant Falcon Fortune Fellowship
+	"Gabriel Royal" Garland George Gibraltar Gloucester Goliath "Grace Dieu" Grafton "Grand Mistress" "Great Barbara" "Great Bark" "Great Elizabeth"
+	"Great Harry" "Great Nicholas" Guernsey Greyhound Globe
+	Haarlem "Happy Entrance" Hector "Henrietta Maria" Hope Hart
+	James "John Baptist" Jennet
+	"Katherine Forteleza" Kent
+	Leander Leopard Lion Lizard
+	Majestic Margaret Mary "Mary Rose" Mercury Merhonour Michael Minion Minotaur 
+	Nonpareil Nonsuch Northumberland Nottingham
+	Orion
+	Peter Providence "Prince Frederick" Primrose "Prince Royal" Phoenix Pelican
+	"Queen Charlotte"
+	Rainbow "Red Lion" Regent Renown Repulse Revenge "Royal Anne" "Royal Charles" "Royal Prince" Recovery
+	"Scourge of Malice" Sovereign "Sovereign o the Seas" "St Andrew" "St Esprit" "St George" "St Matthew" Suffolk Superb Swallow Swiftsure
+	Speedwell Scout "Seven Stars" "St Anne" Swan Star Satisfaction
+	Theseus Tigre Tramontana Triumph Trinity Tiger
+	Unicorn Union
+	Vanguard Victory
+	Warspite Worcester Weymouth
+	l'Actif l'Actionnaire l'Aigle l'Alcide l'Alexandre l'Ambitieux l'Amphion l'Ardente l'Arrogant l'Artésien l'Assuré l'Astrée
+	"la Belle Poule" "le Bourbon" "le Brillant" "le Bien Aimé" "la Bizarre" "la Bretagne" "la Borée" "la Bourgogne" "le Brave" 
+	"le Caton" "le Conquérant" "le Content" "la Couronne" 
+	"le Dauphin Royal" "le Destin" "le Diadème" "le Duc de Bourgogne" 
+	"l'Eveillé" "l'Emérillon"
+	"le Fantasque" "le Fendant" "le Fier" "le Flamant" "la Fleur de Lis" "le Fleuron" "le Foudroyant"
+	"le Glorieux"
+	"le Hardi" l'Hermione
+	"le Gaillard" "la Grande Hermine" "le Héros"
+	"l'Illustre" "l'Indien" "l'Intrépide" "l'Invincible" 
+	"le Languedoc" "la Licorne" "le Lys"
+	"le Magnanime" "le Magnifique" "le Majestueux" "la Marie-Catherine" "le Marquis" "le Mars" "le Marseillais" "le Minotaure" "le Monarque"
+	"le Neptune"
+	l'Océan l'Oiseau l'Orient
+	"le Pélican" "le Protecteur" "le Prothée" "la Provence" 
+	"la Railleuse" "le Redoutable" "le Réfléchi" "la Régente" "le Robuste" "le Roland" "le Royal Louis"
+	"le Sagittaire" "la Sainte Anne" "le Saint Esprit" "le Saint Michel" "le Saint Philippe" "le Sceptre" "le Seigneur Chat" "le Sévère" "le Soleil Royal" "le Solitaire" "le Souverain" "le Sphinx" "la Superbe"
+	"le Téméraire" "le Terrible" "la Thérèse" "le Triomphant" "le Tonnant"
+	"la Trombe" "le Triton" 
+	"Union" 
+	"la Victoire" "Ville de Paris" 
+	"le Zélé" "le Zodiaque"
+	Andalucía Anunciación Argonauta Aurora Aventurero Bizarra Brillante Burlando
+	Cacafuego Caimán Castilla Catalina "Conde de Tolosa" Conquistador Constante "Cuervo Marino"
+	Dorada Dragón "El Retiro" Esmeralda Esperanza Fuerte Galicia Gavilán Gaviota Glorioso Griega
+	Hércules Hermiona Infante Intrépido Iris Jassón Juno Júpiter
+	"La Carlota" "La Cazadora" "La Tetis" León Luz Mercurio Neptuno
+	Pena Penélope Peregrina "Perla de España" Princesa "Príncipe de Asturias" Puercoespín
+	"Real Carlos" "Real Familia" "Real Felipe" "Real Jorge" "Rubí" "Saeta"
+	"San Andrés" "San Antonio" "San Carlos" "San Esteban" "San Felipe" "San Fernando" "San Francisco"
+	"San Gabriel" "San Gil" "San Isidoro" "San Isidro" "San Jerónimo" "San Joaquín" "San José" "San Juan" "San Juan Bautista"
+	"San Leandro" "San Luis" "San Marcos" "San Martín" "San Miguel" "San Pío"
+	"Santa Ana" "Santa Bárbara" "Santa Eulalia" "Santa Irene" "Santa Isabel" "Santa Justa"
+	"Santa Natalia" "Santa Rita" "Santa Rosa" "Santa Susana" "Santa Teresa"
+	Santiago "Santísima Trinidad" Sebastiana Soberano Susana Trinidad Triunfo Unicornio
+	Venganza Vichero Victoria Vigilante Volante Vulcano Zara
+	Anunciada
+	Bérrio "Boa Viagem" "Bom Jesus" "Bom Jesus do Carmo" "Bom Jesus de Marzagão" "Bom Jesus da Vidigueira" Bretão
+	Cambaia Chagas "Correio d'Ásia"
+	El-Rei Enxobregas "Espírito Santo" Estrela
+	"Flor do Mar"
+	Garça
+	"Imaculada Conceição"
+	Jóia
+	"Monte Carvalho"
+	"Nazaré" "Nossa Senhora" "N. Sra. da Aparecida" "N. Sra. da Atalaia" "N. Sra. da Batalha" "N. Sra. da Boa Hora" "N. Sra. da Boa Memória" "N. Sra. da Boa Viagem" "N. Sra. da Candalaria" "N. Sra. da Caridade" "N.Sra. da Conceição" "N. Sra. da Consolação" "N. Sra. da Esperança" "N. Sra. da Glória" "N. Sra. da Graça" "N. Sra. da Guia" "N. Sra. d'Ajuda Lusitana" "N. Sra. da Luz" "N. Sra. da Nazaré" "N. Sra. da Oliveira" "N. Sra. da Palma" "N. Sra. da Penha de França" "N. Sra. da Quietação" "N. Sra. da Salvação" "N. Sra. da Saúde" "N. Sra. da Visitação" "N. Sra. da Vitória" "N. Sra. das Ondas" "N. Sra. das Portas do Céu" "N. Sra. das Relíquias" "N. Sra. de Belém" "N. Sra. de Guadalupe" "N. Sra. do Castelo" "N. Sra. do Livramento" "N. Sra. do Loreto" "N. Sra do Paraíso" "N. Sra. do Pilar" "N. Sra. do Rosário" "N. Sra. dos Prazeres" "N. Sra. dos Ramos"
+	"Princesa do Céu"
+	Raínha "Reis Magos"
+	"Sacramento" "Santa Ana" "Santa Catarina" "Santa Cruz" "Santa Fé" "Santa Helena" "Santa Joana" "Santa Madre de Deus" "S. Maria de Sabóia" "Santo Milagre" "Santiago Maior" "Santíssima Trindade" "Santíssimo Sacramento" "Santo Alberto" "Santo António" "Santo Espírito" "Santo Inácio" "São Bartolomeu" "São Bento" "São Bernardo" "São Carlos" "São Cristovão" "São Domingos" "São Filipe" "São Francisco" "São Francisco de Borja" "São Gabriel" "São Gonçalo" "São João" "São João de Deus" "São Jorge" "S. José" "São Julião" "São Lourenço" "São Lucas" "São Luís" "São Mateus" "São Paulo" "São Pedro" "São Rafael" "São Roque" "São Salvador" "São Tomé" "São Valentim" "S. António de Lisboa" "S. Catarina de Ribamar" "S. Francisco de Assis" "S. Francisco Xavier" "S. João Baptista" "S. João Evangelista" "S. Pedro de Rates" "S. Pedro da Ribeira" "S. Salvador do Mundo" "S. Teresa de Jesus" "S. Tomé da Cantuária"
+	Taforeia Trindade
+	Visitação
+	Medea Vulcano Gloria Minerva Laatea
+	Diligenza Vittoria Eolo Concordia Forza 
+	Fama Sirena Falcon Ercole Idra "San Andrea"
+	"San Zaccaria" "San Spiridon" "San Gaetano"
+	"Fortuna Guerriera" Terror Aquileta Constanza
+	"Regina del Mar" "San Nicolo" Nettuno Rosa
+	Fenice Iride Aurora Tigre Giove "Rizzo d'Oro"
+	"Amazzone Guerriera"
+	Adelaar Ajax Alkmaar Amelia Amsterdam Atalanta
+	Bantam Batavia Beschermer Brederode Brouwer Brutus
+	Campen Cerberus Comeestar
+	Daphne Delfland Delft "Den Swarten Raven" Delphin Deventer Duyfken
+	Eendracht Eenhorn Embuscade Engel Erasmus
+	Gaesterland "Gekroende Liefde" Gelijkheid Gouda "Gouden Arend" "Gouden Leeuw" "Groot Frisia" "Groote Sint Joris" "Grote Zon"
+	Haarlem Heldin Hercules "De Halve Maen" Hollandia "Hollandsche Tuyn" "Huis te Oosterwijk" "Huis te Zwieten" "Huys van Nassau"
+	"Jong Prins te Paard" Jupiter "Kleine Zon"
+	"Kleene Sint Joris" Komeeetster "Kronede Arend"
+	Leyden "Liefde van Hoorn"
+	"Maagd van Dordrecht" Mars Mauritius Middelburg Minerva Moon Monnikendam Muiderberg
+	Nassau "Nieuw Vlissingen" 
+	Olifant Onrust Ooievaar Oranje
+	Patientia Posthorn "Prins Friso" "Prins Willem" 
+	Rotterdam Rozendaal
+	Schakerloo Schermer Spiegel Staten-Generaal Statenlande Ster "St. Iago de Victoria" "St. Marten" "St. Matthuis"
+	Tholen Tyger 
+	"Vereenigde Provincieën" Vlissingen Vrede Vrijheid
+	Waakzaamheid "Walcheren" "Wapen van Holland" "Wapen van Medenblik" Wassenaar Winhond "Witte Leeuw" Woerden Zeerijp
+	"Zeven Provincien" Zierikzee Zon Zuidholland "Zwarte Leeuw" 
+}
+
+army_names = {
+	"Armée Royale" "Armée des Flandres" "Armée du Nord" "Armée de l'Est" "Armée du Jura" "Armée du Lyonnais" "Armée des Alpes"
+	"Armée du Midi" "Armée des Pyrenées" "Armée de l'Atlantique" "Armée de Bretagne" "Armée d'Italie"
+}
+
+fleet_names = {
+	"Royal Navy" "Blue Squadron" "Red Squadron" "White Squadron" "North Sea Squadron" "Channel Squadron"
+}

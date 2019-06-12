@@ -1,0 +1,46 @@
+country_decisions = {
+
+	frieslande_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = RHE }
+			NOT = { tag = NED }
+			NOT = { tag = GER }
+			NOT = { tag = HRE }
+			NOT = { tag = BEL }
+			NOT = { tag = EUR }
+			NOT = { tag = BNL }
+			OR = {
+				primary_culture = dutch
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = FRL }
+			
+                        owns_core_province = 100 # Friesland
+                        owns_core_province = 1931 # Ostfriesland
+                        owns_core_province = 99 # Gelre
+		}
+	 	effect = {
+			change_tag = FRL
+			change_government = administrative_monarchy
+			add_prestige = 25
+			set_capital = 100 # Friesland
+			ai_will_do = {
+				factor = 400
+			}
+		}
+	}
+
+			
