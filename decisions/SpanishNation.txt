@@ -170,6 +170,7 @@ country_decisions = {
 				add_permanent_claim = SPA
 			}
 			custom_tooltip = dec1_decisions_spacing
+			SPA = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
 			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	
@@ -321,6 +322,7 @@ country_decisions = {
 				add_permanent_claim = SPA
 			}			
 			custom_tooltip = dec1_decisions_spacing
+			SPA = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
 			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing

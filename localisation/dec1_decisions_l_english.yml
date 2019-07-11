@@ -74,16 +74,16 @@
  soviet_union_nation_title: "Form The Soviet Union"
  soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It exists from 1922 until 1991. It was the first country to declare itself socialist and build towards a communist society. It was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic.
  
- celtic_union_nation_title: "Celtic Union"
+ celtic_union_nation_title: "Form The Celtic Union"
  celtic_union_nation_desc: "" 
  
- sweden-norway_nation_title: "Sweden-Norway"
+ sweden-norway_nation_title: "Form Sweden-Norway"
  sweden-norway_nation_desc: ""
  
- caucasia_nation_title: "Caucasia"
+ caucasia_nation_title: "Form Caucasia"
  caucasia_nation_desc: ""
  
- burma_nation_title: "Burma"
+ burma_nation_title: "Form Burma"
  burma_nation_desc: ""
  
  united_kingdom_nation_title: "Form The United Kingdom"
@@ -151,7 +151,16 @@
  form_angevin_tt_1: "Owns core region: §YEngland§!"
  form_angevin_tt_2: "Owns core region: §YUpper France§!"
  form_angevin_tt_3: "Owns core region: §YLower France§!"
- form_angevin_tt_4: "Owns core region: §YBrittany§!"
+ form_angevin_tt_4: "Owns core region: §YBrittany
+ 
+ form_great-britain_tt_1: "Owns core region: §YEngland§!"
+ 
+ form_north_sea_empire_tt_1: "Owns core region: §YEngland§!"
+ form_north_sea_empire_tt_2: "Owns core region: §YDenmark§!"
+ form_north_sea_empire_tt_3: "Owns core region: §YNorway§!"
+ 
+ form_england_tt_1: "Owns core region: §YEngland§!"
+ 
  
  #MODIFIERS
  
@@ -173,4 +182,7 @@
  dec1_formed_great_britain_ruler_of_the_waves: "Ruler of The Waves"
  dec1_formed_great_britain_ruler_of_the_waves_desc: "TODO"
  
+ dec1_formed_north_sea_empire_cnut_the_great_restoration: "Restoration of Cnut The Great's Empire"
+ 
+ dec1_formed_england_rebirth_of_england: "Rebirth of England"
  

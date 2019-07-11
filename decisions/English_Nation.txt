@@ -1,12 +1,13 @@
 country_decisions = {
 
-	great-britain_nation = {
+	english_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_great_britain_flag }
+			NOT = { has_country_flag = formed_england_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
+			primary_culture = english
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -16,21 +17,19 @@ country_decisions = {
 				}
 			}			
 			NOT = { 
+				exists = ENG
 				exists = NSE 
 				exists = ANG 
 				exists = GBR 
 				exists = UKI
+				tag = ENG
 				tag = GBR
 				tag = UKI
 				tag = PAP
+				tag = NSE
 				tag = HLR
 				tag = ANG
 				tag = EUR
-			}
-			OR = {
-				culture_group = british
-				primary_culture = welsh
-				primary_culture = irish
 			}
 		}
 		provinces_to_highlight = {
@@ -64,22 +63,6 @@ country_decisions = {
 				province_id = 245	
 				province_id = 4367
 				province_id = 4368
-					# Wales
-				province_id = 241
-				province_id = 4366
-				province_id = 4369
-				province_id = 242
-					# Scottish Marches
-				province_id = 246
-				province_id = 247
-					# Mann
-				province_id = 4365
-					# Scotland
-				province_id = 248
-				province_id = 249
-				province_id = 251
-				province_id = 4361
-				province_id = 4362
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -87,12 +70,11 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 10
-			NOT = { exists = GBR }
+			NOT = { exists = ENG }
 			is_subject = no
-			is_at_war = no	
+			is_at_war = no
 			custom_trigger_tooltip = {
-				tooltip = form_great-britain_tt_1
+				tooltip = form_england_tt_1			
 					# London
 				owns_core_province = 236
 				owns_core_province = 235
@@ -122,58 +104,44 @@ country_decisions = {
 				owns_core_province = 245	
 				owns_core_province = 4367
 				owns_core_province = 4368
-					# Wales
-				owns_core_province = 241
-				owns_core_province = 4366
-				owns_core_province = 4369
-				owns_core_province = 242
-					# Scottish Marches
-				owns_core_province = 246
-				owns_core_province = 247
-					# Mann
-				owns_core_province = 4365
-					# Scotland
-				owns_core_province = 248
-				owns_core_province = 249
-				owns_core_province = 251
-				owns_core_province = 4361
-				owns_core_province = 4362
 			}
 		}
 		effect = {
-			change_tag = GBR	
-			set_country_flag = formed_great_britain_flag				
+			change_tag = ENG	
+			set_country_flag = formed_england_flag				
 			set_capital = 236 # London
 			GBR = {
 				236 = { 
-					add_base_tax = 3
-					add_base_production = 3
-					add_base_manpower = 3
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
 				}
 			}
 			british_isles_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = GBR
+				add_permanent_claim = ENG
 			}			
 			custom_tooltip = dec1_decisions_spacing
-			GBR = { set_government_rank = 2 }
+			ENG = { set_government_rank = 2 }
 			add_government_reform = english_monarchy
 			legacy_equivalent = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
-			GBR = {
+			ENG = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}
 				add_country_modifier = { 
-					name = dec1_formed_great_britain_ruler_of_the_waves
+					name = dec1_formed_england_rebirth_of_england
 				}	
 			}
-			add_prestige = 20			
+			add_prestige = 50			
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
+	
+}

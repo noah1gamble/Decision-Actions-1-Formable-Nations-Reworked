@@ -98,6 +98,7 @@ country_decisions = {
 				add_permanent_claim = YUG
 			}
 			custom_tooltip = dec1_decisions_spacing
+			YUG = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
 			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	

@@ -28,6 +28,11 @@ dec1_formed_angevin_glory_of_angevin = {
 	diplomatic_reputation = 1
 }
 
+dec1_formed_england_rebirth_of_england = {
+	diplomatic_reputation = 1
+	navy_tradition_decay = -0.035
+}
+
 dec1_formed_yugoslavian_kingdom_kingdom_of_the_slavs = {
 	army_tradition_from_battle = 0.10
 	infantry_shock = 2

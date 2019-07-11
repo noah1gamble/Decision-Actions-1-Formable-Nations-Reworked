@@ -16,8 +16,10 @@ country_decisions = {
 				}
 			}			
 			NOT = { 
-				exists = UKI 
-				exists = GBR
+				exists = NSE 
+				exists = ANG 
+				exists = GBR 
+				exists = UKI
 				tag = PAP 
 				tag = ANG
 			}
@@ -104,12 +106,8 @@ country_decisions = {
 			}
 		}		
 		allow = {		
-			adm_tech = 5
-			NOT = { 
-				exists = ANG 
-				exists = GBR 
-				exists = UKI 
-			}
+			adm_tech = 15
+			NOT = { exists = ANG }
 			is_subject = no
 			is_at_war = no
 			custom_trigger_tooltip = {
@@ -226,6 +224,7 @@ country_decisions = {
 				add_permanent_claim = ANG
 			}			
 			custom_tooltip = dec1_decisions_spacing
+			ANG = { set_government_rank = 3 }
 			add_government_reform = autocracy_reform
 			legacy_equivalent = administrative_monarchy
 			custom_tooltip = dec1_decisions_spacing	

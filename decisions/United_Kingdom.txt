@@ -16,8 +16,10 @@ country_decisions = {
 				}
 			}			
 			NOT = { 
+				exists = NSE 
+				exists = ANG 
+				exists = GBR 
 				exists = UKI 
-				exists = GBR
 				tag = UKI
 				tag = GBR
 				tag = PAP
@@ -209,6 +211,7 @@ country_decisions = {
 				add_permanent_claim = UKI
 			}			
 			custom_tooltip = dec1_decisions_spacing
+			UKI = { set_government_rank = 2 }
 			add_government_reform = english_monarchy
 			legacy_equivalent = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
@@ -220,9 +223,8 @@ country_decisions = {
 					name = dec1_formed_united_kingdom_rule_britannia
 				}	
 			}
-			add_prestige = 50
-			add_legitimacy = 80
-			add_stability = 1			
+			add_prestige = 25
+			add_legitimacy = 50		
 		}
 		ai_will_do = {
 			factor = 1

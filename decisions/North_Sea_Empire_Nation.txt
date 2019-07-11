@@ -4,6 +4,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { 
+				exists = NSE 
+				exists = ANG 
+				exists = GBR 
+				exists = UKI 		
 				tag = PAP 
 				tag = NSE
 				tag = GBR
@@ -27,46 +31,278 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+					# England
+				province_id = 236
+				province_id = 235
+				province_id = 4371
+				province_id = 237
+				province_id = 238	
+				province_id = 1860				
+				province_id = 4370
+				province_id = 234					
+				province_id = 4374
+				province_id = 4130
+				province_id = 239
+				province_id = 240
+				province_id = 4372
+				province_id = 4375
+				province_id = 244
+				province_id = 243
+				province_id = 4376
+				province_id = 1861
+				province_id = 245	
+				province_id = 4367
+				province_id = 4368
+				province_id = 246
+				province_id = 248
+				province_id = 4361
+					# Denmark
+				province_id = 12	
+				province_id = 1983	
+				province_id = 14	
+				province_id = 4142	
+				province_id = 1984	
+				province_id = 15	
+				province_id = 4149	
+				province_id = 6	
+				province_id = 4165	
+				province_id = 1982	
+				province_id = 26	
+				province_id = 13	
+					# Norway
+				province_id = 17	
+				province_id = 16	
+				province_id = 4143	
+				province_id = 4145	
+				province_id = 24	
+				province_id = 22	
+				province_id = 23	
+				province_id = 2752	
+				province_id = 20
+				province_id = 10
+				province_id = 21	
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
-			adm_tech = 5
+			adm_tech = 15
 			NOT = { exists = NSE }
 			is_subject = no
 			is_at_war = no
 			OR = {
-				ENG = { 
-					NOT = { 
-						dynasty = "Lancaster" 
-						has_ruler = "Henry VI"
+				ENG = { # England form North Sea Empire
+					AND = { 
+						NOT = { 
+							dynasty = "Lancaster" 
+							has_ruler = "Henry VI"
+							has_any_disaster = yes
+						}
+						is_great_power = yes
+						legitimacy = 75
+						owns_core_province = 236
+						owns_core_province = 12
+						owns_core_province = 17
 					}
 				}
-				DEN = { 
-					
+				DEN = { # Denmark form North Sea Empire
+					AND = {
+						is_lesser_in_union = no
+						junior_union_with = ENG
+						ENG = { 
+							years_in_union_under = {
+								who = DEN
+								years = 10
+							}
+						}
+					}
 				}
-				ROOT = {
-				
+				ROOT = { # Any other nation that can form North Sea Empire
+					NOT = {
+						tag = ENG
+						tag = DAN
+					}
+					AND = { # Controls all cores of norway, denmark, england
+						custom_trigger_tooltip = {
+							tooltip = form_north_sea_empire_tt_1			
+							owns_core_province = 236
+							owns_core_province = 235
+							owns_core_province = 4371
+							owns_core_province = 237
+							owns_core_province = 238	
+							owns_core_province = 1860				
+							owns_core_province = 4370
+							owns_core_province = 234					
+							owns_core_province = 4374
+							owns_core_province = 4130
+							owns_core_province = 239
+							owns_core_province = 240
+							owns_core_province = 4372
+							owns_core_province = 4375
+							owns_core_province = 244
+							owns_core_province = 243
+							owns_core_province = 4376
+							owns_core_province = 1861
+							owns_core_province = 245	
+							owns_core_province = 4367
+							owns_core_province = 4368
+							owns_core_province = 246
+							owns_core_province = 4361
+						}
+						custom_trigger_tooltip = {
+							tooltip = form_north_sea_empire_tt_2				
+								# Denmark
+							owns_core_province = 12	
+							owns_core_province = 1983	
+							owns_core_province = 14	
+							owns_core_province = 4142	
+							owns_core_province = 1984	
+							owns_core_province = 15	
+							owns_core_province = 4149	
+							owns_core_province = 6	
+							owns_core_province = 4165	
+							owns_core_province = 1982	
+							owns_core_province = 26	
+							owns_core_province = 13
+						}
+						custom_trigger_tooltip = {
+							tooltip = form_north_sea_empire_tt_3	
+								# Norway
+							owns_core_province = 17	
+							owns_core_province = 16	
+							owns_core_province = 4143	
+							owns_core_province = 4144	
+							owns_core_province = 4145	
+							owns_core_province = 24	
+							owns_core_province = 22	
+							owns_core_province = 23	
+							owns_core_province = 2752	
+							owns_core_province = 20
+							owns_core_province = 10
+							owns_core_province = 21
+						}
+					}
+					AND = {
+						OR = {
+							junior_union_with = ENG
+							junior_union_with = DAN
+							junior_union_with = NOR
+							num_of_unions = 2
+						}
+					}
+					is_great_power = yes
+					great_power_rank = 5
+					legitimacy = 100
+					owns_core_province = 236
+					owns_core_province = 12
+					owns_core_province = 17
 				}
 			}
-				owns_core_province = 12 # Sjaelland
-				owns_core_province = 6 # Skane
-				owns_core_province = 15 # Midtjylland
-				owns_core_province = 17 # Akershus
-				owns_core_province = 24 # Agder
-				owns_core_province = 23 # Bergenshus
-				owns_core_province = 20 # Trondelag
-				owns_core_province = 236 # London
-				owns_core_province = 238 # Essex
-				owns_core_province = 243 # Lincoln
-				owns_core_province = 245 # Yorkshire
-				owns_core_province = 246 # Northumberland
-				owns_core_province = 234 # Wessex
+			custom_trigger_tooltip = {
+				tooltip = form_north_sea_empire_tt_1			
+				owns_core_province = 236
+				owns_core_province = 235
+				owns_core_province = 4371
+				owns_core_province = 237
+				owns_core_province = 238	
+				owns_core_province = 1860				
+				owns_core_province = 4370
+				owns_core_province = 234					
+				owns_core_province = 4374
+				owns_core_province = 4130
+				owns_core_province = 239
+				owns_core_province = 240
+				owns_core_province = 4372
+				owns_core_province = 4375
+				owns_core_province = 244
+				owns_core_province = 243
+				owns_core_province = 4376
+				owns_core_province = 1861
+				owns_core_province = 245	
+				owns_core_province = 4367
+				owns_core_province = 4368
+				owns_core_province = 246
+				owns_core_province = 4361
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_north_sea_empire_tt_2				
+					# Denmark
+				owns_core_province = 12	
+				owns_core_province = 1983	
+				owns_core_province = 14	
+				owns_core_province = 4142	
+				owns_core_province = 1984	
+				owns_core_province = 15	
+				owns_core_province = 4149	
+				owns_core_province = 6	
+				owns_core_province = 4165	
+				owns_core_province = 1982	
+				owns_core_province = 26	
+				owns_core_province = 13
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_north_sea_empire_tt_3	
+					# Norway
+				owns_core_province = 17	
+				owns_core_province = 16	
+				owns_core_province = 4143	
+				owns_core_province = 4144	
+				owns_core_province = 4145	
+				owns_core_province = 24	
+				owns_core_province = 22	
+				owns_core_province = 23	
+				owns_core_province = 2752	
+				owns_core_province = 20
+				owns_core_province = 10
+				owns_core_province = 21
+			}
 		}
-	 	effect = {
-
+		effect = {
+			change_tag = NSE	
+			set_country_flag = formed_north_sea_empire_flag				
+			set_capital = 13 # Schleswig
+			NSE = {
+				13 = { 
+					add_base_tax = 10
+					add_base_production = 5
+					add_base_manpower = 2
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSE
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NSE
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			NSE = { set_government_rank = 3 }
+			add_government_reform = english_monarchy
+			legacy_equivalent = english_monarchy_legacy
+			custom_tooltip = dec1_decisions_spacing
+			NSE = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
+				add_country_modifier = { 
+					name = dec1_formed_north_sea_empire_cnut_the_great_restoration
+				}	
+			}
+			add_legitimacy = 80		
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 350		
+		ai_importance = 335		
 	}
-
-			
+}
+	

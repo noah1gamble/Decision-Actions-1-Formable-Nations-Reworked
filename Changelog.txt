@@ -7,6 +7,10 @@ Version 1.0.0
 -Rewrote Form Kingdom of Yugoslavia
 -Rewrote Form United Kingdom
 -Removed Vanilla Great-Britain & Russia
+-Rewrote Form North Sea Empire
+-Rewrote Form Angevin Empire
+-Fixed localisation issues
+-Rewrote Form England
 
 
 Planned Content:
