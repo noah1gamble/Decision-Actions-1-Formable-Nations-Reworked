@@ -1,78 +1,78 @@
 ﻿l_english:
- benelux_nation_title: "The Benelux Union"
- benelux_nation_desc: "The name Benelux is formed from joining the first two or three letters of each country's name – Belgium, Netherlands, Luxembourg – and was first used to name the customs agreement that initiated the union (signed in 1944).[8] It is now used more generally to refer to the geographic, economic and cultural grouping of the three countries... The unification of the Dutch, Wallonian and Flemish provinces in Europe brings The Benelux a gigantic economic impetus and makes it a mighty European state."
+ benelux_nation_title: "Form The Benelux Union"
+ benelux_nation_desc: "The name Benelux is formed from joining the first two or three letters of each country's name – Belgium, Netherlands, Luxembourg – and was first used to name the customs agreement that initiated the union. The unification of the Dutch, Wallonian and Flemish provinces in Europe brings The Benelux a gigantic economic impetus and makes it a mighty European state."
  
- swabia_nation_title: "Swabian Kingdom"
+ swabia_nation_title: "Form The Swabian Kingdom"
  swabia_nation_desc: "The foundation of the Kingdom Swabia unites the hostile countries in the southern Holy Roman Empire. The country attains an important and mighty position in the empire in only few years."
  
- basque_country_nation_title: "The Basque Country"
+ basque_country_nation_title: "Form the Basque Country"
  basque_country_nation_desc: "The Basque Country is the name given to the home of the Basque people. The Basque country is located in the western Pyrenees, straddling the border between France and Spain on the coast of the Bay of Biscay. Euskal Herria is the oldest documented Basque name for the area they inhabit, dating from the 16th century."
  
- pontos_nation_title: "Restoration of the Kingdom Pontus"
+ pontos_nation_title: "Restoration of The Kingdom of Pontus"
  pontos_nation_desc: "Form a county for all Pontic-Greek people living at the Black Sea."
  
- alps_nation_title: "Alpland"
+ alps_nation_title: "Form Alpland"
  alps_nation_desc: "Alpland is an important power in Europe which extends over the Alpine regions of Austria, Italy, France and Switzerland."
  
- yugoslavia_nation_title: "Yugoslavian Kingdom"
+ yugoslavia_nation_title: "Form The Yugoslavian Kingdom"
  yugoslavia_nation_desc: "The Kingdom Yugoslavia unites the western Balkan-states in a mighty nation."
  
  belgium_nation_title: "Form Belgium"
  belgium_nation_desc: "Creates a state for all Flemings and Walloons, located on a perfect place to play an important role in the colonisation of America."
  
- franconia_nation_title: "Franconian Kingdom"
+ franconia_nation_title: "Restore The Franconian Kingdom"
  franconia_nation_desc: "The small, franconian nations are nomore unimportant and can achieve big victories against their enemies."
  
- north_german_confederation_nation_title: "North German Confederation"
+ north_german_confederation_nation_title: "Restore The North German Confederation"
  north_german_confederation_nation_desc: "This mighty nation unites Northern Germany. With deligance and a lot of ambition the Germans have created such a gigantic state from small dukedoms."
  
- two_sicilies_nation_title: "Kingdom of the Two Sicilies"
- two_sicilies_nation_desc: "The kingdom of the two Sicilies is the union between the Kingdom Sicily and the Kingdom Naples. Together these kingdoms can compete with the Spaniards just as with other Italians."
+ two_sicilies_nation_title: "Restore The Kingdom of Two Sicilies"
+ two_sicilies_nation_desc: "The kingdom of two Sicilies is the union between the Kingdom Sicily and the Kingdom Naples. Together these kingdoms can compete with the Spaniards just as with other Italians."
  
- italian_merchant_alliance_nation_title: "Italian Merchant Alliance"
+ italian_merchant_alliance_nation_title: "Form the Italian Merchant Alliance"
  italian_merchant_alliance_nation_desc: "The Hansa in Northern Germany and the Italian Merchant Alliance in Italy: Extremely mighty, influential and hard to defeat."
  
- lombardy-venetia_nation_title: "Kingdom Lombardy-Venetia"
+ lombardy-venetia_nation_title: "Restore the Lombardy-Venetia Kingdom"
  lombardy-venetia_nation_desc: ""
  
- iberia_nation_title: "Iberian Empire"
+ iberia_nation_title: "Form the Iberian Empire"
  iberia_nation_desc: ""
  
- austria-hungary_nation_title: "Austria-Hungary"
+ austria-hungary_nation_title: "Form Austria-Hungary"
  austria-hungary_nation_desc: ""
  
- austro_hungarian_empire_nation_title: "Austro-Hungarian Empire"
+ austro_hungarian_empire_nation_title: "Form the Austro-Hungarian Empire"
  austro_hungarian_empire_nation_desc: ""
  
- abyssinia_nation_title: "Abyssinian Empire"
+ abyssinia_nation_title: "Form The Abyssinian Empire"
  abyssinia_nation_desc: ""
  
- czechoslovakia_nation_title: "Czechoslovakia"
+ czechoslovakia_nation_title: "Form Czechoslovakia"
  czechoslovakia_nation_desc: ""
  
- north_sea_empire_nation_title: "North Sea Empire"
+ north_sea_empire_nation_title: "Form The North Sea Empire"
  north_sea_empire_nation_desc: ""
  
  roman_empire_nation_title: "Restoration of the Roman Empire"
  roman_empire_nation_desc: ""
  
- rhine_confederation_nation_title: "Rhine Confederation"
+ rhine_confederation_nation_title: "Form The Rhine Confederation"
  rhine_confederation_nation_desc: ""
  
- cisalpina_nation_title: "Cisalpina"
+ cisalpina_nation_title: "Form Cisalpina"
  cisalpina_nation_desc: ""
  
- turkey_nation_title: "Turkey"
+ turkey_nation_title: "Form Turkey"
  turkey_nation_desc: ""
  
- china_nation_title: "China"
+ china_nation_title: "Form China"
  china_nation_desc: ""
  
- europe_nation_title: "European Union"
- europe_nation_desc: ""
+ europe_nation_title: "Form The European Union"
+ europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress."
  
- soviet_union_nation_title: "Soviet Union"
- soviet_union_nation_desc: ""
+ soviet_union_nation_title: "Form The Soviet Union"
+ soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It exists from 1922 until 1991. It was the first country to declare itself socialist and build towards a communist society. It was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic.
  
  celtic_union_nation_title: "Celtic Union"
  celtic_union_nation_desc: "" 
@@ -80,72 +80,93 @@
  sweden-norway_nation_title: "Sweden-Norway"
  sweden-norway_nation_desc: ""
  
- #kalmar union
- 
  caucasia_nation_title: "Caucasia"
  caucasia_nation_desc: ""
  
  burma_nation_title: "Burma"
  burma_nation_desc: ""
  
- # Romania ?
- 
- united_kingdom_nation_title: "United Kingdom"
+ united_kingdom_nation_title: "Form The United Kingdom"
  united_kingdom_nation_desc: ""
  
- maghrebia_nation_title: "Maghreb"
+ maghrebia_nation_title: "Form Maghreb"
  maghrebia_nation_desc: ""
  
- tatarstan_nation_title: "Tatarstan"
+ tatarstan_nation_title: "Form Tatarstan"
  tatarstan_nation_desc: ""
  
- lower_saxony_nation_title: "Lower Saxony"
+ lower_saxony_nation_title: "Form Lower Saxony"
  lower_saxony_nation_desc: ""
  
- adriatic_empire_nation_title: "Adriatic Empire"
+ adriatic_empire_nation_title: "Form The Adriatic Empire"
  adriatic_empire_nation_desc: ""
  
- himalayan_empire_nation_title: "Himalayan Empire"
+ himalayan_empire_nation_title: "Form The Himalayan Empire"
  himalayan_empire_nation_desc: ""
  
- #tibet empire
- 
- alsace-lorraine_nation_title: "Alsace-Lorraine"
+ alsace-lorraine_nation_title: "Form Alsace-Lorraine"
  alsace-lorraine_nation_desc: ""
  
- franco-iberia_nation_title: "Franco-Iberia"
+ franco-iberia_nation_title: "Form Franco-Iberia"
  franco-iberia_nation_desc: ""
  
- hesse-nassau_nation_title: "Hesse-Nassau"
+ hesse-nassau_nation_title: "Form Hesse-Nassau"
  hesse-nassau_nation_desc: ""
  
- east_prussia_nation_title: "East Prussia"
+ east_prussia_nation_title: "Form East Prussia"
  east_prussia_nation_desc: ""
  
- hanse_nation_title: "Hansa"
+ hanse_nation_title: "Form Hansa"
  hanse_nation_desc: ""
  
- emilia-romagna_nation_title: "Emilia-Romagna"
+ emilia-romagna_nation_title: "Form Emilia-Romagna"
  emilia-romagna_nation_desc: ""
  
- angevin_nation_title: "Angevin Empire"
- angevin_nation_desc: ""
+ angevin_nation_title: "Form The Angevin Empire"
+ angevin_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II (ruled 1154–1189), Richard I (r. 1189–1199), and John (r. 1199–1216). The Angevin Empire is an early example of a composite state."
  
- bremen-verden_nation_title: "Bremen-Verden"
+ bremen-verden_nation_title: "Form Bremen-Verden"
  bremen-verden_nation_desc: ""
  
- frieslande_nation_title: "Frisia"
+ frieslande_nation_title: "Form Frisia"
  frieslande_nation_desc: ""
  
- siebenbuergen_nation_title: "Siebenbürgen"
+ siebenbuergen_nation_title: "Form Siebenbürgen"
  siebenbuergen_nation_desc: ""
+ 
+ great_britain_nation_title: "Form Great Britain"
+ great_britain_nation_desc: "TODO"
  
  #TOOLTIPS
  
- dec1_decisions_spacing:0 "\n"
+ dec1_decisions_spacing: "\n"
+ 
+ dec1_formed_spain_add_claims: "§YSpain§! gains a permanent claim on §YIberia§! Region."
+ 
+ form_united_kingdom_tt_1: "Owns core region: §YEngland§!"
+ form_united_kingdom_tt_2: "Owns core region: §YScotland§!"
+ form_united_kingdom_tt_3: "Owns core region: §YScottish Isles§!"
+ form_united_kingdom_tt_4: "Owns core region: §YIreland§!"
+ 
+ form_angevin_tt_1: "Owns core region: §YEngland§!"
+ form_angevin_tt_2: "Owns core region: §YUpper France§!"
+ form_angevin_tt_3: "Owns core region: §YLower France§!"
  
  #MODIFIERS
  
- dec1_formed_spain_golden_conquistador:0 "Golden Conquistador"
+ dec1_increased_centralization: "Increased Centralization"
+ dec1_increased_centralization_desc: "TODO"
+ 
+ dec1_formed_spain_golden_conquistador: "Golden Conquistador"
+ dec1_formed_spain_golden_conquistador_desc: "TODO"
+ 
+ dec1_formed_spain_silver_tongued_lion: "Silver-Tongued Lion"
+ dec1_formed_spain_silver_tongued_lion_desc: "TODO"
+ 
+ dec1_formed_united_kingdom_rule_britannia: "Rule Britannia"
+ dec1_formed_united_kingdom_rule_britannia_desc: "TODO"
+ 
+ dec1_formed_angevin_glory_of_angevin: "Glory of Angevin"
+ dec1_formed_angevin_glory_of_angevin_desc: "TODO"
  
  

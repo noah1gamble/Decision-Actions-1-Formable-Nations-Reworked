@@ -3,41 +3,129 @@ country_decisions = {
 	europe_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = EUR }
-			OR = {
-				technology_group = western
-			}
+			NOT = { has_country_flag = formed_europe_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			technology_group = western
 			OR = {
 				ai = no
+				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 30
 				}
+			}		
+			NOT = { 
+				exists = EUR
+				tag = EUR
+				tag = PAP
+				tag = ENG
+				tag = UKI
+				tag = GBR
+				tag = FRA
+				tag = CAS
+				tag = SPA
+				tag = POL
+				tag = HAB
+				tag = KNI
+				tag = GRA
+				tag = ADU
+				tag = IBE
+				tag = FIB
 			}
+			OR = {
+				culture_group = british
+				culture_group = germanic
+				culture_group = iberian
+			}			
 		}
+		provinces_to_highlight = {
+			OR = {
+					# Holland
+					
+					# England
+					
+					# France
+					
+					# Italy
+					
+					# Germany
+					
+					# Iberia
+				province_id = 219
+				province_id = 2751
+				province_id = 2754
+				province_id = 4547
+				province_id = 221
+				province_id = 1748
+				province_id = 225
+				province_id = 224
+				province_id = 4548
+				province_id = 1749
+				province_id = 218
+				province_id = 1747
+				province_id = 216
+				province_id = 4553
+				province_id = 208
+				province_id = 215
+				province_id = 4551
+				province_id = 217
+				province_id = 2755
+				province_id = 4552
+				province_id = 1746
+				province_id = 1745
+				province_id = 207
+				province_id = 4558
+				province_id = 4554
+				province_id = 4555
+				province_id = 206
+				province_id = 230		
+				province_id = 229
+				province_id = 4150
+				province_id = 227
+				province_id = 228
+				province_id = 1851
+				province_id = 4556
+				province_id = 232
+				province_id = 231
+				province_id = 226
+				province_id = 4546
+				province_id = 223
+				province_id = 222
+				province_id = 210
+				province_id = 209
+				province_id = 2989				
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 30
+			NOT = { exists = EUR }		
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = EUR }
-			
-                        owns_core_province = 92 # Brabant
-                        owns_core_province = 236 # London
-                        owns_core_province = 183 # Paris
-						owns_core_province = 118 # Roma
-                        owns_core_province = 217 # Madrid
-						owns_core_province = 50 # Berlin
-						owns_core_province = 227 # Lisboa
+			ROOT = {
+				owns_core_province = 92 # Brabant
+				owns_core_province = 236 # London
+				owns_core_province = 183 # Paris
+				owns_core_province = 118 # Roma
+				owns_core_province = 217 # Madrid
+				owns_core_province = 50 # Berlin
+				owns_core_province = 227 # Lisboa
+			}
 		}
 	 	effect = {
 			change_tag = EUR
-			add_prestige = 25
 			set_capital = 92 # Brabant
-			ai_will_do = {
-				factor = 400
-			}
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300		
 	}
 
 			

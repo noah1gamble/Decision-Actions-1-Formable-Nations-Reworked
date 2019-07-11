@@ -3,49 +3,114 @@ country_decisions = {
 	yugoslavia_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = YUG }
-			NOT = { tag = HLR }
-			NOT = { tag = SWI }
-			NOT = { tag = EUR }
+			NOT = { has_country_flag = formed_yugoslavia_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes	
+					num_of_cities = 10
+				}
+			}			
+			NOT = {
+				exists = YUG
+				tag = YUG
+				tag = PAP 
+				tag = YUG
+				tag = HLR
+				tag = SWI
+				tag = EUR
+			}
 			OR = {
 				primary_culture = croatian
 				primary_culture = serbian
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
+				primary_culture = bosnian
+				primary_culture = albanian
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				# Balkans
+            	province_id = 141 # Serbia
+            	province_id = 3002 # Visoki
+            	province_id = 140 # Bosna
+            	province_id = 139 # Hum
+				province_id = 136 # Dalmatia
+				province_id = 137 # Ragusa
+				province_id = 1826 # Lika
+				province_id = 131 # Zagreb
+				province_id = 1767 # Slavonia
+				province_id = 138 # Zeta
+				province_id = 152 # Vasard
+				province_id = 1827 # Raska
+				province_id = 1831 # Travunia
+				province_id = 1828 # Donji Kraiji
+				province_id = 4173 # Szerem
+				province_id = 4239 # Nandorfehervar
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}	
+		}		
 		allow = {
-			adm_tech = 20
+			adm_tech = 10
+			NOT = { exists = YUG }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = YUG }
-			
-                        owns_core_province = 141 # Serbia
-                        owns_core_province = 3002 # Visoki
-                        owns_core_province = 140 # Bosna
-                        owns_core_province = 139 # Hum
-			owns_core_province = 136 # Dalmatia
-			owns_core_province = 137 # Ragusa
-			owns_core_province = 1826 # Lika
-			owns_core_province = 131 # Zagreb
-			owns_core_province = 1767 # Slavonia
-			owns_core_province = 138 # Zeta
-			owns_core_province = 152 # Vasard
-			owns_core_province = 1827 # Raska
-			owns_core_province = 1831 # Travunia
-			owns_core_province = 1828 # Donji Kraiji
+			ROOT = {
+				owns_core_province = 141 # Serbia
+				owns_core_province = 3002 # Visoki
+				owns_core_province = 140 # Bosna
+				owns_core_province = 139 # Hum
+				owns_core_province = 136 # Dalmatia
+				owns_core_province = 137 # Ragusa
+				owns_core_province = 1826 # Lika
+				owns_core_province = 131 # Zagreb
+				owns_core_province = 1767 # Slavonia
+				owns_core_province = 138 # Zeta
+				owns_core_province = 152 # Vasard
+				owns_core_province = 1827 # Raska
+				owns_core_province = 1831 # Travunia
+				owns_core_province = 1828 # Donji Kraiji
+				owns_core_province = 4173 # Szerem
+				owns_core_province = 4239 # Nandorfehervar
+			}
 		}
 	 	effect = {
 			change_tag = YUG
-			add_prestige = 25
-			change_government = administrative_monarchy
+			set_country_flag = formed_yugoslavia_flag
 			set_capital = 141 # Serbia
+			YUG = {
+				217 = { 
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			balkan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = YUG
+			}
+			custom_tooltip = dec1_decisions_spacing
+			add_government_reform = autocracy_reform
+			legacy_equivalent = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			add_country_modifier = { 
+				name = dec1_increased_centralization
+			}			
+			add_country_modifier = { 
+				name = dec1_formed_yugoslavian_kingdom_kingdom_of_the_slavs
+			}		
+			add_prestige = 25
+			add_legitimacy = 10
+			add_stability = 1
+			add_inflation = 1			
 			if = {
 				limit = {
 					NOT = { primary_culture = serbian }

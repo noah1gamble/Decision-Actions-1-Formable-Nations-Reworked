@@ -1,0 +1,33 @@
+# modifiers
+
+dec1_formed_spain_golden_conquistador = {
+	global_colonial_growth = 10
+	treasure_fleet_income = 0.10
+}
+
+dec1_formed_spain_silver_tongued_lion = {
+	diplomatic_reputation = 2
+}
+
+dec1_formed_united_kingdom_rule_britannia = {
+	naval_forcelimit = 10
+	navy_tradition = 0.5
+	navy_tradition_decay = -0.02
+	naval_tradition_from_battle = 0.03
+	naval_tradition_from_trade = 0.05
+	heavy_ship_cost = -0.01
+	global_ship_cost = -0.05
+}
+
+dec1_formed_angevin_glory_of_angevin = {
+	diplomatic_reputation = 1
+}
+
+dec1_formed_yugoslavian_kingdom_kingdom_of_the_slavs = {
+	army_tradition_from_battle = 0.10
+	infantry_shock = 2
+}
+
+dec1_increased_centralization = {
+	global_autonomy = -0.10
+}
