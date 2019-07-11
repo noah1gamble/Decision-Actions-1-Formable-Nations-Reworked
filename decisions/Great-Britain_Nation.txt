@@ -1,9 +1,9 @@
 country_decisions = {
 
-	united_kingdom_nation = {
+	great-britain_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_united_kingdom_flag }
+			NOT = { has_country_flag = formed_great_britain_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
@@ -16,8 +16,8 @@ country_decisions = {
 				}
 			}			
 			NOT = { 
-				exists = UKI 
-				exists = GBR
+				exists = GBR 
+				exists = UKI
 				tag = GBR
 				tag = UKI
 				tag = PAP
@@ -136,10 +136,10 @@ country_decisions = {
 			owns_core_province = 251
 		}
 		effect = {
-			change_tag = UKI	
+			change_tag = GBR	
 			set_country_flag = formed_great_britain_flag				
 			set_capital = 236 # London
-			UKI = {
+			GBR = {
 				236 = { 
 					add_base_tax = 3
 					add_base_production = 3
@@ -150,21 +150,21 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = UKI
+				add_permanent_claim = GBR
 			}			
 			custom_tooltip = dec1_decisions_spacing
 			add_government_reform = english_monarchy
 			legacy_equivalent = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
-			UKI = {
+			GBR = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}
 				add_country_modifier = { 
-					name = dec1_formed_gb
+					name = dec1_formed_great_britain_ruler_of_the_waves
 				}	
 			}
-			add_prestige = 10			
+			add_prestige = 20			
 		}
 		ai_will_do = {
 			factor = 1

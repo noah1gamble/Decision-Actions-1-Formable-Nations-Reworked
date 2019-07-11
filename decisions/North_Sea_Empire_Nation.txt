@@ -32,9 +32,19 @@ country_decisions = {
 			NOT = { exists = NSE }
 			is_subject = no
 			is_at_war = no
-			ENG = { 
-				NOT = { 
-					dynasty = "Lancaster" }
+			OR = {
+				ENG = { 
+					NOT = { 
+						dynasty = "Lancaster" 
+						has_ruler = "Henry VI"
+					}
+				}
+				DEN = { 
+					
+				}
+				ROOT = {
+				
+				}
 			}
 				owns_core_province = 12 # Sjaelland
 				owns_core_province = 6 # Skane

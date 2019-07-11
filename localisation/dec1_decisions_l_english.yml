@@ -134,8 +134,8 @@
  siebenbuergen_nation_title: "Form Siebenbürgen"
  siebenbuergen_nation_desc: ""
  
- great_britain_nation_title: "Form Great Britain"
- great_britain_nation_desc: "TODO"
+ great-britain_nation_title: "Form Great Britain"
+ great-britain_nation_desc: "TODO"
  
  #TOOLTIPS
  
@@ -169,5 +169,8 @@
  
  dec1_formed_angevin_glory_of_angevin: "Glory of Angevin"
  dec1_formed_angevin_glory_of_angevin_desc: "TODO"
+ 
+ dec1_formed_great_britain_ruler_of_the_waves: "Ruler of The Waves"
+ dec1_formed_great_britain_ruler_of_the_waves_desc: "TODO"
  
  

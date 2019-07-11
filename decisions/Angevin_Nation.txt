@@ -229,12 +229,14 @@ country_decisions = {
 			add_government_reform = autocracy_reform
 			legacy_equivalent = administrative_monarchy
 			custom_tooltip = dec1_decisions_spacing	
-			add_country_modifier = { 
-				name = dec1_increased_centralization
-			}			
-			add_country_modifier = { 
-				name = dec1_formed_angevin_glory_of_angevin
-			}		
+			ANG = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+				add_country_modifier = { 
+					name = dec1_formed_angevin_glory_of_angevin
+				}
+			}	
 			add_prestige = 40
 			add_legitimacy = 50
 			add_stability = 1

@@ -19,6 +19,11 @@ dec1_formed_united_kingdom_rule_britannia = {
 	global_ship_cost = -0.05
 }
 
+dec1_formed_great_britain_ruler_of_the_waves = {
+	naval_forcelimit = 30	
+	navy_tradition_decay = -0.015
+}
+
 dec1_formed_angevin_glory_of_angevin = {
 	diplomatic_reputation = 1
 }
