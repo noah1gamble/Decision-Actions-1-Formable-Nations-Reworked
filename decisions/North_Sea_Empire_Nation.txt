@@ -23,15 +23,19 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 10
 				}
 			}
 		}
 		allow = {
 			adm_tech = 5
+			NOT = { exists = NSE }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = NSE }
+			ENG = { 
+				NOT = { 
+					dynasty = "Lancaster" }
+			}
 				owns_core_province = 12 # Sjaelland
 				owns_core_province = 6 # Skane
 				owns_core_province = 15 # Midtjylland
@@ -47,9 +51,7 @@ country_decisions = {
 				owns_core_province = 234 # Wessex
 		}
 	 	effect = {
-			change_tag = NSE
-			change_government = despotic_monarchy
-			add_prestige = 25
+
 		}
 		ai_will_do = {
 			factor = 1

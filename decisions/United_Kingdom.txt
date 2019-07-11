@@ -154,7 +154,7 @@ country_decisions = {
 					owns_core_province = 4365
 				}
 				custom_trigger_tooltip = {
-				tooltip = form_united_kingdom_tt_2			
+					tooltip = form_united_kingdom_tt_2			
 						# Scotland
 					owns_core_province = 4361
 					owns_core_province = 4362
@@ -169,13 +169,13 @@ country_decisions = {
 					owns_core_province = 253
 					}
 				custom_trigger_tooltip = {
-				tooltip = form_united_kingdom_tt_3				
+					tooltip = form_united_kingdom_tt_3				
 						# Scottish Isles
 					owns_core_province = 369
 					owns_core_province = 1978	
 					}
 				custom_trigger_tooltip = {
-				tooltip = form_united_kingdom_tt_4					
+					tooltip = form_united_kingdom_tt_4					
 						# Ireland
 					owns_core_province = 4121
 					owns_core_province = 373

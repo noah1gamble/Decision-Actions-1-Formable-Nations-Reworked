@@ -1,0 +1,173 @@
+country_decisions = {
+
+	united_kingdom_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_united_kingdom_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}			
+			NOT = { 
+				exists = UKI 
+				exists = GBR
+				tag = GBR
+				tag = UKI
+				tag = PAP
+				tag = HLR
+				tag = ANG
+				tag = EUR
+			}
+			OR = {
+				culture_group = british
+				primary_culture = welsh
+				primary_culture = irish
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# London
+				province_id = 236
+				province_id = 235
+				province_id = 4371
+				province_id = 237
+					# East Anglia
+				province_id = 238	
+				province_id = 1860				
+				province_id = 4370
+					# Wessex
+				province_id = 234					
+				province_id = 4374
+				province_id = 4130
+				province_id = 4373
+				province_id = 233
+					# West Midlands
+				province_id = 239
+				province_id = 240
+				province_id = 4372
+				province_id = 4375
+				province_id = 244
+					# East Midlands
+				province_id = 243
+				province_id = 4376
+				province_id = 1861
+					# Yorkshire
+				province_id = 245	
+				province_id = 4367
+				province_id = 4368
+					# Wales
+				province_id = 241
+				province_id = 4366
+				province_id = 4369
+				province_id = 242
+					# Scottish Marches
+				province_id = 246
+				province_id = 247
+					# Mann
+				province_id = 4365
+					# Scotland
+				province_id = 248
+				province_id = 249
+				province_id = 251	
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			NOT = { 
+				exists = GBR 
+				exists = UKI
+				exists = ANG
+			}
+			is_subject = no
+			is_at_war = no	
+				# London
+			owns_core_province = 236
+			owns_core_province = 235
+			owns_core_province = 4371
+			owns_core_province = 237
+				# East Anglia
+			owns_core_province = 238	
+			owns_core_province = 1860				
+			owns_core_province = 4370
+				# Wessex
+			owns_core_province = 234					
+			owns_core_province = 4374
+			owns_core_province = 4130
+			owns_core_province = 4373
+			owns_core_province = 233
+				# West Midlands
+			owns_core_province = 239
+			owns_core_province = 240
+			owns_core_province = 4372
+			owns_core_province = 4375
+			owns_core_province = 244
+				# East Midlands
+			owns_core_province = 243
+			owns_core_province = 4376
+			owns_core_province = 1861
+				# Yorkshire
+			owns_core_province = 245	
+			owns_core_province = 4367
+			owns_core_province = 4368
+				# Wales
+			owns_core_province = 241
+			owns_core_province = 4366
+			owns_core_province = 4369
+			owns_core_province = 242
+				# Scottish Marches
+			owns_core_province = 246
+			owns_core_province = 247
+				# Mann
+			owns_core_province = 4365
+				# Scotland
+			owns_core_province = 248
+			owns_core_province = 249
+			owns_core_province = 251
+		}
+		effect = {
+			change_tag = UKI	
+			set_country_flag = formed_great_britain_flag				
+			set_capital = 236 # London
+			UKI = {
+				236 = { 
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = UKI
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			add_government_reform = english_monarchy
+			legacy_equivalent = english_monarchy_legacy
+			custom_tooltip = dec1_decisions_spacing
+			UKI = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
+				add_country_modifier = { 
+					name = dec1_formed_gb
+				}	
+			}
+			add_prestige = 10			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}

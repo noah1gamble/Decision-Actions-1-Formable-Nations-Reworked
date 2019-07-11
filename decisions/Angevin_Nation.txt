@@ -33,69 +33,69 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				# London
+					# London
 				province_id = 235
 				province_id = 236
 				province_id = 237
 				province_id = 4371
-				# East Anglia
+					# East Anglia
 				province_id = 4370
 				province_id = 1860
 				province_id = 238
-				# Wessex
+					# Wessex
 				province_id = 233
 				province_id = 234
 				province_id = 4130
 				province_id = 4374				
 				province_id = 4373
-				# Wales
+					# Wales
 				province_id = 241
 				province_id = 4369
-				# West Midlands
+					# West Midlands
 				province_id = 4372
 				province_id = 239
 				province_id = 240
 				province_id = 4375
 				province_id = 244
-				# Yorkshire
+					# Yorkshire
 				province_id = 245
 				province_id = 4367
 				province_id = 4368
-				# Scottish Marches
+					# Scottish Marches
 				province_id = 246
 				province_id = 247
-				# Ireland
+					# Ireland
 				province_id = 373
 				province_id = 374
-				# Brittany
+					# Brittany
 				province_id = 4384	
 				province_id = 172		
 				province_id = 169		
 				province_id = 171		
 				province_id = 170			
-				# Normandy
+					# Normandy
 				province_id = 4385
 				province_id = 168
 				province_id = 1879
 				province_id = 167
-				# Loire
+					# Loire
 				province_id = 177
 				province_id = 4389
 				province_id = 178
-				# Poitou
+					# Poitou
 				province_id = 4386
 				province_id = 180
 				province_id = 4111
 				province_id = 4387
-				# Guyenne
+					# Guyenne
 				province_id = 194
 				province_id = 4112
-				# Gascony
+					# Gascony
 				province_id = 174
 				province_id = 173
 				province_id = 175
 				province_id = 176
-				# Massif Central
+					# Massif Central
 				province_id = 195
 			}
 			OR = {
@@ -105,7 +105,11 @@ country_decisions = {
 		}		
 		allow = {		
 			adm_tech = 5
-			NOT = { exists = ANG }
+			NOT = { 
+				exists = ANG 
+				exists = GBR 
+				exists = UKI 
+			}
 			is_subject = no
 			is_at_war = no
 			custom_trigger_tooltip = {
@@ -145,9 +149,19 @@ country_decisions = {
 				owns_core_province = 373
 				owns_core_province = 374					
 			}
+			custom_trigger_tooltip = {
+				tooltip = form_angevin_tt_4		
+				# Brittany
+				owns_core_province = 4384	
+				owns_core_province = 172		
+				owns_core_province = 169		
+				owns_core_province = 171		
+				owns_core_province = 170	
+			}
 			OR = {
-				ENG = {
+				ROOT = {
 					AND = {
+					owns_core_province = 178
 					senior_union_with = FRA	
 					years_in_union_under = {
 						who = ROOT
@@ -156,41 +170,35 @@ country_decisions = {
 					}	
 				}
 				custom_trigger_tooltip = {
-				tooltip = form_angevin_tt_2			
-				# Brittany
-				owns_core_province = 4384	
-				owns_core_province = 172		
-				owns_core_province = 169		
-				owns_core_province = 171		
-				owns_core_province = 170			
-				# Normandy
-				owns_core_province = 4385
-				owns_core_province = 168
-				owns_core_province = 1879
-				owns_core_province = 167
-				# Loire
-				owns_core_province = 177
-				owns_core_province = 4389
-				owns_core_province = 178
+					tooltip = form_angevin_tt_2					
+						# Normandy
+					owns_core_province = 4385
+					owns_core_province = 168
+					owns_core_province = 1879
+					owns_core_province = 167
+						# Loire
+					owns_core_province = 177
+					owns_core_province = 4389
+					owns_core_province = 178
 				}
 				custom_trigger_tooltip = {
-				tooltip = form_angevin_tt_3				
-				# Poitou
-				owns_core_province = 4386
-				owns_core_province = 180
-				owns_core_province = 4111
-				owns_core_province = 4387
-				# Guyenne
-				owns_core_province = 194
-				owns_core_province = 4112
-				# Gascony
-				owns_core_province = 174
-				owns_core_province = 173
-				owns_core_province = 175
-				owns_core_province = 176
-				# Massif Central
-				owns_core_province = 195
-				owns_core_province = 186
+					tooltip = form_angevin_tt_3				
+						# Poitou
+					owns_core_province = 4386
+					owns_core_province = 180
+					owns_core_province = 4111
+					owns_core_province = 4387
+						# Guyenne
+					owns_core_province = 194
+					owns_core_province = 4112
+						# Gascony
+					owns_core_province = 174
+					owns_core_province = 173
+					owns_core_province = 175
+					owns_core_province = 176
+						# Massif Central
+					owns_core_province = 195
+					owns_core_province = 186
 				}
 			}	
 		}
