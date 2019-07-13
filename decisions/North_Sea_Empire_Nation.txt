@@ -109,13 +109,13 @@ country_decisions = {
 						owns_core_province = 17
 					}
 				}
-				DEN = { # Denmark form North Sea Empire
+				DAN = { # Denmark form North Sea Empire
 					AND = {
 						is_lesser_in_union = no
 						junior_union_with = ENG
 						ENG = { 
 							years_in_union_under = {
-								who = DEN
+								who = DAN
 								years = 10
 							}
 						}
@@ -126,7 +126,7 @@ country_decisions = {
 						tag = ENG
 						tag = DAN
 					}
-					AND = { # Controls all cores of norway, denmark, england
+					AND = { # Controls all cores of Norway, Denmark, England
 						custom_trigger_tooltip = {
 							tooltip = form_north_sea_empire_tt_1			
 							owns_core_province = 236

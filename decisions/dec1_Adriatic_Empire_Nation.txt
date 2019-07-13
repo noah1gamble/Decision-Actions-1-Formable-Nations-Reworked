@@ -1,0 +1,150 @@
+country_decisions = {
+
+	adriatic_empire_nation = {
+		major = yes
+		potential = {
+			NOT = { 
+				tag = PAP
+				tag = ADR
+				tag = ALP
+				tag = CIS
+				tag = EUR
+				tag = IMA
+				tag = ROE
+				tag = LVE
+				tag = ITA
+				tag = TSI
+				tag = YUG
+			}
+			OR = {
+				primary_culture = albanian
+				primary_culture = croatian
+				primary_culture = venetian
+				primary_culture = umbrian
+				primary_culture = romagnan
+				primary_culture = neapolitan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Venitia
+				province_id = 112
+				province_id = 1774
+				province_id = 111
+				province_id = 108
+					# Emilia-Romagna
+				province_id = 113
+				province_id = 114
+					# Central Italy
+				province_id = 2977
+				province_id = 119
+				province_id = 120
+					# Apulia
+				province_id = 2985 
+				province_id = 1933
+				province_id = 122
+					# Carniola
+				province_id = 1769
+				province_id = 130
+					# East Adriatic
+				province_id = 1826
+				province_id = 136
+				province_id = 137
+					# Rascia
+				province_id = 138
+					# Albania
+				province_id = 4174
+				province_id = 4175
+				province_id = 143
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			NOT = { exists = ADR }
+			is_subject = no
+			is_at_war = no
+				# Venitia
+			owns_core_province = 112
+			owns_core_province = 1774
+			owns_core_province = 111
+			owns_core_province = 108
+				# Emilia-Romagna
+			owns_core_province = 113
+			owns_core_province = 114
+				# Central Italy
+			owns_core_province = 2977
+			owns_core_province = 119
+			owns_core_province = 120
+				# Apulia
+			owns_core_province = 2985 
+			owns_core_province = 1933
+			owns_core_province = 122
+				# Carniola
+			owns_core_province = 1769
+			owns_core_province = 130
+				# East Adriatic
+			owns_core_province = 1826
+			owns_core_province = 136
+			owns_core_province = 137
+				# Rascia
+			owns_core_province = 138
+				# Albania
+			owns_core_province = 4174
+			owns_core_province = 4175
+			owns_core_province = 143			
+		}
+	 	effect = {
+			change_tag = ADR
+			set_country_flag = formed_adriatic_empire_flag				
+			set_capital = 112 # Venice
+			ADR = {
+				217 = { 
+					add_base_tax = 20
+					add_base_production = 5
+				}
+			}
+			italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADR
+			}	
+			balkan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ADR
+			}		
+			custom_tooltip = dec1_decisions_spacing
+			ADR = { set_government_rank = 3 }
+			add_government_reform = autocracy_reform
+			legacy_equivalent = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing
+			add_country_modifier = { 
+				name = dec1_increased_centralization
+			}
+			add_country_modifier = { 
+				name = dec1_formed_adriatic_empire_maritime_merchant_emperors
+			}			
+			add_prestige = 20		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+		}
+	}
+
+			

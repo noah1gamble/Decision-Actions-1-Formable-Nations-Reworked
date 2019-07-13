@@ -33,6 +33,18 @@ dec1_formed_england_rebirth_of_england = {
 	navy_tradition_decay = -0.035
 }
 
+dec1_formed_celtic_union_celtic_warhorse = {
+
+}
+
+dec1_formed_iberia_unified_spanish_empire = {
+
+}
+
+dec1_restored_rome = {
+
+}
+
 dec1_formed_yugoslavian_kingdom_kingdom_of_the_slavs = {
 	army_tradition_from_battle = 0.10
 	infantry_shock = 2

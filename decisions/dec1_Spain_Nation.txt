@@ -1,12 +1,12 @@
 country_decisions = {
 
-	iberia_nation = {
+	spanish_nation = { 
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_iberia_flag }
+			NOT = { has_country_flag = formed_spain_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no		
+			is_colonial_nation = no
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -14,22 +14,23 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 10
 				}
-			}			
+			}
 			NOT = { 
-				tag = IBE
+				exists = SPA
+				tag = SPA
 				tag = PAP
-				tag = HLR 
 				tag = FRA
 				tag = KNI
-				tag = GRA	
+				tag = GRA
 				tag = ADU
+				tag = IBE
 				tag = EUR
-				tag = FIB		
+				tag = FIB
 			}
 			OR = {
 				culture_group = iberian
 				primary_culture = basque
-			}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -85,26 +86,6 @@ country_decisions = {
 				province_id = 210
 				province_id = 209
 				province_id = 2989
-					# Valencia
-				province_id = 1750
-				province_id = 4549
-				province_id = 220
-				province_id = 4550
-					# Aragon
-				province_id = 2990
-				province_id = 4557
-				province_id = 214
-				province_id = 211
-					# Catalonia
-				province_id = 2988
-				province_id = 2987
-				province_id = 213
-				province_id = 212
-				province_id = 197			
-					# Balares
-				province_id = 4560
-				province_id = 333
-				province_id = 4559
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -113,9 +94,9 @@ country_decisions = {
 		}		
 		allow = {
 			adm_tech = 10
-			NOT = { exists = IBE }			
+			NOT = { exists = SPA }
 			is_subject = no
-			is_at_war = no
+			is_at_war = no		
 			ROOT = {
 					# Toldo
 				owns_core_province = 219
@@ -168,38 +149,17 @@ country_decisions = {
 					# Vasconia
 				owns_core_province = 210
 				owns_core_province = 209
-				owns_core_province = 2989
-					# Valencia
-				owns_core_province = 1750
-				owns_core_province = 4549
-				owns_core_province = 220
-				owns_core_province = 4550
-					# Aragon
-				owns_core_province = 2990
-				owns_core_province = 4557
-				owns_core_province = 214
-				owns_core_province = 211
-					# Catalonia
-				owns_core_province = 2988
-				owns_core_province = 2987
-				owns_core_province = 213
-				owns_core_province = 212
-				owns_core_province = 197			
-					# Balares
-				owns_core_province = 4560
-				owns_core_province = 333
-				owns_core_province = 4559				
-			}
-
+				owns_core_province = 2989				
+			}			
 		}
-	 	effect = {
-			change_tag = IBE
-			set_country_flag = formed_iberia_flag				
+		effect = {
+			change_tag = SPA
+			set_country_flag = formed_spain_flag
 			set_capital = 217 # Madrid
 			SPA = {
 				217 = { 
-					add_base_tax = 10
-					add_base_production = 10
+					add_base_tax = 5
+					add_base_production = 5
 					add_base_manpower = 5
 				}
 			}
@@ -207,10 +167,160 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = IBE
+				add_permanent_claim = SPA
+			}
+			custom_tooltip = dec1_decisions_spacing
+			SPA = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			legacy_equivalent = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			SPA = { 
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+				add_country_modifier = { 
+					name = dec1_formed_spain_golden_conquistador
+				}
+			}		
+			add_prestige = 25
+			add_legitimacy = 20
+			add_stability = 1
+			add_inflation = 2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	spanish_nation_diplomatically = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_spain_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			tag = CAS
+			owns = 219
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					OR = {
+						ARA = {	
+							is_lesser_in_union = yes
+							junior_union_with = CAS
+							vassal_of = CAS	
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				# Grenada
+				province_id = 226
+				province_id = 4546
+				province_id = 223
+				province_id = 222
+				# Naforroa
+				province_id = 210
+				# Aragon
+				province_id = 1750
+				province_id = 4549
+				province_id = 220
+				province_id = 1750
+				province_id = 2990
+				province_id = 4550
+				province_id = 4557
+				province_id = 214
+				province_id = 2988
+				province_id = 211
+				province_id = 2987
+				province_id = 213
+				province_id = 212
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			NOT = { exists = SPA }
+			is_subject = no
+			is_at_war = no
+			ROOT = { # Grenada
+				owns_core_province = 226
+				owns_core_province = 4546
+				owns_core_province = 223
+				owns_core_province = 222
+				owns_core_province = 1750
+				owns_core_province = 4549
+				owns_core_province = 220
+				owns_core_province = 2990
+				owns_core_province = 4550
+				owns_core_province = 4557
+				owns_core_province = 214
+				owns_core_province = 2988
+				owns_core_province = 211
+				owns_core_province = 2987
+				owns_core_province = 213
+				owns_core_province = 212
+			}						
+			OR = {
+				ROOT = { #Aragon
+					owns_or_subject_of = 1750
+					owns_or_subject_of = 4549
+					owns_or_subject_of = 220
+					owns_or_subject_of = 2990
+					owns_or_subject_of = 4550
+					owns_or_subject_of = 4557
+					owns_or_subject_of = 214
+					owns_or_subject_of = 2988
+					owns_or_subject_of = 211
+					owns_or_subject_of = 2987
+					owns_or_subject_of = 213
+					owns_or_subject_of = 212
+				}			
+				ARA = {	
+					is_lesser_in_union = yes
+					junior_union_with = CAS
+					vassal_of = CAS	
+				}
+			}
+		}
+		effect = {
+			change_tag = SPA	
+			set_country_flag = formed_spain_flag
+			if = {
+				limit = {
+					ARA = {
+						ai = yes
+					}
+				}
+				inherit = ARA
+			}				
+			set_capital = 217 # Madrid
+			SPA = {
+				217 = { 
+					add_base_tax = 8
+					add_base_production = 8
+					add_base_manpower = 8
+				}
+			}
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SPA
 			}			
 			custom_tooltip = dec1_decisions_spacing
-			SPA = { set_government_rank = 3 }
+			SPA = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
 			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
@@ -218,16 +328,15 @@ country_decisions = {
 				name = dec1_increased_centralization
 			}
 			add_country_modifier = { 
-				name = dec1_formed_iberia_unified_spanish_empire
+				name = dec1_formed_spain_silver_tongued_lion
 			}			
-			add_prestige = 50
-			add_legitimacy = 80			
+			add_prestige = 30
+			add_legitimacy = 40
+			add_stability = 2			
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 380
-		}
-	}
-
-			
+		ai_importance = 275
+	}	
+}

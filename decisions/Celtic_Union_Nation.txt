@@ -3,46 +3,175 @@ country_decisions = {
 	celtic_union_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = GBR }
-			NOT = { tag = ENG }
-			NOT = { tag = FRA }
-			NOT = { tag = CEU }
-			NOT = { tag = EUR }
+			NOT = { has_country_flag = formed_celtic_union_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}		
+			NOT = { 
+				tag = PAP 
+				tag = GBR
+				tag = UKI
+				tag = ANG
+				tag = ENG
+				tag = FRA
+				tag = CEU
+				tag = EUR
+			}
 			OR = {
 				primary_culture = scottish
 				primary_culture = welsh
 				primary_culture = irish
 				primary_culture = breton
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {
+					# Leinster
+				province_id = 373
+				province_id = 4379
+				province_id = 4120
+				province_id = 374
+					# Munster
+				province_id = 4377
+				province_id = 4118
+				province_id = 4378
+					# Ulster
+				province_id = 372
+				province_id = 4121
+				province_id = 4380
+					# Connacht
+				province_id = 4119
+				province_id = 375
+				province_id = 376
+					# Wales
+				province_id = 4366
+				province_id = 241
+				province_id = 242
+				province_id = 4369
+					# Wessex
+				province_id = 233
+					# Scottish Marches
+				province_id = 4361
+				province_id = 4362
+					# Lowlands
+				province_id = 249
+				province_id = 248
+				province_id = 251
+					# Highlands
+				province_id = 252
+				province_id = 250
+				province_id = 4363
+				province_id = 4110
+					# The Isles
+				province_id = 253
+				province_id = 4364
+				province_id = 4365
+					# Brittany
+				province_id = 172
+				province_id = 4384
+				province_id = 169
+				province_id = 171
+				province_id = 170				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
+			NOT = { exists = CEU }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = CEU }
-			
-                        owns_core_province = 373 # Meath
-                        owns_core_province = 375 # Munster
-                        owns_core_province = 248 # Lothian
-						owns_core_province = 252 # Highlands
-                        owns_core_province = 241 # Glamorganshire
-						owns_core_province = 169 # Armor
-						owns_core_province = 172 # Nantes
+				# Leinster
+			owns_core_province = 373
+			owns_core_province = 4379
+			owns_core_province = 4120
+			owns_core_province = 374
+				# Munster
+			owns_core_province = 4377
+			owns_core_province = 4118
+			owns_core_province = 4378
+				# Ulster
+			owns_core_province = 372
+			owns_core_province = 4121
+			owns_core_province = 4380
+				# Connacht
+			owns_core_province = 4119
+			owns_core_province = 375
+			owns_core_province = 376
+				# Wales
+			owns_core_province = 4366
+			owns_core_province = 241
+			owns_core_province = 242
+			owns_core_province = 4369
+				# Wessex
+			owns_core_province = 233
+				# Scottish Marches
+			owns_core_province = 4361
+			owns_core_province = 4362
+				# Lowlands
+			owns_core_province = 249
+			owns_core_province = 248
+			owns_core_province = 251
+				# Highlands
+			owns_core_province = 252
+			owns_core_province = 250
+			owns_core_province = 4363
+			owns_core_province = 4110
+				# The Isles
+			owns_core_province = 253
+			owns_core_province = 4364
+			owns_core_province = 4365
+				# Brittany
+			owns_core_province = 172
+			owns_core_province = 4384
+			owns_core_province = 169
+			owns_core_province = 171
+			owns_core_province = 170
 		}
 	 	effect = {
 			change_tag = CEU
-			add_prestige = 25
-			ai_will_do = {
-				factor = 400
+			set_country_flag = formed_celtic_union_flag
+			set_capital = 373
+			CEU = {
+				217 = {
+					add_base_manpower = 12
+				}
 			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CEU
+			}
+			custom_tooltip = dec1_decisions_spacing
+			SPA = { set_government_rank = 1 }
+			add_government_reform = autocracy_reform
+			legacy_equivalent = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			CEU = { 
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+				add_country_modifier = { 
+					name = dec1_formed_spain_golden_conquistador
+				}
+			}		
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400			
 		}
 	}
 
