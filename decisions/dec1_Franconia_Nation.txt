@@ -1,0 +1,81 @@
+country_decisions = {
+
+	franconia_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_franconia_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}			
+			NOT = { 
+				tag = PAP 
+				tag = FRC
+				tag = HLR
+				tag = BAV
+				tag = EUR
+			}
+			OR = {
+				primary_culture = franconian
+			}
+			OR = {
+					# Franconia
+				province_id = 67
+				province_id = 71
+				province_id = 79
+				province_id = 66
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 5
+			NOT = { exists = FRC }				
+			is_subject = no
+			is_at_war = no
+				# Franconia
+			owns_core_province = 67 # Nürnberg
+			owns_core_province = 71 # Ansbach
+			owns_core_province = 79 # Würzburg
+			owns_core_province = 66 # Bamberg
+		}
+	 	effect = {
+			change_tag = FRC
+			set_country_flag = formed_franconia_flag
+			set_capital = 67 # Nürnberg				
+			FRC = {
+				67 = {
+					add_base_tax = 3
+					add_base_production = 6
+					add_base_manpower = 4
+				}
+			}				
+			custom_tooltip = dec1_decisions_spacing
+			FRC = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			legacy_equivalent = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing
+			FRC = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
+				add_country_modifier = { 
+					name = dec1_formed_franconia
+				}	
+			}
+			add_prestige = 10			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}			
+}	

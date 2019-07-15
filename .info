@@ -1,0 +1,203 @@
+CHANGELOG
+
+
+Version 1.0.0
+
+-Rewrote entire mod for 1.28
+-Rewrote template
+-Rewrote Form Spain Military & Diplomatic
+-Rewrote Form Kingdom of Yugoslavia
+-Rewrote Form United Kingdom
+-Removed Vanilla Great-Britain & Russia
+-Rewrote Form North Sea Empire
+-Rewrote Form Angevin Empire
+-Fixed localisation issues
+-Rewrote Form England
+-Rewrote Celtic Union
+-Rewrote Iberia
+-Rewrote Restore the Roman Empire
+
+
+PLANNED CONTENT
+
+
+Tibet Empire
+Romania
+Kalmar Union
+Bhutan
+gallo-roman empire
+macedon
+empire of alexander
+eastern roman empire
+western roman empire
+parthia
+palmyrene empire
+iberia (caucasia)
+kievan rus
+republic of china
+peoples republic of china
+belarus
+empire of egypt
+dacia
+carthage
+euskal-herria
+frankish empire
+gothia
+illyria
+iran
+pakistan
+palistine
+jagiellonian empire
+the latin empire
+lombary
+mercia
+rhineland
+empire of palmyra
+West Francia
+Middle Francia
+Eest Francia
+communist china 
+romania
+tibet empire
+german empire
+greater german reich - fourth reich https://en.wikipedia.org/wiki/Greater_Germanic_Reich
+europan union diplomatically
+event for europe to invite all EU nations to join 
+frano-iberia - https://en.wikipedia.org/wiki/Franco-British_Union
+Greater Portugal https://en.wikipedia.org/wiki/Greater_Portugal
+catalan union https://en.wikipedia.org/wiki/Catalan_Republic_(1931)
+
+
+LIST OF INCLUDED NATIONS
+
+
+The Benelux Union
+Swabian Kingdom
+The Basque Country
+Kingdom Pontus
+Alpland
+Yugoslavian Kingdom
+Belgium
+Franconian Kingdom
+North German Confederation
+South German Confederation
+Kingdom of the Two Sicilies
+Italian Merchant Alliance
+Austria-Hungary > Austro-Hungarian Empire
+Abyssinian Empire
+Czechoslovakia
+North Sea Empire
+The Roman Empire
+Eastern Roman Empire
+Western Roman Empire
+Rhine Confederation
+Cisalpina
+Turkey
+China
+European Union
+Soviet Union
+Celtic Union
+Sweden-Norway
+Caucasia
+Burma
+United Kingdom
+Maghreb
+Tatarstan
+Lower Saxony
+Adriatic Empire
+Himalayan Empire
+Alsace-Lorraine
+Franco-Iberia
+Hesse-Nassau
+East Prussia
+Hansa
+Emilia-Romagna
+Angevin Empire
+Frisia
+Siebenbürgen
+
+
+DESIGN TEMPLATE*
+
+
+*this is a rough template
+
+Potential
+Allow 
+Provinces to highlight
+Effect
+AI will do
+AI importance
+
+Potential Template
+
+General
+Not AI or Custom Nation
+Tags
+Culture
+
+Allow Template
+
+Government Ranks:
+
+DUCHY: 
+
+10 prestige
+15 Legitimacy
+1 stability
+
+Adm tech 5
+
+KINGDOM: 
+
+25 prestige
+30 Legitimacy
+2 stability
+
+Admin tech 7
+
+EMPIRE: 
+
+55 prestige
+50 Legitimacy
+3 stability
+
+Admin tech 15
+
+
+NOTES
+
+~All formable nations will have logical ideas and bonuses along with realistic setup and layout for the decisions themselves. 
+~Everything is to be organized and sorted properly.
+~Custom national ideas and ambitions
+~Formable nations can form into other formable nations (Austria-Hungary to Austro-Hungarian Empire, etc)
+~Reworked Vanilla formable nations (maybe this would be better as a plugin?)
+
+Requirements Rough Layout:
+
+Effects Rough Layout:
+
+Country changes to [INSERT COUNTRY]
+Capital changes to [INSERT CAPITAL]
+Development Changes
+Extras? (Inherit Aragon/etc)
+_____
+_____
+Type of Government changes to [INSERT GOVERNMENT(REFORM)]
+Bonuses/Increased Centralization Modifier (better to use a custom modifier. IC is vanilla)
+_____
+Unique ‘End of Game’ Modifier
+_____
+Claims / Permanent Claims / Historical Claims / etc (hidden depending on the situation)
+_____
+Prestige (REFER TO D/K/E)
+Legitimacy (REFER TO D/K/E) (REPUBLICS/etc?)
+Stability (REFER TO D/K/E)
+
+
+TODO
+
+create guide on website (use eu4 paradoxwiki template?)
+static modifiers
+events?
+ideas/traditions

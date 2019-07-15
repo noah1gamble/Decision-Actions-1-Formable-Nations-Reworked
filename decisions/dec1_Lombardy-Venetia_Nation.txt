@@ -1,0 +1,104 @@
+country_decisions = {
+
+	lombardy_venetia_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_lombardy_venetia_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}		
+			NOT = { 
+				tag = PAP 
+				tag = HAB
+				tag = HLR
+				tag = LVE
+				tag = ITA
+				tag = IMA
+				tag = TSI
+				tag = ALP
+				tag = CIS
+				tag = EUR
+				tag = ADR
+			}
+			OR = {
+				primary_culture = venetian
+				primary_culture = lombard
+				primary_culture = romagnan
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Lombardy-Venetia
+				province_id = 219
+				province_id = 104
+				province_id = 112
+				province_id = 109
+				province_id = 1862
+				province_id = 107
+				province_id = 108
+				province_id = 1774
+				province_id = 111				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 5
+			NOT = { exists = LVE }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 104
+			owns_core_province = 112
+			owns_core_province = 109
+			owns_core_province = 1862
+			owns_core_province = 107
+			owns_core_province = 108
+			owns_core_province = 1774
+			owns_core_province = 111
+		}
+	 	effect = {
+			change_tag = LVE
+			set_country_flag = formed_lombardy_venetia_flag			
+			set_capital = 104 # Milan
+			LVE = {
+				104 = { 
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LVE
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			LVE = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			legacy_equivalent = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing
+			add_country_modifier = { 
+				name = dec1_increased_centralization
+			}
+			add_country_modifier = { 
+				name = dec1_formed_lombardy_venetia
+			}			
+			add_prestige = 30		
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300			
+	}
+}

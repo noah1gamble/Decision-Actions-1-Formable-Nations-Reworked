@@ -38,11 +38,11 @@
  iberia_nation_title: "Form The Iberian Empire"
  iberia_nation_desc: ""
  
- austria-hungary_nation_title: "Form Austria-Hungary"
- austria-hungary_nation_desc: ""
+ austrian_empire_nation_title: "Form The Austrian Empire"
+ austrian_empire_nation_desc: ""
  
- austro_hungarian_empire_nation_title: "Form The Austro-Hungarian Empire"
- austro_hungarian_empire_nation_desc: ""
+ austria_hungary_nation_title: "Form The Austro-Hungarian Empire"
+ austria_hungary_nation_desc: ""
  
  abyssinia_nation_title: "Form The Abyssinian Empire"
  abyssinia_nation_desc: ""
@@ -160,6 +160,13 @@
  form_north_sea_empire_tt_3: "Owns core region: §YNorway§!"
  
  form_england_tt_1: "Owns core region: §YEngland§!"
+ 
+ form_adriatic_empire_tt_1: "Owns all core §YAdriatic§! provinces"
+ 
+ form_austrian_empire_tt_1: "Owns all core §YAustrian§! provinces"
+ form_austrian_empire_tt_2: "Owns all core §YHungarian§! provinces"
+ form_austrian_empire_tt_3: "Subject owns all core §YHungarian§! provinces"
+ form_austrian_empire_tt_4: "   owns all core §YHungarian§! provinces"
  
  
  #MODIFIERS

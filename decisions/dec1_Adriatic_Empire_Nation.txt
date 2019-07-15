@@ -3,6 +3,18 @@ country_decisions = {
 	adriatic_empire_nation = {
 		major = yes
 		potential = {
+			NOT = { has_country_flag = formed_adriatic_empire_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}			
 			NOT = { 
 				tag = PAP
 				tag = ADR
@@ -23,13 +35,6 @@ country_decisions = {
 				primary_culture = umbrian
 				primary_culture = romagnan
 				primary_culture = neapolitan
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
 			}
 		}
 		provinces_to_highlight = {
@@ -75,42 +80,45 @@ country_decisions = {
 			NOT = { exists = ADR }
 			is_subject = no
 			is_at_war = no
-				# Venitia
-			owns_core_province = 112
-			owns_core_province = 1774
-			owns_core_province = 111
-			owns_core_province = 108
-				# Emilia-Romagna
-			owns_core_province = 113
-			owns_core_province = 114
-				# Central Italy
-			owns_core_province = 2977
-			owns_core_province = 119
-			owns_core_province = 120
-				# Apulia
-			owns_core_province = 2985 
-			owns_core_province = 1933
-			owns_core_province = 122
-				# Carniola
-			owns_core_province = 1769
-			owns_core_province = 130
-				# East Adriatic
-			owns_core_province = 1826
-			owns_core_province = 136
-			owns_core_province = 137
-				# Rascia
-			owns_core_province = 138
-				# Albania
-			owns_core_province = 4174
-			owns_core_province = 4175
-			owns_core_province = 143			
+			custom_trigger_tooltip = {
+				tooltip = form_adriatic_empire_tt_1			
+					# Venitia
+				owns_core_province = 112
+				owns_core_province = 1774
+				owns_core_province = 111
+				owns_core_province = 108
+					# Emilia-Romagna
+				owns_core_province = 113
+				owns_core_province = 114
+					# Central Italy
+				owns_core_province = 2977
+				owns_core_province = 119
+				owns_core_province = 120
+					# Apulia
+				owns_core_province = 2985 
+				owns_core_province = 1933
+				owns_core_province = 122
+					# Carniola
+				owns_core_province = 1769
+				owns_core_province = 130
+					# East Adriatic
+				owns_core_province = 1826
+				owns_core_province = 136
+				owns_core_province = 137
+					# Rascia
+				owns_core_province = 138
+					# Albania
+				owns_core_province = 4174
+				owns_core_province = 4175
+				owns_core_province = 143
+			}
 		}
 	 	effect = {
 			change_tag = ADR
-			set_country_flag = formed_adriatic_empire_flag				
-			set_capital = 112 # Venice
+			set_country_flag = formed_adriatic_empire_flag	
+			set_capital = 112
 			ADR = {
-				217 = { 
+				112 = { 
 					add_base_tax = 20
 					add_base_production = 5
 				}
@@ -129,8 +137,8 @@ country_decisions = {
 			}		
 			custom_tooltip = dec1_decisions_spacing
 			ADR = { set_government_rank = 3 }
-			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
+			add_government_reform = merchants_reform
+			legacy_equivalent = merchant_republic
 			custom_tooltip = dec1_decisions_spacing
 			add_country_modifier = { 
 				name = dec1_increased_centralization
@@ -144,7 +152,5 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
-		}
 	}
-
-			
+}

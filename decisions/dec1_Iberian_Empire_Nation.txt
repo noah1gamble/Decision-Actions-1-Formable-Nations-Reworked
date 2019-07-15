@@ -1,6 +1,6 @@
 country_decisions = {
 
-	iberia_nation = {
+	iberian_empire_nation = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_iberia_flag }
@@ -190,7 +190,6 @@ country_decisions = {
 				owns_core_province = 333
 				owns_core_province = 4559				
 			}
-
 		}
 	 	effect = {
 			change_tag = IBE
@@ -227,7 +226,5 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 380
-		}
 	}
-
-			
+}
