@@ -1,0 +1,58 @@
+country_decisions = {
+
+	china_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = CHN }
+			OR = {
+				primary_culture = cantonese
+				primary_culture = gan
+				primary_culture = hakka
+				primary_culture = hubei
+				primary_culture = jianghuai
+				primary_culture = jin
+				primary_culture = manchu
+				primary_culture = min
+				primary_culture = shandong
+				primary_culture = sichuanese
+				primary_culture = wu
+				primary_culture = xiang
+				primary_culture = xibei
+				primary_culture = zhili
+				primary_culture = zhonggyuan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = CHN }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 1816 # Beijing
+			owns_core_province = 685 # Yangzhou
+			owns_core_province = 684 # Hangzhou
+			owns_core_province = 667 # Canton
+			owns_core_province = 679 # Chengdu
+			owns_core_province = 700 # Xi'an
+			owns_core_province = 2184 # Xining
+			owns_core_province = 2113 # Gaizhou
+			owns_core_province = 690 # Qingzhou
+		}
+	 	effect = {
+			change_tag = CHN
+			add_prestige = 35
+			set_capital = 1816 # Beijing
+		}
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+}	

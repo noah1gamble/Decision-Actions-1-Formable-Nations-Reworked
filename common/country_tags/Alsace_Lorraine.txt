@@ -1,0 +1,1 @@
+ALL = "countries/Alsace_Lorraine.txt"

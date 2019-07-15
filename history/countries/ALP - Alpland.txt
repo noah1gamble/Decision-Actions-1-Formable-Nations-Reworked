@@ -1,0 +1,38 @@
+technology_group = western
+religion = catholic
+primary_culture = austrian
+add_accepted_culture = swiss
+add_accepted_culture = lombard
+capital = 73	# Innsbruck
+
+
+1386.7.10 = {
+	monarch = {
+		name = "Wilhelm I"
+		dynasty = "von Habsburg"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1406.7.16 = {
+	monarch = {
+		name = "Friedrich IV"
+		dynasty = "von Habsburg"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1439.6.25 = {
+	monarch = {
+		name = "Sigismund I"
+		dynasty = "von Habsburg"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+

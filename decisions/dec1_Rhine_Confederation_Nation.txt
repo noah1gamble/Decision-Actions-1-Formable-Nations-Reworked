@@ -1,0 +1,44 @@
+country_decisions = {
+
+	rhine_confederation_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = HRE }
+			NOT = { tag = NGC }
+			NOT = { tag = PRU }
+			NOT = { tag = RHE }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = hannoverian
+				primary_culture = swabian
+				primary_culture = hessian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = RHE }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 1878 # Frankfurt
+			owns_core_province = 1761 # Pfalz
+			owns_core_province = 81 # Hessen
+			owns_core_province = 80 # Trier
+			owns_core_province = 1878 # Aachen
+			owns_core_province = 85 # Köln
+			owns_core_province = 2975 # Kleves
+		}
+	 	effect = {
+			change_tag = RHE
+		}
+	}
+
+}

@@ -1,4 +1,5 @@
 primary_culture = lombard
+add_accepted_culture = venetian
 religion = catholic
 technology_group = western
 capital = 104 # Milano

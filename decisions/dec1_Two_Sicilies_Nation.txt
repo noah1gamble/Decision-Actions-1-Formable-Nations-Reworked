@@ -1,0 +1,49 @@
+country_decisions = {
+
+	two_sicilies_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = TSI }
+			NOT = { tag = HLR }
+			NOT = { tag = ITA }
+			NOT = { tag = IMA }
+			NOT = { tag = LVE }
+			NOT = { tag = CIS }
+			NOT = { tag = EUR }
+			NOT = { tag = ADR }
+			OR = {
+				primary_culture = sicilian
+				primary_culture = neapolitan
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = TSI }
+			owns_core_province = 121 # Napoli
+			owns_core_province = 125 # Palermo
+			owns_core_province = 120 # Abruzzi
+			owns_core_province = 124 # Messina
+			owns_core_province = 2982 # Syracusae
+			owns_core_province = 1933 # Bari
+			owns_core_province = 122 # Salento
+			owns_core_province = 123 # Calabria
+			owns_core_province = 2983 # Salerno
+			owns_core_province = 2984 # Cosenza
+			owns_core_province = 1934 # Lucania
+		}
+	 	effect = {
+			change_tag = TSI
+		}
+	}
+
+}

@@ -204,7 +204,6 @@ country_decisions = {
 					add_base_production = 5
 					add_base_manpower = 2
 				}				
-			}
 			if = {
 				limit = {
 					NOT = { primary_culture = austrian }
@@ -224,9 +223,13 @@ country_decisions = {
 				add_permanent_claim = HBE
 			}			
 			custom_tooltip = dec1_decisions_spacing
-			HBE = { set_government_rank = 3 }
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
 			HBE = {
 				add_country_modifier = { 
@@ -237,6 +240,7 @@ country_decisions = {
 			add_legitimacy = 10
 			add_stability = 3
 			add_inflation = 5
+			}
 		}
 		ai_will_do = {
 			factor = 1

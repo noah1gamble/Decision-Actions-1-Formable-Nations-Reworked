@@ -1,0 +1,109 @@
+country_decisions = {
+	
+	tunisian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = MGH }
+			OR = {
+				primary_culture = tunisian
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = tunisia_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = fezzan_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = tripolitania_area }
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = TUN }
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			NOT = { exists = TUN }
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			owns_core_province = 341 #Tunis
+			owns_core_province = 2473 #Souss
+			OR = {
+				owns_core_province = 2454 #Kef
+				owns_core_province = 354 #Tripoli
+			}
+		}
+		effect = {
+			change_tag = TUN
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_primary_culture = tunisian
+			tunisia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TUN
+			}
+			if = {
+				limit = {
+					is_tribal = yes
+				}
+				change_government = despotic_monarchy #Desert tribes settling down.
+			}
+			add_prestige = 25
+			set_capital = 341
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	
+}

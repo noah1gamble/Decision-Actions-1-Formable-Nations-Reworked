@@ -1,0 +1,43 @@
+country_decisions = {
+
+	turkey_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = TRR }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = turkish
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		allow = {
+			adm_tech = 30
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = TRR }
+			owns_core_province = 151 # Constantinople
+			owns_core_province = 316 # Izmit
+			owns_core_province = 317 # Hudavendiger
+			owns_core_province = 318 # Izmir
+			owns_core_province = 319 # Mentese
+			owns_core_province = 322 # Kutahya
+			owns_core_province = 323 # Konya
+			owns_core_province = 326 # Ankara
+			owns_core_province = 329 # Sivas
+			owns_core_province = 1846 # Amasya
+			owns_core_province = 1848 # Hamid
+		}
+	 	effect = {
+			change_tag = TRR
+		}
+	}
+
+}	

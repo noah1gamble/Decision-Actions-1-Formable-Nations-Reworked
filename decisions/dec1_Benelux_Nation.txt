@@ -1,0 +1,44 @@
+country_decisions = {
+
+	benelux_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = BNL }
+			NOT = { tag = HLR }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = wallonian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = BNL }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 92 # Brabant
+			owns_core_province = 90 # Vlaanderen
+			owns_core_province = 94 # Luxemburg
+			owns_core_province = 93 # Liège
+			owns_core_province = 95 # Breda
+			owns_core_province = 96 # Zeeland
+			owns_core_province = 97 # Holland
+			owns_core_province = 98 # Utrecht
+			owns_core_province = 99 # Gelre
+			owns_core_province = 100 # Friesland
+		}
+	 	effect = {
+		
+		}
+	}
+
+}

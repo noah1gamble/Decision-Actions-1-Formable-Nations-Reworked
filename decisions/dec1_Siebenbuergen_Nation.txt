@@ -1,0 +1,37 @@
+country_decisions = {
+
+	siebenbuergen_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = AHU }
+			NOT = { tag = TUR }
+			NOT = { tag = EUR }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = transylvanian
+				primary_culture = hungarian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			NOT = { exists = SBG }
+			NOT = { num_of_cities = 6 }			
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 4128 # Koenigsboden
+			owns_core_province = 158 # Maros
+			owns_core_province = 4127 # Turda
+		}
+	 	effect = {
+			change_tag = SBG
+		}
+	}
+	
+}

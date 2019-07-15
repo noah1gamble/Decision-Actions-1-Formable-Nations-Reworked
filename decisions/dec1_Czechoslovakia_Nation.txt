@@ -1,0 +1,43 @@
+country_decisions = {
+
+	czechoslovakia_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = CZE }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = czech
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = CZE }
+			is_subject = no
+			is_at_war = no	
+			owns_core_province = 266 # Prague
+			owns_core_province = 2968 # Budejuvice
+			owns_core_province = 267 # Plzen
+			owns_core_province = 2967 # Eger
+			owns_core_province = 1771 # Erz
+			owns_core_province = 2970 # Hradecko
+			owns_core_province = 265 # Moravia
+			owns_core_province = 1772 # Pozsony
+			owns_core_province = 154 # Ersekujvar
+			owns_core_province = 1318 # Spis
+                        
+		}
+	 	effect = {
+			change_tag = CZE
+		}
+	}
+
+}

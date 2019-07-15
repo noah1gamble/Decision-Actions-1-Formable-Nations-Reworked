@@ -1,12 +1,7 @@
-government = feudal_monarchy
 primary_culture = serbian
 religion = orthodox
 technology_group = eastern
-capital = 141	# Beograd
-
-1389.1.1 = {
-	government_rank = 1
-}
+capital = 141
 
 1397.6.24 = {
 	monarch = {

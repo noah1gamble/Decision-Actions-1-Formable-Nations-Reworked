@@ -1,0 +1,97 @@
+country_decisions = {
+	
+tripoli_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = MGH }
+			OR = {
+				primary_culture = tunisian
+				primary_culture = berber
+			}
+			capital_scope = {
+				OR = {
+					area = tripolitania_area
+					area = fezzan_area
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			NOT = { exists = TRP }
+			is_at_war = no
+			is_subject = no
+			is_nomad = no
+			owns_core_province = 354 #Tripoli
+			owns_core_province = 2451 #Thubaqt
+			OR = {
+				owns_core_province = 355 #Sirt
+				owns_core_province = 353 #Djerba
+			}
+		}
+		effect = {
+			change_tag = TRP
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_primary_culture = tunisian
+			tripolitania_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TRP
+			}
+			if = {
+				limit = {
+					is_tribal = yes #Desert tribes settling down.
+				}
+				change_government = despotic_monarchy
+			}
+			add_prestige = 25
+			set_capital = 354 #Tripoli
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		#ai_importance = 400
+	}
+	
+	
+}

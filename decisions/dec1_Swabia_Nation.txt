@@ -1,0 +1,44 @@
+country_decisions = {
+
+	swabia_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			NOT = { tag = SWB }
+			NOT = { tag = HLR }
+			NOT = { tag = SWI }
+			NOT = { tag = EUR }
+			OR = {
+				primary_culture = swabian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = SWB }
+			
+                        owns_core_province = 70 # Württemberg
+                        owns_core_province = 1868 # Augsburg
+                        owns_core_province = 1872 # Ulm
+			owns_core_province = 74 # Baden
+                        owns_core_province = 69 # Oberschwaben
+			owns_core_province = 75 # Elsass
+			owns_core_province = 72 # Breisgau
+			owns_core_province = 68 # Memmingen
+			owns_core_province = 1870 # St Gallen
+			owns_core_province = 1869 # Zürich
+		}
+	 	effect = {
+			change_tag = SWB
+		}
+	}
+
+}

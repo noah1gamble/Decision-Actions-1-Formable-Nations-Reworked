@@ -1,12 +1,9 @@
-government = feudal_monarchy
-government_rank = 3
 primary_culture = austrian
 add_accepted_culture = hungarian
 religion = catholic
 technology_group = western
-capital = 134 # Wien
+capital = 134
 historical_friend = HUN
-
 national_focus = ADM
 
 1395.8.29 = {

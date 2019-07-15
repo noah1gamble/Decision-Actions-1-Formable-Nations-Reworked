@@ -1,1 +1,0 @@
-IBE = "countries/Iberia.txt"
