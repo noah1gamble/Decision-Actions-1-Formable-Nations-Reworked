@@ -33,18 +33,6 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = BSQ
-			change_government = administrative_monarchy
-			add_prestige = 25
-			set_capital = 210 # Navarra
-			if = {
-				limit = {
-					NOT = { primary_culture = basque }
-				}
-				change_primary_culture = basque
-			}
-			ai_will_do = {
-				factor = 400
-			}
 		}
 	}	
 

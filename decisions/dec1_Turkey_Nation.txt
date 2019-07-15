@@ -3,10 +3,12 @@ country_decisions = {
 	turkey_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = TRR }
-			NOT = { tag = EUR }
+			NOT = { 
+				tag = PAP 
+				tag = HLR
+				tag = TRR
+				tag = EUR
+			}
 			OR = {
 				primary_culture = turkish
 			}
@@ -14,26 +16,77 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 5
+					num_of_cities = 10
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				# Thrace
+				province_id = 151
+				province_id = 1764
+				province_id = 149
+					# Hudavendigar
+				province_id = 316
+				province_id = 317
+				province_id = 2296
+					# Karadeniz
+				province_id = 2299
+				province_id = 325
+				province_id = 328
+					# Ankara
+				province_id = 4312
+				province_id = 326
+				province_id = 4313
+					# Germiyan
+				province_id = 322
+				province_id = 4311
+				province_id = 4308
+				province_id = 1848
+					# Aydin
+				province_id = 2297
+				province_id = 318
+				province_id = 3209
+				province_id = 319
+				province_id = 2298				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}	
+		}		
 		allow = {
-			adm_tech = 30
+			adm_tech = 15
+			NOT = { exists = TRR }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = TRR }
-			owns_core_province = 151 # Constantinople
-			owns_core_province = 316 # Izmit
-			owns_core_province = 317 # Hudavendiger
-			owns_core_province = 318 # Izmir
-			owns_core_province = 319 # Mentese
-			owns_core_province = 322 # Kutahya
-			owns_core_province = 323 # Konya
-			owns_core_province = 326 # Ankara
-			owns_core_province = 329 # Sivas
-			owns_core_province = 1846 # Amasya
-			owns_core_province = 1848 # Hamid
+				# Thrace
+			owns_core_province = 151
+			owns_core_province = 1764
+			owns_core_province = 149
+				# Hudavendigar
+			owns_core_province = 316
+			owns_core_province = 317
+			owns_core_province = 2296
+				# Karadeniz
+			owns_core_province = 2299
+			owns_core_province = 325
+			owns_core_province = 328
+				# Ankara
+			owns_core_province = 4312
+			owns_core_province = 326
+			owns_core_province = 4313
+				# Germiyan
+			owns_core_province = 322
+			owns_core_province = 4311
+			owns_core_province = 4308
+			owns_core_province = 1848
+				# Aydin
+			owns_core_province = 2297
+			owns_core_province = 318
+			owns_core_province = 3209
+			owns_core_province = 319
+			owns_core_province = 2298
 		}
 	 	effect = {
 			change_tag = TRR

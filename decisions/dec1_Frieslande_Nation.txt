@@ -34,12 +34,6 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = FRL
-			change_government = administrative_monarchy
-			add_prestige = 25
-			set_capital = 100 # Friesland
-			ai_will_do = {
-				factor = 400
-			}
 		}
 	}
 

@@ -1,5 +1,5 @@
-government = monastic_order_government
-government_rank = 1
+government = monarchy
+add_government_reform = autocracy_reform
 technology_group = western
 primary_culture = prussian
 add_accepted_culture = lithuanian

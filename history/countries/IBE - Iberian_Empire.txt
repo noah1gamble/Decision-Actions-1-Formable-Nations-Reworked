@@ -1,4 +1,5 @@
-government = feudal_monarchy
+government = monarchy
+add_government_reform = autocracy_reform
 primary_culture = castillian
 add_accepted_culture = andalucian
 add_accepted_culture = leonese
@@ -47,7 +48,17 @@ national_focus = MIL
 	}
 }
 
-1422.1.1 = { leader = {	name = "Álvaro de Luna"	type = general	rank = 1	fire = 2	shock = 2	manuever = 3	siege = 0	death_date = 1453.6.2 } }
+1422.1.1 = { 
+	leader = {	
+		name = "Álvaro de Luna"	
+		type = general		
+		fire = 2	
+		shock = 2	
+		manuever = 3	
+		siege = 0	
+		death_date = 1453.6.2 
+	} 
+}
 
 
 1425.1.5 = {

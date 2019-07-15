@@ -191,7 +191,6 @@ country_decisions = {
 							junior_union_with = ENG
 							junior_union_with = DAN
 							junior_union_with = NOR
-							num_of_unions = 2
 						}
 					}
 					is_great_power = yes
@@ -287,14 +286,10 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			NSE = { set_government_rank = 3 }
 			add_government_reform = english_monarchy
-			legacy_equivalent = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
 			NSE = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}
-				add_country_modifier = { 
-					name = dec1_formed_north_sea_empire_cnut_the_great_restoration
 				}	
 			}
 			add_legitimacy = 80		

@@ -61,14 +61,11 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			FRC = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
+			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
 			FRC = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}
-				add_country_modifier = { 
-					name = dec1_formed_franconia
 				}	
 			}
 			add_prestige = 10			

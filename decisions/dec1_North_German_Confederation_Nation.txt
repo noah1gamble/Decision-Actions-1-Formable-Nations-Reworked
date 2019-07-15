@@ -42,7 +42,7 @@ country_decisions = {
 			owns_core_province = 41	# Königsberg
 			owns_core_province = 43	# Danzig
 			owns_core_province = 2995 # Stolp
-			own_core_province = 263 #Ratibor
+			owns_core_province = 263 #Ratibor
 		}
 	 	effect = {
 			change_tag = NGC

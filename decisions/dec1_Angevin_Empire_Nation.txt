@@ -230,10 +230,7 @@ country_decisions = {
 			ANG = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
-				add_country_modifier = { 
-					name = dec1_formed_angevin_glory_of_angevin
-				}
+				}	
 			}	
 			add_prestige = 40
 			add_legitimacy = 50

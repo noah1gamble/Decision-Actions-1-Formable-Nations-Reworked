@@ -273,7 +273,7 @@ country_decisions = {
 			AHE = {
 				134 = { 
 					add_base_tax = 5
-					dd_base_production = 10
+					add_base_production = 10
 					add_base_manpower = 12
 				}
 				153 = { 
@@ -281,13 +281,13 @@ country_decisions = {
 					add_base_production = 2
 					add_base_manpower = 2
 				}
-				if = {
-					limit = {
-						NOT = { primary_culture = austrian }
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = austrian }
 					}
-					change_primary_culture = austrian
-				}				
-			}			
+				change_primary_culture = austrian
+			}							
 			carpathia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -295,16 +295,13 @@ country_decisions = {
 				add_permanent_claim = AHE
 			}			
 			custom_tooltip = dec1_decisions_spacing
+			AHE = { set_government_rank = 3 }
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
 			AHE = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}
-				#add_country_modifier = { 
-				#	name = dec1_formed_austro_hungarian_compromise
-				#}	
 			}
 			add_prestige = 30
 			add_legitimacy = 3

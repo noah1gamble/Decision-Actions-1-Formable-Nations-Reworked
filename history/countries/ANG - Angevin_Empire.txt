@@ -1,0 +1,38 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = english
+add_accepted_culture = cosmopolitan_french
+religion = catholic
+technology_group = western
+historical_rival = HAB
+historical_rival = SPA
+historical_rival = DAN
+capital = 178 
+national_focus = MIL
+
+1216.9.28 = { 
+	monarch = {
+		name = "Henry"
+		monarch_name = "Henry III"
+		dynasty = "Plantagenet"
+		birth_date = 1216.9.28
+		death_date = 1272.10.16
+		adm = 4
+		dip = 6
+		mil = 5
+	}
+}
+
+
+1444.12.1 = { 
+	monarch = {
+		name = "Henry"
+		monarch_name = "Henry IV"
+		dynasty = "Plantagenet"
+		birth_date = 1432.5.26
+		adm = 6
+		dip = 4
+		mil = 5
+	}
+}
+

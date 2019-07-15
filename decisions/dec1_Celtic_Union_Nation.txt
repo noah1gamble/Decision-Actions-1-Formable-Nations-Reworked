@@ -156,7 +156,7 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			SPA = { set_government_rank = 1 }
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
+			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	
 			CEU = { 
 				add_country_modifier = { 

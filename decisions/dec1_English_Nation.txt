@@ -126,14 +126,10 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			ENG = { set_government_rank = 2 }
 			add_government_reform = english_monarchy
-			legacy_equivalent = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
 			ENG = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}
-				add_country_modifier = { 
-					name = dec1_formed_england_rebirth_of_england
 				}	
 			}
 			add_prestige = 50			

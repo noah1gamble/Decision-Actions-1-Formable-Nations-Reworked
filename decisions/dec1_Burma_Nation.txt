@@ -40,10 +40,6 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = BRM
-			add_prestige = 25
-			ai_will_do = {
-				factor = 400
-			}
 		}
 	}
 

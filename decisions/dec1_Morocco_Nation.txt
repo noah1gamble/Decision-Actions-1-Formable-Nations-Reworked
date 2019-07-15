@@ -23,7 +23,7 @@ country_decisions = {
 				}
 				AND = {
 					primary_culture = berber
-					capital_scope = { area = fez_area }
+					capital_scope = { area = fezzan_area }
 				}
 				AND = {
 					primary_culture = berber
@@ -68,62 +68,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MOR
-			if = {
-				limit = {
-					is_part_of_hre = yes
-					is_elector = no
-				}
-				every_owned_province = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					set_in_empire = no
-				}
-			}
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			tafilalt_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = MOR
-			}
-			sus_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = MOR
-			}
-			marrekesh_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = MOR
-			}
-			fez_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = MOR
-			}
-			northern_morocco_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = MOR
-			}
-			add_prestige = 25
-			set_capital = 344 #Marrekech
-			change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
-			change_primary_culture = moroccan
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+
 		}
 		ai_will_do = {
 			factor = 1

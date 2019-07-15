@@ -35,18 +35,6 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = HEN
-			change_government = despotic_monarchy
-			add_prestige = 25
-			set_capital = 81 # Hessen
-			if = {
-				limit = {
-					NOT = { primary_culture = hessian }
-				}
-				change_primary_culture = hessian
-			}
-			ai_will_do = {
-				factor = 400
-			}
 		}
 	}
 

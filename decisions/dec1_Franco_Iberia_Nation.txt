@@ -77,14 +77,10 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			SPA = { set_government_rank = 3 }
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
 			add_country_modifier = { 
 				name = dec1_increased_centralization
-			}
-			add_country_modifier = { 
-				name = dec1_formed_franco_iberia
-			}			
+			}		
 			add_prestige = 70
 			add_legitimacy = 70
 			add_stability = 2

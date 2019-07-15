@@ -213,14 +213,10 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			UKI = { set_government_rank = 2 }
 			add_government_reform = english_monarchy
-			legacy_equivalent = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
 			UKI = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}
-				add_country_modifier = { 
-					name = dec1_formed_united_kingdom_rule_britannia
 				}	
 			}
 			add_prestige = 25

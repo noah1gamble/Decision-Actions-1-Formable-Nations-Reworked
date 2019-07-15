@@ -26,31 +26,16 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			NOT = { exists = PON }
-			
-                        owns_core_province = 328 # Sinop
-                        owns_core_province = 330 # Trebizond
-                        owns_core_province = 285 # Caffa
+			owns_core_province = 328 # Sinop
+			owns_core_province = 330 # Trebizond
+			owns_core_province = 285 # Caffa
 			owns_core_province = 2410 # Theodoro
-                        owns_core_province = 2447 # Mantrega
+            owns_core_province = 2447 # Mantrega
 			owns_core_province = 325 # Kastamounu
 			owns_core_province = 2304 # Canik
 		}
 	 	effect = {
 			change_tag = PON
-			change_government = administrative_monarchy
-			change_religion = orthodox
-			change_techgroup = eastern
-			add_prestige = 25
-			set_capital = 328 # Sinop
-			if = {
-				limit = {
-					NOT = { primary_culture = pontic_greek }
-				}
-				change_primary_culture = pontic_greek
-			}
-			ai_will_do = {
-				factor = 400
-			}
 		}
 	}
 

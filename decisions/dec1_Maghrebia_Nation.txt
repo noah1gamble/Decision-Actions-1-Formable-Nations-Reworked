@@ -3,7 +3,7 @@ country_decisions = {
 	maghrebia_nation = {
 		major = yes
 		potential = {
-			NOT = { exist = MGH }
+			NOT = { exists = MGH }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ALG }

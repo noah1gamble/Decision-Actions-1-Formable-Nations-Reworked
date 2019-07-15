@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+mercantilism = 17
+technology_group = western
+religion = catholic
+primary_culture = hannoverian
+capital = 1874	# Bremen
+
+1444.11.11 = {
+	monarch = {
+		name = "Charles"
+		adm = 3
+		dip = 4
+		mil = 6
+	}
+}
+
+1532.1.1 = { religion = protestant }
+
+1806.7.12 = { set_legacy_government = administrative_republic }

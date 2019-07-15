@@ -139,7 +139,7 @@ country_decisions = {
 			owns_core_province = 2970
 			owns_core_province = 266
 			owns_core_province = 2968				
-		}
+			}	
 			custom_trigger_tooltip = {
 				tooltip = form_austrian_empire_tt_2		
 				# Transdanubia
@@ -193,7 +193,7 @@ country_decisions = {
 	 	effect = {
 			change_tag = HBE
 			set_country_flag = formed_austrian_empire_flag		
-			set_capital = 134 # Wien
+			set_capital = 134
 			HBE = {
 				134 = { 
 					add_base_tax = 7
@@ -203,12 +203,7 @@ country_decisions = {
 					add_base_tax = 5
 					add_base_production = 5
 					add_base_manpower = 2
-				}				
-			if = {
-				limit = {
-					NOT = { primary_culture = austrian }
 				}
-				change_primary_culture = austrian
 			}			
 			carpathia_region = {
 				limit = {
@@ -223,12 +218,7 @@ country_decisions = {
 				add_permanent_claim = HBE
 			}			
 			custom_tooltip = dec1_decisions_spacing
-			if = {
-				limit = {
-					NOT = { government_rank = 3 }
-				}
-				set_government_rank = 3
-			}
+			HBE = { set_government_rank = 3 }
 			add_government_reform = autocracy_reform
 			custom_tooltip = dec1_decisions_spacing
 			HBE = {
@@ -240,12 +230,10 @@ country_decisions = {
 			add_legitimacy = 10
 			add_stability = 3
 			add_inflation = 5
-			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-	
 }

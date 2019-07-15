@@ -172,15 +172,12 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			SPA = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
+			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	
-			SPA = { 
+			SPA = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}			
-				add_country_modifier = { 
-					name = dec1_formed_spain_golden_conquistador
-				}
 			}		
 			add_prestige = 25
 			add_legitimacy = 20
@@ -322,13 +319,9 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			SPA = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
-			legacy_equivalent = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
 			add_country_modifier = { 
 				name = dec1_increased_centralization
-			}
-			add_country_modifier = { 
-				name = dec1_formed_spain_silver_tongued_lion
 			}			
 			add_prestige = 30
 			add_legitimacy = 40
