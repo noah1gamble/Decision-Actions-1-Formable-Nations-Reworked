@@ -111,9 +111,6 @@ country_decisions = {
 			CIS = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}
-				add_country_modifier = { 
-					name = dec1_formed_cisalpina
 				}	
 			}
 			add_prestige = 30			

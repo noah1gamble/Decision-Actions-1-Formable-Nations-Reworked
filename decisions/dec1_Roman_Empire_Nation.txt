@@ -132,9 +132,6 @@ country_decisions = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 					duration = 14600
-				}
-				add_country_modifier = { 
-					name = dec1_restored_rome
 				}				
 			}
 			add_prestige = 100

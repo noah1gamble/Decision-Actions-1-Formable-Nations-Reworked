@@ -3,13 +3,15 @@ country_decisions = {
 	alsace-lorraine_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = SWB }
-			NOT = { tag = HLR }
-			NOT = { tag = SWI }
-			NOT = { tag = EUR }
-			NOT = { tag = FIB }
-			NOT = { tag = BUR }
+			NOT = { 
+				tag = PAP 
+				tag = SWB
+				tag = HLR
+				tag = SWI
+				tag = EUR
+				tag = FIB
+				tag = BUR
+			}
 			OR = {
 				primary_culture = swabian
 				primary_culture = burgundian
@@ -24,18 +26,16 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 5
+			NOT = { exists = ALL }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = ALL }
-			
-                        owns_core_province = 75 # Elsass
-                        owns_core_province = 188 # Metz
-                        owns_core_province = 189 # Lothringen
+			owns_core_province = 75 # Elsass
+			owns_core_province = 188 # Metz
+			owns_core_province = 189 # Lothringen
 			owns_core_province = 1880 # Sundgau
 		}
 	 	effect = {
 			change_tag = ALL
-			change_government = administrative_monarchy
 			add_prestige = 25
 			set_capital = 75 # Elsass
 			if = {
@@ -44,10 +44,10 @@ country_decisions = {
 				}
 				change_primary_culture = swabian
 			}
-			ai_will_do = {
-				factor = 400
-			}
 		}
+		ai_will_do = {
+			factor = 400
+		}		
 	}
 
-			
+}

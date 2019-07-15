@@ -23,34 +23,20 @@ country_decisions = {
 			adm_tech = 5
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = ABY }
-			
-                        owns_core_province = 1224 # Gonder
-                        owns_core_province = 2757 # Kaffa
-                        owns_core_province = 1211 # Harer
-						owns_core_province = 2758 # Illubabor
-                        owns_core_province = 2772 # Dembiya
-						owns_core_province = 2769 # Lasta
-						owns_core_province = 1208 # Degehabur
-						owns_core_province = 1210 # Dawaro
-						owns_core_province = 2760 # Hadiya
-						owns_core_province = 2770 # Agew
+			NOT = { exists = ABY }		
+			owns_core_province = 1224 # Gonder
+			owns_core_province = 2757 # Kaffa
+			owns_core_province = 1211 # Harer
+			owns_core_province = 2758 # Illubabor
+			owns_core_province = 2772 # Dembiya
+			owns_core_province = 2769 # Lasta
+			owns_core_province = 1208 # Degehabur
+			owns_core_province = 1210 # Dawaro
+			owns_core_province = 2760 # Hadiya
+			owns_core_province = 2770 # Agew
 		}
 	 	effect = {
-			change_tag = ABY
-			change_government = despotic_monarchy
-			add_prestige = 25
-			set_capital = 1224 # Gonder
-			if = {
-				limit = {
-					NOT = { primary_culture = amhara }
-				}
-				change_primary_culture = amhara
-			}
-			ai_will_do = {
-				factor = 400
-			}
+		
 		}
 	}
-
-			
+}

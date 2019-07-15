@@ -48,7 +48,3 @@ country_decisions = {
 			}
 		}
 	}
-	
-	
-
-

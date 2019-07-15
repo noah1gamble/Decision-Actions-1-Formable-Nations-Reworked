@@ -41,4 +41,4 @@ country_decisions = {
 		}
 	}
 
-			
+}
