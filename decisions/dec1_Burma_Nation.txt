@@ -3,7 +3,19 @@ country_decisions = {
 	burma_nation = {
 		major = yes
 		potential = {
+			NOT = { has_country_flag = formed_burma_flag }
 			NOT = { tag = BRM }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}			
 			OR = {
 				primary_culture = arakanese
 				primary_culture = burmese
@@ -13,34 +25,130 @@ country_decisions = {
 				primary_culture = shan
 				primary_culture = mon
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+					# Kachin
+				province_id = 582
+				province_id = 2395
+				province_id = 2396
+				province_id = 4404
+				province_id = 4405
+					# Chindwin
+				province_id = 2397
+				province_id = 2398
+				province_id = 580
+				province_id = 4393
+					# Shan Hills
+				province_id = 583
+				province_id = 2400
+				province_id = 4406
+				province_id = 588
+				province_id = 4397
+					# Karenni
+				province_id = 587
+				province_id = 4398
+				province_id = 2401
+					# Rakhine
+				province_id = 568
+				province_id = 579
+				province_id = 2402
+					# Upper Burma
+				province_id = 581
+				province_id = 584
+				province_id = 2399
+					# Central Burma
+				province_id = 585
+				province_id = 4396
+				province_id = 4394
+				province_id = 4395
+					# Lower Burma
+				province_id = 1815
+				province_id = 4399
+				province_id = 586
+				province_id = 590
+				province_id = 2403				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 10
+			NOT = { exists = BRM }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = BRM }
-			
-                        owns_core_province = 584 # Ava
-                        owns_core_province = 585 # Taungoo
-                        owns_core_province = 586 # Pegu
-						owns_core_province = 579 # Mrauk U
-                        owns_core_province = 581 # Sagaing
-						owns_core_province = 583 # Hsenwi
-						owns_core_province = 2403 # Martaban
-						owns_core_province = 2396 # Mong Kawng
-						owns_core_province = 587 # Kalaymyo
-						owns_core_province = 590 # Mohnyin
+			custom_trigger_tooltip = {
+				tooltip = form_burma_tt_1	
+					# Kachin
+				owns_core_province = 582
+				owns_core_province = 2395
+				owns_core_province = 2396
+				owns_core_province = 4404
+				owns_core_province = 4405
+					# Chindwin
+				owns_core_province = 2397
+				owns_core_province = 2398
+				owns_core_province = 580
+				owns_core_province = 4393
+					# Shan Hills
+				owns_core_province = 583
+				owns_core_province = 2400
+				owns_core_province = 4406
+				owns_core_province = 588
+				owns_core_province = 4397
+					# Karenni
+				owns_core_province = 587
+				owns_core_province = 4398
+				owns_core_province = 2401
+					# Rakhine
+				owns_core_province = 568
+				owns_core_province = 579
+				owns_core_province = 2402
+					# Upper Burma
+				owns_core_province = 581
+				owns_core_province = 584
+				owns_core_province = 2399
+					# Central Burma
+				owns_core_province = 585
+				owns_core_province = 4396
+				owns_core_province = 4394
+				owns_core_province = 4395
+					# Lower Burma
+				owns_core_province = 1815
+				owns_core_province = 4399
+				owns_core_province = 586
+				owns_core_province = 590
+				owns_core_province = 2403
+			}
 		}
 	 	effect = {
 			change_tag = BRM
+			set_country_flag = formed_burma_flag				
+			set_capital = 584 # Ava
+			BRM = {
+				584 = { 
+					add_base_tax = 2
+					add_base_production = 3
+					add_base_manpower = 1
+				}
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			BRM = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			custom_tooltip = dec1_decisions_spacing
+			BRM = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
+			add_prestige = 10			
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }

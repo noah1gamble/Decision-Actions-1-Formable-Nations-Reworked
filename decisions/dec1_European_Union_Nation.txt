@@ -43,7 +43,27 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 					# Holland
-					
+				province_id = 94	
+				province_id = 93
+				province_id = 1866
+				province_id = 91	
+				province_id = 90
+				province_id = 1865
+				province_id = 92
+				province_id = 2974
+				province_id = 96
+				province_id = 1744
+				province_id = 2974
+				province_id = 1742
+				province_id = 95
+				province_id = 4383
+				province_id = 97
+				province_id = 98	
+				province_id = 99
+				province_id = 4381
+				province_id = 4382
+				province_id = 100
+				province_id = 1931
 					# England
 					
 					# France
@@ -95,8 +115,20 @@ country_decisions = {
 				province_id = 222
 				province_id = 210
 				province_id = 209
-				province_id = 2989				
-				
+				province_id = 2989
+				province_id = 1750
+				province_id = 4549
+				province_id = 220
+				province_id = 2990
+				province_id = 4550
+				province_id = 4557
+				province_id = 214
+				province_id = 2988
+				province_id = 2987
+				province_id = 211
+				province_id = 213
+				province_id = 212
+				province_id = 197
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -104,7 +136,7 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 30
+			adm_tech = 20
 			NOT = { exists = EUR }		
 			is_subject = no
 			is_at_war = no
@@ -128,4 +160,4 @@ country_decisions = {
 		ai_importance = 300		
 	}
 
-			
+}

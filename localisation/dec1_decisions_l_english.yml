@@ -1,4 +1,5 @@
 ﻿l_english:
+
  benelux_nation_title: "Form The Benelux Union"
  benelux_nation_desc: "The name Benelux is formed from joining the first two or three letters of each country's name – Belgium, Netherlands, Luxembourg – and was first used to name the customs agreement that initiated the union. The unification of the Dutch, Wallonian and Flemish provinces in Europe brings The Benelux a gigantic economic impetus and makes it a mighty European state."
  
@@ -11,8 +12,8 @@
  pontos_nation_title: "Restoration of The Kingdom of Pontus"
  pontos_nation_desc: "Form a county for all Pontic-Greek people living at the Black Sea."
  
- alps_nation_title: "Form Alpland"
- alps_nation_desc: "Alpland is an important power in Europe which extends over the Alpine regions of Austria, Italy, France and Switzerland."
+ alpland_nation_title: "Form Alpland"
+ alpland_nation_desc: "Alpland is an important power in Europe which extends over the Alpine regions of Austria, Italy, France and Switzerland."
  
  yugoslavia_nation_title: "Form The Yugoslavian Kingdom"
  yugoslavia_nation_desc: "The Kingdom Yugoslavia unites the western Balkan-states in a mighty nation."
@@ -32,8 +33,8 @@
  italian_merchant_alliance_nation_title: "Form The Italian Merchant Alliance"
  italian_merchant_alliance_nation_desc: "The Hansa in Northern Germany and the Italian Merchant Alliance in Italy: Extremely mighty, influential and hard to defeat."
  
- lombardy-venetia_nation_title: "Restore The Lombardy-Venetia Kingdom"
- lombardy-venetia_nation_desc: ""
+ lombardy_venetia_nation_title: "Restore The Lombardy-Venetia Kingdom"
+ lombardy_venetia_nation_desc: ""
  
  iberia_nation_title: "Form The Iberian Empire"
  iberia_nation_desc: ""
@@ -104,14 +105,14 @@
  himalayan_empire_nation_title: "Form The Himalayan Empire"
  himalayan_empire_nation_desc: ""
  
- alsace-lorraine_nation_title: "Form Alsace-Lorraine"
- alsace-lorraine_nation_desc: ""
+ alsace_lorraine_nation_title: "Form Alsace-Lorraine"
+ alsace_lorraine_nation_desc: ""
  
- franco-iberia_nation_title: "Form Franco-Iberia"
- franco-iberia_nation_desc: ""
+ franco_iberia_nation_title: "Form Franco-Iberia"
+ franco_iberia_nation_desc: ""
  
- hesse-nassau_nation_title: "Form Hesse-Nassau"
- hesse-nassau_nation_desc: ""
+ hesse_nassau_nation_title: "Form Hesse-Nassau"
+ hesse_nassau_nation_desc: ""
  
  east_prussia_nation_title: "Form East Prussia"
  east_prussia_nation_desc: ""
@@ -119,23 +120,23 @@
  hanse_nation_title: "Form Hansa"
  hanse_nation_desc: ""
  
- emilia-romagna_nation_title: "Form Emilia-Romagna"
- emilia-romagna_nation_desc: ""
+ emilia_romagna_nation_title: "Form Emilia-Romagna"
+ emilia_romagna_nation_desc: ""
  
  angevin_nation_title: "Form The Angevin Empire"
- angevin_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II (ruled 1154–1189), Richard I (r. 1189–1199), and John (r. 1199–1216). The Angevin Empire is an early example of a composite state."
+ angevin_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. The Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
  
- bremen-verden_nation_title: "Form Bremen-Verden"
- bremen-verden_nation_desc: ""
+ bremen_verden_nation_title: "Form Bremen-Verden"
+ bremen_verden_nation_desc: ""
  
  frieslande_nation_title: "Form Frisia"
  frieslande_nation_desc: ""
  
- siebenbuergen_nation_title: "Form Siebenbürgen"
- siebenbuergen_nation_desc: ""
+ siebenbuergen_nation_title: "Form Siebenbuergen"
+ siebenbuergen_nation_desc: "Siebenbuergen means "Seven Castles", named after the seven Transylvanian Saxons' cities. With the formation of a unified state through both diplomatic and militaristic means we are able to establish a new state based upon the foundation of our Germanic legacy."
  
- great-britain_nation_title: "Form Great Britain"
- great-britain_nation_desc: "TODO"
+ great_britain_nation_title: "Form Great Britain"
+ great_britain_nation_desc: "TODO"
  
  #TOOLTIPS
  
@@ -167,6 +168,8 @@
  form_austrian_empire_tt_2: "Owns all core §YHungarian§! provinces"
  form_austrian_empire_tt_3: "Subject owns all core §YHungarian§! provinces"
  form_austrian_empire_tt_4: "   Owns all core §YHungarian§! provinces"
+ 
+ form_burma_tt_1: "Owns all core §YBurmese§! provinces"
  
  
  #MODIFIERS

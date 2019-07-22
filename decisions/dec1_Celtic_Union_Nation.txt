@@ -4,6 +4,16 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_celtic_union_flag }
+			NOT = { 
+				tag = PAP 
+				tag = GBR
+				tag = UKI
+				tag = ANG
+				tag = ENG
+				tag = FRA
+				tag = CEU
+				tag = EUR
+			}			
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
@@ -15,16 +25,6 @@ country_decisions = {
 					num_of_cities = 8
 				}
 			}		
-			NOT = { 
-				tag = PAP 
-				tag = GBR
-				tag = UKI
-				tag = ANG
-				tag = ENG
-				tag = FRA
-				tag = CEU
-				tag = EUR
-			}
 			OR = {
 				primary_culture = scottish
 				primary_culture = welsh

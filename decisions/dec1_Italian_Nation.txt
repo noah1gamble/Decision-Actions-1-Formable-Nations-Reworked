@@ -185,4 +185,71 @@ country_decisions = {
 		}
 	}
 
+	italian_empire = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			culture_group = latin
+			NOT = { 
+				has_country_flag = formed_italian_empire_flag 
+				tag = PAP 
+				tag = HLR	
+				TAG = ITE	
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 101	# Genoa
+				province_id = 104	# Milan
+				province_id = 106	# Modena
+				province_id = 108	# Verona
+				province_id = 109	# Mantua
+				province_id = 116	# Firenze
+				province_id = 117	# Siena
+				province_id = 118	# Roma
+				province_id = 119	# Ancona
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+				# Italian Region
+			owns_core_province = 101
+		}
+		effect = {
+			change_tag = ITE
+			ITE = { set_capital = 118 }			
+			italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ITA
+			}			
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			add_prestige = 30
+		}
+		ai_will_do = {
+			factor = 300
+		}
+	}
+
 }

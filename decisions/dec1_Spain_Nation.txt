@@ -155,8 +155,8 @@ country_decisions = {
 		effect = {
 			change_tag = SPA
 			set_country_flag = formed_spain_flag
-			set_capital = 217 # Madrid
 			SPA = {
+				set_capital = 217 # Madrid
 				217 = { 
 					add_base_tax = 5
 					add_base_production = 5
@@ -293,7 +293,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SPA	
-			set_country_flag = formed_spain_flag
+			set_country_flag = formed_spain_flag				
+			SPA = {
+				set_capital = 217 # Madrid
+				217 = { 
+					add_base_tax = 8
+					add_base_production = 8
+					add_base_manpower = 8
+				}
+			}
 			if = {
 				limit = {
 					ARA = {
@@ -301,15 +309,7 @@ country_decisions = {
 					}
 				}
 				inherit = ARA
-			}				
-			set_capital = 217 # Madrid
-			SPA = {
-				217 = { 
-					add_base_tax = 8
-					add_base_production = 8
-					add_base_manpower = 8
-				}
-			}
+			}			
 			iberia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -320,8 +320,10 @@ country_decisions = {
 			SPA = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
 			custom_tooltip = dec1_decisions_spacing
-			add_country_modifier = { 
-				name = dec1_increased_centralization
+			SPA = { 
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
 			}			
 			add_prestige = 30
 			add_legitimacy = 40

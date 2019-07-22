@@ -3,6 +3,17 @@ country_decisions = {
 	turkey_nation = {
 		major = yes
 		potential = {
+			NOT = { has_country_flag = formed_turkey_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}			
 			NOT = { 
 				tag = PAP 
 				tag = HLR
@@ -11,13 +22,6 @@ country_decisions = {
 			}
 			OR = {
 				primary_culture = turkish
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
 			}
 		}
 		provinces_to_highlight = {
@@ -48,7 +52,44 @@ country_decisions = {
 				province_id = 318
 				province_id = 3209
 				province_id = 319
-				province_id = 2298				
+				province_id = 2298	
+					# Karaman
+				province_id = 323
+				province_id = 4307
+				province_id = 324
+				province_id = 2301
+					# Cukurova
+				province_id = 2302
+				province_id = 327
+					# Rum
+				province_id = 2304
+				province_id = 4315
+				province_id = 1846
+				province_id = 329
+				province_id = 2300
+				province_id = 4314
+					#  Ezrurum
+				province_id = 330
+				province_id = 331
+				province_id = 2305
+					# Dulkadir
+				province_id = 4310
+				province_id = 332
+				province_id = 2303
+					# Kurdistan
+				province_id = 418
+				province_id = 2306
+				province_id = 2307
+				province_id = 4296
+				province_id = 4295
+					# Aleppo
+				province_id = 2313
+					# Armenia
+				province_id = 4302
+					# Samtskhe
+				province_id = 4303
+				province_id = 2196
+				province_id = 2204				
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -60,6 +101,7 @@ country_decisions = {
 			NOT = { exists = TRR }
 			is_subject = no
 			is_at_war = no
+			# localized trigger
 				# Thrace
 			owns_core_province = 151
 			owns_core_province = 1764
@@ -84,13 +126,75 @@ country_decisions = {
 				# Aydin
 			owns_core_province = 2297
 			owns_core_province = 318
-			owns_core_province = 3209
+			owns_core_province = 4309
 			owns_core_province = 319
 			owns_core_province = 2298
+				# Karaman
+			owns_core_province = 323
+			owns_core_province = 4307
+			owns_core_province = 324
+			owns_core_province = 2301
+				# Cukurova
+			owns_core_province = 2302
+			owns_core_province = 327
+				# Rum
+			owns_core_province = 2304
+			owns_core_province = 4315
+			owns_core_province = 1846
+			owns_core_province = 329
+			owns_core_province = 2300
+			owns_core_province = 4314
+				#  Ezrurum
+			owns_core_province = 330
+			owns_core_province = 331
+			owns_core_province = 2305
+				# Dulkadir
+			owns_core_province = 4310
+			owns_core_province = 332
+			owns_core_province = 2303
+				# Kurdistan
+			owns_core_province = 418
+			owns_core_province = 2306
+			owns_core_province = 2307
+			owns_core_province = 4296
+			owns_core_province = 4295
+				# Aleppo
+			owns_core_province = 2313
+				# Armenia
+			owns_core_province = 4302
+				# Samtskhe
+			owns_core_province = 4303
+			owns_core_province = 2196
+			owns_core_province = 2204
 		}
 	 	effect = {
 			change_tag = TRR
+			set_country_flag = formed_turkey_flag
+			TRR = {
+				set_capital = 151 # Madrid
+				151 = { 
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 4
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			TRR = { set_government_rank = 2 }
+			add_government_reform = oligarchy_reform
+			set_legacy_government = oligarchic_republic
+			custom_tooltip = dec1_decisions_spacing	
+			SPA = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 20
+			add_inflation = 5
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
 	}
 
 }	
