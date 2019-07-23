@@ -2,20 +2,12 @@ country_decisions = {
 
 	europe_nation = {
 		major = yes
-		potential = {
-			NOT = { has_country_flag = formed_europe_flag }
+		potential = {			
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
 			technology_group = western
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 30
-				}
-			}		
+			NOT = { has_country_flag = formed_europe_flag }
 			NOT = { 
 				exists = EUR
 				tag = EUR
@@ -33,7 +25,15 @@ country_decisions = {
 				tag = ADU
 				tag = IBE
 				tag = FIB
-			}
+			}			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 30
+				}
+			}		
 			OR = {
 				culture_group = british
 				culture_group = germanic

@@ -3,37 +3,92 @@ country_decisions = {
 	basque_country_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = BSQ }
-			NOT = { tag = HLR }
-			NOT = { tag = IBE }
-			NOT = { tag = SPA }
-			NOT = { tag = EUR }
-			NOT = { tag = FIB }
-			OR = {
-				primary_culture = basque
-			}
+			NOT = { has_country_flag = formed_basque_kingdom_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
 			OR = {
 				ai = no
+				is_playing_custom_nation = no
 				AND = {
 					ai = yes
 					num_of_cities = 3
 				}
+			}		
+			NOT = { 
+				tag = PAP 
+				tag = BSQ
+				tag = HLR
+				tag = IBE
+				tag = SPA
+				tag = EUR
+				tag = FIB 
+			}
+			OR = {
+				primary_culture = basque
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 210 # Navarra
+				province_id = 209 # Vizcaya
+				province_id = 173 # Labourd				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = BSQ }
-			
-                        owns_core_province = 210 # Navarra
-                        owns_core_province = 209 # Vizcaya
-                        owns_core_province = 173 # Labourd
+			NOT = { exists = BSQ }		
+			owns_core_province = 210 # Navarra
+			owns_core_province = 209 # Vizcaya
+			owns_core_province = 173 # Labourd
 		}
 	 	effect = {
 			change_tag = BSQ
+			set_country_flag = formed_basque_kingdom_flag
+			BSQ = {
+				set_capital = 209 # Vizcaya
+				217 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			vasconia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BSQ
+			}			
+			gascony_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BSQ
+			}
+			custom_tooltip = dec1_decisions_spacing
+			BSQ = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			BSQ = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 15
+			add_legitimacy = 10
+			add_stability = 2
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}	
 
 }

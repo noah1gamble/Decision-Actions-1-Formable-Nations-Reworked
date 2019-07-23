@@ -41,6 +41,23 @@ country_decisions = {
 			}
 			owns_core_province = 219
 		}
+		provinces_to_highlight = {
+			OR = {
+				france_region = {
+					type = all
+					owned_by = ROOT
+				}
+				iberia_region = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 219				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 	 	effect = {
 			change_tag = FIB
 			set_country_flag = formed_franco_iberia_flag
