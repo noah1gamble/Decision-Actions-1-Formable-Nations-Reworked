@@ -3,9 +3,14 @@ country_decisions = {
 	tatarstan_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = TAT }
-			NOT = { tag = RUS }
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			NOT = {
+				exists = TAT
+				tag = PAP
+				tag = TAT
+				tag = RUS
+			}
 			OR = {
 				primary_culture = astrakhani
 				primary_culture = bashkir
@@ -23,23 +28,115 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight={
+			OR = {
+				#Crimea
+			province_id = 284 # Crimea
+			province_id = 2410 # Theodoro
+			province_id = 285 # Caffa
+			province_id = 2447 # Matrega
+				#Yedisan
+			province_id = 282 # Yedisan
+			province_id = 2406 # Ingil
+			province_id = 1974 # Yedishkul
+				#Zaporizhia
+			province_id = 283 # Zaporozhia
+			province_id = 2411 # Mansur
+			province_id = 2412 # Kyzyl-Yar
+				#Lower Don
+			province_id = 288 # Lower Don
+			province_id = 1971 # Beljamen
+			province_id = 467 # Borisoglebsk
+			province_id = 2409 # Bahmut
+				#Azov
+			province_id = 286 # Azov
+			province_id = 2413 # Tyn
+			province_id = 2414 # Azaraba
+			province_id = 287 # Kuban
+				#Astrakhan
+			province_id = 464 # Astrakhan
+			province_id = 468 # Manych
+			province_id = 2416 # Majar
+			province_id = 2417 # Kuma
+			province_id = 466 # Sarai
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow = {
 			adm_tech = 5
+			NOT = { exists = TAT }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = TAT }	
-			owns_core_province = 284 # Crimea
-			owns_core_province = 2414 # Azaraba
-			owns_core_province = 2409 # Bahmut
-			owns_core_province = 302 # Tambov
-			owns_core_province = 466 # Sarai
-			owns_core_province = 464 # Astrakhan
-			owns_core_province = 287 # Kuban
-			owns_core_province = 288 # Lower Don
+			ROOT = {
+				#Crimea
+			province_id = 284 # Crimea
+			province_id = 2410 # Theodoro
+			province_id = 285 # Caffa
+			province_id = 2447 # Matrega
+				#Yedisan
+			province_id = 282 # Yedisan
+			province_id = 2406 # Ingil
+			province_id = 1974 # Yedishkul
+				#Zaporizhia
+			province_id = 283 # Zaporozhia
+			province_id = 2411 # Mansur
+			province_id = 2412 # Kyzyl-Yar
+				#Lower Don
+			province_id = 288 # Lower Don
+			province_id = 1971 # Beljamen
+			province_id = 467 # Borisoglebsk
+			province_id = 2409 # Bahmut
+				#Azov
+			province_id = 286 # Azov
+			province_id = 2413 # Tyn
+			province_id = 2414 # Azaraba
+			province_id = 287 # Kuban
+				#Astrakhan
+			province_id = 464 # Astrakhan
+			province_id = 468 # Manych
+			province_id = 2416 # Majar
+			province_id = 2417 # Kuma
+			province_id = 466 # Sarai
+			}
 		}
 	 	effect = {
 			change_tag = TAT
+			set_capital = 284 # Crimea
+			TAT = {
+				284 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			crimea_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TAT
+			}
+			custom_tooltip = dec1_decisions_spacing
+			TAT = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			TAT = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 15
+			add_legitimacy = 10
+			add_stability = 1
+			add_inflation = 2
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }

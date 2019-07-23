@@ -3,18 +3,9 @@ country_decisions = {
 	rhine_confederation_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = GER }
-			NOT = { tag = HRE }
-			NOT = { tag = NGC }
-			NOT = { tag = PRU }
-			NOT = { tag = RHE }
-			NOT = { tag = EUR }
-			OR = {
-				primary_culture = hannoverian
-				primary_culture = swabian
-				primary_culture = hessian
-			}
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
 			OR = {
 				ai = no
 				AND = {
@@ -22,23 +13,101 @@ country_decisions = {
 					num_of_cities = 3
 				}
 			}
+			NOT = { 
+			exists = RHE
+			tag = RHE
+			tag = PAP 
+			tag = GER
+			tag = HRE
+			tag = NGC
+			tag = PRU
+			tag = EUR			
+			}
+			OR = {
+				primary_culture = hannoverian
+				primary_culture = swabian
+				primary_culture = hessian
+			}
+			
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Lower Rhineland
+				province_id = 80 # Trier
+				province_id = 1760 # Koblenz
+				province_id = 1878 # Aachen
+					# North Rhine
+				province_id = 85 # Köln
+				province_id = 84 # Berg
+				province_id = 2975 # Kleves
+					# Palatinate
+				province_id = 1761 # Pfalz
+				province_id = 77 # Heidelberg
+				province_id = 78 # Mainz
+					# Hesse
+				province_id = 1876 # Frankfurt
+				province_id = 83 # Nassau
+				province_id = 81 # Hessen
+				province_id = 1762 # Kassel
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = RHE }
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 1878 # Frankfurt
-			owns_core_province = 1761 # Pfalz
-			owns_core_province = 81 # Hessen
-			owns_core_province = 80 # Trier
-			owns_core_province = 1878 # Aachen
-			owns_core_province = 85 # Köln
-			owns_core_province = 2975 # Kleves
+			ROOT = {
+					# Lower Rhineland
+				owns_core_province = 80 # Trier
+				owns_core_province = 1760 # Koblenz
+				owns_core_province = 1878 # Aachen
+					# North Rhine
+				owns_core_province = 85 # Köln
+				owns_core_province = 84 # Berg
+				owns_core_province = 2975 # Kleves
+					# Palatinate
+				owns_core_province = 1761 # Pfalz
+				owns_core_province = 77 # Heidelberg
+				owns_core_province = 78 # Mainz
+					# Hesse
+				owns_core_province = 1876 # Frankfurt
+				owns_core_province = 83 # Nassau
+				owns_core_province = 81 # Hessen
+				owns_core_province = 1762 # Kassel
+			}
 		}
 	 	effect = {
 			change_tag = RHE
+			set_capital = 85 # Köln
+			RHE = {
+				85 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			RHE = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			RHE = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 25
+			add_legitimacy = 20
+			add_stability = 1
+			add_inflation = 2
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-
 }

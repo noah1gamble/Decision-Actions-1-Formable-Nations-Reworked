@@ -3,42 +3,99 @@ country_decisions = {
 	belgium_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = BEL }
-			NOT = { tag = HLR }
-			NOT = { tag = BNL }
-			NOT = { tag = NED }
-			NOT = { tag = EUR }
-			NOT = { tag = FIB }
 			OR = {
-				primary_culture = flemish
-				primary_culture = wallonian
-			AND = {
+				ai = no
+				AND = {
 					ai = yes
 					num_of_cities = 3
 				}
 			}
+			NOT = { 
+				exists = BEL
+				tag = PAP
+				tag = FIB
+				tag = BEL
+				tag = HLR
+				tag = BNL
+				tag = NED
+				tag = EUR 
+			}
+			OR = {
+				primary_culture = flemish
+				primary_culture = wallonian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Flanders
+				province_id = 90 # Vlaanderen
+				province_id = 1865 # Ghent
+				province_id = 1744 # Antwerpen
+
+					# Wallonia (- Luxemburg)
+				province_id = 92 # Brussels
+				province_id = 91 # Hainaut
+				province_id = 1866 # Namur
+				province_id = 93 # Liége
+			}
 		}
 		allow = {
-			adm_tech = 15
+			adm_tech = 10
+			NOT = { exists = BEL }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = BEL }
-			
-                        owns_core_province = 92 # Brabant
-                        owns_core_province = 90 # Vlaanderen
-			owns_core_province = 93 # Liège
-			owns_core_province = 1865 # Ghent
-                        owns_core_province = 1744 # Antwerpen
-			owns_core_province = 2974 # Loon
-			owns_core_province = 1742 # Limburg
-                        owns_core_province = 1866 # Namur
-			owns_core_province = 91 # Hainaut
+			ROOT = {
+					# Flanders
+				owns_core_province = 90 # Vlaanderen
+				owns_core_province = 1865 # Ghent
+				owns_core_province = 1744 # Antwerpen
+
+					# Wallonia (- Luxemburg)
+				owns_core_province = 92 # Brussels
+				owns_core_province = 91 # Hainaut
+				owns_core_province = 1866 # Namur
+				owns_core_province = 93 # Liége
+			}
                         
 		}
 	 	effect = {
 			change_tag = BEL
+			set_capital = 92 # Brussels
+			BEL = {
+				92 = {
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			wallonia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BEL
+			}
+			flanders_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BEL
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			SPA = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			custom_tooltip = dec1_decisions_spacing
+			add_country_modifier = { 
+				name = dec1_increased_centralization
+			}	
+			add_prestige = 25
+			add_legitimacy = 20
+			add_stability = 1
+			add_inflation = 2
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }
