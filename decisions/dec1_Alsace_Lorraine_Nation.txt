@@ -1,0 +1,78 @@
+country_decisions = {
+
+	alsace_lorraine_nation = {
+		major = yes
+		potential = {
+			NOT = { 
+				tag = PAP 
+				tag = SWB
+				tag = HLR
+				tag = SWI
+				tag = EUR
+				tag = FIB
+				tag = BUR
+			}
+			OR = {
+				primary_culture = swabian
+				primary_culture = burgundian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {	
+					# Alsace-Lorraine
+				province_id = 75 # Elsass
+				province_id = 188 # Metz
+				province_id = 189 # Lothringen
+				province_id = 1880 # Sundgau			
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 5
+			NOT = { exists = ALL }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 75 # Elsass
+			owns_core_province = 188 # Metz
+			owns_core_province = 189 # Lothringen
+			owns_core_province = 1880 # Sundgau
+		}
+	 	effect = {
+			change_tag = ALL
+			set_country_flag = formed_alsace_lorraine_flag				
+			set_capital = 75 # Elsass
+			ALL = {
+				75 = { 
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 3
+				}
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			ALL = { set_government_rank = 1 }
+			add_government_reform = autocracy_reform
+			custom_tooltip = dec1_decisions_spacing
+			ALL = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
+			add_prestige = 25			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400		
+	}
+
+}

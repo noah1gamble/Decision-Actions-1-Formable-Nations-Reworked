@@ -75,7 +75,7 @@ country_decisions = {
 				add_permanent_claim = FIB
 			}			
 			custom_tooltip = dec1_decisions_spacing
-			SPA = { set_government_rank = 3 }
+			FIB = { set_government_rank = 3 }
 			add_government_reform = autocracy_reform
 			custom_tooltip = dec1_decisions_spacing
 			add_country_modifier = { 

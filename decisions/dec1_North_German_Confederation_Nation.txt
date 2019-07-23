@@ -3,11 +3,24 @@ country_decisions = {
 	north_german_confederation_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = GER }
-			NOT = { tag = HLR }
-			NOT = { tag = NFC }
-			NOT = { tag = EUR }
+			NOT = { has_country_flag = formed_north_german_confederation_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}			
+			NOT = { 
+				tag = PAP
+				tag = GER
+				tag = HLR
+				tag = NFC
+				tag = EUR
+			}
 			OR = {
 				primary_culture = hannoverian
 				primary_culture = pommeranian
@@ -16,14 +29,16 @@ country_decisions = {
 				primary_culture = prussian
 				
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 44
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = NGC }

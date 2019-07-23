@@ -3,18 +3,20 @@ country_decisions = {
 	alpland_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = ALP }
-			NOT = { tag = HLR }
-			NOT = { tag = HAB }
-			NOT = { tag = TSI }
-			NOT = { tag = LVE }
-			NOT = { tag = ITA } 
-			NOT = { tag = IMA }
-			NOT = { tag = AHU }
-			NOT = { tag = CIS }
-			NOT = { tag = EUR }
-			NOT = { tag = ADR }
+			NOT = { 
+				tag = PAP 
+				tag = ALP
+				tag = HLR
+				tag = HAB
+				tag = TSI
+				tag = LVE
+				tag = ITA
+				tag = IMA
+				tag = AHU
+				tag = CIS
+				tag = EUR
+				tag = ADR
+			}
 			OR = {
 				primary_culture = austrian
 				primary_culture = bavarian
@@ -26,12 +28,31 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 6
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+				province_id = 73 # Tirol
+				province_id = 110 # Trent
+				province_id = 1768 # Lienz
+				province_id = 128 # Kärnten
+				province_id = 1873 # Graubünden
+				province_id = 166 # Waldstätte
+				province_id = 1871 # Wallis
+				province_id = 165 # Bern
+				province_id = 107 # Brescia
+				province_id = 1869 # Zurich
+				province_id = 1870 # St Gallen				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
-			adm_tech = 15
+			adm_tech = 12
 			NOT = { exists = ALP }
 			is_subject = no
 			is_at_war = no		
@@ -44,10 +65,34 @@ country_decisions = {
 			owns_core_province = 1871 # Wallis
 			owns_core_province = 165 # Bern
 			owns_core_province = 107 # Brescia
+			owns_core_province = 1869 # Zurich
+			owns_core_province = 1870 # St Gallen
 		}
 	 	effect = {
-		
+			change_tag = ALP
+			set_country_flag = formed_alpland_flag				
+			set_capital = 1869 # Zurich
+			ALP = {
+				1869 = { 
+					add_base_tax = 2
+					add_base_production = 3
+				}
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			ALP = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			custom_tooltip = dec1_decisions_spacing
+			ALP = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
+			add_prestige = 10			
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
 	}
 	
 }

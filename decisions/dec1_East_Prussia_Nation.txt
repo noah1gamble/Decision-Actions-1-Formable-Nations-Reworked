@@ -3,13 +3,15 @@ country_decisions = {
 	east_prussia_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = EPR }
-			NOT = { tag = PRU }
-			NOT = { tag = GER }
-			NOT = { tag = HRE }
-			NOT = { tag = NGC }
-			NOT = { tag = EUR }
+			NOT = { 
+				tag = PAP 
+				tag = EPR
+				tag = PRU
+				tag = GER
+				tag = HRE
+				tag = NGC
+				tag = EUR
+			}
 			OR = {
 				primary_culture = prussian
 				primary_culture = pommeranian
@@ -21,13 +23,28 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 3
 				}
+			}
 			OR = {
 				ai = no
 				is_religion_enabled = protestant
 				is_religion_enabled = reformed
-				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41
+				province_id = 42 
+				province_id = 1841
+				province_id = 40
+				province_id = 2958
+				province_id = 767
+				province_id = 1859
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 10
 			NOT = { exists = EPR }
@@ -42,8 +59,39 @@ country_decisions = {
 			owns_core_province = 1859
 		}
 	 	effect = {
-		
+			change_tag = EPR
+			set_country_flag = formed_east_prussia_flag			
+			EPR = {
+				set_capital = 41 # Konigsberg
+				217 = { 
+					add_base_tax = 2
+					add_base_production = 1
+					add_base_manpower = 5
+				}
+			}
+			baltic_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = EPR
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			EPR = { set_government_rank = 2 }
+			add_government_reform = prussian_monarchy
+			custom_tooltip = dec1_decisions_spacing
+			EPR = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
+			add_prestige = 10
+			add_legitimacy = 25
+			add_stability = 1			
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
 	}
 
 }
