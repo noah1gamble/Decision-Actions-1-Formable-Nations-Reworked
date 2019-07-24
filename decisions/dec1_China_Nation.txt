@@ -3,8 +3,21 @@ country_decisions = {
 	china_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = CHN }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			NOT = { has_country_flag = formed_china_flag }		
+			NOT = { 
+				tag = PAP
+				tag = CHN
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}			
 			OR = {
 				primary_culture = cantonese
 				primary_culture = gan
@@ -22,37 +35,89 @@ country_decisions = {
 				primary_culture = zhili
 				primary_culture = zhonggyuan
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				region = north_china_region
+				region = south_china_region
+				region = xinan_region
+				region = tibet_region
+				province_id = 1816 # Beijing
+				province_id = 667 # Canton
+				province_id = 679 # Chengdu
+				province_id = 2133 # Dege
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}		
 		allow = {
-			adm_tech = 15
+			adm_tech = 10
 			NOT = { exists = CHN }
 			is_subject = no
 			is_at_war = no
+			north_china_region = {
+				type = all
+				owned_by = ROOT
+			}
 			owns_core_province = 1816 # Beijing
-			owns_core_province = 685 # Yangzhou
-			owns_core_province = 684 # Hangzhou
+			south_china_region = {
+				type = all
+				owned_by = ROOT
+			}
 			owns_core_province = 667 # Canton
-			owns_core_province = 679 # Chengdu
-			owns_core_province = 700 # Xi'an
-			owns_core_province = 2184 # Xining
-			owns_core_province = 2113 # Gaizhou
-			owns_core_province = 690 # Qingzhou
+			xinan_region = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 679 # Chengdu	
+			tibet_region = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 2133 # Dege	
 		}
 	 	effect = {
 			change_tag = CHN
-			add_prestige = 35
-			set_capital = 1816 # Beijing
+			set_country_flag = formed_spain_flag
+			CHN = {
+				set_capital = 1816 # Beijing
+				1816 = { 
+					add_base_tax = 6
+					add_base_production = 6
+					add_base_manpower = 3
+				}
+			}
+			liaoning_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CHN
+			}			
+			korea_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CHN
+			}
+			custom_tooltip = dec1_decisions_spacing
+			CHN = { set_government_rank = 3 }
+			add_government_reform = presidential_despot_reform
+			set_legacy_government = republican_dictatorship
+			custom_tooltip = dec1_decisions_spacing	
+			CHN = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 25
+			add_legitimacy = 20
+			add_stability = 1
+			add_inflation = 2
 		}
 		ai_will_do = {
-			factor = 400
-		}		
+			factor = 1
+		}
+		ai_importance = 400	
 	}
 
 }	

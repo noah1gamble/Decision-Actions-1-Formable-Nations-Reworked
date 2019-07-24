@@ -43,92 +43,18 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 					# Holland
-				province_id = 94	
-				province_id = 93
-				province_id = 1866
-				province_id = 91	
-				province_id = 90
-				province_id = 1865
-				province_id = 92
-				province_id = 2974
-				province_id = 96
-				province_id = 1744
-				province_id = 2974
-				province_id = 1742
-				province_id = 95
-				province_id = 4383
-				province_id = 97
-				province_id = 98	
-				province_id = 99
-				province_id = 4381
-				province_id = 4382
-				province_id = 100
-				province_id = 1931
+				region = low_countries_region	
 					# England
-					
+				region = british_isles_region
 					# France
-					
+				region = france_region	
 					# Italy
-					
+				region = italy_region					
 					# Germany
-					
+				region = north_german_region	
+				region = south_german_region	
 					# Iberia
-				province_id = 219
-				province_id = 2751
-				province_id = 2754
-				province_id = 4547
-				province_id = 221
-				province_id = 1748
-				province_id = 225
-				province_id = 224
-				province_id = 4548
-				province_id = 1749
-				province_id = 218
-				province_id = 1747
-				province_id = 216
-				province_id = 4553
-				province_id = 208
-				province_id = 215
-				province_id = 4551
-				province_id = 217
-				province_id = 2755
-				province_id = 4552
-				province_id = 1746
-				province_id = 1745
-				province_id = 207
-				province_id = 4558
-				province_id = 4554
-				province_id = 4555
-				province_id = 206
-				province_id = 230		
-				province_id = 229
-				province_id = 4150
-				province_id = 227
-				province_id = 228
-				province_id = 1851
-				province_id = 4556
-				province_id = 232
-				province_id = 231
-				province_id = 226
-				province_id = 4546
-				province_id = 223
-				province_id = 222
-				province_id = 210
-				province_id = 209
-				province_id = 2989
-				province_id = 1750
-				province_id = 4549
-				province_id = 220
-				province_id = 2990
-				province_id = 4550
-				province_id = 4557
-				province_id = 214
-				province_id = 2988
-				province_id = 2987
-				province_id = 211
-				province_id = 213
-				province_id = 212
-				province_id = 197
+				region = iberia_region	
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -141,23 +67,73 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			ROOT = {
+				low_countries_region = {
+					type = all
+					owned_by = ROOT
+				}			
 				owns_core_province = 92 # Brabant
+				british_isles_region = {
+					type = all
+					owned_by = ROOT
+				}				
 				owns_core_province = 236 # London
+				france_region = {
+					type = all
+					owned_by = ROOT
+				}				
 				owns_core_province = 183 # Paris
+				italy_region = {
+					type = all
+					owned_by = ROOT
+				}					
 				owns_core_province = 118 # Roma
-				owns_core_province = 217 # Madrid
+				north_german_region = {
+					type = all
+					owned_by = ROOT
+				}	
+				south_german_region = {
+					type = all
+					owned_by = ROOT
+				}					
 				owns_core_province = 50 # Berlin
+				iberia_region = {
+					type = all
+					owned_by = ROOT
+				}				
+				owns_core_province = 217 # Madrid
 				owns_core_province = 227 # Lisboa
 			}
 		}
 	 	effect = {
 			change_tag = EUR
-			set_capital = 92 # Brabant
+			set_country_flag = formed_europe_flag
+			EUR = {
+				set_capital = 92 # Brabant
+				92 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			EUR = { set_government_rank = 3 }
+			add_government_reform = presidential_despot_reform
+			set_legacy_government = republican_dictatorship
+			custom_tooltip = dec1_decisions_spacing	
+			EUR = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 35
+			add_legitimacy = 30
+			add_stability = 2
+			add_inflation = 3
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300		
+		ai_importance = 250	
 	}
 
 }

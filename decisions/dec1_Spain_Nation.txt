@@ -3,18 +3,10 @@ country_decisions = {
 	spanish_nation = { 
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_spain_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
-			}
+			NOT = { has_country_flag = formed_spain_flag }
 			NOT = { 
 				exists = SPA
 				tag = SPA
@@ -26,6 +18,14 @@ country_decisions = {
 				tag = IBE
 				tag = EUR
 				tag = FIB
+			}			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
 			}
 			OR = {
 				culture_group = iberian
@@ -193,16 +193,16 @@ country_decisions = {
 	spanish_nation_diplomatically = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_spain_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
+			tag = CAS
+			owns = 219	
+			NOT = { has_country_flag = formed_spain_flag }			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			tag = CAS
-			owns = 219
 			OR = {
 				ai = no
 				AND = {

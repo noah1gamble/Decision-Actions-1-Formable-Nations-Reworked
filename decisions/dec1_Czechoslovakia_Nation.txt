@@ -3,18 +3,26 @@ country_decisions = {
 	czechoslovakia_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = CZE }
-			NOT = { tag = EUR }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			technology_group = western
+			NOT = { has_country_flag = formed_czechoslovakia_flag }		
+			NOT = { 
+				tag = PAP
+				tag = HLR
+				tag = CZE
+				tag = EUR
+			}
 			OR = {
 				primary_culture = czech
+				primary_culture = slovak
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 8
 				}
 			}
 		}
@@ -23,21 +31,51 @@ country_decisions = {
 			NOT = { exists = CZE }
 			is_subject = no
 			is_at_war = no	
-			owns_core_province = 266 # Prague
-			owns_core_province = 2968 # Budejuvice
-			owns_core_province = 267 # Plzen
-			owns_core_province = 2967 # Eger
-			owns_core_province = 1771 # Erz
-			owns_core_province = 2970 # Hradecko
-			owns_core_province = 265 # Moravia
-			owns_core_province = 1772 # Pozsony
-			owns_core_province = 154 # Ersekujvar
-			owns_core_province = 1318 # Spis
-                        
+				# Bohemia
+			owns_core_province = 4237
+			owns_core_province = 265
+			owns_core_province = 2970
+			owns_core_province = 2968
+			owns_core_province = 266
+			owns_core_province = 1771
+			owns_core_province = 2967
+			owns_core_province = 267
+				# Slovakia
+			owns_core_province = 1772
+			owns_core_province = 154
+			owns_core_province = 4236
+			owns_core_province = 1318
+			owns_core_province = 162
 		}
 	 	effect = {
 			change_tag = CZE
+			set_country_flag = formed_czechoslovakia_flag
+			CZE = {
+				set_capital = 266 # Brabant
+				266 = { 
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 5
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			CZE = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			CZE = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 20
+			add_legitimacy = 5
+			add_stability = 1
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
 	}
 
 }

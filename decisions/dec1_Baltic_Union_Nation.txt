@@ -3,46 +3,139 @@ country_decisions = {
 	baltic_union_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = PRU }
-			NOT = { tag = TEU }
-			NOT = { tag = BTC }
-			NOT = { tag = LIT }
-			NOT = { tag = EUR }
+			NOT = { has_country_flag = formed_baltic_union_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}				
+			NOT = { 
+				tag = PAP
+				tag = HLR
+				tag = PRU
+				tag = TEU
+				tag = BTC
+				tag = LIT
+				tag = EUR
+			}
 			OR = {
 				primary_culture = lithuanian
 				primary_culture = latvian
 				primary_culture = estonian
 				primary_culture = prussian
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 35
+				province_id = 36
+				province_id = 1842
+				province_id = 37
+				province_id = 1834
+				province_id = 4241
+				province_id = 273
+				province_id = 1935
+				province_id = 38
+				province_id = 39			
+				province_id = 4535
+				province_id = 770
+				province_id = 272
+				province_id = 4536
+				province_id = 271
+				province_id = 4534
+				province_id = 1936
+				province_id = 270
+				province_id = 40
+				province_id = 767
+				province_id = 41
+				province_id = 2958
+				province_id = 42
+				province_id = 1841
+				province_id = 2997
+				province_id = 43				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 10
 			NOT = { exists = BTC }
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 38 # Riga
-			owns_core_province = 36 # Reval
-			owns_core_province = 35 # Ösel
-			owns_core_province = 37 # Livland
-			owns_core_province = 39 # Goldingen
-			owns_core_province = 273 # Latgalia
-			owns_core_province = 272 # Vilna
-			owns_core_province = 1936 # Kovno
-			owns_core_province = 271 # Samogitia
-			owns_core_province = 40 # Memel
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = form_baltic_union_tt_1			
+					owns_core_province = 35
+					owns_core_province = 36
+					owns_core_province = 1842
+					owns_core_province = 37
+					owns_core_province = 1834
+					owns_core_province = 4241
+					owns_core_province = 273
+					owns_core_province = 1935
+					owns_core_province = 38
+					owns_core_province = 39
+				}
+				custom_trigger_tooltip = {
+					tooltip = form_baltic_union_tt_2			
+					owns_core_province = 4535
+					owns_core_province = 770
+					owns_core_province = 272
+					owns_core_province = 4536
+					owns_core_province = 271
+					owns_core_province = 4534
+					owns_core_province = 1936
+					owns_core_province = 270
+					owns_core_province = 40
+					owns_core_province = 767
+					owns_core_province = 41
+					owns_core_province = 2958
+					owns_core_province = 42
+					owns_core_province = 1841
+					owns_core_province = 2997
+					owns_core_province = 43
+				}
+			}			
 		}
 	 	effect = {
-
+			change_tag = BTC
+			set_country_flag = formed_baltic_union_flag
+			baltic_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BTC
+			}
+			custom_tooltip = dec1_decisions_spacing
+			BTC = { 
+				add_accepted_culture = estonian
+				add_accepted_culture = lithuanian
+				add_accepted_culture = latvian
+			}
+			custom_tooltip = dec1_decisions_spacing
+			BTC = { set_government_rank = 2 }
+			add_government_reform = oligarchy_reform
+			set_legacy_government = oligarchic_republic
+			custom_tooltip = dec1_decisions_spacing	
+			BTC = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 30
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }

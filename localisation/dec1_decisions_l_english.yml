@@ -138,6 +138,9 @@
  great_britain_nation_title: "Form Great Britain"
  great_britain_nation_desc: "TODO"
  
+ baltic_union_nation_title: "Form Baltic Union"
+ baltic_union_nation_desc: "TODO"
+ 
  #TOOLTIPS
  
  dec1_decisions_spacing: "\n"
@@ -171,6 +174,8 @@
  
  form_burma_tt_1: "Owns all core §YBurmese§! provinces"
  
+ form_baltic_union_tt_1: "Owns all core §YNorth Baltic§! provinces"
+ form_baltic_union_tt_2: "Owns all core §YSouth Baltic§! provinces"
  
  #MODIFIERS
  

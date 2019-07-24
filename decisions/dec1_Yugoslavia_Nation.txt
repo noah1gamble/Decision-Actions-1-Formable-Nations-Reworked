@@ -100,6 +100,7 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			YUG = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	
 			add_country_modifier = { 
 				name = dec1_increased_centralization

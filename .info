@@ -1,104 +1,47 @@
 CHANGELOG
 
-
-Version 1.0.0
-
--Rewrote entire mod for 1.28
--Rewrote template
--Rewrote Form Spain Military & Diplomatic
--Rewrote Form Kingdom of Yugoslavia
--Rewrote Form United Kingdom
--Removed Vanilla Great-Britain & Russia
--Rewrote Form North Sea Empire
--Rewrote Form Angevin Empire
--Fixed localisation issues
--Rewrote Form England
--Rewrote Celtic Union
--Rewrote Iberia
--Rewrote Restore the Roman Empire
-
-
-DESIGN TEMPLATE*
-
-
-*this is a rough template
-
-Potential
-Allow 
-Provinces to highlight
-Effect
-AI will do
-AI importance
-
-Potential Template
-
-General
-Not AI or Custom Nation
-Tags
-Culture
-
-Allow Template
-
-Government Ranks:
-
-DUCHY: 
-
-10 prestige
-15 Legitimacy
-1 stability
-
-Adm tech 5
-
-KINGDOM: 
-
-25 prestige
-30 Legitimacy
-2 stability
-
-Admin tech 7
-
-EMPIRE: 
-
-55 prestige
-50 Legitimacy
-3 stability
-
-Admin tech 15
-
+~ Cisalpina - decision done
+~ Adriatic Empire - decision done
+~ Algiers - decision done
+~ Alpland - decision done
+~ Alsace-Lorraine - decision done
+~ Angevin Empire - decision done
+~ Austrian Empire - decision done
+~ Austro-Hungarian Empire - decision done
+~ Baltic Union - decison done
+~ Spain - decisions done
+~ Burma - decision done
+~ Celtic Union - decision done
+~ Caucasia - decision done
+~ China - decision done
+~ England - decision done
+~ EU - decision done
+~ Franco-Iberian Empire - decision done
+~ Franconia - decision done
+~ Great Britain - decision done
+~ Iberian Empire - decision done
+~ Lombardy-Venetia - decision done
+~ East Prussia - decision done
+~ Roman Empire - decision done
+~ Turkey - decision done
+~ Yugoslavia - decision done 
+~ United Kingdom - decision done 
+~  
+~  
 
 NOTES
 
-~All formable nations will have logical ideas and bonuses along with realistic setup and layout for the decisions themselves. 
-~Everything is to be organized and sorted properly.
-~Custom national ideas and ambitions
-~Formable nations can form into other formable nations (Austria-Hungary to Austro-Hungarian Empire, etc)
-~Reworked Vanilla formable nations (maybe this would be better as a plugin?)
-
-Requirements Rough Layout:
-
-Effects Rough Layout:
-
-Country changes to [INSERT COUNTRY]
-Capital changes to [INSERT CAPITAL]
-Development Changes
-Extras? (Inherit Aragon/etc)
-_____
-_____
-Type of Government changes to [INSERT GOVERNMENT(REFORM)]
-Bonuses/Increased Centralization Modifier (better to use a custom modifier. IC is vanilla)
-_____
-Unique ‘End of Game’ Modifier
-_____
-Claims / Permanent Claims / Historical Claims / etc (hidden depending on the situation)
-_____
-Prestige (REFER TO D/K/E)
-Legitimacy (REFER TO D/K/E) (REPUBLICS/etc?)
-Stability (REFER TO D/K/E)
+~ All formable nations will have logical ideas and bonuses along with realistic setup and layout for the decisions themselves. 
+~ Everything is to be organized and sorted properly.
+~ Custom national ideas and ambitions
+~ Formable nations can form into other formable nations (Austria-Hungary to Austro-Hungarian Empire, etc)
+~ Reworked Vanilla formable nations
 
 
 TODO
 
-create guide on website (use eu4 paradoxwiki template?)
-static modifiers
-events?
-ideas/traditions
+~ Create Formation Guide on Website (~use EU4 ParadoxWiki Formable Nation Template?)
+~ Custom Static Modifiers (National Ability)
+~ Custom Events
+~ Custom Ideas & Traditions
+~ Pre-Release Improvements & Fixes
