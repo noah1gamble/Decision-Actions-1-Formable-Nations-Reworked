@@ -1,0 +1,312 @@
+country_decisions = {
+
+	# The Austro-Hungarian Empire
+	
+	austria_hungary_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_austro_hungarian_empire_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			NOT = { 
+				tag = PAP 
+				tag = HLR
+				tag = TUR
+				tag = EUR
+			}			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}	
+			OR = {
+				primary_culture = austrian
+				primary_culture = hungarian
+				primary_culture = czech
+			}
+		}
+		provinces_to_highlight = {
+			OR = {	
+					# Upper Bavaria
+				province_id = 76
+					# Austria Proper
+				province_id = 134
+				province_id = 133
+				province_id = 1770
+					# Inner Austria
+				province_id = 128
+				province_id = 132
+				province_id = 1863
+					# Carniola
+				province_id = 129
+				province_id = 130
+				province_id = 1769
+					# Tirol
+				province_id = 73
+				province_id = 110
+				province_id = 1768
+					# Transdanubia
+				province_id = 153
+				province_id = 4126
+				province_id = 1864
+				province_id = 4240
+				province_id = 135
+					# Slovakia
+				province_id = 1772
+				province_id = 4236
+				province_id = 154
+				province_id = 1318
+				province_id = 162
+					# Alfold
+				province_id = 155
+				province_id = 1953
+				province_id = 4125
+				province_id = 1954
+					# Southern Transylvania
+				province_id = 1951
+				province_id = 156
+				province_id = 4128
+					# Northern Transylvania
+				province_id = 157
+				province_id = 1952
+				province_id = 4127
+				province_id = 158
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			NOT = { exists = AHE }
+			is_subject = no
+			is_at_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_austrian_empire_tt_1
+				# Upper Bavaria
+			owns_core_province = 76
+				# Austria Proper
+			owns_core_province = 134
+			owns_core_province = 133
+			owns_core_province = 1770
+				# Inner Austria
+			owns_core_province = 128
+			owns_core_province = 132
+			owns_core_province = 1863
+				# Carniola
+			owns_core_province = 129
+			owns_core_province = 130
+			owns_core_province = 1769
+				# Tirol
+			owns_core_province = 73
+			owns_core_province = 110
+			owns_core_province = 1768
+				# Bohemia
+			owns_core_province = 4237
+			owns_core_province = 265
+			owns_core_province = 2970
+			owns_core_province = 266
+			owns_core_province = 2968				
+		}
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = form_austrian_empire_tt_2		
+						# Transdanubia
+					owns_core_province = 153
+					owns_core_province = 4126
+					owns_core_province = 1864
+					owns_core_province = 4240
+					owns_core_province = 135
+						# Slovakia
+					owns_core_province = 1772
+					owns_core_province = 4236
+					owns_core_province = 154
+					owns_core_province = 1318
+					owns_core_province = 162
+						# Alfold
+					owns_core_province = 155
+					owns_core_province = 1953
+					owns_core_province = 4125
+					owns_core_province = 1954
+						# Southern Transylvania
+					owns_core_province = 1951
+					owns_core_province = 156
+					owns_core_province = 4128
+						# Northern Transylvania
+					owns_core_province = 157
+					owns_core_province = 1952
+					owns_core_province = 4127
+					owns_core_province = 158
+						# Red Ruthenia
+					owns_core_province = 1940
+					owns_core_province = 2424
+					owns_core_province = 4541
+					owns_core_province = 2961
+					owns_core_province = 261
+				}
+			custom_trigger_tooltip = {
+				tooltip = form_austrian_empire_tt_3		
+						# Transdanubia
+					owns_core_province = 153
+					owns_core_province = 4126
+					owns_core_province = 1864
+					owns_core_province = 4240
+					owns_core_province = 135
+						# Slovakia
+					owns_core_province = 1772
+					owns_core_province = 4236
+					owns_core_province = 154
+					owns_core_province = 1318
+					owns_core_province = 162
+						# Alfold
+					owns_core_province = 155
+					owns_core_province = 1953
+					owns_core_province = 4125
+					owns_core_province = 1954
+						# Southern Transylvania
+					owns_core_province = 1951
+					owns_core_province = 156
+					owns_core_province = 4128
+						# Northern Transylvania
+					owns_core_province = 157
+					owns_core_province = 1952
+					owns_core_province = 4127
+					owns_core_province = 158
+						# Red Ruthenia
+					owns_core_province = 1940
+					owns_core_province = 2424
+					owns_core_province = 4541
+					owns_core_province = 2961
+					owns_core_province = 261
+				}
+				AND = {
+					OR = {
+							# Austria
+						tag = HAB
+						HUN = {	junior_union_with = HAB }	
+						custom_trigger_tooltip = {
+							tooltip = form_austrian_empire_tt_4		
+								# Transdanubia
+						owns_core_province = 153
+						owns_core_province = 4126
+						owns_core_province = 1864
+						owns_core_province = 4240
+						owns_core_province = 135
+							# Slovakia
+						owns_core_province = 1772
+						owns_core_province = 4236
+						owns_core_province = 154
+						owns_core_province = 1318
+						owns_core_province = 162
+							# Alfold
+						owns_core_province = 155
+						owns_core_province = 1953
+						owns_core_province = 4125
+						owns_core_province = 1954
+							# Southern Transylvania
+						owns_core_province = 1951
+						owns_core_province = 156
+						owns_core_province = 4128
+							# Northern Transylvania
+						owns_core_province = 157
+						owns_core_province = 1952
+						owns_core_province = 4127
+						owns_core_province = 158
+							# Red Ruthenia
+						owns_core_province = 1940
+						owns_core_province = 2424
+						owns_core_province = 4541
+						owns_core_province = 2961
+						owns_core_province = 261
+					}
+						# Austrian Empire
+					tag = HBE
+					HUN = {	junior_union_with = HBE }
+						custom_trigger_tooltip = {
+							tooltip = form_austrian_empire_tt_4		
+								# Transdanubia
+						owns_core_province = 153
+						owns_core_province = 4126
+						owns_core_province = 1864
+						owns_core_province = 4240
+						owns_core_province = 135
+							# Slovakia
+						owns_core_province = 1772
+						owns_core_province = 4236
+						owns_core_province = 154
+						owns_core_province = 1318
+						owns_core_province = 162
+							# Alfold
+						owns_core_province = 155
+						owns_core_province = 1953
+						owns_core_province = 4125
+						owns_core_province = 1954
+							# Southern Transylvania
+						owns_core_province = 1951
+						owns_core_province = 156
+						owns_core_province = 4128
+							# Northern Transylvania
+						owns_core_province = 157
+						owns_core_province = 1952
+						owns_core_province = 4127
+						owns_core_province = 158
+							# Red Ruthenia
+						owns_core_province = 1940
+						owns_core_province = 2424
+						owns_core_province = 4541
+						owns_core_province = 2961
+						owns_core_province = 261
+						}
+					}					
+				}					
+			}
+		}
+	 	effect = {
+			change_tag = AHE
+			set_country_flag = formed_austro_hungarian_empire_flag	
+			set_capital = 134
+			AHE = {
+				134 = { 
+					add_base_tax = 2
+					add_base_manpower = 1
+				}
+				153 = { 
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}					
+			custom_tooltip = dec1_decisions_spacing	
+			set_in_empire = no
+			emperor = {
+				country_event = { id = hre_event.5 }
+				add_opinion = {
+					who = AHE
+					modifier = opinion_left_empire
+				}				
+			}	
+			custom_tooltip = dec1_decisions_spacing
+			add_government_reform = autocracy_reform
+			set_government_rank = 3		
+			custom_tooltip = dec1_decisions_spacing				
+			AHE = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
+			}
+			add_legitimacy = -5
+			add_stability = -1
+			add_inflation = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
+	}
+	
+}

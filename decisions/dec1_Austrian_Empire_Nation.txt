@@ -1,0 +1,249 @@
+country_decisions = {
+
+	# The Austrian Empire
+
+	austrian_empire_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_austrian_empire_flag }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}		
+			NOT = { 
+				tag = PAP 
+				tag = AHU
+				tag = HLR
+				tag = TUR
+				tag = EUR
+			}
+			OR = {
+				primary_culture = austrian
+				primary_culture = hungarian
+				primary_culture = czech
+			}
+		}
+		provinces_to_highlight = {
+			OR = {	
+					# Upper Bavaria
+				province_id = 76
+					# Austria Proper
+				province_id = 134
+				province_id = 133
+				province_id = 1770
+					# Inner Austria
+				province_id = 128
+				province_id = 132
+				province_id = 1863
+					# Carniola
+				province_id = 129
+				province_id = 130
+				province_id = 1769
+					# Tirol
+				province_id = 73
+				province_id = 110
+				province_id = 1768
+					# Transdanubia
+				province_id = 153
+				province_id = 4126
+				province_id = 1864
+				province_id = 4240
+				province_id = 135
+					# Slovakia
+				province_id = 1772
+				province_id = 4236
+				province_id = 154
+				province_id = 1318
+				province_id = 162
+					# Alfold
+				province_id = 155
+				province_id = 1953
+				province_id = 4125
+				province_id = 1954
+					# Southern Transylvania
+				province_id = 1951
+				province_id = 156
+				province_id = 4128
+					# Northern Transylvania
+				province_id = 157
+				province_id = 1952
+				province_id = 4127
+				province_id = 158
+					# Red Ruthenia
+				province_id = 1940
+				province_id = 2424
+				province_id = 4541
+				province_id = 2961
+				province_id = 261
+					# Sandomierz
+				province_id = 2959
+					# Malopolska
+				province_id = 2960
+					# Serbia
+				province_id = 4239
+					# Croatia
+				province_id = 1767
+				province_id = 152
+				province_id = 131
+					# East Adriatic
+				province_id = 1826
+				province_id = 136
+				province_id = 137
+					# Bohemia
+				province_id = 4237
+				province_id = 265
+				province_id = 2970
+				province_id = 266
+				province_id = 2968
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 10
+			NOT = { exists = HBE }
+			is_subject = no
+			is_at_war = no
+			is_emperor = no
+			custom_trigger_tooltip = {
+				tooltip = form_austrian_empire_tt_1
+				# Upper Bavaria
+			owns_core_province = 76
+				# Austria Proper
+			owns_core_province = 134
+			owns_core_province = 133
+			owns_core_province = 1770
+				# Inner Austria
+			owns_core_province = 128
+			owns_core_province = 132
+			owns_core_province = 1863
+				# Carniola
+			owns_core_province = 129
+			owns_core_province = 130
+			owns_core_province = 1769
+				# Tirol
+			owns_core_province = 73
+			owns_core_province = 110
+			owns_core_province = 1768
+				# Bohemia
+			owns_core_province = 4237
+			owns_core_province = 265
+			owns_core_province = 2970
+			owns_core_province = 266
+			owns_core_province = 2968				
+			}	
+			custom_trigger_tooltip = {
+				tooltip = form_austrian_empire_tt_2		
+				# Transdanubia
+			owns_core_province = 153
+			owns_core_province = 4126
+			owns_core_province = 1864
+			owns_core_province = 4240
+			owns_core_province = 135
+				# Slovakia
+			owns_core_province = 1772
+			owns_core_province = 4236
+			owns_core_province = 154
+			owns_core_province = 1318
+			owns_core_province = 162
+				# Alfold
+			owns_core_province = 155
+			owns_core_province = 1953
+			owns_core_province = 4125
+			owns_core_province = 1954
+				# Southern Transylvania
+			owns_core_province = 1951
+			owns_core_province = 156
+			owns_core_province = 4128
+				# Northern Transylvania
+			owns_core_province = 157
+			owns_core_province = 1952
+			owns_core_province = 4127
+			owns_core_province = 158
+				# Red Ruthenia
+			owns_core_province = 1940
+			owns_core_province = 2424
+			owns_core_province = 4541
+			owns_core_province = 2961
+			owns_core_province = 261
+			}
+				# Sandomierz
+			owns_core_province = 2959
+				# Malopolska
+			owns_core_province = 2960
+				# Serbia
+			owns_core_province = 4239
+				# Croatia
+			owns_core_province = 1767
+			owns_core_province = 152
+			owns_core_province = 131
+				# East Adriatic
+			owns_core_province = 1826
+			owns_core_province = 136
+			owns_core_province = 137		
+		}
+	 	effect = {
+			change_tag = HBE
+			set_country_flag = formed_austrian_empire_flag		
+			set_capital = 134
+			HBE = {
+				134 = { 
+					add_base_tax = 3
+					add_base_manpower = 3
+				}
+				153 = { 
+					add_base_tax = 1
+					add_base_production = 2
+					add_base_manpower = 1
+				}
+			}			
+			carpathia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = HBE
+			}
+			venetia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = HBE
+			}	
+			custom_tooltip = dec1_decisions_spacing				
+			set_in_empire = no
+			emperor = {
+				country_event = { id = hre_event.5 }
+				add_opinion = {
+					who = HBE
+					modifier = opinion_left_empire
+				}				
+			}	
+			custom_tooltip = dec1_decisions_spacing
+			add_government_reform = autocracy_reform
+			set_government_rank = 3		
+			custom_tooltip = dec1_decisions_spacing				
+			HBE = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
+			}
+			add_prestige = 20
+			add_legitimacy = 10
+			add_inflation = 5
+			add_stability = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
