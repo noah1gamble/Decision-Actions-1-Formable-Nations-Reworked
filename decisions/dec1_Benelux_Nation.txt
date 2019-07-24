@@ -3,21 +3,64 @@ country_decisions = {
 	benelux_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = BNL }
-			NOT = { tag = HLR }
-			NOT = { tag = EUR }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			NOT = { 
+				exists = BNL
+				tag = PAP
+				tag = BNL
+				tag = HLR
+				tag = EUR
+				tag = FRA
+				tag = KNI
+				tag = IBE
+			}
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
 				primary_culture = wallonian
 			}
+		}
+		provinces_to_highlight = {
 			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
+					# Flandes
+				province_id = 90 # Vlaanderen
+				province_id = 1865 # Gent
+				province_id = 1744 # Antwerpen
+					# Wallonia
+				province_id = 91 # Hainout
+				province_id = 92 # Brabant
+				province_id = 1866 # Namen
+				province_id = 93 # Liege
+				province_id = 94 # Luxemburg
+					# Netherlands
+				province_id = 2974 # Loon
+				province_id = 1742 # Upper Guelders
+				province_id = 95 # Breda
+				province_id = 99 # Gelre
+				province_id = 98 # Utrecht
+					# Frisia
+				province_id = 4381 # Oversticht
+				province_id = 4382 # Groningen
+				province_id = 1931 # Ostfriesland
+				province_id = 100 # Friesland
+					# Holland
+				province_id = 97 # Amsterdam
+				province_id = 4383 # Den Haag
+				province_id = 96 # Zeeland
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
@@ -25,20 +68,47 @@ country_decisions = {
 			NOT = { exists = BNL }
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 92 # Brabant
-			owns_core_province = 90 # Vlaanderen
-			owns_core_province = 94 # Luxemburg
-			owns_core_province = 93 # Liège
-			owns_core_province = 95 # Breda
-			owns_core_province = 96 # Zeeland
-			owns_core_province = 97 # Holland
-			owns_core_province = 98 # Utrecht
-			owns_core_province = 99 # Gelre
-			owns_core_province = 100 # Friesland
+			OR = {
+				low_countries_region{
+					type = all
+					owned_by = ROOT
+				}
+			}
 		}
 	 	effect = {
-		
+			change_tag = BNL
+			BNL = {
+				set_capital = 1744 # Antwerpen
+				1744 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BNL
+			}
+			custom_tooltip = dec1_decisions_spacing
+			BNL = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			BNL = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 25
+			add_legitimacy = 20
+			add_stability = 1
+			add_inflation = 2
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-
 }

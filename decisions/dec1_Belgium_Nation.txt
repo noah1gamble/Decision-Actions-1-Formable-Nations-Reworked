@@ -3,6 +3,9 @@ country_decisions = {
 	belgium_nation = {
 		major = yes
 		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
 			OR = {
 				ai = no
 				AND = {
@@ -37,6 +40,10 @@ country_decisions = {
 				province_id = 91 # Hainaut
 				province_id = 1866 # Namur
 				province_id = 93 # Liége
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
