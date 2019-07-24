@@ -1,6 +1,6 @@
 country_decisions = {
 
-	restore_roman_empire = {
+	restore_roman_empire_nation = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = restored_rome_flag }

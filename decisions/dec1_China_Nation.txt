@@ -78,7 +78,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = CHN
-			set_country_flag = formed_spain_flag
+			set_country_flag = formed_china_flag
 			CHN = {
 				set_capital = 1816 # Beijing
 				1816 = { 

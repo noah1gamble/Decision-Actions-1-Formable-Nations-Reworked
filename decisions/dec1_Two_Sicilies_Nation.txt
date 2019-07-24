@@ -33,24 +33,26 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 					# Sicily
-				province_id = 124 # Messina
-				province_id = 2982 # Syracuse
-				province_id = 125 # Palermo
-				province_id = 126 # Malta
+				province_id = 124
+				province_id = 2982
+				province_id = 125
+				province_id = 126
 					# Calabria
-				province_id = 123 # Calabria
-				province_id = 2984 # Cosenza
-				province_id = 1934 # Lucania
+				province_id = 123
+				province_id = 2984
+				province_id = 1934
 					# Naples (- Rome)
-				province_id = 2983 # Salerno
-				province_id = 121 # Napoli
+				province_id = 2983 
+				province_id = 121
 					# Apulia
-				province_id = 122 # Salento
-				province_id = 1933 # Bari
-				province_id = 2985 # Capitanata
-					# Central Italy (- Well, everything really)
-				province_id = 120 # Abruzzi
+				province_id = 122
+				province_id = 1933
+				province_id = 2985 
+					# Central Italy
+				province_id = 120
 			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }			
 		}
 		allow = {
 			adm_tech = 10
@@ -59,23 +61,23 @@ country_decisions = {
 			is_at_war = no
 			ROOT = {
 					# Sicily
-				owns_core_province = 124 # Messina
-				owns_core_province = 2982 # Syracuse
-				owns_core_province = 125 # Palermo
-				owns_core_province = 126 # Malta
+				owns_core_province = 124
+				owns_core_province = 2982
+				owns_core_province = 125
+				owns_core_province = 126
 					# Calabria
-				owns_core_province = 123 # Calabria
-				owns_core_province = 2984 # Cosenza
-				owns_core_province = 1934 # Lucania
+				owns_core_province = 123
+				owns_core_province = 2984
+				owns_core_province = 1934
 					# Naples (- Rome)
-				owns_core_province = 2983 # Salerno
-				owns_core_province = 121 # Napoli
+				owns_core_province = 2983 
+				owns_core_province = 121
 					# Apulia
-				owns_core_province = 122 # Salento
-				owns_core_province = 1933 # Bari
-				owns_core_province = 2985 # Capitanata
-					# Central Italy (- Well, everything really)
-				owns_core_province = 120 # Abruzzi
+				owns_core_province = 122
+				owns_core_province = 1933
+				owns_core_province = 2985 
+					# Central Italy
+				owns_core_province = 120
 			}
 		}
 	 	effect = {
@@ -104,10 +106,10 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}			
 			}		
-			add_prestige = 25
-			add_legitimacy = 20
+			add_prestige = 15
+			add_legitimacy = 35
 			add_stability = 1
-			add_inflation = 2
+			add_inflation = 1
 		}
 		ai_will_do = {
 			factor = 1

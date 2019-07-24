@@ -223,7 +223,7 @@ country_decisions = {
 			emperor = {
 				country_event = { id = hre_event.5 }
 				add_opinion = {
-					who = HBE
+					who = root
 					modifier = opinion_left_empire
 				}				
 			}	
