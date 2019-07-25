@@ -91,6 +91,12 @@ country_decisions = {
 					add_base_manpower = 3
 				}
 			}
+			if = {
+				limit = {
+					NOT = { primary_culture = serbian }
+				}
+				change_primary_culture = serbian
+			}			
 			balkan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -108,14 +114,12 @@ country_decisions = {
 			add_prestige = 25
 			add_legitimacy = 10
 			add_stability = 1
-			add_inflation = 1			
-			if = {
-				limit = {
-					NOT = { primary_culture = serbian }
-				}
-				change_primary_culture = serbian
-			}
+			add_inflation = 1
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300		
 	}
 	
 }

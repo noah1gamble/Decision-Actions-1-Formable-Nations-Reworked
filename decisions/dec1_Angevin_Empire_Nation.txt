@@ -3,18 +3,10 @@ country_decisions = {
 	angevin_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_angevin_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no	
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
-			}			
+			NOT = { has_country_flag = formed_angevin_flag }
 			NOT = { 
 				exists = NSE 
 				exists = ANG 
@@ -22,7 +14,15 @@ country_decisions = {
 				exists = UKI
 				tag = PAP 
 				tag = ANG
-			}
+			}			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}	
 			OR = {
 				culture_group = british
 				primary_culture = english

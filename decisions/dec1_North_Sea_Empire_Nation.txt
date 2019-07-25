@@ -95,7 +95,7 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			OR = {
-				ENG = { # England form North Sea Empire
+				ENG = { # England decision to form North Sea Empire
 					AND = { 
 						NOT = { 
 							dynasty = "Lancaster" 
@@ -109,7 +109,7 @@ country_decisions = {
 						owns_core_province = 17
 					}
 				}
-				DAN = { # Denmark form North Sea Empire
+				DAN = { # Denmark decision to form North Sea Empire
 					AND = {
 						is_lesser_in_union = no
 						junior_union_with = ENG
@@ -121,7 +121,7 @@ country_decisions = {
 						}
 					}
 				}
-				ROOT = { # Any other nation that can form North Sea Empire
+				ROOT = { # Decision for any other nation that can form North Sea Empire
 					NOT = {
 						tag = ENG
 						tag = DAN

@@ -5,10 +5,10 @@ country_decisions = {
 	austria_hungary_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_austro_hungarian_empire_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no	
+			NOT = { has_country_flag = formed_austro_hungarian_empire_flag }
 			NOT = { 
 				tag = PAP 
 				tag = HLR

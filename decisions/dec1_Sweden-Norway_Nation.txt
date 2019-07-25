@@ -3,11 +3,17 @@ country_decisions = {
 	sweden-norway_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = SCA }
-			NOT = { tag = NSE }
-			NOT = { tag = EUR }
-			NOT = { tag = GBR }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no	
+			NOT = { has_country_flag = formed_sweden_norway_flag }		
+			NOT = { 
+				tag = PAP
+				tag = SCA
+				tag = NSE
+				tag = EUR
+				tag = GBR
+			}
 			OR = {
 				primary_culture = swedish
 				primary_culture = norwegian

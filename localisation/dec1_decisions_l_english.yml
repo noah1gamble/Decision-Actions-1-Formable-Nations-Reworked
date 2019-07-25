@@ -76,7 +76,7 @@
  europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress."
  
  soviet_union_nation_title: "Form the Soviet Union"
- soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It exists from 1922 until 1991. It was the first country to declare itself socialist and build towards a communist society. It was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic.
+ soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It was the first country to declare itself socialist and build towards a communist society and was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic.
  
  celtic_union_nation_title: "Form the Celtic Union"
  celtic_union_nation_desc: "" 
@@ -179,6 +179,8 @@
  
  form_baltic_union_tt_1: "Owns all core §YNorth Baltic§! provinces"
  form_baltic_union_tt_2: "Owns all core §YSouth Baltic§! provinces"
+ 
+ form_north_german_confederation_tt_1: "Owns all core §YNorth German Confederation§! provinces"
  
  #MODIFIERS
  

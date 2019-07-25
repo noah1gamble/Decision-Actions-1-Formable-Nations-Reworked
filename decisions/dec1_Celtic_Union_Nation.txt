@@ -3,6 +3,9 @@ country_decisions = {
 	celtic_union_nation = {
 		major = yes
 		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
 			NOT = { has_country_flag = formed_celtic_union_flag }
 			NOT = { 
 				tag = PAP 
@@ -14,9 +17,6 @@ country_decisions = {
 				tag = CEU
 				tag = EUR
 			}			
-			normal_or_historical_nations = yes
-			is_former_colonial_nation = no
-			is_colonial_nation = no
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -144,7 +144,7 @@ country_decisions = {
 			set_capital = 373
 			CEU = {
 				217 = {
-					add_base_manpower = 12
+					add_base_manpower = 6
 				}
 			}
 			british_isles_region = {
@@ -169,7 +169,6 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400			
-		}
 	}
-
-			
+	
+}

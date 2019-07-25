@@ -4,17 +4,18 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			NOT = { has_country_flag = formed_morocco_flag }
+			NOT = { 
+				tag = MOR
+				tag = TUN
+				tag = TLC
+				tag = ALG
+				tag = PAP
+				tag = HLR
+				tag = MGH
 			}
-			NOT = { tag = MOR }
-			NOT = { tag = TUN }
-			NOT = { tag = TLC }
-			NOT = { tag = ALG }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = MGH }
 			OR = {
 				primary_culture = moroccan
 				AND = {
@@ -45,20 +46,27 @@ country_decisions = {
 					num_of_cities = 5	#Any big Moroccan tag will try to usurp the title
 				}
 			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 343			
+				province_id = 344			
+				province_id = 348			
+				province_id = 346
+				#todo areas
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
+			adm_tech = 5
 			NOT = { exists = MOR }
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
+			#todo areas
 			owns_core_province = 343 #Fez
 			owns_core_province = 344 #Marrekech
 			OR = {
@@ -68,7 +76,26 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MOR
-
+			set_country_flag = formed_morocco_flag
+			set_capital = 344
+			MOR = {
+				344 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			MOR = { set_government_rank = 1 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			MOR = { 
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 25
 		}
 		ai_will_do = {
 			factor = 1

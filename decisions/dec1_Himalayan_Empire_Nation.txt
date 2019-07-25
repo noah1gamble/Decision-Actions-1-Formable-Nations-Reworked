@@ -3,10 +3,12 @@ country_decisions = {
 	himalayan_empire_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = HIN }
-			NOT = { tag = BHA }
-			NOT = { tag = TIB }
+			NOT = { 
+				tag = PAP
+				tag = HIN
+				tag = BHA
+				tag = TIB
+			}
 			OR = {
 				primary_culture = nepali
 				primary_culture = tibetan

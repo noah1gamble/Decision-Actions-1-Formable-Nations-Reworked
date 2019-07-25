@@ -3,15 +3,16 @@ country_decisions = {
 	pontos_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = PON }
-			NOT = { tag = HLR }
-			NOT = { tag = TUR }
-			NOT = { tag = EUR }
-			OR = {
-				primary_culture = pontic_greek
-				primary_culture = goths
-				primary_culture = turkish
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
+			NOT = { has_country_flag = formed_pontos_nation }		
+			NOT = { 
+				tag = PAP
+				tag = PON
+				tag = HLR
+				tag = TUR
+				tag = EUR
 			}
 			OR = {
 				ai = no
@@ -19,6 +20,11 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 3
 				}
+			}			
+			OR = {
+				primary_culture = pontic_greek
+				primary_culture = goths
+				primary_culture = turkish
 			}
 		}
 		allow = {
@@ -33,10 +39,35 @@ country_decisions = {
             owns_core_province = 2447 # Mantrega
 			owns_core_province = 325 # Kastamounu
 			owns_core_province = 2304 # Canik
+			owns_core_province = 2195 # Adyghe
 		}
 	 	effect = {
 			change_tag = PON
+			set_country_flag = formed_pontos_nation
+			set_capital = 2410
+			PON = {
+				2410 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			PON = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			PON = { 
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 30
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
 	}
 
 }

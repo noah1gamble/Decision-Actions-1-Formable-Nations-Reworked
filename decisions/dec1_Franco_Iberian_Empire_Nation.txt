@@ -3,6 +3,10 @@ country_decisions = {
 	franco_iberia_nation = {
 		major = yes
 		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			NOT = { has_country_flag = formed_franco_iberia_flag }
 			NOT = { 
 				tag = PAP
 				tag = HLR

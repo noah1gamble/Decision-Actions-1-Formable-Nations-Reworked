@@ -82,7 +82,7 @@ country_decisions = {
 				add_permanent_claim = HAN
 			}
 			custom_tooltip = dec1_decisions_spacing
-			HAN = { set_government_rank = 1 }
+			HAN = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
 			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	
