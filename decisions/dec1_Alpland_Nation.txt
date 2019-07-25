@@ -3,6 +3,10 @@ country_decisions = {
 	alpland_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
+			normal_or_historical_nations = yes
+			is_playing_custom_nation = no
+			is_colonial_nation = no		
 			NOT = { 
 				tag = PAP 
 				tag = ALP
@@ -16,6 +20,8 @@ country_decisions = {
 				tag = CIS
 				tag = EUR
 				tag = ADR
+				tag = AHE
+				tag = HBE
 			}
 			OR = {
 				primary_culture = austrian
@@ -81,6 +87,7 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_spacing
 			ALP = { set_government_rank = 2 }
 			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing
 			ALP = {
 				add_country_modifier = { 

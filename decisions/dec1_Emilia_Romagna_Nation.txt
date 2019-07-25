@@ -1,19 +1,26 @@
 country_decisions = {
 
-	emilia-romagna_nation = {
+	emilia_romagna_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = ADR }
-			NOT = { tag = ALP }
-			NOT = { tag = CIS }
-			NOT = { tag = EUR }
-			NOT = { tag = IMA }
-			NOT = { tag = ROE }
-			NOT = { tag = LVE }
-			NOT = { tag = ITA }
-			NOT = { tag = TSI }
-			NOT = { tag = YUG }
+			was_never_end_game_tag_trigger = yes
+			normal_or_historical_nations = yes
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = { has_country_flag = formed_emilia_romagna_nation }		
+			NOT = { 
+				tag = PAP 
+				tag = ADR
+				tag = ALP
+				tag = CIS
+				tag = EUR
+				tag = IMA
+				tag = ROE
+				tag = LVE
+				tag = ITA
+				tag = TSI
+				tag = YUG
+			}
 			OR = {
 				primary_culture = romagnan
 			}
@@ -25,6 +32,16 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 105 # Parma
+				province_id = 106 # Modena
+				province_id = 113 # Ferrara
+				province_id = 114 # Romagna
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = ERO }
@@ -36,8 +53,38 @@ country_decisions = {
 			owns_core_province = 114 # Romagna
 		}
 	 	effect = {
-
+			change_tag = ERO
+			set_country_flag = formed_emilia_romagna_nation
+			ERO = {
+				set_capital = 106 # Modena
+				106 = { 
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ERO
+			}			
+			custom_tooltip = dec1_decisions_spacing
+			ERO = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			ERO = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 10
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
 	}
 
 }

@@ -3,10 +3,17 @@ country_decisions = {
 	franconia_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_franconia_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
+			NOT = { has_country_flag = formed_franconia_flag }	
+			NOT = { 
+				tag = PAP 
+				tag = FRC
+				tag = HLR
+				tag = BAV
+				tag = EUR
+			}			
 			OR = {
 				ai = no
 				AND = {
@@ -14,13 +21,6 @@ country_decisions = {
 					num_of_cities = 3
 				}
 			}			
-			NOT = { 
-				tag = PAP 
-				tag = FRC
-				tag = HLR
-				tag = BAV
-				tag = EUR
-			}
 			OR = {
 				primary_culture = franconian
 			}

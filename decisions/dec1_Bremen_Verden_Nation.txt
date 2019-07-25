@@ -1,15 +1,21 @@
 country_decisions = {
 
-	bremen-verden_nation = {
+	bremen_verden_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = GER }
-			NOT = { tag = HRE }
-			NOT = { tag = EUR }
-			NOT = { tag = LSX }
-			NOT = { tag = NGC }
-			NOT = { tag = PRU }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no
+			NOT = { has_country_flag = formed_bremen_verden_nation }		
+			NOT = { 
+				tag = PAP
+				tag = GER
+				tag = HRE
+				tag = EUR
+				tag = LSX
+				tag = NGC
+				tag = PRU
+			}
 			OR = {
 				primary_culture = hannoverian
 			}
@@ -21,6 +27,16 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1874 # Bremen
+				province_id = 54 # Stade  
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = BVE }
@@ -30,8 +46,32 @@ country_decisions = {
 			owns_core_province = 54 # Stade  
 		}
 	 	effect = {
-
+			change_tag = BVE
+			set_country_flag = formed_bremen_verden_nation
+			BVE = {
+				set_capital = 1874 # Modena
+				1874 = { 
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}		
+			custom_tooltip = dec1_decisions_spacing
+			BVE = { set_government_rank = 1 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			BVE = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 10
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
 	}
 
 }

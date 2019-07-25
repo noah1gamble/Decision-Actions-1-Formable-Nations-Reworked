@@ -1,6 +1,6 @@
 country_decisions = {
 
-	hesse-nassau_nation = {
+	hesse_nassau_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
