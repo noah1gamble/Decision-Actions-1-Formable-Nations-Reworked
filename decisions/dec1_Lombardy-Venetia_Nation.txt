@@ -3,19 +3,12 @@ country_decisions = {
 	lombardy_venetia_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_lombardy_venetia_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no		
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 5
-				}
-			}		
 			NOT = { 
+				has_country_flag = formed_lombardy_venetia_flag
+				exists = LVE
 				tag = PAP 
 				tag = HAB
 				tag = HLR
@@ -27,6 +20,14 @@ country_decisions = {
 				tag = CIS
 				tag = EUR
 				tag = ADR
+			}			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
 			}
 			OR = {
 				primary_culture = venetian

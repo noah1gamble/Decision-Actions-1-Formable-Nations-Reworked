@@ -3,16 +3,24 @@ country_decisions = {
 	italian_merchant_alliance_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = ITA }
-			NOT = { tag = HLR }
-			NOT = { tag = IMA }
-			NOT = { tag = LVE }
-			NOT = { tag = TSI }
-			NOT = { tag = ALP }
-			NOT = { tag = CIS }
-			NOT = { tag = EUR }
-			NOT = { tag = ADR }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no			
+			NOT = { 
+				has_country_flag = formed_italian_merchant_alliance_flag
+				exists = IMA
+				tag = PAP
+				tag = ITA
+				tag = HLR
+				tag = IMA
+				tag = LVE
+				tag = TSI
+				tag = ALP
+				tag = CIS
+				tag = EUR
+				tag = ADR
+			}
 			OR = {
 				primary_culture = ligurian
 				primary_culture = lombard
@@ -34,22 +42,71 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+				province_id = 116 # Firenze
+				province_id = 112 # Venezia
+				province_id = 115 # Pisa
+				province_id = 101 # Genoa
+				province_id = 2983 # Salerno
+				province_id = 2980 # Lucca
+				province_id = 121 # Napoli		
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = IMA }
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 116 # Firenze
-			owns_core_province = 112 # Venezia
-			owns_core_province = 115 # Pisa
-			owns_core_province = 101 # Genoa
-			owns_core_province = 2983 # Salerno
-			owns_core_province = 2980 # Lucca
-			owns_core_province = 121 # Napoli
+				owns_core_province = 116 # Firenze
+				owns_core_province = 112 # Venezia
+				owns_core_province = 115 # Pisa
+				owns_core_province = 101 # Genoa
+				owns_core_province = 2983 # Salerno
+				owns_core_province = 2980 # Lucca
+				owns_core_province = 121 # Napoli
 		}
 	 	effect = {
-
+			change_tag = IMA
+			set_country_flag = formed_italian_merchant_alliance_flag	
+			set_capital = 112
+			ITE = {
+				112 = { 
+					add_base_tax = 12
+				}
+			}	
+			custom_tooltip = dec1_decisions_spacing				
+			set_in_empire = no
+			emperor = {
+				country_event = { id = hre_event.5 }
+				add_opinion = {
+					who = root
+					modifier = opinion_left_empire
+				}				
+			}	
+			custom_tooltip = dec1_decisions_spacing
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			set_government_rank = 2		
+			custom_tooltip = dec1_decisions_spacing				
+			IMA = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}
+			}
+			add_prestige = 10
+			add_legitimacy = 10
+			add_stability = 1
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-
+	
 }

@@ -1,0 +1,174 @@
+country_decisions = {
+
+	rename_ethiopia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
+			NOT = { 
+				has_country_flag = rename_ethiopia_flag
+				exists = ABY			
+				tag = PAP 
+				tag = ABY
+			}
+			OR = {
+				primary_culture = amhara
+				primary_culture = sidamo
+				primary_culture = somali
+				primary_culture = tigray
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Central Ethiopia
+				province_id = 1224
+				province_id = 1223
+				province_id = 2772
+				province_id = 2769
+				province_id = 1214
+					# Tigray
+				province_id = 2771
+				province_id = 1227
+				province_id = 2767
+				province_id = 2766
+					# Shewa
+				province_id = 1213
+				province_id = 2791
+				province_id = 2761
+					# Hadiya
+				province_id = 2760
+				province_id = 2756
+				province_id = 1218
+					# Kaffa
+				province_id = 4158
+				province_id = 2758
+				province_id = 2757
+				province_id = 2759
+					# Sennar
+				province_id = 1217
+				province_id = 2799
+				province_id = 4033
+					# Upper Nubia
+				province_id = 1222
+				province_id = 2798
+				province_id = 1225
+				province_id = 2797
+				province_id = 1226
+					# Red Sea Coast
+				province_id = 2787
+				province_id = 1230
+					# Aussa
+				province_id = 2765
+				province_id = 2768
+				province_id = 2764
+					# Ifat
+				province_id = 2773
+				province_id = 1211
+					# Ogaden
+				province_id = 1210
+				province_id = 1208
+				province_id = 1207
+				province_id = 2779
+				province_id = 2778	
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
+		allow = {
+			adm_tech = 5
+			NOT = { exists = ABY }	
+			is_subject = no
+			is_at_war = no	
+			custom_trigger_tooltip = {
+				tooltip = rename_ethiopia_tt_1	
+					# Central Ethiopia
+				owns_core_province = 1224
+				owns_core_province = 1223
+				owns_core_province = 2772
+				owns_core_province = 2769
+				owns_core_province = 1214
+					# Tigray
+				owns_core_province = 2771
+				owns_core_province = 1227
+				owns_core_province = 2767
+				owns_core_province = 2766
+					# Shewa
+				owns_core_province = 1213
+				owns_core_province = 2791
+				owns_core_province = 2761
+					# Hadiya
+				owns_core_province = 2760
+				owns_core_province = 2756
+				owns_core_province = 1218
+					# Kaffa
+				owns_core_province = 4158
+				owns_core_province = 2758
+				owns_core_province = 2757
+				owns_core_province = 2759
+					# Sennar
+				owns_core_province = 1217
+				owns_core_province = 2799
+				owns_core_province = 4033
+					# Upper Nubia
+				owns_core_province = 1222
+				owns_core_province = 2798
+				owns_core_province = 1225
+				owns_core_province = 2797
+				owns_core_province = 1226
+					# Red Sea Coast
+				owns_core_province = 2787
+				owns_core_province = 1230
+					# Aussa
+				owns_core_province = 2765
+				owns_core_province = 2768
+				owns_core_province = 2764
+					# Ifat
+				owns_core_province = 2773
+				owns_core_province = 1211
+					# Ogaden
+				owns_core_province = 1210
+				owns_core_province = 1208
+				owns_core_province = 1207
+				owns_core_province = 2779
+				owns_core_province = 2778
+			}
+		}
+	 	effect = {
+			change_tag = ABY
+			set_country_flag = rename_ethiopia_flag
+			ABY = {
+				set_capital = 1224 # Gonder
+				1224 = { 
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			ABY = { set_government_rank = 3 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			ABY = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
+	}
+}

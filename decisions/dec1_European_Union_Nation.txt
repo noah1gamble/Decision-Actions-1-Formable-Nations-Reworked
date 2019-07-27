@@ -7,8 +7,8 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_colonial_nation = no
 			technology_group = western
-			NOT = { has_country_flag = formed_europe_flag }
 			NOT = { 
+				has_country_flag = formed_europe_flag
 				exists = EUR
 				tag = EUR
 				tag = PAP

@@ -3,10 +3,19 @@ country_decisions = {
 	netherlands_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_netherlands_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no		
+			is_colonial_nation = no	
+			NOT = {
+				has_country_flag = formed_netherlands_flag
+				exists = NED
+				tag = PAP
+				tag = NED
+				tag = HLR
+				tag = BNL
+				tag = BEL
+				tag = EUR
+			}			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -20,20 +29,10 @@ country_decisions = {
 				primary_culture = flemish
 				tag = BUR
 			}			
-			NOT = { 
-				exists = NED
-				tag = PAP
-				tag = NED
-				tag = HLR
-				tag = BNL
-				tag = BEL
-				tag = EUR
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
-					# Toldo
-				province_id = 219
+					# Dutch
 				province_id = 95 
 				province_id = 96 
 				province_id = 97 

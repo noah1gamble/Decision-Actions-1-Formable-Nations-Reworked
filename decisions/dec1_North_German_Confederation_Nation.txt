@@ -227,7 +227,33 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = NGC
+			set_country_flag = formed_north_german_confederation_flag
+			NGC = {
+				set_capital = 50 # Berlin
+				50 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			NGC = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			NGC = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 15
+			add_legitimacy = 10
+			add_stability = 1
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }

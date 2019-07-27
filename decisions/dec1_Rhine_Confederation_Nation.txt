@@ -6,22 +6,22 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
+			NOT = { 
+				exists = RHE
+				tag = RHE
+				tag = PAP 
+				tag = GER
+				tag = HRE
+				tag = NGC
+				tag = PRU
+				tag = EUR			
+			}			
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 3
 				}
-			}
-			NOT = { 
-			exists = RHE
-			tag = RHE
-			tag = PAP 
-			tag = GER
-			tag = HRE
-			tag = NGC
-			tag = PRU
-			tag = EUR			
 			}
 			OR = {
 				primary_culture = hannoverian
@@ -110,4 +110,5 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	
 }

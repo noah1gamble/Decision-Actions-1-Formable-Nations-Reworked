@@ -4,17 +4,19 @@ country_decisions = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
+			NOT = { 
+				exists = TUN
+				tag = MOR
+				tag = TUN
+				tag = TLC
+				tag = ALG
+				tag = PAP
+				tag = HLR
+				tag = MGH
 			}
-			NOT = { tag = MOR }
-			NOT = { tag = TUN }
-			NOT = { tag = TLC }
-			NOT = { tag = ALG }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = MGH }
 			OR = {
 				primary_culture = tunisian
 				AND = {
@@ -38,20 +40,13 @@ country_decisions = {
 					num_of_cities = 5
 				}
 			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
 		}
 		allow = {
 			NOT = { exists = TUN }
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
+			
 			owns_core_province = 341 #Tunis
 			owns_core_province = 2473 #Souss
 			OR = {
@@ -61,49 +56,32 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = TUN
-			if = {
-				limit = {
-					is_part_of_hre = yes
-					is_elector = no
-				}
-				every_owned_province = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					set_in_empire = no
+			set_country_flag = formed_morocco_flag
+			set_capital = 344
+			TUN = {
+				344 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 1
 				}
 			}
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			change_primary_culture = tunisian
-			tunisia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = TUN
-			}
-			if = {
-				limit = {
-					is_tribal = yes
-				}
-				change_government = despotic_monarchy #Desert tribes settling down.
-			}
+			custom_tooltip = dec1_decisions_spacing
+			TUN = { set_government_rank = 2 }
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			TUN = { 
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
 			add_prestige = 25
-			set_capital = 341
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-	
 	
 }

@@ -6,8 +6,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no		
-			NOT = { has_country_flag = formed_pontos_nation }		
 			NOT = { 
+				has_country_flag = formed_pontos_nation
+				exists = PON
 				tag = PAP
 				tag = PON
 				tag = HLR
@@ -27,6 +28,22 @@ country_decisions = {
 				primary_culture = turkish
 			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+				province_id = 328 # Sinop
+				province_id = 330 # Trebizond
+				province_id = 285 # Caffa
+				province_id = 2410 # Theodoro
+				province_id = 2447 # Mantrega
+				province_id = 325 # Kastamounu
+				province_id = 2304 # Canik
+				province_id = 2195 # Adyghe
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 3
 			is_subject = no

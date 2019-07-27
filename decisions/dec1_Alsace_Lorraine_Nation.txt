@@ -49,15 +49,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ALL
-			set_country_flag = formed_alsace_lorraine_flag				
-			set_capital = 75 # Elsass
-			ALL = {
-				75 = { 
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 3
-				}
-			}			
+			set_country_flag = formed_alsace_lorraine_flag			
 			custom_tooltip = dec1_decisions_spacing
 			ALL = { set_government_rank = 1 }
 			add_government_reform = autocracy_reform

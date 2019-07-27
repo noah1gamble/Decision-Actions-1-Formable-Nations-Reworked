@@ -5,9 +5,9 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no	
-			NOT = { has_country_flag = formed_sweden_norway_flag }		
+			is_colonial_nation = no			
 			NOT = { 
+				has_country_flag = formed_sweden_norway_flag
 				tag = PAP
 				tag = SCA
 				tag = NSE

@@ -3,19 +3,13 @@ country_decisions = {
 	adriatic_empire_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_adriatic_empire_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no	
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
-			}			
+			is_playing_custom_nation = no
+			is_colonial_nation = no			
 			NOT = { 
+				has_country_flag = formed_adriatic_empire_flag
+				exists = ADR
 				tag = PAP
 				tag = ADR
 				tag = ALP
@@ -116,11 +110,12 @@ country_decisions = {
 	 	effect = {
 			change_tag = ADR
 			set_country_flag = formed_adriatic_empire_flag	
-			set_capital = 112
 			ADR = {
+				add_prestige = 20
+				set_capital = 112
 				112 = { 
-					add_base_tax = 20
-					add_base_production = 5
+					add_base_tax = 12
+					add_base_production = 4
 				}
 			}
 			italy_region = {
@@ -136,13 +131,30 @@ country_decisions = {
 				add_permanent_claim = ADR
 			}		
 			custom_tooltip = dec1_decisions_spacing
-			ADR = { set_government_rank = 3 }
-			add_government_reform = merchants_reform
+			ADR = { 
+				if = { 
+					limit = { 
+						NOT = { government_rank = 3 }
+					}
+					set_government_rank = 3
+				}
+				change_government = republic
+				add_government_reform = merchants_reform
+				set_legacy_government = merchant_republic
+			}
 			custom_tooltip = dec1_decisions_spacing
-			add_country_modifier = { 
-				name = dec1_increased_centralization
+			CIS = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CIS_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
 			}			
-			add_prestige = 20		
 		}
 		ai_will_do = {
 			factor = 1

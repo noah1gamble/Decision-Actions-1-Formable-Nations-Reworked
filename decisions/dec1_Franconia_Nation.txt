@@ -6,8 +6,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
-			NOT = { has_country_flag = formed_franconia_flag }	
 			NOT = { 
+				has_country_flag = formed_franconia_flag
+				exists = FRC
 				tag = PAP 
 				tag = FRC
 				tag = HLR
@@ -74,5 +75,6 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
-	}			
+	}
+	
 }	

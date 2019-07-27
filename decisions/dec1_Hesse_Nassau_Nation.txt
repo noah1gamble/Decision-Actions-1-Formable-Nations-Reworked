@@ -6,14 +6,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 			NOT = { 
+				has_country_flag = formed_hesse_nassau_flag
+				exists = HEN
 				tag = HEN 
 				tag = HRE
 				tag = RHE
@@ -24,6 +19,13 @@ country_decisions = {
 				tag = PAP
 				tag = BLG
 				tag = BNL
+			}			
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
 			}
 			OR = {
 				primary_culture = hessian
@@ -57,6 +59,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = HEN
+			set_country_flag = formed_hesse_nassau_flag
 			HEN = {
 				set_capital = 1744 # Antwerpen
 				1744 = { 

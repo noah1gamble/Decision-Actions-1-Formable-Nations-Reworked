@@ -3,8 +3,10 @@ country_decisions = {
 	tatarstan_nation = {
 		major = yes
 		potential = {
+			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
 			NOT = {
 				exists = TAT
 				tag = PAP
@@ -30,35 +32,35 @@ country_decisions = {
 		}
 		provinces_to_highlight={
 			OR = {
-				#Crimea
-			province_id = 284 # Crimea
-			province_id = 2410 # Theodoro
-			province_id = 285 # Caffa
-			province_id = 2447 # Matrega
-				#Yedisan
-			province_id = 282 # Yedisan
-			province_id = 2406 # Ingil
-			province_id = 1974 # Yedishkul
-				#Zaporizhia
-			province_id = 283 # Zaporozhia
-			province_id = 2411 # Mansur
-			province_id = 2412 # Kyzyl-Yar
-				#Lower Don
-			province_id = 288 # Lower Don
-			province_id = 1971 # Beljamen
-			province_id = 467 # Borisoglebsk
-			province_id = 2409 # Bahmut
-				#Azov
-			province_id = 286 # Azov
-			province_id = 2413 # Tyn
-			province_id = 2414 # Azaraba
-			province_id = 287 # Kuban
-				#Astrakhan
-			province_id = 464 # Astrakhan
-			province_id = 468 # Manych
-			province_id = 2416 # Majar
-			province_id = 2417 # Kuma
-			province_id = 466 # Sarai
+					#Crimea
+				province_id = 284 # Crimea
+				province_id = 2410 # Theodoro
+				province_id = 285 # Caffa
+				province_id = 2447 # Matrega
+					#Yedisan
+				province_id = 282 # Yedisan
+				province_id = 2406 # Ingil
+				province_id = 1974 # Yedishkul
+					#Zaporizhia
+				province_id = 283 # Zaporozhia
+				province_id = 2411 # Mansur
+				province_id = 2412 # Kyzyl-Yar
+					#Lower Don
+				province_id = 288 # Lower Don
+				province_id = 1971 # Beljamen
+				province_id = 467 # Borisoglebsk
+				province_id = 2409 # Bahmut
+					#Azov
+				province_id = 286 # Azov
+				province_id = 2413 # Tyn
+				province_id = 2414 # Azaraba
+				province_id = 287 # Kuban
+					#Astrakhan
+				province_id = 464 # Astrakhan
+				province_id = 468 # Manych
+				province_id = 2416 # Majar
+				province_id = 2417 # Kuma
+				province_id = 466 # Sarai
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -71,35 +73,35 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			ROOT = {
-				#Crimea
-			province_id = 284 # Crimea
-			province_id = 2410 # Theodoro
-			province_id = 285 # Caffa
-			province_id = 2447 # Matrega
-				#Yedisan
-			province_id = 282 # Yedisan
-			province_id = 2406 # Ingil
-			province_id = 1974 # Yedishkul
-				#Zaporizhia
-			province_id = 283 # Zaporozhia
-			province_id = 2411 # Mansur
-			province_id = 2412 # Kyzyl-Yar
-				#Lower Don
-			province_id = 288 # Lower Don
-			province_id = 1971 # Beljamen
-			province_id = 467 # Borisoglebsk
-			province_id = 2409 # Bahmut
-				#Azov
-			province_id = 286 # Azov
-			province_id = 2413 # Tyn
-			province_id = 2414 # Azaraba
-			province_id = 287 # Kuban
-				#Astrakhan
-			province_id = 464 # Astrakhan
-			province_id = 468 # Manych
-			province_id = 2416 # Majar
-			province_id = 2417 # Kuma
-			province_id = 466 # Sarai
+					#Crimea
+				province_id = 284 # Crimea
+				province_id = 2410 # Theodoro
+				province_id = 285 # Caffa
+				province_id = 2447 # Matrega
+					#Yedisan
+				province_id = 282 # Yedisan
+				province_id = 2406 # Ingil
+				province_id = 1974 # Yedishkul
+					#Zaporizhia
+				province_id = 283 # Zaporozhia
+				province_id = 2411 # Mansur
+				province_id = 2412 # Kyzyl-Yar
+					#Lower Don
+				province_id = 288 # Lower Don
+				province_id = 1971 # Beljamen
+				province_id = 467 # Borisoglebsk
+				province_id = 2409 # Bahmut
+					#Azov
+				province_id = 286 # Azov
+				province_id = 2413 # Tyn
+				province_id = 2414 # Azaraba
+				province_id = 287 # Kuban
+					#Astrakhan
+				province_id = 464 # Astrakhan
+				province_id = 468 # Manych
+				province_id = 2416 # Majar
+				province_id = 2417 # Kuma
+				province_id = 466 # Sarai
 			}
 		}
 	 	effect = {

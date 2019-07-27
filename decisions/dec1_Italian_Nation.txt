@@ -5,18 +5,15 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
 			was_never_end_game_tag_trigger = yes
 			culture_group = latin
-			NOT = { has_country_flag = formed_italy_flag }
 			NOT = { 
+				has_country_flag = formed_italy_flag
 				exists = ITA
 				tag = PAP
 				tag = HLR
-			}			
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
 			}
 			OR = {
 				ai = no
@@ -129,7 +126,9 @@ country_decisions = {
 				}				
 			}	
 			custom_tooltip = dec1_decisions_spacing
+			change_government = monarchy
 			add_government_reform = autocracy_reform
+			
 			set_government_rank = 2		
 			custom_tooltip = dec1_decisions_spacing				
 			ITA = {
@@ -147,19 +146,16 @@ country_decisions = {
 		ai_importance = 400
 	}
 	
-	# form papal states ?
-	
 	gods_kingdom = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_playing_custom_nation = no
+			NOT = { 
+				has_country_modifier = kingdom_of_god 
+				exists = ITA 
+				tag = PAP
 			}
-			NOT = { exists = ITA }
-			tag = PAP
-			NOT = { has_country_modifier = kingdom_of_god }
 			OR = {
 				ai = no
 				AND = {
@@ -225,208 +221,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
-
-	italian_empire_nation = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			is_former_colonial_nation = no
-			is_colonial_nation = no
-			culture_group = latin
-			NOT = { 
-				has_country_flag = formed_italian_empire_flag 
-				tag = PAP 
-				tag = HLR	
-				TAG = ITE	
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 15
-				}
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-					# Liguria
-				province_id = 102
-				province_id = 2992
-				province_id = 101
-					# Piedmont
-				province_id = 1875
-				province_id = 103
-				province_id = 2981
-				province_id = 2979
-					# Lombardy
-				province_id = 104
-				province_id = 107
-				province_id = 1862
-				province_id = 109
-					# Venetia
-				province_id = 108
-				province_id = 1774
-				province_id = 111
-				province_id = 112
-					# Emilia-Romagna
-				province_id = 113
-				province_id = 114
-				province_id = 106
-				province_id = 105
-					# Tuscany
-				province_id = 2980
-				province_id = 115
-				province_id = 117
-				province_id = 116
-				province_id = 2978
-					# Central Italy
-				province_id = 2977
-				province_id = 119
-				province_id = 120
-				province_id = 2976
-					# Lazio Campania
-				province_id = 118
-				province_id = 121
-				province_id = 2983
-					# Apulia
-				province_id = 2985
-				province_id = 1933
-				province_id = 122
-					# Calabria
-				province_id = 1934
-				province_id = 2984
-				province_id = 123
-					# Sicily
-				province_id = 124
-				province_id = 2982
-				province_id = 125
-				province_id = 126
-					# Italian isles
-				province_id = 1247
-				province_id = 127
-				province_id = 2986
-					# Albania
-				province_id = 4174
-				province_id = 143
-				province_id = 4175 
-					# Aegean Archipelago
-				province_id = 320
-					# Crete
-				province_id = 163
-					# Cyrenaica
-				province_id = 356
-				province_id = 357
-				province_id = 2326
-				province_id = 2325
-					# Triplitania
-				province_id = 355
-				province_id = 2451
-				province_id = 354
-				province_id = 2452
-					# Djerba
-				province_id = 353
-				province_id = 2453
-				province_id = 2954
-					# Tunisia
-				province_id = 2473
-				province_id = 341
-				province_id = 4566
-				province_id = 2454
-				province_id = 2455
-					# Fezzan
-				province_id = 4567
-				province_id = 2449
-				province_id = 2448
-				province_id = 2474
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			OR = {
-				italy_region{
-					type = all
-					owned_by = ROOT
-				}
-			}
-				# Italian isles
-			owns_core_province = 1247
-			owns_core_province = 127
-			owns_core_province = 2986
-				# Albania
-			owns_core_province = 4174
-			owns_core_province = 143
-			owns_core_province = 4175 
-				# Aegean Archipelago
-			owns_core_province = 320
-				# Crete
-			owns_core_province = 163
-				# Cyrenaica
-			owns_core_province = 356
-			owns_core_province = 357
-			owns_core_province = 2326
-			owns_core_province = 2325
-				# Triplitania
-			owns_core_province = 335
-			owns_core_province = 2451
-			owns_core_province = 354
-			owns_core_province = 2452
-				# Djerba
-			owns_core_province = 353
-			owns_core_province = 2453
-			owns_core_province = 2954
-				# Tunisia
-			owns_core_province = 2473
-			owns_core_province = 341
-			owns_core_province = 4566
-			owns_core_province = 2454
-			owns_core_province = 2455
-				# Fezzan
-			owns_core_province = 4567
-			owns_core_province = 2449
-			owns_core_province = 2448
-			owns_core_province = 2474			
-		}
-		effect = {
-			set_country_flag = formed_italian_empire_flag	
-			set_capital = 118
-			ITE = {
-				118 = { 
-					add_base_tax = 5
-				}
-			}	
-			custom_tooltip = dec1_decisions_spacing				
-			set_in_empire = no
-			emperor = {
-				country_event = { id = hre_event.5 }
-				add_opinion = {
-					who = root
-					modifier = opinion_left_empire
-				}				
-			}	
-			custom_tooltip = dec1_decisions_spacing
-			add_government_reform = autocracy_reform
-			set_government_rank = 3		
-			custom_tooltip = dec1_decisions_spacing				
-			ITE = {
-				add_country_modifier = { 
-					name = dec1_increased_centralization
-				}
-			}
-			add_prestige = 10
-			add_legitimacy = 10
-			add_stability = 1
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
 	}
 
 }

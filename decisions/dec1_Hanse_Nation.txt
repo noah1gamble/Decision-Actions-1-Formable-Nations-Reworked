@@ -3,13 +3,16 @@ country_decisions = {
 	hanse_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = HRE }
-			NOT = { tag = GER }
-			NOT = { tag = PRU }
-			NOT = { tag = EPR }
-			NOT = { tag = NGC }
-			NOT = { tag = WES }
+			NOT = { 
+				exists = HNS
+				tag = PAP
+				tag = HRE
+				tag = GER
+				tag = PRU
+				tag = EPR
+				tag = NGC
+				tag = WES
+			}
 			OR = {
 				primary_culture = pommeranian
 				primary_culture = hannoverian
@@ -22,21 +25,102 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 44 # Hamburg
+				province_id = 1874 # Bremen
+				province_id = 45 # Lübeck
+				province_id = 46 # Rostok
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
+			NOT = { exists = HNS }			
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = HNS }
-			
-                        owns_core_province = 44 # Hamburg
-                        owns_core_province = 1874 # Bremen
-                        owns_core_province = 45 # Lübeck
-						owns_core_province = 46 # Rostok
+			OR = { 
+				AND = { # Simple formation of Hansa
+					owns_core_province = 44 # Hamburg
+					owns_core_province = 1874 # Bremen
+					owns_core_province = 45 # Lübeck
+					owns_core_province = 46 # Rostok
+				}
+				AND = { # Coastal area control formation of Hansa
+					#
+					weser_area = {
+						type = all
+						owned_by = ROOT
+					}
+					lower_saxony_area = {
+						type = all
+						owned_by = ROOT
+					}
+					mecklenburg_area = {
+						type = all
+						owned_by = ROOT
+					}
+					vorpommern_area = {
+						type = all
+						owned_by = ROOT
+					}
+					hinter_pommern_area = {
+						type = all
+						owned_by = ROOT
+					}
+					#
+					west_prussia_area = {
+						type = all
+						owned_by = ROOT
+					}
+					east_prussia_area = {
+						type = all
+						owned_by = ROOT
+					}
+					curonia_area = {
+						type = all
+						owned_by = ROOT
+					}
+					estonia_ingria_area = {
+						type = all
+						owned_by = ROOT
+					}
+					livonia_area = {
+						type = all
+						owned_by = ROOT
+					}					
+				}
+			}
 		}
 	 	effect = {
 			change_tag = HNS
-
+			set_capital = 45 # Lubeck
+			HNS = {
+				45 = { 
+					add_base_tax = 2
+					add_base_production = 5
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			HNS = { set_government_rank = 1 }
+			add_government_reform = merchants_reform
+			set_legacy_government = merchant_republic
+			custom_tooltip = dec1_decisions_spacing	
+			HNS = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 30
+			add_stability = 1
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }

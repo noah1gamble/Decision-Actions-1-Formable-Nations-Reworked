@@ -5,9 +5,11 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no
-			NOT = { has_country_flag = formed_morocco_flag }
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
 			NOT = { 
+				has_country_flag = formed_morocco_flag
+				exists = MOR
 				tag = MOR
 				tag = TUN
 				tag = TLC
@@ -53,7 +55,6 @@ country_decisions = {
 				province_id = 344			
 				province_id = 348			
 				province_id = 346
-				#todo areas
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -66,7 +67,7 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
-			#todo areas
+			#todo areas (either both north morocco and south - or north/south - or just south
 			owns_core_province = 343 #Fez
 			owns_core_province = 344 #Marrekech
 			OR = {
@@ -87,6 +88,7 @@ country_decisions = {
 			}
 			custom_tooltip = dec1_decisions_spacing
 			MOR = { set_government_rank = 1 }
+			change_government = monarchy
 			add_government_reform = autocracy_reform
 			set_legacy_government = despotic_monarchy
 			custom_tooltip = dec1_decisions_spacing	

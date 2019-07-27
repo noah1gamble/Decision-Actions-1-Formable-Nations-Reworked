@@ -8,8 +8,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no	
-			NOT = { has_country_flag = formed_austro_hungarian_empire_flag }
 			NOT = { 
+				has_country_flag = formed_austro_hungarian_empire_flag
+				exists = AHE
 				tag = PAP 
 				tag = HLR
 				tag = TUR

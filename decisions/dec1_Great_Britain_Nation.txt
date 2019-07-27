@@ -159,7 +159,9 @@ country_decisions = {
 			}			
 			custom_tooltip = dec1_decisions_spacing
 			GBR = { set_government_rank = 2 }
+			change_government = monarchy
 			add_government_reform = english_monarchy
+			set_legacy_government = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing
 			GBR = {
 				add_country_modifier = { 
@@ -173,3 +175,5 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+
+}

@@ -6,8 +6,8 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
-			NOT = { has_country_flag = formed_spain_flag }
 			NOT = { 
+				has_country_flag = formed_spain_flag
 				exists = SPA
 				tag = SPA
 				tag = PAP

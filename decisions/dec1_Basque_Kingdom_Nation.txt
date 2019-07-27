@@ -5,9 +5,11 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { has_country_flag = formed_basque_kingdom_flag }
-			NOT = { 
+			NOT = {
+				has_country_flag = formed_basque_kingdom_flag
+				exists = BSQ
 				tag = PAP 
 				tag = BSQ
 				tag = HLR
@@ -15,14 +17,6 @@ country_decisions = {
 				tag = SPA
 				tag = EUR
 				tag = FIB 
-			}			
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
 			}		
 			OR = {
 				primary_culture = basque

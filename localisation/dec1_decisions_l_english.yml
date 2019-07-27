@@ -144,65 +144,8 @@
  baltic_union_nation_title: "Form Baltic Union"
  baltic_union_nation_desc: ""
  
- #TOOLTIPS
+ rename_ethiopia_nation_title: "Embrace Abyssinian Identity"
+ rename_ethiopia_nation_desc: ""
  
- dec1_decisions_spacing: "\n"
  
- dec1_formed_spain_add_claims: "§YSpain§! gains a permanent claim on §YIberia§! Region."
- 
- form_united_kingdom_tt_1: "Owns core region: §YEngland§!"
- form_united_kingdom_tt_2: "Owns core region: §YScotland§!"
- form_united_kingdom_tt_3: "Owns core region: §YScottish Isles§!"
- form_united_kingdom_tt_4: "Owns core region: §YIreland§!"
- 
- form_angevin_tt_1: "Owns core region: §YEngland§!"
- form_angevin_tt_2: "Owns core region: §YUpper France§!"
- form_angevin_tt_3: "Owns core region: §YLower France§!"
- form_angevin_tt_4: "Owns core region: §YBrittany
- 
- form_great-britain_tt_1: "Owns core region: §YEngland§!"
- 
- form_north_sea_empire_tt_1: "Owns core region: §YEngland§!"
- form_north_sea_empire_tt_2: "Owns core region: §YDenmark§!"
- form_north_sea_empire_tt_3: "Owns core region: §YNorway§!"
- 
- form_england_tt_1: "Owns core region: §YEngland§!"
- 
- form_adriatic_empire_tt_1: "Owns all core §YAdriatic§! provinces"
- 
- form_austrian_empire_tt_1: "Owns all core §YAustrian§! provinces"
- form_austrian_empire_tt_2: "Owns all core §YHungarian§! provinces"
- form_austrian_empire_tt_3: "Subject owns all core §YHungarian§! provinces"
- form_austrian_empire_tt_4: "   Owns all core §YHungarian§! provinces"
- 
- form_burma_tt_1: "Owns all core §YBurmese§! provinces"
- 
- form_baltic_union_tt_1: "Owns all core §YNorth Baltic§! provinces"
- form_baltic_union_tt_2: "Owns all core §YSouth Baltic§! provinces"
- 
- form_north_german_confederation_tt_1: "Owns all core §YNorth German Confederation§! provinces"
- 
- #MODIFIERS
- 
- dec1_increased_centralization: "Increased Centralization"
- dec1_increased_centralization_desc: "TODO"
- 
- dec1_formed_spain_golden_conquistador: "Golden Conquistador"
- dec1_formed_spain_golden_conquistador_desc: "TODO"
- 
- dec1_formed_spain_silver_tongued_lion: "Silver-Tongued Lion"
- dec1_formed_spain_silver_tongued_lion_desc: "TODO"
- 
- dec1_formed_united_kingdom_rule_britannia: "Rule Britannia"
- dec1_formed_united_kingdom_rule_britannia_desc: "TODO"
- 
- dec1_formed_angevin_glory_of_angevin: "Glory of Angevin"
- dec1_formed_angevin_glory_of_angevin_desc: "TODO"
- 
- dec1_formed_great_britain_ruler_of_the_waves: "Ruler of the Waves"
- dec1_formed_great_britain_ruler_of_the_waves_desc: "TODO"
- 
- dec1_formed_north_sea_empire_cnut_the_great_restoration: "Restoration of Cnut the Great's Empire"
- 
- dec1_formed_england_rebirth_of_england: "Rebirth of England"
  

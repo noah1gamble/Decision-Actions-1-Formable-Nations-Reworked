@@ -6,8 +6,8 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no	
-			NOT = { has_country_flag = formed_angevin_flag }
 			NOT = { 
+				has_country_flag = formed_angevin_flag
 				exists = NSE 
 				exists = ANG 
 				exists = GBR 
@@ -225,7 +225,9 @@ country_decisions = {
 			}			
 			custom_tooltip = dec1_decisions_spacing
 			ANG = { set_government_rank = 3 }
-			add_government_reform = autocracy_reform
+			change_government = monarchy
+			add_government_reform = english_monarchy
+			set_legacy_government = english_monarchy_legacy
 			custom_tooltip = dec1_decisions_spacing	
 			ANG = {
 				add_country_modifier = { 
@@ -237,5 +239,9 @@ country_decisions = {
 			add_stability = 1
 			add_inflation = 3
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400		
 	}
 }

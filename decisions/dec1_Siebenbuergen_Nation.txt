@@ -3,11 +3,15 @@ country_decisions = {
 	siebenbuergen_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
-			NOT = { tag = AHU }
-			NOT = { tag = TUR }
-			NOT = { tag = EUR }
-			NOT = { tag = EUR }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_colonial_nation = no		
+			NOT = { 
+				tag = PAP
+				tag = AHU
+				tag = TUR 
+				tag = EUR
+			}
 			OR = {
 				primary_culture = transylvanian
 				primary_culture = hungarian
@@ -19,6 +23,17 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4128 # Koenigsboden
+				province_id = 158 # Maros
+				province_id = 4127 # Turda				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = SBG }
@@ -31,7 +46,30 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = SBG
+			set_capital = 158 # Köln
+			SBG = {
+				158 = { 
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			SBG = { set_government_rank = 2 }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_spacing	
+			SBG = {
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
+			add_prestige = 25
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
 	}
 	
 }
