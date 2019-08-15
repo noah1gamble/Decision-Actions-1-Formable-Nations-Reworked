@@ -1,0 +1,12 @@
+primary_culture = polish
+add_accepted_culture = ruthenian
+add_accepted_culture = hungarian
+add_accepted_culture = bohemian
+
+religion = catholic
+technology_group = eastern
+
+historical_rival = RUS
+historical_rival = MOS
+
+capital = 257 # Warszawa

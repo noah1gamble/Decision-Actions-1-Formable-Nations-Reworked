@@ -1,0 +1,323 @@
+country_decisions = {
+
+	jagiellonian_empire_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
+			dynasty = "Jagiellon"
+			tag = POL
+			NOT = {
+				has_country_flag = formed_jagiellon_empire_flag
+				exists = JGE
+			}
+		}	
+		allow = {
+			adm_tech = 15
+			NOT = { exists = JGE }
+			is_subject = no
+			is_at_war = no
+			AND = {
+				OR = {
+					NOT = { exists = HUN }
+					HUN = {
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
+						}
+					}
+				}
+				OR = {
+					NOT = { exists = BOH }
+					BOH = {
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
+						}
+					}
+				}
+				OR = {
+					NOT = { exists = LIT }
+					LIT = {
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	 	effect = {
+			change_tag = JGE
+			set_country_flag = formed_jagiellon_empire_flag
+			if = {
+				limit = {
+					HUN = {
+						exists = yes
+						ai = yes
+					}
+				}
+				inherit = HUN
+			}
+			if = {
+				limit = {
+					BOH = {
+						exists = yes
+						ai = yes
+					}
+				}
+				inherit = BOH
+			}
+			if = {
+				limit = {
+					LIT = {
+						exists = yes
+						ai = yes
+					}
+				}
+				inherit = LIT
+			}
+			set_capital = 257 # Warszawa
+			JGE = {
+				257 = { 
+					add_base_tax = 25
+					add_base_production = 3
+					add_base_manpower = 15
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			poland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			ruthenia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			carpathia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			baltic_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			custom_tooltip = dec1_decisions_spacing
+			JGE = {		
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	
+	jagiellonian_empire_nation_as_lithuania = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
+			dynasty = "Jagiellon"
+			tag = LIT
+			NOT = {
+				has_country_flag = formed_jagiellon_empire_flag
+				exists = JGE
+			}
+		}	
+		allow = {
+			adm_tech = 15
+			NOT = { exists = JGE }
+			is_subject = no
+			is_at_war = no
+			AND = {
+				OR = {
+					NOT = { exists = HUN }
+					HUN = {
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
+						}
+					}
+				}
+				OR = {
+					NOT = { exists = BOH }
+					BOH = {
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
+						}
+					}
+				}
+				OR = {
+					NOT = { exists = POL }
+					POL = {
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
+						}
+					}
+				}
+			}
+		}
+	 	effect = {
+			change_tag = JGE
+			set_country_flag = formed_jagiellon_empire_flag
+			if = {
+				limit = {
+					HUN = {
+						exists = yes
+						ai = yes
+					}
+				}
+				inherit = HUN
+			}
+			if = {
+				limit = {
+					BOH = {
+						exists = yes
+						ai = yes
+					}
+				}
+				inherit = BOH
+			}
+			if = {
+				limit = {
+					POL = {
+						exists = yes
+						ai = yes
+					}
+				}
+				inherit = POL
+			}
+			set_capital = 257 # Warszawa
+			JGE = {
+				257 = { 
+					add_base_tax = 25
+					add_base_production = 3
+					add_base_manpower = 15
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			poland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			ruthenia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			carpathia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			baltic_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = JGE
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			custom_tooltip = dec1_decisions_spacing
+			JGE = {		
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
