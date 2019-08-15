@@ -183,7 +183,7 @@ country_decisions = {
 			add_government_reform = oligarchy_reform
 			set_legacy_government = oligarchic_republic
 			custom_tooltip = dec1_decisions_spacing	
-			SPA = {
+			TRR = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}			
