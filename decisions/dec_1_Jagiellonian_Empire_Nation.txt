@@ -8,7 +8,10 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no	
 			dynasty = "Jagiellon"
-			tag = POL
+			OR = {
+				tag = POL
+				tag = PLC
+			}
 			NOT = {
 				has_country_flag = formed_jagiellon_empire_flag
 				exists = JGE
