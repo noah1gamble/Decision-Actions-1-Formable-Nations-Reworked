@@ -3,9 +3,11 @@ country_decisions = {
 	belgium_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
 			OR = {
 				ai = no
 				AND = {
@@ -14,6 +16,7 @@ country_decisions = {
 				}
 			}
 			NOT = { 
+				has_country_flag = formed_belgium_nation_flag
 				exists = BEL
 				tag = PAP
 				tag = FIB
@@ -67,14 +70,26 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = BEL
-			set_capital = 92 # Brussels
+			set_country_flag = formed_belgium_nation_flag
+			if = {
+				limit = {
+					NOT = { primary_culture = belgian }
+				}
+				change_primary_culture = belgian
+			}			
 			BEL = {
+				add_prestige = 25
+				add_legitimacy = 20
+				add_stability = 1
+				add_inflation = 2			
+				set_capital = 92 # Brussels
 				92 = {
 					add_base_tax = 5
 					add_base_production = 5
 					add_base_manpower = 5
 				}
 			}
+			custom_tooltip = dec1_decisions_spacing
 			wallonia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -87,17 +102,66 @@ country_decisions = {
 				}
 				add_permanent_claim = BEL
 			}			
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			BEL = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
 			custom_tooltip = dec1_decisions_spacing
-			SPA = { set_government_rank = 2 }
-			add_government_reform = autocracy_reform
-			custom_tooltip = dec1_decisions_spacing
-			add_country_modifier = { 
-				name = dec1_increased_centralization
-			}	
-			add_prestige = 25
-			add_legitimacy = 20
-			add_stability = 1
-			add_inflation = 2
+			BEL = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = BEL_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
 		}
 		ai_will_do = {
 			factor = 1

@@ -6,8 +6,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no		
-			NOT = { has_country_flag = formed_celtic_union_flag }
 			NOT = { 
+				has_country_flag = formed_celtic_union_nation_flag
+				exists = CEU
 				tag = PAP 
 				tag = GBR
 				tag = UKI
@@ -22,7 +23,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 8
+					num_of_cities = 25
 				}
 			}		
 			OR = {
@@ -140,9 +141,10 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = CEU
-			set_country_flag = formed_celtic_union_flag
-			set_capital = 373
+			set_country_flag = formed_celtic_union_nation_flag
 			CEU = {
+				add_prestige = 25
+				set_capital = 373
 				217 = {
 					add_base_manpower = 6
 				}
@@ -154,16 +156,66 @@ country_decisions = {
 				add_permanent_claim = CEU
 			}
 			custom_tooltip = dec1_decisions_spacing
-			SPA = { set_government_rank = 1 }
-			add_government_reform = autocracy_reform
-			set_legacy_government = despotic_monarchy
-			custom_tooltip = dec1_decisions_spacing	
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
 			CEU = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			CEU = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CEU_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
+				}	
 			}		
-			add_prestige = 25
 		}
 		ai_will_do = {
 			factor = 1

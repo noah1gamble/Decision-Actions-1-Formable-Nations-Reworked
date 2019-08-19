@@ -3,11 +3,13 @@ country_decisions = {
 	rename_ethiopia_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no		
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
 			NOT = { 
-				has_country_flag = rename_ethiopia_flag
+				has_country_flag = rename_ethiopia_nation_flag
 				exists = ABY			
 				tag = PAP 
 				tag = ABY
@@ -22,7 +24,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 10
 				}
 			}
 		}
@@ -145,8 +147,9 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ABY
-			set_country_flag = rename_ethiopia_flag
+			set_country_flag = rename_ethiopia_nation_flag
 			ABY = {
+				add_prestige = 20
 				set_capital = 1224 # Gonder
 				1224 = { 
 					add_base_tax = 2
@@ -154,17 +157,66 @@ country_decisions = {
 					add_base_manpower = 2
 				}
 			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			ABY = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 }
+						}
+					set_government_rank = 3
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
 			custom_tooltip = dec1_decisions_spacing
-			ABY = { set_government_rank = 3 }
-			add_government_reform = autocracy_reform
-			set_legacy_government = despotic_monarchy
-			custom_tooltip = dec1_decisions_spacing	
 			ABY = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ABY_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
-			}		
-			add_prestige = 20
+				}	
+			}				
 		}
 		ai_will_do = {
 			factor = 1

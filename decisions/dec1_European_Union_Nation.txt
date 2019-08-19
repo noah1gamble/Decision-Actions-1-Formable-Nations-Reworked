@@ -3,12 +3,15 @@ country_decisions = {
 	europe_nation = {
 		major = yes
 		potential = {			
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no
 			technology_group = western
+			religion_group = christian
 			NOT = { 
-				has_country_flag = formed_europe_flag
+				has_country_flag = formed_europe_nation_flag
 				exists = EUR
 				tag = EUR
 				tag = PAP
@@ -106,8 +109,12 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = EUR
-			set_country_flag = formed_europe_flag
+			set_country_flag = formed_europe_nation_flag
 			EUR = {
+				add_prestige = 35
+				add_legitimacy = 30
+				add_stability = 2
+				add_inflation = 3				
 				set_capital = 92 # Brabant
 				92 = { 
 					add_base_tax = 5
@@ -115,20 +122,66 @@ country_decisions = {
 					add_base_manpower = 5
 				}
 			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			EUR = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 }
+						}
+					set_government_rank = 3
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
 			custom_tooltip = dec1_decisions_spacing
-			EUR = { set_government_rank = 3 }
-			add_government_reform = presidential_despot_reform
-			set_legacy_government = republican_dictatorship
-			custom_tooltip = dec1_decisions_spacing	
 			EUR = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = EUR_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
-			}		
-			add_prestige = 35
-			add_legitimacy = 30
-			add_stability = 2
-			add_inflation = 3
+				}	
+			}			
 		}
 		ai_will_do = {
 			factor = 1

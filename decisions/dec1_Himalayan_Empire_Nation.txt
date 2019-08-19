@@ -2,8 +2,16 @@ country_decisions = {
 
 	himalayan_empire_nation = {
 		major = yes
-		potential = {
+		potential = {	
+			was_never_end_game_tag_trigger = yes
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
 			NOT = { 
+				has_country_flag = formed_himalayan_empire_nation_flag
+				exists = HIM				
+				tag = HIM
 				tag = PAP
 				tag = HIN
 				tag = BHA
@@ -23,22 +31,114 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+					# Surrounding Himalayan Provinces
+				province_id = 2128
+				province_id = 2074
+				province_id = 509
+				province_id = 4493
+				province_id = 511
+				province_id = 2069
+				province_id = 4492
+				province_id = 554
+				province_id = 2070
+				province_id = 4516
+				province_id = 2128
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = HIM }
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 2128 # Ngari
-			owns_core_province = 557 # Katmandu
-			owns_core_province = 554 # Baisi Rajya
-			owns_core_province = 2071 # Limbuwan
-			owns_core_province = 565 # Bhutan
-			owns_core_province = 677 # Lhasa
-			owns_core_province = 508 # Kashmir
-			owns_core_province = 509 # Kangra
+				# Surrounding Himalayan Provinces
+			owns_core_province = 2128
+			owns_core_province = 2074
+			owns_core_province = 509
+			owns_core_province = 4493
+			owns_core_province = 511
+			owns_core_province = 2069
+			owns_core_province = 4492
+			owns_core_province = 554
+			owns_core_province = 2070
+			owns_core_province = 4516
+			owns_core_province = 2128
 		}
 	 	effect = {
-
+			change_tag = HIM
+			set_country_flag = formed_europe_nation_flag
+			HIM = {
+				add_prestige = 15			
+				set_capital = 2128 # Ngari
+				2128 = { 
+					add_base_tax = 3
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			HIM = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 }
+						}
+					set_government_rank = 3
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			HIM = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = HIM_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}
 		}
 	}
 

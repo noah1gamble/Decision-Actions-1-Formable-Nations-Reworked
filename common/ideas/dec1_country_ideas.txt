@@ -4,41 +4,41 @@
 
 ### Formable Nations specific idea groups
 
-CIS_ideas = {	
+CIS_ideas = {
+
 	trigger = {
 		tag = CIS
 	}
 	free = yes	#will be added at load.
 
 	start = {
-		infantry_power = 0.10 # agincourt
-		global_unrest = -1 # magna carta, parliament
+		# TODO 1
+		# TODO 2
 	}
 	bonus = {
-		free_leader_pool = 1
+		# TODO BONUS
 	}
 	
-	royal_navy = {
-			navy_tradition = 0.25
-			heavy_ship_power = 0.10
+	todo_1 = {
+		# TODO
 	}
-	eltham_ordinance = {
-			production_efficiency = 0.1
+	todo_2 = {
+		# TODO
 	}
-	secretaries_of_state = {
-		diplomatic_upkeep = 1
+	todo_3 = {
+		# TODO
 	}
-	navigation_acts = {
-		trade_efficiency = 0.1
+	todo_4 = {
+		# TODO
 	}
-	eng_red_coats = {
-		fire_damage = 0.1
+	todo_5 = {
+		# TODO
 	}
-	sick_and_hurt_board = {
-		sailors_recovery_speed = 0.10
-		sailor_maintenance_modifer = -0.1
+	todo_6 = {
+		# TODO
 	}
-	british_bill_of_rights = {
-		years_of_nationalism = -5
+	todo_7 = {
+		# TODO
 	}
 }
+

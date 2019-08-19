@@ -3,24 +3,17 @@ country_decisions = {
 	italian_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no	
-			was_never_end_game_tag_trigger = yes
 			culture_group = latin
 			NOT = { 
 				has_country_flag = formed_italy_flag
 				exists = ITA
 				tag = PAP
 				tag = HLR
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 15
-				}
 			}
 		}
 		provinces_to_highlight = {
