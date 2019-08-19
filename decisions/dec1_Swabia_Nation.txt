@@ -6,31 +6,41 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no				
+			is_colonial_nation = no	
+			primary_culture = swabian
 			NOT = { 
+				has_country_flag = formed_swabia_flag
+				exists = SWB
 				tag = PAP 
 				tag = SWB
 				tag = HLR
 				tag = SWI
 				tag = EUR
 			}
-			OR = {
-				primary_culture = swabian
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 70 # Württemberg
+				province_id = 1868 # Augsburg
+				province_id = 1872 # Ulm
+				province_id = 74 # Baden
+				province_id = 69 # Oberschwaben
+				province_id = 75 # Elsass
+				province_id = 72 # Breisgau
+				province_id = 68 # Memmingen
+				province_id = 1870 # St Gallen
+				province_id = 1869 # Zürich
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 5
 			NOT = { exists = SWB }
 			is_subject = no
-			is_at_war = no
-			
+			is_at_war = no		
 			owns_core_province = 70 # Württemberg
 			owns_core_province = 1868 # Augsburg
 			owns_core_province = 1872 # Ulm
@@ -44,7 +54,86 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = SWB
+			set_country_flag = formed_swabia_flag
+			if = {
+				limit = {
+					NOT = { primary_culture = swabian }
+				}
+				change_primary_culture = swabian
+			}
+			SWB = {				
+				add_prestige = 30
+				set_capital = 1868 # Augsburg
+				1868 = {
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			SWB = { 
+				if = { 
+					limit = { 
+						NOT = { government_rank = 1 }
+					}
+					set_government_rank = 1
+				}
+				change_government = monarchy
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			SWB = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = SWB_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}			
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
 	}
 
 }

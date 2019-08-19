@@ -3,23 +3,25 @@ country_decisions = {
 	german_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_germany_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = { 
+				has_country_flag = formed_germany_nation_flag
+				exists = GER 
+				tag = GER
+				tag = PAP
+				tag = HLR
+				tag = ROM
 			}
-			NOT = { exists = GER }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 15
-					adm_tech = 20
+					adm_tech = 15
 				}
 			}
 			OR = {
@@ -39,37 +41,24 @@ country_decisions = {
 				primary_culture = swabian
 				primary_culture = franconian
 			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 44	# Hamburg
-				province_id = 46	# Rostock
+					# Germany
+				region = north_german_region	
+				region = south_german_region				
 				province_id = 50	# Berlin
-				province_id = 57	# Brunswick
-				province_id = 61	# Dresden
-				province_id = 63	# Thüringen
-				province_id = 65	# München
-				province_id = 67	# Nürnberg
-				province_id = 81	# Hessen
-				province_id = 85	# Köln
-				province_id = 1761 # Worms
-				province_id = 1868 # Augsburg
-				province_id = 1876 # Frankfurt
 				AND = {
                     province_id = 41
-                    ROOT = { NOT = { owns_core_province = 75 } }
+                    ROOT = { 
+						NOT = { owns_core_province = 75 } 
+					}
                 }
                 AND = {
                     province_id = 75
-                    ROOT = { NOT = { owns_core_province = 41 } }
+                    ROOT = { 
+						NOT = { owns_core_province = 41 } 
+					}
                 }
 			}
 			OR = {
@@ -83,19 +72,15 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			is_emperor = no
-			owns_core_province = 44	# Hamburg
-			owns_core_province = 46	# Rostock
-			owns_core_province = 50	# Berlin
-			owns_core_province = 57	# Brunswick
-			owns_core_province = 61	# Dresden
-			owns_core_province = 63	# Thüringen
-			owns_core_province = 65	# München
-			owns_core_province = 67	# Nürnberg
-			owns_core_province = 81	# Hessen
-			owns_core_province = 85	# Köln
-			owns_core_province = 1761 # Worms
-			owns_core_province = 1868 # Augsburg
-			owns_core_province = 1876 # Frankfurt
+			north_german_region = {
+				type = all
+				owned_by = ROOT
+			}	
+			south_german_region = {
+				type = all
+				owned_by = ROOT
+			}					
+			owns_core_province = 50 # Berlin			
 			OR = {
 				owns_core_province = 41	# Königsberg
 				owns_core_province = 75	# Strassburg
@@ -103,38 +88,79 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GER
-			emperor = {
-				add_opinion = {
-					who = root
-					modifier = opinion_left_empire
+			set_country_flag = formed_germany_nation_flag
+			GER = {
+				add_prestige = 20				
+				set_capital = 50 # Berlin
+				50 = { 
+					add_base_tax = 3
+					add_base_production = 1
+					add_base_manpower = 6
 				}
 			}
-			set_in_empire = no
-			emperor = {
-				country_event = { id = hre_event.5 }
-			}
-			set_government_rank = 3
-			north_german_region = {
+			if = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					is_part_of_hre = yes
 				}
-				add_permanent_claim = GER
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
 			}
-			south_german_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
 				}
-				add_permanent_claim = GER
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			GER = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			GER = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = GER_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
 			}			
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			set_country_flag = formed_germany_flag
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 400
 		}
 	}
 

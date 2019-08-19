@@ -3,20 +3,14 @@ country_decisions = {
 	english_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_england_flag }
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no
 			primary_culture = english
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
-			}			
 			NOT = { 
+				has_country_flag = formed_england_nation_flag
 				exists = ENG
 				exists = NSE 
 				exists = ANG 
@@ -30,6 +24,13 @@ country_decisions = {
 				tag = HLR
 				tag = ANG
 				tag = EUR
+			}			
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -108,9 +109,10 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ENG	
-			set_country_flag = formed_england_flag				
+			set_country_flag = formed_england_nation_flag				
 			set_capital = 236 # London
-			GBR = {
+			ENG = {
+				add_prestige = 50
 				236 = { 
 					add_base_tax = 5
 					add_base_production = 5
@@ -123,16 +125,66 @@ country_decisions = {
 				}
 				add_permanent_claim = ENG
 			}			
-			custom_tooltip = dec1_decisions_spacing
-			ENG = { set_government_rank = 2 }
-			add_government_reform = english_monarchy
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			ENG = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
 			custom_tooltip = dec1_decisions_spacing
 			ENG = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ENG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}	
-			}
-			add_prestige = 50			
+			}			
 		}
 		ai_will_do = {
 			factor = 1

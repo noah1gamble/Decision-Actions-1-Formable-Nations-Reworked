@@ -3,24 +3,24 @@ country_decisions = {
 	turkish_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_rum_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { tag = TUR }
-			NOT = { exists = RUM }
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			NOT = { tag = BYZ }
-			NOT = { tag = RUS }
-			NOT = { tag = PRU }
-			NOT = { tag = ENG }
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no		
 			is_emperor_of_china = no
 			primary_culture = turkish
-			is_colonial_nation = no
+			NOT = { 
+				
+				exists = RUM
+				tag = RUM
+				tag = PAP
+				tag = HLR
+				tag = BYZ
+				tag = RUS
+				tag = PRU
+				tag = ENG
+			}
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -47,12 +47,14 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			is_subject = no #Cannot even be a tributary
+			is_subject = no 
 			is_nomad = no
 			religion_group = muslim
-			NOT = { exists = RUM }
-			NOT = { exists = TUR }
-			NOT = { exists = BYZ }
+			NOT = { 
+				exists = RUM 
+				exists = TUR
+				exists = BYZ
+			}
 			owns_core_province = 151		# Constantinople
 			owns_core_province = 316		# Iznik
 			owns_core_province = 323		# Konya

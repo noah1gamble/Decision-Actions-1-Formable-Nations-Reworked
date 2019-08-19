@@ -3,10 +3,22 @@ country_decisions = {
 	baltic_union_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_baltic_union_flag }
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
-			is_colonial_nation = no	
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = { 
+				has_country_flag = formed_baltic_union_nation_flag 
+				exists = BTC
+				tag = PAP
+				tag = HLR
+				tag = PRU
+				tag = TEU
+				tag = BTC
+				tag = LIT
+				tag = EUR			
+			}	
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -15,15 +27,6 @@ country_decisions = {
 					num_of_cities = 8
 				}
 			}				
-			NOT = { 
-				tag = PAP
-				tag = HLR
-				tag = PRU
-				tag = TEU
-				tag = BTC
-				tag = LIT
-				tag = EUR
-			}
 			OR = {
 				primary_culture = lithuanian
 				primary_culture = latvian
@@ -107,30 +110,83 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = BTC
-			set_country_flag = formed_baltic_union_flag
+			set_country_flag = formed_baltic_union_nation_flag
+			BTC = { 
+				add_accepted_culture = estonian
+				add_accepted_culture = lithuanian
+				add_accepted_culture = latvian
+			}	
+			BTC = {				
+				add_prestige = 10
+				#possible random owned capital? highest dev one? something
+			}
+			custom_tooltip = dec1_decisions_spacing	
 			baltic_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = BTC
 			}
-			custom_tooltip = dec1_decisions_spacing
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}			
 			BTC = { 
-				add_accepted_culture = estonian
-				add_accepted_culture = lithuanian
-				add_accepted_culture = latvian
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
-			BTC = { set_government_rank = 2 }
-			add_government_reform = oligarchy_reform
-			set_legacy_government = oligarchic_republic
-			custom_tooltip = dec1_decisions_spacing	
 			BTC = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = BTC_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
-			}		
-			add_prestige = 30
+				}	
+			}
 		}
 		ai_will_do = {
 			factor = 1

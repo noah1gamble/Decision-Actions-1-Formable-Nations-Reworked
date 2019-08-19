@@ -5,9 +5,11 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no	
-			NOT = { has_country_flag = formed_europe_flag }
 			NOT = { 
+				has_country_flag = formed_algiers_nation_flag
+				exists = ALG
 				tag = MOR 
 				tag = TUN
 				tag = TLC
@@ -15,14 +17,6 @@ country_decisions = {
 				tag = PAP
 				tag = HLR
 				tag = MGH
-			}
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
 			}			
 			OR = {
 				primary_culture = algerian
@@ -42,6 +36,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
+					# Algiers
 				province_id = 338
 				province_id = 2461
 				province_id = 337
@@ -62,7 +57,7 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
-			OR = {
+			OR = { # North or South Algierian Culture Provinces
 				AND = { 
 					owns_core_province = 338
 					owns_core_province = 2461
@@ -79,17 +74,23 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ALG
-			set_country_flag = formed_algeria_nation
+			set_country_flag = formed_algiers_nation_flag
+			if = {
+				limit = {
+					NOT = { primary_culture = algerian }
+				}
+				change_primary_culture = algerian
+			}			
 			ALG = {
-				set_capital = 338 
+				add_prestige = 25
+				add_stability = 1
+				set_capital = 338 # Mitidja
 				338 = { 
 					add_base_tax = 2
-					add_base_production = 2
+					add_base_production = 3
 					add_base_manpower = 2
 				}
 			}
-			custom_tooltip = dec1_decisions_spacing	
-			change_primary_culture = algerian
 			custom_tooltip = dec1_decisions_spacing
 			algiers_area = {
 				limit = {
@@ -108,49 +109,73 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ALG
-			}			
-			custom_tooltip = dec1_decisions_spacing
-			ALG = { 
-				if = {
-					limit = {
-						NOT = { government_rank = 2 }
-					}
-					set_government_rank = 2
-				}
 			}
-			add_government_reform = autocracy_reform
-			set_legacy_government = despotic_monarchy
-			if = {
-				limit = {
-					is_tribal = yes
-				}
-				change_government = despotic_monarchy
-			}			
-			custom_tooltip = dec1_decisions_spacing	
-			ALG = {
-				add_country_modifier = { 
-					name = dec1_increased_centralization
-				}			
-			}
-			custom_tooltip = dec1_decisions_spacing	
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			custom_tooltip = dec1_decisions_spacing				
-			add_prestige = 20
 			if = {
 				limit = {
 					is_part_of_hre = yes
-					is_elector = no
 				}
-				every_owned_province = {
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
 					limit = {
 						is_part_of_hre = yes
+						is_elector = no
 					}
-					set_in_empire = no
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
 				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			ALG = {
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+					}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+				if = {
+					limit = {
+						is_tribal = yes
+					}
+					change_government = despotic_monarchy
+				}				
 			}			
+			custom_tooltip = dec1_decisions_spacing	
+			ALG = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ALG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}			
+			}		
 		}
 		ai_will_do = {
 			factor = 1

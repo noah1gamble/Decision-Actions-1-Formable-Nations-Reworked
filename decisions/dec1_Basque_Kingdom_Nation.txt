@@ -3,12 +3,13 @@ country_decisions = {
 	basque_country_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no
+			is_colonial_nation = no	
 			NOT = {
-				has_country_flag = formed_basque_kingdom_flag
+				has_country_flag = formed_basque_country_nation_flag
 				exists = BSQ
 				tag = PAP 
 				tag = BSQ
@@ -44,8 +45,11 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = BSQ
-			set_country_flag = formed_basque_kingdom_flag
+			set_country_flag = formed_basque_country_nation_flag
 			BSQ = {
+			add_prestige = 15
+			add_legitimacy = 10
+			add_stability = 2			
 				set_capital = 209 # Vizcaya
 				217 = { 
 					add_base_tax = 5
@@ -53,6 +57,7 @@ country_decisions = {
 					add_base_manpower = 5
 				}
 			}
+			custom_tooltip = dec1_decisions_spacing
 			vasconia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -65,19 +70,66 @@ country_decisions = {
 				}
 				add_permanent_claim = BSQ
 			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			BSQ = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+				set_legacy_government = despotic_monarchy
+			}
 			custom_tooltip = dec1_decisions_spacing
-			BSQ = { set_government_rank = 2 }
-			add_government_reform = autocracy_reform
-			set_legacy_government = despotic_monarchy
-			custom_tooltip = dec1_decisions_spacing	
 			BSQ = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = BSQ_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
+				}	
 			}		
-			add_prestige = 15
-			add_legitimacy = 10
-			add_stability = 2
 		}
 		ai_will_do = {
 			factor = 1

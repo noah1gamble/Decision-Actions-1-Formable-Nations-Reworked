@@ -3,11 +3,13 @@ country_decisions = {
 	netherlands_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no	
 			NOT = {
-				has_country_flag = formed_netherlands_flag
+				has_country_flag = formed_netherlands_nation_flag
 				exists = NED
 				tag = PAP
 				tag = NED
@@ -66,6 +68,89 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = NED
+			set_country_flag = formed_netherlands_nation_flag
+			if = {
+				limit = {
+					NOT = { primary_culture = dutch }
+				}
+				change_primary_culture = dutch
+			}
+			NED = {				
+				add_prestige = 10
+				set_capital = 97 # Amsterdam
+				97 = {
+					add_base_tax = 6
+					add_base_production = 5
+					add_base_manpower = 2
+				}
+			}
+			custom_tooltip = dec1_decisions_spacing
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = NED
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_decisions_spacing
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}			
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}	
+				}
+				custom_tooltip = dec1_decisions_spacing
+			}
+			NED = { 
+				change_government = republic
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 }
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = dutch_republic
+				set_legacy_government = dutch_republic_legacy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			NED = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = NED_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}			
 		}
 		ai_will_do = {
 			factor = 1

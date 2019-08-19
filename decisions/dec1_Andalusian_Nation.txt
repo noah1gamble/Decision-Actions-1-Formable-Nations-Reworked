@@ -3,13 +3,14 @@ country_decisions = {
 	andalusian_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no
+			is_colonial_nation = no	
 			religion_group = muslim
 			NOT = { 
-				has_country_flag = formed_andalusian_nation
+				has_country_flag = formed_andalusian_nation_flag
 				exists = ADU
 				tag = PAP
 				tag = HLR
@@ -79,7 +80,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ADU
-			set_country_flag = formed_andalusian_nation
+			set_country_flag = formed_andalusian_nation_flag
 			if = {
 				limit = {
 					NOT = { primary_culture = andalucian }
