@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = autocracy_reform
+technology_group = eastern
+religion = sunni
+primary_culture = crimean
+capital = 284	# Crimea
+religious_school = hanafi_school
