@@ -5,18 +5,17 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { has_country_flag = formed_united_kingdom_flag }
+			NOT = { has_country_flag = formed_united_kingdom_nation_flag }
 			NOT = { 
 				exists = NSE 
-				exists = ANG 
 				exists = GBR 
 				exists = UKI 
 				tag = UKI
 				tag = GBR
 				tag = PAP
 				tag = HLR
-				tag = ANG
 				tag = EUR
 			}			
 			OR = {
