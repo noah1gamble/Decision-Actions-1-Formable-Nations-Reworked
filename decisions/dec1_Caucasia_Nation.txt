@@ -11,8 +11,9 @@ country_decisions = {
 			NOT = { 
 				has_country_flag = formed_caucasia_nation_flag
 				exists = CAU
-				tag = PAP
 				tag = CAU
+				tag = PAP
+				tag = GEO
 				tag = EUR
 			}
 			OR = {

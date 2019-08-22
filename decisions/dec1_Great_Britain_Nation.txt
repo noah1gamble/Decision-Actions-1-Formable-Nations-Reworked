@@ -1,12 +1,22 @@
 country_decisions = {
 
-	great-britain_nation = {
+	great_britain_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_great_britain_flag }
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_colonial_nation = no
+			NOT = { 
+				has_country_flag = formed_great_britain_nation_flag
+				exists = NSE
+				exists = GBR 
+				exists = UKI
+				tag = GBR
+				tag = UKI
+				tag = PAP
+				tag = HLR
+				tag = EUR
+			}			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -15,18 +25,6 @@ country_decisions = {
 					num_of_cities = 10
 				}
 			}			
-			NOT = { 
-				exists = NSE 
-				exists = ANG 
-				exists = GBR 
-				exists = UKI
-				tag = GBR
-				tag = UKI
-				tag = PAP
-				tag = HLR
-				tag = ANG
-				tag = EUR
-			}
 			OR = {
 				culture_group = british
 				primary_culture = welsh

@@ -494,5 +494,10 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 275
-	}	
+	}
+
+	############################################
+	# Spanish Nation Diplomatically - Aragon #
+	############################################
+	
 }
