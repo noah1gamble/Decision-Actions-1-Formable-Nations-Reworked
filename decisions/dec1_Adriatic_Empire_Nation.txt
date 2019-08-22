@@ -114,7 +114,7 @@ country_decisions = {
 				add_prestige = 20
 				set_capital = 112 # Venezia
 				112 = { 
-					add_base_tax = 12
+					add_base_tax = 8
 					add_base_production = 4
 				}
 			}
@@ -130,13 +130,28 @@ country_decisions = {
 				}
 				add_permanent_claim = ADR
 			}		
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			ADR = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -152,29 +167,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			ADR = { 
-				change_government = republic
+			ADR = {
 				if = { 
 					limit = { 
-						NOT = { government_rank = 3 }
-					}
+						NOT = { 
+							government = republic
+							}	
+						}
+					change_government = republic
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = merchant_republic
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 
+							}
+						}
 					set_government_rank = 3
 				}				
 				add_government_reform = merchants_reform
-				set_legacy_government = merchant_republic
 			}
 			custom_tooltip = dec1_decisions_spacing
 			ADR = {
