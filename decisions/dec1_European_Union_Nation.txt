@@ -2,8 +2,7 @@ country_decisions = {
 
 	europe_nation = {
 		major = yes
-		potential = {			
-			was_never_end_game_tag_trigger = yes
+		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no

@@ -3,7 +3,6 @@ country_decisions = {
 	adriatic_empire_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no			
