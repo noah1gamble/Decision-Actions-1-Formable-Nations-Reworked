@@ -3,10 +3,11 @@ country_decisions = {
 	swabia_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
 			primary_culture = swabian
 			NOT = { 
 				has_country_flag = formed_swabia_flag
@@ -55,12 +56,6 @@ country_decisions = {
 	 	effect = {
 			change_tag = SWB
 			set_country_flag = formed_swabia_flag
-			if = {
-				limit = {
-					NOT = { primary_culture = swabian }
-				}
-				change_primary_culture = swabian
-			}
 			SWB = {				
 				add_prestige = 30
 				set_capital = 1868 # Augsburg
@@ -72,11 +67,32 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					is_part_of_hre = yes
+					NOT = { primary_culture = swabian }
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				change_primary_culture = swabian
+			}			
+			custom_tooltip = dec1_decisions_blank
+			SWB = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -92,29 +108,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			SWB = { 
+			SWB = {
 				if = { 
 					limit = { 
-						NOT = { government_rank = 1 }
-					}
+						NOT = { 
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 1 
+							}
+						}
 					set_government_rank = 1
-				}
-				change_government = monarchy
+				}				
 				add_government_reform = autocracy_reform
-				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			SWB = {

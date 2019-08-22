@@ -1,16 +1,22 @@
 country_decisions = {
+
+	#############################
+	# Tunisian Nation - General #
+	#############################
 	
 	tunisian_nation = {
 		major = yes
 		potential = {
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
+				has_country_flag = formed_tunisian_nation_flag
 				exists = TUN
-				tag = MOR
 				tag = TUN
+				tag = MOR
 				tag = TLC
 				tag = ALG
 				tag = PAP
@@ -41,42 +47,143 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+					# Emilia-Romagna
+				province_id = 114
+				province_id = 113
+				province_id = 106
+				province_id = 105
+					# Venitia
+				province_id = 108
+					# Lombardy
+				province_id = 109
+				province_id = 107
+				province_id = 104
+				province_id = 1862
+					# Piedmont
+				province_id = 2979
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
+			adm_tech = 5
 			NOT = { exists = TUN }
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
-			
-			owns_core_province = 341 #Tunis
-			owns_core_province = 2473 #Souss
-			OR = {
-				owns_core_province = 2454 #Kef
-				owns_core_province = 354 #Tripoli
-			}
+			area = tunisia_area
 		}
 		effect = {
 			change_tag = TUN
-			set_country_flag = formed_morocco_flag
-			set_capital = 344
+			set_country_flag = formed_tunisian_nation_flag
 			TUN = {
+				add_prestige = 20
+				set_capital = 344
 				344 = {
 					add_base_tax = 3
 					add_base_production = 3
 					add_base_manpower = 1
 				}
 			}
+			djerba_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TUN
+			}
+			djerba_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TUN
+			}			
+			kabylia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TUN
+			}				
+			custom_tooltip = dec1_decisions_blank
+			TUN = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			TUN = {
+				if = { 
+					limit = { 
+						NOT = { 
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+			}
 			custom_tooltip = dec1_decisions_spacing
-			TUN = { set_government_rank = 2 }
-			change_government = monarchy
-			add_government_reform = autocracy_reform
-			set_legacy_government = despotic_monarchy
-			custom_tooltip = dec1_decisions_spacing	
-			TUN = { 
+			TUN = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = TUN_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
-			}		
-			add_prestige = 25
+				}	
+			}
 		}
 		ai_will_do = {
 			factor = 1

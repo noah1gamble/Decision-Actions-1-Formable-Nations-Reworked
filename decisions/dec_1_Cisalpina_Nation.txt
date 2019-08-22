@@ -1,5 +1,9 @@
 country_decisions = {
 
+	############################################
+	# Cisalpina Nation - North Italian Culture #
+	############################################
+
 	cisalpina_nation = {
 		major = yes
 		potential = {
@@ -11,12 +15,12 @@ country_decisions = {
 			NOT = { 
 				has_country_flag = formed_cisalpina_nation_flag
 				exists = CIS
+				tag = CIS
 				tag = PAP
 				tag = ITA
 				tag = ITE
 				tag = ROE
 				tag = ALP
-				tag = CIS
 				tag = EUR
 				tag = ADR
 			}
@@ -89,12 +93,6 @@ country_decisions = {
 	 	effect = {
 			change_tag = CIS
 			set_country_flag = formed_cisalpina_nation_flag
-			if = {
-				limit = {
-					NOT = { primary_culture = lombard }
-				}
-				change_primary_culture = lombard
-			}
 			CIS = {				
 				add_prestige = 30
 				set_capital = 104 # Milan
@@ -104,6 +102,12 @@ country_decisions = {
 					add_base_manpower = 5
 				}
 			}
+			if = {
+				limit = {
+					NOT = { primary_culture = lombard }
+				}
+				change_primary_culture = lombard
+			}			
 			piedmont_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -116,13 +120,28 @@ country_decisions = {
 				}
 				add_permanent_claim = CIS
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			CIS = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -138,30 +157,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			CIS = { 
-				change_government = monarchy
+			CIS = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = autocracy_reform
-				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			CIS = {
@@ -176,12 +197,17 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}	
 			}
-			custom_tooltip = dec1_cisalpina_cannot_form_italy
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 300
 	}
+	
+	##############################
+	# Cisalpina Nation - General #
+	##############################	
+	
+	#custom_tooltip = dec1_cisalpina_cannot_form_italy
 	
 }

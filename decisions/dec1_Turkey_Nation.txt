@@ -3,16 +3,18 @@ country_decisions = {
 	turkey_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_turkey_nation_flag }
+			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no
 			religion = muslim
-			NOT = { 
-				tag = PAP
-				tag = TUR
-				tag = HLR
+			NOT = {
+				has_country_flag = formed_turkey_nation_flag
 				tag = TRR
+				tag = TUR
+				tag = PAP
+				tag = HLR
 				tag = EUR
 				tag = PON
 			}			
@@ -104,7 +106,6 @@ country_decisions = {
 			NOT = { exists = TRR }
 			is_subject = no
 			is_at_war = no
-			# localized trigger
 				# Thrace
 			owns_core_province = 151
 			owns_core_province = 1764
@@ -176,21 +177,35 @@ country_decisions = {
 			TRR = {
 				add_prestige = 20
 				add_inflation = 5				
-				set_capital = 
-				0 = { 
+				set_capital = 151 # Constantinple
+				151 = { 
 					add_base_tax = 2
 					add_base_production = 2
 					add_base_manpower = 4
 				}
 			}
-			custom_tooltip = dec1_decisions_spacing		
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			TRR = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -206,30 +221,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			TRR = { 
-				change_government = monarchy
+			TRR = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = autocracy_reform
-				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			TRR = {

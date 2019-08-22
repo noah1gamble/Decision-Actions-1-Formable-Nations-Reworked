@@ -9,19 +9,4 @@ religion = catholic
 capital = 236 # London
 national_focus = DIP
 
-#1422.8.31 = { #Succession
-
-1429.11.6 = { #Coronation
-	monarch = {
-		name = "Henry VI"
-		dynasty = "Lancaster"
-		birth_date = 1421.12.6
-		adm = 0
-		dip = 0
-		mil = 0
-	}
-	clear_scripted_personalities = yes
-	add_ruler_personality = infertile_personality
-}
-
-
+# TODO: Historical information

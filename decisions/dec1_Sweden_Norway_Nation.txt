@@ -1,62 +1,66 @@
 country_decisions = {
-	
-	tripoli_nation = {
+
+	#########################
+	# Sweden-Norway General #
+	#########################
+
+	sweden_norway_nation = {
 		major = yes
 		potential = {
 			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no
+			is_colonial_nation = no			
 			NOT = { 
-				has_country_flag = formed_tripoli_nation_flag
-				exists = TRP
-				tag = TRP	
-				tag = MOR 
-				tag = TUN
-				tag = TLC
-				tag = ALG
+				has_country_flag = formed_sweden_norway_nation_flag
+				exists SNO
+				tag = SNO
 				tag = PAP
-				tag = HLR
-				tag = MGH
+				tag = SCA
+				tag = NSE
+				tag = EUR
+				tag = GBR
 			}
 			OR = {
-				primary_culture = tunisian
-				primary_culture = berber
-			}
-			capital_scope = {
-				OR = {
-					area = tripolitania_area
-					area = fezzan_area
+				primary_culture = swedish
+				primary_culture = norwegian
+				}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
 				}
 			}
 		}
 		allow = {
-			NOT = { exists = TRP }
-			is_at_war = no
+			adm_tech = 5
+			NOT = { exists = SNO }
 			is_subject = no
-			is_nomad = no
-			owns_core_province = 354 #Tripoli
-			owns_core_province = 2451 #Thubaqt
-			OR = {
-				owns_core_province = 355 #Sirt
-				owns_core_province = 353 #Djerba
-			}
+			is_at_war = no
+			owns_core_province = 1 # Stockholm
+			owns_core_province = 2 # Östergötland
+			owns_core_province = 3 # Småland
+			owns_core_province = 5 # Värmland
+			owns_core_province = 17 # Akershus
+			owns_core_province = 18 # Lappland
+			owns_core_province = 23 # Bergenshus
 		}
-		effect = {
-			change_tag = TRP
-			set_country_flag = formed_tripoli_nation_flag
-			TRP = {				
-				add_prestige = 25
-				set_capital = 354 # Tripoli
-				354 = {
-					add_base_tax = 4
-					add_base_production = 1
-					add_base_manpower = 5
+	 	effect = {
+			change_tag = SNO
+			set_country_flag = formed_sweden_norway_nation_flag
+			SNO = {				
+				add_prestige = 15
+				set_capital = 16 # Bahusalen
+				16 = {
+					add_base_tax = 7
+					add_base_production = 7
+					add_base_manpower = 3
 				}
-			}
+			}			
 			custom_tooltip = dec1_decisions_blank
-			TRP = {		
+			SNO = {		
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -92,7 +96,7 @@ country_decisions = {
 					}
 				}
 			}
-			TRP = {
+			SNO = {
 				if = { 
 					limit = { 
 						NOT = { 
@@ -120,11 +124,11 @@ country_decisions = {
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
-			TRP = {
+			SNO = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = TRP_ideas }
+						NOT = { has_idea_group = SNO_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}			
@@ -136,8 +140,20 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		#ai_importance = 400
+		ai_importance = 400			
+		}
 	}
 	
+	#########################################
+	# Sweden-Norway Sweden Unique Formation #
+	#########################################
 	
+	#########################################
+	# Sweden-Norway Norway Unique Formation #
+	#########################################
+
+	##########################################
+	# Sweden-Norway Denmark Unique Formation #
+	##########################################	
+
 }

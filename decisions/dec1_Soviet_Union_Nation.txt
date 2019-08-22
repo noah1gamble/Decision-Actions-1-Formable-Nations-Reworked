@@ -3,51 +3,192 @@ country_decisions = {
 	soviet_union_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = SOV }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = SOV }
-			NOT = { tag = EUR }
+			was_never_end_game_tag_trigger = yes
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
 			primary_culture = russian
+			NOT = { 
+				has_country_flag = formed_soviet_union_nation_flag
+				exists = SOV
+				tag = SOV
+				tag = PAP
+				tag = HLR
+				tag = SOV
+				tag = EUR
+			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
-				}
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					num_of_cities = 10
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				region = russia_region
+					# Russia
+				province_id = 295	# Moskva
+				province_id = 310	# Novgorod
+				region = ural_region
+				region = west_siberia_region
+				region = east_siberia_region
+				region = ruthenia_region
+					# Ruthenia
+				province_id = 280	# Kiev
+				province_id = 293	# Smolensk
+				province_id = 276	# Minsk
+				province_id = 284	# Crimea
+				area = east_heilongjiang_area
+				area = ilan_hala_area	
+					# South Ilan Area
+				province_id = 4215
+				province_id = 2105
+				province_id = 729
+				province_id = 4217
+					# Ningguta
+				province_id = 2186
+				province_id = 2106
+				province_id = 4226				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				# Subject one ?
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
-			adm_tech = 30
+			adm_tech = 15
+			NOT = { exists = SOV }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = SOV }
-			owns_core_province = 295			# Moskva
-			owns_core_province = 310			# Novgorod
-			owns_core_province = 280			# Kiev
-			owns_core_province = 284			# Crimea
-			owns_core_province = 276			# Minsk
-			owns_core_province = 423			# Kartli
-			owns_core_province = 456			# Turkestan
-			owns_core_province = 441			# Khiva
-			owns_core_province = 1074			# Sibir
-			owns_core_province = 294			# Tver
-			owns_core_province = 308			# Yaroslavl	
-			owns_core_province = 301			# Ryazan
-			owns_core_province = 293			# Smolensk
-			owns_core_province = 306			# Nijni-Novgorod
-			owns_core_province = 307			# Vladimir	
+			russia_region = {
+				type = all
+				owned_by = ROOT
+			}	
+				# Russia
+			owns_core_province = 295	# Moskva
+			owns_core_province = 310	# Novgorod				
+			ural_region = {
+				type = all
+				owned_by = ROOT
+			}	
+			west_siberia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			east_siberia_region = {
+				type = all
+				owned_by = ROOT
+			}				
+				# Ruthenia
+			ruthenia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			# subject owning of ruthenia_region ???
+			owns_or_subject_of = 280	# Kiev
+			owns_or_subject_of = 293	# Smolensk
+			owns_or_subject_of = 276	# Minsk
+			owns_or_subject_of = 284	# Crimea				
+			east_heilongjiang_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ilan_hala_area = {
+				type = all
+				owned_by = ROOT
+			}	
+				# South Ilan Area
+			owns_core_province = 4215
+			owns_core_province = 2105
+			owns_core_province = 729
+			owns_core_province = 4217
+				# Ningguta
+			owns_core_province = 2186
+			owns_core_province = 2106
+			owns_core_province = 4226
 		}
 		effect = {
 			change_tag = SOV
+			set_country_flag = formed_soviet_union_nation_flag
+			SOV = {
+				add_prestige = 20
+				add_legitimacy = 5
+				add_stability = 1
+				set_capital = 295 # Moskva
+				295 = { 
+					add_base_tax = 6
+					add_base_production = 10
+					add_base_manpower = 1
+				}
+			}
+			custom_tooltip = dec1_decisions_blank
+			SOV = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			SOV = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			SOV = { 
+				change_government = monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 }
+						}
+					set_government_rank = 3
+				}				
+				add_government_reform = tsardom
+				set_legacy_government = tsardom_legacy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			SOV = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = SOV_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
+				add_country_modifier = { 
+					name = dec1_increased_centralization
+				}	
+			}			
 		}
 	}
 

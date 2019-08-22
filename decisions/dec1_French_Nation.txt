@@ -30,7 +30,7 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no
 			is_nomad = no			
-			french_region = {
+			france_region = {
 				type = all
 				owned_by = ROOT
 			}

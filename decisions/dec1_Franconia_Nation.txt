@@ -24,7 +24,8 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 3
 				}
-			}	
+			}
+		}
 		provinces_to_highlight = {			
 			OR = {
 					# Franconia
