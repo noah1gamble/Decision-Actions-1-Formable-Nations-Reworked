@@ -75,34 +75,34 @@ country_decisions = {
 			is_at_war = no
 			ROOT = {
 					#Crimea
-				province_id = 284 # Crimea
-				province_id = 2410 # Theodoro
-				province_id = 285 # Caffa
-				province_id = 2447 # Matrega
+				owns_core_province = 284 # Crimea
+				owns_core_province = 2410 # Theodoro
+				owns_core_province = 285 # Caffa
+				owns_core_province = 2447 # Matrega
 					#Yedisan
-				province_id = 282 # Yedisan
-				province_id = 2406 # Ingil
-				province_id = 1974 # Yedishkul
+				owns_core_province = 282 # Yedisan
+				owns_core_province = 2406 # Ingil
+				owns_core_province = 1974 # Yedishkul
 					#Zaporizhia
-				province_id = 283 # Zaporozhia
-				province_id = 2411 # Mansur
-				province_id = 2412 # Kyzyl-Yar
+				owns_core_province = 283 # Zaporozhia
+				owns_core_province = 2411 # Mansur
+				owns_core_province = 2412 # Kyzyl-Yar
 					#Lower Don
-				province_id = 288 # Lower Don
-				province_id = 1971 # Beljamen
-				province_id = 467 # Borisoglebsk
-				province_id = 2409 # Bahmut
+				owns_core_province = 288 # Lower Don
+				owns_core_province = 1971 # Beljamen
+				owns_core_province = 467 # Borisoglebsk
+				owns_core_province = 2409 # Bahmut
 					#Azov
-				province_id = 286 # Azov
-				province_id = 2413 # Tyn
-				province_id = 2414 # Azaraba
-				province_id = 287 # Kuban
+				owns_core_province = 286 # Azov
+				owns_core_province = 2413 # Tyn
+				owns_core_province = 2414 # Azaraba
+				owns_core_province = 287 # Kuban
 					#Astrakhan
-				province_id = 464 # Astrakhan
-				province_id = 468 # Manych
-				province_id = 2416 # Majar
-				province_id = 2417 # Kuma
-				province_id = 466 # Sarai
+				owns_core_province = 464 # Astrakhan
+				owns_core_province = 468 # Manych
+				owns_core_province = 2416 # Majar
+				owns_core_province = 2417 # Kuma
+				owns_core_province = 466 # Sarai
 			}
 		}
 	 	effect = {
