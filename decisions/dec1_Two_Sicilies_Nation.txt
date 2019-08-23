@@ -46,7 +46,7 @@ country_decisions = {
 				province_id = 123
 				province_id = 2984
 				province_id = 1934
-					# Naples (- Rome)
+					# Naples (NO Rome)
 				province_id = 2983 
 				province_id = 121
 					# Apulia
@@ -55,6 +55,10 @@ country_decisions = {
 				province_id = 2985 
 					# Central Italy
 				province_id = 120
+					# Sicily
+				province_id = 124
+				province_id = 2982
+				province_id = 125
 			}
 			NOT = { owned_by = ROOT }
 			NOT = { is_core = ROOT }			
@@ -83,6 +87,10 @@ country_decisions = {
 				owns_core_province = 2985 
 					# Central Italy
 				owns_core_province = 120
+					# Sicily
+				owns_core_province = 124
+				owns_core_province = 2982
+				owns_core_province = 125				
 			}
 		}
 	 	effect = {

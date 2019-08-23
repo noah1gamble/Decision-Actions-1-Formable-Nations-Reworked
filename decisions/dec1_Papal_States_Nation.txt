@@ -165,7 +165,7 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}	
 			}		
-			custom_tooltip = dec1_papal_states_reformation
+			#custom_tooltip = dec1_papal_states_reformation
 			# event for all nations to announce revival of papal states
 			custom_tooltip = dec1_papal_influence # all italian nations gain papal influence
 			hidden_effect = { 

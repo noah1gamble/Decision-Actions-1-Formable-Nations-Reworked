@@ -7,7 +7,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no			
 			NOT = { 
-				formed_lower_saxony_nation_flag
+				has_country_flag = formed_lower_saxony_nation_flag
 				exists = LSX
 				tag = LSX
 				tag = PAP
