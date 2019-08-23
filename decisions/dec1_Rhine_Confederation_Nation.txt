@@ -8,7 +8,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = { 
-				has_country_flag = formed_rhine_confederation_nation
+				has_country_flag = formed_rhine_confederation_nation_flag
 				exists = RHE
 				tag = RHE
 				tag = PAP 
@@ -84,7 +84,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = RHE
-			
+			set_country_flag = formed_rhine_confederation_nation_flag
 			RHE = {
 				add_prestige = 20
 				add_legitimacy = 15
@@ -109,13 +109,28 @@ country_decisions = {
 				}
 				add_permanent_claim = RHE
 			}				
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			RHE = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -131,30 +146,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			RHE = { 
-				change_government = monarchy
+			RHE = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = autocracy_reform
-				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			RHE = {

@@ -68,12 +68,6 @@ country_decisions = {
 		effect = {
 			change_tag = PAP
 			set_country_flag = formed_papal_states_nation_flag
-			if = {
-				limit = {
-					NOT = { primary_culture = lombard }
-				}
-				change_primary_culture = lombard
-			}
 			PAP = {				
 				add_prestige = 100
 				set_capital = 118 # Roma
@@ -82,6 +76,12 @@ country_decisions = {
 					add_base_production = 10
 				}
 			}
+			if = {
+				limit = {
+					NOT = { primary_culture = lombard }
+				}
+				change_primary_culture = lombard
+			}			
 			central_italy_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

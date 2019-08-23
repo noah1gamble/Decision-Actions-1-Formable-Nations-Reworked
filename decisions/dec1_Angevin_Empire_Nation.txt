@@ -1,6 +1,10 @@
 country_decisions = {
 
-	angevin_nation = {
+	############################
+	# Angevin Empire - General #
+	############################
+
+	angevin_empire_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
@@ -8,7 +12,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = { 
-				has_country_flag = formed_angevin_nation_flag
+				has_country_flag = formed_angevin_empire_nation_flag
 				exists = NSE 
 				exists = ANG 
 				exists = GBR 
@@ -203,9 +207,13 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ANG
-			set_country_flag = formed_angevin_nation_flag
-			set_capital = 178 # Anjou
+			set_country_flag = formed_angevin_empire_nation_flag
 			ANG = {
+				add_prestige = 40
+				add_legitimacy = 50
+				add_stability = 1
+				add_inflation = 3
+				set_capital = 178 # Anjou	
 				178 = { 
 					add_base_tax = 3
 					add_base_production = 10
@@ -224,21 +232,83 @@ country_decisions = {
 				}
 				add_permanent_claim = ANG
 			}			
-			custom_tooltip = dec1_decisions_spacing
-			ANG = { set_government_rank = 3 }
-			change_government = monarchy
-			add_government_reform = english_monarchy
-			set_legacy_government = english_monarchy_legacy
-			custom_tooltip = dec1_decisions_spacing	
+			custom_tooltip = dec1_decisions_blank
+			ANG = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
 			ANG = {
+				if = { 
+					limit = { 
+						NOT = { 
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 
+							}
+						}
+					set_government_rank = 3
+				}				
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			ANG = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ANG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}	
-			}	
-			add_prestige = 40
-			add_legitimacy = 50
-			add_stability = 1
-			add_inflation = 3
+			}
 		}
 		ai_will_do = {
 			factor = 1

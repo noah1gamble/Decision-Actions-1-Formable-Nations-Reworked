@@ -231,7 +231,7 @@ country_decisions = {
 					HUN = {	junior_union_with = HBE }
 						custom_trigger_tooltip = {
 							tooltip = form_austrian_empire_tt_4		
-								# Transdanubia
+							# Transdanubia
 						owns_core_province = 153
 						owns_core_province = 4126
 						owns_core_province = 1864
@@ -287,14 +287,28 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 			}					
-			custom_tooltip = dec1_decisions_spacing	
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			AHE = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -310,30 +324,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			AHE = { 
-				change_government = monarchy
+			AHE = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 3 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 
+							}
 						}
 					set_government_rank = 3
 				}				
 				add_government_reform = autocracy_reform
-				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			AHE = {

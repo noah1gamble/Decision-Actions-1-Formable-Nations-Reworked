@@ -67,14 +67,6 @@ country_decisions = {
 		effect = {
 			change_tag = RUS
 			set_country_flag = formed_russian_nation_flag
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { primary_culture = russian }
-				}
-				change_primary_culture = russian
-			}
 			RUS = {				
 				add_prestige = 30
 				set_capital = 295 # Moskva
@@ -83,7 +75,15 @@ country_decisions = {
 					add_base_production = 5
 					add_base_manpower = 5
 				}
-			}		
+			}
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes			
+			if = {
+				limit = {
+					NOT = { primary_culture = russian }
+				}
+				change_primary_culture = russian
+			}			
 			russia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -105,13 +105,28 @@ country_decisions = {
 				}
 				add_permanent_claim = RUS
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			RUS = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -127,30 +142,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			RUS = { 
-				change_government = monarchy
+			RUS = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 3 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = tsardom_legacy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 3 
+							}
 						}
 					set_government_rank = 3
 				}				
 				add_government_reform = tsardom
-				set_legacy_government = tsardom_legacy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			RUS = {
@@ -237,15 +254,18 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = RUS
-			set_country_flag = formed_russian_nation_flag
+			set_country_flag = formed_russian_nation_flag			
+			RUS = {				
+				add_prestige = 30
+				set_capital = 295 # Moskva
+				295 = {
+					add_base_tax = 1
+					add_base_production = 5
+					add_base_manpower = 5
+				}
+			}	
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { primary_culture = russian }
-				}
-				change_primary_culture = russian
-			}
 			if = {
 				limit = {
 					tag = NOV
@@ -253,15 +273,12 @@ country_decisions = {
 				complete_mission = tr_invade_novgorod_mission
 				complete_mission = tr_subjugate_novgorod
 			}			
-			RUS = {				
-				add_prestige = 30
-				set_capital = 295 # Moskva
-				295 = {
-					add_base_tax = 5
-					add_base_production = 5
-					add_base_manpower = 5
+			if = {
+				limit = {
+					NOT = { primary_culture = russian }
 				}
-			}		
+				change_primary_culture = russian
+			}			
 			russia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }

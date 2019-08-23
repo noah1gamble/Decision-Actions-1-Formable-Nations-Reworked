@@ -83,13 +83,29 @@ country_decisions = {
 					add_base_production = 2
 					add_base_manpower = 1					
 				}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			}
+			custom_tooltip = dec1_decisions_blank
+			IMA = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -105,30 +121,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			IMA = { 
-				change_government = monarchy # republic !!!
+			IMA = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = republic
+							}	
 						}
-					set_government_rank = 2
+					change_government = republic
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = merchant_republic
 				}				
-				add_government_reform = autocracy_reform # republic !!!
-				set_legacy_government = despotic_monarchy
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 1 
+							}
+						}
+					set_government_rank = 1
+				}				
+				add_government_reform = merchants_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
 			IMA = {
@@ -142,7 +160,6 @@ country_decisions = {
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}	
-			}				
 			}	
 		}
 		ai_will_do = {

@@ -6,8 +6,7 @@ country_decisions = {
 
 	form_kingdom_of_prussia = {
 		major = yes
-		potential = {
-			
+		potential = {	
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
@@ -58,15 +57,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = PRU
-			set_country_flag = form_kingdom_of_prussia_nation
-				if = {
-				limit = {
-					NOT = { primary_culture = prussian }
-				}
-				change_primary_culture = prussian
-			}		
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
+			set_country_flag = form_kingdom_of_prussia_nation		
 			PRU = {
 				set_capital = 41 # Konigsberg
 				41 = { 
@@ -75,6 +66,14 @@ country_decisions = {
 					add_base_manpower = 4
 				}
 			}
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes			
+			if = {
+				limit = {
+					NOT = { primary_culture = prussian }
+				}
+				change_primary_culture = prussian
+			}			
 			pomerelia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -93,13 +92,28 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			PRU = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -115,30 +129,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			PRU = { 
-				change_government = monarchy
+			PRU = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = prussian_monarchy_legacy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = prussian_monarchy
-				set_legacy_government = prussian_monarchy_legacy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			PRU = {
@@ -231,13 +247,28 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			PRU = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -253,30 +284,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			PRU = { 
-				change_government = monarchy
+			PRU = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = prussian_monarchy_legacy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = prussian_monarchy
-				set_legacy_government = prussian_monarchy_legacy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			PRU = {
@@ -431,97 +464,94 @@ country_decisions = {
 				religion = reformed
 				religion = protestant
 			}
-					# East Prussia
-				owns_core_province = 40
-				owns_core_province = 41
-				owns_core_province = 767
-				owns_core_province = 2958
-					# West Prussia
-				owns_core_province = 42
-				owns_core_province = 1841
-				owns_core_province = 43
-				owns_core_province = 2997
-					# Kuyavia
-				owns_core_province = 1859
-				owns_core_province = 4523
-					# Wielkopolska
-				owns_core_province = 2963
-				owns_core_province = 254
-				owns_core_province = 4526
-					# Hinterpommern
-				owns_core_province = 2995
-				owns_core_province = 48
-				owns_core_province = 1858
-					# Neumark
-				owns_core_province = 49
-				owns_core_province = 2969
-				owns_core_province = 1763
-					# Mittelmark
-				owns_core_province = 50
-				owns_core_province = 1759
-				owns_core_province = 51
-					# Vorpommern
-				owns_core_province = 2994
-				owns_core_province = 2993
-				owns_core_province = 47
-					# South Saxony
-				owns_core_province = 59
-				owns_core_province = 61
-				owns_core_province = 60
-					# North Saxony
-				owns_core_province = 2964
-				owns_core_province = 52
-				owns_core_province = 58
-					# Thuringia
-				owns_core_province = 62
-				owns_core_province = 63
-				owns_core_province = 2965
-					#Lower Saxony
-				owns_core_province = 1857
-				owns_core_province = 44
-				owns_core_province = 53
-					# Braunschweig
-				owns_core_province = 57
-				owns_core_province = 1758
-				owns_core_province = 2971
-					# Schleswig-Holstein
-				owns_core_province = 13
-				owns_core_province = 4141
-				owns_core_province = 1775
-					# Weser
-				owns_core_province = 54
-				owns_core_province = 1874
-					# Westphalia
-				owns_core_province = 56
-				owns_core_province = 2972
-				owns_core_province = 82
-				owns_core_province = 86
-				owns_core_province = 2973
-					# Hesse
-				owns_core_province = 1762
-				owns_core_province = 81
-				owns_core_province = 1876
-				owns_core_province = 83
-					# North Rhine
-				owns_core_province = 84
-				owns_core_province = 2975
-				owns_core_province = 85
-					# Lower Rhineland
-				owns_core_province = 1760
-				owns_core_province = 1878
-				owns_core_province = 80
-					# Silesia
-				owns_core_province = 2966
-				owns_core_province = 4238
-				owns_core_province = 264
-				owns_core_province = 263
+				# East Prussia
+			owns_core_province = 40
+			owns_core_province = 41
+			owns_core_province = 767
+			owns_core_province = 2958
+				# West Prussia
+			owns_core_province = 42
+			owns_core_province = 1841
+			owns_core_province = 43
+			owns_core_province = 2997
+				# Kuyavia
+			owns_core_province = 1859
+			owns_core_province = 4523
+				# Wielkopolska
+			owns_core_province = 2963
+			owns_core_province = 254
+			owns_core_province = 4526
+				# Hinterpommern
+			owns_core_province = 2995
+			owns_core_province = 48
+			owns_core_province = 1858
+				# Neumark
+			owns_core_province = 49
+			owns_core_province = 2969
+			owns_core_province = 1763
+				# Mittelmark
+			owns_core_province = 50
+			owns_core_province = 1759
+			owns_core_province = 51
+				# Vorpommern
+			owns_core_province = 2994
+			owns_core_province = 2993
+			owns_core_province = 47
+				# South Saxony
+			owns_core_province = 59
+			owns_core_province = 61
+			owns_core_province = 60
+				# North Saxony
+			owns_core_province = 2964
+			owns_core_province = 52
+			owns_core_province = 58
+				# Thuringia
+			owns_core_province = 62
+			owns_core_province = 63
+			owns_core_province = 2965
+				#Lower Saxony
+			owns_core_province = 1857
+			owns_core_province = 44
+			owns_core_province = 53
+				# Braunschweig
+			owns_core_province = 57
+			owns_core_province = 1758
+			owns_core_province = 2971
+				# Schleswig-Holstein
+			owns_core_province = 13
+			owns_core_province = 4141
+			owns_core_province = 1775
+				# Weser
+			owns_core_province = 54
+			owns_core_province = 1874
+				# Westphalia
+			owns_core_province = 56
+			owns_core_province = 2972
+			owns_core_province = 82
+			owns_core_province = 86
+			owns_core_province = 2973
+				# Hesse
+			owns_core_province = 1762
+			owns_core_province = 81
+			owns_core_province = 1876
+			owns_core_province = 83
+				# North Rhine
+			owns_core_province = 84
+			owns_core_province = 2975
+			owns_core_province = 85
+				# Lower Rhineland
+			owns_core_province = 1760
+			owns_core_province = 1878
+			owns_core_province = 80
+				# Silesia
+			owns_core_province = 2966
+			owns_core_province = 4238
+			owns_core_province = 264
+			owns_core_province = 263
 		}
 	 	effect = {
 			change_tag = PRU
 			set_country_flag = formed_prussia_nation_flag
-			change_primary_culture = prussian
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
 			PRU = {
 				add_prestige = 10
 				add_legitimacy = 25
@@ -550,6 +580,14 @@ country_decisions = {
 					}
 				}				
 			}
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes			
+			if = {
+				limit = {
+					NOT = { primary_culture = prussian }
+				}
+				change_primary_culture = prussian
+			}
 			east_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -568,13 +606,28 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			PRU = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -590,30 +643,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			PRU = { 
-				change_government = monarchy
+			PRU = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = prussian_monarchy_legacy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = prussian_monarchy
-				set_legacy_government = prussian_monarchy_legacy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			PRU = {
@@ -715,19 +770,40 @@ country_decisions = {
 					add_base_manpower = 5
 				}
 			}
+			if = {
+				limit = {
+					NOT = { primary_culture = prussian }
+				}
+				change_primary_culture = prussian
+			}			
 			baltic_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = EPR
 			}			
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			EPR = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -743,30 +819,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			EPR = { 
-				change_government = monarchy
+			EPR = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 2 }
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = prussian_monarchy_legacy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
 						}
 					set_government_rank = 2
 				}				
 				add_government_reform = prussian_monarchy
-				set_legacy_government = prussian_monarchy_legacy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			EPR = {

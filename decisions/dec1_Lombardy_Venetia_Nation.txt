@@ -70,7 +70,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = LVE
-			set_country_flag = formed_lombardy_venetia_flag			
+			set_country_flag = formed_lombardy_venetia_nation_flag			
 			LVE = {
 				add_prestige = 30
 				set_capital = 104 # Milan

@@ -5,11 +5,12 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_playing_custom_nation = no
-			is_colonial_nation = no
-			NOT = { has_country_flag = formed_lower_saxony_nation }			
+			is_colonial_nation = no			
 			NOT = { 
-				tag = PAP
+				formed_lower_saxony_nation_flag
+				exists = LSX
 				tag = LSX
+				tag = PAP
 				tag = HAN
 				tag = NGC
 				tag = PRU
@@ -57,6 +58,7 @@ country_decisions = {
 			change_tag = LSX
 			set_country_flag = formed_lower_saxony_nation
 			LSX = {
+				add_prestige = 20
 				set_capital = 1758 # Hannover
 				1758 = { 
 					add_base_tax = 3
@@ -64,17 +66,83 @@ country_decisions = {
 					add_base_manpower = 3
 				}
 			}		
-			custom_tooltip = dec1_decisions_spacing
-			LSX = { set_government_rank = 2 }
-			add_government_reform = autocracy_reform
-			set_legacy_government = despotic_monarchy
-			custom_tooltip = dec1_decisions_spacing	
+			custom_tooltip = dec1_decisions_blank
+			LSX = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
 			LSX = {
+				if = { 
+					limit = { 
+						NOT = { 
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 1 
+							}
+						}
+					set_government_rank = 1
+				}				
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			LSX = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = LSX_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
-				}			
-			}		
-			add_prestige = 20
+				}	
+			}
 		}
 		ai_will_do = {
 			factor = 1

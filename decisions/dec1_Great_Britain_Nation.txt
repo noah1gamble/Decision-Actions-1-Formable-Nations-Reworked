@@ -140,12 +140,13 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GBR	
-			set_country_flag = formed_great_britain_flag				
-			set_capital = 236 # London
+			set_country_flag = formed_great_britain_flag
 			GBR = {
+				add_prestige = 20
+				set_capital = 236 # London
 				236 = { 
 					add_base_tax = 3
-					add_base_production = 3
+					add_base_production = 4
 					add_base_manpower = 3
 				}
 			}
@@ -155,18 +156,83 @@ country_decisions = {
 				}
 				add_permanent_claim = GBR
 			}			
-			custom_tooltip = dec1_decisions_spacing
-			GBR = { set_government_rank = 2 }
-			change_government = monarchy
-			add_government_reform = english_monarchy
-			set_legacy_government = english_monarchy_legacy
+			custom_tooltip = dec1_decisions_blank
+			GBR = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
+			}
+			hidden_effect = { 
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			GBR = {
+				if = { 
+					limit = { 
+						NOT = { 
+							government = monarchy
+							}	
+						}
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
+						}
+					set_government_rank = 2
+				}				
+				add_government_reform = autocracy_reform
+			}
 			custom_tooltip = dec1_decisions_spacing
 			GBR = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = GBR_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}			
 				add_country_modifier = { 
 					name = dec1_increased_centralization
 				}	
-			}
-			add_prestige = 20			
+			}			
 		}
 		ai_will_do = {
 			factor = 1

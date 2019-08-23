@@ -49,13 +49,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = FRL
-			set_country_flag = formed_frieslande_nation_flag
-			if = {
-				limit = {
-					NOT = { primary_culture = dutch }
-				}
-				change_primary_culture = dutch
-			}			
+			set_country_flag = formed_frieslande_nation_flag			
 			FRL = {
 				add_prestige = 25
 				add_legitimacy = 10
@@ -67,6 +61,12 @@ country_decisions = {
 					add_base_production = 3
 					add_base_manpower = 3
 				}
+			}	
+			if = {
+				limit = {
+					NOT = { primary_culture = dutch }
+				}
+				change_primary_culture = dutch
 			}			
 			low_countries_region = {
 				limit = {
@@ -74,13 +74,28 @@ country_decisions = {
 				}
 				add_permanent_claim = FRL
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			custom_tooltip = dec1_decisions_blank
+			FRL = {		
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
 				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}			
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}	
+					}
+					custom_tooltip = dec1_decisions_blank
+				}				
 			}
 			hidden_effect = { 
 				if = {
@@ -96,30 +111,32 @@ country_decisions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}			
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}	
-				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			FRL = { 
-				change_government = monarchy
+			FRL = {
 				if = { 
 					limit = { 
 						NOT = { 
-							government_rank = 1 }
+							government = monarchy
+							}	
 						}
-					set_government_rank = 1
+					change_government = monarchy
+				}			
+				if = { 
+					limit = { 
+						NOT = { 
+							has_dlc = "Dharma"
+							}	
+						}
+					set_legacy_government = despotic_monarchy
+				}				
+				if = { 
+					limit = { 
+						NOT = { 
+							government_rank = 2 
+							}
+						}
+					set_government_rank = 2
 				}				
 				add_government_reform = autocracy_reform
-				set_legacy_government = despotic_monarchy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			FRL = {
