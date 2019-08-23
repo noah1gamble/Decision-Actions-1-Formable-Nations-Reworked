@@ -39,17 +39,14 @@
  lombardy_venetia_nation_title: "Restore the Lombardy-Venetia Kingdom"
  lombardy_venetia_nation_desc: "The Kingdom of Lombardy–Venetia, commonly called the "Lombardo-Venetian Kingdom", was a constituent land (crown land) of the Austrian Empire. It was created in 1815 by resolution of the Congress of Vienna in recognition of the Austrian House of Habsburg-Lorraine's rights to Lombardy and the former Republic of Venice after the Napoleonic Kingdom of Italy, proclaimed in 1805, had collapsed."
  
- iberia_nation_title: "Restore the Iberian Union"
- iberia_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV. The union began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
+ iberian_empire_nation_title: "Restore the Iberian Union"
+ iberian_empire_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV. The union began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
  
  austrian_empire_nation_title: "Form the Austrian Empire"
  austrian_empire_nation_desc: "The Austrian Empire was a Central European multinational great power from 1804 to 1867, created by proclamation out of the realms of the Habsburgs. During its existence, it was the third most populous empire after the Russian Empire and the United Kingdom in Europe. Along with Prussia, it was one of the two major powers of the German Confederation. "
  
  austro_hungarian_empire_nation_title: "Form the Austro-Hungarian Empire"
  austro_hungarian_empire_nation_desc: "Austria-Hungary, often referred to as the Austro-Hungarian Empire or the Dual Monarchy, was a constitutional monarchy in Central and Eastern Europe between 1867 and 1918. It was formed when the Austrian Empire adopted a new constitution; as a result Austria and Hungary were placed on equal footing. It dissolved into several new states at the end of the First World War."
- 
- abyssinia_nation_title: "Reform the Abyssinian Empire"
- abyssinia_nation_desc: ""
  
  czechoslovakia_nation_title: "Form Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
@@ -97,25 +94,25 @@
  maghrebia_nation_desc: "Maghreb; also spelled Maghrib, region of North Africa bordering the Mediterranean Sea. The Africa Minor of the ancients, it at one time included Moorish Spain and now comprises essentially the Atlas Mountains and the coastal plain of Morocco, Algeria, Tunisia, and Libya."
  
  tatarstan_nation_title: "Form Tatarstan"
- tatarstan_nation_desc: ""
+ tatarstan_nation_desc: "The Tatars are Turkic ethnic group native to Tatarstan and wider Volga region. They speak Tatar, a Kipchak Turkic language. The vast majority of Tatars today reside in post-Soviet countries, primarily in Russia, Uzbekistan and Ukraine."
  
  lower_saxony_nation_title: "Form Lower Saxony"
  lower_saxony_nation_desc: "Lower Saxony, German Niedersachsen, Land of Germany; The country's second largest state in size, Lower Saxony occupies an important band of territory across the northwestern part of the country."
  
  adriatic_empire_nation_title: "Form the Adriatic Empire"
- adriatic_empire_nation_desc: ""
+ adriatic_empire_nation_desc: "The Adriatic Empire stands among the largest empires in history and its government is centralized in the nation's capital of Constantinople"
  
  himalayan_empire_nation_title: "Form the Himalayan Empire"
  himalayan_empire_nation_desc: "The Himalaya Empire was a mountainous country in Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, Kinnara Kingdom etc."
  
  alsace_lorraine_nation_title: "Form Alsace-Lorraine"
- alsace_lorraine_nation_desc: ""
+ alsace_lorraine_nation_desc: "he Imperial Territory of Alsace-Lorraine was a territory created by the German Empire in 1871, after it annexed most of Alsace and the Moselle department of Lorraine following its victory in the Franco-Prussian War."
  
  franco_iberia_nation_title: "Form Franco-Iberia"
  franco_iberia_nation_desc: "The Franco-Iberian Empire is is a cultural hegemony consisting of Portugal, Spain, France under one Emperor"
  
  hesse_nassau_nation_title: "Form Hesse-Nassau"
- hesse_nassau_nation_desc: ""
+ hesse_nassau_nation_desc: "The Province of Hesse-Nassau was a province of the Kingdom of Prussia from 1868 to 1918, then a province of the Free State of Prussia until 1944.
  
  east_prussia_nation_title: "Form East Prussia"
  east_prussia_nation_desc: "Its capital city was Königsberg. East Prussia was the main part of the region of Prussia along the southeastern Baltic Coast. The bulk of the ancestral lands of the Baltic Old Prussians were enclosed within East Prussia."
@@ -124,7 +121,7 @@
  hanse_nation_desc: "The Hanseatic League was a commercial and defensive confederation of merchant guilds and market towns in Northwestern and Central Europe. Growing from a few North German towns in the late 1100s, the league came to dominate Baltic maritime trade for three centuries along the coasts of Northern Europe. Hansa territories stretched from the Baltic to the North Sea and inland during the Late Middle Ages."
  
  emilia_romagna_nation_title: "Form Emilia-Romagna"
- emilia_romagna_nation_desc: ""
+ emilia_romagna_nation_desc: "Emilia-Romagna is one of the wealthiest and most developed regions in Europe, unifying it as one kingdom will allow us to conquer many foes."
  
  angevin_empire_nation_title: "Form the Angevin Empire"
  angevin_empire_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
@@ -154,7 +151,7 @@
  jagiellonian_empire_nation_as_lithuania_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania, who in 1386 was baptized as Władysław, married Queen regnant Jadwiga of Poland, and was crowned King of Poland as Władysław II Jagiełło. The dynasty reigned in several Central European countries between the 14th and 16th centuries. Members of the dynasty were Kings of Poland (1386–1572), Grand Dukes of Lithuania (1377–1392 and 1440–1572), Kings of Hungary (1440–1444 and 1490–1526), and Kings of Bohemia (1471–1526)."
  
  papal_states_nation_title: "Restore the Papal States"
- papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... "
+ papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
  
  spanish_nation_militarily_title: "Form Spain"
  spanish_nation_militarily_desc: ""
