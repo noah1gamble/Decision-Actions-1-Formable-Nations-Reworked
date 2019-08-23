@@ -30,6 +30,7 @@ country_decisions = {
 				primary_culture = dutch
 				primary_culture = flemish
 				primary_culture = wallonian
+				primary_culture = belgian
 			}
 		}
 		provinces_to_highlight = {
