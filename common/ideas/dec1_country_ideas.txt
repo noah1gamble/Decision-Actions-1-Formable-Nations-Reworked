@@ -2,43 +2,94 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new groups or ideas, make sure they are unique.
 
+
+
 ### Formable Nations specific idea groups
 
-CIS_ideas = {
-
+AHE_ideas = { # The Austro-Hungarian Empire
 	trigger = {
-		tag = CIS
+		tag = AHE
 	}
-	free = yes	#will be added at load.
-
+	free = yes	# will be added at load.
 	start = {
-		# TODO 1
-		# TODO 2
+		infantry_cost = -0.1 # Enforced Conscription Laws
+		army_tradition_from_battle = 0.25 # Military Fame
 	}
 	bonus = {
-		# TODO BONUS
+		diplomatic_reputation = 2 # Professional Diplomats
 	}
-	
-	todo_1 = {
-		# TODO
+	AHE_political_maneuvering = {
+		ae_impact = -0.1 # Political Maneuvering
 	}
-	todo_2 = {
-		# TODO
+	AHE_austro_hungarian_intensive_garrison_policy = {
+		global_garrison_growth = 0.2 # Intesive Garrison Policy
 	}
-	todo_3 = {
-		# TODO
+	AHE_austro_hungarian_diplomats = {
+		monarch_diplomatic_power = 3 # Austro-Hungarian Diplomats
 	}
-	todo_4 = {
-		# TODO
+	AHE_heavy_global_tax_reform = {
+		global_tax_modifier = 0.35 # Heavy Global Tax Reform
 	}
-	todo_5 = {
-		# TODO
+	AHE_dual_monarchy_administrative_efficiency = {
+		state_maintenance_modifier = -0.215 # Dual-Monarchy Administrative Efficiency
 	}
-	todo_6 = {
-		# TODO
+	AHE_austrian_dynastic_success = {
+		heir_chance = 0.7 # Austrian Triple Chins
 	}
-	todo_7 = {
-		# TODO
+	AHE_monarchy_of_the_habsburgs = {
+		all_power_cost = -0.20 # Monarchy of the Habsburgs
 	}
 }
 
+CIS_ideas = { # Cisalpina Republic
+	trigger = {
+		tag = AHE
+	}
+	free = yes	# will be added at load.
+
+	start = {
+		republican_tradition = 0.10 # Traditions of Republicanism
+		production_efficiency = 0.20 # Farm-Based Nation
+	}
+	bonus = {
+		state_maintenance_modifier = -0.20 # Effective State & Goverment
+	}	
+	CIS_harsh_general_training = { 
+		harsh_treatment_cost = -0.4	# Harsh General Training 
+	}
+	CIS_papal_decree = {
+		papal_influence = 0.8 # Papal Decree of Autonomy
+	}
+	CIS_religious_stability = {
+		religious_unity = 0.2
+	}
+	CIS_religious_defender = {
+		enforce_religion_cost = -0.5
+	}
+	CIS_italian_goods = {
+		global_trade_goods_size_modifier = 0.2
+	}
+	CIS_birthplace_of_renissance = {
+		global_institution_spread = 0.5
+	}
+	CIS_partisan_rear_cannons = {
+		backrow_artillery_damage = 0.3
+	}
+}
+
+HBE_ideas = { # The Austrian Empire
+
+	trigger = {
+		tag = HBE
+	}
+	free = yes	# will be added at load.
+	start = {
+		land_morale = 0.1 = -0.1 # 
+		discipline = 0.1 #
+	}
+	bonus = {
+		imperial_authority = 0.15 # 
+		reform_progress_growth = 0.1
+	}
+
+}

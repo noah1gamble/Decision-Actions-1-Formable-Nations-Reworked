@@ -1,6 +1,6 @@
 country_decisions = {
 
-	# The Austrian Empire
+	# The Austrian Empire - Austria - Conquest Formation
 
 	austrian_empire_nation = {
 		major = yes
@@ -203,8 +203,8 @@ country_decisions = {
 				add_stability = 1
 				set_capital = 134	
 				134 = { 
-					add_base_tax = 3
-					add_base_manpower = 3
+					add_base_tax = 2
+					add_base_manpower = 2
 				}
 				153 = { 
 					add_base_tax = 1
@@ -308,4 +308,7 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+
+	# The Austrian Empire - Austria - Diplomatic Formation	
+	
 }

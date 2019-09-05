@@ -1,0 +1,104 @@
+country_decisions = {
+
+	form_manchu_dynasty = {
+		major = yes
+		potential = {
+			tag = MCH
+			was_never_end_game_tag_trigger = yes
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = QNG }
+			NOT = { has_country_flag = manchu_dynasty_formed }
+
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 704		# Liaoxi
+				province_id = 723		# Xilin Gol
+				province_id = 726		# Liaodong
+				province_id = 1816		# Beijing
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns = 704		# Liaoxi
+			owns = 723		# Xilin Gol
+			owns = 726		# Liaodong
+			owns = 1816		# Beijing
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = {
+				has_ruler_modifier = tribal_succession_crisis
+			}
+		}
+		effect = {
+			1816 = {
+				move_capital_effect = yes
+				change_culture = ROOT
+				add_core = QNG
+			}
+			change_tag = QNG
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			south_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			xinan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			north_china_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = QNG
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			if = {
+				limit = {
+					has_reform = steppe_horde
+				}
+				change_government = monarchy
+				set_legacy_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					technology_group = nomad_group
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
+			if = {
+				limit = {
+					NOT = { religion = confucianism }
+				}
+				change_religion = confucianism
+				add_harmonized_religion = tengri_pagan_reformed
+			}
+			add_prestige = 10
+			set_country_flag = manchu_dynasty_formed
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+} 

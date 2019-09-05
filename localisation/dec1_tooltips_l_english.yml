@@ -35,7 +35,10 @@
  form_austrian_empire_tt_1: "Owns all core §YAustrian§! provinces"
  form_austrian_empire_tt_2: "Owns all core §YHungarian§! provinces"
  form_austrian_empire_tt_3: "Subject owns all core §YHungarian§! provinces"
- form_austrian_empire_tt_4: "   Owns all core §YHungarian§! provinces"
+ 
+ form_austro_hungarian_empire_tt_1: "Owns all core §YAustrian§! provinces"
+ form_austro_hungarian_empire_tt_2: "Owns all core §YHungarian§! provinces"
+ form_austro_hungarian_empire_tt_3: "Subject owns all core §YHungarian§! provinces" 
  
  form_burma_tt_1: "Owns all core §YBurmese§! provinces"
  

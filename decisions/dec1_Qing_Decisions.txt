@@ -1,0 +1,86 @@
+country_decisions = {
+
+	create_green_standard_army = {
+		potential = {
+			OR = {
+				tag = QNG
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = green_standard_army }
+		}
+		provinces_to_highlight = {
+			province_id = 725
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_monarch_leader = yes
+			has_idea = the_green_standard_army
+			owns = 725		# Hinggan
+			war_with = MNG
+			MNG = {
+				OR = {
+					NOT = { stability = 0 }
+					NOT = { war_score = -10 }
+				}
+			}
+		}
+		effect = {
+			set_country_flag = green_standard_army
+			add_prestige = 10
+			reverse_add_opinion = { who = MNG modifier = opinion_green_standard }
+			MNG = { add_manpower = -8 }
+			infantry = 725
+			infantry = 725
+			infantry = 725
+			infantry = 725
+			cavalry = 725
+			cavalry = 725
+			cavalry = 725
+			cavalry = 725
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	create_eight_banners = {
+		potential = {
+			OR = {
+				tag = QNG
+			}
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_dlc = "Mandate of Heaven" }
+			NOT = { has_country_flag = eight_banners }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_monarch_leader = yes
+			has_idea = manchu_eight_banners
+			stability = 1
+		}
+		effect = {
+			set_country_flag = eight_banners
+			infantry = capital
+			infantry = capital
+			infantry = capital
+			infantry = capital
+			cavalry = capital
+			cavalry = capital
+			cavalry = capital
+			cavalry = capital
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+} #End of country decisions
