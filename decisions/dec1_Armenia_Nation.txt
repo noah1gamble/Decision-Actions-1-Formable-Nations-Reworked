@@ -3,32 +3,48 @@ country_decisions = {
 	armenia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			NOT = { has_country_flag = formed_armenia_flag }
-			was_never_end_game_tag_trigger = yes
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { tag = ARM }
-			OR = {
-				ai = no
-				AND = {
-					NOT = { exists = ARM }
-					num_of_cities = 3 #Carnage
-				}
-			}
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			primary_culture = armenian
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
+		normal_or_historical_nations = yes
+	  is_former_colonial_nation = no
+	  is_playing_custom_nation = no
+	  is_colonial_nation = no
+	  culture_group = armenian
+	    NOT = {
+	      primary_culture = turkish # Armenian Genocide
+	      has_country_flag = formed_arabia_nation_flag
+	      exists = ARB
+	      tag = ARB
+	      tag = HLR
+	      tag = PAP
+	    }
+	    OR = {
+	      ai = no
+	      AND = {
+	        ai = yes
+	        num_of_cities = 8
+	      }
+	    }
+	  }
+	  provinces_to_highlight = {
+	    OR = {
+	      province_id = 358			#Alexandria
+	      province_id = 361			#Cairo
+	      province_id = 377			#Aleppo
+	      province_id = 379			#Jerusalem
+	      province_id = 382			#Damascus
+	      province_id = 384			#Medina
+	      province_id = 385			#Mecca
+	      province_id = 388			#Aden
+	      province_id = 390			#Sanaa
+	      province_id = 392			#Al-Arid
+	      province_id = 394			#Qatif
+	      province_id = 400			#Muscat
+	      province_id = 403			#Nizwa
+	      province_id = 410			#Baghdad
+	    }
+	    OR = {
+	      NOT = { owned_by = ROOT }
+	      NOT = { is_core = ROOT }
+	    }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -136,5 +152,5 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
+
 }

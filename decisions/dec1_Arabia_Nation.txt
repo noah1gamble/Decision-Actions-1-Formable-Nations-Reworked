@@ -1,28 +1,28 @@
 country_decisions = {
-	
+
 	arab_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_arabia_flag }
+		normal_or_historical_nations = yes
+		is_former_colonial_nation = no
+		is_playing_custom_nation = no
+		is_colonial_nation = no
+		culture_group = turko_semitic
+			NOT = {
+				primary_culture = turkish
+				has_country_flag = formed_arabia_nation_flag
+				exists = ARB
+				tag = ARB
+				tag = HLR
+				tag = PAP
+			}
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = ARB }
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
 				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					ai = yes
+					num_of_cities = 8
 				}
-			}
-			culture_group = turko_semitic #Arabic
-			NOT = { primary_culture = turkish }
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -66,42 +66,124 @@ country_decisions = {
 			owns_core_province = 410			#Baghdad
 		}
 		effect = {
-			remove_non_electors_emperors_from_empire_effect = yes
+		change_tag = ARB
+		set_country_flag = formed_arabia_nation_flag
+		if = {
+			limit = {
+				NOT = { primary_culture = turko_semitic }
+			}
+			change_primary_culture = algerian
+		}
+		ARB = {
+			add_prestige = 25
+			add_stability = 1
+			set_capital = 385 # Mecca
+			385 = {
+				add_base_tax = 2
+				add_base_production = 1
+				add_base_manpower = 5
+			}
+		}
+		custom_tooltip = dec1_decisions_spacing
+		mashriq_region = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ARB
+		}
+		arabia_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ARB
+		}
+		egypt_region = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ARB
+		}
+		custom_tooltip = dec1_decisions_blank
+		ARB = {
 			if = {
 				limit = {
-					NOT = { government_rank = 3 }
+					is_part_of_hre = yes
 				}
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				custom_tooltip = dec1_decisions_blank
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ARB = {
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+						}
+					}
+				change_government = monarchy
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Dharma"
+						}
+					}
+				set_legacy_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+						}
+					}
 				set_government_rank = 3
 			}
-			mashriq_region = {
+			add_government_reform = autocracy_reform
+		}
+		custom_tooltip = dec1_decisions_spacing
+		ARB = {
+			if = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					has_custom_ideas = no
+					NOT = { has_idea_group = ARB_ideas }
 				}
-				add_permanent_claim = ARB
-			}
-			egypt_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { area = lower_nubia_area }
-				}
-				add_permanent_claim = ARB
-			}
-			arabia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ARB
+				country_event = { id = ideagroups.1 }
 			}
 			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+				name = dec1_increased_centralization
 			}
-			add_prestige = 25
-			set_country_flag = formed_arabia_flag
-			change_tag = ARB
 		}
-		ai_will_do = {
-			factor = 0
-		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	ai_importance = 400
 	}
 }

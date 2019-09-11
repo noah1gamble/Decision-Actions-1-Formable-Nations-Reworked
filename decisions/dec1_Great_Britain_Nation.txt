@@ -1,31 +1,31 @@
 country_decisions = {
 
-	great_britain_nation = {
+	great_britain_england_nation = { # England -> Great Britain
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_great_britain_nation_flag
 				exists = NSE
-				exists = GBR 
 				exists = UKI
+				exists = GBR
 				tag = GBR
 				tag = UKI
 				tag = PAP
 				tag = HLR
 				tag = EUR
-			}			
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 6
 				}
-			}			
+			}
 			OR = {
 				culture_group = british
 				primary_culture = welsh
@@ -40,11 +40,11 @@ country_decisions = {
 				province_id = 4371
 				province_id = 237
 					# East Anglia
-				province_id = 238	
-				province_id = 1860				
+				province_id = 238
+				province_id = 1860
 				province_id = 4370
 					# Wessex
-				province_id = 234					
+				province_id = 234
 				province_id = 4374
 				province_id = 4130
 				province_id = 4373
@@ -60,7 +60,7 @@ country_decisions = {
 				province_id = 4376
 				province_id = 1861
 					# Yorkshire
-				province_id = 245	
+				province_id = 245
 				province_id = 4367
 				province_id = 4368
 					# Wales
@@ -84,12 +84,12 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = GBR }
 			is_subject = no
-			is_at_war = no	
+			is_at_war = no
 			custom_trigger_tooltip = {
 				tooltip = form_great-britain_tt_1
 					# London
@@ -98,11 +98,11 @@ country_decisions = {
 				owns_core_province = 4371
 				owns_core_province = 237
 					# East Anglia
-				owns_core_province = 238	
-				owns_core_province = 1860				
+				owns_core_province = 238
+				owns_core_province = 1860
 				owns_core_province = 4370
 					# Wessex
-				owns_core_province = 234					
+				owns_core_province = 234
 				owns_core_province = 4374
 				owns_core_province = 4130
 				owns_core_province = 4373
@@ -118,7 +118,7 @@ country_decisions = {
 				owns_core_province = 4376
 				owns_core_province = 1861
 					# Yorkshire
-				owns_core_province = 245	
+				owns_core_province = 245
 				owns_core_province = 4367
 				owns_core_province = 4368
 					# Wales
@@ -140,15 +140,15 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = GBR	
+			change_tag = GBR
 			set_country_flag = formed_great_britain_flag
 			GBR = {
 				add_prestige = 20
 				set_capital = 236 # London
-				236 = { 
-					add_base_tax = 3
-					add_base_production = 4
-					add_base_manpower = 3
+				236 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 1
 				}
 			}
 			british_isles_region = {
@@ -156,9 +156,8 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = GBR
-			}			
-			custom_tooltip = dec1_decisions_blank
-			GBR = {		
+			}
+			GBR = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -169,18 +168,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -195,31 +194,23 @@ country_decisions = {
 				}
 			}
 			GBR = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
-					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
+					set_legacy_government = english_monarchy_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
 							}
 						}
 					set_government_rank = 2
-				}				
-				add_government_reform = autocracy_reform
+				}
+				add_government_reform = english_monarchy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
 			GBR = {
@@ -229,11 +220,11 @@ country_decisions = {
 						NOT = { has_idea_group = GBR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}			
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

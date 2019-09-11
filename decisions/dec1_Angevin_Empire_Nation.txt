@@ -1,39 +1,32 @@
 country_decisions = {
 
 	############################
-	# Angevin Empire - General #
+	# Angevin Empire - England #
 	############################
 
-	angevin_empire_nation = {
+	angevin_empire_england_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			primary_culture = english
+			tag = ENG
 			NOT = {
-				has_country_flag = formed_angevin_empire_nation_flag
-				exists = NSE
+				has_country_flag = formed_angevin_empire_england_nation_flag
 				exists = ANG
-				tag = PAP
 				tag = ANG
+				tag = PAP
+				tag = FRA
+				tag = EUR
 			}
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 8
 				}
-			}
-			OR = {
-				culture_group = british
-				primary_culture = english
-				primary_culture = welsh
-				primary_culture = scottish
-				culture_group = french
-				primary_culture = basque
-				primary_culture = breton
 			}
 		}
 		provinces_to_highlight = {
@@ -113,6 +106,8 @@ country_decisions = {
 			NOT = { exists = ANG }
 			is_subject = no
 			is_at_war = no
+			is_lesser_in_union = no
+			tag = ENG
 			custom_trigger_tooltip = {
 				tooltip = form_angevin_tt_1
 					# London
@@ -143,34 +138,38 @@ country_decisions = {
 				owns_core_province = 245
 				owns_core_province = 4367
 				owns_core_province = 4368
-					# Scottish Marches
+					# Lower Scottish Marches
 				owns_core_province = 246
 				owns_core_province = 247
-					# Ireland
-				owns_core_province = 373
-				owns_core_province = 374
 			}
 			custom_trigger_tooltip = {
 				tooltip = form_angevin_tt_4
-				# Brittany
+					# Brittany
 				owns_core_province = 4384
 				owns_core_province = 172
 				owns_core_province = 169
 				owns_core_province = 171
 				owns_core_province = 170
+					# Ireland
+				owns_core_province = 373
+				owns_core_province = 374
 			}
 			OR = {
-				ROOT = {
+				ENG = {
 					AND = {
 					owns_core_province = 178
 					senior_union_with = FRA
-					years_in_union_under = {
-						who = ROOT
-						years = 50
+					FRA = {
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = ENG
+							years = 50
+							}
+							liberty_desire = 40
 						}
 					}
 				}
-				ROOT = {
+				ENG = {
 					custom_trigger_tooltip = {
 						tooltip = form_angevin_tt_2
 							# Normandy
@@ -207,7 +206,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ANG
-			set_country_flag = formed_angevin_empire_nation_flag
+			set_country_flag = formed_angevin_empire_great_britain_nation_flag
 			ANG = {
 				add_prestige = 15
 				add_stability = 1
@@ -219,6 +218,16 @@ country_decisions = {
 					add_base_production = 5
 					add_base_manpower = 1
 				}
+			}
+			if = {
+				limit = {
+					tag = ENG
+					ai = no
+						ENG = {
+							ai = yes
+					}
+				}
+				inherit = FRA
 			}
 			british_isles_region = {
 				limit = {
@@ -316,4 +325,656 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+
+	##################################
+	# Angevin Empire - Great Britain #
+	##################################
+
+	angevin_empire_england_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			primary_culture = english
+			tag = GBR
+			NOT = {
+				has_country_flag = formed_angevin_empire_great_britain_nation_flag
+				exists = ANG
+				tag = ANG
+				tag = PAP
+				tag = FRA
+				tag = EUR
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# London
+				province_id = 235
+				province_id = 236
+				province_id = 237
+				province_id = 4371
+					# East Anglia
+				province_id = 4370
+				province_id = 1860
+				province_id = 238
+					# Wessex
+				province_id = 233
+				province_id = 234
+				province_id = 4130
+				province_id = 4374
+				province_id = 4373
+					# Wales
+				province_id = 241
+				province_id = 4369
+					# West Midlands
+				province_id = 4372
+				province_id = 239
+				province_id = 240
+				province_id = 4375
+				province_id = 244
+					# Yorkshire
+				province_id = 245
+				province_id = 4367
+				province_id = 4368
+					# Scottish Marches
+				province_id = 246
+				province_id = 247
+					# Ireland
+				province_id = 373
+				province_id = 374
+					# Brittany
+				province_id = 4384
+				province_id = 172
+				province_id = 169
+				province_id = 171
+				province_id = 170
+					# Normandy
+				province_id = 4385
+				province_id = 168
+				province_id = 1879
+				province_id = 167
+					# Loire
+				province_id = 177
+				province_id = 4389
+				province_id = 178
+					# Poitou
+				province_id = 4386
+				province_id = 180
+				province_id = 4111
+				province_id = 4387
+					# Guyenne
+				province_id = 194
+				province_id = 4112
+					# Gascony
+				province_id = 174
+				province_id = 173
+				province_id = 175
+				province_id = 176
+					# Massif Central
+				province_id = 195
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = ANG }
+			is_subject = no
+			is_at_war = no
+			is_lesser_in_union = no
+			tag = GBR
+			custom_trigger_tooltip = {
+				tooltip = form_angevin_tt_1
+					# London
+				owns_core_province = 235
+				owns_core_province = 236
+				owns_core_province = 237
+				owns_core_province = 4371
+					# East Anglia
+				owns_core_province = 4370
+				owns_core_province = 1860
+				owns_core_province = 238
+					# Wessex
+				owns_core_province = 233
+				owns_core_province = 234
+				owns_core_province = 4130
+				owns_core_province = 4374
+				owns_core_province = 4373
+					# Wales
+				owns_core_province = 241
+				owns_core_province = 4369
+					# West Midlands
+				owns_core_province = 4372
+				owns_core_province = 239
+				owns_core_province = 240
+				owns_core_province = 4375
+				owns_core_province = 244
+					# Yorkshire
+				owns_core_province = 245
+				owns_core_province = 4367
+				owns_core_province = 4368
+					# Lower Scottish Marches
+				owns_core_province = 246
+				owns_core_province = 247
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_angevin_tt_4
+					# Brittany
+				owns_core_province = 4384
+				owns_core_province = 172
+				owns_core_province = 169
+				owns_core_province = 171
+				owns_core_province = 170
+					# Ireland
+				owns_core_province = 373
+				owns_core_province = 374
+			}
+			OR = {
+				GBR = {
+					AND = {
+					owns_core_province = 178
+					senior_union_with = FRA
+					FRA = {
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = GBR
+							years = 50
+							}
+							liberty_desire = 40
+						}
+					}
+				}
+				GBR = {
+					custom_trigger_tooltip = {
+						tooltip = form_angevin_tt_2
+							# Normandy
+						owns_core_province = 4385
+						owns_core_province = 168
+						owns_core_province = 1879
+						owns_core_province = 167
+							# Loire
+						owns_core_province = 177
+						owns_core_province = 4389
+						owns_core_province = 178
+					}
+					custom_trigger_tooltip = {
+						tooltip = form_angevin_tt_3
+							# Poitou
+						owns_core_province = 4386
+						owns_core_province = 180
+						owns_core_province = 4111
+						owns_core_province = 4387
+							# Guyenne
+						owns_core_province = 194
+						owns_core_province = 4112
+							# Gascony
+						owns_core_province = 174
+						owns_core_province = 173
+						owns_core_province = 175
+						owns_core_province = 176
+							# Massif Central
+						owns_core_province = 195
+						owns_core_province = 186
+					}
+				}
+			}
+		}
+	 	effect = {
+			change_tag = ANG
+			set_country_flag = formed_angevin_empire_england_nation_flag
+			ANG = {
+				add_prestige = 15
+				add_stability = 1
+				add_legitimacy = 50
+				add_inflation = 3
+				set_capital = 178 # Anjou
+				178 = {
+					add_base_tax = 2
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+			}
+			if = {
+				limit = {
+					tag = GBR
+					ai = no
+						GBR = {
+							ai = yes
+					}
+				}
+				inherit = FRA
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANG
+			}
+			france_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANG
+			}
+			custom_tooltip = dec1_decisions_blank
+			ANG = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			ANG = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = english_monarchy_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				add_government_reform = english_monarchy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			ANG = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ANG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	###########################
+	# Angevin Empire - France #
+	###########################
+
+	france_angevin_empire_france_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			primary_culture = francien
+			tag = FRA
+			NOT = {
+				has_country_flag = formed_angevin_empire_france_nation_flag
+				exists = ANG
+				tag = ANG
+				tag = PAP
+				tag = FRA
+				tag = EUR
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# London
+				province_id = 235
+				province_id = 236
+				province_id = 237
+				province_id = 4371
+					# East Anglia
+				province_id = 4370
+				province_id = 1860
+				province_id = 238
+					# Wessex
+				province_id = 233
+				province_id = 234
+				province_id = 4130
+				province_id = 4374
+				province_id = 4373
+					# Wales
+				province_id = 241
+				province_id = 4369
+					# West Midlands
+				province_id = 4372
+				province_id = 239
+				province_id = 240
+				province_id = 4375
+				province_id = 244
+					# Yorkshire
+				province_id = 245
+				province_id = 4367
+				province_id = 4368
+					# Scottish Marches
+				province_id = 246
+				province_id = 247
+					# Ireland
+				province_id = 373
+				province_id = 374
+					# Brittany
+				province_id = 4384
+				province_id = 172
+				province_id = 169
+				province_id = 171
+				province_id = 170
+					# Normandy
+				province_id = 4385
+				province_id = 168
+				province_id = 1879
+				province_id = 167
+					# Loire
+				province_id = 177
+				province_id = 4389
+				province_id = 178
+					# Poitou
+				province_id = 4386
+				province_id = 180
+				province_id = 4111
+				province_id = 4387
+					# Guyenne
+				province_id = 194
+				province_id = 4112
+					# Gascony
+				province_id = 174
+				province_id = 173
+				province_id = 175
+				province_id = 176
+					# Massif Central
+				province_id = 195
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = ANG }
+			is_subject = no
+			is_at_war = no
+			tag = FRA
+			custom_trigger_tooltip = {
+				tooltip = form_angevin_tt_1
+					# London
+				owns_core_province = 235
+				owns_core_province = 236
+				owns_core_province = 237
+				owns_core_province = 4371
+					# East Anglia
+				owns_core_province = 4370
+				owns_core_province = 1860
+				owns_core_province = 238
+					# Wessex
+				owns_core_province = 233
+				owns_core_province = 234
+				owns_core_province = 4130
+				owns_core_province = 4374
+				owns_core_province = 4373
+					# Wales
+				owns_core_province = 241
+				owns_core_province = 4369
+					# West Midlands
+				owns_core_province = 4372
+				owns_core_province = 239
+				owns_core_province = 240
+				owns_core_province = 4375
+				owns_core_province = 244
+					# Yorkshire
+				owns_core_province = 245
+				owns_core_province = 4367
+				owns_core_province = 4368
+					# Lower Scottish Marches
+				owns_core_province = 246
+				owns_core_province = 247
+			}
+				# Ireland
+			owns_core_province = 373
+			owns_core_province = 374
+			custom_trigger_tooltip = {
+				tooltip = form_angevin_tt_4
+				# Brittany
+				owns_core_province = 4384
+				owns_core_province = 172
+				owns_core_province = 169
+				owns_core_province = 171
+				owns_core_province = 170
+			}
+			OR = {
+				FRA = {
+					AND = {
+					owns_core_province = 178
+					senior_union_with = ENG
+					ENG = {
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = FRA
+							years = 50
+							}
+							liberty_desire = 40
+						}
+					}
+				}
+				ROOT = {
+					custom_trigger_tooltip = {
+						tooltip = form_angevin_tt_2
+							# Normandy
+						owns_core_province = 4385
+						owns_core_province = 168
+						owns_core_province = 1879
+						owns_core_province = 167
+							# Loire
+						owns_core_province = 177
+						owns_core_province = 4389
+						owns_core_province = 178
+					}
+					custom_trigger_tooltip = {
+						tooltip = form_angevin_tt_3
+							# Poitou
+						owns_core_province = 4386
+						owns_core_province = 180
+						owns_core_province = 4111
+						owns_core_province = 4387
+							# Guyenne
+						owns_core_province = 194
+						owns_core_province = 4112
+							# Gascony
+						owns_core_province = 174
+						owns_core_province = 173
+						owns_core_province = 175
+						owns_core_province = 176
+							# Massif Central
+						owns_core_province = 195
+						owns_core_province = 186
+					}
+				}
+			}
+		}
+	 	effect = {
+			change_tag = ANG
+			set_country_flag = formed_angevin_empire_france_nation_flag
+			ANG = {
+				add_prestige = 15
+				add_stability = 1
+				add_legitimacy = 50
+				add_inflation = 3
+				set_capital = 178 # Anjou
+				178 = {
+					add_base_tax = 2
+					add_base_production = 5
+					add_base_manpower = 1
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANG
+			}
+			france_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ANG
+			}
+			if = {
+				limit = {
+					tag = ENG
+					ai = no
+						ENG = {
+							ai = yes
+					}
+				}
+				inherit = FRA
+			}
+			custom_tooltip = dec1_decisions_blank
+			ANG = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			ANG = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = english_monarchy_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				add_government_reform = english_monarchy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			ANG = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ANG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
 }
