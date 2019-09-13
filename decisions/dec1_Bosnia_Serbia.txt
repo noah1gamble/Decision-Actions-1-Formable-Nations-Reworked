@@ -1,0 +1,188 @@
+country_decisions = {
+
+	bosnia_serbia_nation = {
+		major = yes
+		potential = {
+		normal_or_historical_nations = yes
+	  is_former_colonial_nation = no
+	  is_playing_custom_nation = no
+	  is_colonial_nation = no
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}
+			NOT = {
+				has_country_flag = formed_bosnia_serbia_nation
+				exists = BAS
+				tag = BAS
+				tag = YUG
+				tag = PAP
+				tag = YUG
+				tag = HLR
+				tag = SWI
+				tag = EUR
+			}
+			OR = {
+				primary_culture = serbian
+				primary_culture = bosnian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				# Balkans
+      	province_id = 141 # Serbia
+      	province_id = 3002 # Visoki
+      	province_id = 140 # Bosna
+      	province_id = 139 # Hum
+				province_id = 138 # Zeta
+				province_id = 1827 # Raska
+				province_id = 1831 # Travunia
+				province_id = 1828 # Donji Kraiji
+				province_id = 4239 # Nandorfehervar
+				province_id = 3002 # Nis
+				province_id = 1766 # Kosovo
+				province_id = 3001 # Uskup
+				province_id = 3000 # Nis
+				province_id = 4239 # Belgrade
+				province_id = 4173 # Syrmien
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = YUG }
+			is_subject = no
+			is_at_war = no
+			ROOT = {
+				owns_core_province = 141 # Serbia
+      	owns_core_province = 3002 # Visoki
+      	owns_core_province = 140 # Bosna
+      	owns_core_province = 139 # Hum
+				owns_core_province = 138 # Zeta
+				owns_core_province = 1827 # Raska
+				owns_core_province = 1831 # Travunia
+				owns_core_province = 1828 # Donji Kraiji
+				owns_core_province = 4239 # Nandorfehervar
+				owns_core_province = 3002 # Nis
+				owns_core_province = 1766 # Kosovo
+				owns_core_province = 3001 # Uskup
+				owns_core_province = 3000 # Nis
+				owns_core_province = 4239 # Belgrade
+				owns_core_province = 4173 # Syrmien
+			}
+		}
+	 	effect = {
+			change_tag = KBS
+			set_country_flag = formed_bosnia_serbia_nation
+			KBS = {
+				add_prestige = 20
+				add_legitimacy = 15
+				set_capital = 3002 # Visoki
+				3002 = {
+					add_base_tax = 4
+				}
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = serbian }
+				}
+				change_primary_culture = serbian
+			}
+			balkan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KBS
+			}
+			custom_tooltip = dec1_decisions_blank
+			KBS = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			KBS = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			KBS = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = KBS_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

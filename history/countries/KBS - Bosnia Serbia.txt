@@ -1,0 +1,18 @@
+primary_culture = serbian
+religion = christian
+technology_group = eastern
+capital = 3002
+
+1425.5.3 = {
+	heir = {
+		name = "Nikolis"
+		monarch_name = "Nikolis IV"
+		dynasty = "Nikolic"
+		birth_date = 1415.1.8
+		death_date = 1453.7.26
+		claim = 95
+		adm = 3
+		dip = 6
+		mil = 6
+	}
+}

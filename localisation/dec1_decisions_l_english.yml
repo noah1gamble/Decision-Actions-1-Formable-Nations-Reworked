@@ -51,8 +51,11 @@
  czechoslovakia_nation_title: "Form Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
 
- north_sea_empire_nation_title: "Form the North Sea Empire"
- north_sea_empire_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
+ north_sea_empire_general_nation_title: "Form the North Sea Empire"
+ north_sea_empire_general_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
+
+ north_sea_empire_england_nation_title: "Form the North Sea Empire"
+ north_sea_empire_england_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
  restore_roman_empire_nation_title: "Restoration of the Roman Empire"
  restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
@@ -78,8 +81,8 @@
  celtic_union_nation_title: "Form the Celtic Union"
  celtic_union_nation_desc: "Celticism is a political, social and cultural movement advocating solidarity and cooperation between Celtic nations; through conquest we are able to unite our people under one nation!"
 
- sweden-norway_nation_title: "Form Sweden-Norway"
- sweden-norway_nation_desc: "Sweden and Norway had been united under the same crown on two occasions: from 1319 to 1343 and briefly from 1449 to 1450 in opposition to Christian of Oldenburg who was elected king of the Kalmar Union by the Danes."
+ sweden_norway_nation_title: "Form Sweden-Norway"
+ sweden_norway_nation_desc: "Sweden and Norway had been united under the same crown on two occasions: from 1319 to 1343 and briefly from 1449 to 1450 in opposition to Christian of Oldenburg who was elected king of the Kalmar Union by the Danes."
 
  caucasia_nation_title: "Form Caucasia"
  caucasia_nation_desc: ""
@@ -138,8 +141,8 @@
  siebenbuergen_nation_title: "Form Siebenbuergen"
  siebenbuergen_nation_desc: "Siebenbuergen means "Seven Castles", named after the seven Transylvanian Saxons' cities. With the formation of a unified state through both diplomatic and militaristic means we are able to establish a new state based upon the foundation of our Germanic legacy."
 
- great_britain__england_nation_title: "Form Great Britain"
- great_britain__england_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
+ great_britain_england_nation_title: "Form Great Britain"
+ great_britain_england_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
 
  baltic_union_nation_title: "Form Baltic Union"
  baltic_union_nation_desc: ""
@@ -156,8 +159,14 @@
  papal_states_nation_title: "Restore the Papal States"
  papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
 
- spanish_nation_militarily_title: "Form Spain"
+ spanish_nation_militarily_title: "Unite Spain Militarily"
  spanish_nation_militarily_desc: ""
 
  spanish_nation_diplomatically_title: "Unite Spanish Nation"
  spanish_nation_diplomatically_desc: ""
+
+ armenia_republic_nation_title: "Form the Republic of Armenia"
+ armenia_republic_nation_desc: "Armenia is a nation, and former Soviet republic, in the mountainous Caucasus region between Asia and Europe. Among the earliest Christian civilizations, it’s defined by religious sites including the Greco-Roman Temple of Garni and 4th-century Etchmiadzin Cathedral, headquarters of the Armenian Church. Khor Virap Monastery is a pilgrimage site near Mount Ararat, a dormant volcano just across the border in Turkey."
+
+ bosnia_serbia_nation_title: "United Bosnia-Serbia"
+ bosnia_serbia_nation_desc: ""

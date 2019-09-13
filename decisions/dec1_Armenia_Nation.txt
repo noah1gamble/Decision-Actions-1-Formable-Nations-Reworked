@@ -1,5 +1,155 @@
 country_decisions = {
 
+	#######################
+	# Republic of Armenia #
+	#######################
+
+	armenia_republic_nation = {
+		major = yes
+		potential = {
+		normal_or_historical_nations = yes
+	  is_former_colonial_nation = no
+	  is_playing_custom_nation = no
+	  is_colonial_nation = no
+	  culture_group = armenian
+	    NOT = {
+	      primary_culture = turkish # Armenian Genocide
+	      has_country_flag = formed_arabia_nation_flag
+	      exists = ARB
+	      tag = ARB
+	      tag = HLR
+	      tag = PAP
+	    }
+	    OR = {
+	      ai = no
+	      AND = {
+	        ai = yes
+	        num_of_cities = 4
+	      }
+	    }
+	  }
+	  provinces_to_highlight = {
+	    OR = {
+					# Armenia
+	      province_id = 419
+	      province_id = 2205
+	    }
+	    OR = {
+	      NOT = { owned_by = ROOT }
+	      NOT = { is_core = ROOT }
+	    }
+		}
+		allow = {
+			NOT = { exists = ARM }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			religion = catholic
+			is_nomad = no
+			owns_core_province = 419
+			owns_core_province = 2205
+		}
+		effect = {
+		change_tag = ARM
+		set_country_flag = formed_armenia_republic_nation_flag
+		ARM = {
+			add_prestige = 10
+			add_legitimacy = 5
+			set_capital = 419 # Yerevan
+			419 = {
+				add_base_tax = 1
+				add_base_manpower = 3
+			}
+		}
+		armenia_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = ARM
+		}
+		custom_tooltip = dec1_decisions_blank
+		ARM = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = dec1_hre_province_removal
+				set_in_empire = no
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				emperor = {
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				custom_tooltip = dec1_decisions_blank
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		ARM = {
+			if = {
+				limit = {
+					NOT = {
+						government = republic
+						}
+					}
+				change_government = republic
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Dharma"
+						}
+					}
+				set_legacy_government = despotic_monarchy
+			}
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 1
+						}
+					}
+				set_government_rank = 1
+			}
+			add_government_reform = bureaucratic_despotism
+		}
+		custom_tooltip = dec1_decisions_spacing
+		ARM = {
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ARM_ideas }
+				}
+				country_event = { id = ideagroups.1 }
+			}
+			add_country_modifier = {
+				name = dec1_increased_centralization
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	ai_importance = 400
+	}
+
 	armenia_nation = {
 		major = yes
 		potential = {
@@ -20,7 +170,7 @@ country_decisions = {
 	      ai = no
 	      AND = {
 	        ai = yes
-	        num_of_cities = 8
+	        num_of_cities = 4
 	      }
 	    }
 	  }
