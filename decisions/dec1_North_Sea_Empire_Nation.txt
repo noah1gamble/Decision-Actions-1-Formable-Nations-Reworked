@@ -11,6 +11,17 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			OR = {
+				owns_core_province = 12
+				owns_core_province = 236
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
 			NOT = {
 				has_country_flag = formed_north_sea_empire_general_nation_flag
 				has_country_flag = formed_north_sea_empire_england_nation_flag
@@ -28,13 +39,6 @@ country_decisions = {
 				tag = IRE
 				tag = SNO
 				tag = EUR
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
 			}
 		}
 		provinces_to_highlight = {

@@ -12,6 +12,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			tag = MOS
+			primary_culture = russian # Muscovite
 			NOT = {
 				has_country_flag = formed_russian_nation_flag
 				exists = RUS
@@ -24,11 +25,6 @@ country_decisions = {
 				tag = TRR
 			}
 			OR = {
-				primary_culture = russian
-				primary_culture = ryazanian
-
-			}
-			OR = {
 				ai = no
 				AND = {
 					ai = yes
@@ -38,9 +34,9 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 295	# Moskva
-				province_id = 310	# Novgorod
-
+				region = russia_regian
+				province_id = 33
+				province_id = 295
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
