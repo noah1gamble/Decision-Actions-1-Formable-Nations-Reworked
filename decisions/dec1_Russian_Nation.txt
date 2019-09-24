@@ -34,10 +34,10 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = russia_region
 					# Russia
-				province_id = 295	# Moskva
-				province_id = 310	# Novgorod
+				region = russia_regian
+				province_id = 33
+				province_id = 295
 					# Urals
 				province_id = 2423
 				province_id = 306
@@ -265,10 +265,10 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = russia_region
 					# Russia
-				province_id = 295	# Moskva
-				province_id = 310	# Novgorod
+				region = russia_regian
+				province_id = 33
+				province_id = 295
 					# Urals
 				province_id = 2423
 				province_id = 306
