@@ -12,6 +12,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			tag = MOS
+			primary_culture = russian # Muscovite
 			NOT = {
 				has_country_flag = formed_russian_nation_flag
 				exists = RUS
@@ -24,11 +25,6 @@ country_decisions = {
 				tag = TRR
 			}
 			OR = {
-				primary_culture = russian
-				primary_culture = ryazanian
-
-			}
-			OR = {
 				ai = no
 				AND = {
 					ai = yes
@@ -38,12 +34,33 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
+				region = russia_region
+					# Russia
 				province_id = 295	# Moskva
 				province_id = 310	# Novgorod
-
+					# Urals
+				province_id = 2423
+				province_id = 306
+				province_id = 1957
+				province_id = 1083
+				province_id = 1079
+				province_id = 1755
+					# Kazan
+				province_id = 304
+				province_id = 2419
+				province_id = 473
+				province_id = 1081
+				province_id = 4267
+				province_id = 4264
+				province_id = 2422
+				province_id = 1082
+				province_id = 2421
+				province_id = 4265
+				province_id = 1972
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
+				# Subject one ?
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -59,6 +76,28 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 295			# Moskva
 			owns_core_province = 310			# Novgorod
+			custom_trigger_tooltip = {
+				tooltip = form_russian_nation_tt_1
+					# Urals
+				owns_core_province = 2423
+				owns_core_province = 306
+				owns_core_province = 1957
+				owns_core_province = 1083
+				owns_core_province = 1079
+				owns_core_province = 1755
+					# Kazan
+				owns_core_province = 304
+				owns_core_province = 2419
+				owns_core_province = 473
+				owns_core_province = 1081
+				owns_core_province = 4267
+				owns_core_province = 4264
+				owns_core_province = 2422
+				owns_core_province = 1082
+				owns_core_province = 2421
+				owns_core_province = 4265
+				owns_core_province = 1972
+			}
 			russia_region = {
 				type = all
 				owned_by = ROOT
@@ -226,12 +265,33 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
+				region = russia_region
+					# Russia
 				province_id = 295	# Moskva
 				province_id = 310	# Novgorod
-
+					# Urals
+				province_id = 2423
+				province_id = 306
+				province_id = 1957
+				province_id = 1083
+				province_id = 1079
+				province_id = 1755
+					# Kazan
+				province_id = 304
+				province_id = 2419
+				province_id = 473
+				province_id = 1081
+				province_id = 4267
+				province_id = 4264
+				province_id = 2422
+				province_id = 1082
+				province_id = 2421
+				province_id = 4265
+				province_id = 1972
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
+				# Subject one ?
 				NOT = { is_core = ROOT }
 			}
 		}

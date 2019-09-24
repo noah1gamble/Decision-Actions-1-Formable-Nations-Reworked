@@ -165,7 +165,7 @@ country_decisions = {
 							who = ENG
 							years = 50
 							}
-							liberty_desire = 40
+							NOT = { liberty_desire = 40 }
 						}
 					}
 				}
@@ -491,7 +491,7 @@ country_decisions = {
 							who = GBR
 							years = 50
 							}
-							liberty_desire = 40
+							NOT = { liberty_desire = 40 }
 						}
 					}
 				}
@@ -816,7 +816,7 @@ country_decisions = {
 							who = FRA
 							years = 50
 							}
-							liberty_desire = 40
+							NOT = { liberty_desire = 40 }
 						}
 					}
 				}

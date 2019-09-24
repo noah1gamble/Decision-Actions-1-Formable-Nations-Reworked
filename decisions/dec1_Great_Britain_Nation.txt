@@ -91,7 +91,7 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			custom_trigger_tooltip = {
-				tooltip = form_great-britain_tt_1
+				tooltip = form_great_britain_tt_1
 					# London
 				owns_core_province = 236
 				owns_core_province = 235
