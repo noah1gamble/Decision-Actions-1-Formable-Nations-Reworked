@@ -1,5 +1,9 @@
 country_decisions = {
 
+	##########################################################
+	# Arabian Empire - Culture (Turkish, Egyptian, Arabian ) #
+	##########################################################
+
 	arab_nation = {
 		major = yes
 		potential = {
@@ -7,6 +11,7 @@ country_decisions = {
 		is_former_colonial_nation = no
 		is_playing_custom_nation = no
 		is_colonial_nation = no
+		religion_group = muslim
 		culture_group = turko_semitic
 			NOT = {
 				primary_culture = turkish
@@ -22,24 +27,16 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 8
 				}
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 358			#Alexandria
-				province_id = 361			#Cairo
-				province_id = 377			#Aleppo
-				province_id = 379			#Jerusalem
-				province_id = 382			#Damascus
-				province_id = 384			#Medina
-				province_id = 385			#Mecca
-				province_id = 388			#Aden
-				province_id = 390			#Sanaa
-				province_id = 392			#Al-Arid
-				province_id = 394			#Qatif
-				province_id = 400			#Muscat
-				province_id = 403			#Nizwa
-				province_id = 410			#Baghdad
+				province_id = 361
+				region = egypt_region
+				province_id = 385
+				region = arabia_region
+				province_id = 410
+				region = mashriq_region
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -49,31 +46,26 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			adm_tech = 10
-			owns_core_province = 358			#Alexandria
-			owns_core_province = 361			#Cairo
-			owns_core_province = 377			#Aleppo
-			owns_core_province = 379			#Jerusalem
-			owns_core_province = 382			#Damascus
-			owns_core_province = 384			#Medina
-			owns_core_province = 385			#Mecca
-			owns_core_province = 388			#Aden
-			owns_core_province = 390			#Sanaa
-			owns_core_province = 392			#Al-Arid
-			owns_core_province = 394			#Qatif
-			owns_core_province = 400			#Muscat
-			owns_core_province = 403			#Nizwa
-			owns_core_province = 410			#Baghdad
+			adm_tech = 15
+			egypt_region = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 361
+			arabia_region = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 385
+			mashriq_region = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 410
 		}
 		effect = {
 		change_tag = ARB
 		set_country_flag = formed_arabia_nation_flag
-		if = {
-			limit = {
-				NOT = { primary_culture = turko_semitic }
-			}
-			change_primary_culture = algerian
-		}
 		ARB = {
 			add_prestige = 25
 			add_stability = 1
@@ -84,7 +76,12 @@ country_decisions = {
 				add_base_manpower = 5
 			}
 		}
-		custom_tooltip = dec1_decisions_spacing
+		if = {
+			limit = {
+				NOT = { primary_culture = al_misr_arabic }
+			}
+			change_primary_culture = al_misr_arabic
+		}
 		mashriq_region = {
 			limit = {
 				NOT = { owned_by = ROOT }

@@ -1,6 +1,6 @@
 country_decisions = {
 
-	caucasia_nation = {
+	macedon_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
@@ -8,12 +8,15 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
-				has_country_flag = formed_caucasia_nation_flag
-				exists = CAU
-				tag = CAU
+				has_country_flag = formed_macedon_nation_flag
+				exists = MAC
+				tag = MAC
+				tag = TUR
 				tag = PAP
-				tag = GEO
-				tag = EUR
+			}
+			OR = {
+				primary_culture = greek
+				primary_culture = serbian
 			}
 			OR = {
 				ai = no
@@ -22,79 +25,74 @@ country_decisions = {
 					num_of_cities = 6
 				}
 			}
-			OR = {
-				primary_culture = armenian
-				primary_culture = circassian
-				primary_culture = dagestani
-				primary_culture = georgian
-			}
 		}
 		provinces_to_highlight = {
-	    OR = {
-				# Cuacaisa
-				region = caucasia_region
-	    }
-	    OR = {
-	      NOT = { owned_by = ROOT }
-	      NOT = { is_core = ROOT }
-	    }
+			OR = {
+					# Macedon
+				province_id = 148
+				province_id = 1853
+				province_id = 3001
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			adm_tech = 5
+			NOT = { exists = MAC }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = CAU }
-				# Circassia
-			owns_core_province = 2195
-			owns_core_province = 463
-			owns_core_province = 2197
-			owns_core_province = 2201
-				# Imerti
-			owns_core_province = 1856
-			owns_core_province = 462
-			owns_core_province = 422
-				# Dagestan
-			owns_core_province = 2208
-			owns_core_province = 2199
-			owns_core_province = 2198
-			owns_core_province = 4306
-			owns_core_province = 425
-				# Kartli-Kakheti
-			owns_core_province = 4301
-			owns_core_province = 2203
-			owns_core_province = 423
-				# Samtske
-			owns_core_province = 2196
-			owns_core_province = 4303
-			owns_core_province = 2204
-				# Armenia
-			owns_core_province = 4302
-			owns_core_province = 419
-			owns_core_province = 420
-			owns_core_province = 2205
-			owns_core_province = 2202
-				# Shirvan
-			owns_core_province = 4340
-			owns_core_province = 424
-			owns_core_province = 421
-			owns_core_province = 4299
-			owns_core_province = 4305
+				# Macedon
+			owns_core_province = 148
+			owns_core_province = 1853
+			owns_core_province = 3001
 		}
 	 	effect = {
-			change_tag = CAU
-			set_country_flag = formed_caucasia_nation_flag
-			CAU = {
-				add_prestige = 15
-				add_legitimacy = 10
-				set_capital = 463 # Circassia
-				463 = {
+			change_tag = MAC
+			set_country_flag = formed_macedon_nation_flag
+			MAC = {
+				if = {
+					limit = {
+						NOT = { primary_culture = greek }
+					}
+					change_primary_culture = greek
+				}
+				if = {
+					limit = {
+						all_owned_province = {
+							NOT = { culture = greek }
+						}
+					}
+					all_owned_province = {
+						change_primary_culture = greek
+					}
+				}
+				set_capital = 148 # Selanik
+				add_prestige = 20
+				148 = {
 					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 3
+					add_base_production = 5
+					add_base_manpower = 2
 				}
 			}
+			macedonia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = EGY
+			}
 			custom_tooltip = dec1_decisions_blank
-			CAU = {
+			define_ruler = {
+					name = "Perseus II"
+					dynasty = "Antigonid"
+					dip = 5
+					mil = 6
+					age = 19
+					claim = 95
+			}
+			custom_tooltip = dec1_decisions_blank
+			MAC = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -130,7 +128,7 @@ country_decisions = {
 					}
 				}
 			}
-			CAU = {
+			MAC = {
 				if = {
 					limit = {
 						NOT = {
@@ -158,11 +156,11 @@ country_decisions = {
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
-			CAU = {
+			MAC = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = CAU_ideas }
+						NOT = { has_idea_group = MAC_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -174,7 +172,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400
+		ai_importance = 300
 	}
 
 }

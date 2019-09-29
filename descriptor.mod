@@ -1,4 +1,4 @@
-version="1.29.*.*"
+version="1.29.1.0"
 tags={
 	"Gameplay"
 	"Fixes"

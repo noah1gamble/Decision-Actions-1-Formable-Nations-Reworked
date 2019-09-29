@@ -57,7 +57,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = YUG }
+			NOT = { exists = KBS }
 			is_subject = no
 			is_at_war = no
 			ROOT = {
