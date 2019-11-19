@@ -1,0 +1,141 @@
+country_decisions = {
+
+	australia_nation = {
+		major = yes
+		potential = {
+			is_playing_custom_nation = no
+			colonial_australia = { owned_by = ROOT }
+			NOT = {
+				has_country_flag = changed_from_colonial_nation
+				exists = AUS
+				tag = AUS
+				tag = PAP
+			}
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = AUS }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			capital_scope = {
+				colonial_region = colonial_australia
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = AUS
+			set_country_flag = changed_from_colonial_nation
+			AUS = {
+				add_prestige = 15
+				set_capital = 1090 # Sydney
+				1090 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 2
+				}
+			}
+			colonial_australia = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = AUS
+			}
+			custom_tooltip = dec1_decisions_blank
+			AUS = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			AUS = {
+				if = {
+					limit = {
+						NOT = {
+							government = republic
+							}
+						}
+					change_government = republic
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = merchant_republic
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				add_government_reform = merchants_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			AUS = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = AUS_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+
+}

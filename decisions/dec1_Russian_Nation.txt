@@ -35,7 +35,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 					# Russia
-				region = russia_regian
+				region = russia_region
 				province_id = 33
 				province_id = 295
 					# Urals
@@ -266,7 +266,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 					# Russia
-				region = russia_regian
+				region = russia_region
 				province_id = 33
 				province_id = 295
 					# Urals
@@ -328,7 +328,7 @@ country_decisions = {
 				owns_core_province = 2421
 				owns_core_province = 4265
 				owns_core_province = 1972
-			}			
+			}
 			russia_region = {
 				type = all
 				owned_by = ROOT

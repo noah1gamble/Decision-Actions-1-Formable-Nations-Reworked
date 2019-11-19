@@ -3,7 +3,7 @@ country_decisions = {
 	#################################################################
 	# Gods Kingdom - Pope Disables the Papacy upon conquering Italy #
 	#################################################################
-	
+
 	gods_kingdom = {
 		major = yes
 		potential = {
@@ -16,11 +16,11 @@ country_decisions = {
 			owns_core_province = 118
 			tag = PAP
 			exists = PAP
-			NOT = { 
+			NOT = {
 				has_country_modifier = kingdom_of_god
-				has_country_modifier = formed_papal_states_nation_flag
+				#has_country_modifier =formed_papal_states_nation_flag
 				exists = ITA
-				exists = NAP				
+				exists = NAP
 				tag = NAP
 				tag = ITA
 			}
@@ -28,7 +28,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 8
 				}
 			}
 		}
@@ -75,7 +75,7 @@ country_decisions = {
 		effect = {
 			country_event  = { id = catholic_flavor.2 }
 			custom_tooltip = dec1_kingdom_of_god_claims
-			hidden_effect = { 
+			hidden_effect = {
 				every_province = {
 					limit = {
 						region = italy_region
@@ -89,11 +89,11 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
+
 	##########################################################
 	# Gods Kingdom - General (Any nation can disable papacy) #
 	##########################################################
-	
+
 	gods_kingdom_general = {
 		major = yes
 		potential = {
@@ -104,9 +104,8 @@ country_decisions = {
 			technology_group = western
 			religion_group = christian
 			owns_core_province = 118
-			NOT = { 
+			NOT = {
 				has_country_modifier = kingdom_of_god
-				has_country_modifier = formed_papal_states_nation_flag
 				exists = PAP
 				exists = ITA
 				exists = NAP
@@ -165,7 +164,7 @@ country_decisions = {
 		effect = {
 			country_event  = { id = catholic_flavor.2 }
 			custom_tooltip = dec1_kingdom_of_god_claims
-			hidden_effect = { 
+			hidden_effect = {
 				every_province = {
 					limit = {
 						region = italy_region
@@ -178,6 +177,10 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
-	
+	}
+
+	#TODO Gods Kingdom - Papal states - inherit catholics
+
+	#TODO Rejuvination - Any italian catholic, reenable the papacy
+
 }

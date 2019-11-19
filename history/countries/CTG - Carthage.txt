@@ -1,0 +1,15 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = tunisian
+technology_group = muslim
+capital = 341	# Tunis
+
+550.1.1 = {
+	monarch = {
+		name = "Mago I"
+		dynasty = "Magonids"
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}

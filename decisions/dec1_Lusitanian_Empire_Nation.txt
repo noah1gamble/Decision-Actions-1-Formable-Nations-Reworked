@@ -1,0 +1,388 @@
+country_decisions = {
+
+	lusitanian_empire_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			culture_group = iberian
+			NOT = {
+				has_country_flag = formed_lusitanian_empire_nation_flag
+				exists = LSE
+				tag = LSE
+				tag = PAP
+				tag = HLR
+				tag = FRA
+				tag = SPR
+				tag = CAS
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Portuguese cores
+				area = beieras_area
+				area = alentejo_area
+				province_id = 1749
+				province_id = 17440
+					# Various colonies
+				province_id = 1751
+				province_id = 334
+				province_id = 342
+				province_id = 4564
+				province_id = 2469
+				province_id = 345
+				province_id = 1111
+				province_id = 1096
+				province_id = 1114
+				province_id = 1139
+				province_id = 1097
+				province_id = 1306
+				region = kongo_region
+					# South African colonies
+				area = butua_area
+				area = zimbabwe_area
+				area = quelimane_area
+				province_id = 1183
+				province_id = 1186
+				area = limpopo_area
+					# East African colonies
+				area = mozambique_area
+				area = uticulo_makuana_area
+				area = shire_area
+				area = upper_zambezi_area
+				area = ruvuma_area
+				area = ngonde_area
+				province_id = 4029
+				province_id = 1201
+				province_id = 1202
+				province_id = 1203
+				province_id = 2796
+				province_id = 1099
+				province_id = 388
+				province_id = 4279
+				province_id = 394
+				province_id = 396
+				province_id = 2999
+				province_id = 398
+				province_id = 399
+				province_id = 400
+				province_id = 4455
+				province_id = 2051
+				province_id = 4457
+				province_id = 517
+				province_id = 4430
+				province_id = 529
+				province_id = 2089
+				province_id = 2030
+				province_id = 531
+				province_id = 2029
+				province_id = 4413
+				province_id = 534
+				province_id = 535
+				province_id = 537
+				province_id = 536
+				province_id = 2026
+				province_id = 540
+				province_id = 539
+				province_id = 543
+				province_id = 2084
+				province_id = 549
+				province_id = 561
+				province_id = 568
+				province_id = 4399
+				province_id = 586
+				province_id = 596
+				province_id = 668
+				province_id = 4182
+				province_id = 649
+				province_id = 641
+				province_id = 2695
+				province_id = 635
+				province_id = 633
+				province_id = 572
+				province_id = 4408
+				province_id = 2100
+				province_id = 4409
+					# Brazil colony
+				province_id = 501
+				region = brazil_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = LSE }
+			is_subject = no
+			is_at_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_lusitanian_empire_nation_tt_1
+				has_idea = global_empire
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_lusitanian_empire_nation_tt_2
+					# Portuguese cores
+				beieras_area = {
+					type = all
+					owned_by = ROOT
+				}
+				alentejo_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 1749
+				owns_core_province = 1744
+				}
+				custom_trigger_tooltip = {
+					tooltip = form_lusitanian_empire_nation_tt_5
+						# Various african colonies
+					owns_core_province = 1751
+					owns_core_province = 334
+					owns_core_province = 342
+					owns_core_province = 4564
+					owns_core_province = 2469
+					owns_core_province = 345
+					owns_core_province = 1111
+					owns_core_province = 1096
+					owns_core_province = 1114
+					owns_core_province = 1139
+					owns_core_province = 1097
+					owns_core_province = 1306
+					kongo_region = {
+						type = all
+						owned_by = ROOT
+					}
+						# East African colonies
+					mozambique_area = {
+						type = all
+						owned_by = ROOT
+					}
+					uticulo_makuana_area = {
+						type = all
+						owned_by = ROOT
+					}
+					shire_area = {
+						type = all
+						owned_by = ROOT
+					}
+					upper_zambezi_area = {
+						type = all
+						owned_by = ROOT
+					}
+					ruvuma_area = {
+						type = all
+						owned_by = ROOT
+					}
+					ngonde_area = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = form_lusitanian_empire_nation_tt_4
+						# Various colonies
+					owns_core_province = 4029
+					owns_core_province = 1201
+					owns_core_province = 1202
+					owns_core_province = 1203
+					owns_core_province = 2796
+					owns_core_province = 1099
+					owns_core_province = 388
+					owns_core_province = 4279
+					owns_core_province = 394
+					owns_core_province = 396
+					owns_core_province = 2999
+					owns_core_province = 398
+					owns_core_province = 399
+					owns_core_province = 400
+					owns_core_province = 4455
+					owns_core_province = 2051
+					owns_core_province = 4457
+					owns_core_province = 517
+					owns_core_province = 4430
+					owns_core_province = 529
+					owns_core_province = 2089
+					owns_core_province = 2030
+					owns_core_province = 531
+					owns_core_province = 2029
+					owns_core_province = 4413
+					owns_core_province = 534
+					owns_core_province = 535
+					owns_core_province = 537
+					owns_core_province = 536
+					owns_core_province = 2026
+					owns_core_province = 540
+					owns_core_province = 539
+					owns_core_province = 543
+					owns_core_province = 2084
+					owns_core_province = 549
+					owns_core_province = 561
+					owns_core_province = 568
+					owns_core_province = 4399
+					owns_core_province = 586
+					owns_core_province = 596
+					owns_core_province = 668
+					owns_core_province = 4182
+					owns_core_province = 649
+					owns_core_province = 641
+					owns_core_province = 2695
+					owns_core_province = 635
+					owns_core_province = 633
+					owns_core_province = 572
+					owns_core_province = 4408
+					owns_core_province = 2100
+					owns_core_province = 4409
+				}
+					# Brazil colony
+				owns_core_province = 501
+				custom_trigger_tooltip = {
+					tooltip = form_lusitanian_empire_nation_tt_3
+						# South African colonies
+					butua_area = {
+						type = all
+						owned_by = ROOT
+					}
+					zimbabwe_area = {
+						type = all
+						owned_by = ROOT
+					}
+					quelimane_area = {
+						type = all
+						owned_by = ROOT
+					}
+					owns_core_province = 1183
+					owns_core_province = 1186
+					limpopo_area = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+				OR = {
+					brazil_region = {
+						type = all
+						owned_by = ROOT
+					}
+					any_subject_country = {
+						is_colonial_nation = yes
+						capital_scope = {
+							colonial_region = colonial_brazil
+					}
+				}
+			}
+		}
+	 	effect = {
+			change_tag = LSE
+			set_country_flag = formed_lusitanian_empire_nation_flag
+			LSE = {
+				add_prestige = 10
+				add_legitimacy = 35
+				set_capital = 227 # Lisboa
+				227 = {
+					add_base_tax = 4
+					add_base_production = 1
+				}
+			}
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LSE
+			}
+			custom_tooltip = dec1_decisions_blank
+			LSE = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			LSE = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			LSE = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = LSE_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+			# The Feitorias Crisis
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

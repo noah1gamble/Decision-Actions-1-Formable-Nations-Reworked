@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = armenian
+religion = coptic
+technology_group = eastern
+capital = 419	# Yerevan
+
+95.1.1 = {
+	monarch = {
+		name = "Tigranes the Great"
+		monarch_name = "Tigranes II"
+		dynasty = "Artaxiad"
+		birth_date = 95.1.1 # NOTE not accurate, lived 55 BC to 140 BC
+		death_date = 120.1.1
+		adm = 5
+		dip = 5
+		mil = 6
+	}
+}

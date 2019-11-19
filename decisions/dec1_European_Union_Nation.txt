@@ -3,13 +3,12 @@ country_decisions = {
 	europe_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			technology_group = western
 			religion_group = christian
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_europe_nation_flag
 				exists = EUR
 				tag = EUR
@@ -27,7 +26,8 @@ country_decisions = {
 				tag = ADU
 				tag = IBE
 				tag = FIB
-			}			
+				tag = LSE
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -35,73 +35,73 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 30
 				}
-			}		
+			}
 			OR = {
 				culture_group = british
 				culture_group = germanic
 				culture_group = iberian
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
 					# Holland
-				region = low_countries_region	
+				region = low_countries_region
 					# England
 				region = british_isles_region
 					# France
-				region = france_region	
+				region = france_region
 					# Italy
-				region = italy_region					
+				region = italy_region
 					# Germany
-				region = north_german_region	
-				region = south_german_region	
+				region = north_german_region
+				region = south_german_region
 					# Iberia
-				region = iberia_region	
+				region = iberia_region
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 20
-			NOT = { exists = EUR }		
+			NOT = { exists = EUR }
 			is_subject = no
 			is_at_war = no
 			ROOT = {
 				low_countries_region = {
 					type = all
 					owned_by = ROOT
-				}			
+				}
 				owns_core_province = 92 # Brabant
 				british_isles_region = {
 					type = all
 					owned_by = ROOT
-				}				
+				}
 				owns_core_province = 236 # London
 				france_region = {
 					type = all
 					owned_by = ROOT
-				}				
+				}
 				owns_core_province = 183 # Paris
 				italy_region = {
 					type = all
 					owned_by = ROOT
-				}					
+				}
 				owns_core_province = 118 # Roma
 				north_german_region = {
 					type = all
 					owned_by = ROOT
-				}	
+				}
 				south_german_region = {
 					type = all
 					owned_by = ROOT
-				}					
+				}
 				owns_core_province = 50 # Berlin
 				iberia_region = {
 					type = all
 					owned_by = ROOT
-				}				
+				}
 				owns_core_province = 217 # Madrid
 				owns_core_province = 227 # Lisboa
 			}
@@ -113,16 +113,16 @@ country_decisions = {
 				add_prestige = 35
 				add_legitimacy = 30
 				add_stability = 2
-				add_inflation = 3				
+				add_inflation = 3
 				set_capital = 92 # Brabant
-				92 = { 
+				92 = {
 					add_base_tax = 5
 					add_base_production = 5
 					add_base_manpower = 5
 				}
 			}
 			custom_tooltip = dec1_decisions_blank
-			EUR = {		
+			EUR = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -133,18 +133,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -159,30 +159,30 @@ country_decisions = {
 				}
 			}
 			EUR = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
 							}
 						}
 					set_government_rank = 3
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -193,16 +193,16 @@ country_decisions = {
 						NOT = { has_idea_group = EUR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}			
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 250	
+		ai_importance = 250
 	}
 
 }

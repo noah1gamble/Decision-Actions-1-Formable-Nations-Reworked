@@ -1,9 +1,9 @@
 ﻿l_english:
- 
+
  ######################
  # IDEAS LOCALISATION #
  ######################
- 
+
  AHE_ideas: "Austro-Hungarian Ideas"
  AHE_political_maneuvering: "Austro-Hungarian Political Maneuvering"
  AHE_political_maneuvering_desc: "TODO"
@@ -19,16 +19,19 @@
  AHE_austrian_dynastic_success_desc: "TODO"
  AHE_monarchy_of_the_habsburgs: "Monarchy of the Habsburgs"
  AHE_monarchy_of_the_habsburgs_desc: "TODO"
- 
+
  CIS_ideas: "Cisalpina Ideas"
- 
+
+ LSE_ideas: "Lusitanian Ideas"
+ LSE_ideas_start: "Lusitanian Traditions"
+ LSE_ideas_bonus: "Lusitanian Ideas"
+
  ADU_ideas: "Andalusian Ideas"
- 
+
  ADR_ideas: "Adriatic Ideas"
- 
+
  ALG_ideas: "Algerian Ideas"
- 
+
  ##########################
  # END IDEAS LOCALISATION #
  ##########################
- 

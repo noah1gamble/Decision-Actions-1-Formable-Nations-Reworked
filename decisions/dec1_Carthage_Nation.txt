@@ -1,0 +1,202 @@
+country_decisions = {
+
+	carthage_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = {
+				has_country_flag = formed_carthage_empire_nation_flag
+				exists = CTG
+				tag = PAP
+				tag = CTG
+				tag = LSE
+			}
+			OR = {
+				culture_group = maghrebi
+				culture_group = iberian
+				culture_group = latin
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Carthage Cores
+				area = tunisia_area
+				area = djerba_area
+				area = tripolitania_area
+				area = barbary_coast_area
+				province_id = 4562
+				area = northern_morocco_area
+				province_id = 342
+				province_id = 4564
+				province_id = 2469
+				province_id = 333
+				area = corsica_sardinia_area
+				province_id = 125
+				province_id = 124
+				province_id = 2982
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = CTG }
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 341
+			OR = {
+				owns_core_province = 125
+				owns_core_province = 1247
+				owns_core_province = 226
+				owns_core_province = 333
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_carthage_nation_tt_1
+					# Carthage Cores
+					tunisia_area = {
+						type = all
+						owned_by = ROOT
+					}
+					djerba_area = {
+						type = all
+						owned_by = ROOT
+					}
+					tripolitania_area = {
+						type = all
+						owned_by = ROOT
+					}
+					barbary_coast_area = {
+						type = all
+						owned_by = ROOT
+					}
+					northern_morocco_area = {
+						type = all
+						owned_by = ROOT
+					}
+					corsica_sardinia_area = {
+						type = all
+						owned_by = ROOT
+					}
+				owns_core_province = 4562
+				owns_core_province = 342
+				owns_core_province = 4564
+				owns_core_province = 2469
+				owns_core_province = 333
+				owns_core_province = 125
+				owns_core_province = 124
+				owns_core_province = 2982
+			}
+		}
+	 	effect = {
+			change_tag = CTG
+			set_country_flag = formed_carthage_empire_nation_flag
+			CTG = {
+				add_prestige = 40
+				set_capital = 341 # Carthage
+				341 = {
+					add_base_tax = 1
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+			}
+			341 = { rename_capital = "Carthage" }
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CTG
+			}
+			italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = CTG
+			}
+			custom_tooltip = dec1_decisions_blank
+			CTG = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			CTG = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			CTG = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CTG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

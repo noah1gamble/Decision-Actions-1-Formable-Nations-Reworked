@@ -10,7 +10,9 @@
 
  dec1_papal_influence: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!"
 
- dec1_formed_spain_add_claims: "§YSpain§! gains a permanent claim on §YIberia§! Region."
+ form_spanish_nation_tt_1: "Owns core region: §YIberia§!"
+
+ form_spanish_nation_claims: "§YSpain§! gains a permanent claim on §YIberia§! Region."
 
  form_united_kingdom_tt_1: "Owns core region: §YEngland§!"
  form_united_kingdom_tt_2: "Owns core region: §YScotland§!"
@@ -55,6 +57,29 @@
 
  form_russian_nation_tt_1: "Owns all core §YRussian§! provinces"
 
- ################
- # END TOOLTIPS #
- ################
+ form_carthage_nation_tt_1: "Owns all core §YCarthage§! provinces"
+
+ form_lusitanian_empire_nation_tt_1: "Has §YExploration Ideas§!: §YGlobal Empire§!"
+ form_lusitanian_empire_nation_tt_2: "Owns all cores of §YPortugal§!"
+ form_lusitanian_empire_nation_tt_3: "Owns all cores in §YSouth Africa§!"
+ form_lusitanian_empire_nation_tt_4: "Owns all various §YColonial Possessions§!"
+ form_lusitanian_empire_nation_tt_5: "Owns all cores in §YCentral Africa§!"
+
+ form_german_nation_tt_1: "Owns all core §YNorthern§! provinces of the §YGerman Kingdom§!"
+ form_german_nation_tt_2: "Owns all core §YSouthern§! provinces of the §YGerman Kingdom§!"
+
+ form_bharat_nation_tt_1: "Owns all cores of §YBharat§!"
+
+ ######################
+ # OTHER LOCALISATION #
+ ######################
+
+ dec1_decisions_spacing: "\n"
+
+ dec1_decisions_blank: "        "
+
+ #####################
+ # FLAG LOCALISATION #
+ #####################
+
+ LSE_all_feitorias_completed: "All Feitorias Completed"

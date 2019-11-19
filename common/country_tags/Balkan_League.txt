@@ -1,1 +1,1 @@
-BNL = "countries/Balkan_League.txt"
+BKL = "countries/Balkan_League.txt"

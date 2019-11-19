@@ -3,7 +3,6 @@ country_decisions = {
 	french_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -28,7 +27,7 @@ country_decisions = {
 			NOT = { exists = FRA }
 			is_at_war = no
 			is_subject = no
-			is_nomad = no			
+			is_nomad = no
 			france_region = {
 				type = all
 				owned_by = ROOT
@@ -38,7 +37,7 @@ country_decisions = {
 		effect = {
 			change_tag = FRA
 			set_country_flag = formed_french_nation_flag
-			FRA = {				
+			FRA = {
 				add_prestige = 25
 				set_capital = 183 # Paris
 				104 = {
@@ -47,7 +46,7 @@ country_decisions = {
 				}
 			}
 			custom_tooltip = dec1_decisions_blank
-			FRA = {		
+			FRA = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -58,18 +57,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -84,30 +83,30 @@ country_decisions = {
 				}
 			}
 			FRA = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
 							}
 						}
 					set_government_rank = 2
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -118,15 +117,15 @@ country_decisions = {
 						NOT = { has_idea_group = FRA_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}			
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
+
 }

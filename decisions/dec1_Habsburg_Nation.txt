@@ -1,18 +1,24 @@
 country_decisions = {
 
+	# Form Austria - As Styria
+
 	habsburg_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_austria_flag }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			primary_culture = austrian
+			tag = STY
+			NOT = {
+				has_country_flag = formed_austria_flag
+				tag = HAB
+				exists = HAB
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			tag = STY
-			primary_culture = austrian
-			NOT = { tag = HAB }
 			OR = {
 				NOT = { exists = HAB }
 				ai = no
@@ -29,7 +35,7 @@ country_decisions = {
 			NOT = { exists = HAB }
 			has_regency = no
 			is_free_or_tributary_trigger = yes
-			is_nomad = no			
+			is_nomad = no
 			is_at_war = no
 			owns = 134
 		}
@@ -56,5 +62,5 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
+
 }

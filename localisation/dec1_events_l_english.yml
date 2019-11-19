@@ -1,0 +1,21 @@
+﻿l_english:
+
+ ##########
+ # Events #
+ ##########
+
+ # Lusitanian Empire
+
+ flavor_lse.1.EVTNAME: "The Merchants Arrive"
+ flavor_lse.1.EVTDESC: "The Merchants are here boys"
+ flavor_lse.1.EVTOPTA: "Interesting.."
+
+ flavor_lse.2.EVTNAME: "The Founding of a new Feitoria"
+ flavor_lse.2.EVTDESC: "Merchants want to found a new Feitoria in $PROVINCE$! They are willing to give us credit and make a fort right away, but in exchange we have to pay then every month for ten years! If we do not do so, the local population might see weakness and try to rebel!"
+ flavor_lse.2.EVTOPTA: "Let's accept the deal!"
+ flavor_lse.2.EVTOPTA: "We can't afford to accept it now.."
+ flavor_lse.2.EVTOPTA: "No, we don't want to make a Feitoria in $PROVINCE$"
+
+ ##############
+ # END EVENTS #
+ ##############

@@ -1,5 +1,5 @@
 primary_culture = serbian
-religion = christian
+religion = catholic
 technology_group = eastern
 capital = 3002
 

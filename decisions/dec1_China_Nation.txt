@@ -6,8 +6,8 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_china_nation_flag
 				exists = CHN
 				tag = CHN
@@ -19,7 +19,7 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 40
 				}
-			}			
+			}
 			OR = {
 				primary_culture = cantonese
 				primary_culture = gan
@@ -51,7 +51,7 @@ country_decisions = {
 			}
 			NOT = { owned_by = ROOT }
 			NOT = { is_core = ROOT }
-		}		
+		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = CHN }
@@ -71,12 +71,12 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 679 # Chengdu	
+			owns_core_province = 679 # Chengdu
 			tibet_region = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 2133 # Dege	
+			owns_core_province = 2133 # Dege
 		}
 	 	effect = {
 			change_tag = CHN
@@ -85,12 +85,12 @@ country_decisions = {
 				add_prestige = 20
 				add_legitimacy = 10
 				add_stability = -1
-				add_inflation = 5			
+				add_inflation = 5
 				set_capital = 1816 # Beijing
-				1816 = { 
-					add_base_tax = 6
-					add_base_production = 6
-					add_base_manpower = 3
+				1816 = {
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
 				}
 			}
 			liaoning_area = {
@@ -98,7 +98,7 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = CHN
-			}			
+			}
 			korea_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -106,7 +106,7 @@ country_decisions = {
 				add_permanent_claim = CHN
 			}
 			custom_tooltip = dec1_decisions_blank
-			CHN = {		
+			CHN = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -117,18 +117,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -143,30 +143,30 @@ country_decisions = {
 				}
 			}
 			CHN = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
 							}
 						}
 					set_government_rank = 3
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -177,16 +177,16 @@ country_decisions = {
 						NOT = { has_idea_group = CHN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400	
+		ai_importance = 400
 	}
 
-}	
+}

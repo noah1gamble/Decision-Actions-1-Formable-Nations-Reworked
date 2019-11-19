@@ -1,11 +1,10 @@
 country_decisions = {
-	
+
 	# The Austro-Hungarian Empire - Austria - Conquest Formation
-	
+
 	austro_hungarian_empire_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -14,7 +13,7 @@ country_decisions = {
 				primary_culture = austrian
 				primary_culture = hungarian
 				primary_culture = czech
-			}						
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -22,20 +21,20 @@ country_decisions = {
 					num_of_cities = 10
 				}
 			}
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_austro_hungarian_empire_nation_flag
 				exists = AHE
 				tag = AHE
 				tag = HBE
-				tag = PAP 
+				tag = PAP
 				tag = HLR
 				tag = TUR
 				tag = EUR
-			}			
+			}
 		}
 		provinces_to_highlight = {
-			OR = {	
-					# Upper Bavaria (AUSTRIA)	
+			OR = {
+					# Upper Bavaria (AUSTRIA)
 				province_id = 76
 					# Austria Proper
 				province_id = 134
@@ -92,7 +91,7 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5
 			NOT = { exists = AHE }
@@ -100,7 +99,7 @@ country_decisions = {
 			is_at_war = no
 			custom_trigger_tooltip = {
 				tooltip = form_austro_hungarian_empire_tt_1
-					# Upper Bavaria (AUSTRIA)	
+					# Upper Bavaria (AUSTRIA)
 				owns_core_province = 76
 					# Austria Proper
 				owns_core_province = 134
@@ -117,10 +116,10 @@ country_decisions = {
 					# Tirol
 				owns_core_province = 73
 				owns_core_province = 110
-				owns_core_province = 1768					
+				owns_core_province = 1768
 			}
-			custom_trigger_tooltip = { 
-				tooltip = form_austro_hungarian_empire_tt_2		
+			custom_trigger_tooltip = {
+				tooltip = form_austro_hungarian_empire_tt_2
 					# Transdanubia (HUNGARY)
 				owns_core_province = 153
 				owns_core_province = 4126
@@ -147,11 +146,11 @@ country_decisions = {
 				owns_core_province = 1952
 				owns_core_province = 4127
 				owns_core_province = 158
-			}					
+			}
 		}
 	 	effect = {
 			change_tag = AHE
-			set_country_flag = formed_austro_hungarian_empire_nation_flag	
+			set_country_flag = formed_austro_hungarian_empire_nation_flag
 			if = {
 				limit = {
 					OR = {
@@ -167,7 +166,7 @@ country_decisions = {
 				add_stability = 1
 				add_inflation = 1
 				set_capital = 134 # Wien
-				134 = { 
+				134 = {
 					add_base_tax = 2
 					add_base_manpower = 1
 				}
@@ -175,9 +174,9 @@ country_decisions = {
 					add_base_tax = 1
 					add_base_production = 1
 				}
-			}					
+			}
 			custom_tooltip = dec1_decisions_blank
-			AHE = {		
+			AHE = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -188,18 +187,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -214,30 +213,30 @@ country_decisions = {
 				}
 			}
 			AHE = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
 							}
 						}
 					set_government_rank = 3
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -248,10 +247,10 @@ country_decisions = {
 						NOT = { has_idea_group = AHE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
+				}
 			}
 		}
 		ai_will_do = {
@@ -259,13 +258,13 @@ country_decisions = {
 		}
 		ai_importance = 300
 	}
-	
+
 	# The Austro-Hungarian Empire - Austria - Diplomatically
-	
+
 	# The Austro-Hungarian Empire - Hungary - Conquest
-	
+
 	# The Austro-Hungarian Empire - Hungary - Diplomatically
-	
+
 	# The Austro-Hungarian Empire - Austria/Hungary - Compromise of 1867
-	
+
 }

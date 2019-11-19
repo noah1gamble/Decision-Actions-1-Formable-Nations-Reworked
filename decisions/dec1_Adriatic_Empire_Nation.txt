@@ -3,10 +3,11 @@ country_decisions = {
 	adriatic_empire_nation = {
 		major = yes
 		potential = {
+			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no			
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_adriatic_empire_nation_flag
 				exists = ADR
 				tag = PAP
@@ -45,7 +46,7 @@ country_decisions = {
 				province_id = 119
 				province_id = 120
 					# Apulia
-				province_id = 2985 
+				province_id = 2985
 				province_id = 1933
 				province_id = 122
 					# Carniola
@@ -61,20 +62,20 @@ country_decisions = {
 				province_id = 4174
 				province_id = 4175
 				province_id = 143
-				
+
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = ADR }
 			is_subject = no
 			is_at_war = no
 			custom_trigger_tooltip = {
-				tooltip = form_adriatic_empire_tt_1			
+				tooltip = form_adriatic_empire_tt_1
 					# Venitia
 				owns_core_province = 112
 				owns_core_province = 1774
@@ -88,7 +89,7 @@ country_decisions = {
 				owns_core_province = 119
 				owns_core_province = 120
 					# Apulia
-				owns_core_province = 2985 
+				owns_core_province = 2985
 				owns_core_province = 1933
 				owns_core_province = 122
 					# Carniola
@@ -108,13 +109,13 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ADR
-			set_country_flag = formed_adriatic_empire_nation_flag			
+			set_country_flag = formed_adriatic_empire_nation_flag
 			ADR = {
 				add_prestige = 20
 				set_capital = 112 # Venezia
-				112 = { 
-					add_base_tax = 8
-					add_base_production = 4
+				112 = {
+					add_base_tax = 2
+					add_base_production = 2
 				}
 			}
 			italy_region = {
@@ -122,15 +123,15 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ADR
-			}	
+			}
 			balkan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ADR
-			}		
+			}
 			custom_tooltip = dec1_decisions_blank
-			ADR = {		
+			ADR = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -141,18 +142,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -167,30 +168,30 @@ country_decisions = {
 				}
 			}
 			ADR = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = republic
-							}	
+							}
 						}
 					change_government = republic
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = merchant_republic
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
 							}
 						}
 					set_government_rank = 3
-				}				
+				}
 				add_government_reform = merchants_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -201,11 +202,11 @@ country_decisions = {
 						NOT = { has_idea_group = ADR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}			
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

@@ -9,11 +9,10 @@ country_decisions = {
 			is_colonial_nation = no
 			technology_group = western
 			religion_group = christian
-			NOT = { 
-				has_country_modifier = formed_papal_states_nation_flag
+			NOT = {
 				has_country_modifier = kingdom_of_god
 				exists = ITA
-				exists = PAP				
+				exists = PAP
 				tag = ITA
 				tag = PAP
 			}
@@ -28,18 +27,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 101	# Genoa
-				province_id = 103	# Torino
-				province_id = 104	# Milano
-				province_id = 106	# Modena
-				province_id = 110	# Trento
-				province_id = 111	# Udine / Aquileia
-				province_id = 112	# Venice
-				province_id = 114	# Bologna + Ravenna
-				province_id = 116	# Firenze
-				province_id = 115	# Pisa
-				province_id = 119	# Ancona + Fermo
-				province_id = 2976	# Perugia
-				province_id = 2977	# Pesaro
+					#TODO papal provinces
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -50,30 +38,16 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			#Ecclesiastical provinces of Northern Italy
-			owns_core_province = 101	# Genoa
-			owns_core_province = 103	# Torino
-			owns_core_province = 104	# Milano
-			owns_core_province = 106	# Modena
-			owns_core_province = 110	# Trento
-			owns_core_province = 111	# Udine / Aquileia
-			owns_core_province = 112	# Venice
-			owns_core_province = 114	# Bologna + Ravenna
-			owns_core_province = 116	# Firenze
-			owns_core_province = 115	# Pisa
-			owns_core_province = 119	# Ancona + Fermo
-			owns_core_province = 2976	# Perugia
-			owns_core_province = 2977	# Pesaro
+			#TODO papal provinces
 		}
 		effect = {
 			change_tag = PAP
-			set_country_flag = formed_papal_states_nation_flag
-			PAP = {				
+			#set_country_flag = formed_papal_states_nation_flag
+			PAP = {
 				add_prestige = 100
 				set_capital = 118 # Roma
 				118 = {
-					add_base_tax = 10
-					add_base_production = 10
+					add_base_tax = 6
 				}
 			}
 			if = {
@@ -81,7 +55,7 @@ country_decisions = {
 					NOT = { primary_culture = lombard }
 				}
 				change_primary_culture = lombard
-			}			
+			}
 			central_italy_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -89,7 +63,7 @@ country_decisions = {
 				add_permanent_claim = PAP
 			}
 			custom_tooltip = dec1_decisions_blank
-			PAP = {		
+			PAP = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -100,18 +74,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -126,30 +100,30 @@ country_decisions = {
 				}
 			}
 			PAP = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = theocracy
-							}	
+							}
 						}
 					change_government = theocracy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = papal_government
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
 							}
 						}
 					set_government_rank = 2
-				}				
+				}
 				add_government_reform = papacy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -160,14 +134,14 @@ country_decisions = {
 						NOT = { has_idea_group = PAP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
+				}
 			}
 			# event for all nations to announce revival of papal states
 			custom_tooltip = dec1_papal_influence # all italian nations gain papal influence
-			hidden_effect = { 
+			hidden_effect = {
 				every_country = {
 					limit = {
 						region = italy_region
@@ -181,5 +155,5 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
+
 }

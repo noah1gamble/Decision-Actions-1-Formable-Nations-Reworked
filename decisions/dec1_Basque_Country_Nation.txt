@@ -3,41 +3,38 @@ country_decisions = {
 	basque_country_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
+			primary_culture = basque
 			NOT = {
 				has_country_flag = formed_basque_country_nation_flag
 				exists = BSQ
-				tag = PAP 
+				tag = PAP
 				tag = BSQ
 				tag = HLR
 				tag = IBE
 				tag = SPA
 				tag = EUR
-				tag = FIB 
-			}		
-			OR = {
-				primary_culture = basque
+				tag = FIB
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 210 # Navarra
 				province_id = 209 # Vizcaya
-				province_id = 173 # Labourd				
+				province_id = 173 # Labourd
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = BSQ }		
+			NOT = { exists = BSQ }
 			owns_core_province = 210 # Navarra
 			owns_core_province = 209 # Vizcaya
 			owns_core_province = 173 # Labourd
@@ -48,16 +45,16 @@ country_decisions = {
 			BSQ = {
 			add_prestige = 15
 			add_legitimacy = 10
-			add_stability = 2			
+			add_stability = 2
 				set_capital = 209 # Vizcaya
-				217 = { 
+				217 = {
 					add_base_tax = 5
 					add_base_production = 5
 					add_base_manpower = 5
 				}
 			}
 			custom_tooltip = dec1_decisions_blank
-			BSQ = {		
+			BSQ = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -68,18 +65,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -94,30 +91,30 @@ country_decisions = {
 				}
 			}
 			BSQ = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
 							}
 						}
 					set_government_rank = 2
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -128,16 +125,16 @@ country_decisions = {
 						NOT = { has_idea_group = BSQ_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}		
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
-	}	
+	}
 
 }

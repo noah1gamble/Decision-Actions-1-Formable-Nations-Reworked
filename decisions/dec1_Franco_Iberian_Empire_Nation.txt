@@ -7,7 +7,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_franco_iberia_nation_flag
 				exists = FIB
 				tag = PAP
@@ -16,6 +16,7 @@ country_decisions = {
 				tag = GRA
 				tag = ADU
 				tag = EUR
+				tag = LSE
 			}
 			OR = {
 				culture_group = iberian
@@ -35,7 +36,7 @@ country_decisions = {
 			adm_tech = 10
 			NOT = { exists = FIB }
 			is_subject = no
-			is_at_war = no	
+			is_at_war = no
 			france_region = {
 				type = all
 				owned_by = ROOT
@@ -49,60 +50,43 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				france_region = {
-					type = all
-					owned_by = ROOT
-				}
-				iberia_region = {
-					type = all
-					owned_by = ROOT
-				}
-				owns_core_province = 219				
+				owns_core_province = 219
+				region = france_region
+				region = iberia_region
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 	 	effect = {
 			change_tag = FIB
 			set_country_flag = formed_franco_iberia_nation_flag
 			FIB = {
-				add_prestige = 70
-				add_legitimacy = 70
-				add_stability = 2
-				add_inflation = 3			
+				add_prestige = 30
+				add_legitimacy = 10
+				add_inflation = 1
 				set_capital = 197 # Roussillon
-				197 = { 
-					add_base_tax = 25
-					add_base_production = 3
-					add_base_manpower = 15
-				}
-				183 = { 
-					add_base_tax = 5
+				197 = {
+					add_base_tax = 3
 					add_base_production = 5
-					add_base_manpower = 5
+					add_base_manpower = 3
 				}
-				219 = { 
-					add_base_tax = 5
-					add_base_production = 5
-					add_base_manpower = 5
-				}					
-			}			
+			}
 			france_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = FIB
-			}			
+			}
 			iberia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = FIB
-			}			
+			}
 			custom_tooltip = dec1_decisions_blank
-			FIB = {		
+			FIB = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -113,18 +97,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -139,30 +123,30 @@ country_decisions = {
 				}
 			}
 			FIB = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
 							}
 						}
 					set_government_rank = 3
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -173,15 +157,15 @@ country_decisions = {
 						NOT = { has_idea_group = FIB_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 380			
+		ai_importance = 380
 	}
 }

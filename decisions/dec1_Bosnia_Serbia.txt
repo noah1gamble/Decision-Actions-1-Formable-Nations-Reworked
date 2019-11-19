@@ -3,20 +3,18 @@ country_decisions = {
 	bosnia_serbia_nation = {
 		major = yes
 		potential = {
-		normal_or_historical_nations = yes
-	  is_former_colonial_nation = no
-	  is_playing_custom_nation = no
-	  is_colonial_nation = no
+		  is_former_colonial_nation = no
+		  is_playing_custom_nation = no
+		  is_colonial_nation = no
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
 					num_of_cities = 6
 				}
 			}
 			NOT = {
-				has_country_flag = formed_bosnia_serbia_nation
+				has_country_flag = formed_bosnia_serbia_nation_flag
 				exists = BAS
 				tag = BAS
 				tag = YUG
@@ -80,7 +78,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = KBS
-			set_country_flag = formed_bosnia_serbia_nation
+			set_country_flag = formed_bosnia_serbia_nation_flag
 			KBS = {
 				add_prestige = 20
 				add_legitimacy = 15

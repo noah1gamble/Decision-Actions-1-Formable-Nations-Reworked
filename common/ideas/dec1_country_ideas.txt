@@ -1,9 +1,3 @@
-# Do not change tags in here without changing every other reference to them.
-# Do not change tags in here without changing every other reference to them.
-# If adding new groups or ideas, make sure they are unique.
-
-
-
 ### Formable Nations specific idea groups
 
 AHE_ideas = { # The Austro-Hungarian Empire
@@ -53,9 +47,9 @@ CIS_ideas = { # Cisalpina Republic
 	}
 	bonus = {
 		state_maintenance_modifier = -0.20 # Effective State & Goverment
-	}	
-	CIS_harsh_general_training = { 
-		harsh_treatment_cost = -0.4	# Harsh General Training 
+	}
+	CIS_harsh_general_training = {
+		harsh_treatment_cost = -0.4	# Harsh General Training
 	}
 	CIS_papal_decree = {
 		papal_influence = 0.8 # Papal Decree of Autonomy
@@ -77,19 +71,42 @@ CIS_ideas = { # Cisalpina Republic
 	}
 }
 
-HBE_ideas = { # The Austrian Empire
+LSE_ideas = { # Lusitanian Empire
+	start = {
+		trade_range_modifier = 0.35
+		trade_efficiency = 0.50
+	}
+
+	bonus = {
+		global_tariffs = 0.25
+	}
 
 	trigger = {
-		tag = HBE
+		tag = LSE
 	}
-	free = yes	# will be added at load.
-	start = {
-		land_morale = 0.1 = -0.1 # 
-		discipline = 0.1 #
-	}
-	bonus = {
-		imperial_authority = 0.15 # 
-		reform_progress_growth = 0.1
-	}
+	free = yes		#will be added at load.
 
+	legacy_of_the_navigator = {
+		range = 0.30
+		global_sailors_modifier = 0.30
+	}
+	afonsine_ordinances = {
+		global_trade_goods_size_modifier = 0.2
+	}
+	case_de_india = {
+		global_trade_power = 0.2
+	}
+	the_bandeirantes = {
+		merchants = 2
+	}
+	royal_absolutism = {
+		build_cost = -0.20
+		yearly_absolutism = 0.2
+	}
+	land_before_faith = {
+		global_colonial_growth = 25
+	}
+	open_up_the_guilds = {
+		trade_efficiency = 0.2
+	}
 }

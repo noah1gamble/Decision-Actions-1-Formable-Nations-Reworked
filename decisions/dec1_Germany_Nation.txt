@@ -1,15 +1,17 @@
 country_decisions = {
 
-	german_nation = {
+	# Kingdom of Germany
+
+	german_kingdom_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			NOT = {
+				government = theocracy
 				has_country_flag = formed_germany_nation_flag
-				exists = GER 
+				exists = GER
 				tag = GER
 				tag = PAP
 				tag = HLR
@@ -19,18 +21,10 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 15
-					adm_tech = 15
+					num_of_cities = 6
 				}
 			}
 			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					NOT = { government = theocracy }
-				}
-			}
-			OR = {  
 				primary_culture = hannoverian #Westphalian
 				primary_culture = pommeranian
 				primary_culture = hessian
@@ -43,22 +37,31 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# Germany
-				region = north_german_region	
-				region = south_german_region				
-				province_id = 50	# Berlin
-				AND = {
-                    province_id = 41
-                    ROOT = { 
-						NOT = { owns_core_province = 75 } 
-					}
-                }
-                AND = {
-                    province_id = 75
-                    ROOT = { 
-						NOT = { owns_core_province = 41 } 
-					}
-                }
+				area = holstein_area
+				area = mecklenburg_area
+				area = lower_saxony_area
+				area = weser_area
+				area = vorpommern_area
+				area = mittelmark_area
+				area = northern_saxony_area
+				area = braunschweig_area
+				area = westphalia_area
+				area = hesse_area
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = south_saxony_area
+				area = palatinate_area
+				area = franconia_area
+				area = upper_rhineland_area
+				area = lower_swabia_area
+				area = lower_bavaria_area
+				area = upper_swabia_area
+				area = thuringia_area
+				province_id = 1763
+				province_id = 1931
+				province_id = 188
+				province_id = 2955
+				province_id = 65
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -66,61 +69,152 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 20
+			adm_tech = 10
+			NOT = { exists = GER }
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
 			is_emperor = no
-			north_german_region = {
-				type = all
-				owned_by = ROOT
-			}	
-			south_german_region = {
-				type = all
-				owned_by = ROOT
-			}					
-			owns_core_province = 50 # Berlin			
-			OR = {
-				owns_core_province = 41	# Königsberg
-				owns_core_province = 75	# Strassburg
+			owns_core_province = 50 # Berlin
+			custom_trigger_tooltip = { # North German Stuff
+				tooltip = form_german_nation_tt_1
+				holstein_area = {
+					type = all
+					owned_by = ROOT
+				}
+				mecklenburg_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				weser_area = {
+					type = all
+					owned_by = ROOT
+				}
+				vorpommern_area = {
+					type = all
+					owned_by = ROOT
+				}
+				mittelmark_area = {
+					type = all
+					owned_by = ROOT
+				}
+				northern_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				braunschweig_area = {
+					type = all
+					owned_by = ROOT
+				}
+				westphalia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				hesse_area = {
+					type = all
+					owned_by = ROOT
+				}
+				north_rhine_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_rhineland_area = {
+					type = all
+					owned_by = ROOT
+				}
+				south_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 1763
+				owns_core_province = 1931
+			}
+			custom_trigger_tooltip = { # South German Stuff
+				tooltip = form_german_nation_tt_2
+				palatinate_area = {
+					type = all
+					owned_by = ROOT
+				}
+				franconia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				upper_rhineland_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_swabia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_bavaria_area = {
+					type = all
+					owned_by = ROOT
+				}
+				upper_swabia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 188
+				owns_core_province = 189
+				owns_core_province = 2955
+				owns_core_province = 65
 			}
 		}
 		effect = {
 			change_tag = GER
+			swap_non_generic_missions = yes
 			set_country_flag = formed_germany_nation_flag
 			GER = {
-				add_prestige = 20				
+				add_prestige = 20
 				set_capital = 50 # Berlin
-				50 = { 
-					add_base_tax = 3
+				50 = {
+					add_base_tax = 1
 					add_base_production = 1
-					add_base_manpower = 6
+					add_base_manpower = 3
 				}
 			}
+			north_germany_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GER
+			}
+			south_germany_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GER
+			}
 			custom_tooltip = dec1_decisions_blank
-			GER = {		
+			GER = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					custom_tooltip = dec1_hre_province_removal
 					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
 				}
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -135,30 +229,30 @@ country_decisions = {
 				}
 			}
 			GER = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
-							has_dlc = "Dharma"
-							}	
-						}
-					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
 							}
 						}
-					set_government_rank = 3
-				}				
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -169,15 +263,309 @@ country_decisions = {
 						NOT = { has_idea_group = GER_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}			
+				}
+			}
 		}
 		ai_will_do = {
-			factor = 400
+			factor = 1
 		}
+		ai_importance = 400
+	}
+
+	# German Empire
+
+	german_empire_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = {
+				government = theocracy
+				has_country_flag = formed_german_empire_nation_flag
+				exists = GEP
+				exists = GER
+				tag = GEP
+				tag = GER
+				tag = PAP
+				tag = HLR
+				tag = ROM
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+			OR = {
+				primary_culture = hannoverian #Westphalian
+				primary_culture = pommeranian
+				primary_culture = hessian
+				primary_culture = saxon
+				primary_culture = bavarian
+				#primary_culture = prussian # Prussians must form Prussia first!
+					#TODO figure out a solution for catholic teuton players
+				primary_culture = swabian
+				primary_culture = franconian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wielkopolska_area
+				area = silesia_area
+				area = kuyavia_area
+				area = west_prussia_area
+				area = east_prussia_area
+				area = holstein_area
+				area = mecklenburg_area
+				area = lower_saxony_area
+				area = weser_area
+				area = vorpommern_area
+				area = mittelmark_area
+				area = northern_saxony_area
+				area = braunschweig_area
+				area = westphalia_area
+				area = hesse_area
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = south_saxony_area
+				area = palatinate_area
+				area = franconia_area
+				area = upper_rhineland_area
+				area = lower_swabia_area
+				area = lower_bavaria_area
+				area = upper_swabia_area
+				area = thuringia_area
+				province_id = 1763
+				province_id = 1931
+				province_id = 188
+				province_id = 2955
+				province_id = 65
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = GEP }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_emperor = no
+			owns_core_province = 50 # Berlin
+			custom_trigger_tooltip = { # North German Stuff
+				tooltip = form_german_empire_nation_tt_1
+				east_prussia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				west_prussia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				kuyavia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				silesia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				wielkopolska_area = {
+					type = all
+					owned_by = ROOT
+				}
+				holstein_area = {
+					type = all
+					owned_by = ROOT
+				}
+				mecklenburg_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				weser_area = {
+					type = all
+					owned_by = ROOT
+				}
+				vorpommern_area = {
+					type = all
+					owned_by = ROOT
+				}
+				mittelmark_area = {
+					type = all
+					owned_by = ROOT
+				}
+				northern_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				braunschweig_area = {
+					type = all
+					owned_by = ROOT
+				}
+				westphalia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				hesse_area = {
+					type = all
+					owned_by = ROOT
+				}
+				north_rhine_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_rhineland_area = {
+					type = all
+					owned_by = ROOT
+				}
+				south_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 1763
+				owns_core_province = 1931
+			}
+			custom_trigger_tooltip = { # South German Stuff
+				tooltip = form_german_empire_nation_tt_2
+				palatinate_area = {
+					type = all
+					owned_by = ROOT
+				}
+				franconia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				upper_rhineland_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_swabia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_bavaria_area = {
+					type = all
+					owned_by = ROOT
+				}
+				upper_swabia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 188
+				owns_core_province = 189
+				owns_core_province = 2955
+				owns_core_province = 65
+			}
+		}
+		effect = {
+			change_tag = GEP
+			swap_non_generic_missions = yes
+			set_country_flag = formed_germany_nation_flag
+			GEP = {
+				add_prestige = 20
+				set_capital = 50 # Berlin
+				50 = {
+					add_base_tax = 2
+					add_base_production = 1
+					add_base_manpower = 2
+				}
+			}
+			custom_tooltip = dec1_decisions_blank
+			GEP = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+						remove_non_electors_emperors_from_empire_effect = yes
+					}
+				}
+			}
+			GEP = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			GEP = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = GEP_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
 }

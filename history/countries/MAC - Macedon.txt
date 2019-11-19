@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = greek
+religion = orthodox
+technology_group = eastern
+capital = 148	# Macedon
+
+1425.1.1 = {
+	monarch = {
+		name = "Perseus II"
+		dynasty = "Antigonid"
+		adm = 5
+		dip = 4
+		mil = 6
+	}
+}

@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = autocracy_reform
+add_government_reform = autocracy_reform # TODO Angevin government reform
 primary_culture = english
 add_accepted_culture = cosmopolitan_french
 religion = catholic
@@ -7,32 +7,31 @@ technology_group = western
 historical_rival = HAB
 historical_rival = SPA
 historical_rival = DAN
-capital = 178 
-national_focus = MIL
+national_focus = DIP
+capital = 178
 
-1216.9.28 = { 
+1216.9.28 = {
 	monarch = {
-		name = "Henry"
+		name = "Henry of Winchester"
 		monarch_name = "Henry III"
-		dynasty = "Plantagenet"
-		birth_date = 1216.9.28
-		death_date = 1272.10.16
-		adm = 4
-		dip = 6
-		mil = 5
-	}
-}
-
-
-1444.12.1 = { 
-	monarch = {
-		name = "Henry"
-		monarch_name = "Henry IV"
-		dynasty = "Plantagenet"
-		birth_date = 1432.5.26
-		adm = 6
+		dynasty = "Angevin" # Plantagenet/Angevin
+		birth_date = 1207.10.1
+		death_date = 1272.11.16
+		adm = 5
 		dip = 4
-		mil = 5
+		mil = 6
 	}
 }
 
+1189.1.1 = {
+	monarch = {
+		name = "Richard the Lionheart"
+		monarch_name = "Richard I"
+		dynasty = "Angevin" # Plantagenet/Angevin
+		birth_date = 1157.9.8
+		death_date = 1199.4.6
+		adm = 4
+		dip = 4
+		mil = 6
+	}
+}

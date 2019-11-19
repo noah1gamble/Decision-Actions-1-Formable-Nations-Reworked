@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = oligarchy_reform # TODO parlimentary republic reform
+primary_culture = armenian
+religion = coptic
+technology_group = eastern
+capital = 419	# Yerevan
+
+#TODO historical leaders

@@ -3,7 +3,6 @@ country_decisions = {
 	macedon_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -64,7 +63,7 @@ country_decisions = {
 							NOT = { culture = greek }
 						}
 					}
-					all_owned_province = {
+					every_owned_province = {
 						change_primary_culture = greek
 					}
 				}
@@ -76,6 +75,7 @@ country_decisions = {
 					add_base_manpower = 2
 				}
 			}
+			148 = { rename_capital = "Macedon" }
 			macedonia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -86,7 +86,8 @@ country_decisions = {
 			define_ruler = {
 					name = "Perseus II"
 					dynasty = "Antigonid"
-					dip = 5
+					adm = 5
+					dip = 4
 					mil = 6
 					age = 19
 					claim = 95
