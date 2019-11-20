@@ -3,18 +3,21 @@ country_decisions = {
 	deccan_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_deccan_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				NOT = { exists = DEC }
-				ai = no
-			}
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
 			religion_group = muslim
+			NOT = {
+				has_country_flag = formed_deccan_nation_flag
+				exists = MUG
+				exists = BHA
+				exists = HIN
+				exists = DEC
+				tag = MUG
+				tag = BHA
+				tag = HIN
+				tag = DEC
+		 	}
 			OR = {
 				culture_group = dravidian
 				primary_culture = marathi
@@ -23,32 +26,13 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
-				}
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					num_of_cities = 6
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1948 #Bidar
-				province_id = 542 #Hyderabad
-				province_id = 569 #Bijapur
-				province_id = 544 #Ahmednagar
-				province_id = 548 #Ilichpur
-				province_id = 541 #Vijayanagar
-				province_id = 2089 #Chaul
-				province_id = 543 #Velanadu
-				province_id = 2027 #Arcot
-				province_id = 4421 #Seringapatam
-				province_id = 531 #Bhatkal
-				province_id = 539 #Madras
+				region = deccan_region
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -58,44 +42,138 @@ country_decisions = {
 		allow = {
 			NOT = { exists = DEC }
 			is_at_war = no
-			adm_tech = 20
+			adm_tech = 5
 			is_free_or_tributary_trigger = yes
-			owns_core_province = 1948 #Bidar
-			owns_core_province = 542 #Hyderabad
-			owns_core_province = 569 #Bijapur
-			owns_core_province = 544 #Ahmednagar
-			owns_core_province = 548 #Ilichpur
-			owns_core_province = 541 #Vijayanagar
-			owns_core_province = 2089 #Chaul
-			owns_core_province = 543 #Velanadu
-			owns_core_province = 2027 #Arcot
-			owns_core_province = 4421 #Seringapatam
-			owns_core_province = 531 #Bhatkal
-			owns_core_province = 539 #Madras
+			custom_trigger_tooltip = { # Deccan region
+				tooltip = form_deccan_nation_tt_1
+				deccan_region = {
+					type = all
+					owned_by = ROOT
+				}
+			}
 		}
 		effect = {
 			change_tag = DEC
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			set_government_rank = 3
+			set_country_flag = formed_bharat_nation_flag
+			set_country_flag = united_indian_country_nation_flag # a unified Indian Kingdom or Empire
+			DEC = {
+				add_prestige = 20
+				set_capital = 522 # Delhi
+				522 = {
+					add_base_tax = 2
+					add_base_production = 3
+					add_base_manpower = 2
+				}
+			}
+			bengal_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BHA
+			}
+			hindusthan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BHA
+			}
+			west_india_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BHA
+			}
 			deccan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = DEC
+				add_permanent_claim = BHA
 			}
 			coromandel_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = DEC
+				add_permanent_claim = BHA
 			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+			custom_tooltip = dec1_decisions_blank
+			DEC = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
 			}
-			set_country_flag = formed_deccan_flag
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			DEC = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
+				add_government_reform = autocracy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			DEC = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = DEC_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
