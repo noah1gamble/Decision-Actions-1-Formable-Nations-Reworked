@@ -4,10 +4,9 @@ country_decisions = {
 	# Angevin Empire - England #
 	############################
 
-	angevin_empire_england_nation = {
+	angevin_empire_nation_england = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -330,10 +329,9 @@ country_decisions = {
 	# Angevin Empire - Great Britain #
 	##################################
 
-	angevin_empire_england_nation = {
+	angevin_empire_nation_gb = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -656,10 +654,9 @@ country_decisions = {
 	# Angevin Empire - France #
 	###########################
 
-	france_angevin_empire_france_nation = {
+	france_angevin_empire_nation_france = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no

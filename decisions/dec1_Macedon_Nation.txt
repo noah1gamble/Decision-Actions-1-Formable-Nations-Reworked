@@ -1,5 +1,9 @@
 country_decisions = {
 
+	###################
+	# Macedon Kingdom #
+	###################
+
 	macedon_nation = {
 		major = yes
 		potential = {
@@ -175,5 +179,13 @@ country_decisions = {
 		}
 		ai_importance = 300
 	}
+
+	#####################
+	# Macedonian Empire #
+	#####################
+
+	#####################
+	# Alexanders Empire #
+	#####################
 
 }

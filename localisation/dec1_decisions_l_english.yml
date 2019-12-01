@@ -1,5 +1,9 @@
 ﻿l_english:
 
+  # NOTE: Sorted by New Custom Nations and then Reworked Vanilla Nations
+
+  # NOTE: New Custom Nations - New Custom Nations - New Custom Nations
+
  benelux_nation_title: "Form the Benelux Union"
  benelux_nation_desc: "The name Benelux is formed from joining the first two or three letters of each country's name – Belgium, Netherlands, Luxembourg – and was first used to name the customs agreement that initiated the union. the unification of the Dutch, Wallonian and Flemish provinces in Europe brings the Benelux a gigantic economic impetus and makes it a mighty European state."
 
@@ -51,14 +55,14 @@
  czechoslovakia_nation_title: "Form Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
 
- north_sea_empire_general_nation_title: "Form the North Sea Empire"
- north_sea_empire_general_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
+ north_sea_empire_nation_title: "The North Sea Empire"
+ north_sea_empire_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
- north_sea_empire_england_nation_title: "Form the North Sea Empire"
- north_sea_empire_england_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
+ north_sea_empire_nation_england_title: "Form the North Sea Empire"
+ north_sea_empire_nation_england_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
- restore_roman_empire_nation_title: "Restoration of the Roman Empire"
- restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
+ north_sea_empire_nation_denmark_title: "The North Sea Empire under Danish Rule"
+ north_sea_empire_nation_denmark_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
  rhine_confederation_nation_title: "Form the Rhine Confederation"
  rhine_confederation_nation_desc: "Napoleon had annexed for France all the left bank of the Rhine, but the new Confederation gradually extended from the Rhine to the Elbe. It was at first welcomed by the German people as a step towards unity, but it was really a barrier against Prussian and Austrian power."
@@ -70,7 +74,10 @@
  turkey_nation_desc: "The Republic of Turkey was created after the overthrow of Sultan Mehmet VI Vahdettin by the new Republican Parliament in 1922. This new regime delivered the coup de grâce to the Ottoman state which had been practically wiped away from the world stage following the First World War."
 
  china_nation_title: "Form China"
- china_nation_desc: "The earliest known written records of the history of China date from as early as 1250 BC, from the Shang dynasty 1600–1046 BC, during the king Wu Ding's reign."
+ china_nation_desc: "The last days of the Qing dynasty in the late 19th and early 20th centuries were marked by civil unrest and foreign invasions. Various internal rebellions caused millions of deaths, and conflicts with foreign Western European powers almost always resulted in humiliating unequal treaties that exacted costly reparations and compromised the country's territorial integrity. In addition, there were sentiments that political power should return to the majority Han Chinese from the minority Manchus from the northeastern province of Manchuria."
+
+ peoples_republic_of_china_nation_title: "Proclaim the People's Republic"
+ peoples_republic_of_china_nation_desc: "The People's Republic of China was formally proclaimed by Mao Zedong, the Chairman of the Communist Party of China, on 1 October 1949 at 3:00 pm in Tiananmen Square in Beijing while the new capital Nanking had been the capital of the former Republic of China."
 
  europe_nation_title: "Form the European Union"
  europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress."
@@ -93,6 +100,8 @@
  united_kingdom_nation_title: "Form the United Kingdom"
  united_kingdom_nation_desc: ""
 
+ #NOTE: ADD SCOTLAND AS UK
+
  maghrebia_nation_title: "Form Maghreb"
  maghrebia_nation_desc: "Maghreb; also spelled Maghrib, region of North Africa bordering the Mediterranean Sea. The Africa Minor of the ancients, it at one time included Moorish Spain and now comprises essentially the Atlas Mountains and the coastal plain of Morocco, Algeria, Tunisia, and Libya."
 
@@ -111,7 +120,7 @@
  alsace_lorraine_nation_title: "Form Alsace-Lorraine"
  alsace_lorraine_nation_desc: "he Imperial Territory of Alsace-Lorraine was a territory created by the German Empire in 1871, after it annexed most of Alsace and the Moselle department of Lorraine following its victory in the Franco-Prussian War."
 
- franco_iberia_nation_title: "Form Franco-Iberia"
+ franco_iberia_nation_title: "the Franco-Iberian Union"
  franco_iberia_nation_desc: "The Franco-Iberian Empire is is a cultural hegemony consisting of Portugal, Spain, France under one Emperor"
 
  hesse_nassau_nation_title: "Form Hesse-Nassau"
@@ -126,11 +135,11 @@
  emilia_romagna_nation_title: "Form Emilia-Romagna"
  emilia_romagna_nation_desc: "Emilia-Romagna is one of the wealthiest and most developed regions in Europe, unifying it as one kingdom will allow us to conquer many foes."
 
- angevin_empire_england_nation_title: "Form the Angevin Empire"
- angevin_empire_england_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
+ angevin_empire_nation_england_title: "Form the Angevin Empire"
+ angevin_empire_nation_england_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
- angevin_empire_france_nation_title: "Form the Angevin Empire"
- angevin_empire_france_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
+ angevin_empire_nation_france_title: "Form the Angevin Empire"
+ angevin_empire_nation_france_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
  bremen_verden_nation_title: "Form Bremen-Verden"
  bremen_verden_nation_desc: ""
@@ -140,9 +149,6 @@
 
  siebenbuergen_nation_title: "Form Siebenbuergen"
  siebenbuergen_nation_desc: "Siebenbuergen means "Seven Castles", named after the seven Transylvanian Saxons' cities. With the formation of a unified state through both diplomatic and militaristic means we are able to establish a new state based upon the foundation of our Germanic legacy."
-
- great_britain_england_nation_title: "Form Great Britain"
- great_britain_england_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
 
  baltic_union_nation_title: "Form Baltic Union"
  baltic_union_nation_desc: ""
@@ -158,12 +164,6 @@
 
  papal_states_nation_title: "Restore the Papal States"
  papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
-
- spanish_nation_militarily_title: "Unite Spain Militarily"
- spanish_nation_militarily_desc: ""
-
- spanish_nation_diplomatically_title: "Unite Spanish Nation"
- spanish_nation_diplomatically_desc: ""
 
  armenia_kingdom_nation_title: "Restore the Kingdom of Armenia"
  armenia_kingdom_nation_desc: "The Kingdom of Armenia once dominated the Caucasus. Time was not kind to our ancestors, however, and neighboring empires saw weakness in our internal divisions and used it to conquer our people. Let us drive out these invaders and re-establish the Kingdom and Church of Armenia."
@@ -195,14 +195,37 @@
  lusitanian_empire_nation_title: "The Lusitanian Empire"
  lusitanian_empire_nation_desc: "Our lands extend from Europe to Asia! We are one of the first, if not, the first Global Empire. It is finally time to accept our rightful title as the Lusitanian Empire!"
 
- german_kingdom_nation_title: "Restore the German Kingdom"
- german_kingdom_nation_desc: "The tripartite division of the Carolingian Empire effected by the Treaty of Verdun was challenged very early on with the death of the Emperor Lothair I in 855. He had divided his kingdom of Middle Francia between his three sons and immediately the northernmost of the three divisions, Lotharingia, was disputed between the kings of East and West Francia. The war over Lotharingia lasted until 925. Lothair II of Lotharingia died in 869 and the Treaty of Meerssen (870) divided his kingdom between East and West Francia, but the West Frankish sovereigns relinquished their rightful portion to East Francia by the Treaty of Ribemont in 880. Ribemont determined the border between France and Germany until the fourteenth century. The Lotharingian nobility tried to preserve their independence of East of West Frankish rule by switching allegiance at will with the death of king Louis the Child in 911, but in 925 Lotharingia was finally ceded to East Francia by Rudolph of West Francia and it thereafter formed the Duchy of Lorraine within the East Frankish kingdom."
-
  german_empire_nation_title: "Proclamation of the German Empire"
  german_empire_nation_desc: "The proclamation of the German Empire, also known as the Deutsche Reichsgründung, took place in January 1871 after the joint victory of the German states in the Franco-Prussian War. As a result of the November Treaties of 1870s, the southern German states of Baden, Hesse-Darmstadt, with their territories south of the Main line, Württemberg and Bavaria, joined the Prussian-dominated "German Confederation" on 1 January 1871. On the same day, the new Constitution of the German Confederation came into force, thereby significantly extending the federal German lands to the newly created German Empire. The Day of the founding of the German Empire, January 18, became a day of celebration, marking when the Prussian King William I was proclaimed German Emperor in Versailles."
+
+  # NOTE: Reworked Vanilla Nations - Reworked Vanilla Nations - Reworked Vanilla Nations
 
  bharat_nation_title: "Unite the lands of Bharat"
  bharat_nation_desc: "Form the mighty Bharat and bring all the lands of the Indian subcontinent under your rule."
 
+ german_kingdom_nation_title: "Restore the German Kingdom"
+ german_kingdom_nation_desc: "The tripartite division of the Carolingian Empire effected by the Treaty of Verdun was challenged very early on with the death of the Emperor Lothair I in 855. He had divided his kingdom of Middle Francia between his three sons and immediately the northernmost of the three divisions, Lotharingia, was disputed between the kings of East and West Francia. The war over Lotharingia lasted until 925. Lothair II of Lotharingia died in 869 and the Treaty of Meerssen (870) divided his kingdom between East and West Francia, but the West Frankish sovereigns relinquished their rightful portion to East Francia by the Treaty of Ribemont in 880. Ribemont determined the border between France and Germany until the fourteenth century. The Lotharingian nobility tried to preserve their independence of East of West Frankish rule by switching allegiance at will with the death of king Louis the Child in 911, but in 925 Lotharingia was finally ceded to East Francia by Rudolph of West Francia and it thereafter formed the Duchy of Lorraine within the East Frankish kingdom."
+
+ great_britain_england_nation_title: "Form Great Britain"
+ great_britain_england_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
+
  hindustan_nation_title: "Form Hindustan"
  hindustan_nation_desc: "Form the mighty Hindustan and bring all the lands of the Indian subcontinent under your rule."
+
+ restore_roman_empire_nation_title: "Restoration of the Roman Empire"
+ restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
+
+ russian_nation_muscovy_title: "Form the Russian Nation"
+ russian_nation_muscovy_desc: "todo"
+
+ russian_nation_novgorod_title: "The Russian Republic"
+ russian_nation_novgorod_desc: "todo"
+
+ russian_nation_title: "The Russian Nation"
+ russian_nation_desc: "todo"
+
+ spanish_nation_militarily_title: "Unite the Spanish Region"
+ spanish_nation_militarily_desc: "todo"
+
+ spanish_nation_diplomatically_title: "Castile-Aragon Union"
+ spanish_nation_diplomatically_desc: "todo"

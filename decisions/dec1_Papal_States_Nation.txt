@@ -1,5 +1,9 @@
 country_decisions = {
 
+	#######################
+	# The Pope Has Fallen - Any Catholic Nation can become the Papal States if they accept, or give up some provinces to the pope if they refuse, or refuse entirely and the pope will choose another nation #
+	#######################
+
 	papal_states_nation = {
 		major = yes
 		potential = {
@@ -8,7 +12,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			technology_group = western
-			religion_group = christian
+			dominant_religion = catholic
 			NOT = {
 				has_country_modifier = kingdom_of_god
 				exists = ITA
@@ -22,16 +26,6 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 1
 				}
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 101	# Genoa
-					#TODO papal provinces
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
@@ -155,5 +149,9 @@ country_decisions = {
 			factor = 1
 		}
 	}
+
+	######################################################
+	# Any Italian Catholic Nation can restore the Papacy #
+	######################################################
 
 }

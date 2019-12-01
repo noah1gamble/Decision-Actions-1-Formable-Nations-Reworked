@@ -3,35 +3,21 @@ country_decisions = {
 	romanian_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_romania_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			NOT = { exists = RMN }
-			primary_culture = romanian
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
 			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+			primary_culture = romanian
+			NOT = {
+				has_country_flag = formed_romanian_nation_flag
+				exists = RMN
+				tag = HLR
+				tag = PAP
 			}
 		}
-		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 158	# Transylvania
-				province_id = 159	# Silistria
-				province_id = 160	# Oltenia
-				province_id = 161	# Wallachia
-				province_id = 268	# Bessarabia
-				province_id = 1756	# Budjak
+				area = wallachia_area
+				area = moldavia_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -39,46 +25,136 @@ country_decisions = {
 			}
 		}
 		allow = {
+			adm_tech = 5
+			NOT = {
+				exists = RMN
+				exists = BYZ
+			}
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			NOT = { exists = BYZ }
-			owns_core_province = 158	# Transylvania
-			owns_core_province = 159	# Silistria
-			owns_core_province = 160	# Oltenia
-			owns_core_province = 161	# Wallachia
-			owns_core_province = 268	# Bessarabia
-			owns_core_province = 1756	# Budjak
+			custom_trigger_tooltip = {
+				tooltip = form_romanian_nation_tt_1
+				wallachia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				moldavia_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}
 		}
 		effect = {
 			change_tag = RMN
-			remove_non_electors_emperors_from_empire_effect = yes
-			swap_non_generic_missions = yes
-			if = {
-				limit = {
-					NOT = {
-						government_rank = 2
+			set_country_flag = formed_romanian_nation_flag
+			RMN = {
+				add_prestige = 10
+				add_legitimacy = 30
+				set_capital = 4531 # Giurgiu (pre-Bucuresti)
+				4531 = {
+					add_core = RMN
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			custom_tooltip = dec1_decisions_blank
+			RMN = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
 					}
 				}
-				set_government_rank = 2
 			}
-			random_owned_province = {
-				add_base_tax = 1
+			RMN = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
+				add_government_reform = autocracy_reform
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			custom_tooltip = dec1_decisions_spacing
+			RMN = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = RMN_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
 			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_romania_flag
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 100
+			modifier = { # Romanian desire to unite Romania
+			 	factor = 400
+				accepted_culture = romanian
+				OR = {
+					tag = WAL
+					tag = MOL
+				}
+			}
+			modifier = { # other Carpatian nations desire to unite Romania
+				factor = 254.8
+				culture_group = carpathian
+				NOT = {
+					tag = WAL
+					tag = MOL
+				}
+			}
 		}
 	}
-	
 }

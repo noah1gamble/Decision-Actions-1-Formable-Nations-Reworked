@@ -9,7 +9,7 @@ country_decisions = {
 			NOT = {
 				has_reform = steppe_horde
 				has_country_flag = formed_bharat_nation_flag
-				has_country_flag = united_indian_country_nation_flag # a unified Indian Kingdom or Empire
+				has_country_flag = united_indian_country_nation_flag # a unified Indian Empire
 				exists = MUG
 				exists = BHA
 				exists = HIN
@@ -212,9 +212,11 @@ country_decisions = {
 				name = dec1_increased_centralization
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
 	}
+	ai_will_do = {
+		factor = 1
+	}
+	ai_importance = 400
+	}
+	
 }

@@ -54,9 +54,9 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = DEC
-			swap_non_generic_missions = yes
-			set_country_flag = formed_bharat_nation_flag
-			set_country_flag = united_indian_country_nation_flag # a unified Indian Kingdom or Empire
+			#swap_non_generic_missions = yes # DEV NOTE: needs custom missions
+			set_country_flag = formed_deccan_nation_flag
+			#set_country_flag = united_indian_country_nation_flag # Deccan does not count, must be empire rank
 			DEC = {
 				add_prestige = 20
 				set_capital = 522 # Delhi

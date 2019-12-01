@@ -1,20 +1,17 @@
 country_decisions = {
 
-	#######################################
-	# Spanish Nation Militarily - General #
-	#######################################
+	############################
+	# Spanish Nation - General #
+	############################
 
-	spanish_nation_militarily = {
+	spanish_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
 				has_country_flag = formed_spanish_nation_flag
-				has_country_flag = formed_spanish_nation_diplomatically_flag
-				has_country_flag = formed_spanish_spanish_nation_militarily_flag
 				exists = SPA
 				tag = SPA
 				tag = PAP
@@ -274,7 +271,6 @@ country_decisions = {
 	spanish_nation_diplomatically = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -282,8 +278,6 @@ country_decisions = {
 			owns = 219
 			NOT = {
 				has_country_flag = formed_spanish_nation_flag
-				has_country_flag = formed_spanish_nation_diplomatically_flag
-				has_country_flag = formed_spanish_spanish_nation_militarily_flag
 				exists = SPA
 			}
 			OR = {
