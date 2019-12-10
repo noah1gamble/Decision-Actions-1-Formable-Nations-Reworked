@@ -3,7 +3,6 @@ country_decisions = {
 	franconia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -21,7 +20,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 4
 				}
 			}
 		}
@@ -44,9 +43,9 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 				# Franconia
-			owns_core_province = 67 # Nürnberg
+			owns_core_province = 67 # Nurnberg
 			owns_core_province = 71 # Ansbach
-			owns_core_province = 79 # Würzburg
+			owns_core_province = 79 # Wurzburg
 			owns_core_province = 66 # Bamberg
 		}
 	 	effect = {
@@ -54,11 +53,11 @@ country_decisions = {
 			set_country_flag = formed_franconia_nation_flag			
 			FRC = {
 				add_prestige = 10
-				set_capital = 67 # Nürnberg	
+				set_capital = 67 # Nurnberg	
 				67 = {
-					add_base_tax = 3
-					add_base_production = 6
-					add_base_manpower = 4
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}				
 			custom_tooltip = dec1_decisions_blank

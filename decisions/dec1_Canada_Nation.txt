@@ -3,13 +3,16 @@ country_decisions = {
 	canada_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			was_never_end_game_tag_trigger = yes
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			is_random_new_world = no
 			is_nomad = no
-			is_random_new_world = no			
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
+			NOT = {
+				has_country_flag = formed_canada_nation_flag
+				has_country_flag = changed_from_colonial_nation
+				exists = CAN
+				tag = CAN
 			}
 			colonial_canada = {
 				owned_by = ROOT
@@ -18,50 +21,138 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 6
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+					# Canada
+				colonial_region = colonial_canada
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}			
 		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
 			capital_scope = {
 				colonial_region = colonial_canada
 				is_core = ROOT
 			}
+			adm_tech = 6 # unique native adm req
 			NOT = { exists = CAN }
+			is_at_war = no
+			is_former_colonial_nation = no
+			OR = { # Unique colonial nation formation req
+				AND = {
+					is_subject = no
+					government = monarchy
+				}
+				AND = {
+					is_subject = no
+					is_free_or_tributary_trigger = yes
+				}
+				AND = {
+					is_subject = yes
+					liberty_desire = 42.60
+				}
+			}
 		}
 		effect = {
 			change_tag = CAN
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
+			set_country_flag = formed_canada_nation_flag
+			CAN = {
+				add_prestige = 5
+				add_legitimacy = 10
+				set_capital = 2694 # Quebec
+				763 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				set_government_rank = 2
 			}
+			# TODO: ADD CANADIAN CULTURE / FRENCH 
 			colonial_canada = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = CAN
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			CAN = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
 			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
 			}
-			set_country_flag = changed_from_colonial_nation
+			CAN = {
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = despotic_monarchy_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
+				add_government_reform = despotic_monarchy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			CAN = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CAN_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400		
 	}
 
 }

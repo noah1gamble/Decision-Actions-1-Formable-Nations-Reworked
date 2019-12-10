@@ -3,11 +3,10 @@ country_decisions = {
 	italian_merchant_alliance_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no		
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_italian_merchant_alliance_flag
 				exists = IMA
 				tag = PAP
@@ -43,20 +42,20 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {	
+			OR = {
 				province_id = 116 # Firenze
 				province_id = 112 # Venezia
 				province_id = 115 # Pisa
 				province_id = 101 # Genoa
 				province_id = 2983 # Salerno
 				province_id = 2980 # Lucca
-				province_id = 121 # Napoli		
+				province_id = 121 # Napoli
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5
 			NOT = { exists = IMA }
@@ -72,20 +71,20 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = IMA
-			set_country_flag = formed_italian_merchant_alliance_flag	
+			set_country_flag = formed_italian_merchant_alliance_flag
 			IMA = {
 				add_prestige = 10
 				add_legitimacy = 5
-				add_stability = 1	
-				set_capital = 112			
-				112 = { 
+				add_stability = 1
+				set_capital = 112
+				112 = {
 					add_base_tax = 7
 					add_base_production = 2
-					add_base_manpower = 1					
+					add_base_manpower = 1
 				}
 			}
 			custom_tooltip = dec1_decisions_blank
-			IMA = {		
+			IMA = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -96,18 +95,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -122,30 +121,30 @@ country_decisions = {
 				}
 			}
 			IMA = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = republic
-							}	
+							}
 						}
 					change_government = republic
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = merchant_republic
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 1 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 1
 							}
 						}
 					set_government_rank = 1
-				}				
+				}
 				add_government_reform = merchants_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -156,16 +155,16 @@ country_decisions = {
 						NOT = { has_idea_group = IMA_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}	
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-	
+
 }

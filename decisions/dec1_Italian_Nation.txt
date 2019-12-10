@@ -3,16 +3,23 @@ country_decisions = {
 	italian_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
 			culture_group = latin
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_italian_nation_flag
 				exists = ITA
 				tag = PAP
+				tag = ITA
 				tag = HLR
+				tag = IMA
+				tag = LVE
+				tag = TSI
+				tag = ALP
+				tag = CIS
+				tag = EUR
+				tag = ADR
 			}
 		}
 		provinces_to_highlight = {
@@ -80,25 +87,24 @@ country_decisions = {
 			NOT = { exists = ITA }
 			is_subject = no
 			is_at_war = no
-			OR = {
-				italy_region{
-					type = all
-					owned_by = ROOT
-				}
+			italy_region = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {
 			change_tag = ITA
-			set_country_flag = formed_italian_nation_flag		
+			set_country_flag = formed_italian_nation_flag
 			ITA = {
 				add_prestige = 10
 				add_legitimacy = 10
-				add_stability = 1	
-				set_capital = 118	
-				118 = { 
-					add_base_tax = 5
+				set_capital = 118 # Roma
+				118 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}			
+			}
 			carpathia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -110,9 +116,9 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ITA
-			}	
+			}
 			custom_tooltip = dec1_decisions_blank
-			ITA = {		
+			ITA = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -123,18 +129,18 @@ country_decisions = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
-					}			
+					}
 					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
 							modifier = opinion_left_empire
-						}	
+						}
 					}
 					custom_tooltip = dec1_decisions_blank
-				}				
+				}
 			}
-			hidden_effect = { 
+			hidden_effect = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -149,30 +155,30 @@ country_decisions = {
 				}
 			}
 			ITA = {
-				if = { 
-					limit = { 
-						NOT = { 
+				if = {
+					limit = {
+						NOT = {
 							government = monarchy
-							}	
+							}
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+				}
+				if = {
+					limit = {
+						NOT = {
 							has_dlc = "Dharma"
-							}	
+							}
 						}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
 							}
 						}
 					set_government_rank = 3
-				}				
+				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -183,10 +189,10 @@ country_decisions = {
 						NOT = { has_idea_group = ITA_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
+				}
 			}
 		}
 		ai_will_do = {

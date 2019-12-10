@@ -4,7 +4,8 @@ country_decisions = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
-			is_colonial_nation = no		
+			is_playing_custom_nation = no
+			is_colonial_nation = no
 			NOT = { 
 				has_country_flag = formed_celtic_union_nation_flag
 				exists = CEU
@@ -91,52 +92,55 @@ country_decisions = {
 			NOT = { exists = CEU }
 			is_subject = no
 			is_at_war = no
-				# Leinster
-			owns_core_province = 373
-			owns_core_province = 4379
-			owns_core_province = 4120
-			owns_core_province = 374
-				# Munster
-			owns_core_province = 4377
-			owns_core_province = 4118
-			owns_core_province = 4378
-				# Ulster
-			owns_core_province = 372
-			owns_core_province = 4121
-			owns_core_province = 4380
-				# Connacht
-			owns_core_province = 4119
-			owns_core_province = 375
-			owns_core_province = 376
-				# Wales
-			owns_core_province = 4366
-			owns_core_province = 241
-			owns_core_province = 242
-			owns_core_province = 4369
-				# Wessex
-			owns_core_province = 233
-				# Scottish Marches
-			owns_core_province = 4361
-			owns_core_province = 4362
-				# Lowlands
-			owns_core_province = 249
-			owns_core_province = 248
-			owns_core_province = 251
-				# Highlands
-			owns_core_province = 252
-			owns_core_province = 250
-			owns_core_province = 4363
-			owns_core_province = 4110
-				# The Isles
-			owns_core_province = 253
-			owns_core_province = 4364
-			owns_core_province = 4365
-				# Brittany
-			owns_core_province = 172
-			owns_core_province = 4384
-			owns_core_province = 169
-			owns_core_province = 171
-			owns_core_province = 170
+			custom_trigger_tooltip = {
+				tooltip = form_celtic_union_tt_1			
+					# Leinster
+				owns_core_province = 373
+				owns_core_province = 4379
+				owns_core_province = 4120
+				owns_core_province = 374
+					# Munster
+				owns_core_province = 4377
+				owns_core_province = 4118
+				owns_core_province = 4378
+					# Ulster
+				owns_core_province = 372
+				owns_core_province = 4121
+				owns_core_province = 4380
+					# Connacht
+				owns_core_province = 4119
+				owns_core_province = 375
+				owns_core_province = 376
+					# Wales
+				owns_core_province = 4366
+				owns_core_province = 241
+				owns_core_province = 242
+				owns_core_province = 4369
+					# Wessex
+				owns_core_province = 233
+					# Scottish Marches
+				owns_core_province = 4361
+				owns_core_province = 4362
+					# Lowlands
+				owns_core_province = 249
+				owns_core_province = 248
+				owns_core_province = 251
+					# Highlands
+				owns_core_province = 252
+				owns_core_province = 250
+				owns_core_province = 4363
+				owns_core_province = 4110
+					# The Isles
+				owns_core_province = 253
+				owns_core_province = 4364
+				owns_core_province = 4365
+					# Brittany
+				owns_core_province = 172
+				owns_core_province = 4384
+				owns_core_province = 169
+				owns_core_province = 171
+				owns_core_province = 170
+			}
 		}
 	 	effect = {
 			change_tag = CEU
@@ -144,8 +148,10 @@ country_decisions = {
 			CEU = {
 				add_prestige = 25
 				set_capital = 373
-				217 = {
-					add_base_manpower = 6
+				373 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}
 			british_isles_region = {

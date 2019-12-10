@@ -1,5 +1,9 @@
 country_decisions = {
 
+	##############################
+	# Romania - Romanian Culture #
+	##############################
+
 	romanian_nation = {
 		major = yes
 		potential = {
@@ -157,4 +161,9 @@ country_decisions = {
 			}
 		}
 	}
+
+	#####################
+	# Romania - General #
+	#####################
+	
 }

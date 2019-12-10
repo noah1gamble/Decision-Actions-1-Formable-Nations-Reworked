@@ -4,10 +4,13 @@ country_decisions = {
 	# The Pope Has Fallen - Any Catholic Nation can become the Papal States if they accept, or give up some provinces to the pope if they refuse, or refuse entirely and the pope will choose another nation #
 	#######################
 
+	#####################################################################
+	# Any Italian or non-italian Catholic Nation can restore the Papacy #
+	#####################################################################
+
 	papal_states_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -28,11 +31,60 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+					# Russia
+				region = russia_region
+				province_id = 33
+				province_id = 295
+					# Urals
+				province_id = 2423
+				province_id = 306
+				province_id = 1957
+				province_id = 1083
+				province_id = 1079
+				province_id = 1755
+					# Kazan
+				province_id = 304
+				province_id = 2419
+				province_id = 473
+				province_id = 1081
+				province_id = 4267
+				province_id = 4264
+				province_id = 2422
+				province_id = 1082
+				province_id = 2421
+				province_id = 4265
+				province_id = 1972
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			#TODO papal provinces
+			OR = {
+				OR = {
+					owns_core_province = 118 # ROME!
+					owns_core_province = 202 # AVIGNON!
+				}
+				custom_trigger_tooltip = {
+					tooltip = restore_papal_states_nation_tt_1
+						# Any controller of original papal provinces is allowed
+						# ESPECIALLY rome & avignon
+					owns_core_province = 2976
+					owns_core_province = 119
+					owns_core_province = 114
+					owns_core_province = 2423
+					owns_core_province = 2423
+					owns_core_province = 2423
+					owns_core_province = 2423
+					owns_core_province = 2423
+				}
+			}
 		}
 		effect = {
 			change_tag = PAP
@@ -133,8 +185,9 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}
 			}
-			# event for all nations to announce revival of papal states
-			custom_tooltip = dec1_papal_influence # all italian nations gain papal influence
+			# TODO: event for all nations to announce revival of papal states
+			custom_tooltip = dec1_papal_states_notif
+			custom_tooltip = dec1_papal_influence # All italian nations gain papal influence
 			hidden_effect = {
 				every_country = {
 					limit = {
@@ -149,9 +202,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-
-	######################################################
-	# Any Italian Catholic Nation can restore the Papacy #
-	######################################################
-
 }

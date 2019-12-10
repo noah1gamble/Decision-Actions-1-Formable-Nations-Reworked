@@ -70,6 +70,9 @@
  cisalpina_nation_title: "Form Cisalpina"
  cisalpina_nation_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag."
 
+ cisalpina_nation_culture_title: "Form Cisalpina"
+ cisalpina_nation_culture_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag."
+
  turkey_nation_title: "Form Turkey"
  turkey_nation_desc: "The Republic of Turkey was created after the overthrow of Sultan Mehmet VI Vahdettin by the new Republican Parliament in 1922. This new regime delivered the coup de grâce to the Ottoman state which had been practically wiped away from the world stage following the First World War."
 
@@ -83,7 +86,7 @@
  europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress."
 
  soviet_union_nation_title: "Form the Soviet Union"
- soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It was the first country to declare itself socialist and build towards a communist society and was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic.
+ soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It was the first country to declare itself socialist and build towards a communist society and was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic."
 
  celtic_union_nation_title: "Form the Celtic Union"
  celtic_union_nation_desc: "Celticism is a political, social and cultural movement advocating solidarity and cooperation between Celtic nations; through conquest we are able to unite our people under one nation!"
@@ -92,13 +95,13 @@
  sweden_norway_nation_desc: "Sweden and Norway had been united under the same crown on two occasions: from 1319 to 1343 and briefly from 1449 to 1450 in opposition to Christian of Oldenburg who was elected king of the Kalmar Union by the Danes."
 
  caucasia_nation_title: "Form Caucasia"
- caucasia_nation_desc: ""
+ caucasia_nation_desc: "A united Caucasian Kingdom can proclaim the true emperorship of a newly proclaimed Empire of Caucasia under one nation, one ruler, one true emperor."
 
- burma_nation_title: "Form Burma"
- burma_nation_desc: ""
+ burma_nation_title: "Union of Burma"
+ burma_nation_desc: "During the first years of post-independence Burma, insurgencies by the Red Flag Communists led by Thakin Soe, the White Flag Communists led by Thakin Than Tun, the Yèbaw Hpyu (White-band PVO) led by Bo La Yaung, a member of the Thirty Comrades, army rebels calling themselves the Revolutionary Burma Army (RBA) led by communist officers Bo Zeya, Bo Yan Aung and Bo Yè Htut – all three of them members of the Thirty Comrades, Arakanese, and the Karen National Union (KNU)."
 
  united_kingdom_nation_title: "Form the United Kingdom"
- united_kingdom_nation_desc: ""
+ united_kingdom_nation_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland"
 
  #NOTE: ADD SCOTLAND AS UK
 
@@ -117,19 +120,19 @@
  himalayan_empire_nation_title: "Form the Himalayan Empire"
  himalayan_empire_nation_desc: "The Himalaya Empire was a mountainous country in Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, Kinnara Kingdom etc."
 
- alsace_lorraine_nation_title: "Form Alsace-Lorraine"
+ alsace_lorraine_nation_title: "Alsace-Lorraine"
  alsace_lorraine_nation_desc: "he Imperial Territory of Alsace-Lorraine was a territory created by the German Empire in 1871, after it annexed most of Alsace and the Moselle department of Lorraine following its victory in the Franco-Prussian War."
 
- franco_iberia_nation_title: "the Franco-Iberian Union"
+ franco_iberia_nation_title: "The Franco-Iberian Union"
  franco_iberia_nation_desc: "The Franco-Iberian Empire is is a cultural hegemony consisting of Portugal, Spain, France under one Emperor"
 
- hesse_nassau_nation_title: "Form Hesse-Nassau"
- hesse_nassau_nation_desc: "The Province of Hesse-Nassau was a province of the Kingdom of Prussia from 1868 to 1918, then a province of the Free State of Prussia until 1944.
+ hesse_nassau_nation_title: "Hesse-Nassau"
+ hesse_nassau_nation_desc: "The Province of Hesse-Nassau was a province of the Kingdom of Prussia from 1868 to 1918, then a province of the Free State of Prussia until 1944."
 
  east_prussia_nation_title: "Form East Prussia"
  east_prussia_nation_desc: "Its capital city was Königsberg. East Prussia was the main part of the region of Prussia along the southeastern Baltic Coast. The bulk of the ancestral lands of the Baltic Old Prussians were enclosed within East Prussia."
 
- hanse_nation_title: "Form Hansa"
+ hanse_nation_title: "The Hanseatic League"
  hanse_nation_desc: "The Hanseatic League was a commercial and defensive confederation of merchant guilds and market towns in Northwestern and Central Europe. Growing from a few North German towns in the late 1100s, the league came to dominate Baltic maritime trade for three centuries along the coasts of Northern Europe. Hansa territories stretched from the Baltic to the North Sea and inland during the Late Middle Ages."
 
  emilia_romagna_nation_title: "Form Emilia-Romagna"
@@ -190,7 +193,7 @@
  saudi_nation_desc: "The House of Saud conquered many lands during the crisis of the Arabian peoples after the fall of the Ottoman Empire. Through conquest and diplomacy we can claim the title of King of Arabians under the Saudi Dynasty!"
 
  carthage_nation_title: "Restore Carthage"
- carthage_nation_desc: ""
+ carthage_nation_desc: "Phoenicians founded Carthage in 814 BC and established political hegemony over other Phoenician settlements throughout the western Mediterranean; this lasted until the end of the 3rd century BC. At the height of the city's prominence, it served as a major hub of trade, with trading stations extending throughout the region.\n\nFor much of its history, Carthage was on hostile terms with the Greeks in Sicily and with the Roman Republic; tensions led to a series of armed conflicts known as the Sicilian Wars (c. 600–265 BC) and the Punic Wars (264–146 BC) respectively. The city also had to deal with potentially hostile Berbers, the indigenous inhabitants of the area where Carthage was built."
 
  lusitanian_empire_nation_title: "The Lusitanian Empire"
  lusitanian_empire_nation_desc: "Our lands extend from Europe to Asia! We are one of the first, if not, the first Global Empire. It is finally time to accept our rightful title as the Lusitanian Empire!"
@@ -215,7 +218,7 @@
  restore_roman_empire_nation_title: "Restoration of the Roman Empire"
  restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
 
- russian_nation_muscovy_title: "Form the Russian Nation"
+ russian_nation_muscovy_title: "Tsardom of Russia"
  russian_nation_muscovy_desc: "todo"
 
  russian_nation_novgorod_title: "The Russian Republic"
@@ -224,8 +227,11 @@
  russian_nation_title: "The Russian Nation"
  russian_nation_desc: "todo"
 
- spanish_nation_militarily_title: "Unite the Spanish Region"
- spanish_nation_militarily_desc: "todo"
+ spanish_nation_title: "Unite the Spaniards"
+ spanish_nation_desc: "todo"
 
- spanish_nation_diplomatically_title: "Castile-Aragon Union"
- spanish_nation_diplomatically_desc: "todo"
+ spanish_nation_castile_wedding_title: "Castile-Aragon Union"
+ spanish_nation_castile_wedding_desc: "todo"
+
+ spanish_nation_aragon_wedding_title: "Aragon-Castile Union"
+ spanish_nation_aragon_wedding_desc: "todo"

@@ -1,8 +1,8 @@
 country_decisions = {
 
 	#################################
-  # Jagiellonian Empire - General #
-  #################################
+	# Jagiellonian Empire - General #
+	#################################
 
 	jagiellonian_empire_nation = {
 		major = yes
@@ -10,11 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			dynasty = "Jagiellon"
-			OR = {
-				tag = POL
-				tag = PLC
-			}
+			culture_group = west_slavic
 			NOT = {
 				has_country_flag = formed_jagiellon_empire_flag
 				exists = JGE
@@ -88,9 +84,9 @@ country_decisions = {
 			set_capital = 257 # Warszawa
 			JGE = {
 				257 = {
-					add_base_tax = 25
-					add_base_production = 3
-					add_base_manpower = 15
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}
 			custom_tooltip = dec1_decisions_spacing
@@ -167,8 +163,8 @@ country_decisions = {
 	}
 
 	###################################
-  # Jagiellonian Empire - Lithuania #
-  ###################################
+	# Jagiellonian Empire - Lithuania #
+	###################################
 
 	jagiellonian_empire_nation_lithuania = {
 		major = yes
@@ -251,9 +247,9 @@ country_decisions = {
 			set_capital = 257 # Warszawa
 			JGE = {
 				257 = {
-					add_base_tax = 25
-					add_base_production = 3
-					add_base_manpower = 15
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}
 			custom_tooltip = dec1_decisions_spacing

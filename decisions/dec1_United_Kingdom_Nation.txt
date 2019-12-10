@@ -1,13 +1,601 @@
 country_decisions = {
+	
+	############################
+	# United Kingdom - General #
+	############################
+
+	united_kingdom_nation = {
+	major = yes
+	potential = {
+		is_former_colonial_nation = no
+		is_playing_custom_nation = no
+		is_colonial_nation = no
+		NOT = {
+			has_country_flag = formed_united_kingdom_nation_flag
+			exists = NSE
+			exists = UKI
+			exists = GBR
+			tag = GBR
+			tag = PAP
+			tag = ADR
+			tag = ALP
+			tag = CIS
+			tag = EUR
+			tag = IMA
+			tag = ROE
+			tag = LVE
+			tag = ITA
+			tag = TSI
+		}
+		OR = {
+			ai = no
+			AND = {
+				ai = yes
+				num_of_cities = 6
+			}
+		}
+		OR = {
+			culture_group = british
+			primary_culture = welsh
+			primary_culture = irish
+		}
+	}
+	provinces_to_highlight = {
+		OR = {
+				# London
+			province_id = 236
+			province_id = 235
+			province_id = 4371
+			province_id = 237
+				# East Anglia
+			province_id = 238
+			province_id = 1860
+			province_id = 4370
+				# Wessex
+			province_id = 234
+			province_id = 4374
+			province_id = 4130
+			province_id = 4373
+			province_id = 233
+				# West Midlands
+			province_id = 239
+			province_id = 240
+			province_id = 4372
+			province_id = 4375
+			province_id = 244
+				# East Midlands
+			province_id = 243
+			province_id = 4376
+			province_id = 1861
+				# Yorkshire
+			province_id = 245
+			province_id = 4367
+			province_id = 4368
+				# Wales
+			province_id = 241
+			province_id = 4366
+			province_id = 4369
+			province_id = 242
+				# Scottish Marches
+			province_id = 246
+			province_id = 247
+				# Mann
+			province_id = 4365
+				# Scotland
+			province_id = 4361
+			province_id = 4362
+			province_id = 248
+			province_id = 249
+			province_id = 251
+			province_id = 250
+			province_id = 4363
+			province_id = 252
+			province_id = 4110
+			province_id = 4364
+			province_id = 253
+				# Scottish Isles
+			province_id = 369
+			province_id = 1978
+				# Ireland
+			province_id = 4121
+			province_id = 373
+			province_id = 374
+			province_id = 372
+			province_id = 4379
+			province_id = 4377
+			province_id = 4118
+			province_id = 4378
+			province_id = 4121
+			province_id = 4119
+			province_id = 4380
+			province_id = 376
+		}
+		OR = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+	}
+	allow = {
+		adm_tech = 10
+		NOT = { exists = UKI }
+		is_subject = no
+		is_at_war = no
+		custom_trigger_tooltip = {
+		tooltip = form_united_kingdom_tt_1
+				# London
+			owns_core_province = 236
+			owns_core_province = 235
+			owns_core_province = 4371
+			owns_core_province = 237
+				# East Anglia
+			owns_core_province = 238
+			owns_core_province = 1860
+			owns_core_province = 4370
+				# Wessex
+			owns_core_province = 234
+			owns_core_province = 4374
+			owns_core_province = 4130
+			owns_core_province = 4373
+			owns_core_province = 233
+				# West Midlands
+			owns_core_province = 239
+			owns_core_province = 240
+			owns_core_province = 4372
+			owns_core_province = 4375
+			owns_core_province = 244
+				# East Midlands
+			owns_core_province = 243
+			owns_core_province = 4376
+			owns_core_province = 1861
+				# Yorkshire
+			owns_core_province = 245
+			owns_core_province = 4367
+			owns_core_province = 4368
+				# Wales
+			owns_core_province = 241
+			owns_core_province = 4366
+			owns_core_province = 4369
+			owns_core_province = 242
+				# Scottish Marches
+			owns_core_province = 246
+			owns_core_province = 247
+				# Mann
+			owns_core_province = 4365
+		}
+		custom_trigger_tooltip = {
+			tooltip = form_united_kingdom_tt_2
+				# Scotland
+			owns_core_province = 4361
+			owns_core_province = 4362
+			owns_core_province = 248
+			owns_core_province = 249
+			owns_core_province = 251
+			owns_core_province = 250
+			owns_core_province = 4363
+			owns_core_province = 252
+			owns_core_province = 4110
+			owns_core_province = 4364
+			owns_core_province = 253
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_united_kingdom_tt_3
+					# Scottish Isles
+				owns_core_province = 369
+				owns_core_province = 1978
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_united_kingdom_tt_4
+					# Ireland
+				owns_core_province = 4121
+				owns_core_province = 373
+				owns_core_province = 374
+				owns_core_province = 372
+				owns_core_province = 4379
+				owns_core_province = 4377
+				owns_core_province = 4118
+				owns_core_province = 4378
+				owns_core_province = 4119
+				owns_core_province = 4380
+				owns_core_province = 376
+			}
+		}
+		effect = {
+			change_tag = UKI
+			set_country_flag = formed_united_kingdom_flag
+			UKI = {
+				add_prestige = 5
+				add_legitimacy = 10
+				set_capital = 236 # Anjou
+				236 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = UKI
+			}
+			UKI = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			UKI = {
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = english_monarchy_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
+				add_government_reform = english_monarchy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			UKI = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = UKI_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	############################
+	# United Kingdom - England #
+	############################
+
+	united_kingdom_nation_england = {
+	major = yes
+	potential = {
+		is_former_colonial_nation = no
+		is_playing_custom_nation = no
+		is_colonial_nation = no
+		TAG = ENG
+		NOT = {
+			has_country_flag = formed_united_kingdom_nation_flag
+			exists = NSE
+			exists = UKI
+			exists = GBR
+			tag = GBR
+			tag = PAP
+			tag = ADR
+			tag = ALP
+			tag = CIS
+			tag = EUR
+			tag = IMA
+			tag = ROE
+			tag = LVE
+			tag = ITA
+			tag = TSI
+		}
+		OR = {
+			ai = no
+			AND = {
+				ai = yes
+				num_of_cities = 6
+			}
+		}
+		OR = {
+			culture_group = british
+			primary_culture = welsh
+			primary_culture = irish
+		}
+	}
+	provinces_to_highlight = {
+		OR = {
+				# London
+			province_id = 236
+			province_id = 235
+			province_id = 4371
+			province_id = 237
+				# East Anglia
+			province_id = 238
+			province_id = 1860
+			province_id = 4370
+				# Wessex
+			province_id = 234
+			province_id = 4374
+			province_id = 4130
+			province_id = 4373
+			province_id = 233
+				# West Midlands
+			province_id = 239
+			province_id = 240
+			province_id = 4372
+			province_id = 4375
+			province_id = 244
+				# East Midlands
+			province_id = 243
+			province_id = 4376
+			province_id = 1861
+				# Yorkshire
+			province_id = 245
+			province_id = 4367
+			province_id = 4368
+				# Wales
+			province_id = 241
+			province_id = 4366
+			province_id = 4369
+			province_id = 242
+				# Scottish Marches
+			province_id = 246
+			province_id = 247
+				# Mann
+			province_id = 4365
+				# Scotland
+			province_id = 4361
+			province_id = 4362
+			province_id = 248
+			province_id = 249
+			province_id = 251
+			province_id = 250
+			province_id = 4363
+			province_id = 252
+			province_id = 4110
+			province_id = 4364
+			province_id = 253
+				# Scottish Isles
+			province_id = 369
+			province_id = 1978
+				# Ireland
+			province_id = 4121
+			province_id = 373
+			province_id = 374
+			province_id = 372
+			province_id = 4379
+			province_id = 4377
+			province_id = 4118
+			province_id = 4378
+			province_id = 4121
+			province_id = 4119
+			province_id = 4380
+			province_id = 376
+		}
+		OR = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+	}
+	allow = {
+		adm_tech = 10
+		NOT = { exists = UKI }
+		is_subject = no
+		is_at_war = no
+		custom_trigger_tooltip = {
+		tooltip = form_united_kingdom_tt_1
+				# London
+			owns_core_province = 236
+			owns_core_province = 235
+			owns_core_province = 4371
+			owns_core_province = 237
+				# East Anglia
+			owns_core_province = 238
+			owns_core_province = 1860
+			owns_core_province = 4370
+				# Wessex
+			owns_core_province = 234
+			owns_core_province = 4374
+			owns_core_province = 4130
+			owns_core_province = 4373
+			owns_core_province = 233
+				# West Midlands
+			owns_core_province = 239
+			owns_core_province = 240
+			owns_core_province = 4372
+			owns_core_province = 4375
+			owns_core_province = 244
+				# East Midlands
+			owns_core_province = 243
+			owns_core_province = 4376
+			owns_core_province = 1861
+				# Yorkshire
+			owns_core_province = 245
+			owns_core_province = 4367
+			owns_core_province = 4368
+				# Wales
+			owns_core_province = 241
+			owns_core_province = 4366
+			owns_core_province = 4369
+			owns_core_province = 242
+				# Scottish Marches
+			owns_core_province = 246
+			owns_core_province = 247
+				# Mann
+			owns_core_province = 4365
+		}
+		custom_trigger_tooltip = {
+			tooltip = form_united_kingdom_tt_2
+				# Scotland
+			owns_core_province = 4361
+			owns_core_province = 4362
+			owns_core_province = 248
+			owns_core_province = 249
+			owns_core_province = 251
+			owns_core_province = 250
+			owns_core_province = 4363
+			owns_core_province = 252
+			owns_core_province = 4110
+			owns_core_province = 4364
+			owns_core_province = 253
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_united_kingdom_tt_3
+					# Scottish Isles
+				owns_core_province = 369
+				owns_core_province = 1978
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_united_kingdom_tt_4
+					# Ireland
+				owns_core_province = 4121
+				owns_core_province = 373
+				owns_core_province = 374
+				owns_core_province = 372
+				owns_core_province = 4379
+				owns_core_province = 4377
+				owns_core_province = 4118
+				owns_core_province = 4378
+				owns_core_province = 4119
+				owns_core_province = 4380
+				owns_core_province = 376
+			}
+		}
+		effect = {
+			change_tag = UKI
+			set_country_flag = formed_united_kingdom_flag
+			UKI = {
+				add_prestige = 5
+				add_legitimacy = 10
+				set_capital = 236 # Anjou
+				236 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = UKI
+			}
+			UKI = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			UKI = {
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = english_monarchy_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+							}
+						}
+					set_government_rank = 2
+				}
+				add_government_reform = english_monarchy_reform
+			}
+			custom_tooltip = dec1_decisions_spacing
+			UKI = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = UKI_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 
 	##################################
 	# United Kingdom - Great Britain #
 	##################################
 
-	united_kingdom_GB_nation = {
+	united_kingdom_nation_gb = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -212,7 +800,7 @@ country_decisions = {
 					limit = {
 						NOT = { owned_by = ROOT }
 					}
-					add_permanent_claim = ANG
+					add_permanent_claim = UKI
 				}
 				UKI = {
 					if = {
@@ -289,3 +877,5 @@ country_decisions = {
 			}
 			ai_importance = 400
 	}
+
+}
