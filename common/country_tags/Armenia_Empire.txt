@@ -1,1 +1,0 @@
-ARN = "countries/Armenia_Empire.txt"

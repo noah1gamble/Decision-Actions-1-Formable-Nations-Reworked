@@ -3,7 +3,7 @@ country_decisions = {
 	north_german_confederation_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -18,13 +18,6 @@ country_decisions = {
 				tag = EUR
 			}			
 			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 10
-				}
-			}	
-			OR = {
 				primary_culture = hannoverian
 				primary_culture = pommeranian
 				primary_culture = hessian
@@ -32,6 +25,13 @@ country_decisions = {
 				primary_culture = prussian
 				
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}				
 		}
 		provinces_to_highlight = {
 			OR = {

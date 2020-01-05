@@ -3,7 +3,7 @@ country_decisions = {
 	czechoslovakia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -23,7 +23,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 8
+					num_of_cities = 6
 				}
 			}
 		}
@@ -52,14 +52,14 @@ country_decisions = {
 			change_tag = CZE
 			set_country_flag = formed_czechoslovakia_nation_flag
 			CZE = {
-				add_prestige = 20
+				add_prestige = 10
 				add_legitimacy = 5
 				add_stability = 1				
 				set_capital = 266 # Praha
 				266 = { 
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 5
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}
 			custom_tooltip = dec1_decisions_blank

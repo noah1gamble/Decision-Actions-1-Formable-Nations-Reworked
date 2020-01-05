@@ -1,1 +1,0 @@
-GKR = "countries/Goguryeo.txt"

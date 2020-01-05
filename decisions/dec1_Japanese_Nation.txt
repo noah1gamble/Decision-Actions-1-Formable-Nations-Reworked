@@ -7,7 +7,7 @@ country_decisions = {
 	japanese_nation_shogun_diplomatic = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no		
@@ -92,7 +92,6 @@ country_decisions = {
 		potential = {
 			has_reform = shogunate
 			NOT = { has_country_flag = formed_japan_flag }
-			was_never_end_game_tag_trigger = yes
 			NOT = { exists = JAP }
 		}
 		allow = {
@@ -140,7 +139,6 @@ country_decisions = {
 		potential = {
 			NOT = { tag = JAP }
 			NOT = { has_country_flag = formed_japan_flag }
-			was_never_end_game_tag_trigger = yes
 			NOT = { has_reform = shogunate }
 			NOT = { has_reform = celestial_empire }
 			culture_group = japanese_g

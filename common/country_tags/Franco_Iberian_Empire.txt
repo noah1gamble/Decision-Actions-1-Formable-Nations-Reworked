@@ -1,1 +1,0 @@
-FIB = "countries/Franco_Iberian_Empire.txt"

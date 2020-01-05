@@ -1,1 +1,0 @@
-ROE = "countries/Roman_Empire.txt"

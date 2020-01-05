@@ -1,1 +1,0 @@
-BKL = "countries/Balkan_League.txt"

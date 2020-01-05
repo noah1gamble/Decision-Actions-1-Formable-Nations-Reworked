@@ -3,8 +3,7 @@ country_decisions = {
 	manchu_nation_1 = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
+			
 			NOT = { has_country_flag = formed_manchu_flag }
 			OR = {
 				ai = no

@@ -3,7 +3,7 @@ country_decisions = {
 	swabia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -20,7 +20,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 70 # Württemberg
+				province_id = 70 # Wï¿½rttemberg
 				province_id = 1868 # Augsburg
 				province_id = 1872 # Ulm
 				province_id = 74 # Baden
@@ -29,7 +29,7 @@ country_decisions = {
 				province_id = 72 # Breisgau
 				province_id = 68 # Memmingen
 				province_id = 1870 # St Gallen
-				province_id = 1869 # Zürich
+				province_id = 1869 # Zï¿½rich
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -41,7 +41,7 @@ country_decisions = {
 			NOT = { exists = SWB }
 			is_subject = no
 			is_at_war = no		
-			owns_core_province = 70 # Württemberg
+			owns_core_province = 70 # Wï¿½rttemberg
 			owns_core_province = 1868 # Augsburg
 			owns_core_province = 1872 # Ulm
 			owns_core_province = 74 # Baden
@@ -50,7 +50,7 @@ country_decisions = {
 			owns_core_province = 72 # Breisgau
 			owns_core_province = 68 # Memmingen
 			owns_core_province = 1870 # St Gallen
-			owns_core_province = 1869 # Zürich
+			owns_core_province = 1869 # Zï¿½rich
 		}
 	 	effect = {
 			change_tag = SWB

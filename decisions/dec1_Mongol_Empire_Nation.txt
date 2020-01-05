@@ -3,13 +3,12 @@ country_decisions = {
 	restore_mongol_empire = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			OR = { # to prevent countries that can't form a prerequisite nation from seeing this
 				tag = YUA
 				tag = GLH
 				tag = ILK
-				was_never_end_game_tag_trigger = yes
-			}
+				}
 			OR = {
 				culture_group = altaic
 				culture_group = tartar
@@ -124,7 +123,7 @@ country_decisions = {
 	restore_ilkhanate_decision_march = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			owns = 4338
 			OR = {
 				tag = YUA
@@ -182,9 +181,8 @@ country_decisions = {
 	restore_ilkhanate_decision = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			NOT = { has_country_flag = formed_ilkhanate_flag }
-			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

@@ -1,10 +1,10 @@
+
 country_decisions = {
 
 	restore_byzantine_empire = {
 		major = yes
 		potential = {
-			was_never_end_game_tag_trigger = yes
-			normal_or_historical_nations = yes
+			
 			NOT = { has_country_flag = formed_byzantium_flag }
 			OR = {
 				ai = no

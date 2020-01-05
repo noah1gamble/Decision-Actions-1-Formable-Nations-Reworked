@@ -1,1 +1,0 @@
-CTG = "countries/Carthage.txt"

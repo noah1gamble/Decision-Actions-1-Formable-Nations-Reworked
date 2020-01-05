@@ -5,7 +5,6 @@ country_decisions = {
 	austrian_empire_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no	
@@ -20,10 +19,9 @@ country_decisions = {
 			}			
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 8
 				}
 			}		
 			OR = {

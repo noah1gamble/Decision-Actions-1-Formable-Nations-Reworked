@@ -1,1 +1,0 @@
-CAU = "countries/Caucasia.txt"

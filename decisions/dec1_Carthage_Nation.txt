@@ -23,6 +23,13 @@ country_decisions = {
 				tag = ADR
 			}
 			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}			
+			OR = {
 				culture_group = maghrebi
 				culture_group = iberian
 				culture_group = latin

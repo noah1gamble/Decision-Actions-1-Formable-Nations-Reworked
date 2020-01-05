@@ -3,7 +3,6 @@ country_decisions = {
 	franco_iberia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -32,6 +31,17 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				owns_core_province = 219
+				region = france_region
+				region = iberia_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 10
 			NOT = { exists = FIB }
@@ -48,17 +58,6 @@ country_decisions = {
 			}
 			owns_core_province = 219
 		}
-		provinces_to_highlight = {
-			OR = {
-				owns_core_province = 219
-				region = france_region
-				region = iberia_region
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
 	 	effect = {
 			change_tag = FIB
 			set_country_flag = formed_franco_iberia_nation_flag
@@ -68,9 +67,9 @@ country_decisions = {
 				add_inflation = 1
 				set_capital = 197 # Roussillon
 				197 = {
-					add_base_tax = 3
-					add_base_production = 5
-					add_base_manpower = 3
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}
 			france_region = {

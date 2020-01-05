@@ -3,39 +3,34 @@ country_decisions = {
 	persian_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_persia_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no			
+			NOT = { 
+				has_country_flag = formed_persia_nation_flag 
+				exists = PER
+				tag = PER
+				tag = MUG
+				tag = TIM
+				tag = HLR
+				tag = ROM
+				tag = PAP
+				tag = TUR
+				tag = BYZ
+				tag = ARB
 			}
-			OR = {
-				ai = no
-				NOT = { exists = PER }
-			}
-			NOT = { tag = MUG }
-			NOT = { tag = TIM }
-			NOT = { tag = PER }
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
-			NOT = { tag = PAP }
-			NOT = { tag = TUR }
-			NOT = { tag = BYZ }
-			NOT = { tag = ARB }
 			OR = {
 				culture_group = iranian
 				primary_culture = azerbaijani
 				tag = AKK
 			}
-			is_colonial_nation = no
 			OR = {
-				is_former_colonial_nation = no
+				ai = no
 				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					ai = yes
+					num_of_cities = 8
 				}
-			}
+			}				
 		}
 		provinces_to_highlight = {
 			OR = {

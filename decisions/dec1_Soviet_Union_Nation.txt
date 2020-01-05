@@ -3,7 +3,7 @@ country_decisions = {
 	soviet_union_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -21,20 +21,22 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 8
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
 				region = russia_region
-					# Russia
-				province_id = 295	# Moskva
-				province_id = 310	# Novgorod
 				region = ural_region
+				region = ruthenia_region
 				region = west_siberia_region
 				region = east_siberia_region
-				region = ruthenia_region
+				area = ilan_hala_area
+				area = east_heilongjiang_area
+					# Russia
+				province_id = 295	# Moskva
+				province_id = 310	# Novgorod				
 					# South Ilan Area
 				province_id = 4215
 				province_id = 2105
@@ -56,22 +58,13 @@ country_decisions = {
 			NOT = { exists = SOV }
 			is_subject = no
 			is_at_war = no
+				# Russia			
 			russia_region = {
 				type = all
 				owned_by = ROOT
 			}
-				# Russia
-			owns_core_province = 295	# Moskva
-			owns_core_province = 310	# Novgorod
+				# Urals
 			ural_region = {
-				type = all
-				owned_by = ROOT
-			}
-			west_siberia_region = {
-				type = all
-				owned_by = ROOT
-			}
-			east_siberia_region = {
 				type = all
 				owned_by = ROOT
 			}
@@ -80,11 +73,7 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			# subject owning of ruthenia_region ???
-			owns_or_subject_of = 280	# Kiev
-			owns_or_subject_of = 293	# Smolensk
-			owns_or_subject_of = 276	# Minsk
-			owns_or_subject_of = 284	# Crimea
+				# Asia
 			east_heilongjiang_area = {
 				type = all
 				owned_by = ROOT
@@ -92,7 +81,23 @@ country_decisions = {
 			ilan_hala_area = {
 				type = all
 				owned_by = ROOT
+			}	
+			west_siberia_region = {
+				type = all
+				owned_by = ROOT
 			}
+			east_siberia_region = {
+				type = all
+				owned_by = ROOT
+			}					
+			# subject owning of ruthenia_region ???
+			owns_or_subject_of = 280	# Kiev
+			owns_or_subject_of = 293	# Smolensk
+			owns_or_subject_of = 276	# Minsk
+			owns_or_subject_of = 284	# Crimea
+				# Russia
+			owns_core_province = 295	# Moskva
+			owns_core_province = 310	# Novgorod			
 				# South Ilan Area
 			owns_core_province = 4215
 			owns_core_province = 2105

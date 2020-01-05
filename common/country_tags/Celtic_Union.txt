@@ -1,1 +1,0 @@
-CEU = "countries/Celtic_Union.txt"

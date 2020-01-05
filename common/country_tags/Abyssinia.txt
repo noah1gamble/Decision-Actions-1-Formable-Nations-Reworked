@@ -1,1 +1,0 @@
-ABY = "countries/Abyssinia.txt"

@@ -5,9 +5,8 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = changed_from_colonial_nation }
 			NOT = { has_country_flag = fled_to_brazil }
-			was_never_end_game_tag_trigger = yes
 			is_random_new_world = no
-			normal_or_historical_nations = yes
+			
 			tag = POR
 			government = monarchy
 			any_subject_country = {

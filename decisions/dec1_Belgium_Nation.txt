@@ -3,7 +3,7 @@ country_decisions = {
 	belgium_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no	
@@ -41,7 +41,7 @@ country_decisions = {
 				province_id = 92 # Brussels
 				province_id = 91 # Hainaut
 				province_id = 1866 # Namur
-				province_id = 93 # Liége
+				province_id = 93 # Liï¿½ge
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -63,7 +63,7 @@ country_decisions = {
 				owns_core_province = 92 # Brussels
 				owns_core_province = 91 # Hainaut
 				owns_core_province = 1866 # Namur
-				owns_core_province = 93 # Liége
+				owns_core_province = 93 # Liï¿½ge
 			}
                         
 		}

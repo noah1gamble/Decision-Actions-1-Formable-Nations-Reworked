@@ -8,7 +8,9 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			culture_group = germanic
 			NOT = {
+				primary_culture = prussian # Prussians must form Prussia first! #TODO figure out a solution for catholic teuton players
 				government = theocracy
 				has_country_flag = formed_germany_nation_flag
 				exists = GER
@@ -23,16 +25,6 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 6
 				}
-			}
-			OR = {
-				primary_culture = hannoverian #Westphalian
-				primary_culture = pommeranian
-				primary_culture = hessian
-				primary_culture = saxon
-				primary_culture = bavarian
-				primary_culture = prussian
-				primary_culture = swabian
-				primary_culture = franconian
 			}
 		}
 		provinces_to_highlight = {
@@ -283,7 +275,9 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			culture_group = germanic
 			NOT = {
+				primary_culture = prussian # Prussians must form Prussia first! #TODO figure out a solution for catholic teuton players
 				government = theocracy
 				has_country_flag = formed_german_empire_nation_flag
 				exists = GEP
@@ -296,22 +290,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
 					num_of_cities = 8
 				}
-			}
-			OR = {
-				primary_culture = hannoverian #Westphalian
-				primary_culture = pommeranian
-				primary_culture = hessian
-				primary_culture = saxon
-				primary_culture = bavarian
-				#primary_culture = prussian # Prussians must form Prussia first!
-					#TODO figure out a solution for catholic teuton players
-				primary_culture = swabian
-				primary_culture = franconian
 			}
 		}
 		provinces_to_highlight = {

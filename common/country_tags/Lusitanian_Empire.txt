@@ -1,1 +1,0 @@
-LSE = "countries/Lusitanian_Empire.txt"

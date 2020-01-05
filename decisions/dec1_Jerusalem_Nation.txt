@@ -5,7 +5,7 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = formed_jerusalem }
 			NOT = { exists = KOJ }
-			normal_or_historical_nations = yes
+			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -88,8 +88,7 @@ country_decisions = {
 						tag = CYP
 						tag = PRO
 					}
-					was_never_end_game_tag_trigger = yes
-				}
+						}
 				change_tag = KOJ
 				if = {
 					limit = { has_custom_ideas = no }

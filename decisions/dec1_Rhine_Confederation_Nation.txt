@@ -3,7 +3,7 @@ country_decisions = {
 	rhine_confederation_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -39,7 +39,7 @@ country_decisions = {
 				province_id = 1760 # Koblenz
 				province_id = 1878 # Aachen
 					# North Rhine
-				province_id = 85 # Köln
+				province_id = 85 # Kï¿½ln
 				province_id = 84 # Berg
 				province_id = 2975 # Kleves
 					# Palatinate
@@ -68,7 +68,7 @@ country_decisions = {
 				owns_core_province = 1760 # Koblenz
 				owns_core_province = 1878 # Aachen
 					# North Rhine
-				owns_core_province = 85 # Köln
+				owns_core_province = 85 # Kï¿½ln
 				owns_core_province = 84 # Berg
 				owns_core_province = 2975 # Kleves
 					# Palatinate
@@ -90,7 +90,7 @@ country_decisions = {
 				add_legitimacy = 15
 				add_stability = 1
 				add_inflation = 1			
-				set_capital = 85 # Köln
+				set_capital = 85 # Kï¿½ln
 				85 = { 
 					add_base_tax = 5
 					add_base_production = 4

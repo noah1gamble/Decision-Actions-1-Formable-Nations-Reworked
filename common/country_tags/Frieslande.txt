@@ -1,1 +1,0 @@
-FRL = "countries/Frieslande.txt"

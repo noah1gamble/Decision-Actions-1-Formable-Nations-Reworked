@@ -1,1 +1,0 @@
-EPR = "countries/East_Prussia.txt"

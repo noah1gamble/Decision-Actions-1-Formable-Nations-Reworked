@@ -1,1 +1,0 @@
-AHE = "countries/Austro_Hungarian_Empire.txt"

@@ -3,7 +3,6 @@ country_decisions = {
 	netherlands_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no	
@@ -19,10 +18,9 @@ country_decisions = {
 			}			
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 5
+					num_of_cities = 1 # Unique Netherlands Requirement
 				}
 			}
 			OR = {
@@ -78,9 +76,9 @@ country_decisions = {
 				add_prestige = 10
 				set_capital = 97 # Amsterdam
 				97 = {
-					add_base_tax = 6
-					add_base_production = 5
-					add_base_manpower = 2
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 			}
 			custom_tooltip = dec1_decisions_spacing

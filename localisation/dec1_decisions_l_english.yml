@@ -103,6 +103,12 @@
  united_kingdom_nation_title: "Form the United Kingdom"
  united_kingdom_nation_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland"
 
+ united_kingdom_nation_england_title: "Form the United Kingdom"
+ united_kingdom_nation_england_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland" 
+
+ united_kingdom_nation_gb_title: "Form the United Kingdom"
+ united_kingdom_nation_gb_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland"  
+
  #NOTE: ADD SCOTLAND AS UK
 
  maghrebia_nation_title: "Form Maghreb"

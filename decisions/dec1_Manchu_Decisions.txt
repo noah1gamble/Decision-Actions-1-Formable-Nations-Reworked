@@ -5,7 +5,7 @@ country_decisions = {
 			OR = {
 				tag = MCH
 			}
-			normal_or_historical_nations = yes
+			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -53,7 +53,7 @@ country_decisions = {
 			OR = {
 				tag = MCH
 			}
-			normal_or_historical_nations = yes
+			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

@@ -3,8 +3,7 @@ country_decisions = {
 	sardinia_piedmont_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
+			
 			NOT = { has_country_flag = formed_sardinia_piedmont_flag }
 			OR = {
 				ai = no
@@ -84,8 +83,7 @@ country_decisions = {
 	sardinia_piedmont_nation_inherit = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
+			
 			NOT = { has_country_flag = formed_sardinia_piedmont_flag }
 			OR = {
 				ai = no

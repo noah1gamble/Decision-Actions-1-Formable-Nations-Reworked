@@ -6,8 +6,6 @@ color = { 156  179  189 }
 
 historical_score = 1000
 
-preferred_religion = protestant
-
 historical_idea_groups = {
 	trade_ideas
 	plutocracy_ideas
@@ -63,7 +61,7 @@ monarch_names = {
 	"Jeremias #0" = 0
 	"Joseph #0" = 0
 	"Julius #0" = 0
-	"Jürgen #0" = 0
+	"Jï¿½rgen #0" = 0
 	"Kuno #0" = 0
 	"Kurt #0" = 0
 	"Markus #0" = 0
@@ -88,22 +86,22 @@ leader_names = {
 	Amsinck Baasch Backer Bagebuhr Bastian Billing 
 	Boetefeur Dabelstein "de Greve" Dreyer Eggers 
 	Engel "von der Fechte" Framhein Gevert Gossler 
-	Grünewaldt Hansen Heinsohn Henckell Heuer Horwege
+	Grï¿½newaldt Hansen Heinsohn Henckell Heuer Horwege
 	Imbeck Jarchow Kehrhahn Kellinghusen Kindt 
 	"von Lengerke" Lieb Merck Meyer Muhl Nanne 
 	Olbers Pape Pollnau Rosenbaum Rosendahl Schmerse
 	Schmidt Schuberth Schuemann Soltau Steetz Thelemann 
-	Tiedemann Vick Vilter Vollmer "von Düten" 
+	Tiedemann Vick Vilter Vollmer "von Dï¿½ten" 
 }
 
 ship_names = {
-	"Adler von Lübeck"
-	"Lisa von Lübeck"
+	"Adler von Lï¿½beck"
+	"Lisa von Lï¿½beck"
 	"Morian"
 	"Peter von Danzig"
 	"Bunte Kuh"
 	"Hauke Haien"
-	"Gödecke Michels"
+	"Gï¿½decke Michels"
 	Heiligenbeil
 	Bartenstein
 	"Furcht un Schreck"
@@ -112,7 +110,7 @@ ship_names = {
 	Hechtenvisch
 	Igzorn
 	Seewolff
-	Störtebecker
+	Stï¿½rtebecker
 	Fenrizwulf
 	"Adler von Wismar"
 	"Lisa von Wismar"

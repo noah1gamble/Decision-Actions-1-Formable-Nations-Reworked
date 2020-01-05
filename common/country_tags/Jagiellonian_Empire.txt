@@ -1,1 +1,0 @@
-JGE = "countries/Jagiellonian_Empire.txt"

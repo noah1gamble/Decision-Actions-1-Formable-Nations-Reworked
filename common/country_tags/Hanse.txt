@@ -1,1 +1,0 @@
-HNS = "countries/Hanse.txt"

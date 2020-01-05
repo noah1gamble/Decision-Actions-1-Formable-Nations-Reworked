@@ -5,7 +5,6 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = changed_from_colonial_nation }
 			is_nomad = no
-			was_never_end_game_tag_trigger = yes
 			is_random_new_world = no			
 			OR = {
 				is_former_colonial_nation = yes
