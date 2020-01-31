@@ -1,0 +1,247 @@
+country_decisions = {
+
+	form_great_yuan_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			culture_group = altaic
+			NOT = { 
+				has_country_flag = formed_yuan_flag
+				exists = YUA 
+				tag = YUA
+				tag = MUG
+				tag = QNG
+				tag = MNG
+				tag = MCH
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 723 #Xilin Gol
+				province_id = 1816 #Beijing
+				province_id = 2190 #Qaraqorum
+				province_id = 2136 #Xuanha
+				AND = {
+					culture = mongol
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					culture = oirats
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					culture = khalkha
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					culture = chahar
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 12
+			NOT = { exists = YUA }
+			is_subject = no
+			is_at_war = no
+			culture_group = altaic
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				is_emperor_of_china = yes
+				else = {
+					government_rank = 3
+				}
+			}			
+			custom_trigger_tooltip = {
+				tooltip = subject_all_mongols
+				NOT = {
+					any_province = {
+						culture = mongol
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				NOT = {
+					any_province = {
+						culture = oirats
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				NOT = {
+					any_province = {
+						culture = khalkha
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+				NOT = {
+					any_province = {
+						culture = chahar
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+				}
+			}			
+			owns_core_province = 723 #Xilin Gol
+			owns_core_province = 1816 #Beijing
+			owns_core_province = 2190 #Qaraqorum
+			owns_core_province = 2136 #Xuanha			
+		}
+		effect = {
+			change_tag = YUA
+			set_country_flag = formed_yuan_nation_flag
+			YUA = {
+				add_prestige = 25
+				set_capital = 1816
+				1816 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+					change_province_name = Khanbaliq
+					rename_capital = Khanbaliq					
+				}
+				723 = {
+					change_province_name = Xanadu
+					rename_capital = Xanadu 
+				}
+				2136 = {
+					change_province_name = Zhongdu
+					rename_capital = Zhongdu 
+				}
+				custom_tooltip = dec1_decisions_blank
+				china_superregion = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = YUA
+				}
+				manchuria_region = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
+					}
+					add_permanent_claim = YUA
+				}
+				mongolia_region = {
+					limit = {
+						NOT = {
+							owned_by = ROOT 
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
+					}
+					add_permanent_claim = YUA
+				}
+				tibet_region = {
+					limit = {
+						NOT = { 
+							owned_by = ROOT
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
+					}
+					add_permanent_claim = YUA
+				}					
+			}			
+			custom_tooltip = dec1_decisions_blank
+			YUA = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			YUA = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = celestial_empire_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 1
+							}
+						}
+					set_government_rank = 1
+				}
+				add_government_reform = celestial_empire_legacy
+			}
+			custom_tooltip = dec1_decisions_spacing
+			YUA = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = YUA_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

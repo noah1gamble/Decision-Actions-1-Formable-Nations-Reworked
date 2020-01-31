@@ -187,11 +187,7 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}	
 			}		
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400			
+		}	
 	}
 	
 }

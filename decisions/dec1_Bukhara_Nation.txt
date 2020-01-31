@@ -1,25 +1,30 @@
 country_decisions = {
 
-	bukharan_nation = {
+	##############################################################
+	# Settle into the Silk Roads - Form Bukharan Kingdom - Uzbek #
+	##############################################################
+
+	bukhara_nation = {
 		major = yes
 		potential = {
-			
-			NOT = { has_country_flag = formed_bukhara_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_colonial_nation = no
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no	
+			tag = SHY		
+			NOT = { 
+				has_reform = celestial_empire
+				has_country_flag = formed_bukhara_flag 
+				has_country_flag = bukharan_nation
+				exists = BUK
+				tag = BUK
 			}
-			tag = SHY
-			NOT = { exists = BUK }
-			NOT = { has_reform = celestial_empire }
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 5
+					num_of_cities = 6
 				}
 			}
-			NOT = { has_country_flag = bukharan_nation }
 		}
 		provinces_to_highlight = {
 			province_id = 442
@@ -29,57 +34,109 @@ country_decisions = {
 			}
 		}
 		allow = {
-			has_institution = feudalism
+			adm_tech = 5
+			NOT = { exists = BUK }
 			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			owns_core_province = 442 #Bukhara
+			is_at_war = no			
+			has_institution = feudalism
+			owns_core_province = 442 # Bukhara
 			NOT = { 
-				overlord_of = SIB
+				OR = {
+					overlord_of = SIB
+					exists = SIB
+				}
 			}
 		}
 		effect = {
-			set_country_flag = bukharan_nation
-			442 = {
-				move_capital_effect = yes
-			}
 			change_tag = BUK
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					NOT = { has_global_flag = bukhara_formed }
-				}
+			set_country_flag = formed_bukhara_nation_flag
+			BUK = {
+				add_prestige = 10
+				set_capital = 442
 				442 = {
-					add_base_tax = 2 #Only the first time Bukhara is formed by anyone.
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 2
 				}
 			}
-			add_permanent_claim = 441 #Khiva
-			add_permanent_claim = 444 #Charjuy
-			add_permanent_claim = 453 #Qarshi
-			add_permanent_claim = 454 #Samarkand
-			add_permanent_claim = 457 #Tashkent
-			add_permanent_claim = 1967 #Khujand
-			add_permanent_claim = 1973 #Urgench
-			add_permanent_claim = 2363 #Khujand
-			if = {
-				limit = { NOT = { government = monarchy } }
-				change_government = monarchy
-				set_legacy_government = despotic_monarchy
+			custom_tooltip = dec1_decisions_blank
+			BUK = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					custom_tooltip = dec1_hre_province_removal
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					emperor = {
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+					custom_tooltip = dec1_decisions_blank
+				}
 			}
-			add_government_reform = iqta
-			change_technology_group = muslim
-			change_unit_type = muslim
-			set_global_flag = bukhara_formed
-			#country_event = { id = ideagroups.1 } #Swap Ideas		#Removed for now, add back if Bukhara gets own ideas
-			set_country_flag = formed_bukhara_flag
+			hidden_effect = {
+				if = {
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}
+				}
+			}
+			BUK = {
+				if = {
+					limit = {
+						NOT = {
+							government = monarchy
+							}
+						}
+					change_government = monarchy
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+							}
+						}
+					set_legacy_government = iqta_legacy
+				}
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 1
+							}
+						}
+					set_government_rank = 1
+				}
+				add_government_reform = iqta
+			}
+			custom_tooltip = dec1_decisions_spacing
+			BUK = {
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = BUK_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
 		}
-
 		ai_will_do = {
 			factor = 1
 		}

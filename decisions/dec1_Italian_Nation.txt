@@ -87,9 +87,49 @@ country_decisions = {
 			NOT = { exists = ITA }
 			is_subject = no
 			is_at_war = no
-			italy_region = {
-				type = all
-				owned_by = ROOT
+			OR = {
+					# ALL of Italy (pretty hard)
+				italy_region = {
+					type = all
+					owned_by = ROOT
+				}
+					# Southern Italy (requires some extra reqs, more difficult)
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = form_italian_nation_tt_1
+						owns = 2984
+						owns = 1934
+						owns = 122
+						owns = 2983
+						owns = 2985
+						owns = 120
+						owns = 121
+					}
+					121 = {
+						development = 31
+					}
+					PAP = {
+						OR = {
+							NOT = { # Siege down the Pope
+								controls = 118
+								controls = 2976
+								controls = 119
+							}
+							AND = { # Pope is a subject of ROOT and does not control Rome
+								is_subject = yes
+								is_subject_of = ROOT
+								NOT = { 
+									owns = 118 
+								}
+							}
+						}
+					}
+				}
+					# Northern Italy (less reqs, less difficult)
+
+					# Cultural Shift Italy
+
+					# Special Event?
 			}
 		}
 		effect = {
@@ -105,6 +145,12 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 			}
+			italy_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ITA
+			}		
 			carpathia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -194,6 +240,7 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}
 			}
+			
 		}
 		ai_will_do = {
 			factor = 1

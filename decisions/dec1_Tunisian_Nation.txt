@@ -7,7 +7,6 @@ country_decisions = {
 	tunisian_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -48,20 +47,9 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# Emilia-Romagna
-				province_id = 114
-				province_id = 113
-				province_id = 106
-				province_id = 105
-					# Venitia
-				province_id = 108
-					# Lombardy
-				province_id = 109
-				province_id = 107
-				province_id = 104
-				province_id = 1862
-					# Piedmont
-				province_id = 2979
+				area = tunisia_area
+				area = fezzan_area
+				area = tripolitania_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -74,7 +62,18 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
-			area = tunisia_area
+			tunisia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			fezzan_area = {
+				type = all
+				owned_by = ROOT
+			}	
+			tripolitania_area = {
+				type = all
+				owned_by = ROOT
+			}										
 		}
 		effect = {
 			change_tag = TUN
@@ -83,8 +82,8 @@ country_decisions = {
 				add_prestige = 20
 				set_capital = 344
 				344 = {
-					add_base_tax = 3
-					add_base_production = 3
+					add_base_tax = 1
+					add_base_production = 1
 					add_base_manpower = 1
 				}
 			}

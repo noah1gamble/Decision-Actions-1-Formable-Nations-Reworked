@@ -38,10 +38,16 @@ country_decisions = {
 			}
 		}
 		allow = {
-
+			adm_tech = 10
+			NOT = { exists = FIB }
+			is_subject = no
+			is_at_war = no			
+			region = egypt_region
+			region = arabia_region
 		}
 		effect = {
-
+			change_tag = FIB
+			# NOTE FINISH THIS CRAP LATER
 		}
 		ai_will_do = {
 			factor = 1

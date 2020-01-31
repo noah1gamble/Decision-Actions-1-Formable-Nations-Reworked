@@ -12,6 +12,7 @@ country_decisions = {
 				exists = NSE
 				exists = UKI
 				exists = GBR
+				tag = IRE
 				tag = GBR
 				tag = UKI
 				tag = PAP

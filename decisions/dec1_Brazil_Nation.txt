@@ -6,11 +6,9 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			is_random_new_world = no
 			is_nomad = no
 			NOT = {
 				has_country_flag = formed_brazil_nation_flag
-				has_country_flag = changed_from_colonial_nation
 				exists = BRZ
 				tag = BRZ
 			}
@@ -36,27 +34,14 @@ country_decisions = {
 			}
 		}
 		allow = {
-			capital_scope = {
-				colonial_region = colonial_brazil
-				is_core = ROOT
-			}
-			adm_tech = 6 # unique native adm req
+			adm_tech = 2 # unique native adm req
 			NOT = { exists = BRZ }
 			is_at_war = no
 			is_former_colonial_nation = no
-			OR = { # Unique colonial nation formation req
-				AND = {
-					is_subject = no
-					government = monarchy
-				}
-				AND = {
-					is_subject = no
-					is_free_or_tributary_trigger = yes
-				}
-				AND = {
-					is_subject = yes
-					liberty_desire = 42.60
-				}
+			government = tribal
+			capital_scope = {
+				colonial_region = colonial_brazil
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -153,9 +138,6 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
-			ai_will_do = {
-				factor = 1
 			}
 		}
 	}

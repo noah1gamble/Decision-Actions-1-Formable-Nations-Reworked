@@ -30,9 +30,19 @@ country_decisions = {
 				}
 			}			
 			OR = {
-				culture_group = maghrebi
-				culture_group = iberian
-				culture_group = latin
+				OR = {
+					AND = {
+						culture_group = latin
+						AND = {
+							total_development = 200
+							grown_by_development = 110
+						}
+					}
+				}
+				OR = {
+					culture_group = maghrebi
+					culture_group = iberian
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -50,7 +60,6 @@ country_decisions = {
 				province_id = 333
 				area = corsica_sardinia_area
 				province_id = 125
-				province_id = 124
 				province_id = 2982
 			}
 			OR = {
@@ -63,6 +72,10 @@ country_decisions = {
 			NOT = { exists = CTG }
 			is_subject = no
 			is_at_war = no
+			OR = {
+				culture_group = maghrebi
+				culture_group = iberian
+			}			
 			owns_core_province = 341
 			OR = {
 				owns_core_province = 125
@@ -103,7 +116,6 @@ country_decisions = {
 				owns_core_province = 2469
 				owns_core_province = 333
 				owns_core_province = 125
-				owns_core_province = 124
 				owns_core_province = 2982
 			}
 		}

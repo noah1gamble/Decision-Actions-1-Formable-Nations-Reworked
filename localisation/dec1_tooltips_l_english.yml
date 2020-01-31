@@ -80,6 +80,18 @@
 
  form_celtic_union_tt_1: "Owns all cores of the §YCeltic Union§!"
 
+ form_roman_republic_tt_1: "Owns all cores of the §YRoman Republic§!"
+
+ form_italian_empire_tt_1: "Owns all cores of the §YItalian Empire§!"
+
+ form_italian_nation_tt_1: "Owns all §YSouthern§! provinces of the §YNeopolitan§! culture"
+
+ ###################
+ # CLAIMS TOOLTIPS #
+ ###################
+
+ form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §YAll Historical Golden Horde§! territory"
+
  ######################
  # OTHER LOCALISATION #
  ######################

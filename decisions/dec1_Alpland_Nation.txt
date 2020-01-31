@@ -164,10 +164,6 @@ country_decisions = {
 				}	
 			}			
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 200
 	}
 	
 }

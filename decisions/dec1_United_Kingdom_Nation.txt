@@ -28,16 +28,16 @@ country_decisions = {
 			tag = TSI
 		}
 		OR = {
+			culture_group = british
+			primary_culture = welsh
+			primary_culture = irish
+		}		
+		OR = {
 			ai = no
 			AND = {
 				ai = yes
 				num_of_cities = 6
 			}
-		}
-		OR = {
-			culture_group = british
-			primary_culture = welsh
-			primary_culture = irish
 		}
 	}
 	provinces_to_highlight = {
@@ -207,8 +207,8 @@ country_decisions = {
 				add_legitimacy = 10
 				set_capital = 236 # Anjou
 				236 = {
-					add_base_tax = 1
-					add_base_production = 1
+					add_base_tax = 2
+					add_base_production = 2
 					add_base_manpower = 1
 				}
 			}

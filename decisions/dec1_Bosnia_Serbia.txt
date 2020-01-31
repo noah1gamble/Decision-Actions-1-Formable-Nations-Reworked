@@ -31,11 +31,11 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				# Balkans
-      	province_id = 141 # Serbia
-      	province_id = 3002 # Visoki
-      	province_id = 140 # Bosna
-      	province_id = 139 # Hum
+						# Balkans
+				province_id = 141 # Serbia
+				province_id = 3002 # Visoki
+				province_id = 140 # Bosna
+				province_id = 139 # Hum
 				province_id = 138 # Zeta
 				province_id = 1827 # Raska
 				province_id = 1831 # Travunia

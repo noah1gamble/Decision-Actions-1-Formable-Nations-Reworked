@@ -7,7 +7,6 @@ country_decisions = {
 	andalusian_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -189,9 +188,6 @@ country_decisions = {
 					name = dec1_increased_centralization
 				}
 			}
-		}
-		ai_will_do = {
-			factor = 400
 		}
 	}
 }

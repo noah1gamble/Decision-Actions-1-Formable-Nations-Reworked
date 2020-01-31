@@ -1,16 +1,18 @@
 country_decisions = {
 
-	restore_roman_empire_nation = {
+	restore_roman_republic_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			owns = 118
+			owns = 118 # Must own Rome
 			NOT = {
-				has_country_flag = restored_roman_empire_nation_flag
+				has_country_flag = restored_roman_republic_nation_flag
+				exists = ROP
 				exists = ROM
 				tag = ROM
+				tag = ROP
 				tag = HLR
 				tag = PAP
 				tag = EUR
@@ -22,109 +24,88 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = italy_region
-				region = france_region
-				region = iberia_region
-				region = balkan_region
-				region = anatolia_region
-				region = mashriq_region
-				province_id = 343 # Fez
-				province_id = 341 # Tunis
-				province_id = 361 # Cairo
-				province_id = 236 # London
-				province_id = 245 # Yorkshire
-				province_id = 96 # Zeeland
-				province_id = 134 # Vienna
+				province_id = 118
+				province_id = 2976
+				province_id = 119
+				province_id = 120
+				province_id = 121
+				province_id = 2985
+				province_id = 2983
+				province_id = 1934
+				province_id = 1933
+				province_id = 122
+				province_id = 2984
+				province_id = 123
+				province_id = 2977
+				province_id = 2978
+				province_id = 116
+				province_id = 115
+				province_id = 117
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 10
-			dip_tech = 10
-			mil_tech = 10
-			NOT = { exists = ROE }
-			is_free_or_tributary_trigger = yes
+			adm_tech = 6
+			dip_tech = 6
+			mil_tech = 6
+			NOT = { exists = ROP }
 			is_subject = no
 			is_nomad = no
 			is_at_war = no
-			owns = 236 # London
-			owns = 183 # Paris
-			owns = 96 # Zeeland
-			owns = 219 # Toledo
-			owns = 245 # Yorkshire
-			owns = 134 # Vienna
-			owns = 343 # Fez
-			owns = 341 # Tunis
-			owns = 361 # Cairo
-			italy_region = {
-				type = all
-				owned_by = ROOT
-			}
-			france_region = {
-				type = all
-				owned_by = ROOT
-			}
-			iberia_region = {
-				type = all
-				owned_by = ROOT
-			}
-			balkan_region = {
-				type = all
-				owned_by = ROOT
-			}
-			anatolia_region = {
-				type = all
-				owned_by = ROOT
-			}
-			mashriq_region = {
-				type = all
-				owned_by = ROOT
-			}
+			owns = 118 # Must own Rome
+			custom_trigger_tooltip = {
+			tooltip = form_roman_republic_tt_1			
+				owns = 118
+				owns = 2976
+				owns = 119
+				owns = 120
+				owns = 121
+				owns = 2985
+				owns = 2983
+				owns = 1934
+				owns = 1933
+				owns = 122
+				owns = 2984
+				owns = 123
+				owns = 2977
+				owns = 2978
+				owns = 116
+				owns = 115
+				owns = 117		
+			}	
 		}
 		effect = {
-			change_tag = ROM
-			set_country_flag = restored_roman_empire_nation_flag
-			add_stability = 3
+			change_tag = ROP
+			set_country_flag = restored_roman_republic_nation_flag
 			if = {
 				limit = {
-					government = monarchy 
+					NOT = { primary_culture = roman }
 				}
-				add_legitimacy = 100
-			}				
-			if = {
-				limit = {
-					NOT = { 
-						government = monarchy 
-					}
-				}
-				add_republican_tradition = 100
-			}				
-			add_prestige = 100				
-			ROM = {
+				change_primary_culture = roman
+			}
+			ROP = {
+				add_prestige = 50
+				add_legitimacy = 50
+				add_stability = 1
 				set_capital = 118 # Roma
 				118 = {
-					add_base_tax = 10
-					add_base_production = 10
-					add_base_manpower = 10
+					add_core = ROP
+					add_base_tax = 12
+					add_base_production = 12
+					add_base_manpower = 12
 				}
 			}
 			custom_tooltip = roman_culture_provinces_tooltip
 			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { primary_culture = roman }
-					}
-					change_primary_culture = roman
-				}				
 				every_owned_province = {
 					limit = {
 						has_owner_culture = yes
 					}
 					change_culture = roman
 				}
-			}			
+			}
 			custom_tooltip = dec1_decisions_blank
-			ROM = {
+			ROP = {
 				if = {
 					limit = {
 						is_part_of_hre = yes
@@ -160,7 +141,7 @@ country_decisions = {
 					}
 				}
 			}
-			ROM = {
+			ROP = {
 				if = {
 					limit = {
 						NOT = {
@@ -180,26 +161,29 @@ country_decisions = {
 				if = {
 					limit = {
 						NOT = {
-							government_rank = 3
+							government_rank = 2
 							}
 						}
-					set_government_rank = 3
+					set_government_rank = 2
 				}
 				add_government_reform = autocracy_reform
 			}
 			custom_tooltip = dec1_decisions_spacing
-			ROM = {
+			ROE = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = ROM_ideas }
+						NOT = { has_idea_group = ROP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}											
+			}
+		}
+		ai_will_do = {
+			factor = 400
 		}
 	}
 

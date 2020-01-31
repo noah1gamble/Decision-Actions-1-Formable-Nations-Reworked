@@ -28,7 +28,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
+			OR = {			
 					# Liguria
 				province_id = 102
 				province_id = 2992
@@ -129,48 +129,51 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			OR = {
-				italy_region{
+				italy_region = {
 					type = all
 					owned_by = ROOT
 				}
 			}
-				# Italian isles
-			owns_core_province = 1247
-			owns_core_province = 127
-			owns_core_province = 2986
-				# Albania
-			owns_core_province = 4174
-			owns_core_province = 143
-			owns_core_province = 4175
-				# Aegean Archipelago
-			owns_core_province = 320
-				# Crete
-			owns_core_province = 163
-				# Cyrenaica
-			owns_core_province = 356
-			owns_core_province = 357
-			owns_core_province = 2326
-			owns_core_province = 2325
-				# Triplitania
-			owns_core_province = 335
-			owns_core_province = 2451
-			owns_core_province = 354
-			owns_core_province = 2452
-				# Djerba
-			owns_core_province = 353
-			owns_core_province = 2453
-			owns_core_province = 2954
-				# Tunisia
-			owns_core_province = 2473
-			owns_core_province = 341
-			owns_core_province = 4566
-			owns_core_province = 2454
-			owns_core_province = 2455
-				# Fezzan
-			owns_core_province = 4567
-			owns_core_province = 2449
-			owns_core_province = 2448
-			owns_core_province = 2474
+			custom_trigger_tooltip = {
+				tooltip = form_italian_empire_tt_1	
+					# Italian isles
+				owns_core_province = 1247
+				owns_core_province = 127
+				owns_core_province = 2986
+					# Albania
+				owns_core_province = 4174
+				owns_core_province = 143
+				owns_core_province = 4175
+					# Aegean Archipelago
+				owns_core_province = 320
+					# Crete
+				owns_core_province = 163
+					# Cyrenaica
+				owns_core_province = 356
+				owns_core_province = 357
+				owns_core_province = 2326
+				owns_core_province = 2325
+					# Triplitania
+				owns_core_province = 335
+				owns_core_province = 2451
+				owns_core_province = 354
+				owns_core_province = 2452
+					# Djerba
+				owns_core_province = 353
+				owns_core_province = 2453
+				owns_core_province = 2954
+					# Tunisia
+				owns_core_province = 2473
+				owns_core_province = 341
+				owns_core_province = 4566
+				owns_core_province = 2454
+				owns_core_province = 2455
+					# Fezzan
+				owns_core_province = 4567
+				owns_core_province = 2449
+				owns_core_province = 2448
+				owns_core_province = 2474
+			}
 		}
 		effect = {
 			change_tag = ITE
@@ -263,10 +266,6 @@ country_decisions = {
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
 	}
 
 }

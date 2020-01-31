@@ -8,10 +8,12 @@ country_decisions = {
 			is_colonial_nation = no
 			primary_culture = irish
 			NOT = { 
-				has_country_flag = formed_irish_nation+flag
+				has_country_flag = formed_irish_nation_flag
 				exists = IRE
-				tag = PAP 
 				tag = IRE
+				tag = GBR
+				tag = ENG
+				tag = PAP
 				tag = HLR
 				tag = EUR
 			}			

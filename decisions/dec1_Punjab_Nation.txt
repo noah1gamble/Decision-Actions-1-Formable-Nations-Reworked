@@ -23,7 +23,6 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 6
 				}
-			}	}
 			}
 		}
 		provinces_to_highlight = {
@@ -63,10 +62,6 @@ country_decisions = {
 			}
 			set_country_flag = formed_punjab_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
 	}
 
 }
