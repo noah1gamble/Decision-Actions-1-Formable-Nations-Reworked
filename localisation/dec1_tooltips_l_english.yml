@@ -12,9 +12,9 @@
  dec1_papal_states_notif: "§RIf you form the §YPapal States§! you will become §YThe Pope§! and become locked out of any possible reformation to another country and must take on the responsibility of the true §YMessenger of God§!.. Choose carefully!§!\n"
  dec1_papal_influence: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!"
 
- form_spanish_nation_tt_1: "Owns all core §YSpanish§! provinces"
+ form_spanish_nation_tt_1: "Owns core provinces of §YSpain§!"
 
- form_spanish_nation_claims: "§YSpain§! gains a permanent claim on §YIberia§! Region."
+ form_spanish_nation_claims: "§YSpain§! gains a permanent claim on §YIberia§! region."
 
  form_united_kingdom_tt_1: "Owns core region: §YEngland§!"
  form_united_kingdom_tt_2: "Owns core region: §YScotland§!"
@@ -34,43 +34,46 @@
 
  form_england_tt_1: "Owns core region: §YEngland§!"
 
- form_adriatic_empire_tt_1: "Owns all core §YAdriatic§! provinces"
+ form_adriatic_empire_tt_1: "Owns core §YAdriatic§! provinces"
 
- form_austrian_empire_tt_1: "Owns all core §YAustrian§! provinces"
- form_austrian_empire_tt_2: "Owns all core §YHungarian§! provinces"
- form_austrian_empire_tt_3: "Subject owns all core §YHungarian§! provinces"
+ form_austrian_empire_tt_1: "Owns core §YAustrian§! provinces"
+ form_austrian_empire_tt_2: "Owns core §YHungarian§! provinces"
+ form_austrian_empire_tt_3: "Subject owns core §YHungarian§! provinces"
 
- form_austro_hungarian_empire_tt_1: "Owns all core §YAustrian§! provinces"
- form_austro_hungarian_empire_tt_2: "Owns all core §YHungarian§! provinces"
- form_austro_hungarian_empire_tt_3: "Subject owns all core §YHungarian§! provinces"
+ form_austro_hungarian_empire_tt_1: "Owns core §YAustrian§! provinces"
+ form_austro_hungarian_empire_tt_2: "Owns core §YHungarian§! provinces"
+ form_austro_hungarian_empire_tt_3: "Subject owns core §YHungarian§! provinces"
 
- form_burma_tt_1: "Owns all core §YBurmese§! provinces"
+ form_burma_tt_1: "Owns core §YBurmese§! provinces"
 
- formed_caucasia_tt_1: "Owns all core §YCaucasian§! provinces"
+ formed_caucasia_tt_1: "Owns core §YCaucasian§! provinces"
 
- form_baltic_union_tt_1: "Owns all core §YNorth Baltic§! provinces"
- form_baltic_union_tt_2: "Owns all core §YSouth Baltic§! provinces"
+ form_baltic_union_tt_1: "Owns core §YNorthern§! provinces of the §YBaltic Union§!"
+ form_baltic_union_tt_2: "Owns core §YSouthern§! provinces of the §YBaltic Union§!"
 
- form_north_german_confederation_tt_1: "Owns all core §YNorth German Confederation§! provinces"
+ form_north_german_confederation_tt_1: "Owns core provinces of the §YNorth German Confederation§!"
 
- rename_ethiopia_tt_1: "Owns all core §YAbyssinia§! provinces"
+ form_german_empire_nation_tt_1: "Owns core §GNorthern§! provinces of the §YGerman Empire§!"
+ form_german_empire_nation_tt_2: "Owns core §GSouthern§! provinces of the §YGerman Empire§!"
 
- form_cisalpina_tt_1: "Owns all core §YCisalpina§! provinces"
+ rename_ethiopia_tt_1: "Owns core §YAbyssinia§! provinces"
 
- form_russian_nation_tt_1: "Owns all core §YRussian§! provinces"
+ form_cisalpina_tt_1: "Owns core §YCisalpinian§! provinces"
 
- form_carthage_nation_tt_1: "Owns all core §YCarthage§! provinces"
+ form_russian_nation_tt_1: "Owns core §YRussian§! provinces"
+
+ form_carthage_nation_tt_1: "Owns core §YCarthage§! provinces"
 
  form_lusitanian_empire_nation_tt_1: "Has §YExploration Ideas§!: §YGlobal Empire§!"
- form_lusitanian_empire_nation_tt_2: "Owns all cores of §YPortugal§!"
- form_lusitanian_empire_nation_tt_3: "Owns all cores in §YSouth Africa§!"
- form_lusitanian_empire_nation_tt_4: "Owns all various §YColonial Possessions§!"
- form_lusitanian_empire_nation_tt_5: "Owns all cores in §YCentral Africa§!"
+ form_lusitanian_empire_nation_tt_2: "Owns cores of §YPortugal§!"
+ form_lusitanian_empire_nation_tt_3: "Owns all core provinces in §YSouth Africa§!"
+ form_lusitanian_empire_nation_tt_4: "Owns various §YColonial Possessions§!"
+ form_lusitanian_empire_nation_tt_5: "Owns all core provinces in §YCentral Africa§!"
 
- form_german_nation_tt_1: "Owns all core §YNorthern§! provinces of the §YGerman Kingdom§!"
- form_german_nation_tt_2: "Owns all core §YSouthern§! provinces of the §YGerman Kingdom§!"
+ form_german_nation_tt_1: "Owns core §YNorthern§! provinces of the §YGerman Kingdom§!"
+ form_german_nation_tt_2: "Owns core §YSouthern§! provinces of the §YGerman Kingdom§!"
 
- form_bharat_nation_tt_1: "Owns all cores of §YBharat§!"
+ form_bharat_nation_tt_1: "Owns core provinces of §YBharat§!"
 
  form_hindustan_nation_tt_1: "Owns all cores of §YHindustan§!"
 
@@ -85,6 +88,12 @@
  form_italian_empire_tt_1: "Owns all cores of the §YItalian Empire§!"
 
  form_italian_nation_tt_1: "Owns all §YSouthern§! provinces of the §YNeopolitan§! culture"
+
+ form_turkey_nation_tt_1: "Owns all core §YTurkish§! provinces"
+
+ form_east_prussia_nation_tt_1: "Owns all core §YEastern Prussian§! provinces"
+
+ form_prussia_nation_tt_1: "Owns core provinces of §YPrussia§!"
 
  ###################
  # CLAIMS TOOLTIPS #
@@ -105,3 +114,27 @@
  #####################
 
  LSE_all_feitorias_completed: "All Feitorias Completed"
+
+ ######################
+ # EVENT LOCALISATION #
+ ######################
+
+ dec1_events.1.t: "Our place in the Empire"
+ dec1_events.1.d: "As we place ourselves higher we begin to question the rights of our so called Emperor.. Should we not forge our own path and take our place in the sun?"
+ dec1_events.1.a: "Remain loyal to the Emperor."
+ dec1_events.1.b: "We must forge our own path!"
+ dec1_events.1.c: "We are the rightful Emperor!"
+
+ ######################################
+ # CASUS BELLI / WARGOAL LOCALISATION #
+ ######################################
+
+ cb_depose_emperor: "Depose the Emperor"
+ DEPOSE_EMPEROR_WAR_NAME: "Overthrow the Emperor of the Holy Roman Empire"
+
+ ###############################
+ # PEACE TREATIES LOCALISATION #
+ ###############################
+
+ PEACE_depose_emperor: "Depose the Emperor"
+ depose_emperor_desc: "The Emperor of [From.GetName] will be forced to concede defeat and relinquish the emperorship to us!"

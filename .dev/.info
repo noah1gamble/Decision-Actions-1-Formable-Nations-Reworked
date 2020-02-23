@@ -25,9 +25,23 @@ AI
 
 GUIDES
 
+(These will probably just be used for the Historical version)
+(Not really any reason to limit players choices in the main version)
+
 ~ Austria -> Habsburg Monarchy -> Austrian Empire -> Austro-Hungarian Empire
 ~ Austria -> Austro-Hungarian Empire (Austro-Hungarian Comprimise)
 ~ England -> Great Britain (Just Great Britain)
 ~ England -> United Kingdom (Great Britain + Ireland)
 ~ England -> British Empire (The real British Empire)
 ~ England -> Great Britain -> United Kingdom -> British Empire
+
+TEMPLATE INFORMATION
+-> FOR DECISION ALLOW
+
+-tech level (7 for duchies, 10 for kingdoms, 15 for empires) (some can be special situations)
+-NOT = { exists = TAG }
+-is_at_war = no
+-is_subject = no
+-is_emperor = no (IF APPLICAPLE)
+-religion/culture/etc reqs
+-core provinces/custom tooltips

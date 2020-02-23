@@ -1,0 +1,65 @@
+namespace = dec1_events
+
+# Our place in the Empire
+country_event = {
+	id = dec1_events.1
+	title = "dec1_events.1.t"
+	desc = "dec1_events.1.d"
+	picture = BORDER_TENSION_eventPicture
+
+	trigger = {
+		has_country_flag = dec1_formed_nation_inside_HRE
+	}
+
+	# Stay in the Empire
+	option = {
+		name = "dec1_events.1.a"
+		# Emperor is told about the loyalty to the empire, gains imperial authority
+	}
+
+	# Leave the Empire
+	option = {
+		name = "dec1_events.1.b"
+		if = { # Remove Elector status
+			limit = {
+				is_elector = yes
+			}
+			elector = no
+			remove_non_electors_emperors_from_empire_effect = yes
+		}
+		if = {		
+			limit = {
+				is_part_of_hre = yes
+			}
+			emperor = {	 # Emperor is told about the nation leaving, loses imperial authority
+				country_event = { id = hre_event.5 }
+				add_opinion = {
+					who = root
+					modifier = opinion_left_empire
+				}
+			}
+			if = { # Non-Elector
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}			
+		}
+		add_prestige = -10	
+	}
+
+	# Declare war upon the Emperor to depose the Emperor and become the rightful emperor
+	option = {
+		name = "dec1_events.1.c"
+		declare_war_with_cb = {
+			who = emperor
+			casus_belli = cb_depose_emperor
+		}		
+	}	
+}

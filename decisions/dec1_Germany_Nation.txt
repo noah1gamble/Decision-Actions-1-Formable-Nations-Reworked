@@ -10,9 +10,9 @@ country_decisions = {
 			is_colonial_nation = no
 			culture_group = germanic
 			NOT = {
-				primary_culture = prussian # Prussians must form Prussia first! #TODO figure out a solution for catholic teuton players
-				government = theocracy
 				has_country_flag = formed_germany_nation_flag
+				primary_culture = prussian # Prussians must form Prussia first!
+				has_reform = celestial_empire
 				exists = GER
 				tag = GER
 				tag = PAP
@@ -63,10 +63,9 @@ country_decisions = {
 		allow = {
 			adm_tech = 10
 			NOT = { exists = GER }
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
 			is_at_war = no
 			is_emperor = no
+			NOT = { government = theocracy }
 			owns_core_province = 50 # Berlin
 			custom_trigger_tooltip = { # North German Stuff
 				tooltip = form_german_nation_tt_1
@@ -277,9 +276,9 @@ country_decisions = {
 			is_colonial_nation = no
 			culture_group = germanic
 			NOT = {
-				primary_culture = prussian # Prussians must form Prussia first! #TODO figure out a solution for catholic teuton players
-				government = theocracy
 				has_country_flag = formed_german_empire_nation_flag
+				primary_culture = prussian # Prussians must form Prussia first!
+				has_reform = celestial_empire
 				exists = GEP
 				exists = GER
 				tag = GEP
@@ -335,14 +334,13 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 15
 			NOT = { exists = GEP }
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
 			is_at_war = no
 			is_emperor = no
+			NOT = { government = theocracy }
 			owns_core_province = 50 # Berlin
-			custom_trigger_tooltip = { # North German Stuff
+			custom_trigger_tooltip = { # North
 				tooltip = form_german_empire_nation_tt_1
 				east_prussia_area = {
 					type = all
@@ -419,7 +417,7 @@ country_decisions = {
 				owns_core_province = 1763
 				owns_core_province = 1931
 			}
-			custom_trigger_tooltip = { # South German Stuff
+			custom_trigger_tooltip = { # South
 				tooltip = form_german_empire_nation_tt_2
 				palatinate_area = {
 					type = all
@@ -453,10 +451,9 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GEP
-			swap_non_generic_missions = yes
 			set_country_flag = formed_germany_nation_flag
+			custom_tooltip = dec1_decisions_blank
 			GEP = {
-				add_prestige = 20
 				set_capital = 50 # Berlin
 				50 = {
 					add_base_tax = 2
@@ -464,6 +461,7 @@ country_decisions = {
 					add_base_manpower = 2
 				}
 			}
+			add_prestige = 20
 			custom_tooltip = dec1_decisions_blank
 			GEP = {
 				if = {
@@ -487,21 +485,21 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_decisions_blank
 				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
+				hidden_effect = {
+					if = {
 						limit = {
 							is_part_of_hre = yes
+							is_elector = no
 						}
-						set_in_empire = no
-						remove_non_electors_emperors_from_empire_effect = yes
+						every_owned_province = {
+							limit = {
+								is_part_of_hre = yes
+							}
+							set_in_empire = no
+							remove_non_electors_emperors_from_empire_effect = yes
+						}
 					}
-				}
+				}				
 			}
 			GEP = {
 				if = {

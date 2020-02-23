@@ -1,5 +1,3 @@
-# Reworked New Nations
-
 ABY = "countries/Abyssinia.txt"
 ADR = "countries/Adriatic_Empire.txt"
 ALP = "countries/Alpland.txt"

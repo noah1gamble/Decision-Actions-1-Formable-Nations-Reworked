@@ -98,15 +98,37 @@ country_decisions = {
 					custom_trigger_tooltip = {
 						tooltip = form_italian_nation_tt_1
 						owns = 2984
+						2984 = {
+							culture = neapolitan
+						}						
 						owns = 1934
+						1934 = {
+							culture = neapolitan
+						}	
 						owns = 122
+						122 = {
+							culture = neapolitan
+						}	
 						owns = 2983
+						2983 = {
+							culture = neapolitan
+						}	
 						owns = 2985
+						2985 = {
+							culture = neapolitan
+						}	
 						owns = 120
+						120 = {
+							culture = neapolitan
+						}	
 						owns = 121
+						121 = {
+							culture = neapolitan
+						}	
 					}
 					121 = {
-						development = 31
+						development = 37 # Raised to 37 for balance
+						base_tax = 10
 					}
 					PAP = {
 						OR = {
@@ -125,8 +147,33 @@ country_decisions = {
 						}
 					}
 				}
-					# Northern Italy (less reqs, less difficult)
-
+				custom_trigger_tooltip = { # Northern Italy (less reqs, less difficult)
+					tooltip = form_italian_nation_tt_1
+						# Liguria
+					owns = 102					
+					owns = 2992
+					owns = 101
+						# Piedmont
+					owns = 1875	
+					owns = 103
+					owns = 2981
+					owns = 2979
+						# Lombardy
+					owns = 104
+					owns = 107
+					owns = 1862
+					owns = 109	
+						# Venetia
+					owns = 108
+					owns = 1774
+					owns = 111
+					owns = 112	
+						# Emilia-Romagna
+					owns = 113
+					owns = 114
+					owns = 106
+					owns = 105								
+				}
 					# Cultural Shift Italy
 
 					# Special Event?

@@ -202,7 +202,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 250
+		ai_importance = 50 # Not Important - too large a goal for AI to target
 	}
 
 }
