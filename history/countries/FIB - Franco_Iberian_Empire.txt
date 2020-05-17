@@ -1,0 +1,78 @@
+government = monarchy
+add_government_reform = autocracy_reform
+
+primary_culture = cosmopolitan_french
+add_accepted_culture = castillian
+
+religion = catholic
+technology_group = western
+
+historical_rival = HAB # Franco-Austrian Rivalry
+historical_rival = AEH # Franco-Austrian Rivalry
+historical_rival = AHE # Franco-Austrian Rivalry
+
+capital = 183 # Paris
+
+national_focus = DIP
+
+1390.10.9 = {
+	monarch = {
+		name = "Enrique III"
+		dynasty = "de Trast�mara"
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1405.3.6 = {
+	heir = {
+		name = "Juan"
+		monarch_name = "Juan II"
+		dynasty = "de Trast�mara"
+		birth_date = 1405.3.6
+		death_date = 1454.7.20
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1406.12.26 = {
+	monarch = {
+		name = "Juan II"
+		dynasty = "de Trast�mara"
+		birth_date = 1405.3.6
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1422.1.1 = { 
+	leader = {	
+		name = "�lvaro de Luna"	
+		type = general		
+		fire = 2	
+		shock = 2	
+		manuever = 3	
+		siege = 0	
+		death_date = 1453.6.2 
+	} 
+}
+
+
+1425.1.5 = {
+	heir = {
+		name = "Enrique"
+		monarch_name = "Enrique IV"
+		dynasty = "de Trast�mara"
+		birth_date = 1425.1.5
+		death_date = 1474.12.11
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}

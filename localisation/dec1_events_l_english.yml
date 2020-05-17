@@ -16,6 +16,16 @@
  flavor_lse.2.EVTOPTA: "We can't afford to accept it now.."
  flavor_lse.2.EVTOPTA: "No, we don't want to make a Feitoria in $PROVINCE$"
 
+ dec1_events.1.t: "Our place in the Empire"
+ dec1_events.1.d: "As we place ourselves higher we begin to question the rights of our so called Emperor.. Should we not forge our own path and take our place in the sun?"
+ dec1_events.1.a: "Remain loyal to the Emperor."
+ dec1_events.1.b: "We must forge our own path!"
+ dec1_events.1.c: "We are the rightful Emperor!"
+
+ dec1_events.2.t: "[From.GetName] remains loyal to the Empire"
+ dec1_events.2.d: "The Holy Roman Empire has been strengthened by the formation of the new state of [From.GetName] which has remained loyal to our Empire and supported Emperor $EMPERORNAME$. We have gained much prestige and stability within the empire due to the strengthening of our Empire!"
+ dec1_events.2.a: "Excellent!"
+
  ##############
  # END EVENTS #
  ##############

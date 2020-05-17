@@ -1,34 +1,23 @@
-country_decisions = {
+-------------------------------------country_decisions = {
 
 	icelandic_nation = {
 		major = yes
 		potential = {
-			
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no			
 			owns = 370
 			owns = 371
-			NOT = { has_country_flag = formed_iceland } #Only once
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			NOT = { 
+				has_country_flag = formed_iceland
+				exists = ICE
+				tag = HLR 
+				tag = ROM
+				tag = PAP
+				tag = TUR
+				tag = BYZ
 			}
-			OR = {
-				ai = no
-				NOT = { num_of_cities = 4 }
-			}
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
-			NOT = { tag = PAP }
-			NOT = { tag = TUR }
-			NOT = { tag = BYZ }
-			NOT = { exists = ICE }
-			is_colonial_nation = no		
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
+
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -41,91 +30,87 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { num_of_cities = 4 }
 			owns_core_province = 370
 			owns_core_province = 371
 		}
 		effect = {
-			if = {
-				limit = {
-					capital_scope = { NOT = { area = subarctic_islands_area } }
-				}
+			change_tag = ICE # Country TAG
+			set_country_flag = formed_iceland_nation_flag # Country Formation Flag
+			custom_tooltip = form_iceland_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			ICE = { # Capital change and bonuses				
+				set_capital = 370
 				370 = {
-					move_capital_effect = yes
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			hidden_effect = {
-				every_province = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
 					limit = {
-						is_core = ROOT
-						NOT = { owned_by = ROOT }
+						has_dlc = "Dharma"
 					}
-					remove_core = ROOT
-					if = {
-						limit = { ROOT = { tag = NOR } }
-						set_province_flag = norwegian_core
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
 					}
-					if = {
-						limit = { ROOT = { tag = DAN } }
-						set_province_flag = danish_core
-					}
-					if = {
-						limit = { ROOT = { tag = SWE } }
-						set_province_flag = swedish_core
-					}					
+					set_legacy_government = monarchy_legacy
 				}
-			}		
-			change_tag = ICE
-			set_country_flag = formed_iceland
-			if = {
-				limit = { NOT = { primary_culture = norwegian } }
-				change_primary_culture = CAPITAL
-			}
-			every_owned_province = {
-				limit = { area = subarctic_islands_area }
-				add_local_autonomy = -100
-			}
-			370 = {
-				add_base_tax = 1
-				add_base_production = 1
-			}
-			371 = {
-				add_base_tax = 1
-				add_base_production = 1
-			}			
-			hidden_effect = {
-				every_province = {
-					if = {
-						limit = {
-							has_province_flag = norwegian_core
-						}
-						add_core = NOR
-						clr_province_flag = norwegian_core					
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
 					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Government Rank change				
 					if = {
 						limit = {
-							has_province_flag = danish_core
-						}
-						add_core = DAN
-						clr_province_flag = danish_core					
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
 					}
+					# Government Type Change
 					if = {
 						limit = {
-							has_province_flag = swedish_core
-						}
-						add_core = SWE
-						clr_province_flag = swedish_core					
-					}					
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-			}			
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ICE_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				capital_scope = { NOT = { area = subarctic_islands_area } }
-			}
 		}
+		ai_importance = 200		
 	}
-	
 }

@@ -7,7 +7,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
-				has_country_flag = formed_carthage_empire_nation_flag
+				has_country_flag = formed_carthage_nation_flag
 				exists = CTG
 				tag = CTG
 				tag = PAP
@@ -21,6 +21,22 @@ country_decisions = {
 				tag = CIS
 				tag = EUR
 				tag = ADR
+			}			
+			OR = {
+				AND = { # A powerful latin can control this title with growth
+					culture_group = latin
+					OR = {
+						AND = {
+							total_development = 200
+							grown_by_development = 110
+						}
+
+					}
+				}
+				OR = { # Any Maghrebi or Iberian can restore Carthage
+					culture_group = maghrebi
+					culture_group = iberian
+				}
 			}
 			OR = {
 				ai = no
@@ -29,21 +45,6 @@ country_decisions = {
 					num_of_cities = 8
 				}
 			}			
-			OR = {
-				OR = {
-					AND = {
-						culture_group = latin
-						AND = {
-							total_development = 200
-							grown_by_development = 110
-						}
-					}
-				}
-				OR = {
-					culture_group = maghrebi
-					culture_group = iberian
-				}
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -52,13 +53,13 @@ country_decisions = {
 				area = djerba_area
 				area = tripolitania_area
 				area = barbary_coast_area
-				province_id = 4562
 				area = northern_morocco_area
+				area = corsica_sardinia_area
+				province_id = 4562
 				province_id = 342
 				province_id = 4564
 				province_id = 2469
 				province_id = 333
-				area = corsica_sardinia_area
 				province_id = 125
 				province_id = 2982
 			}
@@ -120,96 +121,82 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = CTG
-			set_country_flag = formed_carthage_empire_nation_flag
-			CTG = {
-				add_prestige = 40
+			change_tag = CTG # Country TAG
+			set_country_flag = formed_carthage_nation_flag # Country Formation Flag
+			custom_tooltip = form_carthage_tt_2 # New Missions
+			custom_tooltip = form_carthage_tt_3 # Region/Area Claims
+			custom_tooltip = form_carthage_tt_4 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			CTG = { # Capital change and bonuses				
 				set_capital = 341 # Carthage
 				341 = {
 					add_base_tax = 1
-					add_base_production = 3
-					add_base_manpower = 3
+					add_base_production = 1
+					add_base_manpower = 1
+					341 = { rename_capital = "Carthage" }
 				}
-			}
-			341 = { rename_capital = "Carthage" }
-			iberia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CTG
-			}
-			italy_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CTG
-			}
-			custom_tooltip = dec1_decisions_blank
-			CTG = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			CTG = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = despotic_monarchy
 				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					iberia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = CTG
+					}
+					italy_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = CTG
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			CTG = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -217,14 +204,16 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400
+		ai_importance = 400		
 	}
 }

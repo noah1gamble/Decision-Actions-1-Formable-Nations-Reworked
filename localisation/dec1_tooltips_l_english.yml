@@ -1,109 +1,327 @@
 ﻿l_english:
 
- ############
- # TOOLTIPS #
- ############
+ #####################
+ # DECISION TOOLTIPS #
+ #####################
 
- dec1_hre_province_removal: "§YAll provinces§! within the Holy Roman Empire will no longer be a part of the Empire."
+ form_algiers_tt_2: "Country gains a permanent claim on §YLabylia§! area."
+ form_algiers_tt_3: "Country gains a permanent claim on §YAlgiers§! area."
+ form_algiers_tt_4: "Country gains a permanent claim on §YNorth Saharan§! area."
+ form_algiers_tt_5: "Country obtains §YAlgiers§! missions."
 
- dec1_cisalpina_cannot_form_italy: "§R§YCisalpina§! can NOT form §YItaly§!§!"
+ form_alpland_tt_3: "Country gains a permanent claim on §YRomandie§! area."
+ form_alpland_tt_4: "Country gains a permanent claim on §YTirol§! area."
+ form_alpland_tt_2: "Country obtains §YAlpland§! missions."
 
- restore_papal_states_nation_tt_1: "Any controller of original papal provinces can restore the Papal States!"
- dec1_papal_states_notif: "§RIf you form the §YPapal States§! you will become §YThe Pope§! and become locked out of any possible reformation to another country and must take on the responsibility of the true §YMessenger of God§!.. Choose carefully!§!\n"
- dec1_papal_influence: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!"
+ form_andalusian_nation_tt_2: "Country obtains §YAndalusia§! missions."
+ form_andalusian_nation_tt_3: "Country gains a permanent claim on §YLower Andalucia§! area."
+ form_andalusian_nation_tt_4: "Country gains a permanent claim on §YUpper Andalucia§! area."
 
- form_spanish_nation_tt_1: "Owns core provinces of §YSpain§!"
+ form_arab_empire_tt_2: "Country obtains §YArabian Empire§! missions."
+ form_arab_empire_tt_3: "Country gains a permanent claim on §YMashriq§! region."
+ form_arab_empire_tt_4: "Country gains a permanent claim on §YArabia§! region."
+ form_arab_empire_tt_5: "Country gains a permanent claim on §YEgypt§! region."
 
- form_spanish_nation_claims: "§YSpain§! gains a permanent claim on §YIberia§! region."
+ form_arab_kingdom_tt_2: "Country obtains §YArabian Kingdom§! missions."
+ form_arab_kingdom_tt_3: "Country gains a permanent claim on §YArabia§! region."
+ form_arab_kingdom_tt_4: "Country gains a permanent claim on §YEgypt§! region."
+
+ form_republic_of_armenia_tt_2: "Country obtains §YRepublican Armenia§! missions."
+ form_republic_of_armenia_tt_3: "Country gains a permanent claim on §YArmenia§! area."
+ form_republic_of_armenia_tt_4: "Country gains a permanent claim on §YSamtskhe§! area."
+ form_republic_of_armenia_tt_5: "Country gains a permanent claim on §YErzurum§! area."
+ form_republic_of_armenia_tt_6: "Country gains a permanent claim on §YNorth Kurdistan§! area."
+ form_republic_of_armenia_tt_7: "Country gains a permanent claim on §YCukurova§! area."
+
+ form_armenia_kingdom_tt_2: "Country obtains §YArmenia§! missions."
+ form_armenia_kingdom_tt_3: "Country gains a permanent claim on §YArmenia§! area."
+ form_armenia_kingdom_tt_4: "Country gains a permanent claim on §YSamtskhe§! area."
+ form_armenia_kingdom_tt_5: "Country gains a permanent claim on §YErzurum§! area."
+ form_armenia_kingdom_tt_6: "Country gains a permanent claim on §YNorth Kurdistan§! area."
+ form_armenia_kingdom_tt_7: "Country gains a permanent claim on §YCukurova§! area." 
+
+ form_armenia_empire_tt_2: "Country obtains §YGreater Armenia§! missions."
+ form_armenia_empire_tt_3: "Country gains a permanent claim on §YArmenia§! area."
+ form_armenia_empire_tt_4: "Country gains a permanent claim on §YSamtskhe§! area."
+ form_armenia_empire_tt_5: "Country gains a permanent claim on §YErzurum§! area."
+ form_armenia_empire_tt_6: "Country gains a permanent claim on §YNorth Kurdistan§! area."
+ form_armenia_empire_tt_7: "Country gains a permanent claim on §YCukurova§! area." 
+
+ form_australia_nation_tt_2: "Country obtains §YAustralia§! missions."
+
+ restore_papal_states_nation_tt_2: "Country obtains §YPapal States§! missions."
+ restore_papal_states_nation_tt_3: "Country gains a permanent claim on §YItaly§! region."
+
+ form_cisalpina_tt_2: "Country obtains §YCisalpina§! missions."
+ form_cisalpina_tt_3: "Country gains a permanent claim on §YPiedmont§! area."
+ form_cisalpina_tt_4: "Country gains a permanent claim on §YLiguria§! area."
+ form_cisalpina_tt_5: "§YCisalpina§! §RCANNOT§! form any §YItalian§! formable nation"
+
+ form_spanish_nation_tt_1: "Owns core region: §YSpain§!"
+ form_spanish_nation_tt_2: "Country obtains §YSpain§! missions."
+
+ form_great_britain_tt_1: "Owns core region: §YEngland§!"
+ form_great_britain_tt_2: "Country obtains §YGreat Britain§! missions."
 
  form_united_kingdom_tt_1: "Owns core region: §YEngland§!"
  form_united_kingdom_tt_2: "Owns core region: §YScotland§!"
  form_united_kingdom_tt_3: "Owns core region: §YScottish Isles§!"
  form_united_kingdom_tt_4: "Owns core region: §YIreland§!"
+ form_united_kingdom_tt_5: "Country obtains §YUnited Kingdom§! missions."
 
- form_angevin_tt_1: "Owns core region: §YEngland§!"
- form_angevin_tt_2: "Owns core region: §YUpper France§!"
- form_angevin_tt_3: "Owns core region: §YLower France§!"
- form_angevin_tt_4: "Owns core region: §YBrittany§!"
+ form_angevin_empire_tt_1: "Owns core region: §YEngland§!"
+ form_angevin_empire_tt_2: "Owns core region: §YUpper France§!"
+ form_angevin_empire_tt_3: "Owns core region: §YLower France§!"
+ form_angevin_empire_tt_4: "Owns core region: §YBrittany§!"
+ form_angevin_empire_tt_5: "Owns §YIrish§! cores"
+ form_angevin_empire_tt_6: "Country obtains §YAngevin§! missions."
+ form_angevin_empire_tt_7: "Country gains a permanent claim on §YBritish Isles§! region."
+ form_angevin_empire_tt_8: "Country gains a permanent claim on §YFrance§! region." 
+ form_angevin_empire_tt_9: "Country inherits §YFrance§!."
 
- form_great_britain_tt_1: "Owns core region: §YEngland§!"
+ form_austrian_empire_nation_tt_2: "Country obtains §YAustrian Empire§! missions."
+ form_austrian_empire_nation_tt_3: "Country gains a permanent claim on §YCarpathia§! region."
+ form_austrian_empire_nation_tt_4: "Country gains a permanent claim on §YVenetia§! area."
 
  form_north_sea_empire_tt_1: "Owns core region: §YEngland§!"
  form_north_sea_empire_tt_2: "Owns core region: §YDenmark§!"
  form_north_sea_empire_tt_3: "Owns core region: §YNorway§!"
+ form_north_sea_empire_tt_4: "Country obtains §YNorth Sea Empire§! missions."
+ form_north_sea_empire_tt_5: "Country gains a permanent claim on §YBritish Isles§! region."
+ form_north_sea_empire_tt_6: "Country gains a permanent claim on §YScandanavia§! region."
+ form_north_sea_empire_tt_7: "Country gains a permanent claim on §YFrance§! region."
+ form_north_sea_empire_tt_8: "Country inherits §YEngland§!."
+ form_north_sea_empire_tt_9: "Country inherits §YDenmark§!."
+ form_north_sea_empire_tt_10: "Country inherits §YNorway§!."
 
  form_england_tt_1: "Owns core region: §YEngland§!"
+ form_england_tt_2: "Country obtains §YEngland§! missions."
 
  form_adriatic_empire_tt_1: "Owns core §YAdriatic§! provinces"
+ form_adriatic_empire_tt_2: "Country obtains §YAdriatic§! missions."
+ form_adriatic_empire_tt_3: "Country gains a permanent claim on §YItaly§! region."
+ form_adriatic_empire_tt_4: "Country gains a permanent claim on §YBalkan§! region."
 
  form_austrian_empire_tt_1: "Owns core §YAustrian§! provinces"
  form_austrian_empire_tt_2: "Owns core §YHungarian§! provinces"
  form_austrian_empire_tt_3: "Subject owns core §YHungarian§! provinces"
+ form_austrian_empire_tt_4: "Country obtains §YAustrian Empire§! missions."
+ form_austrian_empire_tt_5: "Country gains a permanent claim on §YCarpathia§! region."
 
  form_austro_hungarian_empire_tt_1: "Owns core §YAustrian§! provinces"
  form_austro_hungarian_empire_tt_2: "Owns core §YHungarian§! provinces"
  form_austro_hungarian_empire_tt_3: "Subject owns core §YHungarian§! provinces"
+ form_austro_hungarian_empire_tt_4: "Country obtains §YAustro-Hungarian§! missions."
+ form_austro_hungarian_empire_tt_5: "Country gains a permanent claim on §YCarpathia§! region."
+ form_austro_hungarian_empire_tt_6: "Country inherits §YHungary§!."
 
  form_burma_tt_1: "Owns core §YBurmese§! provinces"
+ form_burma_tt_2: "Country obtains §YBurmese§! missions."
 
- formed_caucasia_tt_1: "Owns core §YCaucasian§! provinces"
+ formed_caucasia_tt_1: "Owns core §YCaucasia§! provinces"
+ formed_caucasia_tt_2: "Country obtains §YCaucasia§! missions."
 
  form_baltic_union_tt_1: "Owns core §YNorthern§! provinces of the §YBaltic Union§!"
  form_baltic_union_tt_2: "Owns core §YSouthern§! provinces of the §YBaltic Union§!"
+ form_baltic_union_tt_3: "Country obtains §YBaltic Union§! missions."
 
  form_north_german_confederation_tt_1: "Owns core provinces of the §YNorth German Confederation§!"
+ form_north_german_confederation_tt_2: "Country obtains §YNorth German Confederation§! missions."
 
- form_german_empire_nation_tt_1: "Owns core §GNorthern§! provinces of the §YGerman Empire§!"
- form_german_empire_nation_tt_2: "Owns core §GSouthern§! provinces of the §YGerman Empire§!"
+ form_german_empire_nation_tt_1: "Owns all core provinces of the §YGerman Empire§!"
+ form_german_empire_nation_tt_2: "Country obtains §YGerman Empire§! missions." 
 
- rename_ethiopia_tt_1: "Owns core §YAbyssinia§! provinces"
-
- form_cisalpina_tt_1: "Owns core §YCisalpinian§! provinces"
+ form_cisalpina_tt_1: "Owns core §YCisalpina§! provinces"
+ form_cisalpina_tt_2: "Country obtains §YCisalpina§! missions."  
 
  form_russian_nation_tt_1: "Owns core §YRussian§! provinces"
+ form_russian_nation_tt_2: "Country obtains §YRussia§! missions." 
 
  form_carthage_nation_tt_1: "Owns core §YCarthage§! provinces"
+ form_carthage_nation_tt_2: "Country obtains §YCarthage§! missions." 
 
  form_lusitanian_empire_nation_tt_1: "Has §YExploration Ideas§!: §YGlobal Empire§!"
  form_lusitanian_empire_nation_tt_2: "Owns cores of §YPortugal§!"
  form_lusitanian_empire_nation_tt_3: "Owns all core provinces in §YSouth Africa§!"
  form_lusitanian_empire_nation_tt_4: "Owns various §YColonial Possessions§!"
  form_lusitanian_empire_nation_tt_5: "Owns all core provinces in §YCentral Africa§!"
+ form_lusitanian_empire_nation_tt_6: "Country obtains §YLusitanian Empire§! missions."
 
- form_german_nation_tt_1: "Owns core §YNorthern§! provinces of the §YGerman Kingdom§!"
- form_german_nation_tt_2: "Owns core §YSouthern§! provinces of the §YGerman Kingdom§!"
+ form_germany_tt_2: "Owns core §YNorthern§! provinces of the §YGerman Kingdom§!"
+ form_germany_tt_2: "Owns core §YSouthern§! provinces of the §YGerman Kingdom§!"
+ form_germany_tt_2: "Country obtains §YGerman Kingdom§! missions."
 
  form_bharat_nation_tt_1: "Owns core provinces of §YBharat§!"
+ 
+ form_bharat_nation_tt_2: "Country obtains §YBharat§! missions."
 
  form_hindustan_nation_tt_1: "Owns all cores of §YHindustan§!"
+ form_hindustan_nation_tt_2: "Country obtains §YHindustan§! missions."
 
  form_deccan_nation_tt_1: "Owns all cores of the §YDeccan§! region"
+ form_deccan_nation_tt_2: "Country obtains §YDeccan§! missions." 
 
  form_romanian_nation_tt_1: "Owns all core §YRomanian§! provinces"
+ form_romanian_nation_tt_2: "Country obtains §YRomania§! missions."
 
  form_celtic_union_tt_1: "Owns all cores of the §YCeltic Union§!"
+ form_celtic_union_tt_2: "Country obtains §YCeltic§! missions."
 
  form_roman_republic_tt_1: "Owns all cores of the §YRoman Republic§!"
+ form_roman_republic_tt_2: "Country obtains §YRoman Republic§! missions."
 
  form_italian_empire_tt_1: "Owns all cores of the §YItalian Empire§!"
+ form_italian_empire_tt_2: "Country obtains §YItalian Empire§! missions."  
 
- form_italian_nation_tt_1: "Owns all §YSouthern§! provinces of the §YNeopolitan§! culture"
+ form_italy_tt_1: "Country obtains §YItaly§! missions."
+ form_italy_tt_2: "Country gains a permanent claim on §YItaly§! region."
+ form_italy_tt_3: "Country gains a permanent claim on §YVenetia§! area."
+ form_italy_tt_4: "Owns all §YNorthern§! provinces of the §YItalian§! region"
+ form_italy_tt_5: "Owns all §YSouthern§! provinces of the §YNeopolitan§! culture"
 
- form_turkey_nation_tt_1: "Owns all core §YTurkish§! provinces"
+ form_italian_merchant_alliance_tt_1: "Country obtains §YItalian Merchant Alliance§! missions."
+ form_italian_merchant_alliance_tt_2: "Country gains a permanent claim on §YItaly§! region."
 
- form_east_prussia_nation_tt_1: "Owns all core §YEastern Prussian§! provinces"
+ form_tibetan_empire_tt_2: "Country obtains §YTibetan Empire§! missions."
+ form_tibetan_empire_tt_3: "Country gains a permanent claim on §YTibet§! region."
 
- form_prussia_nation_tt_1: "Owns core provinces of §YPrussia§!"
+ form_turkey_nation_tt_1: "Owns all core §YTurkey§! provinces"
+ form_turkey_nation_tt_2: "Country obtains §YTurkish§! missions." 
+
+ form_east_prussia_nation_tt_1: "Owns all core §YEast Prussia§! provinces"
+ form_east_prussia_nation_tt_2: "Country obtains §YEast Prussia§! missions."
+
+ form_prussia_tt_1: "Owns core provinces of §YPrussia§!"
+ form_prussia_tt_2: "Country obtains §YPrussia§! missions."
+ form_prussia_tt_3: "Country gains a permanent claim on §YPomerelia§! area."
+ form_prussia_tt_4: "Country gains a permanent claim on §YWest Prussia§! area."
+ form_prussia_tt_5: "Country gains a permanent claim on §YEast Prussia§! area."
+
+ form_yugoslavia_tt_2: "Country obtains §YYugoslavia§! missions."
+
+ form_bosnia_serbia_tt_2: "Country obtains §YBosnia-Serbia§! missions."
+
+ form_siebenbuergen_tt_2: "Country obtains §YSiebenbuergen§! missions."
+ form_siebenbuergen_tt_3: "Country gains a permanent claim on §YCarpathia§! region." 
+
+ form_tatar_tt_2: "Country obtains §YTatar§! missions."
+ form_tatar_tt_3: "Country gains a permanent claim on §YCarpathia§! region."
+
+ form_qing_tt_2: "Country obtains §YQing§! missions."
+ form_qing_tt_3: "Country gains a permanent claim on §YNorth China§! region."
+ form_qing_tt_4: "Country gains a permanent claim on §YSouth China§! region."
+ form_qing_tt_5: "Country gains a permanent claim on §YXinan§! region."
+
+ form_persian_tt_2: "Country obtains §YPersia§! missions."
+ form_persian_tt_3: "Country gains a permanent claim on §YPersian§! region."
+
+ form_abyssinia_tt_1: "Owns core §YAbyssinia§! provinces"
+ form_abyssinia_tt_2: "Country obtains §YAbyssinia§! missions."
+ form_abyssinia_tt_3: "Country gains a permanent claim on §YHorn of Africa§! region."
+
+ form_baltic_union_tt_2: "Country obtains §YBaltic Union§! missions."
+
+ form_belgium_tt_2: "Country obtains §YBelgium§! missions."
+
+ form_byzantium_tt_2: "Country obtains §YByzantium§! missions."
+ form_byzantium_tt_3: "Country gains claims on §YByzantine§! historical areas."
+
+ form_macedon_tt_2: "Country obtains §YMaceodon§! missions."
+ form_macedon_tt_3: "Country gains a permanent claim on §YMacedon§! historical areas."
+
+ form_greece_tt_2: "Country obtains §YGreece§! missions."
+ form_greece_tt_3: "Country gains a permanent claim on §YGreek! historical areas."
+
+ form_bharat_tt_2: "Country obtains §YBharat§! missions."
+ form_bharat_tt_3: "Country gains a permanent claim on §YCoromandel§! region."
+ form_bharat_tt_4: "Country gains a permanent claim on §YDeccan§! region."
+ form_bharat_tt_5: "Country gains a permanent claim on §YBengal§! region."
+ form_bharat_tt_6: "Country gains a permanent claim on §YWest India§! region."
+ form_bharat_tt_7: "Country gains a permanent claim on §YHindustan§! region."
+
+ form_franco_iberia_tt_2: "Country obtains §YFranco-Iberia§! missions."
+ form_franco_iberia_tt_3: "Country gains a permanent claim on §YFrance§! region."
+ form_franco_iberia_tt_4: "Country gains a permanent claim on §YIberia§! region."
+
+ form_china_tt_2: "Country obtains §YChina§! missions."
+ form_china_tt_3: "Country gains a permanent claim on §YNorth China§! region."
+ form_china_tt_4: "Country gains a permanent claim on §YSouth China§! region."
+ form_china_tt_5: "Country gains a permanent claim on §YXinan§! region."
+ form_china_tt_6: "Country gains a permanent claim on §YTibet§! region."
+
+ form_china_PRC_tt_2: "Country obtains §YPeople's Republic of China§! missions."
+ form_china_PRC_tt_3: "Country gains a permanent claim on §YNorth China§! region."
+ form_china_PRC_tt_4: "Country gains a permanent claim on §YSouth China§! region."
+ form_china_PRC_tt_5: "Country gains a permanent claim on §YXinan§! region."
+ form_china_PRC_tt_6: "Country gains a permanent claim on §YTibet§! region." 
+
+ form_yuan_tt_2: "Country obtains §YGreat Yuan§! missions."
+ form_yuan_tt_3: "Country gains a permanent claim on §YChina Super-region§!."
+ form_yuan_tt_4: "Country gains a permanent claim on §YManchuria§! region."
+ form_yuan_tt_5: "Country gains a permanent claim on §YMongolia§! region."
+ form_yuan_tt_6: "Country gains a permanent claim on §YTibet§! region."
+
+ form_malaya_tt_2: "Country obtains §YMalaya§! missions."
+ form_malaya_tt_3: "Country gains permanent claims on all §YMalayan claims§!."
+
+ form_jerusalem_tt_2: "Country obtains §YJerusalem§! missions."
+ form_jerusalem_tt_3: "Country gains a claim on historical lands of §YJerusalem§!." 
+
+ form_japan_tt_2: "Country obtains §YJapan§! missions."
+ form_japan_tt_4: "§YJapan§! will lose all cores owned by previous Daimyo."
+ form_japan_tt_5: "Every Daimyo Subject of §YJapan§!:\n  Will become independent.\n  Abolish §YDaimyo§! Government Reform.\n  Enact §YDespotic Monarchy§! Government Reform."
+ form_japan_tt_6: "Owns core §YJapanese§! areas:\n    §YKinai Area§!\n    §YHokuriku Area§!\n    §YWestern Chubu Area§!\n    §YEastern Chubu Area§!\n    §YWestern Kanto Area§!"
+
+ form_celtic_union_tt_2: "Country obtains §YCeltic Union§! missions."
+ form_celtic_union_tt_3: "Country gains a permanent claim on §YBritish Isles§! region."
+
+ form_hanover_tt_2: "Country obtains §YHanover§! missions."
+ form_hanover_tt_3: "Country gains a claim on historical lands of §YHanover§!."
+
+ form_westfalian_tt_2: "Country obtains §YWestfalia§! missions."
+ form_westfalian_tt_3: "Country gains a permanent claim on §YWestphalia§! area."
+ form_westfalian_tt_4: "Country gains a permanent claim on §YLower Saxony§! area."
+
+ form_bremen_verden_tt_2: "Country obtains §YBremen-Verden§! missions."
+
+ form_rhine_confederation_tt_2: "Country obtains §YRhine Confederation§! missions."
+ form_rhine_confederation_tt_3: "Country gains a permanent claim on §YNorth German§! region."
+
+ form_lower_saxony_tt_2: "Country obtains §YLower Saxony§! missions."
+
+ form_european_union_tt_2: "Country obtains §YEuropean Union§! missions."
+
+ form_kingdom_of_god_tt_2: "Country obtains §YKingdom of God§! missions."
+
+ form_iceland_tt_2: "Country obtains §YIceland§! missions."
+
+ form_emilia_romagna_tt_2: "Country obtains §YEmilia-Romagna§! missions."
+ form_emilia_romagna_tt_3: "Country gains a permanent claim on §YNorth Italian§! areas."
+ 
+ #############################
+ # GOVERNMENT RANKS TOOLTIPS #
+ #############################
+
+ dec1_government_change_monarchy: "The type of Government changes to §YMonarchy§!."
+ dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
+ dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
+ dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
+ dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
+ dec1_government_rank_1: "The Government Rank changes to §YDuchy§!."
+ dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
+ dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."
 
  ###################
  # CLAIMS TOOLTIPS #
  ###################
 
- form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §YAll Historical Golden Horde§! territory"
+ form_spanish_nation_tt_2: "§YSpain§! gains a permanent claim on §YIberia§! region." 
 
- ######################
- # OTHER LOCALISATION #
- ######################
+ form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §Yall Historical Golden Horde§! territory."
+
+ ########################
+ # SPACING LOCALISATION #
+ ########################
 
  dec1_decisions_spacing: "\n"
 
@@ -114,16 +332,6 @@
  #####################
 
  LSE_all_feitorias_completed: "All Feitorias Completed"
-
- ######################
- # EVENT LOCALISATION #
- ######################
-
- dec1_events.1.t: "Our place in the Empire"
- dec1_events.1.d: "As we place ourselves higher we begin to question the rights of our so called Emperor.. Should we not forge our own path and take our place in the sun?"
- dec1_events.1.a: "Remain loyal to the Emperor."
- dec1_events.1.b: "We must forge our own path!"
- dec1_events.1.c: "We are the rightful Emperor!"
 
  ######################################
  # CASUS BELLI / WARGOAL LOCALISATION #
@@ -136,5 +344,21 @@
  # PEACE TREATIES LOCALISATION #
  ###############################
 
- PEACE_depose_emperor: "Depose the Emperor"
- depose_emperor_desc: "The Emperor of [From.GetName] will be forced to concede defeat and relinquish the emperorship to us!"
+ PEACE_po_depose_emperor: "Depose the Emperor"
+ po_depose_emperor_desc: "The Emperor of [From.GetName] will be forced to concede defeat and relinquish the emperorship to us!"
+
+ #######################
+ # UNIQUE LOCALISATION #
+ #######################
+
+ dec1_cisalpina_cannot_form_italy: "§YCisalpina§! can §YNOT§! form §YItaly§! or any other variations due to being itself an identifier of the true successor Italian state, §Yla Grande Repubblica§!."
+
+ restore_papal_states_nation_tt_1: "Any controller of original papal provinces can restore the Papal States!"
+ dec1_papal_states_notif: "If you form the §YPapal States§! you will become §YThe Pope§! and become locked out of any possible reformation to another country and must take on the responsibility of §YMessenger of God§!.\n"
+ dec1_papal_influence: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!"
+
+ dec1_kingdom_of_god_claims: "The §YPapal State§! gains a permanent claim on all not owned provinces of the §YItalian§! region."
+
+ gods_kingdom: "God's Kingdom"
+
+ # end localisation

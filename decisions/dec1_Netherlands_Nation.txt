@@ -15,19 +15,19 @@ country_decisions = {
 				tag = BNL
 				tag = BEL
 				tag = EUR
-			}			
+			}		
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				tag = BUR
+			}					
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 1 # Unique Netherlands Requirement
 				}
-			}
-			OR = {
-				primary_culture = dutch
-				primary_culture = flemish
-				tag = BUR
-			}			
+			}		
 		}
 		provinces_to_highlight = {
 			OR = {

@@ -8,6 +8,7 @@ country_decisions = {
 			is_colonial_nation = no	
 			NOT = { 
 				has_country_flag = formed_algiers_nation_flag
+				has_reform = celestial_empire
 				exists = ALG
 				tag = MOR 
 				tag = TUN
@@ -19,18 +20,7 @@ country_decisions = {
 			}			
 			OR = {
 				primary_culture = algerian
-				AND = {
-					primary_culture = berber
-					capital_scope = { area = algiers_area }
-				}
-				AND = {
-					primary_culture = berber
-					capital_scope = { area = kabylia_area }
-				}
-				AND = {
-					primary_culture = berber
-					capital_scope = { area = north_saharan_area }
-				}
+				primary_culture = berber
 			}
 		}
 		provinces_to_highlight = {
@@ -51,7 +41,7 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 3
+			adm_tech = 3 # unique req - early formable
 			NOT = { exists = ALG }
 			is_at_war = no
 			is_subject = no
@@ -72,122 +62,105 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = ALG
-			set_country_flag = formed_algiers_nation_flag
-			custom_tooltip = dec1_decisions_blank
+			change_tag = ALG # Country TAG
+			set_country_flag = formed_algiers_nation_flag # Country Formation Flag
+			custom_tooltip = form_algiers_tt_5 # New Missions
+			custom_tooltip = form_algiers_tt_3 # Region/Area Claims
+			custom_tooltip = form_algiers_tt_4 # Region/Area Claims
+			custom_tooltip = form_algiers_tt_2 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			ALG = { # Capital change and bonuses				
+				set_capital = 338 # Algiers
+				338 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = despotic_monarchy
+				}
+				add_government_reform = autocracy_reform
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}											
+				custom_tooltip = dec1_decisions_blank	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					algiers_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ALG
+					}
+					north_saharan_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ALG
+					}
+					kabylia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ALG
+					}						
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+			}
+			# Custom Ideas check and change		
 			if = {
 				limit = {
-					NOT = { primary_culture = algerian }
+					has_custom_ideas = no
+					NOT = { has_idea_group = ALG_ideas }
 				}
-				change_primary_culture = algerian
-			}			
-			algiers_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ALG
+				country_event = { id = ideagroups.1 }
 			}
-			north_saharan_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ALG
-			}
-			kabylia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ALG
-			}
-			custom_tooltip = dec1_decisions_blank			
-			ALG = {
-				set_capital = 338 # Mitidja
-				338 = { 
-					add_base_tax = 2
-					add_base_production = 3
-					add_base_manpower = 2
-				}
-			}
-			add_prestige = 25
-			add_stability = 1
 			custom_tooltip = dec1_decisions_blank
-			ALG = {		
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
-				}				
-			}
-			hidden_effect = { 
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}								
-			}
-			ALG = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
-							has_dlc = "Dharma"
-							}	
-						}
-					set_legacy_government = despotic_monarchy
-				}								
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ALG = {
-				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = ALG_ideas }
-					}
-					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
-					name = dec1_increased_centralization
-				}	
-			}		
-		}	
-	}
-	
+			# Increased Centralization
+			add_country_modifier = {
+				name = dec1_increased_centralization
+			}				
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400				
+	}	
 }

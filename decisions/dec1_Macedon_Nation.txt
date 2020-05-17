@@ -11,15 +11,20 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
+				primary_culture = turkish
 				has_country_flag = formed_macedon_nation_flag
 				exists = MAC
 				tag = MAC
-				tag = TUR
+				tag = BYZ # Byzantium cannot restore Macedon, but can restore other larger historical nations (Alexanders Empire, etc)
+				tag = TUR # No Turkish Ottomans, or Turkish Culture
 				tag = PAP
 			}
 			OR = {
 				primary_culture = greek
 				primary_culture = serbian
+				primary_culture = serbian
+				primary_culture = albanian
+				primary_culture = bulgarian
 			}
 			OR = {
 				ai = no
@@ -51,117 +56,112 @@ country_decisions = {
 			owns_core_province = 1853
 			owns_core_province = 3001
 		}
-	 	effect = {
-			change_tag = MAC
-			set_country_flag = formed_macedon_nation_flag
-			MAC = {
-				if = {
-					limit = {
-						NOT = { primary_culture = greek }
-					}
-					change_primary_culture = greek
-				}
-				if = {
-					limit = {
-						all_owned_province = {
-							NOT = { culture = greek }
-						}
-					}
-					every_owned_province = {
-						change_primary_culture = greek
-					}
-				}
-				set_capital = 148 # Selanik
-				add_prestige = 20
-				148 = {
-					add_base_tax = 2
-					add_base_production = 5
-					add_base_manpower = 2
-				}
-			}
-			148 = { rename_capital = "Macedon" }
-			macedonia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = EGY
-			}
+	 	effect = {			
+			change_tag = MAC # Country TAG
+			set_country_flag = formed_macedon_nation_flag # Country Formation Flag
+			custom_tooltip = form_macedon_tt_2 # New Missions
+			custom_tooltip = form_macedon_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank
 			define_ruler = {
-					name = "Perseus II"
-					dynasty = "Antigonid"
-					adm = 5
-					dip = 4
-					mil = 6
-					age = 19
-					claim = 95
+				name = "Perseus II"
+				dynasty = "Antigonid"
+				claim = 150
+				adm = 6
+				dip = 5
+				mil = 6
+				age = 19
 			}
-			custom_tooltip = dec1_decisions_blank
-			MAC = {
+			define_heir = {
+				name = "Perseus III"
+				dynasty = "Antigonid"
+				claim = 110
+				adm = 2
+				dip = 3
+				mil = 2
+				age = 12
+			}			
+			custom_tooltip = dec1_decisions_blank		
+			MAC = { # Capital change and bonuses				
+				set_capital = 148 # Selanik
+				148 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			MAC = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = despotic_monarchy
 				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Custom hidden culture changes
+					if = {
+						limit = {
+							NOT = { primary_culture = greek }
+						}
+						change_primary_culture = greek
+					}
+					# Custom hidden culture changes
+					if = {
+						limit = {
+							all_owned_province = {
+								NOT = { culture = greek }
 							}
 						}
-					set_government_rank = 2
+						every_owned_province = {
+							change_primary_culture = greek
+						}
+					}				
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					balkan_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MAC
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			MAC = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -169,15 +169,17 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 
 	#####################

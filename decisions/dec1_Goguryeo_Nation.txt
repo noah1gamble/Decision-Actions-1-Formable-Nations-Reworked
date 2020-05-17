@@ -3,8 +3,7 @@ country_decisions = {
 	goguryeo_nation = {
 		major = yes
 		potential = {
-		
-	  is_former_colonial_nation = no
+	  	is_former_colonial_nation = no
 	  is_playing_custom_nation = no
 	  is_colonial_nation = no
 		NOT = {
@@ -15,16 +14,16 @@ country_decisions = {
 			tag = PAP
 		}
 		OR = {
+			primary_culture = korean
+			primary_culture = jurchen
+		}		
+		OR = {
 			ai = no
 			is_playing_custom_nation = no
 			AND = {
 				ai = yes
 				num_of_cities = 6
 			}
-		}
-		OR = {
-			primary_culture = korean
-			primary_culture = jurchen
 		}
 	}
 	provinces_to_highlight = {

@@ -3,7 +3,6 @@ country_decisions = {
 	china_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -12,13 +11,6 @@ country_decisions = {
 				exists = CHN
 				tag = CHN
 				tag = PAP
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 40
-				}
 			}
 			OR = {
 				primary_culture = cantonese
@@ -37,6 +29,13 @@ country_decisions = {
 				primary_culture = zhili
 				primary_culture = zhonggyuan
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15 # reduced.. Common for China to break apart now. 
+				}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -77,100 +76,86 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			owns_core_province = 2133 # Dege
+			if = { # DLC check for Mandate of Heaven
+				limit = {
+					has_dlc = "Mandate of Heaven"
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				# DEV NOTE: this could be reworked better for people without DLC. 1000 dev is a steep req
+				is_emperor_of_china = yes
+				else = {
+					government_rank = 3
+				}
+			}			
 		}
 	 	effect = {
-			change_tag = CHN
-			set_country_flag = formed_china_nation_flag
-			CHN = {
-				add_prestige = 20
-				add_legitimacy = 10
-				add_stability = -1
-				add_inflation = 5
+			change_tag = CHN # Country TAG
+			set_country_flag = formed_china_nation_flag # Country Formation Flag
+			custom_tooltip = form_china_tt_2 # New Missions
+			custom_tooltip = form_china_tt_3 # Claims
+			custom_tooltip = form_china_tt_4 # Claims
+			custom_tooltip = form_china_tt_5 # Claims
+			custom_tooltip = form_china_tt_6 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			CHN = { # Capital change and bonuses				
 				set_capital = 1816 # Beijing
 				1816 = {
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 2
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			liaoning_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CHN
-			}
-			korea_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CHN
-			}
-			custom_tooltip = dec1_decisions_blank
-			CHN = {
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			CHN = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = despotic_monarchy
 				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# New Missions		
+					swap_non_generic_missions = yes 								
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
 							}
-						}
-					set_government_rank = 3
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			CHN = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -178,15 +163,16 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-
 }

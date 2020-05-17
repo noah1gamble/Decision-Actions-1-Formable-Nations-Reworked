@@ -106,7 +106,6 @@ country_decisions = {
 				# Ningguta
 			owns_core_province = 2186
 			owns_core_province = 2106
-			owns_core_province = 4226
 		}
 		effect = {
 			change_tag = SOV

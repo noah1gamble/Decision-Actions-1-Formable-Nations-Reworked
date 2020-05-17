@@ -6,8 +6,10 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			primary_culture = turkish
 			religion_group = muslim
 			NOT = {
+				primary_culture = armenian # genocide lul
 				has_country_flag = formed_turkey_nation_flag
 				tag = TRR
 				tag = PAP
@@ -19,24 +21,19 @@ country_decisions = {
 				NOT = {
 					tag = TUR # Ottomans cannot directly form Turkey without some other reqs
 				}
-				AND = {
+				AND = { # DEVNOTE: much todo here
 					tag = TUR
 					total_development = 40
 					stability = -1
 				}
-			}		
+			}				
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 8 # Unique req - balances some stuff
+					num_of_cities = 11 # Unique req - balances some stuff
 				}
-			}			
-			OR = {
-				primary_culture = turkish
-				primary_culture = al_suryah_arabic
-				NOT = { primary_culture = armenian }
-			}
+			}				
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -117,8 +114,7 @@ country_decisions = {
 			is_at_war = no
 			OR = {
 				primary_culture = turkish
-				primary_culture = syrian
-				NOT = { primary_culture = armenian }
+				NOT = { primary_culture = armenian } # genocide
 			}			
 			custom_trigger_tooltip = {
 				tooltip = form_turkey_nation_tt_1

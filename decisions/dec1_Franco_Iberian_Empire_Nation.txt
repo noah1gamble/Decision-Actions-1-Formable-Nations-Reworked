@@ -16,6 +16,7 @@ country_decisions = {
 				tag = ADU
 				tag = EUR
 				tag = LSE
+				tag = KOJ
 			}
 			OR = {
 				culture_group = iberian
@@ -47,6 +48,7 @@ country_decisions = {
 			NOT = { exists = FIB }
 			is_subject = no
 			is_at_war = no
+				# Conquest
 			france_region = {
 				type = all
 				owned_by = ROOT
@@ -57,99 +59,72 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			owns_core_province = 219
+				# Diplomacy
+				# Union	
 		}
 	 	effect = {
-			change_tag = FIB
-			set_country_flag = formed_franco_iberia_nation_flag
-			FIB = {
-				add_prestige = 30
-				add_legitimacy = 10
-				add_inflation = 1
-				set_capital = 197 # Roussillon
-				197 = {
+			change_tag = FIB # Country TAG
+			set_country_flag = formed_franco_iberia_nation_flag # Country Formation Flag
+			custom_tooltip = form_franco_iberia_tt_2 # New Missions
+			custom_tooltip = form_franco_iberia_tt_3 # Claims
+			custom_tooltip = form_franco_iberia_tt_4 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			FIB = { # Capital change and bonuses				
+				set_capital = 210 # Navarra
+				210 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-			}
-			france_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = FIB
-			}
-			iberia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = FIB
-			}
-			custom_tooltip = dec1_decisions_blank
-			FIB = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			FIB = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = despotic_monarchy
 				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
 							}
-						}
-					set_government_rank = 3
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			FIB = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -157,14 +132,16 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 380
+		ai_importance = 400	
 	}
 }

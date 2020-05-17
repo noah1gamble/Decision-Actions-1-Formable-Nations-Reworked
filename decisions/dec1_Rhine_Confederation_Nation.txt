@@ -2,8 +2,7 @@ country_decisions = {
 
 	rhine_confederation_nation = {
 		major = yes
-		potential = {
-			
+		potential = {	
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -22,7 +21,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 8
+					num_of_cities = 6
 				}
 			}
 			OR = {
@@ -39,7 +38,7 @@ country_decisions = {
 				province_id = 1760 # Koblenz
 				province_id = 1878 # Aachen
 					# North Rhine
-				province_id = 85 # K�ln
+				province_id = 85 # Koln
 				province_id = 84 # Berg
 				province_id = 2975 # Kleves
 					# Palatinate
@@ -68,7 +67,7 @@ country_decisions = {
 				owns_core_province = 1760 # Koblenz
 				owns_core_province = 1878 # Aachen
 					# North Rhine
-				owns_core_province = 85 # K�ln
+				owns_core_province = 85 # Koln
 				owns_core_province = 84 # Berg
 				owns_core_province = 2975 # Kleves
 					# Palatinate
@@ -83,114 +82,92 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = RHE
-			set_country_flag = formed_rhine_confederation_nation_flag
-			RHE = {
-				add_prestige = 20
-				add_legitimacy = 15
-				add_stability = 1
-				add_inflation = 1			
-				set_capital = 85 # K�ln
-				85 = { 
-					add_base_tax = 5
-					add_base_production = 4
-					add_base_manpower = 2
+			change_tag = RHE # Country TAG
+			set_country_flag = formed_rhine_confederation_nation_flag # Country Formation Flag
+			custom_tooltip = form_rhine_confederation_tt_2 # New Missions
+			custom_tooltip = form_rhine_confederation_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			RHE = { # Capital change and bonuses				
+				set_capital = 85 # Koln
+				85 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			north_german_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = RHE
-			}	
-			south_german_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = RHE
-			}				
-			custom_tooltip = dec1_decisions_blank
-			RHE = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-			}
-			hidden_effect = { 
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			RHE = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+						NOT = {
 							has_dlc = "Dharma"
-							}	
 						}
+					}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}				
+				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			RHE = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					north_german_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = RHE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = RHE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}		
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400
+		ai_importance = 400		
 	}
 	
 }

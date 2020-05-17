@@ -1,224 +1,205 @@
 country_decisions = {
 
-######################
-# Kingdom of Armenia #
-######################
+	######################
+	# Kingdom of Armenia #
+	######################
 
-armenia_kingdom_nation = {
-	major = yes
-	potential = {
-	is_former_colonial_nation = no
-	is_playing_custom_nation = no
-	is_colonial_nation = no
-	culture_group = caucasian
-		NOT = {
-			primary_culture = turkish # Armenian Genocide
-			has_country_flag = formed_armenia_kingdom_nation_flag
-			exists = ARM
-			exists = ARR
-			exists = ARK
-			tag = ARM
-			tag = ARR
-			tag = ARK
-			tag = HLR
-			tag = PAP
-		}
-		OR = {
-			ai = no
-			AND = {
-				ai = yes
-				num_of_cities = 6
-			}
-		}
-	}
-	provinces_to_highlight = {
-		OR = {
-			province_id = 2202
-			province_id = 2205
-			province_id = 420
-			province_id = 419
-			province_id = 423
-			province_id = 2204
-			province_id = 4303
-			province_id = 424
-			province_id = 4340
-			province_id = 4304
-			province_id = 2206
-			province_id = 4302
-			province_id = 2307
-			province_id = 4296
-			province_id = 2306
-			province_id = 331
-			province_id = 2305
-		}
-		OR = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-	}
-	allow = {
-		NOT = { exists = ARM }
-		is_at_war = no
-		is_free_or_tributary_trigger = yes
-		is_nomad = no
-		OR = {
-			religion = catholic
-			religion = coptic
-		}
-		owns_core_province = 2202
-		owns_core_province = 2205
-		owns_core_province = 420
-		owns_core_province = 419
-		owns_core_province = 423
-		owns_core_province = 2204
-		owns_core_province = 4303
-		owns_core_province = 424
-		owns_core_province = 4340
-		owns_core_province = 4304
-		owns_core_province = 2206
-		owns_core_province = 4302
-		owns_core_province = 2307
-		owns_core_province = 4296
-		owns_core_province = 2306
-		owns_core_province = 331
-		owns_core_province = 2305
-	}
-	effect = {
-	change_tag = ARM
-	set_country_flag = formed_armenia_kingdom_nation_flag
-	ARM = {
-		add_prestige = 25
-		set_capital = 419 # Yerevan
-		419 = {
-			add_base_tax = 5
-		}
-	}
-	armenia_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	samtskhe_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	erzurum_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	north_kurdistan_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	cukurova_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-			NOT = { province_id = 321 }
-		}
-		add_permanent_claim = ARM
-	}
-	north_kurdistan_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	custom_tooltip = dec1_decisions_blank
-	ARM = {
-		if = {
-			limit = {
-				is_part_of_hre = yes
-			}
-			custom_tooltip = dec1_hre_province_removal
-			set_in_empire = no
-		}
-		if = {
-			limit = {
-				is_part_of_hre = yes
-			}
-			emperor = {
-				country_event = { id = hre_event.5 }
-				add_opinion = {
-					who = root
-					modifier = opinion_left_empire
-				}
-			}
-			custom_tooltip = dec1_decisions_blank
-		}
-	}
-	hidden_effect = {
-		if = {
-			limit = {
-				is_part_of_hre = yes
-				is_elector = no
-			}
-			every_owned_province = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				set_in_empire = no
-			}
-		}
-	}
-	ARM = {
-		if = {
-			limit = {
+	armenia_kingdom_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			culture_group = caucasian
 				NOT = {
-					government = monarchy
+					primary_culture = turkish # Armenian Genocide
+					has_country_flag = formed_armenia_kingdom_nation_flag
+					exists = ARM
+					exists = ARR
+					exists = ARK
+					tag = ARM
+					tag = ARR
+					tag = ARK
+					tag = HLR
+					tag = PAP
+				}
+				OR = {
+					ai = no
+					AND = {
+						ai = yes
+						num_of_cities = 6
 					}
 				}
-			change_government = monarchy
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_dlc = "Dharma"
+			}
+			provinces_to_highlight = {
+				OR = {
+					province_id = 2202
+					province_id = 2205
+					province_id = 420
+					province_id = 419
+					province_id = 423
+					province_id = 2204
+					province_id = 4303
+					province_id = 424
+					province_id = 4340
+					province_id = 4304
+					province_id = 2206
+					province_id = 4302
+					province_id = 2307
+					province_id = 4296
+					province_id = 2306
+					province_id = 331
+					province_id = 2305
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+			allow = {
+				NOT = { exists = ARM }
+				is_at_war = no
+				is_free_or_tributary_trigger = yes
+				is_nomad = no
+				OR = {
+					religion = catholic
+					religion = coptic
+				}
+				owns_core_province = 2202
+				owns_core_province = 2205
+				owns_core_province = 420
+				owns_core_province = 419
+				owns_core_province = 423
+				owns_core_province = 2204
+				owns_core_province = 4303
+				owns_core_province = 424
+				owns_core_province = 4340
+				owns_core_province = 4304
+				owns_core_province = 2206
+				owns_core_province = 4302
+				owns_core_province = 2307
+				owns_core_province = 4296
+				owns_core_province = 2306
+				owns_core_province = 331
+				owns_core_province = 2305
+			}
+			effect = {
+				change_tag = ARM # Country TAG
+				set_country_flag = formed_armenia_kingdom_nation_flag # Country Formation Flag
+				custom_tooltip = form_armenia_kingdom_tt_2 # New Missions
+				custom_tooltip = form_armenia_kingdom_tt_3 # Region/Area Claims
+				custom_tooltip = form_armenia_kingdom_tt_4 # Region/Area Claims		
+				custom_tooltip = form_armenia_kingdom_tt_5 # Region/Area Claims		
+				custom_tooltip = form_armenia_kingdom_tt_6 # Region/Area Claims		
+				custom_tooltip = form_armenia_kingdom_tt_7 # Region/Area Claims	
+				custom_tooltip = dec1_decisions_blank	
+				ARM = { # Capital change and bonuses				
+					set_capital = 419 # Yerevan
+					419 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+					custom_tooltip = dec1_decisions_blank				
+					custom_tooltip = dec1_government_rank_3 # Government Rank Change
+					# Dharma DLC check to prevent ugly tooltip
+					if = {
+						limit = {
+							has_dlc = "Dharma"
+						}
+						custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+					}				
+					# Dharma DLC check and base reform change
+					if = {
+						limit = {
+							NOT = {
+								has_dlc = "Dharma"
+							}
+						}
+						set_legacy_government = monarchy_legacy
+					}
+					add_government_reform = autocracy_reform						
+					custom_tooltip = dec1_decisions_blank
+					# Our Place in the Empire Custom Event
+					if = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						country_event = { id = dec1_events.1 }
+					}	
+					hidden_effect = { # Hidden Effects to fix bad tooltips
+						swap_non_generic_missions = yes  # New Missions
+						# Region/Area Claims
+						armenia_area = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+							add_permanent_claim = ARM
+						}
+						samtskhe_area = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+							add_permanent_claim = ARM
+						}	
+						erzurum_area = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+							add_permanent_claim = ARM
+						}	
+						north_kurdistan_area = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+							add_permanent_claim = ARM
+						}	
+						cukurova_area = {
+							limit = {
+								NOT = { owned_by = ROOT }
+							}
+							add_permanent_claim = ARM
+						}	
+						# Government Rank change				
+						if = {
+							limit = {
+								NOT = {
+									government_rank = 2
+									}
+								}
+							set_government_rank = 2
+						}
+						# Government Type Change
+						if = {
+							limit = {
+								NOT = {
+									government = monarchy
+									}
+								}
+							change_government = monarchy
+						}																		
+					}
+					# Custom Ideas check and change		
+					if = {
+						limit = {
+							has_custom_ideas = no
+							NOT = { has_idea_group = ARM_ideas }
+						}
+						country_event = { id = ideagroups.1 }
+					}
+					custom_tooltip = dec1_decisions_blank
+					# Increased Centralization
+					add_country_modifier = {
+						name = dec1_increased_centralization
 					}
 				}
-			set_legacy_government = monarchy_legacy
-		}
-		if = {
-			limit = {
-				NOT = {
-					government_rank = 2
-					}
-				}
-			set_government_rank = 2
-		}
-		add_government_reform = autocracy_reform
-	}
-	custom_tooltip = dec1_decisions_spacing
-	ARM = {
-		if = {
-			limit = {
-				has_custom_ideas = no
-				NOT = { has_idea_group = ARM_ideas }
 			}
-			country_event = { id = ideagroups.1 }
-		}
-		add_country_modifier = {
-			name = dec1_increased_centralization
+			ai_will_do = {
+				factor = 1
 			}
+			ai_importance = 400
 		}
-	}
-	ai_will_do = {
-		factor = 1
-	}
-	ai_importance = 400 #
-}
+
 
 	#######################
 	# Republic of Armenia #
@@ -227,45 +208,44 @@ armenia_kingdom_nation = {
 	armenia_republic_nation = {
 		major = yes
 		potential = {
-	  is_former_colonial_nation = no
-	  is_playing_custom_nation = no
-	  is_colonial_nation = no
-	  primary_culture = armenian
-	    NOT = {
-	      primary_culture = turkish # Armenian Genocide
-	      has_country_flag = formed_arabia_nation_flag
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			culture_group = caucasian
+			NOT = {
+				primary_culture = turkish # Armenian Genocide
+				has_country_flag = formed_arabia_nation_flag
 				exists = ARM
 				exists = ARR
-	      exists = ARK
+				exists = ARK
 				tag = ARM
 				tag = ARR
-	      tag = ARK
-	      tag = HLR
-	      tag = PAP
-	    }
-	    OR = {
-	      ai = no
-	      AND = {
-	        ai = yes
-	        num_of_cities = 4
-	      }
-	    }
-	  }
-	  provinces_to_highlight = {
-	    OR = {
-					# Armenia
-	      province_id = 419
-	      province_id = 2205
-	    }
-	    OR = {
-	      NOT = { owned_by = ROOT }
-	      NOT = { is_core = ROOT }
-	    }
+				tag = ARK
+				tag = HLR
+				tag = PAP
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+			}
+	  	}
+	  	provinces_to_highlight = {
+	   		OR = {
+				# Armenia
+	      		province_id = 419
+	      		province_id = 2205
+	    	}
+	   		OR = {
+	      		NOT = { owned_by = ROOT }
+	     		NOT = { is_core = ROOT }
+	    	}
 		}
 		allow = {
 			NOT = { exists = ARR }
 			is_at_war = no
-			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			OR = {
 				religion = catholic
@@ -275,105 +255,119 @@ armenia_kingdom_nation = {
 			owns_core_province = 2205
 		}
 		effect = {
-		change_tag = ARR
-		set_country_flag = formed_armenia_republic_nation_flag
-		ARR = {
-			add_prestige = 10
-			add_legitimacy = 5
-			set_capital = 419 # Yerevan
-			419 = {
-				add_base_tax = 1
-				add_base_manpower = 3
-			}
-		}
-		armenia_area = {
-			limit = {
-				NOT = { owned_by = ROOT }
-			}
-			add_permanent_claim = ARR
-		}
-		custom_tooltip = dec1_decisions_blank
-		ARR = {
-			if = {
-				limit = {
-					is_part_of_hre = yes
+			change_tag = ARR # Country TAG
+			set_country_flag = formed_republic_of_armenia_nation_flag # Country Formation Flag
+			custom_tooltip = form_republic_of_armenia_tt_2 # New Missions
+			custom_tooltip = form_republic_of_armenia_tt_3 # Region/Area Claims
+			custom_tooltip = form_republic_of_armenia_tt_4 # Region/Area Claims	
+			custom_tooltip = form_republic_of_armenia_tt_5 # Region/Area Claims	
+			custom_tooltip = form_republic_of_armenia_tt_6 # Region/Area Claims	
+			custom_tooltip = dec1_decisions_blank	
+			ANG = { # Capital change and bonuses				
+				set_capital = 419 # Yerevan
+				419 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
-			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
 					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = merchant_republic
 				}
+				add_government_reform = merchants_reform						
 				custom_tooltip = dec1_decisions_blank
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					is_part_of_hre = yes
-					is_elector = no
-				}
-				every_owned_province = {
+				# Our Place in the Empire Custom Event
+				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					set_in_empire = no
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					armenia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARR
+					}
+					samtskhe_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARR
+					}	
+					erzurum_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARR
+					}	
+					north_kurdistan_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARR
+					}	
+					cukurova_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARR
+					}																						
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = republic
+								}
+							}
+						change_government = republic
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ARR_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
 				}
 			}
 		}
-		ARR = {
-			if = {
-				limit = {
-					NOT = {
-						government = republic
-						}
-					}
-				change_government = republic
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Dharma"
-						}
-					}
-				set_legacy_government = bureaucratic_despotism
-			}
-			if = {
-				limit = {
-					NOT = {
-						government_rank = 1
-						}
-					}
-				set_government_rank = 1
-			}
-			add_government_reform = oligarchy_reform
+		ai_will_do = {
+			factor = 1
 		}
-		custom_tooltip = dec1_decisions_spacing
-		ARR = {
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = ARM_ideas }
-				}
-				country_event = { id = ideagroups.1 }
-			}
-			add_country_modifier = {
-				name = dec1_increased_centralization
-			}
-		}
-	}
-	ai_will_do = {
-		factor = 1
-	}
-	ai_importance = 400
+		ai_importance = 400
 	}
 
 	###################
@@ -382,219 +376,197 @@ armenia_kingdom_nation = {
 
 	armenia_kingdom_nation = {
 		major = yes
-		potential = {
-		
-	  is_former_colonial_nation = no
-	  is_playing_custom_nation = no
-	  is_colonial_nation = no
-	  culture_group = caucasian
-	  NOT = {
-	    primary_culture = turkish # Armenian Genocide
-	    has_country_flag = formed_armenian_empire_nation_flag
-			exists = ARM
-			exists = ARR
-	    exists = ARK
-			tag = ARM
-			tag = ARR
-	    tag = ARK
-	    tag = HLR
-	    tag = PAP
-		}
-    OR = {
-      ai = no
-      AND = {
-        ai = yes
-        num_of_cities = 6
-      }
-    }
-  }
-	provinces_to_highlight = {
-    OR = {
-			province_id = 2202
-			province_id = 2205
-			province_id = 420
-			province_id = 419
-			province_id = 423
-			province_id = 2204
-			province_id = 4303
-			province_id = 424
-			province_id = 4340
-			province_id = 4304
-			province_id = 2206
-			province_id = 4302
-			province_id = 2307
-			province_id = 4296
-			province_id = 2306
-			province_id = 331
-			province_id = 2305
-    }
-    OR = {
-      NOT = { owned_by = ROOT }
-      NOT = { is_core = ROOT }
-    }
-	}
-	allow = {
-		NOT = { exists = ARM }
-		is_at_war = no
-		is_free_or_tributary_trigger = yes
-		is_nomad = no
-		OR = {
-			religion = catholic
-			religion = coptic
-		}
-		owns_core_province = 2202
-		owns_core_province = 2205
-		owns_core_province = 420
-		owns_core_province = 419
-		owns_core_province = 423
-		owns_core_province = 2204
-		owns_core_province = 4303
-		owns_core_province = 424
-		owns_core_province = 4340
-		owns_core_province = 4304
-		owns_core_province = 2206
-		owns_core_province = 4302
-		owns_core_province = 2307
-		owns_core_province = 4296
-		owns_core_province = 2306
-		owns_core_province = 331
-		owns_core_province = 2305
-	}
-	effect = {
-	change_tag = ARM
-	set_country_flag = formed_armenia_kingdom_nation_flag
-	ARM = {
-		add_prestige = 25
-		set_capital = 419 # Yerevan
-		419 = {
-			add_base_tax = 5
-		}
-	}
-	armenia_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	samtskhe_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	erzurum_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	north_kurdistan_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	cukurova_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-			NOT = { province_id = 321 }
-		}
-		add_permanent_claim = ARM
-	}
-	north_kurdistan_area = {
-		limit = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-		add_permanent_claim = ARM
-	}
-	custom_tooltip = dec1_decisions_blank
-	ARM = {
-		if = {
-			limit = {
-				is_part_of_hre = yes
+		potential = {	
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			culture_group = caucasian
+			NOT = {
+				primary_culture = turkish # Armenian Genocide
+				has_country_flag = formed_armenian_empire_nation_flag
+				exists = ARM
+				exists = ARR
+				exists = ARK
+				tag = ARM
+				tag = ARR
+				tag = ARK
+				tag = HLR
+				tag = PAP
 			}
-			custom_tooltip = dec1_hre_province_removal
-			set_in_empire = no
-		}
-		if = {
-			limit = {
-				is_part_of_hre = yes
-			}
-			emperor = {
-				country_event = { id = hre_event.5 }
-				add_opinion = {
-					who = root
-					modifier = opinion_left_empire
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
 				}
 			}
-			custom_tooltip = dec1_decisions_blank
 		}
-	}
-	hidden_effect = {
-		if = {
-			limit = {
-				is_part_of_hre = yes
-				is_elector = no
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2202
+				province_id = 2205
+				province_id = 420
+				province_id = 419
+				province_id = 423
+				province_id = 2204
+				province_id = 4303
+				province_id = 424
+				province_id = 4340
+				province_id = 4304
+				province_id = 2206
+				province_id = 4302
+				province_id = 2307
+				province_id = 4296
+				province_id = 2306
+				province_id = 331
+				province_id = 2305
 			}
-			every_owned_province = {
-				limit = {
-					is_part_of_hre = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ARM }
+			is_at_war = no
+			is_nomad = no
+			OR = {
+				religion = catholic
+				religion = coptic
+			}
+			owns_core_province = 2202
+			owns_core_province = 2205
+			owns_core_province = 420
+			owns_core_province = 419
+			owns_core_province = 423
+			owns_core_province = 2204
+			owns_core_province = 4303
+			owns_core_province = 424
+			owns_core_province = 4340
+			owns_core_province = 4304
+			owns_core_province = 2206
+			owns_core_province = 4302
+			owns_core_province = 2307
+			owns_core_province = 4296
+			owns_core_province = 2306
+			owns_core_province = 331
+			owns_core_province = 2305
+		}
+		effect = {
+			change_tag = ARM # Country TAG
+			set_country_flag = formed_armenia_kingdom_nation_flag # Country Formation Flag
+			custom_tooltip = form_armenia_empire_tt_2 # New Missions
+			custom_tooltip = form_armenia_empire_tt_3 # Region/Area Claims
+			custom_tooltip = form_armenia_empire_tt_4 # Region/Area Claims		
+			custom_tooltip = form_armenia_empire_tt_5 # Region/Area Claims		
+			custom_tooltip = form_armenia_empire_tt_6 # Region/Area Claims		
+			custom_tooltip = form_armenia_empire_tt_7 # Region/Area Claims	
+			custom_tooltip = dec1_decisions_blank	
+			ARM = { # Capital change and bonuses				
+				set_capital = 419 # Yerevan
+				419 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				set_in_empire = no
-			}
-		}
-	}
-	ARM = {
-		if = {
-			limit = {
-				NOT = {
-					government = monarchy
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
 					}
-				}
-			change_government = monarchy
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_dlc = "Dharma"
+					custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
 					}
+					set_legacy_government = monarchy_legacy
 				}
-			set_legacy_government = monarchy_legacy
-		}
-		if = {
-			limit = {
-				NOT = {
-					government_rank = 2
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
 					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					armenia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARM
+					}
+					samtskhe_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARM
+					}	
+					erzurum_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARM
+					}	
+					north_kurdistan_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARM
+					}	
+					cukurova_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ARM
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-			set_government_rank = 2
-		}
-		add_government_reform = autocracy_reform
-	}
-	custom_tooltip = dec1_decisions_spacing
-	ARM = {
-		if = {
-			limit = {
-				has_custom_ideas = no
-				NOT = { has_idea_group = ARM_ideas }
-			}
-			country_event = { id = ideagroups.1 }
-		}
-		add_country_modifier = {
-			name = dec1_increased_centralization
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ARM_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
 			}
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-	ai_will_do = {
-		factor = 1
-	}
-	ai_importance = 400 #
-}
 
 }

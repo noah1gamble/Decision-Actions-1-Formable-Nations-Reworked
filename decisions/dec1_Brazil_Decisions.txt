@@ -1,12 +1,15 @@
 country_decisions = {
 
-	por_flee_to_brazil = {
+	###################################
+	# Brazilian Colonial Independence #
+	###################################
+
+	brazil_nation = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = changed_from_colonial_nation }
 			NOT = { has_country_flag = fled_to_brazil }
 			is_random_new_world = no
-			
 			tag = POR
 			government = monarchy
 			any_subject_country = {
@@ -108,4 +111,116 @@ country_decisions = {
 			factor = 1
 		}
 	}
+
+	#############################
+	# Portugal - Flee to Brazil #
+	#############################
+
+	por_flee_to_brazil = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			NOT = { has_country_flag = fled_to_brazil }
+			is_random_new_world = no
+			tag = POR
+			government = monarchy
+			any_subject_country = {
+				is_colonial_nation = yes
+				capital_scope = {
+					colonial_region = colonial_brazil
+				}
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					continent = europe
+					value = 5
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			custom_trigger_tooltip = {
+				tooltip = brazil_provinces_tooltip
+				any_subject_country = {
+					is_colonial_nation = yes
+					capital_scope = {
+						colonial_region = colonial_brazil
+					}
+					num_of_cities = 20
+				}
+			}
+		}
+		effect = {
+			change_tag = BRZ
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes
+					capital_scope = {
+						colonial_region = colonial_brazil
+					}
+				}
+				FROM = { inherit = PREV }
+			}
+			custom_tooltip = brazil_move_capital_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						763 = {
+							owned_by = ROOT
+						}
+					}
+					763 = {
+						move_capital_effect = yes
+					}
+				}
+				else = {
+					random_owned_province = {
+						limit = {
+							colonial_region = colonial_brazil
+						}
+						move_capital_effect = yes
+					}
+				}
+			}
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				custom_tooltip = brazil_portugal_tooltip
+				hidden_effect = {
+					release = POR
+					create_union = POR
+					POR = {
+						change_government = monarchy
+						add_government_reform = autocracy_reform
+					}
+				}
+				hidden_effect = {
+					every_province = {
+						limit = {
+							continent = europe
+							is_core = ROOT
+						}
+						add_core = POR
+						remove_core = BRZ
+					}
+				}
+			}
+			add_stability = -2
+			add_prestige = -25
+			if = {
+                limit = { has_custom_ideas = no }
+                country_event = { id = ideagroups.1 } #Swap Ideas
+            }
+			set_country_flag = changed_from_colonial_nation
+			set_country_flag = fled_to_brazil
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 }

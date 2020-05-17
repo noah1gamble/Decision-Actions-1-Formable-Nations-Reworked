@@ -3,7 +3,6 @@ country_decisions = {
 	baltic_union_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -19,6 +18,12 @@ country_decisions = {
 				tag = EUR			
 			}	
 			OR = {
+				primary_culture = lithuanian
+				primary_culture = latvian
+				primary_culture = estonian
+				primary_culture = prussian
+			}			
+			OR = {
 				ai = no
 				is_playing_custom_nation = no
 				AND = {
@@ -26,12 +31,6 @@ country_decisions = {
 					num_of_cities = 8
 				}
 			}				
-			OR = {
-				primary_culture = lithuanian
-				primary_culture = latvian
-				primary_culture = estonian
-				primary_culture = prussian
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -108,106 +107,87 @@ country_decisions = {
 			}			
 		}
 	 	effect = {
-			change_tag = BTC
-			set_country_flag = formed_baltic_union_nation_flag
-			BTC = { 
-				add_accepted_culture = estonian
-				add_accepted_culture = lithuanian
-				add_accepted_culture = latvian
-			}	
-			BTC = {				
-				add_prestige = 10
-				#possible random owned capital? highest dev one? something
-			}
-			custom_tooltip = dec1_decisions_spacing	
-			baltic_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+			change_tag = BTC # Country TAG
+			set_country_flag = formed_baltic_union_nation_flag # Country Formation Flag
+			custom_tooltip = form_baltic_union_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank				
+			BTC = { # Capital change and bonuses				
+				set_capital = 1869 # Zurich
+				1869 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = BTC
-			}
-			custom_tooltip = dec1_decisions_blank
-			BTC = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-			}
-			hidden_effect = { 
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			BTC = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+						NOT = {
 							has_dlc = "Dharma"
-							}	
 						}
+					}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}				
+				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			BTC = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					add_accepted_culture = estonian
+					add_accepted_culture = lithuanian
+					add_accepted_culture = latvian				
+					swap_non_generic_missions = yes  # New Missions
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = BTC_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400
+		ai_importance = 400		
 	}
 
 }

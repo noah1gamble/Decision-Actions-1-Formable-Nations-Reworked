@@ -1,6 +1,6 @@
 country_decisions = {
 
-	# The Austro-Hungarian Empire - Austria - Conquest Formation
+	# The Austro-Hungarian Empire - Conquest Formation (As Austria mostly, requires a general)
 
 	austro_hungarian_empire_nation = {
 		major = yes
@@ -8,7 +8,6 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			tag = HAB
 			OR = {
 				primary_culture = austrian
 				primary_culture = hungarian
@@ -18,14 +17,14 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 8
 				}
 			}
 			NOT = {
 				has_country_flag = formed_austro_hungarian_empire_nation_flag
 				exists = AHE
-				tag = AHE
-				tag = HBE
+				tag = AHE 
+				tag = HBE # Habsburg Monarchy cannot form Austro-Hungarian Empire
 				tag = PAP
 				tag = HLR
 				tag = TUR
@@ -93,154 +92,176 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 5
+			adm_tech = 10
 			NOT = { exists = AHE }
 			is_subject = no
 			is_at_war = no
-			custom_trigger_tooltip = {
-				tooltip = form_austro_hungarian_empire_tt_1
-					# Upper Bavaria (AUSTRIA)
-				owns_core_province = 76
-					# Austria Proper
-				owns_core_province = 134
-				owns_core_province = 133
-				owns_core_province = 1770
-					# Inner Austria
-				owns_core_province = 128
-				owns_core_province = 132
-				owns_core_province = 1863
-					# Carniola
-				owns_core_province = 129
-				owns_core_province = 130
-				owns_core_province = 1769
-					# Tirol
-				owns_core_province = 73
-				owns_core_province = 110
-				owns_core_province = 1768
-			}
-			custom_trigger_tooltip = {
-				tooltip = form_austro_hungarian_empire_tt_2
-					# Transdanubia (HUNGARY)
-				owns_core_province = 153
-				owns_core_province = 4126
-				owns_core_province = 1864
-				owns_core_province = 4240
-				owns_core_province = 135
-					# Slovakia
-				owns_core_province = 1772
-				owns_core_province = 4236
-				owns_core_province = 154
-				owns_core_province = 1318
-				owns_core_province = 162
-					# Alfold
-				owns_core_province = 155
-				owns_core_province = 1953
-				owns_core_province = 4125
-				owns_core_province = 1954
-					# Southern Transylvania
-				owns_core_province = 1951
-				owns_core_province = 156
-				owns_core_province = 4128
-					# Northern Transylvania
-				owns_core_province = 157
-				owns_core_province = 1952
-				owns_core_province = 4127
-				owns_core_province = 158
+			is_lesser_in_union = no
+			OR = {
+				HAB = {
+					custom_trigger_tooltip = {
+						tooltip = form_austro_hungarian_empire_tt_1
+							# Upper Bavaria (AUSTRIA)
+						owns_core_province = 76
+							# Austria Proper
+						owns_core_province = 134
+						owns_core_province = 133
+						owns_core_province = 1770
+							# Inner Austria
+						owns_core_province = 128
+						owns_core_province = 132
+						owns_core_province = 1863
+							# Carniola
+						owns_core_province = 129
+						owns_core_province = 130
+						owns_core_province = 1769
+							# Tirol
+						owns_core_province = 73
+						owns_core_province = 110
+						owns_core_province = 1768
+					}
+					custom_trigger_tooltip = {
+						tooltip = form_austro_hungarian_empire_tt_2
+							# Transdanubia (HUNGARY)
+						owns_core_province = 153
+						owns_core_province = 4126
+						owns_core_province = 1864
+						owns_core_province = 4240
+						owns_core_province = 135
+							# Slovakia
+						owns_core_province = 1772
+						owns_core_province = 4236
+						owns_core_province = 154
+						owns_core_province = 1318
+						owns_core_province = 162
+							# Alfold
+						owns_core_province = 155
+						owns_core_province = 1953
+						owns_core_province = 4125
+						owns_core_province = 1954
+							# Southern Transylvania
+						owns_core_province = 1951
+						owns_core_province = 156
+						owns_core_province = 4128
+							# Northern Transylvania
+						owns_core_province = 157
+						owns_core_province = 1952
+						owns_core_province = 4127
+						owns_core_province = 158
+					}
+				}	
+				AND = { # Austria has a PU over Hungary - earlier formation, less land reqs			
+					HAB = {
+						custom_trigger_tooltip = {
+							tooltip = form_austro_hungarian_empire_tt_1
+								# Upper Bavaria (AUSTRIA)
+							owns_core_province = 76
+								# Austria Proper
+							owns_core_province = 134
+							owns_core_province = 133
+							owns_core_province = 1770
+								# Inner Austria
+							owns_core_province = 128
+							owns_core_province = 132
+							owns_core_province = 1863
+								# Carniola
+							owns_core_province = 129
+							owns_core_province = 130
+							owns_core_province = 1769
+								# Tirol
+							owns_core_province = 73
+							owns_core_province = 110
+							owns_core_province = 1768
+						}
+					}				
+					HUN = {
+						junior_union_with = HAB
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = HAB
+							years = 30
+						}
+					}					
+				}
 			}
 		}
 	 	effect = {
-			change_tag = AHE
-			set_country_flag = formed_austro_hungarian_empire_nation_flag
+			change_tag = AHE # Country TAG
+			set_country_flag = formed_austro_hungarian_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_austro_hungarian_empire_tt_4 # New Missions
+			custom_tooltip = form_austro_hungarian_empire_tt_5 # Region/Area Claims
 			if = {
 				limit = {
-					OR = {
-						NOT = { primary_culture = austrian }
-						NOT = { primary_culture = hungarian }
-						NOT = { primary_culture = czech }
+					HUN = {
+						junior_union_with = HAB
 					}
 				}
-				change_primary_culture = austrian
-			}
-			AHE = {
-				add_legitimacy = 10
-				add_stability = 1
-				add_inflation = 1
+				custom_tooltip = form_austro_hungarian_empire_tt_6 # Inherit Hungary if it is under union
+			}				
+			custom_tooltip = dec1_decisions_blank	
+			AHE = { # Capital change and bonuses				
 				set_capital = 134 # Wien
 				134 = {
-					add_base_tax = 2
-					add_base_manpower = 1
-				}
-				153 = { # Pest
 					add_base_tax = 1
 					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			AHE = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			AHE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
-					set_legacy_government = despotic_monarchy
+					}
+					set_legacy_government = monarchy_legacy
 				}
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					carpathia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = AHE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			AHE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -248,6 +269,8 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
@@ -256,7 +279,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400
 	}
 
 	# The Austro-Hungarian Empire - Austria - Diplomatically

@@ -1,11 +1,12 @@
 country_decisions = {
 
+	# These are held here to split the national formation and decisions
+
 	create_green_standard_army = {
 		potential = {
 			OR = {
 				tag = QNG
 			}
-			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -53,7 +54,6 @@ country_decisions = {
 			OR = {
 				tag = QNG
 			}
-			
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -83,4 +83,5 @@ country_decisions = {
 		}
 	}
 
-} #End of country decisions
+} 
+#End of vanilla country decisions

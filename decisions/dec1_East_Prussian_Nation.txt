@@ -28,7 +28,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 7
+					num_of_cities = 6
 				}
 			}
 			OR = {
@@ -61,6 +61,8 @@ country_decisions = {
 			NOT = { exists = EPR }
 			is_at_war = no
 			is_subject = no
+			is_nomad = no
+			is_emperor = no 
 			NOT = { government = theocracy }
 			custom_trigger_tooltip = {
 				tooltip = form_east_prussia_nation_tt_1
@@ -76,20 +78,20 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = EPR
-			set_country_flag = formed_east_prussia_nation_flag	
-			custom_tooltip = dec1_decisions_blank
-			if = {
-				limit = {
-					NOT = { primary_culture = prussian }
+			set_country_flag = formed_east_prussia_nation_flag
+			custom_tooltip = form_east_prussia_nation_tt_2
+			hidden_effect = {
+				swap_non_generic_missions = yes
+			}
+			custom_tooltip = form_east_prussia_nation_tt_3
+			hidden_effect = {
+				baltic_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = EPR
 				}
-				change_primary_culture = prussian
-			}				
-			baltic_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = EPR
-			}			
+			}		
 			custom_tooltip = dec1_decisions_blank			
 			EPR = {
 				set_capital = 41 # Konigsberg
@@ -99,8 +101,6 @@ country_decisions = {
 					add_base_manpower = 4
 				}
 			}
-			add_stability = 1
-			add_prestige = 10
 			custom_tooltip = dec1_decisions_blank
 			EPR = {
 				if = {
@@ -135,6 +135,7 @@ country_decisions = {
 							}
 							set_in_empire = no
 						}
+						remove_non_electors_emperors_from_empire_effect = yes
 					}
 					if = {
 						limit = {

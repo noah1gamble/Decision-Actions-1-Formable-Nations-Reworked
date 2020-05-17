@@ -6,245 +6,327 @@
 
   # NOTE: New Custom Nations - New Custom Nations - New Custom Nations
 
- abyssinia_nation_title: "Embrace Abyssinian Identity"
+ abyssinia_nation_title: "@ABY Embrace Abyssinian Identity"
  abyssinia_nation_desc: "The Ethiopian Empire, also known as Abyssinia, or just simply Ethiopia, was a monarchy that spanned a geographical area in the current states of Ethiopia and Eritrea."
 
- adriatic_empire_nation_title: "The Adriatic Empire"
+ adriatic_empire_nation_title: "@ADR The Adriatic Empire"
  adriatic_empire_nation_desc: "The Adriatic Empire stands among the largest empires in history and its government is centralized in the nation's capital of Constantinople"
 
- alsace_lorraine_nation_title: "Alsace-Lorraine"
- alsace_lorraine_nation_desc: "he Imperial Territory of Alsace-Lorraine was a territory created by the German Empire in 1871, after it annexed most of Alsace and the Moselle department of Lorraine following its victory in the Franco-Prussian War."
+ alsace_lorraine_nation_title: "@ALC Alsace-Lorraine"
+ alsace_lorraine_nation_desc: "The Imperial Territory of Alsace-Lorraine was a territory created by the German Empire in 1871, after it annexed most of Alsace and the Moselle department of Lorraine following its victory in the Franco-Prussian War."
 
- alpland_nation_title: "Alpland Kingdom"
+ alpland_nation_title: "@ALP Alpland Kingdom"
  alpland_nation_desc: "Alpland is an important power in Europe which extends over the Alpine regions of Austria, Italy, France and Switzerland."
 
- angevin_empire_nation_england_title: "The Angevin Empire"
+ angevin_empire_nation_england_title: "@ANG The Angevin Empire"
  angevin_empire_nation_england_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
- angevin_empire_nation_france_title: "The Angevin Empire"
+ angevin_empire_nation_france_title: "@ANG The Angevin Empire"
  angevin_empire_nation_france_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
- arab_empire_nation_title: "Arabian Empire"
+ arab_empire_nation_title: "@ARB Arabian Empire"
  arab_empire_nation_desc: "For hundreds of years the Arabs have been divided, but we remember when the prophet muhammed, peace be upon him, organized all of us into one ummah, a community of the faithful that transcended tribal affiliation. Today we have overcome disunity and regained the oneness that trumphed in the day of the Prophet and united Arabia!"
 
  arab_kingdom_nation_title: "United Arabian Kingdom"
  arab_kingdom_nation_desc: "Under one house we can claim the title as Caliph of a new Arabian Kingdom stretching from the Indian Seas to the Syrian lands."
 
- armenia_kingdom_nation_title: "Restore the Kingdom of Armenia"
+ armenia_kingdom_nation_title: "@ARM Restore the Kingdom of Armenia"
  armenia_kingdom_nation_desc: "The Kingdom of Armenia once dominated the Caucasus. Time was not kind to our ancestors, however, and neighboring empires saw weakness in our internal divisions and used it to conquer our people. Let us drive out these invaders and re-establish the Kingdom and Church of Armenia."
 
- armenia_republic_nation_title: "The Republic of Armenia"
+ armenia_republic_nation_title: "@ARR The Republic of Armenia"
  armenia_republic_nation_desc: "Armenia is a nation, and former Soviet republic, in the mountainous Caucasus region between Asia and Europe. Among the earliest Christian civilizations, it’s defined by religious sites including the Greco-Roman Temple of Garni and 4th-century Etchmiadzin Cathedral, headquarters of the Armenian Church. Khor Virap Monastery is a pilgrimage site near Mount Ararat, a dormant volcano just across the border in Turkey."
 
- austrian_empire_nation_title: "The Austrian Empire"
+ austrian_empire_nation_title: "@AEH The Austrian Empire"
  austrian_empire_nation_desc: "The Austrian Empire was a Central European multinational great power from 1804 to 1867, created by proclamation out of the realms of the Habsburgs. During its existence, it was the third most populous empire after the Russian Empire and the United Kingdom in Europe. Along with Prussia, it was one of the two major powers of the German Confederation."
 
- austro_hungarian_empire_nation_title: "The Austro-Hungarian Empire"
+ austro_hungarian_empire_nation_title: "@AHE The Austro-Hungarian Empire"
  austro_hungarian_empire_nation_desc: "Austria-Hungary, often referred to as the Austro-Hungarian Empire or the Dual Monarchy, was a constitutional monarchy in Central and Eastern Europe between 1867 and 1918. It was formed when the Austrian Empire adopted a new constitution; as a result Austria and Hungary were placed on equal footing. It dissolved into several new states at the end of the First World War." 
 
- baltic_union_nation_title: "The Baltic Union"
+ baltic_union_nation_title: "@BTC The Baltic Union"
  baltic_union_nation_desc: "The United Baltic Duchy, also known as the Grand Duchy of Livonia, was a state proposed by the Baltic German nobility and exiled Russian nobility after the Russian Revolution and German occupation of the Courland, Livonian, and Estonian governorates of the Russian Empire."
 
- basque_country_nation_title: "The Basque Kingdom"
+ basque_country_nation_title: "@BSQ The Basque Kingdom"
  basque_country_nation_desc: "The Basque Country is the name given to the home of the Basque people. the Basque country is located in the western Pyrenees, straddling the border between France and Spain on the coast of the Bay of Biscay. Euskal Herria is the oldest documented Basque name for the area they inhabit, dating from the 16th century." 
 
- belgium_nation_title: "Unite the Belgians"
+ belgium_nation_title: "@BEL Unite the Belgians"
  belgium_nation_desc: "With the progression of our nation we can form a state for all Flemings and Walloons, located on a perfect place to play an important role in the colonisation of the Americas."
 
- benelux_nation_title: "The Benelux Union"
+ benelux_nation_title: "@BNL The Benelux Union"
  benelux_nation_desc: "The name Benelux is formed from joining the first two or three letters of each country's name – Belgium, Netherlands, Luxembourg – and was first used to name the customs agreement that initiated the union. the unification of the Dutch, Wallonian and Flemish provinces in Europe brings the Benelux a gigantic economic impetus and makes it a mighty European state."
 
- bosnia_serbia_nation_title: "United Bosnia-Serbia"
+ bosnia_serbia_nation_title: "@BSK United Bosnia-Serbia"
  bosnia_serbia_nation_desc: "Instead of arguing and warring with our own brethren we must unite into a strong and united kingdom!"
 
- bremen_verden_nation_title: "Bremen-Verden"
+ bremen_verden_nation_title: "@BVE Bremen-Verden"
  bremen_verden_nation_desc: "Bremen-Verden, formally the Duchies of Bremen and Verden were two territories and immediate fiefs of the Holy Roman Empire, which emerged and gained imperial immediacy in 1180. By their original constitution they were prince-bishoprics of the Archdiocese of Bremen and Bishopric of Verden."
 
- burma_nation_title: "Union of Burma"
+ burma_nation_title: "@BRM Union of Burma"
  burma_nation_desc: "During the first years of post-independence Burma, insurgencies by the Red Flag Communists led by Thakin Soe, the White Flag Communists led by Thakin Than Tun, the Yèbaw Hpyu (White-band PVO) led by Bo La Yaung, a member of the Thirty Comrades, army rebels calling themselves the Revolutionary Burma Army (RBA) led by communist officers Bo Zeya, Bo Yan Aung and Bo Yè Htut – all three of them members of the Thirty Comrades, Arakanese, and the Karen National Union (KNU)."
 
- carthage_nation_title: "Restore Carthage"
+ carthage_nation_title: "@CTG Restore Carthage"
  carthage_nation_desc: "Phoenicians founded Carthage in 814 BC and established political hegemony over other Phoenician settlements throughout the western Mediterranean; this lasted until the end of the 3rd century BC. At the height of the city's prominence, it served as a major hub of trade, with trading stations extending throughout the region.\n\nFor much of its history, Carthage was on hostile terms with the Greeks in Sicily and with the Roman Republic; tensions led to a series of armed conflicts known as the Sicilian Wars (c. 600–265 BC) and the Punic Wars (264–146 BC) respectively. The city also had to deal with potentially hostile Berbers, the indigenous inhabitants of the area where Carthage was built."
 
- caucasia_nation_title: "Caucasia"
+ caucasia_nation_title: "@CAU Caucasia"
  caucasia_nation_desc: "A united Caucasian Kingdom can proclaim the true emperorship of a newly proclaimed Empire of Caucasia under one nation, one ruler, one true emperor."
 
- celtic_union_nation_title: "Unite the Celts"
+ celtic_union_nation_title: "@CEU Unite the Celts"
  celtic_union_nation_desc: "Celticism is a political, social and cultural movement advocating solidarity and cooperation between Celtic nations; through conquest we are able to unite our people under one nation!"
 
- china_nation_title: "China"
- china_nation_desc: "The last days of the Qing dynasty in the late 19th and early 20th centuries were marked by civil unrest and foreign invasions. Various internal rebellions caused millions of deaths, and conflicts with foreign Western European powers almost always resulted in humiliating unequal treaties that exacted costly reparations and compromised the country's territorial integrity. In addition, there were sentiments that political power should return to the majority Han Chinese from the minority Manchus from the northeastern province of Manchuria."
+ china_PRC_nation_title: "@PRC Proclaim the People's Republic of China"
+ china_PRC_nation_desc: "At exactly 3:00pm Beijing Time on the 1st of October 1949, Chairman Mao Zedong pronounced to the nation from the top of the Tiananmen Gate:\n\n  Dear comrades! Today, I hereby declare the formal establishment of the People's Republic of China and its Central People's Government!\n\nAfter the national anthem had been played, Chairman Mao proclaimed the founding of the People's Republic of China that day on top of the Tiananmen Gate."
 
- cisalpina_nation_title: "The Cisalpine Republic"
- cisalpina_nation_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag."
+ china_nation_title: "@CHN The Republic of China"
+ china_nation_desc: "The last days of the Qing dynasty in the late 19th and early 20th centuries were marked by civil unrest and foreign invasions. Various internal rebellions caused millions of deaths, and conflicts with foreign Western European powers almost always resulted in humiliating unequal treaties that exacted costly reparations and compromised the country's territorial integrity. In addition, there were sentiments that political power should return to the majority Han Chinese from the minority Manchus from the northeastern province of Manchuria." 
 
- czechoslovakia_nation_title: "Unite Czechoslovakia"
+ cisalpina_nation_title: "@CIS The Cisalpine Republic"
+ cisalpina_nation_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag.\n\n§YCisalpina§! §RCANNOT§! form any §YItalian§! formable nation."
+
+ czechoslovakia_nation_title: "@CZE Unite Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
 
- east_prussia_nation_title: "East Prussia"
+ east_prussia_nation_title: "@EPR East Prussia"
  east_prussia_nation_desc: "Its capital city was Königsberg. East Prussia was the main part of the region of Prussia along the southeastern Baltic Coast. The bulk of the ancestral lands of the Baltic Old Prussians were enclosed within East Prussia."
 
- emilia_romagna_nation_title: "Emilia-Romagna"
+ emilia_romagna_nation_title: "@ERO Emilia-Romagna"
  emilia_romagna_nation_desc: "Emilia-Romagna is one of the wealthiest and most developed regions in Europe, unifying it as one kingdom will allow us to conquer many foes." 
 
- europe_nation_title: "The European Union"
+ europe_nation_title: "@EUR The European Union"
  europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress." 
 
- franconia_nation_title: "Restore the Franconian Kingdom"
- franconia_nation_desc: "The small, franconian nations are nomore unimportant and can achieve big victories against their enemies."
+ franconia_nation_title: "@FRC Restore the Franconian Kingdom"
+ franconia_nation_desc: "The small, franconian nations are no more unimportant and can achieve big victories against their enemies."
 
- franco_iberia_nation_title: "The Franco-Iberian Union"
- franco_iberia_nation_desc: "The Franco-Iberian Empire is is a cultural hegemony consisting of Portugal, Spain, France under one Emperor" 
+ franco_iberia_nation_title: "@FIB The Franco-Iberian Empire"
+ franco_iberia_nation_desc: "The Franco-Iberian Empire is is a cultural hegemony consisting of Portugal, Spain, and France under one Emperor" 
 
- frieslande_nation_title: "Restore the Frisian Kingdom"
+ frieslande_nation_title: "@FRL Restore the Frisian Kingdom"
  frieslande_nation_desc: "The Frisian Kingdom, also known as Magna Frisia, is a modern name for the Frisian realm in the period when it was at its largest (650-734). This empire was ruled by kings and emerged in the mid-7th century and probably ended with the Battle of the Boarn in 734 when the Frisians were defeated by the Frankish Empire."
 
- german_empire_nation_title: "Proclamation of the German Empire"
+ german_empire_nation_title: "@GEP Proclamation of the German Empire"
  german_empire_nation_desc: "The proclamation of the German Empire, also known as the Deutsche Reichsgründung, took place in January 1871 after the joint victory of the German states in the Franco-Prussian War. As a result of the November Treaties of 1870s, the southern German states of Baden, Hesse-Darmstadt, with their territories south of the Main line, Württemberg and Bavaria, joined the Prussian-dominated "German Confederation" on 1 January 1871. On the same day, the new Constitution of the German Confederation came into force, thereby significantly extending the federal German lands to the newly created German Empire. The Day of the founding of the German Empire, January 18, became a day of celebration, marking when the Prussian King William I was proclaimed German Emperor in Versailles."
 
- goguryeo_nation_title: "Restore the Goguryeo Kingdom"
+ georgia_nation_title: "@GEO Unite the Georgians"
+
+ goguryeo_nation_title: "@GKR Restore the Goguryeo Kingdom"
  goguryeo_nation_desc: "Goguryeo, also called Goryeo, was a Korean kingdom located in the northern and central parts of the Korean Peninsula and the southern and central parts of Manchuria. At its peak of power, Goguryeo controlled most of the Korean peninsula, large parts of Manchuria and parts of the Russian Far East and eastern Mongolia." 
 
- hanse_nation_title: "The Hanseatic League"
+ hanse_nation_title: "@HNS The Hanseatic League"
  hanse_nation_desc: "The Hanseatic League was a commercial and defensive confederation of merchant guilds and market towns in Northwestern and Central Europe. Growing from a few North German towns in the late 1100s, the league came to dominate Baltic maritime trade for three centuries along the coasts of Northern Europe. Hansa territories stretched from the Baltic to the North Sea and inland during the Late Middle Ages."
 
- hesse_nassau_nation_title: "Hesse-Nassau"
+ hesse_nassau_nation_title: "@HEN Hesse-Nassau"
  hesse_nassau_nation_desc: "The Province of Hesse-Nassau was a province of the Kingdom of Prussia from 1868 to 1918, then a province of the Free State of Prussia until 1944."
 
- himalayan_empire_nation_title: "The Himalayan Empire"
- himalayan_empire_nation_desc: "The Himalaya Empire was a mountainous country in Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, Kinnara Kingdom etc." 
+ tibetan_empire_nation_title: "@TIE The Tibetan Empire"
+ tibetan_empire_nation_desc: "The Tibetan Empire was a mountainous country in the Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, Kinnara Kingdom etc." 
 
- iberian_empire_nation_title: "Restore the Iberian Union"
+ iberian_empire_nation_title: "@IBE Restore the Iberian Union"
  iberian_empire_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV. The union began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
 
- italian_merchant_alliance_nation_title: "The Italian Merchant Alliance"
- italian_merchant_alliance_nation_desc: "The Hansa in Northern Germany and the Italian Merchant Alliance in Italy: Extremely mighty, influential and hard to defeat."
+ italian_merchant_alliance_nation_title: "@IMA The Italian Merchant Alliance"
+ italian_merchant_alliance_nation_desc: " The Italian Merchant Alliance in Italy is an alliance of Maritime Republics into one nation state under a Merchant-Oriented Government of the Mediterranean Basin of which there is much historical presedence such as Venice, Genoa, Pisa, and Amalfi; less known, but not always forgotten are the nations of Ragus, Gaeta, Ancona, and the little republic of Noli.\n\n Through unification and perseverance we may yet become a dominant great power in Greater Europe."
 
- italian_empire_nation_title: "The Italian Empire"
+ italian_empire_nation_title: "@ITE The Italian Empire"
  italian_empire_nation_desc: "The Italian Empire between 1936 and 1943, comprised the colonies, protectorates, concessions, dependencies and trust territories of the Kingdom of Italy. The genesis of the Italian colonial empire was the purchase in 1869 of Assab Bay on the Red Sea by an Italian navigation company which intended to establish a coaling station at the time the Suez Canal was being opened to navigation. This was taken over by the Italian government in 1882, becoming modern Italy's first overseas territory."
 
- jagiellonian_empire_nation_title: "Restore the Jagiellonian Empire"
+ jagiellonian_empire_nation_title: "@JGE Restore the Jagiellonian Empire"
  jagiellonian_empire_nation_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania, who in 1386 was baptized as Władysław, married Queen regnant Jadwiga of Poland, and was crowned King of Poland as Władysław II Jagiełło. The dynasty reigned in several Central European countries between the 14th and 16th centuries. Members of the dynasty were Kings of Poland (1386–1572), Grand Dukes of Lithuania (1377–1392 and 1440–1572), Kings of Hungary (1440–1444 and 1490–1526), and Kings of Bohemia (1471–1526)."
 
- jagiellonian_empire_nation_lithuania_title: "Our Lithuanian Empire"
+ jagiellonian_empire_nation_lithuania_title: "@JGE Our Lithuanian Empire"
  jagiellonian_empire_nation_lithuania_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania, who in 1386 was baptized as Władysław, married Queen regnant Jadwiga of Poland, and was crowned King of Poland as Władysław II Jagiełło. The dynasty reigned in several Central European countries between the 14th and 16th centuries. Members of the dynasty were Kings of Poland (1386–1572), Grand Dukes of Lithuania (1377–1392 and 1440–1572), Kings of Hungary (1440–1444 and 1490–1526), and Kings of Bohemia (1471–1526)."
 
- lombardy_venetia_nation_title: "Restore the Lombardy-Venetia Kingdom"
+ arab_kingdom_nation_title: "@KAB Unite The Arabian People"
+ arab_kingdom_nation_desc: "The Kingdom of Arabia is a country encompassing the entirety of the Arabian Peninsula. It is bordered by Iraq, Jordan and Egypt to the north, with the Red Sea to its west, the Persian Gulf to its east, and the Atlantic Ocean to the south, with its political capital in Mecca, and its Sunni Islam religious capital also Mecca."
+
+ lombardy_venetia_nation_title: "@LVE Restore the Lombardy-Venetia Kingdom"
  lombardy_venetia_nation_desc: "The Kingdom of Lombardy–Venetia, commonly called the "Lombardo-Venetian Kingdom", was a constituent land (crown land) of the Austrian Empire. It was created in 1815 by resolution of the Congress of Vienna in recognition of the Austrian House of Habsburg-Lorraine's rights to Lombardy and the former Republic of Venice after the Napoleonic Kingdom of Italy, proclaimed in 1805, had collapsed."
 
- lower_saxony_nation_title: "Lower Saxony"
+ lower_saxony_nation_title: "@LSX The German State of Lower Saxony"
  lower_saxony_nation_desc: "Lower Saxony, German Niedersachsen, Land of Germany; The country's second largest state in size, Lower Saxony occupies an important band of territory across the northwestern part of the country."
 
- lusitanian_empire_nation_title: "The Lusitanian Empire"
+ lusitanian_empire_nation_title: "@LSE The Lusitanian Empire"
  lusitanian_empire_nation_desc: "Our lands extend from Europe to Asia! We are one of the first, if not, the first Global Empire. It is finally time to accept our rightful title as the Lusitanian Empire!"
 
- macedon_nation_title: "Restore Macedon"
+ macedon_nation_title: "@MAC Restore Macedon"
  macedon_nation_desc: "The wars of Alexander the Great were fought by King Alexander III of Macedon ("The Great"), first against the Achaemenid Persian Empire under Darius III, and then against local chieftains and warlords as far east as Punjab, India. By the time of his death, he had conquered most of the world known to the ancient Greeks. However, he failed to conquer South Asia. Although being successful as a military commander, he failed to provide any stable alternative to the Achaemenid Empire—his untimely death threw the vast territories he conquered into civil war."
 
- maghrebia_nation_title: "Maghreb"
+ maghrebia_nation_title: "@MGH United Maghreb"
  maghrebia_nation_desc: "Maghreb; also spelled Maghrib, region of North Africa bordering the Mediterranean Sea. The Africa Minor of the ancients, it at one time included Moorish Spain and now comprises essentially the Atlas Mountains and the coastal plain of Morocco, Algeria, Tunisia, and Libya."
 
- north_german_confederation_nation_title: "Restore the North German Confederation"
+ north_german_confederation_nation_title: "@NGC Restore the North German Confederation"
  north_german_confederation_nation_desc: "This mighty nation unites Northern Germany. With deligance and a lot of ambition the Germans have created such a gigantic state from small dukedoms." 
 
- north_sea_empire_nation_title: "The North Sea Empire"
+ north_sea_empire_nation_title: "@NSE The North Sea Empire"
  north_sea_empire_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
- north_sea_empire_nation_england_title: "An English North Sea Empire"
+ north_sea_empire_nation_england_title: "@NSE An English North Sea Empire"
  north_sea_empire_nation_england_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
- north_sea_empire_nation_denmark_title: "The North Sea Empire under Danish Rule"
+ north_sea_empire_nation_denmark_title: "@NSE The North Sea Empire under Danish Rule"
  north_sea_empire_nation_denmark_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
- papal_states_nation_title: "Restore the Papal States"
+ papal_states_nation_title: "@PAP Restore the Papal States"
  papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
 
- peoples_republic_of_china_nation_title: "Proclaim the People's Republic"
+ peoples_republic_of_china_nation_title: "@PRC Proclaim the People's Republic"
  peoples_republic_of_china_nation_desc: "The People's Republic of China was formally proclaimed by Mao Zedong, the Chairman of the Communist Party of China, on 1 October 1949 at 3:00 pm in Tiananmen Square in Beijing while the new capital Nanking had been the capital of the former Republic of China." 
 
- pontos_nation_title: "Restoration of the Kingdom of Pontus"
+ pontos_nation_title: "@PON Restoration of the Kingdom of Pontus"
  pontos_nation_desc: "Through conquest and diplomacy we're able to form a county for all Pontic-Greek people living at the Black Sea." 
 
- rhine_confederation_nation_title: "The Rhine Confederation"
+ rhine_confederation_nation_title: "@RHE The Rhine Confederation"
  rhine_confederation_nation_desc: "Napoleon had annexed for France all the left bank of the Rhine, but the new Confederation gradually extended from the Rhine to the Elbe. It was at first welcomed by the German people as a step towards unity, but it was really a barrier against Prussian and Austrian power." 
 
- saudi_nation_title: "House of Saud"
+ saudi_nation_title: "@SRB House of Saud"
  saudi_nation_desc: "The House of Saud conquered many lands during the crisis of the Arabian peoples after the fall of the Ottoman Empire. Through conquest and diplomacy we can claim the title of King of Arabians under the Saudi Dynasty!"
 
- siebenbuergen_nation_title: "Siebenbuergen"
+ siebenbuergen_nation_title: "@SBG Siebenbuergen"
  siebenbuergen_nation_desc: "Siebenbuergen means "Seven Castles", named after the seven Transylvanian Saxons' cities. With the formation of a unified state through both diplomatic and militaristic means we are able to establish a new state based upon the foundation of our Germanic legacy." 
 
- swabia_nation_title: "The Swabian Kingdom"
+ swabia_nation_title: "@SWB The Swabian Kingdom"
  swabia_nation_desc: "The foundation of the Kingdom Swabia unites the hostile countries in the southern Holy Roman Empire. the country attains an important and mighty position in the empire in only few years."
 
- sweden_norway_nation_title: "Sweden-Norway"
+ sweden_norway_nation_title: "@SNO Sweden-Norway"
  sweden_norway_nation_desc: "Sweden and Norway had been united under the same crown on two occasions: from 1319 to 1343 and briefly from 1449 to 1450 in opposition to Christian of Oldenburg who was elected king of the Kalmar Union by the Danes." 
 
- soviet_union_nation_title: "The Soviet Union"
+ soviet_union_nation_title: "@SOV The Soviet Union"
  soviet_union_nation_desc: "The Soviet Union (short for the Union of Soviet Socialist Republics or USSR) is a single-party Marxist–Leninist state. It was the first country to declare itself socialist and build towards a communist society and was a union of 14 Soviet Socialist Republics and one Soviet Federative Socialist Republic." 
 
- tatarstan_nation_title: "Tatarstan"
+ tatarstan_nation_title: "@TAT Tatarstan"
  tatarstan_nation_desc: "The Tatars are Turkic ethnic group native to Tatarstan and wider Volga region. They speak Tatar, a Kipchak Turkic language. The vast majority of Tatars today reside in post-Soviet countries, primarily in Russia, Uzbekistan and Ukraine."
 
- turkey_nation_title: "Turkey"
+ turkey_nation_title: "@TRR The Republic of Turkey"
  turkey_nation_desc: "The Republic of Turkey was created after the overthrow of Sultan Mehmet VI Vahdettin by the new Republican Parliament in 1922. This new regime delivered the coup de grâce to the Ottoman state which had been practically wiped away from the world stage following the First World War."
 
- two_sicilies_nation_title: "Restore the Kingdom of Two Sicilies"
+ two_sicilies_nation_title: "@TSI Restore the Kingdom of Two Sicilies"
  two_sicilies_nation_desc: "The Kingdom of Two Sicilies is the union between the Kingdom Sicily and the Kingdom Naples. Together these kingdoms can compete with the Spaniards just as with other Italians."
 
- united_kingdom_nation_title: "The United Kingdom"
+ united_kingdom_nation_title: "@UKI The United Kingdom"
  united_kingdom_nation_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland"
 
- united_kingdom_nation_england_title: "The United Kingdom"
+ united_kingdom_nation_england_title: "@UKI The United Kingdom"
  united_kingdom_nation_england_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland" 
 
- united_kingdom_nation_gb_title: "The United Kingdom"
+ united_kingdom_nation_gb_title: "@UKI The United Kingdom"
  united_kingdom_nation_gb_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland"
+
+ yugoslavia_nation_title: "@YUG the Yugoslavian Kingdom"
+ yugoslavia_nation_desc: "The country was formed in 1918 immediately after World War I as the Kingdom of Serbs, Croats and Slovenes by union of the State of Slovenes, Croats and Serbs and the Kingdom of Serbia. It was commonly referred to at the time as the "Versailles state"""
 
   # NOTE: Reworked Vanilla Nations - Reworked Vanilla Nations - Reworked Vanilla Nations
 
- bharat_nation_title: "Unite the lands of Bharat"
+ algiers_nation_title: "@ALG Emirate of Algiers"
+ algiers_nation_desc: "The central part of the Maghreb has always been subjected to the whims of more powerful states based in the east or west. We must not allow history to repeat itself. By seizing the great port of Al-Djazair as well as some of the other important coastal cities in the region we can lay the foundation of a strong united state with a maritime focus which will allow us to surpass our historical enemies in the east and west."
+
+ andalusian_nation_title: "@ADU Restore Al-Andalus"
+ andalusian_nation_desc: "Once all of Iberia was ruled by the glorious Muslim rulers of Andalusia. Let us undo the shameful Christian Reconquista and retake the lands of our ancestors."
+
+ bharat_nation_title: "@BHA Unite the lands of Bharat"
  bharat_nation_desc: "Form the mighty Bharat and bring all the lands of the Indian subcontinent under your rule."
 
- bukhara_nation_title: "Settle into the Silk Roads"
+ bukhara_nation_title: "@BUK Settle into the Silk Roads"
  bukhara_nation_desc: "Giving up the wild steppe for the ancient settled cities of the Silk Road in Transoxania will allow us to settle in the lands whose very names vall to midn fabulous wealth, but if we push this far south into settled land our wild cousins to the north will no longer accept our authority." 
 
- form_great_yuan_nation_title: "Restore the Great Yuan"
+ form_great_yuan_nation_title: "@YUA Restore the Great Yuan"
  form_great_yuan_nation_desc: "The heirs of Kublai Khan once ruled over all Chinese and Mongol lands. Let us rise to reclaim the legacy of the old Yuan and crush the weaker lineages that have attempted to claim the Empire that is our Birthright!" 
 
- german_kingdom_nation_title: "Restore the German Kingdom"
+ german_kingdom_nation_title: "@GER Restore the German Kingdom"
  german_kingdom_nation_desc: "The tripartite division of the Carolingian Empire effected by the Treaty of Verdun was challenged very early on with the death of the Emperor Lothair I in 855. He had divided his kingdom of Middle Francia between his three sons and immediately the northernmost of the three divisions, Lotharingia, was disputed between the kings of East and West Francia. The war over Lotharingia lasted until 925. Lothair II of Lotharingia died in 869 and the Treaty of Meerssen (870) divided his kingdom between East and West Francia, but the West Frankish sovereigns relinquished their rightful portion to East Francia by the Treaty of Ribemont in 880. Ribemont determined the border between France and Germany until the fourteenth century. The Lotharingian nobility tried to preserve their independence of East of West Frankish rule by switching allegiance at will with the death of king Louis the Child in 911, but in 925 Lotharingia was finally ceded to East Francia by Rudolph of West Francia and it thereafter formed the Duchy of Lorraine within the East Frankish kingdom."
 
- great_britain_england_nation_title: "Form Great Britain"
+ great_britain_nation_title: "@GBR Form Great Britain"
+ great_britain_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
+ 
+ great_britain_england_nation_title: "@GBR Form Great Britain"
  great_britain_england_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
 
- hindustan_nation_title: "Form Hindustan"
- hindustan_nation_desc: "Form the mighty Hindustan and bring all the lands of the Indian subcontinent under your rule as the rightful ruler."
+ hindustan_nation_title: "@HIN Hindustan"
+ hindustan_nation_desc: "We can proclaim the mighty Hindustan and bring all the lands of the Indian subcontinent under your rule as the rightful ruler."
 
- kingdom_of_prussia_nation_brandenburg_title: "A Prussian King"
+ unite_italian_nation_title: "@ITA Risorgimento"
+ unite_italian_nation_desc: "As the heart of the Renaissance, our nation is blossoming culturally.\n\n We have just entered the beginning of what looks like a prolonged artistic rebellion, especially in the field of architecture and literature. \n\nThe cultural evolution is not aiding our country in maintaining peace within our borders however. Our country is continuously stricken by foreign states seeking power and territorial gain."
+ 
+ kingdom_of_prussia_nation_brandenburg_title: "@PRU A Prussian King"
  kingdom_of_prussia_nation_brandenburg_desc: "There is only one king in the Empire, the king of Brandenburg. At the same time our lands in Prussia are not a historic part of the Empire, let us declare ourselves King in Prussia to reflect our grander status than the other electors."
 
- restore_roman_republic_nation_title: "Restore the Republic"
+ restore_roman_republic_nation_title: "@ROM Restore the Republic"
  restore_roman_republic_nation_desc: "The Roman Republic was the era of classical Roman civilization beginning with the overthrow of the Roman Kingdom, traditionally dated to 509 BC, and ending in 27 BC with the establishment of the Roman Empire. It was during this period that Rome's control expanded from the city's immediate surroundings to hegemony over the entire Mediterranean world."
 
- restore_roman_empire_nation_title: "Restoration of the Roman Empire"
+ restore_roman_empire_nation_title: "@ROM Restoration of the Roman Empire"
  restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
 
- russian_nation_muscovy_title: "Tsardom of Russia"
+ russian_nation_muscovy_title: "@RUS Tsardom of Russia"
  russian_nation_muscovy_desc: "The Tsardom of Russia, also called the Tsardom of Muscovy, was the centralized Russian state from the assumption of the title of Tsar by Ivan IV in 1547 until the foundation of the Russian Empire by Peter the Great in 1721."
 
- russian_nation_novgorod_title: "The Russian Republic"
+ russian_nation_novgorod_title: "@RUS The Russian Republic"
  russian_nation_novgorod_desc: "The Russian Republic was a short-lived state which controlled, de jure, the territory of the former Russian Empire after its proclamation by the Russian Provisional Government on 1 September 1917 in a decree signed by Alexander Kerensky as Minister-President and Alexander Zarudny as Minister of Justice.\n\n Less than six weeks later, the Republic was overtaken by the October Revolution beginning on 25 October and was then superseded by the Russian Soviet Republic."
 
- russian_nation_title: "The Russian Nation"
+ russian_nation_title: "@RUS The Russian Nation"
  russian_nation_desc: "Through conquest and diplomacy Russia has managed to transform from a mere settlement into a dominant principality. After several eastern expeditions the Mongol hordes have finally been subdued and a centralized Russian state, ruled under the suzerainty of the Tsar, is emerging. Influences from Western Europe are helping us modernize and reform our nation and Western style of education is being adopted."
 
- spanish_nation_title: "Unite the Spaniards"
+ spanish_nation_title: "@SPA Unite the Spaniards"
  spanish_nation_desc: "The marriage of Ferdinand II of Aragon and Isabella I of Castile, in 1469 at the Palacio de los Vivero in Valladolid began the familial union of the two kingdoms. They became known as the Catholic Monarchs (los Reyes Católicos). Isabella succeeded her brother as Queen of Castile and Ferdinand became jure uxoris King of Castile in 1474. When Ferdinand succeeded his father as King of Aragon in 1479, the Crown of Castile and the various territories of the Crown of Aragon were united in a personal union, creating for the first time since the 8th century a single political unit, referred to as España (Spain)."
 
- spanish_nation_castile_wedding_title: "Castile-Aragon Union"
+ spanish_nation_castile_wedding_title: "@SPA Castile-Aragon Union"
  spanish_nation_castile_wedding_desc: "The marriage of Ferdinand II of Aragon and Isabella I of Castile, in 1469 at the Palacio de los Vivero in Valladolid began the familial union of the two kingdoms. They became known as the Catholic Monarchs (los Reyes Católicos). Isabella succeeded her brother as Queen of Castile and Ferdinand became jure uxoris King of Castile in 1474 creating for the first time since the 8th century a single political unit, referred to as España (Spain)"
 
- spanish_nation_aragon_wedding_title: "Aragon-Castile Union"
+ spanish_nation_aragon_wedding_title: "@SPA Aragon-Castile Union"
  spanish_nation_aragon_wedding_desc: "The marriage of Ferdinand II of Aragon and Isabella I of Castile, in 1469 at the Palacio de los Vivero in Valladolid began the familial union of the two kingdoms. They became known as the Catholic Monarchs (los Reyes Católicos). Isabella succeeded her brother as Queen of Castile and Ferdinand became jure uxoris King of Castile in 1474 creating for the first time since the 8th century a single political unit, referred to as España (Spain)"
  
+ tibetan_nation_title: "@TIB The Lhasa state"
+ tibetan_nation_desc: "With Güshi Khan as a largely uninvolved devotee, the 5th Dalai Lama and his intimates especially Sonam Rapten (until his death in 1658) established a civil administration which is referred to by historians as the Lhasa state. This Tibetan regime or government is also referred to as the Ganden Phodrang."
+
+ persian_nation_title: "@PER The Persian Empire"
+ persian_nation_desc: "At the mere age of 15, monarch has taken his father's position as head of the Shiite Turkmen tribe. He has quickly established a base of power in the northwest and proclaimed himself Shah of Iran. Several of the neighboring regions have been conquered and the possibility of a resurrected Iranian nation doesn't seem so absent anymore."
+
+ timurid_nation_title: "@TIM The Timurid Empire"
+ timurid_nation_desc: "As the descendant of Timur Lenk, the great conqueror of Iran, Transoxiana and Khorasan, it is our duty to reclaim his legacy. With the traditional Timurid Strongholds under our control we can at last proclaim ourselves the head of Timur's dynasty, and the leader of all of the Ghurkani princes."
+
+ enthrone_timurid_prince_title: "@TIM Enthrone Timurid Prince"
+ enthrone_timurid_prince_desc: "Amir Timur once crushed all realms in this region and entrusted their rule to his relatives. Ever since they have been torn apart by the Timurid princes' lust to rule it all, and there are many princes who could yet stake their claim to Timur's empire. Some local rulers have been known to invite Timurid claimants to their states, propping them up as leaders, and using the strength Timur's name to extend their rulership over all lands he once ruled."
+
+ mughal_nation_title: "@MUG The Mughal Empire"
+ mughal_nation_desc: "$MONARCH$ has begun to lay the foundation of his new empire. Although inferior in numbers, his well-disciplined troops have managed to achieve several decisive victories against the Sultans of India. The battle of $CAPITAL$ became the first great victory in a series of territorial expansions and, with time, the empire of the Mughals could stretch over the larger part of the Indian plateau."
+
+ restore_byzantine_empire_title: "@BYZ Restore the Byzantine Empire"
+ restore_byzantine_empire_desc: "The glorious Byzantine Empire is gone, but as long as there are Greeks in Constantinople, there is hope of resurrection. We can take its place in spirit, but we cannot take its name unless we prove worthy..."
+
+ greek_nation_title: "@GRE Kingdom of Greece"
+ greek_nation_desc: "For years Hellas has been divided among several kingdoms or occupied by foreigners at the pleasing of our common enemies. To unite the Greek lands under a sole flag and one ruler, is our only way to greatness."
+
+ prussian_nation_title: "@PRU The Kingdom of Prussia"
+ prussian_nation_desc: "The Kingdom of Prussia (German: Königreich Preußen) was a German kingdom that constituted the state of Prussia between 1701 and 1918. It was the driving force behind the unification of Germany in 1871 and was the leading state of the German Empire until its dissolution in 1918."
+
+ prussian_nation_teutonic_order_title: "@PRU Reform into Prussia"
+ prussian_nation_teutonic_order_desc: "The age of crusading knights is fading fast. There will come a time when we no longer stand to gain by holding on to the trappings of a monastic order. Besides, the Grandmaster would much rather be a Duke... or King. By reforming into a secular state, we can revitalize our administration and gain the respect of our neighbors."
+
+ prussian_nation_brandenburg_title: "@PRU Form the Kingdom of Prussia"
+ prussian_nation_brandenburg_desc: "There is only one king in the Empire, the king of Bohemia. At the same time our lands in Prussia are not a historic part of the Empire, let us declare ourselves King in Prussia to reflect our grander status than the other electors."
+
+ form_manchu_dynasty_title: "@QNG The Qing Dynasty"
+ form_manchu_dynasty_desc: "We have taken the Northern Capital and defeated the false emperors. The Middle Kingdom must be united under a Manchu banner. Our dynasty shall reign for a thousand years!"
+
+ malayan_nation_culture_title: "@MSA The Kingdom of Malaya"
+ malayan_nation_culture_desc: "We have conquered the Malay peoples under one ruler.. $MONARCHTITLE$ $MONARCH$ should aspire to unify all Malayan provinces in the region under one strong ruler allowing us much influence and prestige in the newly formed Kingdom and surrounding region!"
+
+ kingdom_of_jerusalem_title: "@KOJ Re-establish the Kingdom of Jerusalem"
+ kingdom_of_jerusalem_desc: "Rejoice! Holy Jerusalem is again in Christian hands - our Christian hands. The Pope has informed us that if we were to reestablish The Kingdom of Jerusalem, our salvation would be assured."
+
+ japanese_nation_shogun_diplomatic_title: "@JAP The Unification of Japan"
+ japanese_nation_shogun_diplomatic_desc: "The warring factions of Japan have finally been united under a strong emperor."
+
+ japanese_nation_shogun_conquest_title: "@JAP Proclaim Japan through Conquest"
+ japanese_nation_shogun_conquest_desc: "The time has come to unite Japan by force! The time for diplomacy is over and all these warring daimyo lords must be conquered."
+
+ japanese_nation_daimyo_conquest_title: "@JAP The Kyoto Incident"
+ japanese_nation_daimyo_conquest_desc: "The region of Japan has come under control through various warring factions but our dynasty remains on top and prepared to take the imperial seat.\n\nLet us proclaim [Root.Monarch.GetTitle] [Root.Monarch.GetName] as King [Root.Monarch.GetName] of the newly united Japanese Kingdom!"
+
+ hannoverian_nation_title: "@HAN The Kingdom of Hanover"
+ hannoverian_nation_desc: "Now that we control the key provinces of this region, local nobles have no other choice but to accept our leadership. When they fall in line, the united duchy of Hanover will become the leading power of the region."
+
+ westfalian_nation_title: "@WES The Kingdom of Westphalia"
+ westfalian_nation_desc: "As the ideas of the Enlightenment are sweeping through Europe, we may choose to embrace them ourselves in Westphalia. Our future model state will feature ideas as revolutionary as equal rights for all male population, freedom for serfs and emancipation for the Jews, as well as enabling of free enterprise through abolition of socage and the guilds."
+
+ kingdom_of_god_nation_title: "@KOG The Kingdom of God"
+ kingdom_of_god_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."
+
+ gods_kingdom_title: "See of Rome"
+ gods_kingdom_desc: "With Italy under Papal control and the Holy See at it's most uselessness, we must abolish it and declare ourselves the true messenger of God."

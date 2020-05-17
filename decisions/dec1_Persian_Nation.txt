@@ -69,11 +69,10 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
+			NOT = { exists = PER }
 			is_nomad = no
 			is_at_war = no
 			is_tribal = no
-			NOT = { exists = PER }
 			owns_core_province = 414		# Hamadan
 			owns_core_province = 429		# Isfahan
 			owns_core_province = 433		# Yazd
@@ -90,47 +89,86 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = PER
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = {
-						government = monarchy
+			change_tag = PER # Country TAG
+			set_country_flag = formed_persian_nation_flag # Country Formation Flag
+			custom_tooltip = form_persian_tt_2 # New Missions
+			custom_tooltip = form_persian_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			PER = { # Capital change and bonuses				
+				set_capital = 414 # Hamadan
+				414 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
 					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = despotic_monarchy
 				}
-				change_government = monarchy
-			}
-			set_government_rank = 3
-			add_government_reform = feudal_theocracy
-			if = {
-				limit = {
-					has_reform = states_general_reform
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					persia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PER
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				remove_government_reform = states_general_reform
-			}
-			persia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = PER_ideas }
+					}
+					country_event = { id = ideagroups.1 }
 				}
-				add_permanent_claim = PER
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					NOT = { primary_culture = persian }
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
 				}
-				change_primary_culture = persian
-			}
-			set_country_flag = formed_persia_flag
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
 		ai_will_do = {

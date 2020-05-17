@@ -36,6 +36,7 @@ country_decisions = {
 				tag = IRE
 				tag = SNO
 				tag = EUR
+				tag = KOJ
 			}
 		}
 		provinces_to_highlight = {
@@ -102,8 +103,6 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			is_great_power = yes
-			great_power_rank = 5
-			legitimacy = 100
 			ROOT = {
 				NOT = {
 					tag = ENG
@@ -184,95 +183,101 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = NSE
-			set_country_flag = formed_north_sea_empire_nation_flag
-			NSE = {
-				add_legitimacy = 50
-				set_capital = 13 # Schleswig
-				13 = {
-					add_base_tax = 3
-					add_base_production = 3
-					add_base_manpower = 2
-				}
-			}
-			british_isles_region = {
+			change_tag = NSE # Country TAG
+			set_country_flag = formed_north_sea_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_north_sea_empire_tt_4 # New Missions
+			custom_tooltip = form_north_sea_empire_tt_5 # Region/Area Claims
+			custom_tooltip = form_north_sea_empire_tt_6 # Region/Area Claims
+			if = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					ROOT = {
+						junior_union_with = ENG
+					}
 				}
-				add_permanent_claim = NSE
-			}
-			scandinavia_region = {
+				custom_tooltip = form_north_sea_empire_tt_8 # Inherit if under union
 				limit = {
-					NOT = { owned_by = ROOT }
+					ROOT = {
+						junior_union_with = DAN
+					}
 				}
-				add_permanent_claim = NSE
-			}
-			custom_tooltip = dec1_decisions_blank
-			NSE = {
+				custom_tooltip = form_north_sea_empire_tt_9 # Inherit if under union		
+				limit = {
+					ROOT = {
+						junior_union_with = NOR
+					}
+				}
+				custom_tooltip = form_north_sea_empire_tt_10 # Inherit if under union						
+			}				
+			custom_tooltip = dec1_decisions_blank	
+			NSE = { # Capital change and bonuses				
+				set_capital = 244 
+				244 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			NSE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
-					set_legacy_government = despotic_monarchy
+					}
+					set_legacy_government = monarchy_legacy
 				}
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 2
+						add_permanent_claim = NSE
+					}
+					scandanavia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NSE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			NSE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -280,6 +285,8 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
@@ -288,7 +295,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 335
+		ai_importance = 400
 	}
 
 	##############################
@@ -392,176 +399,181 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			is_great_power = yes
-			great_power_rank = 5
-			legitimacy = 50
-				ENG = { # England decision to form North Sea Empire
-					AND = {
-						NOT = {
-							dynasty = "Lancaster"
-							has_ruler = "Henry VI"
-							has_any_disaster = yes
-						}
-						is_great_power = yes
-						legitimacy = 75
-						owns_core_province = 236
-						owns_core_province = 12
-						owns_core_province = 17
-						}
+			ENG = { # England decision to form North Sea Empire
+				AND = {
+					NOT = {
+						dynasty = "Lancaster"
+						has_ruler = "Henry VI"
+						has_any_disaster = yes
 					}
+					is_great_power = yes
+					legitimacy = 75
 					owns_core_province = 236
 					owns_core_province = 12
 					owns_core_province = 17
-					AND = { # Controls all cores of Norway, Denmark, England
-						custom_trigger_tooltip = {
-						tooltip = form_north_sea_empire_tt_1
-						owns_core_province = 236
-						owns_core_province = 235
-						owns_core_province = 4371
-						owns_core_province = 237
-						owns_core_province = 238
-						owns_core_province = 1860
-						owns_core_province = 4370
-						owns_core_province = 234
-						owns_core_province = 4374
-						owns_core_province = 4130
-						owns_core_province = 239
-						owns_core_province = 240
-						owns_core_province = 4372
-						owns_core_province = 4375
-						owns_core_province = 244
-						owns_core_province = 243
-						owns_core_province = 4376
-						owns_core_province = 1861
-						owns_core_province = 245
-						owns_core_province = 4367
-						owns_core_province = 4368
-						owns_core_province = 246
-						owns_core_province = 4361
-					}
-					custom_trigger_tooltip = {
-						tooltip = form_north_sea_empire_tt_2
-							# Denmark
-						owns_core_province = 12
-						owns_core_province = 1983
-						owns_core_province = 14
-						owns_core_province = 4142
-						owns_core_province = 1984
-						owns_core_province = 15
-						owns_core_province = 4149
-						owns_core_province = 6
-						owns_core_province = 4165
-						owns_core_province = 1982
-						owns_core_province = 26
-						owns_core_province = 13
-					}
-					custom_trigger_tooltip = {
-						tooltip = form_north_sea_empire_tt_3
-							# Norway
-						owns_core_province = 17
-						owns_core_province = 16
-						owns_core_province = 4143
-						owns_core_province = 4144
-						owns_core_province = 4145
-						owns_core_province = 24
-						owns_core_province = 22
-						owns_core_province = 23
-						owns_core_province = 2752
-						owns_core_province = 20
-						owns_core_province = 10
-						owns_core_province = 21
 					}
 				}
+				owns_core_province = 236
+				owns_core_province = 12
+				owns_core_province = 17
+				AND = { # Controls all cores of Norway, Denmark, England
+					custom_trigger_tooltip = {
+					tooltip = form_north_sea_empire_tt_1
+					owns_core_province = 236
+					owns_core_province = 235
+					owns_core_province = 4371
+					owns_core_province = 237
+					owns_core_province = 238
+					owns_core_province = 1860
+					owns_core_province = 4370
+					owns_core_province = 234
+					owns_core_province = 4374
+					owns_core_province = 4130
+					owns_core_province = 239
+					owns_core_province = 240
+					owns_core_province = 4372
+					owns_core_province = 4375
+					owns_core_province = 244
+					owns_core_province = 243
+					owns_core_province = 4376
+					owns_core_province = 1861
+					owns_core_province = 245
+					owns_core_province = 4367
+					owns_core_province = 4368
+					owns_core_province = 246
+					owns_core_province = 4361
+				}
+				custom_trigger_tooltip = {
+					tooltip = form_north_sea_empire_tt_2
+						# Denmark
+					owns_core_province = 12
+					owns_core_province = 1983
+					owns_core_province = 14
+					owns_core_province = 4142
+					owns_core_province = 1984
+					owns_core_province = 15
+					owns_core_province = 4149
+					owns_core_province = 6
+					owns_core_province = 4165
+					owns_core_province = 1982
+					owns_core_province = 26
+					owns_core_province = 13
+				}
+				custom_trigger_tooltip = {
+					tooltip = form_north_sea_empire_tt_3
+						# Norway
+					owns_core_province = 17
+					owns_core_province = 16
+					owns_core_province = 4143
+					owns_core_province = 4144
+					owns_core_province = 4145
+					owns_core_province = 24
+					owns_core_province = 22
+					owns_core_province = 23
+					owns_core_province = 2752
+					owns_core_province = 20
+					owns_core_province = 10
+					owns_core_province = 21
+				}
+			}
 		}
 		effect = {
-			change_tag = NSE
-			set_country_flag = formed_north_sea_empire_nation_flag
-			NSE = {
-				add_legitimacy = 50
-				set_capital = 13 # Schleswig
-				13 = {
-					add_base_tax = 5
-					add_base_production = 2
-					add_base_manpower = 2
-				}
-			}
-			british_isles_region = {
+			change_tag = NSE # Country TAG
+			set_country_flag = formed_north_sea_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_north_sea_empire_tt_4 # New Missions
+			custom_tooltip = form_north_sea_empire_tt_5 # Region/Area Claims
+			custom_tooltip = form_north_sea_empire_tt_6 # Region/Area Claims
+			custom_tooltip = form_north_sea_empire_tt_7 # Region/Area Claims
+			if = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					ROOT = {
+						junior_union_with = DAN
+					}
 				}
-				add_permanent_claim = NSE
-			}
-			scandinavia_region = {
+				custom_tooltip = form_north_sea_empire_tt_9 # Inherit if under union		
 				limit = {
-					NOT = { owned_by = ROOT }
+					ROOT = {
+						junior_union_with = NOR
+					}
 				}
-				add_permanent_claim = NSE
-			}
-			custom_tooltip = dec1_decisions_blank
-			NSE = {
+				custom_tooltip = form_north_sea_empire_tt_10 # Inherit if under union						
+			}				
+			custom_tooltip = dec1_decisions_blank	
+			NSE = { # Capital change and bonuses				
+				set_capital = 244 
+				244 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			NSE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
-					set_legacy_government = despotic_monarchy
+					}
+					set_legacy_government = monarchy_legacy
 				}
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = NSE
+					}
+					scandanavia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NSE
+					}
+					france_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NSE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			NSE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -569,6 +581,8 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
@@ -577,7 +591,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 335
+		ai_importance = 400
 	}
 
 	##############################
@@ -682,8 +696,6 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			is_great_power = yes
-			great_power_rank = 5
-			legitimacy = 70
 			DAN = {
 				AND = {
 					is_lesser_in_union = no
@@ -761,95 +773,101 @@ country_decisions = {
 					}
 				}
 		effect = {
-			change_tag = NSE
-			set_country_flag = formed_north_sea_empire_nation_flag
-			NSE = {
-				add_legitimacy = 25
-				set_capital = 13 # Schleswig
-				13 = {
-					add_base_tax = 5
-					add_base_production = 2
-					add_base_manpower = 2
-				}
-			}
-			british_isles_region = {
+			change_tag = NSE # Country TAG
+			set_country_flag = formed_north_sea_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_north_sea_empire_tt_4 # New Missions
+			custom_tooltip = form_north_sea_empire_tt_5 # Region/Area Claims
+			custom_tooltip = form_north_sea_empire_tt_6 # Region/Area Claims
+			if = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					ROOT = {
+						junior_union_with = ENG
+					}
 				}
-				add_permanent_claim = NSE
-			}
-			scandinavia_region = {
+				custom_tooltip = form_north_sea_empire_tt_8 # Inherit if under union
 				limit = {
-					NOT = { owned_by = ROOT }
+					ROOT = {
+						junior_union_with = DAN
+					}
+				}	
+				custom_tooltip = form_north_sea_empire_tt_9 # Inherit if under union	
+				limit = {
+					ROOT = {
+						junior_union_with = NOR
+					}
 				}
-				add_permanent_claim = NSE
-			}
-			custom_tooltip = dec1_decisions_blank
-			NSE = {
+				custom_tooltip = form_north_sea_empire_tt_10 # Inherit if under union						
+			}				
+			custom_tooltip = dec1_decisions_blank	
+			NSE = { # Capital change and bonuses				
+				set_capital = 12
+				12 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			NSE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
-					set_legacy_government = despotic_monarchy
+					}
+					set_legacy_government = monarchy_legacy
 				}
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = NSE
+					}
+					scandanavia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NSE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			NSE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -857,6 +875,8 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
@@ -867,6 +887,4 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
-
 }

@@ -3,7 +3,6 @@ country_decisions = {
 	georgia_nation = {
 		major = yes
 		potential = {
-			
 			NOT = { has_country_flag = formed_georgia_flag }
 			OR = {
 				ai = no

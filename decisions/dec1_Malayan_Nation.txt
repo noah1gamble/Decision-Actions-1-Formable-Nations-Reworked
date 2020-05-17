@@ -1,29 +1,25 @@
 country_decisions = {
 
-	malayan_nation = {
+	# culture 
+
+	malayan_nation_culture = {
 		major = yes
 		potential = {
-			
-			NOT = { has_country_flag = formed_malaya_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = MSA }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no			
 			culture_group = malay
-			NOT = { has_reform = steppe_horde }
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+			NOT = { 
+				has_country_flag = formed_malaya_flag 
+				exists = MSA
 			}
 			OR = {
 				ai = no
-				num_of_cities = 12
-			}
+				AND = {
+					ai = yes
+					num_of_cities = 11 # Unique req - balances some stuff
+				}
+			}	
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -48,8 +44,9 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
+			adm_tech = 5 
+			NOT = { exists = MSA }
+			is_subject = no
 			is_at_war = no
 			owns = 624 #Banten
 			owns = 2687 #Pakuan
@@ -146,41 +143,102 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = MSA
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
+			change_tag = MSA # Country TAG
+			set_country_flag = formed_malaya_nation_flag # Country Formation Flag
+			custom_tooltip = form_malaya_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			MSA = { # Capital change and bonuses				
+				set_capital = 596 # Malacca
+				596 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				set_government_rank = 2
-			}
-			every_province ={
-				limit = {
-					OR = {
-						area = kutai_area
-						area = brunei_area
-						area = kalimantan_area
-						area = north_sumatra_area
-						area = central_sumatra_area
-						area = batak_area
-						area = minangkabau_area
-						area = south_sumatra_area
-						area = malaya_area
-						area = malacca_area
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
 					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = despotic_monarchy
 				}
-				add_permanent_claim = MSA
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 3650
-			}
-			set_country_flag = formed_malaya_flag
-			add_prestige = 25
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					every_province ={
+						limit = {
+							OR = {
+								area = kutai_area
+								area = brunei_area
+								area = kalimantan_area
+								area = north_sumatra_area
+								area = central_sumatra_area
+								area = batak_area
+								area = minangkabau_area
+								area = south_sumatra_area
+								area = malaya_area
+								area = malacca_area
+							}
+						}
+						add_permanent_claim = MSA
+					}					
+					# New Missions		
+					swap_non_generic_missions = yes 								
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = MSA_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
-
 }

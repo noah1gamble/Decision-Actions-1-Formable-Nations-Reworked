@@ -4,7 +4,7 @@ country_decisions = {
 	# PRUSSIAN NATION - BRANDENBURG #
 	#################################
 
-	kingdom_of_prussia_nation_brandenburg = {
+	prussian_nation_brandenburg = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
@@ -24,7 +24,22 @@ country_decisions = {
 					is_religion_enabled = protestant
 					is_religion_enabled = reformed
 				}
-			}	
+			}
+			OR = {
+				ai = no
+				OR = {
+					ai = yes
+					religion = reformed
+					religion = protestant
+				}
+			}			
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}				
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -118,11 +133,8 @@ country_decisions = {
 			adm_tech = 10
 			NOT = { exists = PRU }
 			is_at_war = no
+			is_subject = no
 			NOT = { government = theocracy }
-			OR = {
-				religion = protestant
-				religion = reformed
-			}
 			owns_core_province = 50	# Berlin
 			custom_trigger_tooltip = {
 				tooltip = form_prussia_nation_tt_1
@@ -152,7 +164,6 @@ country_decisions = {
 				owns_core_province = 2969
 				owns_core_province = 1763
 					# Mittelmark
-				owns_core_province = 50
 				owns_core_province = 1759
 				owns_core_province = 51
 					# Vorpommern
@@ -213,108 +224,88 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = PRU
-			set_country_flag = form_kingdom_of_prussia_nation
-			PRU = {
+			change_tag = PRU # Country TAG
+			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
+			custom_tooltip = form_prussia_tt_2 # New Missions
+			custom_tooltip = form_prussia_tt_3 # Claims
+			custom_tooltip = form_prussia_tt_4 # Claims
+			custom_tooltip = form_prussia_tt_5 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			PRU = { # Capital change and bonuses				
 				set_capital = 41 # Konigsberg
 				41 = {
-					add_base_tax = 2
-					add_base_production = 4
-					add_base_manpower = 4
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { primary_culture = prussian }
-				}
-				change_primary_culture = prussian
-			}
-			pomerelia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			west_prussia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			east_prussia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			custom_tooltip = dec1_decisions_blank
-			PRU = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			PRU = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = prussian_monarchy_legacy
 				}
+				add_government_reform = prussian_monarchy
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Claims
+					pomerelia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 2
+						add_permanent_claim = PRU
+					}					
+					west_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}	
+					east_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}									
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = prussian_monarchy
-			}
-			custom_tooltip = dec1_decisions_spacing
-			PRU = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -322,21 +313,24 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 
 	####################################
 	# PRUSSIAN NATION - TEUTONIC ORDER #
 	####################################
 
-	prussian_nation = {
+	prussian_nation_teutonic_order = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
@@ -355,6 +349,21 @@ country_decisions = {
 				is_religion_enabled = protestant
 				is_religion_enabled = reformed
 			}
+			OR = {
+				ai = no
+				OR = {
+					ai = yes
+					religion = reformed
+					religion = protestant
+				}
+			}			
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -448,11 +457,8 @@ country_decisions = {
 			NOT = { exists = PRU }
 			adm_tech = 10
 			is_at_war = no
+			is_subject = no
 			NOT = { government = theocracy }
-			OR = {
-				religion = reformed
-				religion = protestant
-			}
 			custom_trigger_tooltip = {
 				tooltip = form_prussia_nation_tt_1
 					# East Prussia
@@ -542,101 +548,95 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = PRU
-			set_country_flag = formed_prussia_nation_flag
-			swap_non_generic_missions = yes
-			PRU = {
+			change_tag = PRU # Country TAG
+			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
+			custom_tooltip = form_prussia_tt_2 # New Missions
+			custom_tooltip = form_prussia_tt_3 # Claims
+			custom_tooltip = form_prussia_tt_4 # Claims
+			custom_tooltip = form_prussia_tt_5 # Claims
+			every_neighbor_country = { # Unique Secularization effect
+				limit = { government = monarchy }
+				add_opinion = { 
+					who = ROOT 
+					modifier = secularized_monastic_order 
+				}
+			}			
+			custom_tooltip = dec1_decisions_blank	
+			PRU = { # Capital change and bonuses				
 				set_capital = 41 # Konigsberg
 				41 = {
-					add_base_tax = 2
-					add_base_production = 4
-					add_base_manpower = 4
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			pomerelia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			east_prussia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			west_prussia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			custom_tooltip = dec1_decisions_blank
-			PRU = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			PRU = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = prussian_monarchy_legacy
 				}
+				add_government_reform = prussian_monarchy
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Claims
+					pomerelia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 2
+						add_permanent_claim = PRU
+					}					
+					west_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}	
+					east_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}									
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = prussian_monarchy
-			}
-			custom_tooltip = dec1_decisions_spacing
-			PRU = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -644,25 +644,24 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
-			every_neighbor_country = {
-				limit = { government = monarchy }
-				add_opinion = { who = ROOT modifier = secularized_monastic_order }
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 
-	###########################
-	# PRUSSIAN NATION GENERAL #
-	###########################
+	#############################
+	# PRUSSIAN NATION - GENERAL #
+	#############################
 
-	prussian_nation_general = {
+	prussian_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
@@ -680,9 +679,10 @@ country_decisions = {
 				tag = TEU
 			}
 			OR = {
+				primary_culture = prussian
 				primary_culture = pommeranian
 				primary_culture = saxon
-				primary_culture = prussian
+				primary_culture = czech
 			}
 			OR = {
 				ai = no
@@ -691,7 +691,22 @@ country_decisions = {
 					is_religion_enabled = protestant
 					is_religion_enabled = reformed
 				}
+			}
+			OR = {
+				ai = no
+				OR = {
+					ai = yes
+					religion = reformed
+					religion = protestant
+				}
 			}			
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}						
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -789,12 +804,9 @@ country_decisions = {
 			adm_tech = 10
 			NOT = { exists = PRU }
 			is_at_war = no
-			OR = {
-				religion = reformed
-				religion = protestant
-			}	
+			is_subject = no	
 			custom_trigger_tooltip = {
-				tooltip = form_prussia_nation_tt_1
+				tooltip = form_prussia_tt_1
 					# East Prussia
 				owns_core_province = 40
 				owns_core_province = 41
@@ -882,123 +894,88 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = PRU
-			set_country_flag = formed_prussia_nation_flag
-			PRU = {
+			change_tag = PRU # Country TAG
+			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
+			custom_tooltip = form_prussia_tt_2 # New Missions
+			custom_tooltip = form_prussia_tt_3 # Claims
+			custom_tooltip = form_prussia_tt_4 # Claims
+			custom_tooltip = form_prussia_tt_5 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			PRU = { # Capital change and bonuses				
 				set_capital = 41 # Konigsberg
 				41 = {
-					add_base_tax = 2
+					add_base_tax = 1
 					add_base_production = 1
-					add_base_manpower = 5
+					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_prussia_general_convert_prussian_capital
-				custom_tooltip = dec1_prussia_general_convert_saxons_and_pommeranians
-				hidden_effect = {
-					capital_scope = {
-						change_culture = prussian
-					}
-					random_owned_province = {
-						limit = {
-							is_capital = no
-							OR = {
-								culture = saxon
-								culture = pommeranian
-							}
-						}
-						change_culture = prussian
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = prussian }
-				}
-				change_primary_culture = prussian
-			}
-			east_prussia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			pomerelia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			west_prussia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PRU
-			}
-			custom_tooltip = dec1_decisions_blank
-			PRU = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			PRU = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = prussian_monarchy_legacy
 				}
+				add_government_reform = prussian_monarchy
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Claims
+					pomerelia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 2
+						add_permanent_claim = PRU
+					}					
+					west_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}	
+					east_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}									
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = prussian_monarchy
-			}
-			custom_tooltip = dec1_decisions_spacing
-			PRU = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -1006,15 +983,16 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-
 }

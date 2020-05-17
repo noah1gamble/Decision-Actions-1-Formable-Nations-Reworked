@@ -1,5 +1,7 @@
 country_decisions = {
 
+	# NOTE: These files are only held here to split apart the formation and decisions as Paradox mixed them into the same file...
+
 	# Sakoku
 	enforce_sakoku_law = {
 		potential = {

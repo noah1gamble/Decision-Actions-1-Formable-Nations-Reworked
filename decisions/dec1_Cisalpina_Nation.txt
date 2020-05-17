@@ -82,103 +82,93 @@ country_decisions = {
 					# Piedmont
 				owns_core_province = 2979
 			}
+			custom_trigger_tooltip = {
+				tooltip = form_cisalpina_tt_5
+			}			
 		}
 	 	effect = {
-			change_tag = CIS
-			set_country_flag = formed_cisalpina_nation_flag
-			CIS = {
-				add_prestige = 10
+			change_tag = CIS # Country TAG
+			set_country_flag = formed_cisalpina_nation_flag # Country Formation Flag
+			custom_tooltip = form_cisalpina_tt_2 # New Missions
+			custom_tooltip = form_cisalpina_tt_3 # Region/Area Claims
+			custom_tooltip = form_cisalpina_tt_4 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			CIS = { # Capital change and bonuses				
 				set_capital = 104 # Milan
 				104 = {
-					add_base_tax = 2
-					add_base_production = 2
+					add_base_tax = 1
+					add_base_production = 1
 					add_base_manpower = 1
 				}
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = lombard }
-				}
-				change_primary_culture = lombard
-			}
-			piedmont_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CIS
-			}
-			liguria_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = CIS
-			}
-			custom_tooltip = dec1_decisions_blank
-			CIS = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			CIS = {
-				if = {
-					limit = {
-						NOT = {
-							government = republic
-							}
-						}
-					change_government = republic
-				}
+					custom_tooltip = dec1_government_change_republic # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = bureaucratic_despotism
 				}
+				add_government_reform = merchants_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# culture
+					if = {
+						limit = {
+							NOT = { primary_culture = lombard }
 						}
-					set_government_rank = 2
+						change_primary_culture = lombard
+					}					
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					piedmont_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = CIS
+					}
+					liguria_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = CIS
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = republic
+								}
+							}
+						change_government = republic
+					}																		
 				}
-				add_government_reform = merchants_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			CIS = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -186,16 +176,17 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
 			}
-			custom_tooltip = dec1_cisalpina_cannot_form_italy
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 300
+		ai_importance = 400	
 	}
 
 }

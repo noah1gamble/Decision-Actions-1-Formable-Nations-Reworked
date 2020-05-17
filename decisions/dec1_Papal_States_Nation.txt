@@ -1,12 +1,16 @@
 country_decisions = {
 
-	#######################
-	# The Pope Has Fallen - Any Catholic Nation can become the Papal States if they accept, or give up some provinces to the pope if they refuse, or refuse entirely and the pope will choose another nation #
-	#######################
+	#########################################################################################
+	# The Pope Has Fallen - Any Catholic Nation can become the Papal States if they accept, #
+	# or give up some provinces to the pope if they refuse, #################################
+	# or refuse entirely and the pope will choose another nation #
+	##############################################################
 
-	#####################################################################
-	# Any Italian or non-italian Catholic Nation can restore the Papacy #
-	#####################################################################
+	# todo
+
+	######################################################
+	# Any Italian Catholic Nation can restore the Papacy #
+	######################################################
 
 	papal_states_nation = {
 		major = yes
@@ -16,6 +20,7 @@ country_decisions = {
 			is_colonial_nation = no
 			technology_group = western
 			dominant_religion = catholic
+			owns = 118
 			NOT = {
 				has_country_modifier = kingdom_of_god
 				exists = ITA
@@ -33,29 +38,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# Russia
-				region = russia_region
-				province_id = 33
-				province_id = 295
-					# Urals
-				province_id = 2423
-				province_id = 306
-				province_id = 1957
-				province_id = 1083
-				province_id = 1079
-				province_id = 1755
-					# Kazan
-				province_id = 304
-				province_id = 2419
-				province_id = 473
-				province_id = 1081
-				province_id = 4267
-				province_id = 4264
-				province_id = 2422
-				province_id = 1082
-				province_id = 2421
-				province_id = 4265
-				province_id = 1972
+				# Italian regions and provinces
+				province_id = 118
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -67,14 +51,15 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			OR = {
-				OR = {
+				AND = {
 					owns_core_province = 118 # ROME!
 					owns_core_province = 202 # AVIGNON!
 				}
 				custom_trigger_tooltip = {
 					tooltip = restore_papal_states_nation_tt_1
 						# Any controller of original papal provinces is allowed
-						# ESPECIALLY rome & avignon
+					owns_core_province = 118 # ROME!
+					owns_core_province = 202 # AVIGNON!						
 					owns_core_province = 2976
 					owns_core_province = 119
 					owns_core_province = 114
@@ -87,93 +72,84 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = PAP
-			#set_country_flag = formed_papal_states_nation_flag
-			PAP = {
-				add_prestige = 100
+			change_tag = PAP # Country TAG
+			set_country_flag = restore_papal_states_nation_flag # Country Formation Flag
+			custom_tooltip = restore_papal_states_nation_tt_2 # New Missions
+			custom_tooltip = restore_papal_states_nation_tt_3 # Region/Area Claims	
+			custom_tooltip = dec1_decisions_blank 
+			custom_tooltip = dec1_papal_states_notif # You are becoming the popeman
+			custom_tooltip = dec1_papal_influence # All italian nations gain papal influence			
+			custom_tooltip = dec1_decisions_blank	
+			PAP = { # Capital change and bonuses				
 				set_capital = 118 # Roma
 				118 = {
-					add_base_tax = 6
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
 				}
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = lombard }
-				}
-				change_primary_culture = lombard
-			}
-			central_italy_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = PAP
-			}
-			custom_tooltip = dec1_decisions_blank
-			PAP = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			PAP = {
-				if = {
-					limit = {
-						NOT = {
-							government = theocracy
-							}
-						}
-					change_government = theocracy
-				}
+					custom_tooltip = dec1_government_change_theocracy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = papal_government
 				}
+				add_government_reform = papacy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					italy_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 2
+						add_permanent_claim = PAP
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = theocracy
+								}
+							}
+						change_government = theocracy
+					}
+					every_country = {
+						limit = {
+							region = italy_region
+							NOT = { owned_by = ROOT }
+						}
+						add_papal_influence = 25
+					}																						
 				}
-				add_government_reform = papacy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			PAP = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -181,25 +157,17 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
 			}
 			# TODO: event for all nations to announce revival of papal states
-			custom_tooltip = dec1_papal_states_notif
-			custom_tooltip = dec1_papal_influence # All italian nations gain papal influence
-			hidden_effect = {
-				every_country = {
-					limit = {
-						region = italy_region
-						NOT = { owned_by = ROOT }
-					}
-					add_papal_influence = 25
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 }

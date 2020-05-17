@@ -9,6 +9,8 @@ country_decisions = {
 			has_reform = iqta
 			NOT = { 
 				has_country_flag = formed_mamluks 
+				has_reform = celestial_empire
+				exists = MAM
 				tag = MAM
 				tag = HLR
 				tag = PAP
@@ -16,6 +18,13 @@ country_decisions = {
 				tag = ARB
 				tag = EGY
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}			
 			any_owned_province = {
 				OR = {
 					region = egypt_region
@@ -39,23 +48,95 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = FIB }
+			NOT = { exists = MAM }
 			is_subject = no
 			is_at_war = no			
 			region = egypt_region
 			region = arabia_region
 		}
 		effect = {
-			change_tag = FIB
-			# NOTE FINISH THIS CRAP LATER
+			change_tag = MAM # Country TAG
+			set_country_flag = formed_belgium_nation_flag # Country Formation Flag
+			custom_tooltip = form_belgium_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			MAM = { # Capital change and bonuses				
+				set_capital = 361 # Cairo
+				361 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = despotic_monarchy
+				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = MAM_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
+			# Late Administration doesn't desire a reform
 			modifier = {
 				factor = 0
 				adm_tech = 20
-			}
+			}			
 		}
+		ai_importance = 400	
 	}
-
 }

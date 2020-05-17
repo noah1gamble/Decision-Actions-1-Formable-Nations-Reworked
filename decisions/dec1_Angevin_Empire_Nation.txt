@@ -10,10 +10,13 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			primary_culture = english
-			tag = ENG
+			OR = {
+				primary_culture = english
+				tag = ENG
+			}			
 			NOT = {
 				has_country_flag = formed_angevin_empire_england_nation_flag
+				has_reform = celestial_empire
 				exists = ANG
 				tag = ANG
 				tag = PAP
@@ -105,10 +108,10 @@ country_decisions = {
 			NOT = { exists = ANG }
 			is_subject = no
 			is_at_war = no
-			is_lesser_in_union = no
+			is_lesser_in_union = no # Unique req, cannot be under a personal union
 			tag = ENG
 			custom_trigger_tooltip = {
-				tooltip = form_angevin_tt_1
+				tooltip = form_angevin_empire_tt_1
 					# London
 				owns_core_province = 235
 				owns_core_province = 236
@@ -142,16 +145,19 @@ country_decisions = {
 				owns_core_province = 247
 			}
 			custom_trigger_tooltip = {
-				tooltip = form_angevin_tt_4
+				tooltip = form_angevin_empire_tt_5			
+					# Ireland
+				owns_core_province = 373
+				owns_core_province = 374
+			}			
+			custom_trigger_tooltip = {
+				tooltip = form_angevin_empire_tt_4
 					# Brittany
 				owns_core_province = 4384
 				owns_core_province = 172
 				owns_core_province = 169
 				owns_core_province = 171
 				owns_core_province = 170
-					# Ireland
-				owns_core_province = 373
-				owns_core_province = 374
 			}
 			OR = {
 				ENG = {
@@ -170,7 +176,7 @@ country_decisions = {
 				}
 				ENG = {
 					custom_trigger_tooltip = {
-						tooltip = form_angevin_tt_2
+						tooltip = form_angevin_empire_tt_2
 							# Normandy
 						owns_core_province = 4385
 						owns_core_province = 168
@@ -182,7 +188,7 @@ country_decisions = {
 						owns_core_province = 178
 					}
 					custom_trigger_tooltip = {
-						tooltip = form_angevin_tt_3
+						tooltip = form_angevin_empire_tt_3
 							# Poitou
 						owns_core_province = 4386
 						owns_core_province = 180
@@ -204,109 +210,89 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = ANG
-			set_country_flag = formed_angevin_empire_great_britain_nation_flag
-			ANG = {
-				add_prestige = 15
-				add_stability = 1
-				add_legitimacy = 50
-				add_inflation = 3
-				set_capital = 178 # Anjou
-				178 = {
-					add_base_tax = 2
-					add_base_production = 5
-					add_base_manpower = 1
-				}
-			}
+			change_tag = ANG # Country TAG
+			set_country_flag = formed_angevin_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_angevin_empire_tt_6 # New Missions
+			custom_tooltip = form_angevin_empire_tt_7 # Region/Area Claims
+			custom_tooltip = form_angevin_empire_tt_8 # Region/Area Claims
 			if = {
 				limit = {
-					tag = ENG
-					ai = no
-						ENG = {
-							ai = yes
+					ROOT = {
+						junior_union_with = FRA
 					}
 				}
-				inherit = FRA
-			}
-			british_isles_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				custom_tooltip = form_angevin_empire_tt_9 # Inherit if under union
+			}			
+			custom_tooltip = dec1_decisions_blank	
+			ANG = { # Capital change and bonuses				
+				set_capital = 178 # Anjou
+				178 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = ANG
-			}
-			france_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ANG
-			}
-			custom_tooltip = dec1_decisions_blank
-			ANG = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-					remove_non_electors_emperors_from_empire_effect = yes
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			ANG = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = english_monarchy_legacy
 				}
+				add_government_reform = english_monarchy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = ANG
+					}
+					france_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ANG
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = english_monarchy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ANG = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -314,6 +300,8 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
@@ -335,10 +323,13 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			primary_culture = english
-			tag = GBR
+			OR = {
+				primary_culture = english
+				tag = GBR
+			}
 			NOT = {
-				has_country_flag = formed_angevin_empire_great_britain_nation_flag
+				has_country_flag = formed_angevin_empire_nation_flag
+				has_reform = celestial_empire
 				exists = ANG
 				tag = ANG
 				tag = PAP
@@ -430,10 +421,10 @@ country_decisions = {
 			NOT = { exists = ANG }
 			is_subject = no
 			is_at_war = no
-			is_lesser_in_union = no
+			is_lesser_in_union = no # Unique req, cannot be under a personal union
 			tag = GBR
 			custom_trigger_tooltip = {
-				tooltip = form_angevin_tt_1
+				tooltip = form_angevin_empire_tt_1
 					# London
 				owns_core_province = 235
 				owns_core_province = 236
@@ -467,7 +458,7 @@ country_decisions = {
 				owns_core_province = 247
 			}
 			custom_trigger_tooltip = {
-				tooltip = form_angevin_tt_4
+				tooltip = form_angevin_empire_tt_4
 					# Brittany
 				owns_core_province = 4384
 				owns_core_province = 172
@@ -495,7 +486,7 @@ country_decisions = {
 				}
 				GBR = {
 					custom_trigger_tooltip = {
-						tooltip = form_angevin_tt_2
+						tooltip = form_angevin_empire_tt_2
 							# Normandy
 						owns_core_province = 4385
 						owns_core_province = 168
@@ -507,7 +498,7 @@ country_decisions = {
 						owns_core_province = 178
 					}
 					custom_trigger_tooltip = {
-						tooltip = form_angevin_tt_3
+						tooltip = form_angevin_empire_tt_3
 							# Poitou
 						owns_core_province = 4386
 						owns_core_province = 180
@@ -529,109 +520,90 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = ANG
-			set_country_flag = formed_angevin_empire_england_nation_flag
-			ANG = {
-				add_prestige = 15
-				add_stability = 1
-				add_legitimacy = 50
-				add_inflation = 3
-				set_capital = 178 # Anjou
-				178 = {
-					add_base_tax = 2
-					add_base_production = 5
-					add_base_manpower = 1
-				}
-			}
+			change_tag = ANG # Country TAG
+			set_country_flag = formed_angevin_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_angevin_empire_tt_6 # New Missions
+			custom_tooltip = form_angevin_empire_tt_7 # Region/Area Claims
+			custom_tooltip = form_angevin_empire_tt_8 # Region/Area Claims
 			if = {
 				limit = {
-					tag = GBR
-					ai = no
-						GBR = {
-							ai = yes
+					ROOT = {
+						junior_union_with = FRA
 					}
 				}
-				inherit = FRA
-			}
-			british_isles_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				custom_tooltip = form_angevin_empire_tt_9 # Inherit if under union
+			}		
+			custom_tooltip = dec1_decisions_blank	
+			ANG = { # Capital change and bonuses				
+				set_capital = 178 # Anjou
+				178 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = ANG
-			}
-			france_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ANG
-			}
-			custom_tooltip = dec1_decisions_blank
-			ANG = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-					remove_non_electors_emperors_from_empire_effect = yes
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			ANG = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = english_monarchy_legacy
 				}
+				add_government_reform = english_monarchy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				custom_tooltip = dec1_event_our_place_in_empire
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = ANG
+					}
+					france_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ANG
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = english_monarchy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ANG = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -639,10 +611,12 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}			
 		}
 		ai_will_do = {
 			factor = 1
@@ -660,10 +634,13 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			primary_culture = francien
-			tag = FRA
+			OR = {
+				primary_culture = francien
+				tag = FRA
+			}
 			NOT = {
-				has_country_flag = formed_angevin_empire_france_nation_flag
+				has_country_flag = formed_angevin_empire_nation_flag
+				has_reform = celestial_empire
 				exists = ANG
 				tag = ANG
 				tag = PAP
@@ -853,109 +830,89 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = ANG
-			set_country_flag = formed_angevin_empire_france_nation_flag
-			ANG = {
-				add_prestige = 15
-				add_stability = 1
-				add_legitimacy = 50
-				add_inflation = 3
-				set_capital = 178 # Anjou
-				178 = {
-					add_base_tax = 2
-					add_base_production = 5
-					add_base_manpower = 1
-				}
-			}
-			british_isles_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ANG
-			}
-			france_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ANG
-			}
+			change_tag = ANG # Country TAG
+			set_country_flag = formed_angevin_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_angevin_empire_tt_6 # New Missions
+			custom_tooltip = form_angevin_empire_tt_7 # Region/Area Claims
+			custom_tooltip = form_angevin_empire_tt_8 # Region/Area Claims
 			if = {
 				limit = {
-					tag = ENG
-					ai = no
-						ENG = {
-							ai = yes
+					ROOT = {
+						junior_union_with = FRA
 					}
 				}
-				inherit = FRA
-			}
-			custom_tooltip = dec1_decisions_blank
-			ANG = {
+				custom_tooltip = form_angevin_empire_tt_9 # Inherit if under union
+			}			
+			custom_tooltip = dec1_decisions_blank	
+			ANG = { # Capital change and bonuses				
+				set_capital = 178 # Anjou
+				178 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-					remove_non_electors_emperors_from_empire_effect = yes
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			ANG = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = english_monarchy_legacy
 				}
+				add_government_reform = english_monarchy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = ANG
+					}
+					france_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ANG
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = english_monarchy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ANG = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -963,6 +920,8 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
@@ -973,5 +932,4 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
 }

@@ -5,16 +5,24 @@ country_event = {
 	id = dec1_events.1
 	title = "dec1_events.1.t"
 	desc = "dec1_events.1.d"
-	picture = BORDER_TENSION_eventPicture
+	picture = HRE_eventPicture
 
-	trigger = {
-		has_country_flag = dec1_formed_nation_inside_HRE
-	}
+	is_triggered_only = yes # Can only be triggered by Country Formation within the empire
+
+	# Perhaps add a choice for if the Empire forms a country? (Austria -> Austrian Empire)
+
+	# Might need to remove ability for current emperor to do this Event.
 
 	# Stay in the Empire
 	option = {
 		name = "dec1_events.1.a"
-		# Emperor is told about the loyalty to the empire, gains imperial authority
+			emperor = {	 # Emperor is told about loyalty to the empire, gains imperial authority
+				country_event = { id = dec1_events.2 }
+				add_opinion = {
+					who = root
+					modifier = stayed_in_the_empire
+				}
+			}		
 	}
 
 	# Leave the Empire
@@ -27,6 +35,7 @@ country_event = {
 			elector = no
 			remove_non_electors_emperors_from_empire_effect = yes
 		}
+		add_prestige = -10	
 		if = {		
 			limit = {
 				is_part_of_hre = yes
@@ -51,15 +60,37 @@ country_event = {
 				}
 			}			
 		}
-		add_prestige = -10	
 	}
 
 	# Declare war upon the Emperor to depose the Emperor and become the rightful emperor
-	option = {
-		name = "dec1_events.1.c"
-		declare_war_with_cb = {
-			who = emperor
-			casus_belli = cb_depose_emperor
-		}		
-	}	
+	# TODO: Finish this option. Will require some complicated modding, or 1.30 update commands
+	#option = {
+	#	name = "dec1_events.1.c"
+	#	declare_war_with_cb = {
+	#		who = emperor
+	#		casus_belli = cb_depose_emperor
+	#	}		
+	}
+
+	# Our Place in the Empire - Nation stayed in the Empire
+	country_event = {
+		id = dec1_events.2
+		title = "dec1_events.2.t"
+		desc = "dec1_events.2.d"
+		picture = HRE_eventPicture
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = "dec1_events.2.a" #Good!
+			add_imperial_influence = 25 # Perhaps add higher influence per government rank of nation that formed (15 duchy, 40 kingdom, 70 empire)
+			add_prestige = 10
+			tooltip = {
+				add_opinion = {
+					who = FROM
+					modifier = stayed_in_the_empire
+				}
+			}
+		}
+	}		
 }

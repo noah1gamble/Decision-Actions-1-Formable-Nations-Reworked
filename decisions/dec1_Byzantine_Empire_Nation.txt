@@ -48,6 +48,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			adm_tech = 5
+			NOT = { exists = BYZ }
+			is_subject = no			
+			is_at_war = no
+			is_nomad = no			
 			owns = 151 # Constantinople
 			owns = 149	# Edirne
 			owns = 144  # Epiros
@@ -61,92 +66,127 @@ country_decisions = {
 			owns = 318	# Smyrna
 			owns = 1853	# Kozani
 			owns = 2296	# Biga
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
 		}
 		effect = {
-			change_tag = BYZ
-			every_province = {
-				limit = {
-					OR = {
-						area = aydin_area
-						area = ankara_area
-						area = germiyan_area
-						area = karaman_area
-						area = cukurova_area
-						area = rum_area
-						area = kastamonu_area
-						area = hudavendigar_area
-						area = dulkadir_area
-						province_id = 149	# Edirne
-						province_id = 147	# Salonica
-						province_id = 148	# Macedonia
-						province_id = 146	# Athens
-						province_id = 145	# Morea
-						province_id = 1773	# Achea
-						province_id = 163	# Crete
-						province_id = 164	# Naxos
-						province_id = 320	# Rhodes
-						province_id = 330	# Trebizon
-						province_id = 285	# Kaffa
-						province_id = 142	# Corfu
-						province_id = 143	# Albania
-						province_id = 144	# Janina
-						province_id = 1765	# Nis
-						province_id = 150	# Bulgaria
-						province_id = 1764	# Burgas
-						province_id = 159	# Silistria
-						province_id = 1853	# Kozani
-						province_id = 2348	# Chios
-						province_id = 2410	# Theodoro
-						province_id = 2750	# Plovdiv
-						province_id = 4298	# Ayntab
+			change_tag = BYZ # Country TAG
+			set_country_flag = formed_byzantium_nation_flag # Country Formation Flag
+			custom_tooltip = form_byzantium_tt_2 # New Missions
+			custom_tooltip = form_byzantium_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			BYZ = { # Capital change and bonuses				
+				set_capital = 151 # Constantinople
+				151 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
 					}
-					NOT = { is_core = BYZ }
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = despotic_monarchy
 				}
-				add_permanent_claim = BYZ
-			}
-			random_owned_province = {
-				limit = { culture = greek }
-				add_base_tax = 1
-			}
-			random_owned_province = {
-				limit = { culture = greek }
-				add_base_tax = 1
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 10
-			BYZ = {
-				add_core = 151 # Constantinople
-			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				every_owned_province = {
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					set_in_empire = no
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					every_province = {
+						limit = {
+							OR = {
+								area = aydin_area
+								area = ankara_area
+								area = germiyan_area
+								area = karaman_area
+								area = cukurova_area
+								area = rum_area
+								area = kastamonu_area
+								area = hudavendigar_area
+								area = dulkadir_area
+								province_id = 149	# Edirne
+								province_id = 147	# Salonica
+								province_id = 148	# Macedonia
+								province_id = 146	# Athens
+								province_id = 145	# Morea
+								province_id = 1773	# Achea
+								province_id = 163	# Crete
+								province_id = 164	# Naxos
+								province_id = 320	# Rhodes
+								province_id = 330	# Trebizon
+								province_id = 285	# Kaffa
+								province_id = 142	# Corfu
+								province_id = 143	# Albania
+								province_id = 144	# Janina
+								province_id = 1765	# Nis
+								province_id = 150	# Bulgaria
+								province_id = 1764	# Burgas
+								province_id = 159	# Silistria
+								province_id = 1853	# Kozani
+								province_id = 2348	# Chios
+								province_id = 2410	# Theodoro
+								province_id = 2750	# Plovdiv
+								province_id = 4298	# Ayntab
+							}
+							NOT = { is_core = BYZ }
+						}
+						add_permanent_claim = BYZ
+					}					
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-			}
-			if = {
-				limit = { has_global_flag = hagia_sophia_now_mosque }
-				clr_global_flag = hagia_sophia_now_mosque
-				show_ambient_object = hagia_sophia
-				hide_ambient_object = hagia_sophia_minarets
-			}
-			set_government_rank = 3
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_byzantium_flag
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = BYZ_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}					
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-	
 }

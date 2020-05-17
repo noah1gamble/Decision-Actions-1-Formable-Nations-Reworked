@@ -16,23 +16,30 @@ country_decisions = {
 				tag = FIB
 				tag = IBE
 				tag = ANG
+				tag = KOJ
 			}
 			OR = {
 				culture_group = french
 				primary_culture = basque
 				primary_culture = breton
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}			
 		}
 		allow = {
+			adm_tech = 10
 			NOT = { exists = FRA }
-			is_at_war = no
 			is_subject = no
-			is_nomad = no
+			is_at_war = no
 			france_region = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 183 # Paris
 		}
 		effect = {
 			change_tag = FRA

@@ -1,5 +1,33 @@
 ### Formable Nations specific idea groups
 
+ADR_ideas = { # The Adriatic Empire
+	trigger = {
+		tag = ADR
+	}
+	free = yes	# will be added at load.
+	start = {
+
+	}
+	bonus = {
+		
+	}
+
+}
+
+ALG_ideas = { # Algiers
+	trigger = {
+		tag = ALG
+	}
+	free = yes	# will be added at load.
+	start = {
+
+	}
+	bonus = {
+		
+	}
+
+}
+
 AHE_ideas = { # The Austro-Hungarian Empire
 	trigger = {
 		tag = AHE
@@ -40,7 +68,6 @@ CIS_ideas = { # Cisalpina Republic
 		tag = AHE
 	}
 	free = yes	# will be added at load.
-
 	start = {
 		republican_tradition = 0.10 # Traditions of Republicanism
 		production_efficiency = 0.20 # Farm-Based Nation

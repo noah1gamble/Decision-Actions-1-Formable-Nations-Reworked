@@ -133,139 +133,164 @@ country_decisions = {
 					type = all
 					owned_by = ROOT
 				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = form_italian_empire_tt_1	
-					# Italian isles
-				owns_core_province = 1247
-				owns_core_province = 127
-				owns_core_province = 2986
-					# Albania
-				owns_core_province = 4174
-				owns_core_province = 143
-				owns_core_province = 4175
-					# Aegean Archipelago
-				owns_core_province = 320
-					# Crete
-				owns_core_province = 163
-					# Cyrenaica
-				owns_core_province = 356
-				owns_core_province = 357
-				owns_core_province = 2326
-				owns_core_province = 2325
-					# Triplitania
-				owns_core_province = 335
-				owns_core_province = 2451
-				owns_core_province = 354
-				owns_core_province = 2452
-					# Djerba
-				owns_core_province = 353
-				owns_core_province = 2453
-				owns_core_province = 2954
-					# Tunisia
-				owns_core_province = 2473
-				owns_core_province = 341
-				owns_core_province = 4566
-				owns_core_province = 2454
-				owns_core_province = 2455
-					# Fezzan
-				owns_core_province = 4567
-				owns_core_province = 2449
-				owns_core_province = 2448
-				owns_core_province = 2474
+				custom_trigger_tooltip = {
+					tooltip = form_italian_empire_tt_1	
+						# Italian isles
+					owns_core_province = 1247
+					owns_core_province = 127
+					owns_core_province = 2986
+						# Albania
+					owns_core_province = 4174
+					owns_core_province = 143
+					owns_core_province = 4175
+						# Aegean Archipelago
+					owns_core_province = 320
+						# Crete
+					owns_core_province = 163
+						# Cyrenaica
+					owns_core_province = 356
+					owns_core_province = 357
+					owns_core_province = 2326
+					owns_core_province = 2325
+						# Triplitania
+					owns_core_province = 335
+					owns_core_province = 2451
+					owns_core_province = 354
+					owns_core_province = 2452
+						# Djerba
+					owns_core_province = 353
+					owns_core_province = 2453
+					owns_core_province = 2954
+						# Tunisia
+					owns_core_province = 2473
+					owns_core_province = 341
+					owns_core_province = 4566
+					owns_core_province = 2454
+					owns_core_province = 2455
+						# Fezzan
+					owns_core_province = 4567
+					owns_core_province = 2449
+					owns_core_province = 2448
+					owns_core_province = 2474
+				}				
 			}
 		}
 		effect = {
-			change_tag = ITE
-			set_country_flag = formed_italian_empire_nation_flag
-			ITE = {
-				add_prestige = 10
-				add_legitimacy = 10
-				set_capital = 118 # Roma
-				118 = { # Roma
+			change_tag = ERO # Country TAG
+			set_country_flag = formed_emilia_romagna_flag # Country Formation Flag
+			custom_tooltip = form_emilia_romagna_tt_2 # New Missions
+			custom_tooltip = form_emilia_romagna_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			ERO = { # Capital change and bonuses				
+				set_capital = 1224 # Gonder
+				1224 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			ITE = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			ITE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = despotic_monarchy
 				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					venetia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 3
+						add_permanent_claim = ERO
+					}
+					lombardy_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ERO
+					}
+					emilia_romagna_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ERO
+					}					
+					liguria_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ERO
+					}
+					piedmont_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ERO
+					}
+					tuscany_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ERO
+					}					
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ITE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = ITE_ideas }
+						NOT = { has_idea_group = ERO_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}				
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400		
 	}
-
 }

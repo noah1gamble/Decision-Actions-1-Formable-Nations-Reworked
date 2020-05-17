@@ -1,13 +1,15 @@
 country_decisions = {
 
+	#####################################################
+	# The European Union through conquest as one nation #
+	#####################################################
+
 	europe_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			technology_group = western
-			religion_group = christian
 			NOT = {
 				has_country_flag = formed_europe_nation_flag
 				exists = EUR
@@ -27,19 +29,20 @@ country_decisions = {
 				tag = IBE
 				tag = FIB
 				tag = LSE
-			}
+			}	
+			OR = {
+				technology_group = western
+				religion_group = christian
+				culture_group = british
+				culture_group = germanic
+				culture_group = iberian
+			}					
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
 					num_of_cities = 30
 				}
-			}
-			OR = {
-				culture_group = british
-				culture_group = germanic
-				culture_group = iberian
 			}
 		}
 		provinces_to_highlight = {
@@ -107,86 +110,61 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = EUR
-			set_country_flag = formed_europe_nation_flag
-			EUR = {
-				add_prestige = 35
-				add_legitimacy = 30
-				add_stability = 2
-				add_inflation = 3
-				set_capital = 92 # Brabant
-				92 = {
-					add_base_tax = 5
-					add_base_production = 5
-					add_base_manpower = 5
-				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			EUR = {
+			change_tag = EUR # Country TAG
+			set_country_flag = formed_european_union_nation_flag # Country Formation Flag
+			custom_tooltip = form_european_union_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			EUR = { # Capital change and bonuses				
+				set_capital = 183 # Paris
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			EUR = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_republic # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
-					set_legacy_government = despotic_monarchy
+					}
+					set_legacy_government = federal_republic_legacy
 				}
+				add_government_reform = federal_republic
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
 							}
-						}
-					set_government_rank = 3
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = republic
+								}
+							}
+						change_government = republic
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			EUR = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -194,15 +172,39 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 50 # Not Important - too large a goal for AI to target
+		ai_importance = 400	
 	}
-
 }
+
+	######################################################
+	# The European Union through diplomacy as one nation #
+	######################################################
+
+	#####################################################################################
+	# The European Union through conquest as intergovernmental and supernational system #
+	# will release historical EU members and ROOT will become an OPM overlord           #
+	#####################################################################################
+
+	######################################################################################
+	# The European Union through diplomacy as intergovernmental and supernational system #
+	# will release historical EU members and ROOT will become an OPM overlord            #
+	######################################################################################
+
+	##################################################################
+	# 1951 Treaty of Paris - Event Chain that can lead to EU forming #
+	##################################################################
+
+	##############################
+	# Brexit... Yes, I'm serious #
+	##############################
+
