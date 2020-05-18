@@ -1,8 +1,8 @@
 country_decisions = {
 
-	#################################
-	# Jagiellonian Empire - General #
-	#################################
+	####################################################################
+	# Jagiellonian Empire - Union with Hungary, Bohemia, and Lithuania #
+	####################################################################
 
 	jagiellonian_empire_nation = {
 		major = yes
@@ -14,8 +14,53 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_jagiellon_empire_flag
 				exists = JGE
+				tag = PAP
+				tag = RUS
+				tag = HLR
+				tag = EUR
+				tag = TUR
 			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+				AND = {		
+					# Hungary
+				}
+				AND = {
+					# Bohemia
+					province_id = 263			
+					province_id = 4237			
+					province_id = 265			
+					province_id = 264			
+					province_id = 4238			
+					province_id = 2970			
+					province_id = 2966			
+					province_id = 60			
+					province_id = 1763			
+					province_id = 2968			
+					province_id = 266			
+					province_id = 1771			
+					province_id = 2967			
+					province_id = 267						
+				}	
+				AND = {
+					exists = LIT
+					junior_union_with = LIT
+					is_subject_of = LIT						
+				}
+			}
+			OR = {
+				NOT = { 
+					is_subject_of = ROOT 
+					junior_union_with = ROOT
+					NOT = {
+						exists = HUN
+						exists = BOH
+						exists = LIT
+					}
+				}
+			}
+		}		
 		allow = {
 			adm_tech = 15
 			NOT = { exists = JGE }
@@ -27,7 +72,7 @@ country_decisions = {
 					HUN = {
 						OR = {
 							junior_union_with = ROOT
-							vassal_of = ROOT
+							is_subject_of = ROOT # Changed from vassal to reduce limitation
 						}
 					}
 				}
@@ -36,7 +81,7 @@ country_decisions = {
 					BOH = {
 						OR = {
 							junior_union_with = ROOT
-							vassal_of = ROOT
+							is_subject_of = ROOT # Changed from vassal to reduce limitation
 						}
 					}
 				}
@@ -45,112 +90,90 @@ country_decisions = {
 					LIT = {
 						OR = {
 							junior_union_with = ROOT
-							vassal_of = ROOT
+							is_subject_of = ROOT # Changed from vassal to reduce limitation
 						}
 					}
 				}
 			}
 		}
 	 	effect = {
-			change_tag = JGE
-			set_country_flag = formed_jagiellon_empire_flag
-			if = {
-				limit = {
-					HUN = {
-						exists = yes
-						ai = yes
-					}
-				}
-				inherit = HUN
-			}
-			if = {
-				limit = {
-					BOH = {
-						exists = yes
-						ai = yes
-					}
-				}
-				inherit = BOH
-			}
-			if = {
-				limit = {
-					LIT = {
-						exists = yes
-						ai = yes
-					}
-				}
-				inherit = LIT
-			}
-			set_capital = 257 # Warszawa
-			JGE = {
-				257 = {
+			change_tag = JGE # Country TAG
+			set_country_flag = formed_jagiellon_empire_flag # Country Formation Flag
+			custom_tooltip = form_jagiellon_empire_tt_4 # New Missions
+			custom_tooltip = form_jagiellon_empire_tt_5 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank	
+			JGE = { # Capital change and bonuses				
+				set_capital = 134 # Wien
+				134 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_spacing
-			poland_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = monarchy_legacy
 				}
-				add_permanent_claim = JGE
-			}
-			ruthenia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			carpathia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			baltic_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				custom_tooltip = dec1_decisions_spacing
-				custom_tooltip = dec1_hre_province_removal
-				set_in_empire = no
-			}
-			hidden_effect = {
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
-						is_elector = no
 					}
-					every_owned_province = {
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					carpathia_region = {
 						limit = {
-							is_part_of_hre = yes
+							NOT = { owned_by = ROOT }
 						}
-						set_in_empire = no
+						add_permanent_claim = AEH
 					}
-				}
-			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				emperor = {
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
 					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				custom_tooltip = dec1_decisions_spacing
-			}
-			custom_tooltip = dec1_decisions_spacing
-			JGE = {
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = AEH_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}

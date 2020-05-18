@@ -110,8 +110,8 @@
  goguryeo_nation_title: "@GKR Restore the Goguryeo Kingdom"
  goguryeo_nation_desc: "Goguryeo, also called Goryeo, was a Korean kingdom located in the northern and central parts of the Korean Peninsula and the southern and central parts of Manchuria. At its peak of power, Goguryeo controlled most of the Korean peninsula, large parts of Manchuria and parts of the Russian Far East and eastern Mongolia." 
 
- hanse_nation_title: "@HNS The Hanseatic League"
- hanse_nation_desc: "The Hanseatic League was a commercial and defensive confederation of merchant guilds and market towns in Northwestern and Central Europe. Growing from a few North German towns in the late 1100s, the league came to dominate Baltic maritime trade for three centuries along the coasts of Northern Europe. Hansa territories stretched from the Baltic to the North Sea and inland during the Late Middle Ages."
+ hanseatic_league_nation_title: "@HNS The Hanseatic League"
+ hanseatic_league_nation_desc: "The Hanseatic League was a commercial and defensive confederation of merchant guilds and market towns in Northwestern and Central Europe. Growing from a few North German towns in the late 1100s, the league came to dominate Baltic maritime trade for three centuries along the coasts of Northern Europe. Hansa territories stretched from the Baltic to the North Sea and inland during the Late Middle Ages."
 
  hesse_nassau_nation_title: "@HEN Hesse-Nassau"
  hesse_nassau_nation_desc: "The Province of Hesse-Nassau was a province of the Kingdom of Prussia from 1868 to 1918, then a province of the Free State of Prussia until 1944."
@@ -328,5 +328,5 @@
  kingdom_of_god_nation_title: "@KOG The Kingdom of God"
  kingdom_of_god_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."
 
- gods_kingdom_title: "See of Rome"
+ gods_kingdom_title: "The Question of the Holy See"
  gods_kingdom_desc: "With Italy under Papal control and the Holy See at it's most uselessness, we must abolish it and declare ourselves the true messenger of God."

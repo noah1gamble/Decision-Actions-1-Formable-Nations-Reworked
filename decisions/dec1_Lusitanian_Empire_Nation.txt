@@ -3,7 +3,6 @@ country_decisions = {
 	lusitanian_empire_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -20,10 +19,9 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
 				AND = {
 					ai = yes
-					num_of_cities = 8
+					num_of_cities = 8 # Should prob be higher,needs testing with AI handling empires
 				}
 			}
 		}
@@ -283,89 +281,66 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = LSE
-			set_country_flag = formed_lusitanian_empire_nation_flag
-			LSE = {
-				add_prestige = 10
-				add_legitimacy = 35
-				set_capital = 227 # Lisboa
-				227 = {
-					add_base_tax = 4
+			change_tag = LSE # Country TAG
+			set_country_flag = formed_lusitanian_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_lusitanian_empire_nation_tt_6 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			LSE = { # Capital change and bonuses				
+				set_capital = 141 # Serbia
+				141 = {
+					add_base_tax = 1
 					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			iberia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = LSE
-			}
-			custom_tooltip = dec1_decisions_blank
-			LSE = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			LSE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
+					}
 					set_legacy_government = despotic_monarchy
 				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 3
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
 							}
-						}
-					set_government_rank = 3
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			LSE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -373,12 +348,12 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
-			# The Feitorias Crisis
-			
+			}					
 		}
 		ai_will_do = {
 			factor = 1

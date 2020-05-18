@@ -68,93 +68,91 @@ country_decisions = {
 			owns_core_province = 2128
 		}
 	 	effect = {
-			change_tag = HIM
-			set_country_flag = formed_himalayan_empire_nation_flag
-			HIM = {
-				add_prestige = 15			
+			change_tag = HIM # Country TAG
+			set_country_flag = formed_himalayan_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_himalayan_empire_tt_2 # New Missions
+			custom_tooltip = form_himalayan_empire_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			HIM = { # Capital change and bonuses				
 				set_capital = 2128 # Ngari
-				2128 = { 
-					add_base_tax = 3
+				2128 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			HIM = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-			}
-			hidden_effect = { 
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			HIM = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+						NOT = {
 							has_dlc = "Dharma"
-							}	
 						}
+					}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 3 
-							}
-						}
-					set_government_rank = 3
-				}				
+				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			HIM = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Claims
+					tibet_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = HIM
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = HIM_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}
+				}
+			}					
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-
 }

@@ -19,10 +19,10 @@ country_decisions = {
 				tag = TRP
 			}
 			OR ={
-			primary_culture = algerian
-			primary_culture = berber
-			primary_culture = moroccan
-			primary_culture = tunisian
+				primary_culture = algerian
+				primary_culture = berber
+				primary_culture = moroccan
+				primary_culture = tunisian
 			}
 			OR = {
 				ai = no

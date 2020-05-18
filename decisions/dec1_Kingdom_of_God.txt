@@ -4,7 +4,7 @@ country_decisions = {
 	# Gods Kingdom - Pope Disables the Papacy upon conquering Italy #
 	#################################################################
 
-	gods_kingdom = {
+	the_question_of_the_holy_see = { # Renamed from God's Kingdom to The Question of the Holy See
 		major = yes
 		potential = {
 			is_former_colonial_nation = no

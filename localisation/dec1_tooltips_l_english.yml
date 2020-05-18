@@ -297,13 +297,34 @@
 
  form_emilia_romagna_tt_2: "Country obtains §YEmilia-Romagna§! missions."
  form_emilia_romagna_tt_3: "Country gains a permanent claim on §YNorth Italian§! areas."
- 
+
+ form_goguryeo_tt_2: "Country obtains §YGoguryeo§! missions."
+ form_goguryeo_tt_3: "Country gains a permanent claim on §YKorea§! region."
+ form_goguryeo_tt_4: "Country gains a permanent claim on §YManchuria§! region."
+
+ form_saudi_arabia_tt_1: "Owns core §YSaudi§! provinces"
+ form_saudi_arabia_tt_2: "Country obtains §YSaudi Arabia§! missions."
+ form_saudi_arabia_tt_3: "Country gains a permanent claim on §YArabia§! region."
+
+ form_swabia_tt_2: "Country obtains §YSwabia§! missions."
+
+ form_czechoslovakia_tt_2: "Country obtains §YCzechoslovakia§! missions."
+
+ form_franconia_tt_2: "Country obtains §YFranconia§! missions."
+
+ form_himalayan_empire_tt_2: "Country obtains §YHimlayan Empire§! missions."
+ form_himalayan_empire_tt_3: "Country gains a permanent claim on §YTibet§! region."
+
+ form_lombardy_venetia_tt_2: "Country obtains §YLombardy-Venetia§! missions."
+ form_lombardy_venetia_tt_3: "Country gains a permanent claim on §YEmilia-Romagna§! area."
+
  #############################
  # GOVERNMENT RANKS TOOLTIPS #
  #############################
 
  dec1_government_change_monarchy: "The type of Government changes to §YMonarchy§!."
  dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
+ dec1_government_change_prussian_monarchy: "The type of Government changes to §YPrussian Monarchy§!."
  dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
  dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
  dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
@@ -320,7 +341,7 @@
  form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §Yall Historical Golden Horde§! territory."
 
  ########################
- # SPACING LOCALISATION #
+ # SPACING LOCALI1TION #
  ########################
 
  dec1_decisions_spacing: "\n"

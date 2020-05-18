@@ -9,7 +9,6 @@ country_decisions = {
 		potential = {
 			NOT = {
 				has_country_flag = formed_east_prussia_nation_flag
-				has_reform = celestial_empire
 				exists = EPR
 				tag = PAP
 				tag = EPR
@@ -29,12 +28,6 @@ country_decisions = {
 				AND = {
 					ai = yes
 					num_of_cities = 6
-				}
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
 					is_religion_enabled = protestant
 					is_religion_enabled = reformed
 				}
@@ -63,7 +56,9 @@ country_decisions = {
 			is_subject = no
 			is_nomad = no
 			is_emperor = no 
-			NOT = { government = theocracy }
+			NOT = { 
+				government = theocracy 
+			}
 			custom_trigger_tooltip = {
 				tooltip = form_east_prussia_nation_tt_1
 				owns_core_province = 41
@@ -77,66 +72,55 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = EPR
-			set_country_flag = formed_east_prussia_nation_flag
-			custom_tooltip = form_east_prussia_nation_tt_2
-			hidden_effect = {
-				swap_non_generic_missions = yes
-			}
-			custom_tooltip = form_east_prussia_nation_tt_3
-			hidden_effect = {
-				baltic_region = {
-					limit = {
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = EPR
-				}
-			}		
-			custom_tooltip = dec1_decisions_blank			
-			EPR = {
+			change_tag = EPR # Country TAG
+			set_country_flag = formed_east_prussia_nation_flag # Country Formation Flag
+			custom_tooltip = form_east_prussia_tt_2 # New Missions
+			custom_tooltip = form_east_prussia_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			EPR = { # Capital change and bonuses				
 				set_capital = 41 # Konigsberg
 				41 = {
-					add_base_tax = 2
+					add_base_tax = 1
 					add_base_production = 1
-					add_base_manpower = 4
+					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			EPR = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
+					custom_tooltip = dec1_government_change_prussian_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
+						NOT = {
+							has_dlc = "Dharma"
 						}
 					}
-					custom_tooltip = dec1_decisions_blank
+					set_legacy_government = prussian_monarchy_legacy
 				}
-				hidden_effect = {
-					if = {
+				add_government_reform = prussian_monarchy
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Claims
+					baltic_region = {
 						limit = {
-							is_part_of_hre = yes
-							is_elector = no
+							NOT = { owned_by = ROOT }
 						}
-						every_owned_province = {
-							limit = {
-								is_part_of_hre = yes
-							}
-							set_in_empire = no
-						}
-						remove_non_electors_emperors_from_empire_effect = yes
+						add_permanent_claim = EPR
 					}
+					# Government Rank change				
 					if = {
 						limit = {
 							NOT = {
@@ -144,30 +128,18 @@ country_decisions = {
 								}
 							}
 						set_government_rank = 2
-					}					
-				}				
-			}
-			EPR = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
 							}
-						}
-					change_government = monarchy
+						change_government = monarchy
+					}																		
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = prussian_monarchy_legacy
-				}
-				add_government_reform = prussian_monarchy
-			}
-			custom_tooltip = dec1_decisions_blank
-			EPR = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -175,15 +147,16 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-
 }

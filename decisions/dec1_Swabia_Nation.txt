@@ -3,7 +3,6 @@ country_decisions = {
 	swabia_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -17,10 +16,17 @@ country_decisions = {
 				tag = SWI
 				tag = EUR
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 1
+				}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 70 # W�rttemberg
+				province_id = 70 # Wurttemberg
 				province_id = 1868 # Augsburg
 				province_id = 1872 # Ulm
 				province_id = 74 # Baden
@@ -41,7 +47,7 @@ country_decisions = {
 			NOT = { exists = SWB }
 			is_subject = no
 			is_at_war = no		
-			owns_core_province = 70 # W�rttemberg
+			owns_core_province = 70 # Wurttemberg
 			owns_core_province = 1868 # Augsburg
 			owns_core_province = 1872 # Ulm
 			owns_core_province = 74 # Baden
@@ -50,108 +56,86 @@ country_decisions = {
 			owns_core_province = 72 # Breisgau
 			owns_core_province = 68 # Memmingen
 			owns_core_province = 1870 # St Gallen
-			owns_core_province = 1869 # Z�rich
+			owns_core_province = 1869 # Zurich
 		}
 	 	effect = {
-			change_tag = SWB
-			set_country_flag = formed_swabia_flag
-			SWB = {				
-				add_prestige = 30
+			change_tag = SWB # Country TAG
+			set_country_flag = formed_swabia_flag # Country Formation Flag
+			custom_tooltip = form_swabia_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			SWB = { # Capital change and bonuses				
 				set_capital = 1868 # Augsburg
 				1868 = {
-					add_base_tax = 5
-					add_base_production = 5
-					add_base_manpower = 5
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = swabian }
-				}
-				change_primary_culture = swabian
-			}			
-			custom_tooltip = dec1_decisions_blank
-			SWB = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-			}
-			hidden_effect = { 
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			SWB = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+						NOT = {
 							has_dlc = "Dharma"
-							}	
 						}
+					}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 1 
-							}
-						}
-					set_government_rank = 1
-				}				
+				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			SWB = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = SWB_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}			
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400	
+		ai_importance = 400
 	}
-
 }

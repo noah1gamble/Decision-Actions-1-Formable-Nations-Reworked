@@ -3,13 +3,12 @@ country_decisions = {
 	frieslande_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			primary_culture = dutch
 			NOT = { 
-				has_country_flag = formed_frieslande_nation_flag
+				has_country_flag = formed_magna_frisia_nation_flag
 				tag = PAP 
 				tag = RHE
 				tag = NED
@@ -29,9 +28,19 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 100 # Friesland
-				province_id = 1931 # Ostfriesland
-				province_id = 99 # Gelre				
+					# Frisian Realm Cores - https://en.wikipedia.org/wiki/Frisian_Kingdom
+				province_id = 54
+				province_id = 1874
+				province_id = 55
+				province_id = 4382
+				province_id = 4383
+				province_id = 96
+				province_id = 97
+				province_id = 100
+				province_id = 1931
+				province_id = 99
+				province_id = 1865
+				province_id = 90							
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -39,123 +48,116 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 5
+			adm_tech = 10
+			NOT = { exists = FRL }
 			is_subject = no
 			is_at_war = no
-			NOT = { exists = FRL }
-			owns_core_province = 100 # Friesland
-			owns_core_province = 1931 # Ostfriesland
-			owns_core_province = 99 # Gelre
+				# Frisian Realm Cores - https://en.wikipedia.org/wiki/Frisian_Kingdom
+			owns_core_province = 54
+			owns_core_province = 1874
+			owns_core_province = 55
+			owns_core_province = 4382
+			owns_core_province = 4383
+			owns_core_province = 96
+			owns_core_province = 97
+			owns_core_province = 100
+			owns_core_province = 1931
+			owns_core_province = 99
+			owns_core_province = 1865
+			owns_core_province = 90
 		}
 	 	effect = {
-			change_tag = FRL
-			set_country_flag = formed_frieslande_nation_flag			
-			FRL = {
-				add_prestige = 25
-				add_legitimacy = 10
-				add_stability = 1
-				add_inflation = 1	
+			change_tag = FRL # Country TAG
+			set_country_flag = formed_magna_frisia_nation_flag # Country Formation Flag
+			custom_tooltip = form_magna_frisia_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			FRL = { # Capital change and bonuses				
 				set_capital = 100 # Friesland
-				100 = { 
-					add_base_tax = 3
-					add_base_production = 3
-					add_base_manpower = 3
+				141 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}	
-			if = {
-				limit = {
-					NOT = { primary_culture = dutch }
-				}
-				change_primary_culture = dutch
-			}			
-			low_countries_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = FRL
-			}
-			custom_tooltip = dec1_decisions_blank
-			FRL = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-			}
-			hidden_effect = { 
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			FRL = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
+						NOT = {
 							has_dlc = "Dharma"
-							}	
 						}
+					}
 					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}				
+				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			FRL = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions	
+					# Culture
+					if = {
+						limit = {
+							NOT = { primary_culture = dutch }
+						}
+						change_primary_culture = dutch
+					}		
+					# Claims
+					low_countries_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = FRL
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = FRL_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400	
+		ai_importance = 400
 	}
-
 }

@@ -18,7 +18,12 @@ country_decisions = {
 				tag = HLR
 				tag = TUR
 				tag = EUR
-			}			
+			}	
+			OR = {
+				primary_culture = austrian
+				primary_culture = hungarian
+				primary_culture = czech
+			}					
 			OR = {
 				ai = no
 				AND = {
@@ -26,11 +31,6 @@ country_decisions = {
 					num_of_cities = 8
 				}
 			}		
-			OR = {
-				primary_culture = austrian
-				primary_culture = hungarian
-				primary_culture = czech
-			}
 		}
 		provinces_to_highlight = {
 			OR = {	

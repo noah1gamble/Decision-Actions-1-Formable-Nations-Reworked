@@ -71,11 +71,13 @@ country_decisions = {
 			adm_tech = 15
 			NOT = { exists = GEP }
 			is_at_war = no
-			is_emperor = no
-			NOT = { government = theocracy }
+			NOT = { 
+				is_emperor = yes
+				government = theocracy 
+			}
 			owns_core_province = 50 # Berlin
 			custom_trigger_tooltip = { # North
-				tooltip = form_germany_tt_1
+				tooltip = form_german_empire_nation_tt_1
 				east_prussia_area = {
 					type = all
 					owned_by = ROOT
@@ -148,11 +150,6 @@ country_decisions = {
 					type = all
 					owned_by = ROOT
 				}
-				owns_core_province = 1763
-				owns_core_province = 1931
-			}
-			custom_trigger_tooltip = { # South
-				tooltip = form_germany_tt_1
 				palatinate_area = {
 					type = all
 					owned_by = ROOT
@@ -177,6 +174,8 @@ country_decisions = {
 					type = all
 					owned_by = ROOT
 				}
+				owns_core_province = 1763
+				owns_core_province = 1931
 				owns_core_province = 188
 				owns_core_province = 189
 				owns_core_province = 2955
@@ -185,8 +184,8 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GEP # Country TAG
-			set_country_flag = formed_germany_nation_flag # Country Formation Flag
-			custom_tooltip = form_germany_tt_2 # New Missions
+			set_country_flag = formed_german_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_german_empire_nation_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank
 			GEP = { # Capital change and bonuses				
 				set_capital = 50 # Berlin
@@ -196,7 +195,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -228,10 +227,10 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 2
+								government_rank = 3
 								}
 							}
-						set_government_rank = 2
+						set_government_rank = 3
 					}
 					# Government Type Change
 					if = {

@@ -7,13 +7,12 @@ country_decisions = {
 	sweden_norway_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no			
 			NOT = { 
 				has_country_flag = formed_sweden_norway_nation_flag
-				exists SNO
+				exists = SNO
 				tag = SNO
 				tag = PAP
 				tag = SCA
@@ -24,7 +23,7 @@ country_decisions = {
 			OR = {
 				primary_culture = swedish
 				primary_culture = norwegian
-				}
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -33,18 +32,30 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {	
+					# Denmark
+				province_id = 6
+				province_id = 4165
+				province_id = 4165
+				province_id = 1982
+					# Sweden
+
+					# Norway
+				province_id = 134
+
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}			
 		allow = {
-			adm_tech = 5
+			adm_tech = 10
 			NOT = { exists = SNO }
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 1 # Stockholm
-			owns_core_province = 2 # Östergötland
-			owns_core_province = 3 # Småland
-			owns_core_province = 5 # Värmland
-			owns_core_province = 17 # Akershus
-			owns_core_province = 18 # Lappland
-			owns_core_province = 23 # Bergenshus
+
 		}
 	 	effect = {
 			change_tag = SNO
