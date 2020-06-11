@@ -22,7 +22,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 8
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
 			}
 		}
 		provinces_to_highlight = {

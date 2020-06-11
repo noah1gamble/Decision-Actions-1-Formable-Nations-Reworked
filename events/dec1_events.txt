@@ -70,7 +70,7 @@ country_event = {
 	#		who = emperor
 	#		casus_belli = cb_depose_emperor
 	#	}		
-	}
+	#}
 
 	# Our Place in the Empire - Nation stayed in the Empire
 	country_event = {

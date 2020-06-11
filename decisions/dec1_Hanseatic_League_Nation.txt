@@ -193,5 +193,4 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
 }

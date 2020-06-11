@@ -31,7 +31,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 11 # Unique req - balances some stuff
+					num_of_cities = 11 # rebalanced
 				}
 			}				
 		}

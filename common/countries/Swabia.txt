@@ -1,7 +1,7 @@
 #Swabia
 graphical_culture = westerngfx
 
-color = { 255  0  0 }
+color = { 204 204  0 }
 
 historical_idea_groups = {
 	trade_ideas
@@ -72,7 +72,7 @@ leader_names = {
 	"Schappeler"
 	"Zangmeister"
 	"Schenck"
-	"Vöhlin"
+	"Vï¿½hlin"
 	"Schulthaiss"
 	"Imhoff"
 }
@@ -83,7 +83,7 @@ army_names = {
 
 ship_names = {
 	"St. Sebaldus" Memmingen  "St. Kilian" "Tassilo III"
-	"König Arnulf" "Graf von Bogen" "Graf von Andechs"
+	"Kï¿½nig Arnulf" "Graf von Bogen" "Graf von Andechs"
 	"Graf von Sulzbach" Wittelsbach "Graf von Diepolding"
 	Otto
 	Augsburg Andechs Burgau Diessen Friedberg Kempten Lindau

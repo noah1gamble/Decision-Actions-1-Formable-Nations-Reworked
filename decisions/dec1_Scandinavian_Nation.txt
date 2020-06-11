@@ -11,6 +11,8 @@ country_decisions = {
 				has_country_flag = formed_scandinavia_flag 
 				exists = SCA
 				tag = PAP
+				tag = PRU
+				tag = GER
 				tag = HLR
 			}
 			OR = {
@@ -43,8 +45,8 @@ country_decisions = {
 			custom_tooltip = form_scandinavia_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank	
 			SCA = { # Capital change and bonuses				
-				set_capital = 217 # Madrid
-				217 = {
+				set_capital = 1 # Stockholm
+				1 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -118,12 +120,11 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}					
+			}				
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-	
 }

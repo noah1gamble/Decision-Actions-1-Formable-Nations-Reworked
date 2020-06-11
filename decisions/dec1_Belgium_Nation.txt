@@ -50,18 +50,16 @@ country_decisions = {
 			adm_tech = 10
 			NOT = { exists = BEL }
 			is_subject = no
-			is_at_war = no
-			ROOT = {
-					# Flanders
-				owns_core_province = 90 # Vlaanderen
-				owns_core_province = 1865 # Ghent
-				owns_core_province = 1744 # Antwerpen
-					# Wallonia (- Luxemburg)
-				owns_core_province = 92 # Brussels
-				owns_core_province = 91 # Hainaut
-				owns_core_province = 1866 # Namur
-				owns_core_province = 93 # Liege
-			}               
+			is_at_war = n
+				# Flanders
+			owns_core_province = 90 # Vlaanderen
+			owns_core_province = 1865 # Ghent
+			owns_core_province = 1744 # Antwerpen
+				# Wallonia (- Luxemburg)
+			owns_core_province = 92 # Brussels
+			owns_core_province = 91 # Hainaut
+			owns_core_province = 1866 # Namur
+			owns_core_province = 93 # Liege             
 		}
 	 	effect = {
 			change_tag = BEL # Country TAG

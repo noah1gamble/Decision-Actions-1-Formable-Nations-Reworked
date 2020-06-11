@@ -46,31 +46,14 @@ country_decisions = {
 		effect = {
 			change_tag = JAP # Country TAG
 			set_country_flag = formed_japanese_nation_flag_shogun # Country Formation Flag
-			custom_tooltip = form_japan_tt_2 # New Missions
-			custom_tooltip = form_japan_tt_4 # Japan core loss on Daimyos
-			custom_tooltip = form_japan_tt_5 # Daimyo Government Reforms
-			hidden_effect = { # The Dissolution of the Daimyo System
-				every_subject_country = {
-					limit = {
-						has_reform = daimyo
-					}
-					ROOT = {
-						free_vassal = PREV
-					}
-					remove_government_reform = daimyo
-					set_legacy_government = despotic_monarchy
-					every_owned_province = {
-						remove_core = JAP
-					}
-				}
-			}			
+			custom_tooltip = form_japan_tt_2 # New Missions			
 			custom_tooltip = dec1_decisions_blank		
 			JAP = { # Capital change and bonuses				
 				set_capital = 1020 # 
 				1020 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
 				}
 				custom_tooltip = dec1_decisions_blank				
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
@@ -176,9 +159,6 @@ country_decisions = {
 			OR = {
 				area = kinai_area
 				area = hokuriku_area
-				area = western_chubu_area
-				area = eastern_chubu_area
-				area = western_kanto_area
 			}
 			AND = {
 				NOT = { owned_by = ROOT }
@@ -199,9 +179,6 @@ country_decisions = {
 				tooltip = form_japan_tt_6 # Core Japanese areas
 				area = kinai_area
 				area = hokuriku_area
-				area = western_chubu_area
-				area = eastern_chubu_area
-				area = western_kanto_area
 			}
 		}
 		effect = {
@@ -338,11 +315,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = kinai_area
 				area = hokuriku_area
-				area = western_chubu_area
-				area = eastern_chubu_area
-				area = western_kanto_area
+				area = chubu_area
 			}
 			AND = {
 				NOT = { owned_by = ROOT }
@@ -356,16 +330,12 @@ country_decisions = {
 				ROOT = {
 					num_of_cities = 12 # must be at LEAST 12 provinces.. might change later.
 				}
-			}			
-			owns = 1020 # Kyoto
-			owns = 1028
+			}
+			owns = 1028 # Mushashi
 			custom_trigger_tooltip = {
 				tooltip = form_japan_tt_6 # Core Japanese areas
-				area = kinai_area
 				area = hokuriku_area
-				area = western_chubu_area
-				area = eastern_chubu_area
-				area = western_kanto_area
+				area = chubu_area
 			}
 		}
 		effect = {
@@ -374,8 +344,8 @@ country_decisions = {
 			custom_tooltip = form_japan_tt_2 # New Missions			
 			custom_tooltip = dec1_decisions_blank		
 			JAP = { # Capital change and bonuses				
-				set_capital = 1020 # Kyoto
-				1020 = {
+				set_capital = 1028 # Mushashi
+				1028 = { 
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1

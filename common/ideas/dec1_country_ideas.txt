@@ -1,33 +1,5 @@
 ### Formable Nations specific idea groups
 
-ADR_ideas = { # The Adriatic Empire
-	trigger = {
-		tag = ADR
-	}
-	free = yes	# will be added at load.
-	start = {
-
-	}
-	bonus = {
-		
-	}
-
-}
-
-ALG_ideas = { # Algiers
-	trigger = {
-		tag = ALG
-	}
-	free = yes	# will be added at load.
-	start = {
-
-	}
-	bonus = {
-		
-	}
-
-}
-
 AHE_ideas = { # The Austro-Hungarian Empire
 	trigger = {
 		tag = AHE
@@ -136,4 +108,44 @@ LSE_ideas = { # Lusitanian Empire
 	open_up_the_guilds = {
 		trade_efficiency = 0.2
 	}
+}
+
+YUG_ideas = { 
+	start = {
+		trade_range_modifier = 0.35
+		trade_efficiency = 0.50
+	}
+
+	bonus = {
+		global_tariffs = 0.25
+	}
+
+	trigger = {
+		tag = LSE
+	}
+	free = yes		#will be added at load.
+
+	legacy_of_the_navigator = {
+		range = 0.30
+		global_sailors_modifier = 0.30
+	}
+	afonsine_ordinances = {
+		global_trade_goods_size_modifier = 0.2
+	}
+	case_de_india = {
+		global_trade_power = 0.2
+	}
+	the_bandeirantes = {
+		merchants = 2
+	}
+	royal_absolutism = {
+		build_cost = -0.20
+		yearly_absolutism = 0.2
+	}
+	land_before_faith = {
+		global_colonial_growth = 25
+	}
+	open_up_the_guilds = {
+		trade_efficiency = 0.2
+	}	
 }

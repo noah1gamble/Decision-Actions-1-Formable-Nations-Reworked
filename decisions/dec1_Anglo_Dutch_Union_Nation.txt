@@ -1,0 +1,252 @@
+country_decisions = {
+
+	#######################################################################
+	# Anglo-Dutch Union - As English Nation with Dutch nation under Union #
+	#######################################################################
+
+	anglo_dutch_union_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no		
+			NOT = {
+				has_country_flag = formed_anglo_dutch_union_nation_flag
+				exists = AGU
+				tag = AGU
+				tag = PAP
+				tag = FRA
+				tag = EUR
+			}
+			OR = {
+				tag = ENG
+				tag = GBR
+				tag = UKI
+
+			}				
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# London
+				province_id = 235
+				province_id = 236
+				province_id = 237
+				province_id = 4371
+					# East Anglia
+				province_id = 4370
+				province_id = 1860
+				province_id = 238
+					# Wessex
+				province_id = 233
+				province_id = 234
+				province_id = 4130
+				province_id = 4374
+				province_id = 4373
+					# Wales
+				province_id = 241
+				province_id = 4369
+					# West Midlands
+				province_id = 4372
+				province_id = 239
+				province_id = 240
+				province_id = 4375
+				province_id = 244
+					# Yorkshire
+				province_id = 245
+				province_id = 4367
+				province_id = 4368
+					# Flanders
+				province_id = 90
+				province_id = 1865
+				province_id = 1744
+					# Wallonia
+				province_id = 92
+				province_id = 91
+				province_id = 1866
+				province_id = 93
+				province_id = 94
+					# Holland
+				province_id = 96
+				province_id = 4383
+				province_id = 97
+					# Netherlands
+				province_id = 2974
+				province_id = 1742
+				province_id = 95
+				province_id = 99
+					# Frisia
+				province_id = 4381
+				province_id = 100
+				province_id = 4382
+				province_id = 1931				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = AGU }
+			is_subject = no
+			is_at_war = no
+			is_lesser_in_union = no # Unique req, cannot be under a personal union
+			custom_trigger_tooltip = {
+				tooltip = form_anglo_dutch_union_tt_1
+					# London
+				owns_core_province = 235
+				owns_core_province = 236
+				owns_core_province = 237
+				owns_core_province = 4371
+					# East Anglia
+				owns_core_province = 4370
+				owns_core_province = 1860
+				owns_core_province = 238
+					# Wessex
+				owns_core_province = 233
+				owns_core_province = 234
+				owns_core_province = 4130
+				owns_core_province = 4374
+				owns_core_province = 4373
+					# Wales
+				owns_core_province = 241
+				owns_core_province = 4369
+					# West Midlands
+				owns_core_province = 4372
+				owns_core_province = 239
+				owns_core_province = 240
+				owns_core_province = 4375
+				owns_core_province = 244
+					# Yorkshire
+				owns_core_province = 245
+				owns_core_province = 4367
+				owns_core_province = 4368
+					# Flanders
+				owns_core_province = 90
+				owns_core_province = 1865
+				owns_core_province = 1744
+					# Wallonia
+				owns_core_province = 92
+				owns_core_province = 91
+				owns_core_province = 1866
+				owns_core_province = 93
+				owns_core_province = 94
+					# Holland
+				owns_core_province = 96
+				owns_core_province = 4383
+				owns_core_province = 97
+					# Netherlands
+				owns_core_province = 2974
+				owns_core_province = 1742
+				owns_core_province = 95
+				owns_core_province = 99
+					# Frisia
+				owns_core_province = 4381
+				owns_core_province = 100
+				owns_core_province = 4382
+				owns_core_province = 1931
+			}
+		}
+	 	effect = {
+			change_tag = AGU # Country TAG
+			set_country_flag = formed_anglo_dutch_union_nation_flag # Country Formation Flag
+			custom_tooltip = form_anglo_dutch_union_tt_2 # New Missions
+			custom_tooltip = form_anglo_dutch_union_tt_3 # Region/Area Claims			
+			custom_tooltip = form_anglo_dutch_union_tt_4 # Region/Area Claims			
+			custom_tooltip = dec1_decisions_blank	
+			AGU = { # Capital change and bonuses				
+				set_capital = 236
+				236 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Dharma"
+						}
+					}
+					set_legacy_government = despotic_monarchy
+				}
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					british_isles_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = AGU
+					}
+					low_countries_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = AGU
+					}	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = AGU_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

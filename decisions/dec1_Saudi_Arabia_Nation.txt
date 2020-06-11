@@ -1,13 +1,12 @@
 country_decisions = {
 
-	###################################################################
+	################################################
 	# Kingdom of Saudi Arabia - Culture (Arabian ) #
-	###################################################################
+	################################################
 
 	saudi_nation = {
 		major = yes
 		potential = {
-		
 		is_former_colonial_nation = no
 		is_playing_custom_nation = no
 		is_colonial_nation = no

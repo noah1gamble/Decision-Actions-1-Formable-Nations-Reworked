@@ -39,11 +39,34 @@ country_decisions = {
 				province_id = 4165
 				province_id = 4165
 				province_id = 1982
+				province_id = 26
 					# Sweden
-
+				province_id = 3
+				province_id = 2
+				province_id = 7
+				province_id = 4164
+				province_id = 4163
+				province_id = 4166
+				province_id = 2
+				province_id = 4
+				province_id = 5
+				province_id = 1985
+				province_id = 8
+				province_id = 9
 					# Norway
 				province_id = 134
-
+				province_id = 16
+				province_id = 4143
+				province_id = 17
+				province_id = 4144
+				province_id = 4145
+				province_id = 24
+				province_id = 23
+				province_id = 2752
+				province_id = 20
+				province_id = 22
+				province_id = 10
+				province_id = 21
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -55,7 +78,42 @@ country_decisions = {
 			NOT = { exists = SNO }
 			is_subject = no
 			is_at_war = no
-
+			custom_trigger_tooltip = {
+				tooltip = formed_sweden_norway_tt_1
+					# Denmark
+				owns_core_province = 6
+				owns_core_province = 4165
+				owns_core_province = 4165
+				owns_core_province = 1982
+				owns_core_province = 26
+					# Sweden
+				owns_core_province = 3
+				owns_core_province = 2
+				owns_core_province = 7
+				owns_core_province = 4164
+				owns_core_province = 4163
+				owns_core_province = 4166
+				owns_core_province = 2
+				owns_core_province = 4
+				owns_core_province = 5
+				owns_core_province = 1985
+				owns_core_province = 8
+				owns_core_province = 9
+					# Norway
+				owns_core_province = 134
+				owns_core_province = 16
+				owns_core_province = 4143
+				owns_core_province = 17
+				owns_core_province = 4144
+				owns_core_province = 4145
+				owns_core_province = 24
+				owns_core_province = 23
+				owns_core_province = 2752
+				owns_core_province = 20
+				owns_core_province = 22
+				owns_core_province = 10
+				owns_core_province = 21
+			}
 		}
 	 	effect = {
 			change_tag = SNO

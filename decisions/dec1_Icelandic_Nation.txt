@@ -1,4 +1,4 @@
--------------------------------------country_decisions = {
+country_decisions = {
 
 	icelandic_nation = {
 		major = yes
@@ -11,13 +11,15 @@
 			NOT = { 
 				has_country_flag = formed_iceland
 				exists = ICE
+				tag = DAN
+				tag = NOR
+				tag = SWE
 				tag = HLR 
 				tag = ROM
 				tag = PAP
 				tag = TUR
 				tag = BYZ
 			}
-
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -30,6 +32,10 @@
 			}
 		}
 		allow = {
+			adm_tech = 10
+			NOT = { exists = ICE }
+			is_subject = no
+			is_at_war = no
 			owns_core_province = 370
 			owns_core_province = 371
 		}
@@ -111,6 +117,6 @@
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 200		
+		ai_importance = 1		
 	}
 }

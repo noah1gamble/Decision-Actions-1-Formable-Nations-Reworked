@@ -17,8 +17,6 @@ country_decisions = {
 			}
 			OR = {
 				culture_group = altaic
-				culture_group = evenki
-				culture_group = chinese
 				culture_group = tibetan
 			}
 			OR = {

@@ -24,6 +24,9 @@
  angevin_empire_nation_france_title: "@ANG The Angevin Empire"
  angevin_empire_nation_france_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
+ anglo_dutch_union_nation_title: "@AGU The Anglo-Dutch Union"
+ anglo_dutch_union_nation_desc: "William III of England who originally ruled as Stadtholder of Holland, Zeeland, Utrecht, Guelders and Overijssel in the Dutch Republic from the 1670s; Began a rulership of England on 11th of April, 1689 until his death and was a soverign ruler of England born of Dutch culture."
+
  arab_empire_nation_title: "@ARB Arabian Empire"
  arab_empire_nation_desc: "For hundreds of years the Arabs have been divided, but we remember when the prophet muhammed, peace be upon him, organized all of us into one ummah, a community of the faithful that transcended tribal affiliation. Today we have overcome disunity and regained the oneness that trumphed in the day of the Prophet and united Arabia!"
 
@@ -73,7 +76,7 @@
  celtic_union_nation_desc: "Celticism is a political, social and cultural movement advocating solidarity and cooperation between Celtic nations; through conquest we are able to unite our people under one nation!"
 
  china_PRC_nation_title: "@PRC Proclaim the People's Republic of China"
- china_PRC_nation_desc: "At exactly 3:00pm Beijing Time on the 1st of October 1949, Chairman Mao Zedong pronounced to the nation from the top of the Tiananmen Gate:\n\n  Dear comrades! Today, I hereby declare the formal establishment of the People's Republic of China and its Central People's Government!\n\nAfter the national anthem had been played, Chairman Mao proclaimed the founding of the People's Republic of China that day on top of the Tiananmen Gate."
+ china_PRC_nation_desc: "At exactly 3:00pm Beijing Time on the 1st of October 1949, Chairman Mao Zedong pronounced to the nation from the top of the Tiananmen Gate:\n\nDear comrades! Today, I hereby declare the formal establishment of the People's Republic of China and its Central People's Government!\n\nAfter the national anthem had been played, Chairman Mao proclaimed the founding of the People's Republic of China that day on top of the Tiananmen Gate."
 
  china_nation_title: "@CHN The Republic of China"
  china_nation_desc: "The last days of the Qing dynasty in the late 19th and early 20th centuries were marked by civil unrest and foreign invasions. Various internal rebellions caused millions of deaths, and conflicts with foreign Western European powers almost always resulted in humiliating unequal treaties that exacted costly reparations and compromised the country's territorial integrity. In addition, there were sentiments that political power should return to the majority Han Chinese from the minority Manchus from the northeastern province of Manchuria." 
@@ -90,6 +93,9 @@
  emilia_romagna_nation_title: "@ERO Emilia-Romagna"
  emilia_romagna_nation_desc: "Emilia-Romagna is one of the wealthiest and most developed regions in Europe, unifying it as one kingdom will allow us to conquer many foes." 
 
+ empire_of_japan_nation_title: "@JAE The Empire of Japan"
+ empire_of_japan_nation_desc: "Japan's rapid industrialization and militarization under the slogan Fukoku Kyōhei and Shokusan Kōgyō led to its emergence as a world power and the establishment of a colonial empire following the First Sino-Japanese War, the Boxer Rebellion, the Russo-Japanese War, and World War I.\n\nEconomic and political turmoil in the 1920s led to the rise of militarism, nationalism and totalitarianism, eventually culminating in Japan's membership in the Axis alliance and the conquest of a large part of the Asia-Pacific in World War II."
+
  europe_nation_title: "@EUR The European Union"
  europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress." 
 
@@ -99,6 +105,9 @@
  franco_iberia_nation_title: "@FIB The Franco-Iberian Empire"
  franco_iberia_nation_desc: "The Franco-Iberian Empire is is a cultural hegemony consisting of Portugal, Spain, and France under one Emperor" 
 
+ french_empire_nation_title: "@FRE The French Empire"
+ french_empire_nation_desc: "In 1804, the Constitution of the Year XII established the First French Empire with Napoleon Bonaparte I, Emperor of the French. Senate and was crowned Emperor of the French at the cathedral of Notre Dame.\n\nThe title emphasized that the emperor ruled over the French people, the nation, and not over France, the republic."
+
  frieslande_nation_title: "@FRL Restore the Frisian Kingdom"
  frieslande_nation_desc: "The Frisian Kingdom, also known as Magna Frisia, is a modern name for the Frisian realm in the period when it was at its largest (650-734). This empire was ruled by kings and emerged in the mid-7th century and probably ended with the Battle of the Boarn in 734 when the Frisians were defeated by the Frankish Empire."
 
@@ -106,6 +115,7 @@
  german_empire_nation_desc: "The proclamation of the German Empire, also known as the Deutsche Reichsgründung, took place in January 1871 after the joint victory of the German states in the Franco-Prussian War. As a result of the November Treaties of 1870s, the southern German states of Baden, Hesse-Darmstadt, with their territories south of the Main line, Württemberg and Bavaria, joined the Prussian-dominated "German Confederation" on 1 January 1871. On the same day, the new Constitution of the German Confederation came into force, thereby significantly extending the federal German lands to the newly created German Empire. The Day of the founding of the German Empire, January 18, became a day of celebration, marking when the Prussian King William I was proclaimed German Emperor in Versailles."
 
  georgia_nation_title: "@GEO Unite the Georgians"
+ georgia_nation_desc: "Ever since the abdication of Alexander I, Georgia has been divided and devastated by in-fighting. This has allowed other countries to control the internal politics of the region and oppress our people. The time has come to once again unite the Georgian people and reforge the kingdom that was once lost!"
 
  goguryeo_nation_title: "@GKR Restore the Goguryeo Kingdom"
  goguryeo_nation_desc: "Goguryeo, also called Goryeo, was a Korean kingdom located in the northern and central parts of the Korean Peninsula and the southern and central parts of Manchuria. At its peak of power, Goguryeo controlled most of the Korean peninsula, large parts of Manchuria and parts of the Russian Far East and eastern Mongolia." 
@@ -123,7 +133,7 @@
  iberian_empire_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV. The union began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
 
  italian_merchant_alliance_nation_title: "@IMA The Italian Merchant Alliance"
- italian_merchant_alliance_nation_desc: " The Italian Merchant Alliance in Italy is an alliance of Maritime Republics into one nation state under a Merchant-Oriented Government of the Mediterranean Basin of which there is much historical presedence such as Venice, Genoa, Pisa, and Amalfi; less known, but not always forgotten are the nations of Ragus, Gaeta, Ancona, and the little republic of Noli.\n\n Through unification and perseverance we may yet become a dominant great power in Greater Europe."
+ italian_merchant_alliance_nation_desc: " The Italian Merchant Alliance in Italy is an alliance of Maritime Republics into one nation state under a Merchant-Oriented Government of the Mediterranean Basin of which there is much historical presedence such as Venice, Genoa, Pisa, and Amalfi; less known, but not always forgotten are the nations of Ragus, Gaeta, Ancona, and the little republic of Noli.\n\nThrough unification and perseverance we may yet become a dominant great power in Greater Europe."
 
  italian_empire_nation_title: "@ITE The Italian Empire"
  italian_empire_nation_desc: "The Italian Empire between 1936 and 1943, comprised the colonies, protectorates, concessions, dependencies and trust territories of the Kingdom of Italy. The genesis of the Italian colonial empire was the purchase in 1869 of Assab Bay on the Red Sea by an Italian navigation company which intended to establish a coaling station at the time the Suez Canal was being opened to navigation. This was taken over by the Italian government in 1882, becoming modern Italy's first overseas territory."
@@ -152,14 +162,11 @@
  maghrebia_nation_title: "@MGH United Maghreb"
  maghrebia_nation_desc: "Maghreb; also spelled Maghrib, region of North Africa bordering the Mediterranean Sea. The Africa Minor of the ancients, it at one time included Moorish Spain and now comprises essentially the Atlas Mountains and the coastal plain of Morocco, Algeria, Tunisia, and Libya."
 
- north_german_confederation_nation_title: "@NGC Restore the North German Confederation"
+ north_german_confederation_nation_title: "@NGC Proclaim the North German Confederation"
  north_german_confederation_nation_desc: "This mighty nation unites Northern Germany. With deligance and a lot of ambition the Germans have created such a gigantic state from small dukedoms." 
 
- north_sea_empire_nation_title: "@NSE The North Sea Empire"
- north_sea_empire_nation_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
-
- north_sea_empire_nation_england_title: "@NSE An English North Sea Empire"
- north_sea_empire_nation_england_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
+ south_german_federation_nation_title: "@SGF Establish the South German Federation"
+ south_german_federation_nation_desc: "We have established much as of late and should now begin the process to reforming into a Republic and uniting the German people into a new Federation!"  
 
  north_sea_empire_nation_denmark_title: "@NSE The North Sea Empire under Danish Rule"
  north_sea_empire_nation_denmark_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
@@ -170,8 +177,8 @@
  peoples_republic_of_china_nation_title: "@PRC Proclaim the People's Republic"
  peoples_republic_of_china_nation_desc: "The People's Republic of China was formally proclaimed by Mao Zedong, the Chairman of the Communist Party of China, on 1 October 1949 at 3:00 pm in Tiananmen Square in Beijing while the new capital Nanking had been the capital of the former Republic of China." 
 
- pontos_nation_title: "@PON Restoration of the Kingdom of Pontus"
- pontos_nation_desc: "Through conquest and diplomacy we're able to form a county for all Pontic-Greek people living at the Black Sea." 
+ pontus_nation_title: "@PON Restoration of the Kingdom of Pontus"
+ pontus_nation_desc: "Through conquest and diplomacy we're able to form a county for all Pontic-Greek people living at the Black Sea." 
 
  rhine_confederation_nation_title: "@RHE The Rhine Confederation"
  rhine_confederation_nation_desc: "Napoleon had annexed for France all the left bank of the Rhine, but the new Confederation gradually extended from the Rhine to the Elbe. It was at first welcomed by the German people as a step towards unity, but it was really a barrier against Prussian and Austrian power." 
@@ -242,7 +249,7 @@
  hindustan_nation_desc: "We can proclaim the mighty Hindustan and bring all the lands of the Indian subcontinent under your rule as the rightful ruler."
 
  unite_italian_nation_title: "@ITA Risorgimento"
- unite_italian_nation_desc: "As the heart of the Renaissance, our nation is blossoming culturally.\n\n We have just entered the beginning of what looks like a prolonged artistic rebellion, especially in the field of architecture and literature. \n\nThe cultural evolution is not aiding our country in maintaining peace within our borders however. Our country is continuously stricken by foreign states seeking power and territorial gain."
+ unite_italian_nation_desc: "As the heart of the Renaissance, our nation is blossoming culturally.\n\nWe have just entered the beginning of what looks like a prolonged artistic rebellion, especially in the field of architecture and literature.\n\nThe cultural evolution is not aiding our country in maintaining peace within our borders however. Our country is continuously stricken by foreign states seeking power and territorial gain."
  
  kingdom_of_prussia_nation_brandenburg_title: "@PRU A Prussian King"
  kingdom_of_prussia_nation_brandenburg_desc: "There is only one king in the Empire, the king of Brandenburg. At the same time our lands in Prussia are not a historic part of the Empire, let us declare ourselves King in Prussia to reflect our grander status than the other electors."
@@ -257,10 +264,13 @@
  russian_nation_muscovy_desc: "The Tsardom of Russia, also called the Tsardom of Muscovy, was the centralized Russian state from the assumption of the title of Tsar by Ivan IV in 1547 until the foundation of the Russian Empire by Peter the Great in 1721."
 
  russian_nation_novgorod_title: "@RUS The Russian Republic"
- russian_nation_novgorod_desc: "The Russian Republic was a short-lived state which controlled, de jure, the territory of the former Russian Empire after its proclamation by the Russian Provisional Government on 1 September 1917 in a decree signed by Alexander Kerensky as Minister-President and Alexander Zarudny as Minister of Justice.\n\n Less than six weeks later, the Republic was overtaken by the October Revolution beginning on 25 October and was then superseded by the Russian Soviet Republic."
+ russian_nation_novgorod_desc: "The Russian Republic was a short-lived state which controlled, de jure, the territory of the former Russian Empire after its proclamation by the Russian Provisional Government on 1 September 1917 in a decree signed by Alexander Kerensky as Minister-President and Alexander Zarudny as Minister of Justice.\n\nLess than six weeks later, the Republic was overtaken by the October Revolution beginning on 25 October and was then superseded by the Russian Soviet Republic."
 
  russian_nation_title: "@RUS The Russian Nation"
  russian_nation_desc: "Through conquest and diplomacy Russia has managed to transform from a mere settlement into a dominant principality. After several eastern expeditions the Mongol hordes have finally been subdued and a centralized Russian state, ruled under the suzerainty of the Tsar, is emerging. Influences from Western Europe are helping us modernize and reform our nation and Western style of education is being adopted."
+
+ scandinavian_nation_title: "@SCA Proclaim Scandinavia"
+ scandinavian_nation_desc: "For untold centuries the Kingdoms of the North have been divided and locked in internecine power struggles. Previous attempts at Union have ultimately failed, to the delight of their European neighbors. Even so, the vision of a lasting union remains a tantalizing possibility..."
 
  spanish_nation_title: "@SPA Unite the Spaniards"
  spanish_nation_desc: "The marriage of Ferdinand II of Aragon and Isabella I of Castile, in 1469 at the Palacio de los Vivero in Valladolid began the familial union of the two kingdoms. They became known as the Catholic Monarchs (los Reyes Católicos). Isabella succeeded her brother as Queen of Castile and Ferdinand became jure uxoris King of Castile in 1474. When Ferdinand succeeded his father as King of Aragon in 1479, the Crown of Castile and the various territories of the Crown of Aragon were united in a personal union, creating for the first time since the 8th century a single political unit, referred to as España (Spain)."
@@ -271,7 +281,7 @@
  spanish_nation_aragon_wedding_title: "@SPA Aragon-Castile Union"
  spanish_nation_aragon_wedding_desc: "The marriage of Ferdinand II of Aragon and Isabella I of Castile, in 1469 at the Palacio de los Vivero in Valladolid began the familial union of the two kingdoms. They became known as the Catholic Monarchs (los Reyes Católicos). Isabella succeeded her brother as Queen of Castile and Ferdinand became jure uxoris King of Castile in 1474 creating for the first time since the 8th century a single political unit, referred to as España (Spain)"
  
- tibetan_nation_title: "@TIB The Lhasa state"
+ tibetan_nation_title: "@TIB The Lhasa State"
  tibetan_nation_desc: "With Güshi Khan as a largely uninvolved devotee, the 5th Dalai Lama and his intimates especially Sonam Rapten (until his death in 1658) established a civil administration which is referred to by historians as the Lhasa state. This Tibetan regime or government is also referred to as the Ganden Phodrang."
 
  persian_nation_title: "@PER The Persian Empire"

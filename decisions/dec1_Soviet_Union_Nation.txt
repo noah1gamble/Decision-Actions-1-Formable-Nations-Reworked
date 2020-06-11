@@ -3,7 +3,6 @@ country_decisions = {
 	soviet_union_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -27,6 +26,9 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
+					# Russia
+				province_id = 295	# Moskva
+				province_id = 310	# Novgorod				
 				region = russia_region
 				region = ural_region
 				region = ruthenia_region
@@ -34,22 +36,17 @@ country_decisions = {
 				region = east_siberia_region
 				area = ilan_hala_area
 				area = east_heilongjiang_area
-					# Russia
-				province_id = 295	# Moskva
-				province_id = 310	# Novgorod				
-					# South Ilan Area
+				# South Ilan Area
 				province_id = 4215
 				province_id = 2105
 				province_id = 729
 				province_id = 4217
 					# Ningguta
 				province_id = 2186
-				province_id = 2106
-				province_id = 4226
+				province_id = 2106							
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				# Subject one ?
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -108,72 +105,67 @@ country_decisions = {
 			owns_core_province = 2106
 		}
 		effect = {
-			change_tag = SOV
-			set_country_flag = formed_soviet_union_nation_flag
-			SOV = {
-				add_prestige = 20
-				add_legitimacy = 5
-				add_stability = 1
+			change_tag = SOV # Country TAG
+			set_country_flag = formed_soviet_union_nation_flag # Country Formation Flag
+			custom_tooltip = form_soviet_union_tt_2 # New Missions
+			custom_tooltip = form_soviet_union_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			SOV = { # Capital change and bonuses				
 				set_capital = 295 # Moskva
 				295 = {
-					add_base_tax = 6
-					add_base_production = 10
+					add_base_tax = 1
+					add_base_production = 1
 					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			SOV = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			SOV = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			SOV = {
-				change_government = monarchy
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
-							government_rank = 3 }
+							has_dlc = "Dharma"
 						}
-					set_government_rank = 3
+					}
+					set_legacy_government = tsardom_legacy
 				}
 				add_government_reform = tsardom
-				set_legacy_government = tsardom_legacy
-			}
-			custom_tooltip = dec1_decisions_spacing
-			SOV = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions									
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -181,11 +173,16 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
-
 }

@@ -10,6 +10,7 @@ country_decisions = {
 				has_country_flag = formed_french_nation_flag
 				exists = FRA
 				tag = FRA
+				tag = FRE
 				tag = HLR
 				tag = PAP
 				tag = SPA
@@ -27,97 +28,110 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 6
+					num_of_cities = 3
 				}
 			}			
 		}
+		provinces_to_highlight = {
+			OR = {
+				# Core french area + tourine
+				province_id = 182
+				province_id = 186
+				province_id = 185
+				province_id = 183
+				province_id = 184
+				province_id = 179
+				province_id = 4389
+				province_id = 178
+			}
+			AND = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}		
 		allow = {
 			adm_tech = 10
 			NOT = { exists = FRA }
 			is_subject = no
 			is_at_war = no
-			france_region = {
-				type = all
-				owned_by = ROOT
-			}
+			owns_core_province = 182
+			owns_core_province = 186
+			owns_core_province = 185
+			owns_core_province = 183
+			owns_core_province = 184
+			owns_core_province = 179
+			owns_core_province = 4389
+			owns_core_province = 178
 		}
 		effect = {
-			change_tag = FRA
-			set_country_flag = formed_french_nation_flag
-			FRA = {
-				add_prestige = 25
+			change_tag = FRA # Country TAG
+			set_country_flag = formed_french_nation_flag # Country Formation Flag
+			custom_tooltip = form_french_nation_tt_2 # New Missions
+			custom_tooltip = form_french_nation_tt_3 # Claims			
+			custom_tooltip = dec1_decisions_blank	
+			FRA = { # Capital change and bonuses				
 				set_capital = 183 # Paris
-				104 = {
-					add_base_tax = 6
-					add_base_production = 6
+				183 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			FRA = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			FRA = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Dharma DLC check and base reform change
 				if = {
 					limit = {
 						NOT = {
 							has_dlc = "Dharma"
-							}
 						}
-					set_legacy_government = despotic_monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 2
-							}
-						}
-					set_government_rank = 2
+					}
+					set_legacy_government = monarchy_legacy
 				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			FRA = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions		
+					# Claims
+					france_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = FRA
+					}							
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -125,14 +139,17 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 
 }
