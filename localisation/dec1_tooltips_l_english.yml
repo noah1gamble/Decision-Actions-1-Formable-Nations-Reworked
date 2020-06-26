@@ -56,6 +56,7 @@
 
  form_spanish_nation_tt_1: "Owns core region: §YSpain§!"
  form_spanish_nation_tt_2: "Country obtains §YSpain§! missions."
+ form_spanish_nation_tt_3: "§YSpain§! gains a permanent claim on §YIberia§! region." 
 
  form_great_britain_tt_1: "Owns core region: §YEngland§!"
  form_great_britain_tt_2: "Country obtains §YGreat Britain§! missions."
@@ -137,8 +138,10 @@
  form_russian_nation_tt_1: "Owns core §YRussian§! provinces"
  form_russian_nation_tt_2: "Country obtains §YRussia§! missions." 
 
- form_carthage_nation_tt_1: "Owns core §YCarthage§! provinces"
- form_carthage_nation_tt_2: "Country obtains §YCarthage§! missions." 
+ form_carthage_tt_1: "Owns core §YCarthage§! provinces"
+ form_carthage_tt_2: "Country obtains §YCarthage§! missions."
+ form_carthage_tt_3: "Country gains a permanent claim on §YIberia§! region."
+ form_carthage_tt_4: "Country gains a permanent claim on §YItaly§! region."
 
  form_lusitanian_empire_nation_tt_1: "Has §YExploration Ideas§!: §YGlobal Empire§!"
  form_lusitanian_empire_nation_tt_2: "Owns cores of §YPortugal§!"
@@ -233,6 +236,8 @@
  form_greece_tt_2: "Country obtains §YGreece§! missions."
  form_greece_tt_3: "Country gains a permanent claim on §YGreek! historical areas."
 
+ form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §Yall Historical Golden Horde§! territory."
+
  form_bharat_tt_2: "Country obtains §YBharat§! missions."
  form_bharat_tt_3: "Country gains a permanent claim on §YCoromandel§! region."
  form_bharat_tt_4: "Country gains a permanent claim on §YDeccan§! region."
@@ -243,6 +248,9 @@
  form_franco_iberia_tt_2: "Country obtains §YFranco-Iberia§! missions."
  form_franco_iberia_tt_3: "Country gains a permanent claim on §YFrance§! region."
  form_franco_iberia_tt_4: "Country gains a permanent claim on §YIberia§! region."
+
+ form_iberian_empire_tt_2: "Country obtains §YIberian Empire§! missions."
+ form_iberian_empire_tt_3: "Country gains a permanent claim on §YIberia§! region." 
 
  form_french_empire_tt_2: "Country obtains §YFrench Empire§! missions."
  form_french_empire_tt_3: "Country gains a claim on historical §YFrench Empire§! cores."
@@ -302,6 +310,8 @@
  form_emilia_romagna_tt_2: "Country obtains §YEmilia-Romagna§! missions."
  form_emilia_romagna_tt_3: "Country gains a permanent claim on §YNorth Italian§! areas."
 
+ form_maghreb_tt_2: ""
+
  form_goguryeo_tt_2: "Country obtains §YGoguryeo§! missions."
  form_goguryeo_tt_3: "Country gains a permanent claim on §YKorea§! region."
  form_goguryeo_tt_4: "Country gains a permanent claim on §YManchuria§! region."
@@ -332,6 +342,8 @@
 
  form_empire_of_japan_tt_2: "Country obtains §YEmpire of Japan§! missions."
 
+ form_kievan_rus_tt_2: "Country obtains  §YKievan Rus§! missions."
+
  #############################
  # GOVERNMENT RANKS TOOLTIPS #
  #############################
@@ -340,19 +352,12 @@
  dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
  dec1_government_change_prussian_monarchy: "The type of Government changes to §YPrussian Monarchy§!."
  dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
+ dec1_government_change_prc: "The type of Government changes to §YSocialist Republic§!."
  dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
  dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
  dec1_government_rank_1: "The Government Rank changes to §YDuchy§!."
  dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
  dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."
-
- ###################
- # CLAIMS TOOLTIPS #
- ###################
-
- form_spanish_nation_tt_2: "§YSpain§! gains a permanent claim on §YIberia§! region." 
-
- form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §Yall Historical Golden Horde§! territory."
 
  ########################
  # SPACING LOCALI1TION #
@@ -362,38 +367,20 @@
 
  dec1_decisions_blank: "        "
 
- #####################
- # FLAG LOCALISATION #
- #####################
-
- LSE_all_feitorias_completed: "All Feitorias Completed"
-
- ######################################
- # CASUS BELLI / WARGOAL LOCALISATION #
- ######################################
-
- cb_depose_emperor: "Depose the Emperor"
- DEPOSE_EMPEROR_WAR_NAME: "Overthrow the Emperor of the Holy Roman Empire"
-
- ###############################
- # PEACE TREATIES LOCALISATION #
- ###############################
-
- PEACE_po_depose_emperor: "Depose the Emperor"
- po_depose_emperor_desc: "The Emperor of [From.GetName] will be forced to concede defeat and relinquish the emperorship to us!"
-
  #######################
  # UNIQUE LOCALISATION #
  #######################
 
- dec1_cisalpina_cannot_form_italy: "§YCisalpina§! can §YNOT§! form §YItaly§! or any other variations due to being itself an identifier of the true successor Italian state, §Yla Grande Repubblica§!."
+ dec1_cisalpina_cannot_form_italy: "§YCisalpina§! can §YNOT§! form §YItaly§! or any other variations due to proclaiming itself as the true successor Italian state, §Yla Grande Repubblica§!."
+
+ dec1_abolish_the_empire_of_china_mandate: "The §YEmpire of China§! is §Rdisabled§! and the §YMandate of Heaven§! is §Rabolished§!.\nThe previous nation to control the §YEmpire of China§! gains §G100§! Prestige."
 
  restore_papal_states_nation_tt_1: "Any controller of original papal provinces can restore the Papal States!"
+
  dec1_papal_states_notif: "If you form the §YPapal States§! you will become §YThe Pope§! and become locked out of any possible reformation to another country and must take on the responsibility of §YMessenger of God§!.\n"
+
  dec1_papal_influence: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!"
 
  dec1_kingdom_of_god_claims: "The §YPapal State§! gains a permanent claim on all not owned provinces of the §YItalian§! region."
 
  gods_kingdom: "God's Kingdom"
-
- # end localisation

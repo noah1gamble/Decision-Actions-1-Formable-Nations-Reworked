@@ -3,3 +3,19 @@
 dec1_increased_centralization = {
 	global_autonomy = -0.10
 }
+
+# National Abilities
+
+dec1_house_of_solomon = {
+	global_unrest = -2
+}
+
+dec1_foundation_chinese_communist_party = {
+	global_unrest = 1
+	culture_conversion_cost = -0.35
+}
+
+dec1_abolished_the_mandate_of_heaven = {
+	stability_cost_modifier = 0.05
+	legitimacy = -1
+}

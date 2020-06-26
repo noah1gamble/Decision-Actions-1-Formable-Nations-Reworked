@@ -99,10 +99,12 @@ country_decisions = {
 			custom_tooltip = form_china_PRC_tt_3 # Claims
 			custom_tooltip = form_china_PRC_tt_4 # Claims
 			custom_tooltip = form_china_PRC_tt_5 # Claims
-			custom_tooltip = form_china_PRC_tt_6 # Claims			
+			custom_tooltip = form_china_PRC_tt_6 # Claims	
+			custom_tooltip = dec1_abolish_the_empire_of_china_mandate #  Abolish the Mandate of Heaven + Prestige for the previous Emperor of China country
 			custom_tooltip = dec1_decisions_blank	
-			CHN = { # Capital change and bonuses				
+			CHN = { # Capital change and bonuses
 				set_capital = 1816 # Beijing
+				add_prestige = 100 # Mandate Abolishment reward
 				1816 = {
 					add_base_tax = 1
 					add_base_production = 1
@@ -115,7 +117,7 @@ country_decisions = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_prc # Government Type Change
 				}				
 				# Dharma DLC check and base reform change
 				if = {
@@ -126,7 +128,7 @@ country_decisions = {
 					}
 					set_legacy_government = despotic_monarchy
 				}
-				add_government_reform = autocracy_reform
+				add_government_reform = dec1_prc_one_party_system
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
 				if = {
@@ -136,6 +138,8 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Abolished the Mandate of Heaven
+					dismantle_empire_of_china = yes 
 					# New Missions		
 					swap_non_generic_missions = yes 								
 					# Government Rank change				
@@ -151,10 +155,10 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government = monarchy
+								government = socialist_republic
 								}
 							}
-						change_government = monarchy
+						change_government = socialist_republic
 					}																		
 				}
 				# Custom Ideas check and change		
@@ -170,6 +174,14 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_increased_centralization
 				}
+				# National Ability
+				add_country_modifier = {
+					name = dec1_foundation_chinese_communist_party
+				}
+				# Abolished the Mandate of Heaven debuff
+				add_country_modifier = {
+					name = dec1_abolished_the_mandate_of_heaven
+				}								
 			}					
 		}
 		ai_will_do = {

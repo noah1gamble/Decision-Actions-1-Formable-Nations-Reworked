@@ -67,9 +67,9 @@ country_decisions = {
 			custom_tooltip = form_qing_tt_2 # New Missions
 			custom_tooltip = form_qing_tt_3 # Region/Area Claims
 			custom_tooltip = form_qing_tt_4 # Region/Area Claims
-			custom_tooltip = form_qing_tt_5 # Region/Area Claims
+			custom_tooltip = form_qing_tt_5 # Region/Area Claims		
 			custom_tooltip = dec1_decisions_blank	
-			QNG = { # Capital change and bonuses				
+			QNG = { # Capital change and bonuses			
 				set_capital = 1816	# Beijing 
 				1816 = {
 					add_base_tax = 1
@@ -105,6 +105,7 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Unique Qing effects
+					# If Nomadic tech and NOT Chinese tech or Chinese unit types, then change tech and unit to Chinese unit
 					if = {
 						limit = {
 							technology_group = nomad_group
@@ -116,13 +117,15 @@ country_decisions = {
 						change_technology_group = chinese
 						change_unit_type = chinese
 					}
+					# If not Confucianism change back to confuciansim with Tengre Pagan Reformed as harmonized religion - Perhaps change to unique event
+					# Dealing with the official policy of religion in the empire
 					if = {
 						limit = {
 							NOT = { religion = confucianism }
 						}
 						change_religion = confucianism
 						add_harmonized_religion = tengri_pagan_reformed
-					}        				
+					}        	
 					# New Missions
 					swap_non_generic_missions = yes 
 					# Region/Area Claims

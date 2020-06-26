@@ -13,17 +13,8 @@ country_decisions = {
 			tag = BRA
 			NOT = {
 				has_country_flag = formed_prussia_nation_flag
-				has_reform = celestial_empire
 				exists = PRU
 				tag = PRU
-			}
-			OR = {
-				ai = no
-				OR = {
-					ai = yes
-					is_religion_enabled = protestant
-					is_religion_enabled = reformed
-				}
 			}
 			OR = {
 				ai = no

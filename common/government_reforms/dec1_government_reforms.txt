@@ -1,9 +1,20 @@
-socialist_republic = { 
-	# government mechanics flags go here
+
+	##########################################
+	# Communist Governments (PRC, DPRK, etc) #
+	##########################################
+
+socialist_republic = {
 	icon = "politician"
 	has_term_election = yes
 	republican_name = yes
 	royal_marriage = no
+
+    potential = {
+		OR = {
+			tag = PRC
+			tag = MNG
+		}
+    }	
 
 	factions = {
 		dec1_communist_party_of_china # Highest Authority
@@ -11,12 +22,13 @@ socialist_republic = {
 		dec1_national_peoples_congress # Lowest Authority
 	}
 
+	republic = yes
+
 	modifiers = {
-		max_absolutism = 45 # Can be raised to 95 via reforms
-    	max_states = 10
+		max_absolutism = 60 # Can be raised to 95 via reforms
 	}
+
 	custom_attributes = {
-		election_on_death = no
 		duration = 10
 	}
 

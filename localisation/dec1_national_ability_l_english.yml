@@ -5,7 +5,13 @@
  #######################################
  
  dec1_increased_centralization: "Increased Centralization"
- dec1_increased_centralization_desc: ""
+ dec1_increased_centralization_desc: "TODO"
+
+ house_of_solomon: "the Royal House of Solomon"
+ 
+ dec1_foundation_chinese_communist_party: "Foundation of the Chinese Communist Party (CCP)"
+
+ dec1_abolished_the_mandate_of_heaven: "Abolished the Mandate of Heaven"
  
  ###########################################
  # END UNIQUE NATIONAL TRAITS LOCALISATION #

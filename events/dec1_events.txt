@@ -1,50 +1,54 @@
-namespace = dec1_events
+	# Formable Nations: Reworked events
 
-# Our place in the Empire
-country_event = {
-	id = dec1_events.1
-	title = "dec1_events.1.t"
-	desc = "dec1_events.1.d"
-	picture = HRE_eventPicture
+	namespace = dec1_events
 
-	is_triggered_only = yes # Can only be triggered by Country Formation within the empire
+	# Our place in the Empire
+	country_event = {
+		id = dec1_events.1
+		title = "dec1_events.1.t"
+		desc = "dec1_events.1.d"
+		picture = HRE_eventPicture
 
-	# Perhaps add a choice for if the Empire forms a country? (Austria -> Austrian Empire)
+		is_triggered_only = yes
 
-	# Might need to remove ability for current emperor to do this Event.
+		trigger = {
+			NOT = {
+				is_emperor = yes # Perhaps add a choice for if the Empire forms a country? (Austria -> Austrian Empire)
+			}
+		}
 
-	# Stay in the Empire
-	option = {
-		name = "dec1_events.1.a"
+		# Stay in the Empire
+		option = {
+			name = "dec1_events.1.a"
 			emperor = {	 # Emperor is told about loyalty to the empire, gains imperial authority
 				country_event = { id = dec1_events.2 }
 				add_opinion = {
 					who = root
 					modifier = stayed_in_the_empire
 				}
-			}		
-	}
-
-	# Leave the Empire
-	option = {
-		name = "dec1_events.1.b"
-		if = { # Remove Elector status
-			limit = {
-				is_elector = yes
-			}
-			elector = no
-			remove_non_electors_emperors_from_empire_effect = yes
+			}		 
 		}
-		add_prestige = -10	
-		if = {		
-			limit = {
-				is_part_of_hre = yes
+		# Leave the Empire
+		option = {
+			name = "dec1_events.1.b"
+			if = { # Remove Elector status
+				limit = {
+					is_elector = yes
+				}
+				elector = no
+				remove_non_electors_emperors_from_empire_effect = yes
 			}
-			emperor = {	 # Emperor is told about the nation leaving, loses imperial authority
-				country_event = { id = hre_event.5 }
-				add_opinion = {
-					who = root
-					modifier = opinion_left_empire
+			add_prestige = -10	
+			if = {		
+				limit = {
+					is_part_of_hre = yes
+				}
+				emperor = {	 # Emperor is told about the nation leaving, loses imperial authority
+					country_event = { id = hre_event.5 }
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
 				}
 			}
 			if = { # Non-Elector
@@ -57,20 +61,10 @@ country_event = {
 						is_part_of_hre = yes
 					}
 					set_in_empire = no
-				}
-			}			
+				}		
+			}
 		}
 	}
-
-	# Declare war upon the Emperor to depose the Emperor and become the rightful emperor
-	# TODO: Finish this option. Will require some complicated modding, or 1.30 update commands
-	#option = {
-	#	name = "dec1_events.1.c"
-	#	declare_war_with_cb = {
-	#		who = emperor
-	#		casus_belli = cb_depose_emperor
-	#	}		
-	#}
 
 	# Our Place in the Empire - Nation stayed in the Empire
 	country_event = {
@@ -82,7 +76,7 @@ country_event = {
 		is_triggered_only = yes
 		
 		option = {
-			name = "dec1_events.2.a" #Good!
+			name = "dec1_events.2.a" # Good!
 			add_imperial_influence = 25 # Perhaps add higher influence per government rank of nation that formed (15 duchy, 40 kingdom, 70 empire)
 			add_prestige = 10
 			tooltip = {
@@ -92,5 +86,4 @@ country_event = {
 				}
 			}
 		}
-	}		
-}
+	}

@@ -6,8 +6,8 @@
 
   # NOTE: New Custom Nations - New Custom Nations - New Custom Nations
 
- abyssinia_nation_title: "@ABY Embrace Abyssinian Identity"
- abyssinia_nation_desc: "The Ethiopian Empire, also known as Abyssinia, or just simply Ethiopia, was a monarchy that spanned a geographical area in the current states of Ethiopia and Eritrea."
+ abyssinia_nation_title: "@ABY Embrace Ancient Identity"
+ abyssinia_nation_desc: "The Ethiopian Empire, also known as Abyssinia, or just simply Ethiopia, was a monarchy that spanned a geographical area in the current states of Ethiopia and Eritrea. By embracing our ancient naming as global fact we can proclaim a more legitimate empire erga omnes."
 
  adriatic_empire_nation_title: "@ADR The Adriatic Empire"
  adriatic_empire_nation_desc: "The Adriatic Empire stands among the largest empires in history and its government is centralized in the nation's capital of Constantinople"
@@ -171,9 +171,6 @@
  north_sea_empire_nation_denmark_title: "@NSE The North Sea Empire under Danish Rule"
  north_sea_empire_nation_denmark_desc: "North Sea Empire and Anglo-Scandinavian Empire are terms used by historians to refer to the personal union of the kingdoms of England, Denmark and sometimes Norway for most of the period between 1013 and 1042 towards the end of the Viking Age. This ephemeral Norse-ruled empire was a thalassocracy, its components only connected by and dependent upon the sea."
 
- papal_states_nation_title: "@PAP Restore the Papal States"
- papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
-
  peoples_republic_of_china_nation_title: "@PRC Proclaim the People's Republic"
  peoples_republic_of_china_nation_desc: "The People's Republic of China was formally proclaimed by Mao Zedong, the Chairman of the Communist Party of China, on 1 October 1949 at 3:00 pm in Tiananmen Square in Beijing while the new capital Nanking had been the capital of the former Republic of China." 
 
@@ -335,8 +332,8 @@
  westfalian_nation_title: "@WES The Kingdom of Westphalia"
  westfalian_nation_desc: "As the ideas of the Enlightenment are sweeping through Europe, we may choose to embrace them ourselves in Westphalia. Our future model state will feature ideas as revolutionary as equal rights for all male population, freedom for serfs and emancipation for the Jews, as well as enabling of free enterprise through abolition of socage and the guilds."
 
- kingdom_of_god_nation_title: "@KOG The Kingdom of God"
- kingdom_of_god_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."
+ papal_states_nation_title: "@PAP Restore the Papal States"
+ papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
 
- gods_kingdom_title: "The Question of the Holy See"
- gods_kingdom_desc: "With Italy under Papal control and the Holy See at it's most uselessness, we must abolish it and declare ourselves the true messenger of God."
+ gods_kingdom_nation_title: "@KOG The Kingdom of God"
+ gods_kingdom_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."

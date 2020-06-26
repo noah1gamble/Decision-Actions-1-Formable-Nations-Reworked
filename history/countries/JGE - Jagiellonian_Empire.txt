@@ -1,7 +1,6 @@
 primary_culture = polish
 add_accepted_culture = ruthenian
 add_accepted_culture = hungarian
-add_accepted_culture = bohemian
 
 religion = catholic
 technology_group = eastern
