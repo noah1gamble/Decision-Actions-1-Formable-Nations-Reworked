@@ -16,7 +16,7 @@ country_decisions = {
 				tag = HLR
 				tag = IMA
 				tag = LVE
-				tag = TSI
+				tag = TTS
 				tag = ALP
 				tag = CIS
 				tag = EUR
@@ -25,12 +25,9 @@ country_decisions = {
 			OR = {
 				AND = { # A powerful latin can control this title with growth
 					culture_group = latin
-					OR = {
-						AND = {
-							total_development = 200
-							grown_by_development = 110
-						}
-
+					AND = {
+						total_development = 200
+						grown_by_development = 110
 					}
 				}
 				OR = { # Any Maghrebi or Iberian can restore Carthage
@@ -48,7 +45,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# Carthage Cores
+				# Carthage Cores
 				area = tunisia_area
 				area = djerba_area
 				area = tripolitania_area
@@ -76,48 +73,48 @@ country_decisions = {
 			OR = {
 				culture_group = maghrebi
 				culture_group = iberian
-			}			
+			}	
+			custom_trigger_tooltip = {
+				tooltip = form_carthage_tt_1
+				# Carthage Cores
+				tunisia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				djerba_area = {
+					type = all
+					owned_by = ROOT
+				}
+				tripolitania_area = {
+					type = all
+					owned_by = ROOT
+				}
+				barbary_coast_area = {
+					type = all
+					owned_by = ROOT
+				}
+				northern_morocco_area = {
+					type = all
+					owned_by = ROOT
+				}
+				corsica_sardinia_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}		
 			owns_core_province = 341
+			owns_core_province = 4562
+			owns_core_province = 342
+			owns_core_province = 4564
+			owns_core_province = 2469
+			owns_core_province = 333
+			owns_core_province = 125
+			owns_core_province = 2982
 			OR = {
 				owns_core_province = 125
 				owns_core_province = 1247
 				owns_core_province = 226
 				owns_core_province = 333
-			}
-			custom_trigger_tooltip = {
-				tooltip = form_carthage_nation_tt_1
-					# Carthage Cores
-					tunisia_area = {
-						type = all
-						owned_by = ROOT
-					}
-					djerba_area = {
-						type = all
-						owned_by = ROOT
-					}
-					tripolitania_area = {
-						type = all
-						owned_by = ROOT
-					}
-					barbary_coast_area = {
-						type = all
-						owned_by = ROOT
-					}
-					northern_morocco_area = {
-						type = all
-						owned_by = ROOT
-					}
-					corsica_sardinia_area = {
-						type = all
-						owned_by = ROOT
-					}
-				owns_core_province = 4562
-				owns_core_province = 342
-				owns_core_province = 4564
-				owns_core_province = 2469
-				owns_core_province = 333
-				owns_core_province = 125
-				owns_core_province = 2982
 			}
 		}
 	 	effect = {
@@ -126,14 +123,20 @@ country_decisions = {
 			custom_tooltip = form_carthage_tt_2 # New Missions
 			custom_tooltip = form_carthage_tt_3 # Region/Area Claims
 			custom_tooltip = form_carthage_tt_4 # Region/Area Claims
+			hidden_effect = { # Small hidden effect, important though! Full Religious Change
+				CTG = { 
+					change_culture = phoenician 
+				} 
+			}
+			change_culture = phoenician
 			custom_tooltip = dec1_decisions_blank	
-			CTG = { # Capital change and bonuses				
+			CTG = { # Capital change and bonuses			
 				set_capital = 341 # Carthage
 				341 = {
+					rename_capital = "Carthage"
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
-					341 = { rename_capital = "Carthage" }
 				}
 				custom_tooltip = dec1_decisions_blank				
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
@@ -144,15 +147,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = despotic_monarchy
-				}
+				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -203,11 +198,12 @@ country_decisions = {
 						NOT = { has_idea_group = CTG_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}					
 		}

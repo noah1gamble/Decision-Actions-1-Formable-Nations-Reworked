@@ -3,21 +3,45 @@ country_decisions = {
 	chile_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no			
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
+			is_playing_custom_nation = no
+			NOT = { 
+				has_country_flag = changed_from_colonial_nation 
+				has_country_flag = formed_la_plata_flag
+				exists = CHL
+				tag = CHL
+				tag = BRZ
+				tag = PAP
 			}
-			colonial_la_plata = {
-				owned_by = ROOT
+			OR = {
+				# natives that have a capital in colonial region
+				capital_scope = {
+					colonial_region = colonial_la_plata
+					is_core = ROOT
+				}
+				# is former colonial nation or  is current colonial nation
+				OR = {
+					is_former_colonial_nation = yes
+					is_colonial_nation = yes
+				}
+				# non-colonial nations (usually colonizers) that has at least 20 provinces
+				AND = {
+					num_of_owned_provinces_with = {
+						colonial_region = colonial_la_plata
+						value = 20
+					}
+					NOT = {
+						num_of_owned_provinces_with = {
+							colonial_region = colonial_la_plata
+							value = 20
+						}			
+					}							
+				}
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 1 # Colonial La Plata
 				}
 			}
 		}
@@ -36,10 +60,10 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
 			NOT = { exists = CHL }
+			is_at_war = no
+			owns = 763
+			num_of_cities = 10
 			owns_core_province = 793	# Atacama
 			owns_core_province = 792	# Copiapo
 			owns_core_province = 787	# Picunmapu
@@ -47,26 +71,85 @@ country_decisions = {
 			owns_core_province = 783	# Patagonia Occidental
 		}
 		effect = {
-			change_tag = CHL
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
+			change_tag = CHL # Country TAG
+			set_country_flag = formed_la_plata_flag # Country Formation Flag
+			set_country_flag = changed_from_colonial_nation # Colonial Nation flag
+			custom_tooltip = form_la_plata_tt_2 # New Missions
+			custom_tooltip = form_la_plata_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank
+			CHL = { # Capital change and bonuses				
+				set_capital = 793 # Atacama
+				CHL = {
+					793 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
 				}
-				set_government_rank = 2
-			}
-			colonial_la_plata = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Changes
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					andes_superregion = {
+						limit = {
+							NOT = { 
+								owned_by = ROOT 
+							}
+						}
+						add_permanent_claim = CHL
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_permanent_claim = CHL
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CHL_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
+				}
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1 # forever
+				}
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = {
 			factor = 1

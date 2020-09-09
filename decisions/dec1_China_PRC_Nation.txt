@@ -119,15 +119,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_prc # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = despotic_monarchy
-				}
+				# Reform Change
 				add_government_reform = dec1_prc_one_party_system
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -168,11 +160,12 @@ country_decisions = {
 						NOT = { has_idea_group = PRC_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 				# National Ability
 				add_country_modifier = {

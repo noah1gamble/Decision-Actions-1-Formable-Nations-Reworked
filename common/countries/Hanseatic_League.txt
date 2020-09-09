@@ -1,8 +1,8 @@
-#Country Name: Seeee the Name of this File.
+# Hanseatic League
 
 graphical_culture = westerngfx
 
-color = { 156  179  189 }
+color = { 156 179 189 }
 
 historical_score = 1000
 

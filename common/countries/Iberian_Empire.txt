@@ -1,8 +1,8 @@
-#Iberia
+# Iberia - Iberian Empire
 
 graphical_culture = westerngfx
 
-color = { 231  181  11 }
+color = { 231 181 11 }
 
 historical_score = 6000
 

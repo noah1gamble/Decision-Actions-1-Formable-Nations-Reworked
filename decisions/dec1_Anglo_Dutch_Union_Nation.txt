@@ -17,13 +17,14 @@ country_decisions = {
 				tag = PAP
 				tag = FRA
 				tag = EUR
-			}
-			OR = {
 				tag = ENG
 				tag = GBR
-				tag = UKI
-
-			}				
+				tag = UKI				
+			}	
+			OR = {
+				primary_culture = english				
+				primary_culture = dutch	
+			}							
 			OR = {
 				ai = no
 				AND = {
@@ -168,25 +169,18 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
+				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_3
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = despotic_monarchy
-				}
-				add_government_reform = autocracy_reform						
+				# Reform Change
+				add_government_reform = dutch_republic						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -214,19 +208,19 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 2
+								government_rank = 3
 								}
 							}
-						set_government_rank = 2
+						set_government_rank = 3
 					}
 					# Government Type Change
 					if = {
 						limit = {
 							NOT = {
-								government = monarchy
+								government = republic
 								}
 							}
-						change_government = monarchy
+						change_government = republic
 					}																		
 				}
 				# Custom Ideas check and change		
@@ -236,11 +230,12 @@ country_decisions = {
 						NOT = { has_idea_group = AGU_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
 		}

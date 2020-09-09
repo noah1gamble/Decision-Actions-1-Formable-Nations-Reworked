@@ -1,0 +1,199 @@
+country_decisions = {
+
+	pomerania_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_pomerania_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = POM }
+			primary_culture = pommeranian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = vorpommern_area
+						area = hinter_pommern_area
+					}
+					OR = {
+						NOT = { owned_by = root }
+						NOT = { is_core = root }
+					}
+				}
+				AND = {
+					ROOT = { NOT = { tag = WOL } }
+					WOL = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = WOL
+				}
+				AND = {
+					ROOT = { NOT = { tag = STE } }
+					STE = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = STE
+				}
+				AND = {
+					ROOT = { NOT = { tag = RUG } }
+					RUG = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = RUG
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+
+			if = {
+				limit = { NOT = { tag = WOL } }
+				OR = {
+					NOT = { exists = WOL }
+					WOL = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = STE } }
+				OR = {
+					NOT = { exists = STE }
+					STE = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = RUG } }
+				OR = {
+					NOT = { exists = RUG }
+					RUG = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			
+			vorpommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			hinter_pommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		effect = {
+			change_tag = POM
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			
+			if = {
+				limit = {
+					NOT = { tag = WOL }
+					NOT = { tag = STE }
+					NOT = { tag = RUG }
+					NOT = { was_tag = WOL }
+					NOT = { was_tag = STE }
+					NOT = { was_tag = RUG }
+				}
+				swap_non_generic_missions = yes
+			}
+
+			if = {
+				limit = {
+					WOL = { is_subject_of = ROOT }
+				}
+				inherit = WOL
+			}
+			if = {
+				limit = {
+					STE = { is_subject_of = ROOT }
+				}
+				inherit = STE
+			}
+			if = {
+				limit = {
+					RUG = {
+						is_subject_of = ROOT
+						NOT = { has_reform = pirate_republic_reform }
+					}
+				}
+				inherit = RUG
+			}
+
+			if = { #need to have some reason for doing it
+				limit = {
+					any_owned_province = {
+						OR = {
+							area = vorpommern_area
+							area = hinter_pommern_area
+						}
+						OR = {
+							nationalism = 1
+							local_autonomy = 26
+						}
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = vorpommern_area
+							area = hinter_pommern_area
+						}
+						OR = {
+							nationalism = 1
+							local_autonomy = 26
+						}
+					}
+					add_nationalism = -10
+					add_local_autonomy = -15
+				}
+			}
+			else = {
+				capital_scope = { add_base_tax = 2 }
+			}
+			set_country_flag = formed_pomerania_flag
+			
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { tag = WOL }
+					NOT = { tag = STE }
+					NOT = { tag = RUG }
+					NOT = { was_tag = WOL }
+					NOT = { was_tag = STE }
+					NOT = { was_tag = RUG }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

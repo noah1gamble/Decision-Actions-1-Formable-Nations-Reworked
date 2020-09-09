@@ -1,8 +1,8 @@
-#Carthage
+# Carthage
 
 graphical_culture = westerngfx
 
-color = { 56  60  25 }
+color = { 130 147 171 }
 
 historical_idea_groups = {
 	maritime_ideas

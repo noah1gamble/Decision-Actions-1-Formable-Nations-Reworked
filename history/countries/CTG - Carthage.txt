@@ -1,4 +1,5 @@
 government = monarchy
+religion = catholic
 add_government_reform = autocracy_reform
 primary_culture = tunisian
 technology_group = muslim

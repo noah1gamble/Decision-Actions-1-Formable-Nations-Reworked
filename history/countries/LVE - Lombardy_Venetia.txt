@@ -1,3 +1,4 @@
+government = monarchy
 primary_culture = lombard
 add_accepted_culture = venetian
 religion = catholic

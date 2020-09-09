@@ -1,3 +1,4 @@
+government = republic
 primary_culture = lombard
 religion = catholic
 technology_group = western

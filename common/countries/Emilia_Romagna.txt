@@ -1,4 +1,4 @@
-#Emilia Romagna
+# Emilia-Romagna
 
 graphical_culture = westerngfx
 

@@ -1,7 +1,8 @@
-#Swabia
+# Swabia
+
 graphical_culture = westerngfx
 
-color = { 204 204  0 }
+color = { 204 204 0 }
 
 historical_idea_groups = {
 	trade_ideas

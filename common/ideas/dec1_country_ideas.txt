@@ -1,26 +1,2441 @@
-socialist_republic = { 
-	# government mechanics flags go here
-	icon = "politician"
-	has_term_election = yes
-	republican_name = yes
-	royal_marriage = no
 
-	factions = {
-		dec1_communist_party_of_china # Highest Authority
-		dec1_politburo # Most Centralized Authority
-		dec1_national_peoples_congress # Lowest Authority
-	}
+	#############################################
+	### Formable Nations specific idea groups ###
+	#############################################
 
-	modifiers = {
-		max_absolutism = 45 # Can be raised to 95 via reforms
-    	max_states = 10
-	}
-	custom_attributes = {
-		election_on_death = no
-		duration = 10
+# Abyssinia
+ABY_ideas = { 
+	start = {
+		claim_duration = 0.2
+		ae_impact = -0.1
 	}
 
-	ai = {
-		factor = 0
+	bonus = {
+		core_creation = -0.1
 	}
+
+	trigger = {
+		tag = ABY
+	}
+	free = yes	# will be added at load.
+
+	ABY_succession_protection = {
+		heir_chance = 0.70
+	}
+
+	ABY_first_african_empire = {
+		prestige_decay = -0.2
+	}
+
+	ABY_solomonic_dynasty = {
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+	}
+
+	ABY_national_reforms = {
+		harsh_treatment_cost = -0.4
+	}
+
+	ABY_feudal_laws = {
+		liberty_desire_from_subject_development = -0.20
+	}
+
+	ABY_absolute_monarchy = {
+		min_autonomy = 0
+		autonomy_change_time = -0.10
+		years_of_nationalism = -5
+	}
+
+	ABY_strong_missionaries = {
+		missionaries = 1
+	}
+}
+
+# Adriatic Empire
+ADR_ideas = { 
+	start = {
+		global_sailors_modifier = 0.1 # Adriatic Economic Domination
+		blockade_efficiency = 0.1 
+	}
+
+	bonus = {
+		build_cost = -0.2 # Victorian Architecture  
+	}
+
+	trigger = {
+		tag = ADR
+	}
+	free = yes	# will be added at load.
+
+	ADR_control_of_venetian_trade = {
+		global_trade_power = 0.1
+		global_foreign_trade_power = 0.03
+	}
+
+	ADR_multicultural_preparation = {
+		stability_cost_modifier = 0.1
+		local_culture_conversion_cost = -0.03
+	}
+
+	ADR_influx_of_artisians = {
+		production_efficiency = 0.05
+	}
+
+	ADR_ottoman_arms_race = {
+		naval_morale = 0.15
+		flagship_morale = 0.3
+	}
+
+	ADR_encourage_large_city_settlers = {
+		development_cost = -0.1
+	}
+
+	ADR_emperor_crowned_by_pope = {
+		prestige = 0.03
+		papal_influence = 0.1
+	}
+
+	ADR_naval_hegemony = {
+		naval_maintenance_modifier = -0.1
+	}
+}
+
+# Austrian Empire
+AEH_ideas = { 
+	start = {
+		unjustified_demands = -0.2 # Österreich Sphere of Influence
+		ae_impact = -0.25
+	}
+
+	bonus = {
+		diplomats = 1 # Austrian Diplomatic Capabilities
+	}
+
+	trigger = {
+		tag = AEH
+	}
+	free = yes	# will be added at load.
+
+	AEH_austrian_noble_diplomats = {
+		monarch_diplomatic_power = 2 
+	}
+
+	AEH_competent_generals = {
+		general_cost = -0.1 # Increased cost of generals for better ones
+		free_leader_pool = 1
+		may_recruit_female_generals = yes
+	}
+
+	AEH_imperial_empire = {
+		governing_capacity = 200
+		imperial_authority = 0.03
+	}
+
+	AEH_tertius_maximae_imperii = {
+		diplomatic_reputation = 1
+		imperial_authority = 0.03
+	}
+
+	AEH_absolute_rule = {
+		diplomatic_annexation_cost = -0.2
+	}
+
+	AEH_historical_victories = {
+		discipline = 0.15
+	}
+
+	AEH_empire_of_the_germans = {
+		culture_conversion_cost = -0.40
+	}
+}
+
+# Austro-Hungarian Empire	
+AHE_ideas = {
+	start = {
+		infantry_cost = -0.1
+		army_tradition_from_battle = 0.25 
+	}
+
+	bonus = {
+		diplomatic_reputation = 2 # Professional Diplomats
+	}
+
+	trigger = {
+		tag = AHE
+	}
+	free = yes	# will be added at load.
+	
+	AHE_political_maneuvering = {
+		ae_impact = -0.1 # Political Maneuvering
+	}
+	AHE_austro_hungarian_intensive_garrison_policy = {
+		global_garrison_growth = 0.2 # Intesive Garrison Policy
+	}
+	AHE_austro_hungarian_diplomats = {
+		monarch_diplomatic_power = 3 # Austro-Hungarian Diplomats
+	}
+	AHE_heavy_global_tax_reform = {
+		global_tax_modifier = 0.35 # Heavy Global Tax Reform
+	}
+	AHE_dual_monarchy_administrative_efficiency = {
+		state_maintenance_modifier = -0.215 # Dual-Monarchy Administrative Efficiency
+	}
+	AHE_austrian_dynastic_success = {
+		heir_chance = 0.7 # Austrian Triple Chins
+	}
+	AHE_monarchy_of_the_habsburgs = {
+		all_power_cost = -0.20 # Monarchy of the Habsburgs
+	}
+}
+
+# Anglo-Dutch Union
+AGU_ideas = { 
+	start = {
+		election_cycle = 10 # Anglo-Dutch Election System
+		colonists = 1 # Anglo-Dutch Colonial Empire
+	}
+
+	bonus = {
+		merchants = 1 # English-Dutch Trade Dominance
+	}
+
+	trigger = {
+		tag = AGU
+	}
+	free = yes	# will be added at load.
+
+	AGU_multicultural_union = {
+		num_accepted_cultures = 3 
+	}
+
+	AGU_control_of_economic_centers = {
+		global_trade_power = 0.1 
+	}
+
+	AGU_colonial_ambitions = {
+		local_colonial_growth = 10 
+		global_foreign_trade_power = 0.15
+	}
+
+	AGU_global_trade_power = {
+		local_production_efficiency = 0.1 
+	}
+
+	AGU_influx_of_merchants = {
+		merchants = 2
+		galley_cost = -0.1 
+	}
+
+	AGU_naval_control = {
+		navy_tradition = 1
+	}
+
+	AGU_tax_the_poor = {
+		global_tax_modifier = 0.03 
+		global_tax_income = 128
+	}
+}
+
+# Alsace-Lorraine
+ALC_ideas = { 
+	start = {
+		mercantilism_cost = -0.2 # Franco-German Trade
+		culture_conversion_cost = -0.25 # Conversion of the Nobles
+	}
+
+	bonus = {
+		unrest_catholic_provinces = -2 # Catholic Dominance
+	}
+
+	trigger = {
+		tag = ALC
+	}
+	free = yes	# will be added at load.
+
+	ALC_dominate_the_peasants = {
+		global_unrest = -1 
+	}
+
+	ALC_force_government_reforms = {
+		cb_on_government_enemies = yes
+	}
+
+	ALC_papal_investure = {
+		papal_influence = 0.5
+		church_power_modifier = 0.5
+	}
+
+	ALC_resistance_to_reformation = {
+
+	}
+
+	ALC_religious_wars = {
+		extra_manpower_at_religious_war = yes
+		relation_with_heretics = -50
+	}
+
+	ALC_lorraine_expansion = {
+		build_time = -0.25
+	}
+
+	ALC_abolishment_of_heathens = {
+		warscore_cost_vs_other_religion = -0.25
+		relation_with_heretics = -50
+	}
+}
+
+# Alpland
+ALP_ideas = { 
+	start = {
+		defensiveness = 0.20 # Alpine Kingdom
+		administrative_efficiency = 0.15
+	}
+
+	bonus = {
+		movement_speed = 0.1
+	}
+
+	trigger = {
+		tag = ALP
+	}
+	free = yes	# will be added at load.
+
+	ALP_a_new_great_power = {
+		merchants = 2
+		diplomatic_reputation = 1
+	}
+
+	ALP_mountain_protection = {
+		claim_duration = 0.1
+	}
+
+	ALP_alpish_culture = {
+		culture_conversion_cost = -0.10
+	}
+
+	ALP_disciplined_army = {
+		yearly_army_professionalism = 0.07
+	}
+
+	ALP_tax_reforms = {
+		global_tax_modifier = 0.03
+		war_taxes_cost_modifier = -0.2
+	}
+
+	ALP_purge_the_corrupt = {
+		yearly_corruption = -0.2
+	}
+
+	ALP_legacy_of_alpland = {
+		prestige = 0.3
+		prestige_decay = -0.01
+	}
+}
+
+# Angevin Empire
+ANG_ideas = { 
+	start = {
+		merchants = 1 # Unification the English & French
+		land_morale = 0.1
+	}
+
+	bonus = {
+		national_unrest = 1 # A Lasting Empire
+	}
+
+	trigger = {
+		tag = ANG
+	}
+	free = yes	# will be added at load.
+
+	ANG_nation_of_many_cultures = {
+		num_accepted_cultures = 2
+	}
+
+	ANG_unified_the_crown = {
+		legitimacy = 2
+	}
+
+	ANG_english_channel_domination = {
+		global_own_trade_power = 0.1
+	}
+
+	ANG_anglo_french_tactics = {
+		discipline = 0.05
+	}
+
+	ANG_united_kingdoms_together = {
+		stability_cost_to_declare_war = -1
+		stability_cost_modifier = 0.05
+		local_manpower = 0.2
+	}
+
+	ANG_anglo_french_armada = {
+		light_ship_power = 0.15
+		heavy_ship_power = 0.15
+	}
+
+	ANG_franco_bastions  = {
+		garrison_size = 0.1
+	}
+}
+
+# Armenia Empire
+ARN_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = KAB
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Arabian Kingdom
+KAB_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = KAB
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Belgium
+BEL_ideas = { 
+	start = {
+		colonists = 1 
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BEL
+	}
+	free = yes	# will be added at load.
+
+	BEL_ = {
+		warscore_cost_vs_other_religion = -0.25 
+	}
+
+	BEL_ = {
+	}
+
+	BEL_congo_exploration = {
+		global_colonial_growth = 35 
+	}
+
+	BEL_ = {
+	}
+
+	BEL_ = {
+	}
+
+	BEL_ = {
+	}
+
+	BEL_ = {
+	}
+}
+
+# Balkan League
+BKL_ideas = { 
+	start = {
+		land_morale = 0.1 
+		siege_ability = 0.1 
+	}
+
+	bonus = {
+		cavalry_cost = -0.2 
+	}
+
+	trigger = {
+		tag = BKL
+	}
+	free = yes	# will be added at load.
+
+	BKL_bulwark_against_the_ottomans = {
+		hostile_attrition = 1 
+	}
+
+	BKL_balkan_manpower = {
+		global_manpower_modifier = 0.15
+	}
+
+	BKL_reduced_balkan_autonomy = {
+		min_autonomy = 0.05
+		global_autonomy = -0.05 
+	}
+
+	BKL_patriarchate_of_constantinople = {
+		global_tax_modifier = 0.10
+	}
+
+	BKL_armies_of_the_east = {
+		land_morale = 0.1 
+	}
+
+	BKL_the_balkan_alliances = {
+		prestige = 0.5 
+	}
+
+	BKL_turk_defense = {
+		garrison_size = 0.20
+	}
+}
+
+# Benelux
+BNL_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BNL
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Bosnia-Serbia
+BSK_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BSK
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Basque Country
+BSQ_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BSQ
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Baltic Union
+BTC_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BTC
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Brandenburg-Prussia
+BRP_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BRP
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Bremen-Verden
+BVE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = BVE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Carthage
+CTG_ideas = {
+	trigger = {
+		tag = CTG
+	}
+	free = yes	# will be added at load.
+	start = {
+		leader_land_shock = 1 # Legacy of Hannibal
+		leader_land_manuever = 1 # Legacy of Hannibal
+	}
+	bonus = {
+		leader_land_fire = 1 # Legacy of Hannibal + ALL Ideas Completed
+	}
+	CTG_phoenician_trade_plans = {
+		global_trade_power = 0.1 # phoenician trade plans
+	}
+	CTG_carthaginian_governmental_ideas = {
+		stability_cost_modifier = 0.15 # Carthaginian governmental ideas
+	}
+	CTG_counquest_of_fertile_land = {
+		global_manpower_modifier = 0.1	# Conquest of Fertile land
+	}
+	CTG_punic_researchers = {
+		technology_cost = -0.05	# Punic Researchers 
+	}
+	CTG_cannanite_beliefs = {
+		missionaries = 1 # Canaanite Beliefs
+		missionary_maintenance_cost = -0.10
+	}
+	CTG_conversion_efforts = {
+		religious_unity = 0.3 # Conversion Efforts
+	}
+	CTG_carthage_unique_centralized_government = {
+		heir_chance = 0.65 # Carthage Unique Centralized Government
+	}
+}
+
+# Caucasia
+CAU_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = CAU
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Celtic Union
+CEU_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = CEU
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# China
+CHN_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = CHN
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# China PRC
+PRC_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = PRC
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Cisalpina Republic
+CIS_ideas = {
+	start = {
+		republican_tradition = 0.10 # Traditions of Republicanism
+		production_efficiency = 0.20 # Farm-Based Nation
+	}
+	bonus = {
+		state_maintenance_modifier = -0.20 # Effective State & Goverment
+	}
+
+	trigger = {
+		tag = AHE
+	}
+	free = yes	# will be added at load.
+
+	CIS_harsh_general_training = {
+		harsh_treatment_cost = -0.4	# Harsh General Training
+	}
+
+	CIS_papal_decree = {
+		papal_influence = 0.8 # Papal Decree of Autonomy
+	}
+
+	CIS_religious_stability = {
+		religious_unity = 0.2
+	}
+
+	CIS_religious_defender = {
+		enforce_religion_cost = -0.5
+	}
+
+	CIS_italian_goods = {
+		global_trade_goods_size_modifier = 0.2
+	}
+
+	CIS_birthplace_of_renissance = {
+		global_institution_spread = 0.5
+	}
+
+	CIS_partisan_rear_cannons = {
+		backrow_artillery_damage = 0.3
+	}
+}
+
+# Czechoslovakia
+CZE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = CZE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# East Prussia
+EPR_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = EPR
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Emilia-Romagna
+ERO_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = ERO
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# European Union
+EUR_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = EUR
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Franco Iberian Empire
+FIB_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = FIB
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Franconia
+FRC_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = FRC
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# French Empire
+FRE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = FRE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Frieslande
+FRL_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = FRL
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# German Empire
+GEP_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = GKR
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Goguryeo
+GKR_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = GKR
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Hesse-Nassau
+HEN_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = HEN
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Himalayan Empire
+HIM_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = HIM
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Iberian Empire
+IBE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = IBE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Italian Empire
+ITE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = ITE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Italian Merchant Alliance
+IMA_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = IMA
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Empire of Japan
+JAE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = JAE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Jagiellonian Empire
+JGE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = JGE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Kingdom of God
+KOG_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = KOG
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Kievan Rus
+KRV_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = KRV
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Lombardy Venitia
+LVE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = LVE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Lower Saxony
+LSX_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = LSX
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Lusitanian Empire
+LSE_ideas = { 
+	start = {
+		trade_range_modifier = 0.35
+		trade_efficiency = 0.50
+	}
+
+	bonus = {
+		global_tariffs = 0.25
+	}
+
+	trigger = {
+		tag = LSE
+	}
+	free = yes	# will be added at load.
+
+	legacy_of_the_navigator = {
+		range = 0.30
+		global_sailors_modifier = 0.30
+	}
+	afonsine_ordinances = {
+		global_trade_goods_size_modifier = 0.2
+	}
+	case_de_india = {
+		global_trade_power = 0.2
+	}
+	the_bandeirantes = {
+		merchants = 2
+	}
+	royal_absolutism = {
+		build_cost = -0.20
+		yearly_absolutism = 0.2
+	}
+	land_before_faith = {
+		global_colonial_growth = 25
+	}
+	open_up_the_guilds = {
+		trade_efficiency = 0.2
+	}
+}
+
+# Macedon
+MGH_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = MGH
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Maghrebia
+MGH_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = MGH
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# North German Confederation
+NGC_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = NGC
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# North Sea Empire
+NSE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = NSE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Pontus
+PON_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = PON
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Rhine Confederation
+RHE_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = RHE
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Roman Republic
+ROP_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = ROP
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Saudi Arabia
+SRB_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = SRB
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Siebenbuergen
+SBG_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = SBG
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# South German Federation
+SGF_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = SGF
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Soviet Union
+SOV_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = SOV
+	}
+	free = yes	# will be added at load.
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+
+	aaaa = {
+	}
+}
+
+# Sweden-Norway
+SNO_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = SNO
+	}
+	free = yes	# will be added at load.
+
+	SNO_protestant_union = {
+		global_missionary_strength = 0.03
+		missionaries = 1
+	}
+
+	SNO_treaty_of_kiel = {
+	}
+
+	SNO_ = {
+	}
+
+	SNO_ = {
+	}
+
+	SNO_act_of_union = {
+	}
+
+	SNO_ = {
+	}
+
+	SNO_ = {
+	}
+}
+
+# Tibetan Empire
+TIE_ideas = { 
+	start = {
+		general_cost = -0.2
+		autonomy_change_time = -0.50
+	}
+
+	bonus = {
+		prestige_decay = -0.06
+	}
+
+	trigger = {
+		tag = TIE
+	}
+	free = yes	# will be added at load.
+
+	TIE_legacy_of_tibet = {
+		legitimacy = 1
+	}
+
+	TIE_four_homs = { # the Four Horns (administrative divisions) of the Tibetan Empire in the 7th century
+		global_unrest = -2
+	}
+
+	TIE_vassal_control = {
+		reduced_liberty_desire_on_same_continent = 100
+	}
+
+	TIE_tibetan_spies = {
+		rebel_support_efficiency = 0.5
+		spy_offence = 0.2
+	}
+
+	TIE_tibetan_buddhism = {
+		missionaries = 1
+		cb_on_religious_enemies = yes
+	}
+
+	TIE_asian_empire = {
+		warscore_cost_vs_other_religion = -0.15 # Counter the Chinese Emperors as the Tibetan Empire
+	}
+
+	TIE_dynastic_successes = {
+		heir_chance = 0.3
+	}
+}
+
+# Turkey
+TRR_ideas = { 
+	start = { # Fatherland of the Turks
+		enemy_core_creation = 0.4
+		sailor_maintenance_modifer = -0.1
+	}
+
+	bonus = { # Progressive Republic
+		may_recruit_female_generals = yes
+	}
+
+	trigger = {
+		tag = TRR
+	}
+	free = yes	# will be added at load.
+
+	TRR_legacy_of_sultan_mehmet_vi = { # Changes the election system to historical 5 year elections, and reduces the cost - Has some historical information about Sultan Mehmet VIs Abdication and whatnot
+		election_cycle = 1
+		reelection_cost = -0.5
+	}
+
+	TRR_embrace_radical_reforms = { # Reform womens right, ban the fez, embrace new writing systems
+		global_unrest = -2
+		discipline = 0.05
+	}
+
+	TRR_allied_powers_betrayal = { # explains the betrayal of the allied powers and allows for -50% unjustified demands as reparations for the betrayal of the west
+		unjustified_demands = -0.5
+	}
+
+	TRR_western_technologies = { # embraces the newer technologies of the west 
+		embracement_cost = -0.1
+	}
+
+	TRR_ataturk = { # Father of the turks ( Atatürk )
+		republican_tradition = 0.5
+		army_tradition_decay = -0.1
+	}
+
+	TRR_great_turkish_bombards = {
+		siege_ability = 0.1 
+	}
+
+	TRR_turkish_republic = {
+		state_governing_cost = 0.3
+		build_cost = -0.1
+		build_time = -0.1
+	}
+}
+
+# United Kingdom
+UKI_ideas = { 
+	start = { # Union of Great Britain and Ireland
+		navy_tradition = 1 
+		liberty_desire_from_subject_development = -0.10
+	}
+
+	bonus = { # Maritime Empire
+		navy_tradition_decay = -0.15
+		global_sailors_modifier = 0.1
+	}
+
+	trigger = {
+		tag = UKI
+	}
+	free = yes	# will be added at load.
+
+	UKI_britannia_rule_the_waves = {
+		navy_tradition = 2
+		global_ship_cost = -0.25
+	}
+
+	UKI_scottish_irish_domains = {
+		global_unrest = -2
+	}
+
+	UKI_convert_the_heathens = {
+		culture_conversion_cost = -0.05
+		global_missionary_strength = 0.5
+	}
+
+	UKI_anglican_church = {
+		missionaries = 1
+	}
+
+	UKI_naval_expansion_reforms = {
+		naval_forcelimit_modifier = 0.2
+	}
+
+	UKI_british_isles = {
+		ae_impact = -0.2
+	}
+
+	UKI_global_development = {
+		build_cost = -0.1
+		development_cost = -0.1
+	}
+}
+
+# Yugoslavia
+YUG_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = YUG
+	}
+	free = yes	# will be added at load.
+
+	YUG_ = {
+
+	}
+	YUG_ = {
+	
+	}
+	YUG_ = {
+	 
+	}
+	YUG_ = {
+		
+	}
+	YUG_ = {
+		
+	}
+	YUG_ = {
+		
+	}
+	YUG_ = {
+		
+	}	
 }

@@ -1,8 +1,8 @@
-#Country Name: Please see filename.
+# Republic of Armenia
 
 graphical_culture = easterngfx
 
-color = { 145  30  75 }
+color = { 145 30 75 }
 
 historical_idea_groups = {
 	defensive_ideas

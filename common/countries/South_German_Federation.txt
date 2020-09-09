@@ -1,4 +1,5 @@
-#Swabia
+# South German Federation
+
 graphical_culture = westerngfx
 
 color = { 160 160 160 }

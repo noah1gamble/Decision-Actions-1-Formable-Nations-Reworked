@@ -1,8 +1,8 @@
-#Lower Saxony
+# Lower Saxony
 
 graphical_culture = westerngfx
 
-color = { 49  103  69 }
+color = { 49 103 69 }
 
 historical_idea_groups = {
 	trade_ideas

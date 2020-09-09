@@ -2,6 +2,5 @@ government = monarchy
 add_government_reform = plutocratic_reform
 technology_group = western
 primary_culture = prussian
-culture_group_union = germanic
 religion = protestant
 capital = 50 # Berlin

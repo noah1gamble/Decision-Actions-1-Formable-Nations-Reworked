@@ -12,7 +12,7 @@ country_decisions = {
 				exists = ALG
 				tag = MOR 
 				tag = TUN
-				tag = TLC
+				# tag = TLC - Removed
 				tag = ALG
 				tag = PAP
 				tag = HLR
@@ -76,8 +76,9 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
+				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -85,15 +86,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = despotic_monarchy
-				}
+				# Reform Change
 				add_government_reform = autocracy_reform
 				# Our Place in the Empire Custom Event
 				if = {
@@ -156,6 +149,7 @@ country_decisions = {
 			# Increased Centralization
 			add_country_modifier = {
 				name = dec1_increased_centralization
+				duration = -1
 			}				
 		}
 		ai_will_do = {

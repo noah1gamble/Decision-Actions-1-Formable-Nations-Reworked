@@ -1,4 +1,4 @@
-#Europe
+# Europe
 
 graphical_culture = westerngfx
 

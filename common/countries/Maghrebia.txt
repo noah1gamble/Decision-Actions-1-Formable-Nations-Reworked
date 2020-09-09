@@ -1,4 +1,4 @@
-#Maghrebia
+# Maghrebia
 
 graphical_culture = muslimgfx
 

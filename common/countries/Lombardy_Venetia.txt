@@ -1,8 +1,8 @@
-#Lombardy-Venetia
+# Lombardy-Venetia
 
 graphical_culture = westerngfx
 
-color = { 0  100  49 }
+color = { 0 100 49 }
 
 
 historical_idea_groups = {	

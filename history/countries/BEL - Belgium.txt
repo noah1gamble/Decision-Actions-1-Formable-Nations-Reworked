@@ -9,7 +9,6 @@ capital = 92 # Brabant
 1399.1.1 = {
 	monarch = {
 		name = "Antoine"
-		monarch_name = "Antoine"
 		dynasty = "de Valois"
 		birth_date = 1384.1.1
 		death_date = 1415.10.25

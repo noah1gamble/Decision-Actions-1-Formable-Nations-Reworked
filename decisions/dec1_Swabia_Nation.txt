@@ -9,9 +9,9 @@ country_decisions = {
 			primary_culture = swabian
 			NOT = { 
 				has_country_flag = formed_swabia_flag
-				exists = SWB
-				tag = PAP 
-				tag = SWB
+				exists = SWA 
+				tag = SWA
+				tag = PAP
 				tag = HLR
 				tag = SWI
 				tag = EUR
@@ -44,7 +44,7 @@ country_decisions = {
 		}		
 		allow = {
 			adm_tech = 5
-			NOT = { exists = SWB }
+			NOT = { exists = SWA }
 			is_subject = no
 			is_at_war = no		
 			owns_core_province = 70 # Wurttemberg
@@ -59,19 +59,20 @@ country_decisions = {
 			owns_core_province = 1869 # Zurich
 		}
 	 	effect = {
-			change_tag = SWB # Country TAG
+			change_tag = SWA # Country TAG
 			set_country_flag = formed_swabia_flag # Country Formation Flag
 			custom_tooltip = form_swabia_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank	
-			SWB = { # Capital change and bonuses				
+			SWA = { # Capital change and bonuses				
 				set_capital = 1868 # Augsburg
 				1868 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
+				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -79,15 +80,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = despotic_monarchy
-				}
+				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -122,14 +115,15 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = SWB_ideas }
+						NOT = { has_idea_group = SWA_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}					
 		}

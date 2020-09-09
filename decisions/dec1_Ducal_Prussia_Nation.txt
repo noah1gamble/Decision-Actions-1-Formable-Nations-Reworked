@@ -10,15 +10,17 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			tag = TEU
 			NOT = {
 				has_country_flag = formed_prussia_nation_flag
 				government = theocracy				
+				exists = DCP
 				exists = PRU
+				tag = DCP
 				tag = PRU
 				tag = GER
 				tag = HLR
 				tag = BRA
-				tag = TEU
 			}
 			OR = {
 				primary_culture = prussian
@@ -77,57 +79,6 @@ country_decisions = {
 				province_id = 2994
 				province_id = 2993
 				province_id = 47
-					# South Saxony
-				province_id = 59
-				province_id = 61
-				province_id = 60
-					# North Saxony
-				province_id = 2964
-				province_id = 52
-				province_id = 58
-					# Thuringia
-				province_id = 62
-				province_id = 63
-				province_id = 2965
-					#Lower Saxony
-				province_id = 1857
-				province_id = 44
-				province_id = 53
-					# Braunschweig
-				province_id = 57
-				province_id = 1758
-				province_id = 2971
-					# Schleswig-Holstein
-				province_id = 13
-				province_id = 4141
-				province_id = 1775
-					# Weser
-				province_id = 54
-				province_id = 1874
-					# Westphalia
-				province_id = 56
-				province_id = 2972
-				province_id = 82
-				province_id = 86
-				province_id = 2973
-					# Hesse
-				province_id = 1762
-				province_id = 81
-				province_id = 1876
-				province_id = 83
-					# North Rhine
-				province_id = 84
-				province_id = 2975
-				province_id = 85
-					# Lower Rhineland
-				province_id = 1760
-				province_id = 1878
-				province_id = 80
-					# Silesia
-				province_id = 2966
-				province_id = 4238
-				province_id = 264
-				province_id = 263
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -136,7 +87,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = PRU }
+			NOT = { exists = DCP }
 			is_at_war = no
 			is_subject = no	
 			custom_trigger_tooltip = {
@@ -173,77 +124,26 @@ country_decisions = {
 					# Vorpommern
 				owns_core_province = 2994
 				owns_core_province = 2993
-				owns_core_province = 47
-					# South Saxony
-				owns_core_province = 59
-				owns_core_province = 61
-				owns_core_province = 60
-					# North Saxony
-				owns_core_province = 2964
-				owns_core_province = 52
-				owns_core_province = 58
-					# Thuringia
-				owns_core_province = 62
-				owns_core_province = 63
-				owns_core_province = 2965
-					#Lower Saxony
-				owns_core_province = 1857
-				owns_core_province = 44
-				owns_core_province = 53
-					# Braunschweig
-				owns_core_province = 57
-				owns_core_province = 1758
-				owns_core_province = 2971
-					# Schleswig-Holstein
-				owns_core_province = 13
-				owns_core_province = 4141
-				owns_core_province = 1775
-					# Weser
-				owns_core_province = 54
-				owns_core_province = 1874
-					# Westphalia
-				owns_core_province = 56
-				owns_core_province = 2972
-				owns_core_province = 82
-				owns_core_province = 86
-				owns_core_province = 2973
-					# Hesse
-				owns_core_province = 1762
-				owns_core_province = 81
-				owns_core_province = 1876
-				owns_core_province = 83
-					# North Rhine
-				owns_core_province = 84
-				owns_core_province = 2975
-				owns_core_province = 85
-					# Lower Rhineland
-				owns_core_province = 1760
-				owns_core_province = 1878
-				owns_core_province = 80
-					# Silesia
-				owns_core_province = 2966
-				owns_core_province = 4238
-				owns_core_province = 264
-				owns_core_province = 263				
+				owns_core_province = 47			
 			}
 		}
 	 	effect = {
-			change_tag = PRU # Country TAG
+			change_tag = DCP # Country TAG
 			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
 			custom_tooltip = form_prussia_tt_2 # New Missions
-			custom_tooltip = form_prussia_tt_3 # Claims
 			custom_tooltip = form_prussia_tt_4 # Claims
 			custom_tooltip = form_prussia_tt_5 # Claims
 			custom_tooltip = dec1_decisions_blank	
-			PRU = { # Capital change and bonuses				
+			DCP = { # Capital change and bonuses				
 				set_capital = 41 # Konigsberg
 				41 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
+				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -251,15 +151,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = prussian_monarchy_legacy
-				}
+				# Reform Change
 				add_government_reform = prussian_monarchy
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -271,33 +163,27 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					swap_non_generic_missions = yes  # New Missions	
-					# Claims
-					pomerelia_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = PRU
-					}					
+					# Claims				
 					west_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = PRU
+						add_permanent_claim = DCP
 					}	
 					east_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = PRU
+						add_permanent_claim = DCP
 					}									
 					# Government Rank change				
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 2
+								government_rank = 1
 								}
 							}
-						set_government_rank = 2
+						set_government_rank = 1
 					}
 					# Government Type Change
 					if = {
@@ -313,14 +199,15 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = PRU_ideas }
+						NOT = { has_idea_group = DCP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}					
 		}

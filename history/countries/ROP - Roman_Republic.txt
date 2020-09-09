@@ -1,6 +1,6 @@
 primary_culture = umbrian
-culture_group_union = byzantine
-culture_group_union = italian
+government = republic
+add_government_reform = republican_dictatorship
 religion = orthodox
 technology_group = eastern
 historical_rival = PER

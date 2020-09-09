@@ -1,8 +1,8 @@
-#Italian Merchant Alliance
+# Italian Merchant Alliance
 
 graphical_culture = westerngfx
 
-color = { 237  89  23 }
+color = { 237 89 23 }
 
 historical_score = 850
 

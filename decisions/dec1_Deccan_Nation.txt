@@ -172,6 +172,7 @@ country_decisions = {
 				}
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
 		}

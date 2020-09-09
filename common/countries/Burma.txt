@@ -1,8 +1,8 @@
-#Burma
+# Burma
 
 graphical_culture = asiangfx
 
-color = { 165  111  80 }
+color = { 165 111 80 }
 
 historical_idea_groups = {
 	defensive_ideas

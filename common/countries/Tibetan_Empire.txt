@@ -1,8 +1,8 @@
-#Himalayan_Empire
+# Tibetan Empire
 
 graphical_culture = asiangfx
 
-color = { 211  84  79 }
+color = { 120 84 79 }
 
 historical_idea_groups = {
 	quantity_ideas

@@ -1,8 +1,8 @@
-#Country Name: Please see filename.
+# Hesse-Nassau
 
 graphical_culture = westerngfx
 
-color = { 36  109  194 }
+color = { 36 109 194 }
 
 historical_idea_groups = {
 	trade_ideas
@@ -87,7 +87,7 @@ leader_names = {
 	Hamm
 	Kassel Knyphausen
 	Lippstadt
-	Münden
+	Mï¿½nden
 	Paderborn
 	"von Scheideck"
 }

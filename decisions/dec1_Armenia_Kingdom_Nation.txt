@@ -10,9 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			culture_group = caucasian
 				NOT = {
-					primary_culture = turkish # Armenian Genocide
 					has_country_flag = formed_armenia_kingdom_nation_flag
 					exists = ARM
 					exists = ARR
@@ -186,8 +184,8 @@ country_decisions = {
 							NOT = { has_idea_group = ARM_ideas }
 						}
 						country_event = { id = ideagroups.1 }
+						custom_tooltip = dec1_decisions_blank
 					}
-					custom_tooltip = dec1_decisions_blank
 					# Increased Centralization
 					add_country_modifier = {
 						name = dec1_increased_centralization

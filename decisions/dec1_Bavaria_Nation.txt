@@ -1,0 +1,172 @@
+country_decisions = {
+
+	bavaria_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_bavaria_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = BAV }
+			primary_culture = bavarian
+		}
+		provinces_to_highlight = {
+			OR = {
+				#other claimants are gone
+				AND = {
+					ROOT = { NOT = { tag = LBV } }
+					LBV = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = LBV
+				}
+				AND = {
+					ROOT = { NOT = { tag = ING } }
+					ING = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = ING
+				}
+				AND = {
+					ROOT = { NOT = { tag = UBV } }
+					UBV = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = UBV
+				}
+				#make sure you are not benefitting from others' conquests
+				AND = {
+					province_id = 65
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 64
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 2955
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+
+			if = {
+				limit = { NOT = { tag = UBV } }
+				OR = {
+					NOT = { exists = UBV }
+					UBV = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = LBV } }
+				OR = {
+					NOT = { exists = LBV }
+					LBV = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = ING } }
+				OR = {
+					NOT = { exists = ING }
+					ING = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+
+			owns_or_non_sovereign_subject_of = 65			#Munich
+			owns_or_non_sovereign_subject_of = 64			#Landshut
+			owns_or_non_sovereign_subject_of = 2955			#Ingolstadt
+		}
+		effect = {
+			change_tag = BAV
+			restore_country_name_effect = yes
+			if = {
+				limit = {
+					UBV = { is_subject_of = ROOT }
+				}
+				inherit = UBV
+			}
+			if = {
+				limit = {
+					LBV = { is_subject_of = ROOT }
+				}
+				inherit = LBV
+			}
+			if = {
+				limit = {
+					ING = { is_subject_of = ROOT }
+				}
+				inherit = ING
+			}
+			lower_bavaria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			upper_bavaria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			east_bavaria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_capital = 65
+			65 = { add_base_tax = 2 }
+			set_country_flag = formed_bavaria_flag
+
+			if = {
+				limit = {
+					NOT = { tag = UBV }
+					NOT = { tag = LBV }
+					NOT = { tag = ING }
+					NOT = { was_tag = UBV }
+					NOT = { was_tag = LBV }
+					NOT = { was_tag = ING }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

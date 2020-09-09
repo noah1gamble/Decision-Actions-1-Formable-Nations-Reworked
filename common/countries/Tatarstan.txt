@@ -1,8 +1,8 @@
-#Tatarstan
+# Tatarstan
 
 graphical_culture = muslimgfx
 
-color = { 152  167  237 }
+color = { 152 167 237 }
 
 historical_idea_groups = {
 	offensive_ideas

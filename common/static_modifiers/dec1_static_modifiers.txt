@@ -1,21 +1,79 @@
-# modifiers
+
+#############
+# Modifiers #
+#############
 
 dec1_increased_centralization = {
 	global_autonomy = -0.10
-}
-
-# National Abilities
-
-dec1_house_of_solomon = {
-	global_unrest = -2
-}
-
-dec1_foundation_chinese_communist_party = {
-	global_unrest = 1
-	culture_conversion_cost = -0.35
 }
 
 dec1_abolished_the_mandate_of_heaven = {
 	stability_cost_modifier = 0.05
 	legitimacy = -1
 }
+
+######################
+# National Abilities #
+######################
+
+	# Abyssinia
+
+dec1_house_of_solomon = {
+	global_unrest = -2
+}
+
+	# Adricatic Empire
+
+dec1__mare_superum = {
+	merchants = 1
+}
+
+	# Alpland
+
+dec1_tough_terrain_castles = {
+	local_defensiveness = 2.0
+}
+
+	# Alscase-Lorraine
+
+dec1_germanic_franco_influences = {
+	discipline = 0.5
+}
+
+	# Angevin Empire
+
+dec1_legacy_of_the_angevins = {
+	diplomatic_reputation = 1
+	diplomatic_upkeep = 1
+}
+
+	# Anglo-Dutch Union
+
+dec1_symbiotic_empire = {
+	legitimacy = 1
+	diplomatic_reputation = 1
+}
+
+	# Arabian Kingdom
+
+dec1 = {
+	
+}
+
+
+
+	# People's Republic of China
+
+dec1_foundation_chinese_communist_party = {
+	global_unrest = 1
+	culture_conversion_cost = -0.35
+}
+
+	# Jagiellonian Empire
+
+dec1_jagiellonian_empire_union_of_persistence = {
+	monarch_diplomatic_power = 2
+}
+
+	# 
+

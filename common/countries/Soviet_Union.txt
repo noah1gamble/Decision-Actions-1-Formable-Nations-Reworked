@@ -1,8 +1,8 @@
-#Soviet Union
+# The Soviet Union
 
 graphical_culture = easterngfx
 
-color = { 200  0  0 }
+color = { 200 0 0 }
 
 historical_score = 5300
 

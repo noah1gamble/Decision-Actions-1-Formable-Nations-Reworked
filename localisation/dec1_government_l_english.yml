@@ -1,0 +1,27 @@
+﻿l_english:
+
+ ###########################
+ # GOVERNMENT LOCALISATION #
+ ###########################
+
+ socialist_republic_prc: "one-party Socialist Republic"
+ socialist_republic_prc_desc: "The People's Republic of China Government System - TODO"
+ 
+ ###################################
+ # GOVERNMENT REFORMS LOCALISATION #
+ ###################################
+
+    # Highest Authority
+ dec1_communist_party_of_china: "The Communist Party of China"
+ dec1_communist_party_of_china_influence: "Communist Party Influence"
+ dec1_communist_party_of_china_FACTION_DESC: "The People's Party Description - TODO"
+
+    # Most Centralized Authority
+ dec1_politburo: "The Politburo of China"
+ dec1_politburo_influence: "Politburo Influence"
+ dec1_politburo_FACTION_DESC: "The Politburo Description - TODO"
+ 
+    # Lowest Authority
+ dec1_national_peoples_congress: "National People's Congress"
+ dec1_national_peoples_congress_influence: "People's Congress Influence"
+ dec1_national_peoples_congress_FACTION_DESC: "National People's Congress Description - TODO"

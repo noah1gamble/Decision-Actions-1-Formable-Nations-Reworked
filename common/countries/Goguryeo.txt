@@ -1,4 +1,4 @@
-#Goguryeo - Korean Empire - TODO: USES TIBET INFORMATION, UPDATE!
+# Goguryeo - Korean Empire - TODO: USES TIBET INFORMATION, UPDATE!
 
 graphical_culture = asiangfx
 

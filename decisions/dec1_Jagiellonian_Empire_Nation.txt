@@ -14,6 +14,7 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_jagiellon_empire_flag
 				exists = JGE
+				tag = JGE
 				tag = PAP
 				tag = RUS
 				tag = HLR
@@ -118,15 +119,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = monarchy_legacy
-				}
+				# Reform Change
 				add_government_reform = autocracy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -171,11 +164,12 @@ country_decisions = {
 						NOT = { has_idea_group = AEH_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
 		}
@@ -200,6 +194,12 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_jagiellon_empire_flag
 				exists = JGE
+				tag = JGE
+				tag = PAP
+				tag = RUS
+				tag = HLR
+				tag = EUR
+				tag = TUR				
 			}
 		}
 		allow = {
@@ -211,9 +211,12 @@ country_decisions = {
 				OR = {
 					NOT = { exists = HUN }
 					HUN = {
-						OR = {
-							junior_union_with = ROOT
-							vassal_of = ROOT
+						custom_trigger_tooltip = {
+							tooltip = form_jagiellonian_empire_tt_1
+							OR = {
+								junior_union_with = ROOT
+								vassal_of = ROOT
+							}
 						}
 					}
 				}
@@ -238,143 +241,106 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			change_tag = JGE
-			set_country_flag = formed_jagiellon_empire_flag
-			if = {
-				limit = {
-					HUN = {
-						exists = yes
-						ai = yes
+			change_tag = JGE # Country TAG
+			set_country_flag = formed_jagiellon_empire_flag # Country Formation Flag
+			custom_tooltip = formed_jagiellon_empire_tt_4 # New Missions
+			custom_tooltip = formed_jagiellon_empire_tt_5 # Region/Area Claims	
+			custom_tooltip = formed_jagiellon_empire_tt_6 # Region/Area Claims	
+			custom_tooltip = formed_jagiellon_empire_tt_7 # Region/Area Claims	
+			custom_tooltip = formed_jagiellon_empire_tt_8 # Region/Area Claims	
+			custom_tooltip = dec1_decisions_blank	
+			JGE = { # Capital change and bonuses				
+				set_capital = 257 # Warszawa
+				JGE = {
+					257 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
 					}
 				}
-				inherit = HUN
-			}
-			if = {
-				limit = {
-					BOH = {
-						exists = yes
-						ai = yes
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
 					}
-				}
-				inherit = BOH
-			}
-			if = {
-				limit = {
-					POL = {
-						exists = yes
-						ai = yes
-					}
-				}
-				inherit = POL
-			}
-			set_capital = 257 # Warszawa
-			JGE = {
-				257 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-			}
-			custom_tooltip = dec1_decisions_spacing
-			poland_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			ruthenia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			carpathia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			baltic_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = JGE
-			}
-			custom_tooltip = dec1_decisions_blank
-			JGE = {
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Changes
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					poland_region = {
 						limit = {
-							is_part_of_hre = yes
+							NOT = { owned_by = ROOT }
 						}
-						set_in_empire = no
+						add_permanent_claim = JGE
 					}
-				}
-			}
-			JGE = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
+					ruthenia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					change_government = monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-							}
+						add_permanent_claim = JGE
+					}
+					carpathia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_legacy_government = despotic_monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 2
-							}
+						add_permanent_claim = JGE
+					}
+					baltic_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					set_government_rank = 2
+						add_permanent_claim = JGE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			JGE = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = JGE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
+				# National Ability check and change
+				add_country_modifier = {
+					name = dec1_jagiellonian_empire_union_of_persistence
+					duration = 18250 # 50 years
+				}
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1 # forever
 				}
 			}
 		}

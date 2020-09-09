@@ -1,4 +1,4 @@
-#Roman_Empire
+# Roman Republic - NOTE: uses Roman Empire information, perhaps needs to be adjusted?
 
 graphical_culture = easterngfx
 

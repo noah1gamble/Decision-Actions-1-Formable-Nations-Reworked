@@ -1,8 +1,8 @@
-#Franconia
+# Franconia
 
 graphical_culture = westerngfx
 
-color = { 122  17  23 }
+color = { 122 17 23 }
 
 historical_idea_groups = {
 	defensive_ideas

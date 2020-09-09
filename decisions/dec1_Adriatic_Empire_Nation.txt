@@ -16,10 +16,10 @@
 				tag = CIS
 				tag = EUR
 				tag = IMA
-				tag = ROE
+				tag = ROM
 				tag = LVE
 				tag = ITA
-				tag = TSI
+				tag = TTS
 				tag = YUG
 			}
 			OR = {
@@ -37,7 +37,6 @@
 				province_id = 112
 				province_id = 1774
 				province_id = 111
-				province_id = 108
 					# Emilia-Romagna
 				province_id = 113
 				province_id = 114
@@ -50,18 +49,24 @@
 				province_id = 1933
 				province_id = 122
 					# Carniola
-				province_id = 1769
+				province_id = 4729
+				province_id = 4733
+				province_id = 4738
+				province_id = 4752
 				province_id = 130
 					# East Adriatic
 				province_id = 1826
 				province_id = 136
 				province_id = 137
 					# Rascia
-				province_id = 138
+				province_id = 4754
 					# Albania
 				province_id = 4174
 				province_id = 4175
 				province_id = 143
+					# Corfu
+				province_id = 142
+				province_id = 144
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -80,7 +85,6 @@
 				owns_core_province = 112
 				owns_core_province = 1774
 				owns_core_province = 111
-				owns_core_province = 108
 					# Emilia-Romagna
 				owns_core_province = 113
 				owns_core_province = 114
@@ -93,18 +97,24 @@
 				owns_core_province = 1933
 				owns_core_province = 122
 					# Carniola
-				owns_core_province = 1769
+				owns_core_province = 4729	
+				owns_core_province = 4733
+				owns_core_province = 4738
+				owns_core_province = 4752
 				owns_core_province = 130
 					# East Adriatic
 				owns_core_province = 1826
 				owns_core_province = 136
 				owns_core_province = 137
 					# Rascia
-				owns_core_province = 138
+				owns_core_province = 4754
 					# Albania
 				owns_core_province = 4174
 				owns_core_province = 4175
 				owns_core_province = 143
+					# Corfu
+				owns_core_province = 142
+				owns_core_province = 144
 			}
 		}
 	 	effect = {
@@ -117,8 +127,9 @@
 			ADR = { # Capital change and bonuses				
 				set_capital = 112 # Venezia
 				112 = {
-					add_base_tax = 2
-					add_base_production = 2
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank				
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
@@ -129,15 +140,7 @@
 					}
 					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = merchant_republic
-				}
+				# Reform Change
 				add_government_reform = merchants_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -190,9 +193,15 @@
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+				# National Ability
+				add_country_modifier = {
+					name = dec1_mare_superum
+					duration = -1
+				}					
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}				
 			}			
 		}

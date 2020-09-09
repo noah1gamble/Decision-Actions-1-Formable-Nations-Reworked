@@ -82,7 +82,7 @@
  china_nation_desc: "The last days of the Qing dynasty in the late 19th and early 20th centuries were marked by civil unrest and foreign invasions. Various internal rebellions caused millions of deaths, and conflicts with foreign Western European powers almost always resulted in humiliating unequal treaties that exacted costly reparations and compromised the country's territorial integrity. In addition, there were sentiments that political power should return to the majority Han Chinese from the minority Manchus from the northeastern province of Manchuria." 
 
  cisalpina_nation_title: "@CIS The Cisalpine Republic"
- cisalpina_nation_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag.\n\n§YCisalpina§! §RCANNOT§! form any §YItalian§! formable nation."
+ cisalpina_nation_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag.\n\n§YCisalpina§! §RCANNOT§! form any §YItalian§! nations."
 
  czechoslovakia_nation_title: "@CZE Unite Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
@@ -141,8 +141,8 @@
  jagiellonian_empire_nation_title: "@JGE Restore the Jagiellonian Empire"
  jagiellonian_empire_nation_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania, who in 1386 was baptized as Władysław, married Queen regnant Jadwiga of Poland, and was crowned King of Poland as Władysław II Jagiełło. The dynasty reigned in several Central European countries between the 14th and 16th centuries. Members of the dynasty were Kings of Poland (1386–1572), Grand Dukes of Lithuania (1377–1392 and 1440–1572), Kings of Hungary (1440–1444 and 1490–1526), and Kings of Bohemia (1471–1526)."
 
- jagiellonian_empire_nation_lithuania_title: "@JGE Our Lithuanian Empire"
- jagiellonian_empire_nation_lithuania_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania, who in 1386 was baptized as Władysław, married Queen regnant Jadwiga of Poland, and was crowned King of Poland as Władysław II Jagiełło. The dynasty reigned in several Central European countries between the 14th and 16th centuries. Members of the dynasty were Kings of Poland (1386–1572), Grand Dukes of Lithuania (1377–1392 and 1440–1572), Kings of Hungary (1440–1444 and 1490–1526), and Kings of Bohemia (1471–1526)."
+ jagiellonian_empire_nation_lithuania_title: "@JGE Lithuanian Empire"
+ jagiellonian_empire_nation_lithuania_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania."
 
  arab_kingdom_nation_title: "@KAB Unite The Arabian People"
  arab_kingdom_nation_desc: "The Kingdom of Arabia is a country encompassing the entirety of the Arabian Peninsula. It is bordered by Iraq, Jordan and Egypt to the north, with the Red Sea to its west, the Persian Gulf to its east, and the Atlantic Ocean to the south, with its political capital in Mecca, and its Sunni Islam religious capital also Mecca."
@@ -186,7 +186,7 @@
  siebenbuergen_nation_title: "@SBG Siebenbuergen"
  siebenbuergen_nation_desc: "Siebenbuergen means "Seven Castles", named after the seven Transylvanian Saxons' cities. With the formation of a unified state through both diplomatic and militaristic means we are able to establish a new state based upon the foundation of our Germanic legacy." 
 
- swabia_nation_title: "@SWB The Swabian Kingdom"
+ swabia_nation_title: "@SWA The Swabian Kingdom"
  swabia_nation_desc: "The foundation of the Kingdom Swabia unites the hostile countries in the southern Holy Roman Empire. the country attains an important and mighty position in the empire in only few years."
 
  sweden_norway_nation_title: "@SNO Sweden-Norway"
@@ -201,7 +201,10 @@
  turkey_nation_title: "@TRR The Republic of Turkey"
  turkey_nation_desc: "The Republic of Turkey was created after the overthrow of Sultan Mehmet VI Vahdettin by the new Republican Parliament in 1922. This new regime delivered the coup de grâce to the Ottoman state which had been practically wiped away from the world stage following the First World War."
 
- two_sicilies_nation_title: "@TSI Restore the Kingdom of Two Sicilies"
+ turkey_nation_ottomans_title: "@TRR The Turkish Republic"
+ turkey_nation_ottomans_desc: "The Republic of Turkey was created after the overthrow of Sultan Mehmet VI Vahdettin by the new Republican Parliament in 1922. This new regime delivered the coup de grâce to the Ottoman state which had been practically wiped away from the world stage following the First World War." 
+
+ two_sicilies_nation_title: "@TTS Restore the Kingdom of Two Sicilies"
  two_sicilies_nation_desc: "The Kingdom of Two Sicilies is the union between the Kingdom Sicily and the Kingdom Naples. Together these kingdoms can compete with the Spaniards just as with other Italians."
 
  united_kingdom_nation_title: "@UKI The United Kingdom"
@@ -213,10 +216,13 @@
  united_kingdom_nation_gb_title: "@UKI The United Kingdom"
  united_kingdom_nation_gb_desc: "The United Kingdom of Great Britain and Ireland was a sovereign state established by the Acts of Union 1800, which merged the kingdoms of Great Britain and Ireland"
 
- yugoslavia_nation_title: "@YUG the Yugoslavian Kingdom"
- yugoslavia_nation_desc: "The country was formed in 1918 immediately after World War I as the Kingdom of Serbs, Croats and Slovenes by union of the State of Slovenes, Croats and Serbs and the Kingdom of Serbia. It was commonly referred to at the time as the "Versailles state"""
+ yugoslavia_nation_title: "@YUG The Yugoslavian Kingdom"
+ yugoslavia_nation_desc: "The country was formed in 1918 immediately after World War I as the Kingdom of Serbs, Croats and Slovenes by union of the State of Slovenes, Croats and Serbs and the Kingdom of Serbia. It was commonly referred to at the time as the 'Versailles state'."
 
-  # NOTE: Reworked Vanilla Nations - Reworked Vanilla Nations - Reworked Vanilla Nations
+ kievan_rus_nation_title: "@KRV The Kieven Rus"
+ kievan_rus_nation_desc: ""
+ 
+  # Reworked Vanilla Nations #
 
  algiers_nation_title: "@ALG Emirate of Algiers"
  algiers_nation_desc: "The central part of the Maghreb has always been subjected to the whims of more powerful states based in the east or west. We must not allow history to repeat itself. By seizing the great port of Al-Djazair as well as some of the other important coastal cities in the region we can lay the foundation of a strong united state with a maritime focus which will allow us to surpass our historical enemies in the east and west."
@@ -246,7 +252,7 @@
  hindustan_nation_desc: "We can proclaim the mighty Hindustan and bring all the lands of the Indian subcontinent under your rule as the rightful ruler."
 
  unite_italian_nation_title: "@ITA Risorgimento"
- unite_italian_nation_desc: "As the heart of the Renaissance, our nation is blossoming culturally.\n\nWe have just entered the beginning of what looks like a prolonged artistic rebellion, especially in the field of architecture and literature.\n\nThe cultural evolution is not aiding our country in maintaining peace within our borders however. Our country is continuously stricken by foreign states seeking power and territorial gain."
+ unite_italian_nation_desc: "As the heart of the Renaissance, our nation is blossoming culturally.\n\nWe have just entered the beginning of what looks like a prolonged artistic rebellion, especially in the field of architecture and literature.\n\nThe cultural evolution is not aiding our country in maintaining peace within our borders however. \n\nOur country is continuously stricken by foreign states seeking power and territorial gain."
  
  kingdom_of_prussia_nation_brandenburg_title: "@PRU A Prussian King"
  kingdom_of_prussia_nation_brandenburg_desc: "There is only one king in the Empire, the king of Brandenburg. At the same time our lands in Prussia are not a historic part of the Empire, let us declare ourselves King in Prussia to reflect our grander status than the other electors."
@@ -337,3 +343,40 @@
 
  gods_kingdom_nation_title: "@KOG The Kingdom of God"
  gods_kingdom_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."
+
+ ruthenian_nation_title: "@UKR Reclaim the Ruthenian Legacy"
+ ruthenian_nation_desc: "Centuries ago the land of the Rus' was united under a single banner and ruled from the legendary city Kiev. But then came the Mongol hordes, advancing from the great steppe, pillaging and burning. They destroyed our kremlins and the towns fell one by one, even Kiev itself could not avoid this fate. In terror our people fled the plains of Rus' and went north. Into the forests and hinterlands of the land we today call Russia.\n\nNow a new and arrogant city of the north is on the rise. It draws in the petty states around it and its ruler envisions a new Rus'. A Rus' centered in Moscow and not Kiev.\n\nHowever us Ruthenians will not go silent into the pages of history. We will not allow newcomers and pretenders to claim the legacy of our forefathers. Kiev shall rise once gain and we shall restore it to its former glory and splendor. So too shall the Rus'."
+
+ sardinia_piedmont_nation_title: "@SPI Sardinia-Piedmont"
+ sardinia_piedmont_nation_desc: "We now rule both Piedmont and Sardinia, and [Root.Monarch.GetName] has decided to formally unite the dual kingdoms to one power: the kingdom of Sardinia-Piedmont, the true descendant of the Taurini and the Salassi."
+
+ sardinia_piedmont_nation_savoy_sardinia_corsica_title: "@SPI Sardinia-Piedmont"
+ sardinia_piedmont_nation_savoy_sardinia_corsica_desc: "We now rule both Piedmont and Sardinia, and [Root.Monarch.GetName] has decided to formally unite the dual kingdoms to one power: the kingdom of Sardinia-Piedmont, the true descendant of the Taurini and the Salassi."
+
+ turkish_nation_title: "@RUM Restore the Sultanate of Rûm"
+ turkish_nation_desc: "Once, the Sultanate of Rûm united all the Turkish Beys and Emirs of Anatolia, but it was brought down by jealous and deceitful enemies from afar. By tearing down the empires that defile the memory of the Seljuk dynasty we can restore the Sultanate that once was. Let us unite the Beys under our banner and bring destruction upon those that would dream themselves our overlords!"
+
+ netherlands_nation_title: "@NED The Netherlands"
+ netherlands_nation_desc: "The Dutch are emerging as one of Europe's most capable naval and colonial powers. Lucrative trade opportunities, locally and overseas, have resulted in a swift evolution for the country into one of the first capitalist countries in the world."
+
+ # Colonial Nations
+
+ brazil_nation_title: "@BRZ Brazilian Nation"
+ brazil_nation_desc: "The colonial masters who wished to enslave us are gone. It is time to form a truly independent country of our own. From this day forth the watchword of Brazil will be 'Independence or Death!'"
+
+ por_flee_to_brazil_title: "@BRZ Flee to Brazil"
+ por_flee_to_brazil_desc: "Portugal is in ruins! The monarch and the court must make haste across the sea before our enemies descend upon us once more. Though it will be painful to leave Portugal behind, we shall surely create a glorious new Empire in Brazil."
+
+ upca_nation_title: "@CAM Central American Nation"
+ upca_nation_desc: "Our people have endured years of foreign meddling, subjugation, incursions, and our lands divided... Enough! The time has come to liberate and unite our people under one banner, and write our own destiny. We will form a liberal nation enriched by the trade passing between the Atlantic and the Pacific oceans."
+
+ australia_nation_title: "@AUS Australian Nation"
+ australia_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region. "
+
+ mexico_nation_title: "@MEX Mexican Nation"
+ mexico_nation_desc: "We must leave the last of our colonial heritage behind and reform into a proper independent state. The nation of Mexico will become the protector of all of Mesoamerica!"
+
+ california_nation_title: "@CAL Californian Nation"
+ california_nation_desc: "We have made a home in this rugged land. It is time for us to muster our strength and cast off the oppression of our colonial overlords, so that we may build a paradise in the West."
+
+ 

@@ -1,4 +1,4 @@
-#Turkey.
+# Turkey
 
 graphical_culture = muslimgfx #TODO: FIX
 
@@ -105,40 +105,11 @@ monarch_names = {
 }
 
 leader_names = {
-	Alemdar Amasyali Ayas
-	Bali Barbaros Bayram
-	Cezzar �andarli �elebi Cerrah �erkes Civan �uhadar
-	Damad Dervis Defterdar
-	Gedik Gazi G�m�lcineli G�rc�
-	Hadim Hekimoglu Hersekli
-	K�pr�l� Kemal K���k Koca Karamanli K�se Kara Kanijeli Kemankes Kaymak Kavalali
-	Ishak Izzed
-	Lala Lefkeli
-	Malko� M�ezzinzade
-	Nevsehirli Nisanci
-	Oru� Ulu� Osmancikli Ohrili Oflu
-	Rumi
-	Piri Pargali Piyale Pehlivan
-	Salih Sokullu Sari Silahdar Semiz Serdar
-	Topal Tayyar Turgut Tarhuncu
-	Veli
-	Yemis�i
+	Alemdar
 }
 
 ship_names = {
-	Osmaniye Orhaniye Konstantiniyye H�davendigar Muradiye Mesudiye Hamidiye Resadiye
-	Heybetn�ma Tayyar Sultanhisar Gelibolu Alparslan Timsah Mecidiye Mahabet Ejder
-	Yunus Sivrihisar Akhisar Akka Aziziye Bereket Galata Kozlu Kuzlum Nil�fer Zuhaf
-	Ceyhan Feke Kozan Seyhan Kahta Bolvadin Dinar Ihsaniye Incehisar Sandikli Sultandagi
-	G�d�l Haymana Kazan Kalecik Nallihan Polatli Akseki Alanya Elmali Finike Kepez Korkuteli
-	Kumluca Manavgat Serik Germiyan Saka Saruhan Aydin Kuyucak Kusadasi Nazilli S�ke Ayvalik
-	Havran Bigadi� Edremit Manyas Balya Amasra Boz�y�k S�g�t Adakli Solhan Ahlat Gerede
-	Seben G�yn�k Bucak Gemlik G�rsu Ineg�l Ayvacik Biga Ezine Lapseki Korgun Dodurga Iskilip
-	La�in �ivril Honaz Tavas Dicle Firat Lice Ergani Enez Ipsala Meri� Havsa Nizip G�rele
-	G�ce Kelkit Belen Erzin Hassa G�nen Safranbolu Ermenek Akyaka S�rmene Vakfikebir Eregli
-	Darica Kandira Ahirli �umra Emet Bodrum Dalaman Fethiye Milas Yatagan Malazgirt Fatsa �nye
-	Kadirli Findikli Arifiye Atakum Bafra Canik Carsamba Havza Kavak Ladik Terme Baykan Boyabat
-	Divrigi Kangal Saray Niksar Zile Ak�aabat Ma�ka Of �aykara Hayrat
+	Osmaniye Orhaniye Konstantiniyye
 }
 
 army_names = {
@@ -146,5 +117,5 @@ army_names = {
 }
 
 fleet_names = {
-	"Karadeniz Donanmas�" "Ege Donanmas�" "Akdeniz Donanmas�" K�z�ldeniz Donanmas�" "$PROVINCE$ Donanmas�"
+	"Karadeniz Balkan"
 }

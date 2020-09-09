@@ -17,7 +17,7 @@ country_decisions = {
 				tag = PAP
 				tag = ITA
 				tag = ITE
-				tag = ROE
+				tag = ROP
 				tag = ALP
 				tag = EUR
 				tag = ADR
@@ -40,19 +40,20 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# Emilia-Romagna
+				# Cisalpina Cores
 				province_id = 114
 				province_id = 113
 				province_id = 106
 				province_id = 105
-					# Venitia
+				province_id = 4730
 				province_id = 108
-					# Lombardy
 				province_id = 109
 				province_id = 107
 				province_id = 104
 				province_id = 1862
-					# Piedmont
+				province_id = 4739
+				province_id = 4740
+				province_id = 4728
 				province_id = 2979
 			}
 			OR = {
@@ -67,22 +68,23 @@ country_decisions = {
 			is_at_war = no
 			custom_trigger_tooltip = {
 				tooltip = form_cisalpina_tt_1
-					# Emilia-Romagna
+				# Cisalpina Cores
 				owns_core_province = 114
 				owns_core_province = 113
 				owns_core_province = 106
 				owns_core_province = 105
-					# Venitia
+				owns_core_province = 4730
 				owns_core_province = 108
-					# Lombardy
 				owns_core_province = 109
 				owns_core_province = 107
 				owns_core_province = 104
 				owns_core_province = 1862
-					# Piedmont
+				owns_core_province = 4739
+				owns_core_province = 4740
+				owns_core_province = 4728
 				owns_core_province = 2979
 			}
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip = { # Cisalpina CANNOT form other italian nations
 				tooltip = form_cisalpina_tt_5
 			}			
 		}
@@ -100,8 +102,9 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
+				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -128,6 +131,7 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
 					# culture
 					if = {
 						limit = {
@@ -135,7 +139,6 @@ country_decisions = {
 						}
 						change_primary_culture = lombard
 					}					
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
 					piedmont_area = {
 						limit = {
@@ -175,11 +178,12 @@ country_decisions = {
 						NOT = { has_idea_group = CIS_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
 		}

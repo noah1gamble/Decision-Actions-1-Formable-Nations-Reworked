@@ -22,15 +22,39 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
 			capital_scope = {
 				colonial_region = colonial_the_carribean
 				is_core = ROOT
+			}	
+			NOT = { exists = HAT }		
+			is_at_war = no
+			owns = 488 # Les Cayes
+			OR = { # Unique Mexican Reqs (Maybe apply to all colonial nations? natives are too hard)				
+				num_of_cities = 40
+				total_development = 200
+				government_rank = 3 # Very rare, but adds the choice
+				OR = {	# Has Max Government Reforms
+					has_reform = political_absolutism_reform
+					has_reform = strengthen_executive_powers_reform
+					has_reform = many_fingers_of_god_reform
+					AND = { # + 150 development/30 cities
+						total_development = 150
+						num_of_cities = 30
+					}
+				}
 			}
-			NOT = { exists = HAT }
+			OR = { # Tribes - DLC check
+				AND = {	
+					has_dlc = "El Dorado"
+					is_religion_reformed = yes
+				}
+				AND = {
+					NOT = {
+						has_dlc = "El Dorado"
+					}
+					has_institution = renaissance
+				}
+			}
 		}
 		effect = {
 			change_tag = HAT

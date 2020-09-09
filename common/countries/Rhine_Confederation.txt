@@ -1,8 +1,8 @@
-#Rhine Confederation
+# Rhine Confederation
 
 graphical_culture = westerngfx
 
-color = { 42  107  17 }
+color = { 42 107 17 }
 
 historical_idea_groups = {
 	religious_ideas

@@ -5,11 +5,12 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
 			NOT = { 
-				has_country_flag = rename_ethiopia_nation_flag
-				exists = ABY			
-				tag = PAP 
+				has_country_flag = formed_abyssinia_nation_flag
+				has_reform = celestial_empire			
+				exists = ABY 
+				tag = PAP
 				tag = ABY
 			}
 			OR = {
@@ -85,7 +86,7 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 5
+			adm_tech = 10
 			NOT = { exists = ABY }	
 			is_subject = no
 			is_at_war = no	
@@ -145,7 +146,6 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ABY # Country TAG
-			set_country_flag = formed_abyssinia_nation_flag # Country Formation Flag
 			custom_tooltip = form_abyssinia_tt_2 # New Missions
 			custom_tooltip = form_abyssinia_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
@@ -165,15 +165,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = despotic_monarchy
-				}
+				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -223,7 +215,13 @@ country_decisions = {
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
+				# National Ability
+				add_country_modifier = {
+					name = dec1_house_of_solomon
+					duration = 49275
+				}							
 			}				
 		}
 		ai_will_do = {

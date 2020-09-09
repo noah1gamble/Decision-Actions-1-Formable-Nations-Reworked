@@ -12,9 +12,8 @@ country_decisions = {
 			is_playing_custom_nation = no	
 			tag = SHY		
 			NOT = { 
+				has_country_flag = formed_bukhara_flag
 				has_reform = celestial_empire
-				has_country_flag = formed_bukhara_flag 
-				has_country_flag = bukharan_nation
 				exists = BUK
 				tag = BUK
 			}
@@ -131,9 +130,12 @@ country_decisions = {
 						NOT = { has_idea_group = BUK_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
+				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
 		}

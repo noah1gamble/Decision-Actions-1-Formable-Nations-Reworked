@@ -2,6 +2,5 @@ government = republic
 add_government_reform = plutocratic_reform
 technology_group = western
 primary_culture = austrian
-culture_group_union = germanic
 religion = catholic
 capital = 134 # Wien

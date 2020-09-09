@@ -1,3 +1,4 @@
+government = monarchy
 technology_group = western
 primary_culture = franconian
 religion = catholic

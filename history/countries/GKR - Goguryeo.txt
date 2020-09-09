@@ -2,3 +2,6 @@ government = monarchy
 add_government_reform = autocracy_reform
 government_rank = 3
 technology_group = chinese
+religion = catholic
+capital = 4232 # gangye
+primary_culture = korean

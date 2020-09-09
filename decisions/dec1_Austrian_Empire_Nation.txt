@@ -12,9 +12,9 @@ country_decisions = {
 			is_colonial_nation = no	
 			NOT = { 
 				has_country_flag = formed_austrian_empire_nation_flag
-				exists = AHU
+				exists = AEH
 				tag = PAP 
-				tag = AHU
+				tag = AEH
 				tag = HLR
 				tag = TUR
 				tag = EUR
@@ -223,15 +223,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = monarchy_legacy
-				}
+				# Reform Changes
 				add_government_reform = autocracy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -276,11 +268,12 @@ country_decisions = {
 						NOT = { has_idea_group = AEH_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 #Austrian Empire
 graphical_culture = westerngfx
 
-color = { 200  200  215 }
+color = { 200 200 215 }
 
 historical_score = 6400
 

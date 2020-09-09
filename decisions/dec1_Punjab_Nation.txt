@@ -8,8 +8,10 @@ country_decisions = {
 			is_colonial_nation = no					
 			primary_culture = panjabi
 			NOT = { 
-				has_country_flag = formed_punjab_flag 
-				tag = PUN
+				OR = {
+					has_country_flag = formed_punjab_flag 
+					tag = PUN
+				}
 			}
 			OR = {
 				AND = {

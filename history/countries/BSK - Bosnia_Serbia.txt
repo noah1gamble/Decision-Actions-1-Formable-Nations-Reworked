@@ -1,12 +1,12 @@
-primary_culture = serbian
+government = monarchy
 religion = catholic
+primary_culture = serbian
 technology_group = eastern
 capital = 3002
 
 1425.5.3 = {
 	heir = {
-		name = "Nikolis"
-		monarch_name = "Nikolis IV"
+		name = "Nikolis IV"
 		dynasty = "Nikolic"
 		birth_date = 1415.1.8
 		death_date = 1453.7.26

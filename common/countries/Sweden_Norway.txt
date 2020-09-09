@@ -1,4 +1,4 @@
-#Sweden-Norway
+# Sweden-Norway
 
 graphical_culture = westerngfx
 

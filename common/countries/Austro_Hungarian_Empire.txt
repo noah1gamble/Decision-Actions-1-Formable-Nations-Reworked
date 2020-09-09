@@ -1,7 +1,7 @@
 #Austro_Hungarian_Empire
 graphical_culture = westerngfx
 
-color = { 238  212  215 }
+color = { 238 212 215 }
 
 historical_score = 6400
 

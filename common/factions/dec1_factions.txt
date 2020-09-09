@@ -1,0 +1,30 @@
+#############################
+# Formable Nations Factions #
+#############################
+
+dec1_communist_party_of_china = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		
+	}
+}
+
+dec1_politburo = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		
+	}
+}
+
+dec1_national_peoples_congress = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		
+	}
+}

@@ -3,25 +3,45 @@ country_decisions = {
 	colombia_nation = {
 		major = yes
 		potential = {
-			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no
-			is_random_new_world = no
-			is_nomad = no
-			NOT = {
-				has_country_flag = formed_columbia_nation_flag
-				has_country_flag = changed_from_colonial_nation
+			NOT = { 
+				has_country_flag = changed_from_colonial_nation 
+				has_country_flag = formed_columbia_flag 
 				exists = COL
 				tag = COL
+				tag = BRZ
+				tag = PAP
 			}
-			colonial_colombia = {
-				owned_by = ROOT
+			OR = {
+				# natives that have a capital in colonial region
+				capital_scope = {
+					colonial_region = colonial_brazil
+					is_core = ROOT
+				}
+				# is former colonial nation or  is current colonial nation
+				OR = {
+					is_former_colonial_nation = yes
+					is_colonial_nation = yes
+				}
+				# non-colonial nations (usually colonizers) that has at least 20 provinces
+				AND = {
+					num_of_owned_provinces_with = {
+						colonial_region = colonial_brazil
+						value = 20
+					}
+					NOT = {
+						num_of_owned_provinces_with = {
+							colonial_region = colonial_brazil
+							value = 20
+						}			
+					}							
+				}
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 6
+					num_of_cities = 1 # Colonial Brazil
 				}
 			}
 		}
@@ -40,118 +60,90 @@ country_decisions = {
 				colonial_region = colonial_colombia
 				is_core = ROOT
 			}
-			adm_tech = 6 # unique native adm req
-			NOT = { exists = COL }
+			adm_tech = 10
+			NOT = { exists = BRZ }
 			is_at_war = no
-			is_former_colonial_nation = no
-			OR = { # Unique colonial nation formation req
-				AND = {
-					is_subject = no
-					government = monarchy
-				}
-				AND = {
-					is_subject = no
-					is_free_or_tributary_trigger = yes
-				}
-				AND = {
-					is_subject = yes
-					liberty_desire = 42.60
-				}
-			}
+			owns = 763
+			num_of_cities = 20
 		}
 		effect = {
-			change_tag = COL
-			set_country_flag = formed_columbia_nation_flag
-			COL = {
-				add_prestige = 5
-				add_legitimacy = 10
-				set_capital = 825 # Rio
-				825 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
+			change_tag = COL # Country TAG
+			set_country_flag = formed_columbia_flag # Country Formation Flag
+			set_country_flag = changed_from_colonial_nation # Colonial Nation flag
+			custom_tooltip = form_columbia_tt_2 # New Missions
+			custom_tooltip = form_columbia_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank
+			COL = { # Capital change and bonuses				
+				set_capital = 763 # Rio
+				COL = {
+					763 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
 				}
-			}
-			if = {
-				limit = {
-					culture_group = iberian
-					NOT = { primary_culture = brazilian }
-				}
-				change_primary_culture = brazilian
-			}
-			colonial_brazil = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = COL
-			}
-			COL = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Changes
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-					remove_non_electors_emperors_from_empire_effect = yes
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					swap_non_generic_missions = yes  # New Missions
+					# Region/Area Claims
+					south_america_superregion = {
 						limit = {
-							is_part_of_hre = yes
+							NOT = { 
+								owned_by = ROOT 
+							}
 						}
-						set_in_empire = no
+						add_permanent_claim = COL
 					}
-				}
-			}
-			COL = {
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
 							}
-						}
-					set_legacy_government = despotic_monarchy_legacy
-				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 2
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
 							}
-						}
-					set_government_rank = 2
+						change_government = monarchy
+					}																		
 				}
-				add_government_reform = despotic_monarchy
-			}
-			custom_tooltip = dec1_decisions_spacing
-			COL = {
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = COL_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1 # forever
 				}
 			}
 		}

@@ -1,8 +1,8 @@
-#Alsace-Lorraine
+# Alsace-Lorraine
 
 graphical_culture = westerngfx
 
-color = { 55  108  158 }
+color = { 55 108 158 }
 
 historical_idea_groups = {
 	defensive_ideas

@@ -1,8 +1,8 @@
-#Two Sicilies
+# Two Sicilies
 
 graphical_culture = westerngfx
 
-color = { 248  228  133 }
+color = { 248 228 133 }
 
 historical_score = 120
 

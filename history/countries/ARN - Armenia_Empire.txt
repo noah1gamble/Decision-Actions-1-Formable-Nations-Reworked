@@ -8,7 +8,6 @@ capital = 419	# Yerevan
 95.1.1 = {
 	monarch = {
 		name = "Tigranes the Great"
-		monarch_name = "Tigranes II"
 		dynasty = "Artaxiad"
 		birth_date = 95.1.1 # NOTE not accurate, lived 55 BC to 140 BC
 		death_date = 120.1.1

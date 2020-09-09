@@ -1,8 +1,8 @@
-#Country Name: Please see filename.
+# Suadi Arabia - NOTE: Perhaps needs adjustments
 
 graphical_culture = muslimgfx
 
-color = { 96  131  58 } 
+color = { 96 131 58 } 
 
 historical_idea_groups = {
 	religious_ideas

@@ -1,8 +1,8 @@
-#Czechoslovakia
+# Czechoslovakia
 
 graphical_culture = westerngfx
 
-color = { 17  69  126 }
+color = { 17 69 126 }
 
 preferred_religion = protestant
 

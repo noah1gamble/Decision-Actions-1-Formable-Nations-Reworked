@@ -1,7 +1,7 @@
 #Belgium
 graphical_culture = westerngfx
 
-color = { 158  135  8 }
+color = { 158 135 8 }
 
 historical_idea_groups = {
 	administrative_ideas

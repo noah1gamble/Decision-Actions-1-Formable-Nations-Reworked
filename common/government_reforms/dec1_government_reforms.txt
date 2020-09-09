@@ -3,7 +3,7 @@
 	# Communist Governments (PRC, DPRK, etc) #
 	##########################################
 
-socialist_republic = {
+socialist_republic_prc = {
 	icon = "politician"
 	has_term_election = yes
 	republican_name = yes
@@ -12,7 +12,6 @@ socialist_republic = {
     potential = {
 		OR = {
 			tag = PRC
-			tag = MNG
 		}
     }	
 
@@ -29,7 +28,7 @@ socialist_republic = {
 	}
 
 	custom_attributes = {
-		duration = 10
+
 	}
 
 	ai = {

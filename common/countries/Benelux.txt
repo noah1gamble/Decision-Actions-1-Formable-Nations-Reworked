@@ -1,7 +1,7 @@
 #Benelux
 graphical_culture = westerngfx
 
-color = { 33  70  139 }
+color = { 33 70 139 }
 
 historical_score = 2100
 preferred_religion = reformed
@@ -101,5 +101,5 @@ army_names = {
 }
 
 fleet_names = {
-	"Vloot van $PROVINCE$""
+	"Vloot van $PROVINCE$"
 }

@@ -10,6 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			has_country_flag = europe_nation_disabled_for_now
 			NOT = {
 				has_country_flag = formed_europe_nation_flag
 				exists = EUR
@@ -171,11 +172,12 @@ country_decisions = {
 						NOT = { has_idea_group = EUR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
+					duration = -1
 				}
 			}					
 		}
