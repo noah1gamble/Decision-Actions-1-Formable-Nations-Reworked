@@ -3,7 +3,6 @@ country_decisions = {
 	english_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -107,103 +106,14 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = ENG	
-			set_country_flag = formed_england_nation_flag				
-			set_capital = 236 # London
-			ENG = {
-				add_prestige = 50
-				236 = { 
-					add_base_tax = 5
-					add_base_production = 5
-					add_base_manpower = 5
-				}
-			}
-			british_isles_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ENG
-			}			
-			custom_tooltip = dec1_decisions_blank
-			ENG = {		
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
-				}				
-			}
-			hidden_effect = { 
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			ENG = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
-							has_dlc = "Dharma"
-							}	
-						}
-					set_legacy_government = despotic_monarchy
-				}				
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}				
-				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ENG = {
-				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = ENG_ideas }
-					}
-					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
-					name = dec1_increased_centralization
-				}	
-			}			
+			
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = { # Scottish AI refuses to subject itself to English
+				tag = SCO
+				factor = 0
+			}		
 		}
 		ai_importance = 400
 	}

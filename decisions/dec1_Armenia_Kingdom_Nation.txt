@@ -107,15 +107,6 @@ country_decisions = {
 						}
 						custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
 					}				
-					# Dharma DLC check and base reform change
-					if = {
-						limit = {
-							NOT = {
-								has_dlc = "Dharma"
-							}
-						}
-						set_legacy_government = monarchy_legacy
-					}
 					add_government_reform = autocracy_reform						
 					custom_tooltip = dec1_decisions_blank
 					# Our Place in the Empire Custom Event
@@ -125,8 +116,7 @@ country_decisions = {
 						}
 						country_event = { id = dec1_events.1 }
 					}	
-					hidden_effect = { # Hidden Effects to fix bad tooltips
-						swap_non_generic_missions = yes  # New Missions
+					hidden_effect = { # Hidden Effects to fix bad tooltips	
 						# Region/Area Claims
 						armenia_area = {
 							limit = {

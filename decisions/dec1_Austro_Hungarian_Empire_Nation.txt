@@ -23,8 +23,7 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_austro_hungarian_empire_nation_flag
 				exists = AHE
-				tag = AHE 
-				tag = HBE # Habsburg Monarchy cannot form Austro-Hungarian Empire
+				tag = AHE
 				tag = PAP
 				tag = HLR
 				tag = TUR
@@ -216,7 +215,6 @@ country_decisions = {
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
 				# Reform Change
-				add_government_reform = prussian_monarchy
 				add_government_reform = autocracy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -227,7 +225,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
 					carpathia_region = {
 						limit = {
@@ -263,6 +260,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

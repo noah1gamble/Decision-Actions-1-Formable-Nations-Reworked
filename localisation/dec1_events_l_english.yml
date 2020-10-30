@@ -26,6 +26,11 @@
  dec1_events.2.d: "The Holy Roman Empire has been strengthened by the formation of the new state of [From.GetName] which has remained loyal to our Empire and supported Emperor $EMPERORNAME$. We have gained much prestige and stability within the empire due to the strengthening of our Empire!"
  dec1_events.2.a: "Excellent!"
 
+ dec1_events.3.t: "New Missions & Objectives"
+ dec1_events.3.d: "Our state is going through a range of changes that is rapidly reforming our government and political objectives. Unless we invest our time in these goals; they will remain the same without any progress to our power projection."
+ dec1_events.3.a: "Yes, Please!"
+ dec1_events.3.b: "No, we cannot abandon our roots."
+
  ##############
  # END EVENTS #
  ##############

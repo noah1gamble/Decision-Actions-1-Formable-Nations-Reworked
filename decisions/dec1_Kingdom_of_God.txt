@@ -16,7 +16,6 @@ country_decisions = {
 			exists = PAP
 			owns_core_province = 118
 			NOT = {
-				has_country_modifier = gods_kingdom # Which is done by KOG after uniting Italy
 				exists = ITA
 				tag = ITA
 				tag = NAP
@@ -55,8 +54,7 @@ country_decisions = {
 			NOT = { exists = ALP }
 			is_subject = no
 			is_at_war = no
-			has_country_flag = gods_kingdom
-				# Ecclesiastical provinces of Northern Italy
+			# Ecclesiastical provinces of Northern Italy
 			owns_core_province = 101	# Genoa
 			owns_core_province = 103	# Torino
 			owns_core_province = 104	# Milano
@@ -104,7 +102,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Government Rank change				
 					if = {
 						limit = {
@@ -133,6 +130,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

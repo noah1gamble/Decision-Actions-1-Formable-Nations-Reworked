@@ -10,6 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			primary_culture = greek
 			NOT = {
 				primary_culture = turkish
 				has_country_flag = formed_macedon_nation_flag
@@ -18,13 +19,6 @@ country_decisions = {
 				tag = BYZ # Byzantium cannot restore Macedon, but can restore other larger historical nations (Alexanders Empire, etc)
 				tag = TUR # No Turkish Ottomans, or Turkish Culture
 				tag = PAP
-			}
-			OR = {
-				primary_culture = greek
-				primary_culture = serbian
-				primary_culture = serbian
-				primary_culture = albanian
-				primary_culture = bulgarian
 			}
 			OR = {
 				ai = no
@@ -40,6 +34,11 @@ country_decisions = {
 				province_id = 148
 				province_id = 1853
 				province_id = 3001
+				num_of_owned_provinces_with = {
+					value = 8
+					region = balkan_region
+					is_core = root
+				}				
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -108,8 +107,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Custom hidden culture changes
+				hidden_effect = { # Hidden Effects to fix bad tooltips					# Custom hidden culture changes
 					if = {
 						limit = {
 							NOT = { primary_culture = greek }
@@ -127,7 +125,7 @@ country_decisions = {
 							change_primary_culture = greek
 						}
 					}				
-					swap_non_generic_missions = yes  # New Missions
+
 					# Region/Area Claims
 					balkan_region = {
 						limit = {
@@ -163,6 +161,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -172,6 +172,10 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = { # An Empire will not restore Macedon
+				factor = 0
+				government_rank = 3
+			}
 		}
 		ai_importance = 400
 	}

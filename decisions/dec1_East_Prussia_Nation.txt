@@ -56,9 +56,7 @@ country_decisions = {
 			is_subject = no
 			is_nomad = no
 			is_emperor = no 
-			NOT = { 
-				government = theocracy 
-			}
+			NOT = { government = theocracy }
 			custom_trigger_tooltip = {
 				tooltip = form_east_prussia_nation_tt_1
 				owns_core_province = 41
@@ -105,7 +103,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Claims
 					baltic_region = {
 						limit = {
@@ -141,6 +138,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

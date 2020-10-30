@@ -14,7 +14,6 @@ country_decisions = {
 				tag = PAP
 				tag = HLR
 				tag = FRA
-				tag = SPR
 				tag = CAS
 			}
 			OR = {
@@ -312,8 +311,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Government Rank change				
 					if = {
 						limit = {
@@ -342,6 +340,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

@@ -46,8 +46,11 @@
 
  form_australia_nation_tt_2: "Country obtains §YAustralia§! missions."
 
- restore_papal_states_nation_tt_2: "Country obtains §YPapal States§! missions."
- restore_papal_states_nation_tt_3: "Country gains a permanent claim on §YItaly§! region."
+ restore_papal_states_tt_1: "Any controller of original papal provinces can restore the Papal States!"
+ restore_papal_states_tt_2: "Country obtains §YPapal States§! missions."
+ restore_papal_states_tt_3: "Country gains a permanent claim on §YItaly§! region.\n"
+ restore_papal_states_tt_4: "If you form the §YPapal States§! you will become §YThe Pope§! and become locked out of any possible reformation to another country and must take on the responsibility of §YMessenger of God§!.\n"
+ restore_papal_states_tt_5: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!\n"
 
  form_cisalpina_tt_2: "Country obtains §YCisalpina§! missions."
  form_cisalpina_tt_3: "Country gains a permanent claim on §YPiedmont§! area."
@@ -187,7 +190,7 @@
  form_italian_merchant_alliance_tt_2: "Country gains a permanent claim on §YItaly§! region."
 
  form_tibetan_empire_tt_2: "Country obtains §YTibetan Empire§! missions."
- form_tibetan_empire_tt_3: "Country gains a permanent claim on §YTibet§! region."
+ form_tibetan_empire_tt_3: "Country gains a permanent claim on §YXinan§! region."
 
  form_turkey_tt_1: "Owns all core §YTurkey§! provinces"
  form_turkey_tt_2: "Country obtains §YTurkish§! missions." 
@@ -356,6 +359,8 @@
  form_scandinavia_tt_2: "Country obtains §YScandinavia§! missions."
  form_scandinavia_tt_3: "Country gains a permanent claim on §YBaltic§! region."
 
+ form_basque_country_tt_2: "Country obtains §YBasque Country§! missions."
+
  ############################
  # COLONIAL NATION TOOLTIPS #
  ############################
@@ -381,20 +386,20 @@
  form_chile_tt_2: "Country obtains §YChile§! missions."
  form_chile_tt_2: "Country gains a permanent claim on §YAndean§! region."
 
- form_haiti_tt_2: "Country obtains §Y   §! missions."
- form_haiti_tt_3: "Country gains a permanent claim on §Y   §! colonial region."
+ form_haiti_tt_2: "Country obtains §YHaiti§! missions."
+ form_haiti_tt_3: "Country gains a permanent claim on §YHaiti§! colonial region."
 
- form_la_plata_tt_2: "Country obtains §Y   §! missions."
- form_la_plata_tt_3: "Country gains a permanent claim on §Y   §! colonial region."
+ form_la_plata_tt_2: "Country obtains §YLa Plata§! missions."
+ form_la_plata_tt_3: "Country gains a permanent claim on §YLa Plata§! colonial region."
 
- form_louisiana_tt_2: "Country obtains §Y   §! missions."
- form_louisiana_tt_3: "Country gains a permanent claim on §Y   §! colonial region."
+ form_louisiana_tt_2: "Country obtains §YLouisiana§! missions."
+ form_louisiana_tt_3: "Country gains a permanent claim on §YLouisiana§! colonial region."
 
  form_mexico_tt_2: "Country obtains §YMexico§! missions."
  form_mexico_tt_3: "Country gains a permanent claim on §YMexico§! colonial region."
 
- form_paraguay_tt_2: "Country obtains §Y   §! missions."
- form_paraguay_tt_3: "Country gains a permanent claim on §Y   §! colonial region."
+ form_paraguay_tt_2: "Country obtains §YParaguay§! missions."
+ form_paraguay_tt_3: "Country gains a permanent claim on §YParaguay§! colonial region."
 
  ############
  # COLONIES #
@@ -421,16 +426,7 @@
  dec1_cisalpina_cannot_form_italy: "§YCisalpina§! can §YNOT§! form §YItaly§! or any other variations due to proclaiming itself as the true successor Italian state, §Yla Grande Repubblica§!."
 
  dec1_abolish_the_empire_of_china_mandate: "The §YEmpire of China§! is §Rdisabled§! and the §YMandate of Heaven§! is §Rabolished§!.\nThe previous nation to control the §YEmpire of China§! gains §G100§! Prestige."
-
- restore_papal_states_nation_tt_1: "Any controller of original papal provinces can restore the Papal States!"
-
- dec1_papal_states_notif: "If you form the §YPapal States§! you will become §YThe Pope§! and become locked out of any possible reformation to another country and must take on the responsibility of §YMessenger of God§!.\n"
-
- dec1_papal_influence: "All neighbors of the newly elected pope gain §G25§! §YPapal Influence§!"
-
  dec1_kingdom_of_god_claims: "The §YPapal State§! gains a permanent claim on all not owned provinces of the §YItalian§! region."
-
- gods_kingdom: "God's Kingdom"
 
  #############################
  # GOVERNMENT RANKS TOOLTIPS #
@@ -448,9 +444,8 @@
  dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
  dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."
 
- ##################################
- # NATIONAL ABILITIES LOCALI1TION #
- ##################################
+ #############################
+ # COUNTRY FLAG LOCALIZATION #
+ #############################
 
- dec1_jagiellonian_empire_union_of_persistence: "Union of Persistence"
-
+ gods_kingdom: "Gods Kingdom" # I don't think this is even needed TBH

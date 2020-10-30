@@ -13,6 +13,7 @@ country_decisions = {
 				has_country_flag = formed_sardinia_piedmont_flag
 				exists = SPI
 				tag = SPI
+				tag = PAP
 				tag = SAV
 				tag = SAR
 				tag = ARA # Aragon Cannot form Sardinia-Piedmont; Perhaps change to allow Aragon
@@ -80,15 +81,6 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = republican_dictatorship
-				}
 				add_government_reform = presidential_despot_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -98,8 +90,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Region/Area Claims
 					liguria_area = {
 						limit = {
@@ -147,6 +138,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -251,16 +244,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = republican_dictatorship
-				}
-				add_government_reform = presidential_despot_reform
+				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
 				if = {
@@ -269,8 +253,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Region/Area Claims
 					liguria_area = {
 						limit = {
@@ -318,12 +301,14 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1

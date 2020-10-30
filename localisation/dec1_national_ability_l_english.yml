@@ -5,15 +5,333 @@
  #######################################
  
  dec1_increased_centralization: "Increased Centralization"
- dec1_increased_centralization_desc: ""
+ dec1_increased_centralization_desc: "With the foundation of a new state we have increased our authority over local polities; with this comes great benifit of reducing the autonomy of our subjects."
 
- house_of_solomon: "the Royal House of Solomon"
+ ######################## 
+ # New Custom Countries #
+ ########################
+
+  # Abyssinia
+  
+ dec1_house_of_solomon: "the Royal House of Solomon"
+ dec1_house_of_solomon_desc: ""
+
+  # Adriatic Empire
+
+ dec1_mare_superum: "Mare Superum"
+ dec1_mare_superum_desc: ""f
+
+ # Alpland
+
+ dec1_tough_terrain_castles: "Tough Terrain Castles"
+
+ # Alscase-Lorraine
+
+ dec1_german_french_influences: "Franco-Germanic Influences"
+
+ # Angevin Empire
+
+ dec1_legacy_of_the_angevins: "Legacy of the Angevins"
+
+ # Anglo-Dutch Union
+
+ dec1_symbiotic_empire: "Symbiotic Empire"
+
+ # Arabian Kingdom
+
+ dec1_legacy_of_muhammad: "Legacy of Muhammad"
+
+ # Armenian Empire
+
+ dec1_cultural_warfare: "Cultural Warfare"
+
+ # Republic of Armenia
+
+ dec1_the_steppe_republic: "The Steppe Republic"
  
+ # Austrian Empire
+
+ dec1_habsburg_dynasty: "Habsburg Dynasty"
+
+ # Austro-Hungarian Empire
+
+ dec1_multinational_empire: "Multi-National Empire"
+
+ # Balkan League
+
+ dec1_powder_keg_kingdom: "Powder Keg Kingdom"
+
+ # Baltic Union
+
+ dec1_baltic_trade: "Baltic Traders"
+
+ # Basque Kingdom
+
+ dec1_ducal_kingdom: "Ducal-Kingdom"
+
+ # Belgium
+
+ dec1_congo_colonies: "Congo Colonies"
+
+ # Benelux
+
+ dec1_trade_traditions: "Trade Traditions"
+
+ # Bosnia-Serbia
+
+ dec1_union_of_two: "Union of Two"
+
+ # Brandenburg-Prussia
+
+ dec1_electorate_of_brandenburg_prussia: "Electorate of Brandenburg-Prussia"
+
+ # Bremen-Verden
+
+ dec1_german_nationalism: "German Nationalism"
+
+ # Burma
+
+ dec1_indian_chinese_relations: "Sino-Indian Relations"
+
+ # Carthage
+
+ dec1_phoenician_spirit: "Phoenician Spirit"
+
+ # Caucasia
+
+ dec1_rough_lives: "Rough Lives"
+
+ # Celtic Union
+
+ dec1_celtic_lifestyle: "Celtic Lifestyle"
+
+ # China
+
+ dec1_the_middle_kingdom: "The Middle Kingdom"
+
+ # People's Republic of China
+
  dec1_foundation_chinese_communist_party: "Foundation of the Chinese Communist Party (CCP)"
 
+ # Confederate States
+
+ dec1_slave_income: "Slave Income"
+
+ # Cisalpina
+
+ dec1_italian_republic: "Italian Republic"
+
+ # Czechoslovakia
+
+ dec1_czech_unity: "Czech Unity"
+
+ # Ducal Prussia
+
+ dec1_the_rise_of_prussia: "The Rise of Prussia"
+
+ # East Prussia
+
+ dec1_prussian_legacy: "Prussian Legacy"
+
+ # East Germany
+
+ dec1_combloc_formations: "Combloc Formations"
+
+ # Eastern Roman Empire
+
+ dec1_wealth_trade_empire: "Wealth, Trade, Empire!"
+
+ # Emilia-Romagna
+
+ dec1_italian_strength: "Italian Strength"
+
+ # Empire of Japan
+
+ dec1_the_meiji_era: "The Meiji Era"
+
+ # European Union
+
+ dec1_the_union: "The Union"
+
+ # Franco-Iberian Empire
+
+ dec1_castilian_franco_cultural_unity: "Castilian-Franco Cultural Unity"
+
+ # Franconia
+
+ dec1_german_kings_of_the_reich: "German Kings of the Reich"
+
+ # French Empire
+
+ dec1_the_emperor_general: "The Emperor-General"
+
+ # Frieslande
+
+ dec1_frisian_legacy: "Frisian Legacy"
+
+ # German Empire
+
+ dec1_the_german_union: "The German Union"
+
+ # Goguryeo
+
+ dec1_korean_kingdom: "Korean Kingdom"
+
+ # Hansa
+
+ dec1_germanic_hansa_kingdom: "Germanic Hansa Kingdom"
+
+ # Hanseatic League
+
+ dec1_the_hansa: "The Hansa"
+
+ # Hesse-Nassau
+
+ dec1_legacy_of_nassau: "Legacy of Nassau"
+
+ # Himalayan Empire
+
+ dec1_empire_in_the_mountains: "Empire in the Mountains"
+
+ # Iberian Empire
+
+ dec1_christian_empire_in_iberia: "Christian Empire in Iberia"
+
+ # Islamic State
+
+ dec1_the_new_caliphate: "The New Caliphate"
+
+ # Italian Empire
+
+ dec1_rebirth_of_the_renaissance: "Rebirth of the Renaissance"
+
+ # Italian Merchant Alliance
+
+ dec1_trade_empire: "Trade Empire"
+
+ # Jagiellonian Empire
+
+ dec1_jagiellonian_empire_union_of_persistence: "Union of Persistence"
+
+ # Kievan Rus
+
+ dec1_kievan_kingdom: "Kievan Kingdom"
+
+ # Kingdom of God
+
+ dec1_the_messenger_of_god: "Messenger of God"
+
+ # Lombardy-Venitia
+
+ dec1_french_warfare: "French Warfare"
+
+ # Lower Saxony
+
+ dec1_southern_saxon_warriors: "Southern Saxon Warriors"
+
+ # Lusitanian Empire
+
+ dec1_the_spice_empire: "The Spice Empire"
+
+ # Macedon
+
+ dec1_alexanders_kingdom: "Alexander's Kingdom"
+
+ # Maghrebia
+
+ dec1_muslim_superiority: "Muslim Superiority"
+
+ # North German Confederation
+
+ dec1_prussian_influences: "Prussian Influences"
+
+ # North Sea Empire
+
+ dec1_empire_of_trade: "Empire of Trade"
+
+ # Pontus
+
+ dec1_roman_dreams: "Roman Dreams"
+
+ # Rhine Confederation
+
+ dec1_legacy_of_bonaparte: "Legacy of Bonaparte"
+
+ # Roman Republic
+
+ dec1_the_rebirth_of_the_republic: "The Rebirth of the Republic"
+
+ # Saudi Arabia
+
+ dec1_house_of_saud: "House of Saud"
+
+ # Siebenbuergen
+
+ dec1_twenty_castles: "20 Castle Doctrine"
+
+ # South German Ferderation
+
+ dec1_austrian_influences: "Austrian Influences"
+
+ # Soviet Union
+
+ dec1_soviet_socialist_republics: "Soviet Socialist Republics"
+
+ # Sweden-Norway
+
+ dec1_union_of_grace: "Union of Grace"
+
+ # Tatarstan
+
+ dec1_tatar_qualities: "Tatar Qualities"
+
+ # Tibetan Empire
+
+ dec1_legacy_of_the_dali_lama: "Legacy of the Dali Lama"
+
+ # Turkey
+
+ dec1_turkish_nationalism: "Turkish Nationalism"
+
+ # United Kingdom
+
+ dec1_rule_britannia: "Rule Britannia"
+
+ # West Germany
+
+ dec1_western_german_rights: "Western German Rights"
+
+ # Western Roman Empire
+
+ dec1_the_birth_of_empire: "The Birth of Empire"
+
+ # Yugoslavia
+
+ dec1_yugoslavs: "Yugoslavs"
+
+ #####################
+ # Vanilla Countries #
+ #####################
+
+ dec1_noble_amirs: "Noble Amirs"
+
+ dec1_caliphate_of_cordoba: "Caliphate of Cordoba"
+
+ dec1_muhammads_conquests: "Muhammad's Conquests"
+
+ dec1_kingdom_of_the_arabs: "Kingdom of the Arabs"
+
  dec1_abolished_the_mandate_of_heaven: "Abolished the Mandate of Heaven"
- 
+ dec1_abolished_the_mandate_of_heaven_desc: ""
+
+ ########################
+ # Reformable Countries #
+ ########################
+
+  # Papal States
+
+ dec1_the_pope: "The Pope"
+
  ###########################################
  # END UNIQUE NATIONAL TRAITS LOCALISATION #
  ###########################################
- 

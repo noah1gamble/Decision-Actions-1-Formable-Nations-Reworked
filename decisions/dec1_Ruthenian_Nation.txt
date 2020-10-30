@@ -104,8 +104,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Claims
 					ruthenia_region = {
 						limit = {
@@ -140,18 +139,29 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
-				# Custom Ideas check and change		
 				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = UKR_ideas }
+					limit = {	 # Custom Ideas check and ROOT check
+						OR = {
+							has_custom_ideas = no
+							NOT = { 
+								has_idea_group = ALP_ideas 
+							}
+						}
 					}
-					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
+					country_event = { 
+						id = ideagroups.1
+					}
 				}
-				# Increased Centralization
+				country_event = {
+					id = dec1_events.3	# Custom Missions change
+				}
+				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
-					name = dec1_increased_centralization
+					name = dec1_tough_terrain_castles	# National Ability
+					duration = 49275
+				}			
+				add_country_modifier = {
+					name = dec1_increased_centralization	# Increased Centralization
 					duration = -1
 				}
 			}					

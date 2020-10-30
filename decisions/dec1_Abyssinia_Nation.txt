@@ -175,9 +175,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
-					# Region/Area Claims
+				hidden_effect = { # Hidden Effects to fix bad tooltips					# Region/Area Claims
 					horn_of_africa_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
@@ -203,25 +201,30 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
-				# Custom Ideas check and change		
 				if = {
-					limit = {
+					limit = {	 # Custom Ideas check and ROOT check
 						has_custom_ideas = no
-						NOT = { has_idea_group = ABY_ideas }
+						NOT = { 
+							has_idea_group = ABY_ideas 
+						}
 					}
-					country_event = { id = ideagroups.1 }
+					country_event = { 
+						id = ideagroups.1 
+					}
 					custom_tooltip = dec1_decisions_blank
 				}
-				# Increased Centralization
-				add_country_modifier = {
-					name = dec1_increased_centralization
-					duration = -1
+				country_event = {
+					id = dec1_events.3	# Custom Missions change
 				}
-				# National Ability
+				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
-					name = dec1_house_of_solomon
+					name = dec1_house_of_solomon	# National Ability
 					duration = 49275
-				}							
+				}			
+				add_country_modifier = {
+					name = dec1_increased_centralization	# Increased Centralization
+					duration = -1
+				}						
 			}				
 		}
 		ai_will_do = {

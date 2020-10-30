@@ -52,7 +52,7 @@ country_decisions = {
 				province_id = 840	# Honduras
 				province_id = 839	# Pipil
 				province_id = 841	# Guatemala
-				province_id = 842	# Petén
+				province_id = 842	# Petï¿½n
 				province_id = 843	# Belize
 			}
 			OR = {
@@ -71,7 +71,7 @@ country_decisions = {
 			owns_core_province = 840	# Honduras
 			owns_core_province = 839	# Pipil
 			owns_core_province = 841	# Guatemala
-			owns_core_province = 842	# Petén
+			owns_core_province = 842	# Petï¿½n
 			owns_core_province = 843	# Belize			
 		}
 		effect = {
@@ -110,7 +110,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
 					colonial_mexico = {
 						limit = {
@@ -143,11 +142,12 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = CAM_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

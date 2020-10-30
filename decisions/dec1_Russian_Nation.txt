@@ -195,14 +195,6 @@ country_decisions = {
 				if = {
 					limit = {
 						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = tsardom_legacy
-				}
-				if = {
-					limit = {
-						NOT = {
 							government_rank = 3
 							}
 						}
@@ -245,7 +237,6 @@ country_decisions = {
 				primary_culture = russian			
 				has_country_flag = formed_russian_nation_flag
 				exists = RUS
-				tag = MOV
 				tag = RUS
 				tag = POL
 				tag = PAP
@@ -434,7 +425,6 @@ country_decisions = {
 					set_government_rank = 3
 				}
 				add_government_reform = tsardom
-				set_legacy_government = tsardom_legacy
 			}
 			custom_tooltip = dec1_decisions_spacing
 			RUS = {
@@ -644,14 +634,6 @@ country_decisions = {
 							}
 						}
 					change_government = monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = tsardom_legacy
 				}
 				if = {
 					limit = {

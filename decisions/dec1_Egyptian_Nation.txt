@@ -7,7 +7,6 @@ country_decisions = {
 	egyptian_nation = {
 		major = yes
 		potential = {
-			
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -41,7 +40,6 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
 			egypt_region = {
@@ -136,14 +134,6 @@ country_decisions = {
 				if = {
 					limit = {
 						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = despotic_monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
 							government_rank = 3
 							}
 						}
@@ -162,7 +152,6 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = EGY_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}

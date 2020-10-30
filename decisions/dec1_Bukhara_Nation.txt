@@ -107,14 +107,6 @@ country_decisions = {
 				if = {
 					limit = {
 						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = iqta_legacy
-				}
-				if = {
-					limit = {
-						NOT = {
 							government_rank = 1
 							}
 						}
@@ -127,11 +119,12 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = BUK_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
 					name = dec1_increased_centralization

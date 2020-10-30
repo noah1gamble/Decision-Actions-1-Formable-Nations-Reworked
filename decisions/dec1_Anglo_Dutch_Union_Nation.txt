@@ -190,7 +190,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
 					british_isles_region = {
 						limit = {
@@ -198,7 +197,7 @@ country_decisions = {
 						}
 						add_permanent_claim = AGU
 					}
-					low_countries_region = {
+					low_countries_regn = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
@@ -223,18 +222,29 @@ country_decisions = {
 						change_government = republic
 					}																		
 				}
-				# Custom Ideas check and change		
 				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = AGU_ideas }
+					limit = {	 # Custom Ideas check and ROOT check
+						OR = {
+							has_custom_ideas = no
+							NOT = { 
+								has_idea_group = AGU_ideas 
+							}
+						}
 					}
-					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
+					country_event = { 
+						id = ideagroups.1
+					}
 				}
-				# Increased Centralization
+				country_event = {
+					id = dec1_events.3	# Custom Missions change
+				}
+				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
-					name = dec1_increased_centralization
+					name = dec1_symbiotic_empire	# National Ability
+					duration = 49275
+				}			
+				add_country_modifier = {
+					name = dec1_increased_centralization	# Increased Centralization
 					duration = -1
 				}
 			}

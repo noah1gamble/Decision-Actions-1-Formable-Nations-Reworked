@@ -18,11 +18,11 @@
  alpland_nation_title: "@ALP Alpland Kingdom"
  alpland_nation_desc: "Alpland is an important power in Europe which extends over the Alpine regions of Austria, Italy, France and Switzerland."
 
- angevin_empire_nation_england_title: "@ANG The Angevin Empire"
- angevin_empire_nation_england_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
+ angevin_empire_england_nation_title: "@ANG The Angevin Empire"
+ angevin_empire_england_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
- angevin_empire_nation_france_title: "@ANG The Angevin Empire"
- angevin_empire_nation_france_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
+ angevin_empire_france_nation_title: "@ANG Franco-Angevin Empire"
+ angevin_empire_france_nation_desc: "The Angevin Empire describes the possessions of the Angevin kings of England who held lands in England and France during the 12th and 13th centuries. Its rulers were Henry II, Richard I, and John. the Angevin Empire is an early example of a composite state and as such poses a threat to the stability of feudal europe."
 
  anglo_dutch_union_nation_title: "@AGU The Anglo-Dutch Union"
  anglo_dutch_union_nation_desc: "William III of England who originally ruled as Stadtholder of Holland, Zeeland, Utrecht, Guelders and Overijssel in the Dutch Republic from the 1670s; Began a rulership of England on 11th of April, 1689 until his death and was a soverign ruler of England born of Dutch culture."
@@ -87,7 +87,7 @@
  czechoslovakia_nation_title: "@CZE Unite Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
 
- east_prussia_nation_title: "@EPR East Prussia"
+ east_prussia_nation_title: "@EPR Foundation of Eastern Prussia"
  east_prussia_nation_desc: "Its capital city was Königsberg. East Prussia was the main part of the region of Prussia along the southeastern Baltic Coast. The bulk of the ancestral lands of the Baltic Old Prussians were enclosed within East Prussia."
 
  emilia_romagna_nation_title: "@ERO Emilia-Romagna"
@@ -128,6 +128,9 @@
 
  tibetan_empire_nation_title: "@TIE The Tibetan Empire"
  tibetan_empire_nation_desc: "The Tibetan Empire was a mountainous country in the Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, Kinnara Kingdom etc." 
+
+ himalayan_empire_nation_title: "@HIM Proclaim the Himalayan Empire"
+ himalayan_empire_nation_desc: "The Himalaya kingdom was a mountainous country in the Himalayas mentioned in the Puranas.\n\nHimavat was its ruler and His daughter Parvati, who became a wife of Lord Siva, was a princess from this kingdom. The Indian epic Mahabharata mentions many kingdoms in the Himalaya mountains like the Kuninda, Parvata, Nepa, Kirata, Kimpurusha, and Kinnara."
 
  iberian_empire_nation_title: "@IBE Restore the Iberian Union"
  iberian_empire_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV. The union began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
@@ -221,6 +224,9 @@
 
  kievan_rus_nation_title: "@KRV The Kieven Rus"
  kievan_rus_nation_desc: ""
+
+ brandenburg_prussia_nation_title: "@BRP Brandenburg-Prussia"
+ brandenburg_prussia_nation_desc: "Based in the Electorate of Brandenburg, the main branch of the Hohenzollern intermarried with the branch ruling the Duchy of Prussia, and secured succession upon the latter's extinction in the male line in 1618. Another consequence of the intermarriage was the incorporation of the lower Rhenish principalities of Cleves, Mark and Ravensberg after the Treaty of Xanten in 1614."
  
   # Reworked Vanilla Nations #
 
@@ -257,7 +263,7 @@
  kingdom_of_prussia_nation_brandenburg_title: "@PRU A Prussian King"
  kingdom_of_prussia_nation_brandenburg_desc: "There is only one king in the Empire, the king of Brandenburg. At the same time our lands in Prussia are not a historic part of the Empire, let us declare ourselves King in Prussia to reflect our grander status than the other electors."
 
- restore_roman_republic_nation_title: "@ROM Restore the Republic"
+ restore_roman_republic_nation_title: "@ROM Proclaim the new Republic"
  restore_roman_republic_nation_desc: "The Roman Republic was the era of classical Roman civilization beginning with the overthrow of the Roman Kingdom, traditionally dated to 509 BC, and ending in 27 BC with the establishment of the Roman Empire. It was during this period that Rome's control expanded from the city's immediate surroundings to hegemony over the entire Mediterranean world."
 
  restore_roman_empire_nation_title: "@ROM Restoration of the Roman Empire"
@@ -284,7 +290,7 @@
  spanish_nation_aragon_wedding_title: "@SPA Aragon-Castile Union"
  spanish_nation_aragon_wedding_desc: "The marriage of Ferdinand II of Aragon and Isabella I of Castile, in 1469 at the Palacio de los Vivero in Valladolid began the familial union of the two kingdoms. They became known as the Catholic Monarchs (los Reyes Católicos). Isabella succeeded her brother as Queen of Castile and Ferdinand became jure uxoris King of Castile in 1474 creating for the first time since the 8th century a single political unit, referred to as España (Spain)"
  
- tibetan_nation_title: "@TIB The Lhasa State"
+ tibetan_nation_title: "@TIB State of Lhasa"
  tibetan_nation_desc: "With Güshi Khan as a largely uninvolved devotee, the 5th Dalai Lama and his intimates especially Sonam Rapten (until his death in 1658) established a civil administration which is referred to by historians as the Lhasa state. This Tibetan regime or government is also referred to as the Ganden Phodrang."
 
  persian_nation_title: "@PER The Persian Empire"
@@ -341,8 +347,8 @@
  papal_states_nation_title: "@PAP Restore the Papal States"
  papal_states_nation_desc: "Without God man neither knows which way to go, nor even understands who he is... One of the deepest forms of poverty a person can experience is isolation... We must reclaim the holy lands of Roma and restore the Papal legacy! DEUS VULT! DEUS VULT! DEUS VULT!"
 
- gods_kingdom_nation_title: "@KOG The Kingdom of God"
- gods_kingdom_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."
+ kingdom_of_god_nation_title: "@KOG The Kingdom of God"
+ kingdom_of_god_nation_desc: "The Kingdom of God on Earth is the unified state of Italy under Papal control. Such a rich and vast territory allows God to spread the word near and far under [Root.Monarch.GetName]."
 
  ruthenian_nation_title: "@UKR Reclaim the Ruthenian Legacy"
  ruthenian_nation_desc: "Centuries ago the land of the Rus' was united under a single banner and ruled from the legendary city Kiev. But then came the Mongol hordes, advancing from the great steppe, pillaging and burning. They destroyed our kremlins and the towns fell one by one, even Kiev itself could not avoid this fate. In terror our people fled the plains of Rus' and went north. Into the forests and hinterlands of the land we today call Russia.\n\nNow a new and arrogant city of the north is on the rise. It draws in the petty states around it and its ruler envisions a new Rus'. A Rus' centered in Moscow and not Kiev.\n\nHowever us Ruthenians will not go silent into the pages of history. We will not allow newcomers and pretenders to claim the legacy of our forefathers. Kiev shall rise once gain and we shall restore it to its former glory and splendor. So too shall the Rus'."
@@ -358,6 +364,9 @@
 
  netherlands_nation_title: "@NED The Netherlands"
  netherlands_nation_desc: "The Dutch are emerging as one of Europe's most capable naval and colonial powers. Lucrative trade opportunities, locally and overseas, have resulted in a swift evolution for the country into one of the first capitalist countries in the world."
+
+ tuscan_nation_title: "@TUS Foundation of Tuscany"
+ tuscan_nation_desc: "Not since the days of the Margraviate of Tuscany has a single power controlled as much of the the Tuscan lands as we do. Let us adopt a new title to better reflect our new standing among the states of Italy. "
 
  # Colonial Nations
 
@@ -379,4 +388,7 @@
  california_nation_title: "@CAL Californian Nation"
  california_nation_desc: "We have made a home in this rugged land. It is time for us to muster our strength and cast off the oppression of our colonial overlords, so that we may build a paradise in the West."
 
- 
+ # Reformable Countries
+
+ bavaria_nation_title: "@BAV Bavarian Restoration"
+ bavaria_nation_desc: "The once proud Duchy of Bavaria lies divided and weak. We must reunite its former territories and reclaim the glories of the past if we are to avoid being but a footnote in history."

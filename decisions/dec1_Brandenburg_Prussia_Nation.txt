@@ -10,6 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			tag = BRA
 			NOT = {
 				has_country_flag = formed_brandenburg_prussia_nation_flag			
 				exists = BRP
@@ -17,7 +18,6 @@ country_decisions = {
 				tag = PRU
 				tag = GER
 				tag = HLR
-				tag = BRA
 				tag = TEU
 			}
 			OR = {
@@ -28,12 +28,14 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				OR = {
+				AND = {
 					ai = yes
-					religion = reformed
-					religion = protestant
+					OR = {
+						religion = reformed
+						religion = protestant
+					}
 				}
-			}			
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -207,8 +209,7 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Claims
 									
 					# Government Rank change				
@@ -239,6 +240,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

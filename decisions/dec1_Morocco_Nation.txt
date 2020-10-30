@@ -132,15 +132,7 @@ country_decisions = {
 							}	
 						}
 					change_government = monarchy
-				}			
-				if = { 
-					limit = { 
-						NOT = { 
-							has_dlc = "Dharma"
-							}	
-						}
-					set_legacy_government = despotic_monarchy
-				}				
+				}							
 				if = { 
 					limit = { 
 						NOT = { 

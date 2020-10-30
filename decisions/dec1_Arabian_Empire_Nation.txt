@@ -21,6 +21,7 @@ country_decisions = {
 				tag = ARB
 				tag = HLR
 				tag = PAP
+				tag = EGY
 			}
 			OR = {
 				ai = no
@@ -50,21 +51,21 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no
 			is_nomad = no
+			owns_core_province = 361
+			owns_core_province = 385
+			owns_core_province = 410			
 			egypt_region = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 361
 			arabia_region = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 385
 			mashriq_region = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 410
 		}
 		effect = {
 			change_tag = ARB # Country TAG
@@ -91,7 +92,6 @@ country_decisions = {
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
 				# Reform Change
-				add_government_reform = prussian_monarchy
 				add_government_reform = autocracy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -102,7 +102,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
 					mashriq_region = {
 						limit = {
@@ -141,18 +140,29 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
-				# Custom Ideas check and change		
 				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = ARB_ideas }
+					limit = {	 # Custom Ideas check and ROOT check
+						OR = {
+							has_custom_ideas = no
+							NOT = { 
+								has_idea_group = ARB_ideas 
+							}
+						}
 					}
-					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
+					country_event = { 
+						id = ideagroups.1
+					}
 				}
-				# Increased Centralization
+				country_event = {
+					id = dec1_events.3	# Custom Missions change
+				}
+				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
-					name = dec1_increased_centralization
+					name = dec1_muhammads_conquests	# National Ability
+					duration = 49275
+				}			
+				add_country_modifier = {
+					name = dec1_increased_centralization	# Increased Centralization
 					duration = -1
 				}
 			}

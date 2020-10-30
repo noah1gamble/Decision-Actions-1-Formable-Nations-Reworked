@@ -3,107 +3,169 @@ country_decisions = {
 	bavaria_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
-			NOT = { has_country_flag = formed_bavaria_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = BAV }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
 			primary_culture = bavarian
+			NOT = {
+				has_country_flag = formed_bavaria_nation_flag
+				exists = BSQ
+				tag = PAP
+				tag = HLR
+				tag = EUR
+				tag = FIB
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				#other claimants are gone
-				AND = {
-					ROOT = { NOT = { tag = LBV } }
-					LBV = {
-						OR = {
-							num_of_cities = 5
-							NOT = { is_subject_of = ROOT }
+				AND = { # is NOT landshut OR Landshut has 5 cities and NOT subject of ROOT
+					ROOT = { 
+						NOT = { 
+								tag = LBV 
+							} 
 						}
-					}
+						LBV = {
+							OR = {
+								num_of_cities = 5
+								NOT = { 
+									is_subject_of = ROOT 
+								}
+							}
+						}
 					owned_by = LBV
 				}
-				AND = {
-					ROOT = { NOT = { tag = ING } }
+				AND = { # IS not Ingolstadt OR has 5 cities and NOT subject of ROOT
+					ROOT = { 
+						NOT = { 
+							tag = ING 
+						} 
+					}
 					ING = {
 						OR = {
 							num_of_cities = 5
-							NOT = { is_subject_of = ROOT }
+							NOT = { 
+								is_subject_of = ROOT 
+							}
 						}
 					}
 					owned_by = ING
 				}
 				AND = {
-					ROOT = { NOT = { tag = UBV } }
+					ROOT = { 
+						NOT = { 
+							tag = UBV 
+						} 
+					}
 					UBV = {
 						OR = {
 							num_of_cities = 5
-							NOT = { is_subject_of = ROOT }
+							NOT = { 
+								is_subject_of = ROOT 
+							}
 						}
 					}
 					owned_by = UBV
 				}
-				#make sure you are not benefitting from others' conquests
+				# make sure you are not benefitting from others' conquests
 				AND = {
 					province_id = 65
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
 				}
 				AND = {
 					province_id = 64
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
 				}
 				AND = {
 					province_id = 2955
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
 				}
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-
+			is_subject = no
+			NOT = { exists = BAV }
+			AND = {
+				OR = { # Can form Bavaria during war
+					is_at_war = yes
+					is_at_war = no
+				}
+				AND = { # Cannot be at war with other Bavarian minors
+					NOT = {
+						war_with = UBV
+						war_with = LBV
+						war_with = ING
+					} 
+				}
+			}
 			if = {
-				limit = { NOT = { tag = UBV } }
+				limit = { 
+					NOT = { 
+						tag = UBV 
+					} 
+				}
 				OR = {
-					NOT = { exists = UBV }
+					NOT = { 
+						exists = UBV 
+					}
 					UBV = {
-						NOT = { num_of_cities = 5 }
+						NOT = { 
+							num_of_cities = 5 
+						}
 						is_subject_of = ROOT
 					}
 				}
 			}
 			if = {
-				limit = { NOT = { tag = LBV } }
+				limit = { 
+					NOT = { 
+						tag = LBV 
+					} 
+				}
 				OR = {
-					NOT = { exists = LBV }
+					NOT = { 
+						exists = LBV 
+					}
 					LBV = {
-						NOT = { num_of_cities = 5 }
+						NOT = { 
+							num_of_cities = 5 
+						}
 						is_subject_of = ROOT
 					}
 				}
 			}
 			if = {
-				limit = { NOT = { tag = ING } }
+				limit = { 
+					NOT = { 
+						tag = ING 
+					} 
+				}
 				OR = {
-					NOT = { exists = ING }
+					NOT = { 
+						exists = ING 
+					}
 					ING = {
-						NOT = { num_of_cities = 5 }
+						NOT = { 
+							num_of_cities = 5 
+						}
 						is_subject_of = ROOT
 					}
 				}
 			}
-
-			owns_or_non_sovereign_subject_of = 65			#Munich
-			owns_or_non_sovereign_subject_of = 64			#Landshut
-			owns_or_non_sovereign_subject_of = 2955			#Ingolstadt
+			owns_or_non_sovereign_subject_of = 65	# Munich
+			owns_or_non_sovereign_subject_of = 64	# Landshut
+			owns_or_non_sovereign_subject_of = 2955	# Ingolstadt
 		}
 		effect = {
-			change_tag = BAV
-			restore_country_name_effect = yes
+			change_tag = BAV # Country TAG
+			restore_country_name_effect = yes # Unique Reformation Effect
+			set_country_flag = formed_bavaria_nation_flag # Country Formation Flag
+			custom_tooltip = form_bavaria_tt_2 # New Missions
 			if = {
 				limit = {
 					UBV = { is_subject_of = ROOT }
@@ -121,47 +183,104 @@ country_decisions = {
 					ING = { is_subject_of = ROOT }
 				}
 				inherit = ING
-			}
-			lower_bavaria_area = {
-				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+			}	
+			custom_tooltip = dec1_decisions_blank						
+			BAV = { # Capital change and bonuses				
+				set_capital = 65 # Munich
+				65 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = root
-			}
-			upper_bavaria_area = {
-				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					if = {
+						limit = {
+							NOT = { tag = UBV }
+							NOT = { tag = LBV }
+							NOT = { tag = ING }
+							NOT = { was_tag = UBV }
+							NOT = { was_tag = LBV }
+							NOT = { was_tag = ING }
+						}
+						swap_non_generic_missions = yes
+					}				
+					# Claims
+					lower_bavaria_area = {
+						limit = {
+							NOT = { owned_by = root }
+							NOT = { is_permanent_claim = root }
+						}
+						add_permanent_claim = root
+					}
+					upper_bavaria_area = {
+						limit = {
+							NOT = { owned_by = root }
+							NOT = { is_permanent_claim = root }
+						}
+						add_permanent_claim = root
+					}
+					east_bavaria_area = {
+						limit = {
+							NOT = { owned_by = root }
+							NOT = { is_permanent_claim = root }
+						}
+						add_permanent_claim = root
+					}					
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				add_permanent_claim = root
-			}
-			east_bavaria_area = {
-				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = BAV_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
 				}
-				add_permanent_claim = root
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			set_capital = 65
-			65 = { add_base_tax = 2 }
-			set_country_flag = formed_bavaria_flag
-
-			if = {
-				limit = {
-					NOT = { tag = UBV }
-					NOT = { tag = LBV }
-					NOT = { tag = ING }
-					NOT = { was_tag = UBV }
-					NOT = { was_tag = LBV }
-					NOT = { was_tag = ING }
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
 				}
-				swap_non_generic_missions = yes
 			}
 		}
 		ai_will_do = {

@@ -1,0 +1,10 @@
+YUG_dec1_mission_tree_main = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = { map_setup = map_setup_random }
+		tag = YUG
+	}
+	has_country_shield = yes
+}

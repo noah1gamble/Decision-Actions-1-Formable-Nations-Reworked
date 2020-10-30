@@ -173,14 +173,6 @@ country_decisions = {
 				if = {
 					limit = {
 						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = despotic_monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
 							government_rank = 3
 							}
 						}

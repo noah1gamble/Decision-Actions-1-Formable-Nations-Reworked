@@ -3,33 +3,29 @@ country_decisions = {
 	tuscan_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_tuscany_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
+			culture_group = latin
+			NOT = { 
+				has_country_flag = formed_tuscan_nation_flag
+				exists = TUS
+				tag = TUS
+				tag = PAP
+				tag = SAV
+				tag = SAR
+				tag = COR
+				tag = IMA
+				tag = ITA
+				tag = KOG
+				tag = ROP
+				tag = CIS			
 			}
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
-			NOT = { tag = ITA }
-			NOT = { tag = TUS }
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 3
-					NOT = { exists = TUS }
-				}
-			}
-			primary_culture = tuscan
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
 				}
 			}
 		}
@@ -40,11 +36,13 @@ country_decisions = {
 				province_id = 115	# Pisa
 				AND = {
 					province_id = 117
-					ROOT = { NOT = { owns_core_province = 2980 } }
+					ROOT = { NOT = { owns_core_province = 2980 } 
+					}
 				}
 				AND = {
 					province_id = 2980
-					ROOT = { NOT = { owns_core_province = 117 } }
+					ROOT = { NOT = { owns_core_province = 117 } 
+					}
 				}
 			}
 			OR = {
@@ -54,10 +52,9 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
 			NOT = { exists = TUS }
+			is_subject = no
+			is_at_war = no
 			owns_core_province = 2978	# Arezzo
 			owns_core_province = 116	# Firenze
 			owns_core_province = 115	# Pisa
@@ -67,31 +64,77 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = TUS
-			every_province = {
-				limit = {
-					culture = tuscan
-					NOT = { owned_by = ROOT }
-					continent = europe
+ 			change_tag = TUS # Country TAG
+			set_country_flag = formed_tuscan_nation_flag # Country Formation Flag
+			custom_tooltip = form_tuscany_tt_2 # New Missions
+			custom_tooltip = form_tuscany_tt_3 # Claims
+			custom_tooltip = form_tuscany_tt_4 # Claims
+			custom_tooltip = form_tuscany_tt_5 # Claims
+			custom_tooltip = dec1_decisions_blank
+			TUS = { # Capital change and bonuses				
+				set_capital = 115 # Tuscany
+				115 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = TUS
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			if = {
-				limit = {
-					NOT = { has_idea_group = TUS_ideas }
-					is_playing_custom_nation = no
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			add_prestige = 25
-			set_country_flag = formed_tuscany_flag
-			hidden_effect = {
-				country_event = { id = flavor_tus.2 days = 50 random = 20 }
-			}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = TUS_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
+				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}	
 		}
 		ai_will_do = {
 			factor = 1

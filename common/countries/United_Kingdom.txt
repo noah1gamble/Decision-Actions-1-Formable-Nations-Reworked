@@ -1,10 +1,10 @@
-#United_Kingdom
+# United Kingdom
 
 graphical_culture = westerngfx
 
-color = { 153  0 0 }
+color = { 153 0 0 }
 
-revolutionary_colors = { 5  13  0 }
+revolutionary_colors = { 5 13 0 }
 
 historical_score = 6550
 

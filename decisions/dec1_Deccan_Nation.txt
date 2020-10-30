@@ -53,133 +53,119 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = DEC
-			#swap_non_generic_missions = yes # DEV NOTE: needs custom missions
-			set_country_flag = formed_deccan_nation_flag
-			#set_country_flag = united_indian_country_nation_flag # Deccan does not count, must be empire rank
-			DEC = {
-				add_prestige = 20
+			change_tag = DEC # Country TAG
+			set_country_flag = formed_deccan_nation_flag # Country Formation Flag
+			custom_tooltip = form_deccan_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			DEC = { # Capital change and bonuses				
 				set_capital = 522 # Delhi
 				522 = {
-					add_base_tax = 2
-					add_base_production = 3
-					add_base_manpower = 2
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}
-			bengal_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = BHA
-			}
-			hindusthan_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = BHA
-			}
-			west_india_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = BHA
-			}
-			deccan_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = BHA
-			}
-			coromandel_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = BHA
-			}
-			custom_tooltip = dec1_decisions_blank
-			DEC = {
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-					remove_non_electors_emperors_from_empire_effect = yes
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			DEC = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-							}
-						}
-					set_legacy_government = despotic_monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 2
-							}
-						}
-					set_government_rank = 2
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Change
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			DEC = {
+				custom_tooltip = dec1_decisions_blank	
+				# Claims
+				bengal_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DEC
+				}
+				hindusthan_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DEC
+				}
+				west_india_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DEC
+				}
+				deccan_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DEC
+				}
+				coromandel_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = DEC
+				}			
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = DEC_ideas }
+						is_part_of_hre = yes
 					}
-					country_event = { id = ideagroups.1 }
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
 				}
+				if = {
+					limit = {	 # Custom Ideas check and ROOT check
+						OR = {
+							has_custom_ideas = no
+							NOT = { 
+								has_idea_group = ALP_ideas 
+							}
+						}
+					}
+					country_event = { 
+						id = ideagroups.1
+					}
+				}
+				country_event = {
+					id = dec1_events.3	# Custom Missions change
+				}
+				custom_tooltip = dec1_decisions_blank
 				add_country_modifier = {
-					name = dec1_increased_centralization
+					name = dec1_tough_terrain_castles	# National Ability
+					duration = 49275
+				}			
+				add_country_modifier = {
+					name = dec1_increased_centralization	# Increased Centralization
 					duration = -1
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-
+	
 }

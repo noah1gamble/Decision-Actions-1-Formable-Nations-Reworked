@@ -111,15 +111,14 @@ country_decisions = {
 			owns_core_province = 2748 
 		}
 	 	effect = {
-			change_tag = ANG # Country TAG
-			set_country_flag = formed_angevin_empire_england_nation_flag # Country Formation Flag
-			custom_tooltip = form_angevin_empire_tt_2 # New Missions
-			custom_tooltip = form_angevin_empire_tt_3 # Region/Area Claims
-			custom_tooltip = form_angevin_empire_tt_4 # Region/Area Claims		
+			change_tag = TIE # Country TAG
+			set_country_flag = formed_tibetan_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_tibetan_empire_tt_2 # New Missions
+			custom_tooltip = form_tibetan_empire_tt_3 # Region/Area Claims	
 			custom_tooltip = dec1_decisions_blank	
-			ANG = { # Capital change and bonuses				
-				set_capital = 178 # Anjou
-				178 = {
+			TIE = { # Capital change and bonuses				
+				set_capital = 520 # Lhasa
+				520 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -131,18 +130,10 @@ country_decisions = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
 				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = english_monarchy_legacy
-				}
-				add_government_reform = english_monarchy_reform						
+				add_government_reform = autocracy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -152,19 +143,12 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
-					british_isles_region = {
+					xinan_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ANG
-					}
-					france_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = ANG
+						add_permanent_claim = TIE
 					}	
 					# Government Rank change				
 					if = {
@@ -179,21 +163,23 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government = republic
+								government = monarchy
 								}
 							}
-						change_government = republic
+						change_government = monarchy
 					}																		
 				}
 				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = ADR_ideas }
+						NOT = { has_idea_group = TIE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

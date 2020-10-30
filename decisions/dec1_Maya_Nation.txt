@@ -89,7 +89,6 @@ country_decisions = {
 			if = {
 				limit = { is_tribal = yes }
 				change_government = monarchy
-				set_legacy_government = despotic_monarchy
 			}
 		}
 		ai_will_do = {

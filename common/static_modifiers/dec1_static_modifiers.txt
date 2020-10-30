@@ -16,64 +16,536 @@ dec1_abolished_the_mandate_of_heaven = {
 # National Abilities #
 ######################
 
-	# Abyssinia
+################## New Custom Nations ##################
 
-dec1_house_of_solomon = {
-	global_unrest = -2
-}
+		# Abyssinia
 
-	# Adricatic Empire
+	dec1_house_of_solomon = {
+		global_unrest = -2
+	}
 
-dec1__mare_superum = {
-	merchants = 1
-}
+		# Adriatic Empire
 
-	# Alpland
+	dec1_mare_superum = {
+		merchants = 1
+	}
 
-dec1_tough_terrain_castles = {
-	local_defensiveness = 2.0
-}
+		# Alpland
 
-	# Alscase-Lorraine
+	dec1_tough_terrain_castles = {
+		defensiveness = 0.20
+	}
 
-dec1_germanic_franco_influences = {
-	discipline = 0.5
-}
+		# Alscase-Lorraine
 
-	# Angevin Empire
+	dec1_germanic_franco_influences = {
+		land_morale = 0.2
+		discipline = 0.2
+	}
 
-dec1_legacy_of_the_angevins = {
-	diplomatic_reputation = 1
-	diplomatic_upkeep = 1
-}
+		# Angevin Empire
 
-	# Anglo-Dutch Union
+	dec1_legacy_of_the_angevins = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+	}
 
-dec1_symbiotic_empire = {
-	legitimacy = 1
-	diplomatic_reputation = 1
-}
+		# Anglo-Dutch Union
 
-	# Arabian Kingdom
+	dec1_symbiotic_empire = {
+		legitimacy = 1
+		diplomatic_reputation = 1
+	}
 
-dec1 = {
+		# Arabian Kingdom
+
+	dec1_legacy_of_muhammad = {
+		discipline = 0.1 
+		land_morale = 0.1 
+	}
+
+		# Armenian Empire
+		
+	dec1_cultural_warfare = {
+		culture_conversion_cost = -0.40
+		num_accepted_cultures = -2	
+	}
+
+		# Republic of Armenia
+
+	dec1_the_steppe_republic = {
+		republican_tradition = 0.5
+	}
+
+		# Austrian Empire
+
+	dec1_habsburg_dynasty = {
+		diplomatic_upkeep = 1
+	}
+
+		# Austro-Hungarian Empire
+
+	dec1_multinational_empire = {
+		num_accepted_cultures = 2
+	}
+
+		# Balkan League
+
+	dec1_powder_keg_kingdom = {
+		global_unrest = 1
+		discipline = 0.2
+	}
+
+		# Baltic Union
+
+	dec1_baltic_trade = {
+		global_trade_power = 0.1
+	}
+
+		# Basque Kingdom
+
+	dec1_ducal_kingdom = {
+		prestige = 0.5
+		prestige_decay = -0.01
+	}
+
+		# Belgium
+
+	dec1_congo_colonies = {
+		colonists = 1
+	}
+
+		# Benelux
+
+	dec1_trade_traditions = {
+		caravan_power = 0.2
+	}
+
+		# Bosnia-Serbia
+
+	dec1_union_of_two = {
+		liberty_desire_from_subject_development = -0.05
+	}
+
+		# Brandenburg-Prussia
+
+	dec1_electorate_of_brandenburg_prussia = {
+		num_accepted_cultures = 1
+		legitimate_subject_elector = 100
+	}
+
+		# Bremen-Verden
+
+	dec1_german_nationalism = {
+		yearly_absolutism = 0.1
+		legitimacy = 1
+	}
+
+		# Burma
+
+	dec1_indian_chinese_relations = {
+		diplomatic_reputation = 1
+	}
+
+		# Carthage
+
+	dec1_phoenician_spirit = {
+		discipline = 0.1
+		mercenary_discipline = 0.1
+		land_morale = 0.1 
+	}
+
+		# Caucasia
+
+	dec1_rough_lives = {
+		defensiveness = 0.10
+		garrison_size = 0.1
+	}
+
+		# Celtic Union
+
+	dec1_celtic_lifestyle = {
+		land_morale = 0.1
+		same_culture_advisor_cost = -0.5
+	}
+
+		# China
+
+	dec1_the_middle_kingdom = {
+		imperial_mandate = 0.1
+		governing_capacity_modifier = 0.2
+	}
+
+		# People's Republic of China
+
+	dec1_foundation_chinese_communist_party = {
+		global_unrest = 1
+		culture_conversion_cost = -0.35
+	}
+
+		# Confederate States
+
+	dec1_slave_income = {
+		trade_steering = 0.1
+		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
+	}
+
+		# Cisalpina
+
+	dec1_italian_republic = {
+		legitimacy = 1
+		merchants = 1
+	}
+
+		# Czechoslovakia
+
+	dec1_czech_unity = {
+		promote_culture_cost = -0.25
+	}
+
+		# Ducal Prussia
+
+	dec1_the_rise_of_prussia = {
+		years_of_nationalism = -5
+	}
+
+		# East Prussia
+
+	dec1_prussian_legacy = {
+		discipline = 0.1
+		global_manpower_modifier = 0.1
+	}
+
+		# East Germany
+
+	dec1_combloc_formations = {
+		reserves_organisation = 0.2 
+	}
+
+		# Eastern Roman Empire
+
+	dec1_wealth_trade_empire = {
+		trade_efficiency = 0.1
+		mercantilism_cost = -0.1
+	}
+
+		# Emilia-Romagna
+
+	dec1_italian_strength = {
+		cb_on_religious_enemies = yes 
+	}
+
+		# Empire of Japan
+
+	dec1_the_meiji_era = {
+		all_power_cost = -0.2
+	}
+
+		# European Union
+
+	dec1_the_union = {
+		country_admin_power = 2 
+		country_diplomatic_power = 2 
+	}
+
+		# Franco-Iberian Empire
+
+	dec1_castilian_franco_cultural_unity = {
+		global_tax_modifier = 0.05
+		unrest_catholic_provinces = -5
+	}
+
+		# Franconia
+
+	dec1_german_kings_of_the_reich = {
+		development_cost = -0.1
+	}
+
+		# French Empire
+
+	dec1_the_emperor_general = {
+		monarch_admin_power = 2
+		monarch_diplomatic_power = 2
+		monarch_military_power = 2
+		army_tradition_decay = -0.1
+		heir_chance = 0.5
+		war_exhaustion = 0.2 # Debuff
+	}
+
+		# Frieslande
+
+	dec1_frisian_legacy = {
+		legitimacy = 1
+		power_projection_from_insults = 0.1
+	}
+
+		# German Empire
+
+	dec1_the_german_union = {
+		legitimacy = 1 
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 3 
+		ae_impact = 0.1 # Debuff
+	}
+
+		# Goguryeo
+
+	dec1_korean_kingdom = {
+		global_tax_modifier = 0.10 
+		war_taxes_cost_modifier = -0.2 
+	}
+
+		# Hansa
+
+	dec1_germanic_hansa_kingdom = {
+		build_cost = -0.1
+		build_time = -0.10
+	}
+
+		# Hanseatic League
+
+	dec1_the_hansa = {
+		global_tax_modifier = 0.15
+	}
+
+		# Hesse-Nassau
+
+	dec1_legacy_of_nassau = {
+		leader_siege = 2
+		interest = -1
+	}
+
+		# Himalayan Empire
+
+	dec1_empire_in_the_mountains = {
+		placed_merchant_power = 10
+ 		trade_efficiency = -0.1	# Debuff
+	}
+
+		# Iberian Empire
+
+	dec1_christian_empire_in_iberia = {
+		missionaries = 2
+	 	papal_influence = 0.3
+		tolerance_heathen = -2 # Debuff
+	}
+
+		# Islamic State
+
+	dec1_the_new_caliphate = {
+		rebel_support_efficiency = 0.75
+		may_perform_slave_raid = yes
+	}
+
+		# Italian Empire
+
+	dec1_rebirth_of_the_renaissance = {
+		global_institution_spread = 0.2
+	}
+
+		# Italian Merchant Alliance
+
+	dec1_trade_empire = {
+		trade_efficiency = 0.1
+		trade_steering = 0.1
+	}
+
+		# Jagiellonian Empire
+
+	dec1_jagiellonian_empire_union_of_persistence = {
+		monarch_diplomatic_power = 2
+	}
+
+		# Kievan Rus
 	
-}
+	dec1_kievan_kingdom = {
+		land_morale = 0.1 
+		defensiveness = 0.10
+	}
+
+		# Kingdom of God
+
+	dec1_the_messenger_of_god = {
+		religious_unity = 1.0
+	}
+
+		# Lombardy-Venitia
+
+	dec1_french_warfare = {
+		land_morale = 0.1
+		improve_relation_modifier = 0.2
+	}
+
+		# Lower Saxony
+
+	dec1_southern_saxon_warriors = {
+		mercenary_cost = -0.1
+		mercenary_manpower= 0.1
+	}
+
+		# Lusitanian Empire
+
+	dec1_the_spice_empire = {
+		global_trade_goods_size_modifier = 0.2
+	}
+
+		# Macedon
+
+	dec1_alexanders_kingdom = {
+		core_creation = -0.2
+	}
+
+		# Maghrebia
+
+	dec1_muslim_superiority = {
+		religious_unity = 1.0
+		cb_on_religious_enemies = yes
+	}
+
+		# North German Confederation
+
+	dec1_prussian_influences = {
+		drill_gain_modifier = 0.1 
+		yearly_army_professionalism = 0.01
+	}
+
+		# North Sea Empire
+
+	dec1_empire_of_trade = {
+		trade_power_in_fleet_modifier = 4 
+	}
+
+		# Pontus
+
+	dec1_roman_dreams = {
+		unjustified_demands = -0.2
+	}
+
+		# Rhine Confederation
+
+	dec1_legacy_of_bonaparte = {
+		enemy_core_creation = 0.4
+	}
+
+		# Roman Republic
+
+	dec1_the_rebirth_of_the_republic = {
+		election_cycle = 6
+	}
+
+		# Saudi Arabia
+
+	dec1_house_of_saud = {
+		culture_conversion_cost = -0.15	
+	}
+
+		# Siebenbuergen
+
+	dec1_twenty_castles = {
+		defensiveness = 0.20
+	}
+
+		# South German Ferderation
+
+	dec1_austrian_influences = {
+
+	}
+
+		# Soviet Union
+
+	dec1_soviet_socialist_republics = {
+
+	}
+
+		# Sweden-Norway
+
+	dec1_union_of_grace = {
+
+	}
+
+		# Tatarstan
+
+	dec1_tatar_qualities = {
+
+	}
+
+		# Tibetan Empire
+
+	dec1_legacy_of_the_dali_lama = {
+
+	}
+
+		# Turkey
+
+	dec1_turkish_nationalism = {
+
+	}
+
+		# United Kingdom
+
+	dec1_rule_britannia = {
+
+	}
+
+		# West Germany
+
+	dec1_western_german_rights = {
+		
+	}
+
+		# Western Roman Empire
+
+	dec1_the_birth_of_empire = {
+
+	}
+
+		# Yugoslavia
+
+	dec1_yugoslavs = {
+
+	}
 
 
+################## Vanilla Nations ##################
 
-	# People's Republic of China
+	# Algiers
 
-dec1_foundation_chinese_communist_party = {
-	global_unrest = 1
-	culture_conversion_cost = -0.35
-}
+	dec1_noble_amirs = {
+		estate_nobles_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.1
+	}
 
-	# Jagiellonian Empire
+	# Andalusia 
 
-dec1_jagiellonian_empire_union_of_persistence = {
-	monarch_diplomatic_power = 2
-}
+	dec1_caliphate_of_cordoba = {
+		warscore_cost_vs_other_religion = -0.10
+		religious_unity = 0.5
+	}
 
-	# 
+	# Arabian Empire
 
+	dec1_muhammads_conquests = {
+		cb_on_religious_enemies = yes 
+		discipline = 0.1
+		siege_ability = 0.1
+	 	movement_speed = -0.2 # Debuff
+	}
+
+	# Two Sicilies
+
+	dec1_italian_spirit = {
+		discipline = 0.05
+		land_morale = 0.05
+	}
+
+
+################## Colonial Nations ##################
+
+################## Reformable Nations ##################
+
+	# Papal States
+
+	dec1_the_pope = {
+		missionaries = 1
+	}

@@ -126,15 +126,6 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = federal_republic_legacy
-				}
 				add_government_reform = federal_republic
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
@@ -145,7 +136,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Government Rank change				
 					if = {
 						limit = {
@@ -174,6 +164,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

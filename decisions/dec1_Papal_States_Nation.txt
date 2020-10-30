@@ -22,7 +22,6 @@ country_decisions = {
 			dominant_religion = catholic
 			owns = 118
 			NOT = {
-				has_country_modifier = kingdom_of_god
 				exists = ITA
 				exists = PAP
 				tag = ITA
@@ -56,7 +55,7 @@ country_decisions = {
 					owns_core_province = 202 # AVIGNON!
 				}
 				custom_trigger_tooltip = {
-					tooltip = restore_papal_states_nation_tt_1
+					tooltip = restore_papal_states_tt_1
 						# Any controller of original papal provinces is allowed
 					owns_core_province = 118 # ROME!
 					owns_core_province = 202 # AVIGNON!						
@@ -75,10 +74,9 @@ country_decisions = {
 			change_tag = PAP # Country TAG
 			set_country_flag = restore_papal_states_nation_flag # Country Formation Flag
 			custom_tooltip = restore_papal_states_tt_2 # New Missions
-			custom_tooltip = dec1_papal_states_notif # You are becoming the popeman
-			custom_tooltip = dec1_papal_influence # All italian nations gain papal influence	
-			custom_tooltip = restore_papal_states_nation_tt_3 # Region/Area Claims		
-			custom_tooltip = dec1_decisions_blank	
+			custom_tooltip = restore_papal_states_tt_3 # Region/Area Claims	
+			custom_tooltip = restore_papal_states_tt_4 # You are becoming the popeman
+			custom_tooltip = restore_papal_states_tt_5 # All italians gain papal influence	
 			PAP = { # Capital change and bonuses				
 				set_capital = 118 # Roma
 				118 = {
@@ -96,15 +94,6 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_theocracy # Government Type Change
 				}				
-				# Dharma DLC check and base reform change
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Dharma"
-						}
-					}
-					set_legacy_government = papal_government
-				}
 				add_government_reform = papacy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -115,7 +104,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					swap_non_generic_missions = yes  # New Missions
 					# Region/Area Claims
 					italy_region = {
 						limit = {
@@ -158,6 +146,8 @@ country_decisions = {
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank
 				}
+                country_event = { id = dec1_events.3 }
+                custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

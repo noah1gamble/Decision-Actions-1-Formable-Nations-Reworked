@@ -87,3 +87,24 @@
 			}
 		}
 	}
+
+	# New Missions & Objectives
+	country_event = {
+		id = dec1_events.3
+		title = "dec1_events.3.t"
+		desc = "dec1_events.3.d"
+		picture = BIG_BOOK_eventPicture
+
+		is_triggered_only = yes
+
+		option = {	# Yes, Please!
+			name = "dec1_events.3.a"
+			ai_chance = { factor = 1 }
+			swap_non_generic_missions = yes	
+		}
+		option = {	# No, we cannot abandon our roots.
+			name = "dec1_events.3.b"
+			ai_chance = { factor = 0 }
+			# No Effect
+		}
+	}	

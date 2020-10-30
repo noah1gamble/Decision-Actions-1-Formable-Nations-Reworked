@@ -101,6 +101,341 @@ ADR_ideas = {
 	}
 }
 
+# Anglo-Dutch Union
+AGU_ideas = { 
+	start = {
+		election_cycle = 10 # Anglo-Dutch Election System
+		colonists = 1 # Anglo-Dutch Colonial Empire
+	}
+
+	bonus = {
+		merchants = 1 # English-Dutch Trade Dominance
+	}
+
+	trigger = {
+		tag = AGU
+	}
+	free = yes	# will be added at load.
+
+	AGU_multicultural_union = {
+		num_accepted_cultures = 3 
+	}
+
+	AGU_control_of_economic_centers = {
+		global_trade_power = 0.1 
+	}
+
+	AGU_colonial_ambitions = {
+		local_colonial_growth = 10 
+		global_foreign_trade_power = 0.15
+	}
+
+	AGU_global_trade_power = {
+		local_production_efficiency = 0.1 
+	}
+
+	AGU_influx_of_merchants = {
+		merchants = 2
+		galley_cost = -0.1 
+	}
+
+	AGU_naval_control = {
+		navy_tradition = 1
+	}
+
+	AGU_tax_the_poor = {
+		global_tax_modifier = 0.03 
+		global_tax_income = 128
+	}
+}
+
+# Alsace-Lorraine
+ALC_ideas = { 
+	start = {
+		mercantilism_cost = -0.2 # Franco-German Trade
+		culture_conversion_cost = -0.25 # Conversion of the Nobles
+	}
+
+	bonus = {
+		unrest_catholic_provinces = -2 # Catholic Dominance
+	}
+
+	trigger = {
+		tag = ALC
+	}
+	free = yes	# will be added at load.
+
+	ALC_dominate_the_peasants = {
+		global_unrest = -1 
+	}
+
+	ALC_force_government_reforms = {
+		cb_on_government_enemies = yes
+	}
+
+	ALC_papal_investure = {
+		papal_influence = 0.5
+		church_power_modifier = 0.5
+	}
+
+	ALC_resistance_to_reformation = {
+		# TODO
+	}
+
+	ALC_religious_wars = {
+		extra_manpower_at_religious_war = yes
+		relation_with_heretics = -50
+	}
+
+	ALC_lorraine_expansion = {
+		build_time = -0.25
+	}
+
+	ALC_abolishment_of_heathens = {
+		warscore_cost_vs_other_religion = -0.25
+		relation_with_heretics = -50
+	}
+}
+
+# Alpland
+ALP_ideas = { 
+	start = {
+		defensiveness = 0.20 # Alpine Kingdom
+		administrative_efficiency = 0.15
+	}
+
+	bonus = {
+		movement_speed = 0.1
+	}
+
+	trigger = {
+		tag = ALP
+	}
+	free = yes	# will be added at load.
+
+	ALP_a_new_great_power = {
+		merchants = 2
+		diplomatic_reputation = 1
+	}
+
+	ALP_mountain_protection = {
+		claim_duration = 0.1
+	}
+
+	ALP_alpish_culture = {
+		culture_conversion_cost = -0.10
+	}
+
+	ALP_disciplined_army = {
+		yearly_army_professionalism = 0.07
+	}
+
+	ALP_tax_reforms = {
+		global_tax_modifier = 0.03
+		war_taxes_cost_modifier = -0.2
+	}
+
+	ALP_purge_the_corrupt = {
+		yearly_corruption = -0.2
+	}
+
+	ALP_legacy_of_alpland = {
+		prestige = 0.3
+		prestige_decay = -0.01
+	}
+}
+
+# Angevin Empire
+ANG_ideas = { 
+	start = {
+		merchants = 1 # Unification the English & French
+		land_morale = 0.1
+	}
+
+	bonus = {
+		heir_chance = 0.5 # Angevins
+	}
+
+	trigger = {
+		tag = ANG
+	}
+	free = yes	# will be added at load.
+
+	ANG_nation_of_many_cultures = {
+		num_accepted_cultures = 2
+	}
+
+	ANG_unified_the_crown = {
+		legitimacy = 2
+	}
+
+	ANG_english_channel_domination = {
+		global_own_trade_power = 0.1
+	}
+
+	ANG_anglo_french_tactics = {
+		discipline = 0.05
+	}
+
+	ANG_united_kingdoms_together = {
+		stability_cost_to_declare_war = -1
+		stability_cost_modifier = 0.05
+		local_manpower = 0.2
+	}
+
+	ANG_anglo_french_armada = {
+		light_ship_power = 0.15
+		heavy_ship_power = 0.15
+	}
+
+	ANG_franco_bastions  = {
+		garrison_size = 0.1
+	}
+}
+
+# Arabian Kingdom
+KAB_ideas = { 
+	start = {
+		missionaries = 1
+		religious_unity = 0.9
+	}
+
+	bonus = {
+		discipline = 0.2 # Glorious Army of Allah
+	}
+
+	trigger = {
+		tag = KAB
+	}
+	free = yes	# will be added at load.
+
+	KAB_legacy_of_muhammad = {
+		global_institution_spread = 0.1
+	}
+
+	KAB_islamic_traditions = {
+		global_missionary_strength = 0.20
+	}
+
+	KAB_rashidun_caliphs = {
+		local_defensiveness = 0.1 
+		garrison_growth = 0.10
+	}
+
+	KAB_mamluk_volunteers = {
+		global_manpower_modifier = 0.1
+	}
+
+	KAB_the_godly_armada = {
+		global_sailors = 5000
+		global_sailors_modifier = 0.1 
+	}
+
+	KAB_early_muslim_expansionism = {
+		ae_impact = -0.2
+	}
+
+	KAB_proper_economic_reforms = {
+		global_tax_modifier = 0.05
+		development_cost = -0.1
+	}
+}
+
+# Armenia Empire
+ARN_ideas = { 
+	start = {
+		culture_conversion_cost = -0.10
+		monarch_military_power = 1
+	}
+
+	bonus = {
+		yearly_corruption = -0.1
+	}
+
+	trigger = {
+		tag = KAB
+	}
+	free = yes	# will be added at load.
+
+	ARN_tigranes_the_great = {
+		diplomatic_reputation = 1
+	}
+
+	ARN_roman_warfare = {
+		discipline = 0.1
+		mercenary_discipline = 0.1
+	}
+
+	ARN_greater_armenia = {
+		prestige = 0.5
+	}
+
+	ARN_hellenistic_traditions = {
+		religious_unity = 0.5
+	}
+
+	ARN_old_zoroastrianism = {
+		global_heretic_missionary_strength = 0.20
+	}
+
+	ARN_ayrudzi_cavalry= {
+		cavalry_cost = -0.2
+		cavalry_fire = 1
+		cavalry_shock = 1
+	}
+
+	ARN_proper_coinage = {
+		global_tax_modifier = 0.05
+	}
+}
+
+# Armenian Republic
+ARR_ideas = { 
+	start = {
+		republican_tradition = 0.5 
+		discipline = 0.1 
+	}
+
+	bonus = {
+	 	global_tax_modifier = 0.10
+	}
+
+	trigger = {
+		tag = ARR
+	}
+	free = yes	# will be added at load.
+
+	ARR_our_history = {
+	 	stability_cost_to_declare_war = 1	
+	}
+
+	ARR_resistance_to_turkish_influence = {
+ 		mercenary_cost = -0.1
+		mercenary_manpower = 0.1
+	}
+
+	ARR_far_christianity = {
+		manpower_in_true_faith_provinces= 0.1
+	}
+
+	ARR_republican_values = {
+		reelection_cost = -0.1
+		candidate_random_bonus = 2
+	}
+
+	ARR_greater_armenian_legacy = {	# 10-Year election system
+		election_cycle = 6	
+	}
+
+	ARR_reform_the_national_assembly = {
+		reform_progress_growth = 0.1
+	}
+
+	ARR_ssr_peoples = {
+		yearly_corruption = -0.2 
+	}
+}
+
 # Austrian Empire
 AEH_ideas = { 
 	start = {
@@ -189,272 +524,6 @@ AHE_ideas = {
 	}
 }
 
-# Anglo-Dutch Union
-AGU_ideas = { 
-	start = {
-		election_cycle = 10 # Anglo-Dutch Election System
-		colonists = 1 # Anglo-Dutch Colonial Empire
-	}
-
-	bonus = {
-		merchants = 1 # English-Dutch Trade Dominance
-	}
-
-	trigger = {
-		tag = AGU
-	}
-	free = yes	# will be added at load.
-
-	AGU_multicultural_union = {
-		num_accepted_cultures = 3 
-	}
-
-	AGU_control_of_economic_centers = {
-		global_trade_power = 0.1 
-	}
-
-	AGU_colonial_ambitions = {
-		local_colonial_growth = 10 
-		global_foreign_trade_power = 0.15
-	}
-
-	AGU_global_trade_power = {
-		local_production_efficiency = 0.1 
-	}
-
-	AGU_influx_of_merchants = {
-		merchants = 2
-		galley_cost = -0.1 
-	}
-
-	AGU_naval_control = {
-		navy_tradition = 1
-	}
-
-	AGU_tax_the_poor = {
-		global_tax_modifier = 0.03 
-		global_tax_income = 128
-	}
-}
-
-# Alsace-Lorraine
-ALC_ideas = { 
-	start = {
-		mercantilism_cost = -0.2 # Franco-German Trade
-		culture_conversion_cost = -0.25 # Conversion of the Nobles
-	}
-
-	bonus = {
-		unrest_catholic_provinces = -2 # Catholic Dominance
-	}
-
-	trigger = {
-		tag = ALC
-	}
-	free = yes	# will be added at load.
-
-	ALC_dominate_the_peasants = {
-		global_unrest = -1 
-	}
-
-	ALC_force_government_reforms = {
-		cb_on_government_enemies = yes
-	}
-
-	ALC_papal_investure = {
-		papal_influence = 0.5
-		church_power_modifier = 0.5
-	}
-
-	ALC_resistance_to_reformation = {
-
-	}
-
-	ALC_religious_wars = {
-		extra_manpower_at_religious_war = yes
-		relation_with_heretics = -50
-	}
-
-	ALC_lorraine_expansion = {
-		build_time = -0.25
-	}
-
-	ALC_abolishment_of_heathens = {
-		warscore_cost_vs_other_religion = -0.25
-		relation_with_heretics = -50
-	}
-}
-
-# Alpland
-ALP_ideas = { 
-	start = {
-		defensiveness = 0.20 # Alpine Kingdom
-		administrative_efficiency = 0.15
-	}
-
-	bonus = {
-		movement_speed = 0.1
-	}
-
-	trigger = {
-		tag = ALP
-	}
-	free = yes	# will be added at load.
-
-	ALP_a_new_great_power = {
-		merchants = 2
-		diplomatic_reputation = 1
-	}
-
-	ALP_mountain_protection = {
-		claim_duration = 0.1
-	}
-
-	ALP_alpish_culture = {
-		culture_conversion_cost = -0.10
-	}
-
-	ALP_disciplined_army = {
-		yearly_army_professionalism = 0.07
-	}
-
-	ALP_tax_reforms = {
-		global_tax_modifier = 0.03
-		war_taxes_cost_modifier = -0.2
-	}
-
-	ALP_purge_the_corrupt = {
-		yearly_corruption = -0.2
-	}
-
-	ALP_legacy_of_alpland = {
-		prestige = 0.3
-		prestige_decay = -0.01
-	}
-}
-
-# Angevin Empire
-ANG_ideas = { 
-	start = {
-		merchants = 1 # Unification the English & French
-		land_morale = 0.1
-	}
-
-	bonus = {
-		national_unrest = 1 # A Lasting Empire
-	}
-
-	trigger = {
-		tag = ANG
-	}
-	free = yes	# will be added at load.
-
-	ANG_nation_of_many_cultures = {
-		num_accepted_cultures = 2
-	}
-
-	ANG_unified_the_crown = {
-		legitimacy = 2
-	}
-
-	ANG_english_channel_domination = {
-		global_own_trade_power = 0.1
-	}
-
-	ANG_anglo_french_tactics = {
-		discipline = 0.05
-	}
-
-	ANG_united_kingdoms_together = {
-		stability_cost_to_declare_war = -1
-		stability_cost_modifier = 0.05
-		local_manpower = 0.2
-	}
-
-	ANG_anglo_french_armada = {
-		light_ship_power = 0.15
-		heavy_ship_power = 0.15
-	}
-
-	ANG_franco_bastions  = {
-		garrison_size = 0.1
-	}
-}
-
-# Armenia Empire
-ARN_ideas = { 
-	start = {
-
-	}
-
-	bonus = {
-
-	}
-
-	trigger = {
-		tag = KAB
-	}
-	free = yes	# will be added at load.
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-}
-
-# Arabian Kingdom
-KAB_ideas = { 
-	start = {
-
-	}
-
-	bonus = {
-
-	}
-
-	trigger = {
-		tag = KAB
-	}
-	free = yes	# will be added at load.
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-}
-
 # Belgium
 BEL_ideas = { 
 	start = {
@@ -471,27 +540,27 @@ BEL_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	BEL_ = {
+	BEL_1 = {
 		warscore_cost_vs_other_religion = -0.25 
 	}
 
-	BEL_ = {
+	BEL_2 = {
 	}
 
 	BEL_congo_exploration = {
 		global_colonial_growth = 35 
 	}
 
-	BEL_ = {
+	BEL_4 = {
 	}
 
-	BEL_ = {
+	BEL_5 = {
 	}
 
-	BEL_ = {
+	BEL_6 = {
 	}
 
-	BEL_ = {
+	BEL_7 = {
 	}
 }
 
@@ -541,6 +610,44 @@ BKL_ideas = {
 	}
 }
 
+# Baltic Union
+BTC_ideas = { 
+	start = {
+		heir_chance = 0.4
+		build_cost = -0.1
+	}
+
+	bonus = {
+		land_morale = 0.10 s
+	}
+
+	trigger = {
+		tag = BTC
+	}
+	free = yes	# will be added at load.
+
+	BTC_the_entente_of_survival = {
+	}
+
+	BTC_anti_socialist_support = {
+	}
+
+	BTC_unified_foreign_policy = {
+	}
+
+	BTC_reform_article_two = {
+	}
+
+	BTC_peace_and_prosperity = {
+	}
+
+	BTC_the_baltic_states = {
+	}
+
+	BTC_embrace_cultural_reform = {
+	}
+}
+
 # Benelux
 BNL_ideas = { 
 	start = {
@@ -556,25 +663,25 @@ BNL_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	BNL_1 = {
 	}
 
-	aaaa = {
+	BNL_2 = {
 	}
 
-	aaaa = {
+	BNL_3 = {
 	}
 
-	aaaa = {
+	BNL_4 = {
 	}
 
-	aaaa = {
+	BNL_5 = {
 	}
 
-	aaaa = {
+	BNL_6 = {
 	}
 
-	aaaa = {
+	BNL_7 = {
 	}
 }
 
@@ -593,25 +700,25 @@ BSK_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	BSK_1 = {
 	}
 
-	aaaa = {
+	BSK_2 = {
 	}
 
-	aaaa = {
+	BSK_3 = {
 	}
 
-	aaaa = {
+	BSK_4 = {
 	}
 
-	aaaa = {
+	BSK_5 = {
 	}
 
-	aaaa = {
+	BSK_6 = {
 	}
 
-	aaaa = {
+	BSK_7 = {
 	}
 }
 
@@ -630,62 +737,25 @@ BSQ_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	BSQ_1 = {
 	}
 
-	aaaa = {
+	BSQ_2 = {
 	}
 
-	aaaa = {
+	BSQ_3 = {
 	}
 
-	aaaa = {
+	BSQ_4 = {
 	}
 
-	aaaa = {
+	BSQ_5 = {
 	}
 
-	aaaa = {
+	BSQ_6 = {
 	}
 
-	aaaa = {
-	}
-}
-
-# Baltic Union
-BTC_ideas = { 
-	start = {
-
-	}
-
-	bonus = {
-
-	}
-
-	trigger = {
-		tag = BTC
-	}
-	free = yes	# will be added at load.
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
-	}
-
-	aaaa = {
+	BSQ_7 = {
 	}
 }
 
@@ -704,25 +774,25 @@ BRP_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	BRP_1 = {
 	}
 
-	aaaa = {
+	BRP_2 = {
 	}
 
-	aaaa = {
+	BRP_3 = {
 	}
 
-	aaaa = {
+	BRP_4 = {
 	}
 
-	aaaa = {
+	BRP_5 = {
 	}
 
-	aaaa = {
+	BRP_6 = {
 	}
 
-	aaaa = {
+	BRP_7 = {
 	}
 }
 
@@ -741,60 +811,68 @@ BVE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	BVE_1 = {
 	}
 
-	aaaa = {
+	BVE_2 = {
 	}
 
-	aaaa = {
+	BVE_3 = {
 	}
 
-	aaaa = {
+	BVE_4 = {
 	}
 
-	aaaa = {
+	BVE_5 = {
 	}
 
-	aaaa = {
+	BVE_6 = {
 	}
 
-	aaaa = {
+	BVE_7 = {
 	}
 }
 
 # Carthage
 CTG_ideas = {
+	start = {
+		leader_land_shock = 1 # Hannibalic Traditions
+		leader_land_manuever = 1 
+	}
+	bonus = {
+		leader_land_fire = 1 # Legacy of Hannibal
+	}
+
 	trigger = {
 		tag = CTG
 	}
 	free = yes	# will be added at load.
-	start = {
-		leader_land_shock = 1 # Legacy of Hannibal
-		leader_land_manuever = 1 # Legacy of Hannibal
-	}
-	bonus = {
-		leader_land_fire = 1 # Legacy of Hannibal + ALL Ideas Completed
-	}
+
 	CTG_phoenician_trade_plans = {
 		global_trade_power = 0.1 # phoenician trade plans
 	}
+
 	CTG_carthaginian_governmental_ideas = {
 		stability_cost_modifier = 0.15 # Carthaginian governmental ideas
 	}
+
 	CTG_counquest_of_fertile_land = {
 		global_manpower_modifier = 0.1	# Conquest of Fertile land
 	}
+
 	CTG_punic_researchers = {
 		technology_cost = -0.05	# Punic Researchers 
 	}
+
 	CTG_cannanite_beliefs = {
 		missionaries = 1 # Canaanite Beliefs
 		missionary_maintenance_cost = -0.10
 	}
+
 	CTG_conversion_efforts = {
 		religious_unity = 0.3 # Conversion Efforts
 	}
+
 	CTG_carthage_unique_centralized_government = {
 		heir_chance = 0.65 # Carthage Unique Centralized Government
 	}
@@ -952,7 +1030,7 @@ PRC_ideas = {
 CIS_ideas = {
 	start = {
 		republican_tradition = 0.10 # Traditions of Republicanism
-		production_efficiency = 0.20 # Farm-Based Nation
+		production_efficiency = 0.20 
 	}
 	bonus = {
 		state_maintenance_modifier = -0.20 # Effective State & Goverment
@@ -1007,25 +1085,62 @@ CZE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	CZE_1 = {
 	}
 
-	aaaa = {
+	CZE_2 = {
 	}
 
-	aaaa = {
+	CZE_3 = {
 	}
 
-	aaaa = {
+	CZE_4 = {
 	}
 
-	aaaa = {
+	CZE_5 = {
 	}
 
-	aaaa = {
+	CZE_6 = {
 	}
 
-	aaaa = {
+	CZE_7 = {
+	}
+}
+
+# Ducal Prussia
+DCP_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = DCP
+	}
+	free = yes	# will be added at load.
+
+	DCP_1 = {
+	}
+
+	DCP_2 = {
+	}
+
+	DCP_3 = {
+	}
+
+	DCP_4 = {
+	}
+
+	DCP_5 = {
+	}
+
+	DCP_6 = {
+	}
+
+	DCP_7 = {
 	}
 }
 
@@ -1044,25 +1159,25 @@ EPR_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	EPR_1 = {
 	}
 
-	aaaa = {
+	EPR_2 = {
 	}
 
-	aaaa = {
+	EPR_3 = {
 	}
 
-	aaaa = {
+	EPR_4 = {
 	}
 
-	aaaa = {
+	EPR_5 = {
 	}
 
-	aaaa = {
+	EPR_6 = {
 	}
 
-	aaaa = {
+	EPR_7 = {
 	}
 }
 
@@ -1081,25 +1196,25 @@ ERO_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	ERO_1 = {
 	}
 
-	aaaa = {
+	ERO_2 = {
 	}
 
-	aaaa = {
+	ERO_3 = {
 	}
 
-	aaaa = {
+	ERO_4 = {
 	}
 
-	aaaa = {
+	ERO_5 = {
 	}
 
-	aaaa = {
+	ERO_6 = {
 	}
 
-	aaaa = {
+	ERO_7 = {
 	}
 }
 
@@ -1118,29 +1233,29 @@ EUR_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	EUR_1 = {
 	}
 
-	aaaa = {
+	EUR_2 = {
 	}
 
-	aaaa = {
+	EUR_3 = {
 	}
 
-	aaaa = {
+	EUR_4 = {
 	}
 
-	aaaa = {
+	EUR_5 = {
 	}
 
-	aaaa = {
+	EUR_6 = {
 	}
 
-	aaaa = {
+	EUR_7 = {
 	}
 }
 
-# Franco Iberian Empire
+# Franco-Iberian Empire
 FIB_ideas = { 
 	start = {
 
@@ -1155,25 +1270,25 @@ FIB_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	FIB_1 = {
 	}
 
-	aaaa = {
+	FIB_2 = {
 	}
 
-	aaaa = {
+	FIB_3 = {
 	}
 
-	aaaa = {
+	FIB_4 = {
 	}
 
-	aaaa = {
+	FIB_5 = {
 	}
 
-	aaaa = {
+	FIB_6 = {
 	}
 
-	aaaa = {
+	FIB_7 = {
 	}
 }
 
@@ -1192,25 +1307,25 @@ FRC_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	FRC_1 = {
 	}
 
-	aaaa = {
+	FRC_2 = {
 	}
 
-	aaaa = {
+	FRC_3 = {
 	}
 
-	aaaa = {
+	FRC_4 = {
 	}
 
-	aaaa = {
+	FRC_5 = {
 	}
 
-	aaaa = {
+	FRC_6 = {
 	}
 
-	aaaa = {
+	FRC_7 = {
 	}
 }
 
@@ -1229,25 +1344,25 @@ FRE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	FRE_1 = {
 	}
 
-	aaaa = {
+	FRE_2 = {
 	}
 
-	aaaa = {
+	FRE_3 = {
 	}
 
-	aaaa = {
+	FRE_4 = {
 	}
 
-	aaaa = {
+	FRE_5 = {
 	}
 
-	aaaa = {
+	FRE_6 = {
 	}
 
-	aaaa = {
+	FRE_7 = {
 	}
 }
 
@@ -1266,25 +1381,25 @@ FRL_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	FRL_1 = {
 	}
 
-	aaaa = {
+	FRL_2 = {
 	}
 
-	aaaa = {
+	FRL_3 = {
 	}
 
-	aaaa = {
+	FRL_4 = {
 	}
 
-	aaaa = {
+	FRL_5 = {
 	}
 
-	aaaa = {
+	FRL_6 = {
 	}
 
-	aaaa = {
+	FRL_7 = {
 	}
 }
 
@@ -1303,25 +1418,25 @@ GEP_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	GEP_1 = {
 	}
 
-	aaaa = {
+	GEP_2 = {
 	}
 
-	aaaa = {
+	GEP_3 = {
 	}
 
-	aaaa = {
+	GEP_4 = {
 	}
 
-	aaaa = {
+	GEP_5 = {
 	}
 
-	aaaa = {
+	GEP_6 = {
 	}
 
-	aaaa = {
+	GEP_7 = {
 	}
 }
 
@@ -1340,25 +1455,25 @@ GKR_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	GKR_united_korean_kingdom = {
 	}
 
-	aaaa = {
+	GKR_2 = {
 	}
 
-	aaaa = {
+	GKR_3 = {
 	}
 
-	aaaa = {
+	GKR_4 = {
 	}
 
-	aaaa = {
+	GKR_5 = {
 	}
 
-	aaaa = {
+	GKR_6 = {
 	}
 
-	aaaa = {
+	GKR_7 = {
 	}
 }
 
@@ -1377,25 +1492,25 @@ HEN_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	HEN_1 = {
 	}
 
-	aaaa = {
+	HEN_2 = {
 	}
 
-	aaaa = {
+	HEN_3 = {
 	}
 
-	aaaa = {
+	HEN_4 = {
 	}
 
-	aaaa = {
+	HEN_5 = {
 	}
 
-	aaaa = {
+	HEN_6 = {
 	}
 
-	aaaa = {
+	HEN_7 = {
 	}
 }
 
@@ -1414,25 +1529,25 @@ HIM_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	HIM_1 = {
 	}
 
-	aaaa = {
+	HIM_2 = {
 	}
 
-	aaaa = {
+	HIM_3 = {
 	}
 
-	aaaa = {
+	HIM_4 = {
 	}
 
-	aaaa = {
+	HIM_5 = {
 	}
 
-	aaaa = {
+	HIM_6 = {
 	}
 
-	aaaa = {
+	HIM_7 = {
 	}
 }
 
@@ -1451,25 +1566,25 @@ IBE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	IBE_1 = {
 	}
 
-	aaaa = {
+	IBE_2 = {
 	}
 
-	aaaa = {
+	IBE_3 = {
 	}
 
-	aaaa = {
+	IBE_4 = {
 	}
 
-	aaaa = {
+	IBE_5 = {
 	}
 
-	aaaa = {
+	IBE_6 = {
 	}
 
-	aaaa = {
+	IBE_7 = {
 	}
 }
 
@@ -1488,25 +1603,25 @@ ITE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	ITE_1 = {
 	}
 
-	aaaa = {
+	ITE_2 = {
 	}
 
-	aaaa = {
+	ITE_3 = {
 	}
 
-	aaaa = {
+	ITE_4 = {
 	}
 
-	aaaa = {
+	ITE_5 = {
 	}
 
-	aaaa = {
+	ITE_6 = {
 	}
 
-	aaaa = {
+	ITE_7 = {
 	}
 }
 
@@ -1525,25 +1640,25 @@ IMA_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	IMA_1 = {
 	}
 
-	aaaa = {
+	IMA_2 = {
 	}
 
-	aaaa = {
+	IMA_3 = {
 	}
 
-	aaaa = {
+	IMA_4 = {
 	}
 
-	aaaa = {
+	IMA_5 = {
 	}
 
-	aaaa = {
+	IMA_6 = {
 	}
 
-	aaaa = {
+	IMA_7 = {
 	}
 }
 
@@ -1562,25 +1677,25 @@ JAE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	JAE_1 = {
 	}
 
-	aaaa = {
+	JAE_2 = {
 	}
 
-	aaaa = {
+	JAE_3 = {
 	}
 
-	aaaa = {
+	JAE_4 = {
 	}
 
-	aaaa = {
+	JAE_5 = {
 	}
 
-	aaaa = {
+	JAE_6 = {
 	}
 
-	aaaa = {
+	JAE_7 = {
 	}
 }
 
@@ -1599,25 +1714,25 @@ JGE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	JGE_1 = {
 	}
 
-	aaaa = {
+	JGE_2 = {
 	}
 
-	aaaa = {
+	JGE_3 = {
 	}
 
-	aaaa = {
+	JGE_4 = {
 	}
 
-	aaaa = {
+	JGE_5 = {
 	}
 
-	aaaa = {
+	JGE_6 = {
 	}
 
-	aaaa = {
+	JGE_7 = {
 	}
 }
 
@@ -1636,25 +1751,25 @@ KOG_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	KOG_the_holy_seplechure = {
 	}
 
-	aaaa = {
+	KOG_holy_lands_east_to_west = {
 	}
 
-	aaaa = {
+	KOG_papal_authority = {
 	}
 
-	aaaa = {
+	KOG_right_to_rule = {
 	}
 
-	aaaa = {
+	KOG_reform_our_questionable_army = {
 	}
 
-	aaaa = {
+	KOG_enact_papal_decree = {
 	}
 
-	aaaa = {
+	KOG_influence_european_politics = {
 	}
 }
 
@@ -1673,29 +1788,32 @@ KRV_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	KRV_east_slavic_kingdom = {
 	}
 
-	aaaa = {
+	KRV_legacy_of_oleg = {
 	}
 
-	aaaa = {
+	KRV_pagan_warriors = {
 	}
 
-	aaaa = {
+	KRV_ruso_identity = {
 	}
 
-	aaaa = {
+	KRV_reformation_of_the_fleets = {
 	}
 
-	aaaa = {
+	KRV_consolidate_the_federation = {
 	}
 
-	aaaa = {
+	KRV_centralized_reforms = {
 	}
+
+	KRV_the_rus = {
+	}	
 }
 
-# Lombardy Venitia
+# Lombardy-Venetia
 LVE_ideas = { 
 	start = {
 
@@ -1710,25 +1828,25 @@ LVE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	LVE_god_save_francis = {
 	}
 
-	aaaa = {
+	LVE_congress_of_vienna = {
 	}
 
-	aaaa = {
+	LVE_napoleonic_studies = {
 	}
 
-	aaaa = {
+	LVE_italian_nationalism = {
 	}
 
-	aaaa = {
+	LVE_house_of_habsburg_lorraine = {
 	}
 
-	aaaa = {
+	LVE_the_crown_of_lombardy = {
 	}
 
-	aaaa = {
+	LVE_national_reforms = {
 	}
 }
 
@@ -1747,25 +1865,25 @@ LSX_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	LSX_english_influence = {
 	}
 
-	aaaa = {
+	LSX_kingdom_of_hannover = {
 	}
 
-	aaaa = {
+	LSX_german_diplomacy = {
 	}
 
-	aaaa = {
+	LSX_the_holy_roman_empire = {
 	}
 
-	aaaa = {
+	LSX_germanic_saxons = {
 	}
 
-	aaaa = {
+	LSX_migration_culture = {
 	}
 
-	aaaa = {
+	LSX_army_drills = {
 	}
 }
 
@@ -1785,33 +1903,39 @@ LSE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	legacy_of_the_navigator = {
+	LSE_legacy_of_the_navigator = {
 		range = 0.30
 		global_sailors_modifier = 0.30
 	}
-	afonsine_ordinances = {
+
+	LSE_afonsine_ordinances = {
 		global_trade_goods_size_modifier = 0.2
 	}
-	case_de_india = {
+
+	LSE_case_de_india = {
 		global_trade_power = 0.2
 	}
-	the_bandeirantes = {
+
+	LSE_the_bandeirantes = {
 		merchants = 2
 	}
-	royal_absolutism = {
+
+	LSE_royal_absolutism = {
 		build_cost = -0.20
 		yearly_absolutism = 0.2
 	}
-	land_before_faith = {
+
+	LSE_land_before_faith = {
 		global_colonial_growth = 25
 	}
-	open_up_the_guilds = {
+
+	LSE_open_up_the_guilds = {
 		trade_efficiency = 0.2
 	}
 }
 
 # Macedon
-MGH_ideas = { 
+MAC_ideas = { 
 	start = {
 
 	}
@@ -1821,29 +1945,29 @@ MGH_ideas = {
 	}
 
 	trigger = {
-		tag = MGH
+		tag = MAC
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	MAC_legacy_of_alexander = {
 	}
 
-	aaaa = {
+	MAC_breakaway_empire = {
 	}
 
-	aaaa = {
+	MAC_fallen_phalanx = {
 	}
 
-	aaaa = {
+	MAC_enact_needed_reforms = {
 	}
 
-	aaaa = {
+	MAC_conquer_greece = {
 	}
 
-	aaaa = {
+	MAC_taxation_reform = {
 	}
 
-	aaaa = {
+	MAC_greek_hegemony = {
 	}
 }
 
@@ -1862,25 +1986,25 @@ MGH_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	MGH_united_the_maghrebs = {
 	}
 
-	aaaa = {
+	MGH_tribal_warfare = {
 	}
 
-	aaaa = {
+	MGH_camel_cultivation = {
 	}
 
-	aaaa = {
+	MGH_canopy_entrenchment = {
 	}
 
-	aaaa = {
+	MGH_legacy_of_africa = {
 	}
 
-	aaaa = {
+	MGH_cultural_oppression = {
 	}
 
-	aaaa = {
+	MGH_naval_raiding = {
 	}
 }
 
@@ -1899,25 +2023,25 @@ NGC_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	NGC_1 = {
 	}
 
-	aaaa = {
+	NGC_2 = {
 	}
 
-	aaaa = {
+	NGC_3 = {
 	}
 
-	aaaa = {
+	NGC_4 = {
 	}
 
-	aaaa = {
+	NGC_5 = {
 	}
 
-	aaaa = {
+	NGC_6 = {
 	}
 
-	aaaa = {
+	NGC_7 = {
 	}
 }
 
@@ -1936,25 +2060,26 @@ NSE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	NSE_united_thalassocracy = {
+		
 	}
 
-	aaaa = {
+	NSE_2 = {
 	}
 
-	aaaa = {
+	NSE_3 = {
 	}
 
-	aaaa = {
+	NSE_4 = {
 	}
 
-	aaaa = {
+	NSE_5 = {
 	}
 
-	aaaa = {
+	NSE_6 = {
 	}
 
-	aaaa = {
+	NSE_7 = {
 	}
 }
 
@@ -1973,25 +2098,25 @@ PON_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	PON_1 = {
 	}
 
-	aaaa = {
+	PON_2 = {
 	}
 
-	aaaa = {
+	PON_3 = {
 	}
 
-	aaaa = {
+	PON_4 = {
 	}
 
-	aaaa = {
+	PON_5 = {
 	}
 
-	aaaa = {
+	PON_6 = {
 	}
 
-	aaaa = {
+	PON_7 = {
 	}
 }
 
@@ -2010,36 +2135,38 @@ RHE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	RHE_ = {
 	}
 
-	aaaa = {
+	RHE_ = {
 	}
 
-	aaaa = {
+	RHE_ = {
 	}
 
-	aaaa = {
+	RHE_ = {
 	}
 
-	aaaa = {
+	RHE_ = {
 	}
 
-	aaaa = {
+	RHE_ = {
 	}
 
-	aaaa = {
+	RHE_ = {
 	}
 }
 
 # Roman Republic
 ROP_ideas = { 
 	start = {
-
+		monarch_admin_power = 2
+		monarch_military_power = 2
 	}
 
 	bonus = {
-
+		army_tradition_decay = -0.1
+		cb_on_government_enemies = yes
 	}
 
 	trigger = {
@@ -2047,36 +2174,49 @@ ROP_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	ROP_the_roman_senate = {
+		reform_progress_growth = 0.2
+		legitimacy = 1
 	}
 
-	aaaa = {
+	ROP_roman_polytheism = {
+		religious_unity = 0.5
+		no_religion_penalty = yes
 	}
 
-	aaaa = {
+	ROP_city_of_rome = {
+		development_cost = -0.1
 	}
 
-	aaaa = {
+	ROP_hoplite_tactics = {
+		discipline = 0.1 
 	}
 
-	aaaa = {
+	ROP_we_are_roman = {
+		culture_conversion_cost = -0.20
 	}
 
-	aaaa = {
+	ROP_enact_standing_legions = {
+		global_manpower_modifier = 0.1
+		land_maintenance_modifier = -0.2
 	}
 
-	aaaa = {
+	ROP_the_late_republic = {
+		republican_tradition = 0.5
 	}
 }
 
 # Saudi Arabia
 SRB_ideas = { 
 	start = {
-
+		religious_unity = 0.5
+		tolerance_own = 2
+		tolerance_heretic = -2
+		tolerance_heathen = -2
 	}
 
 	bonus = {
-
+		culture_conversion_cost = -0.30
 	}
 
 	trigger = {
@@ -2084,25 +2224,28 @@ SRB_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	SRB_house_of_saud = {
+		unjustified_demands = -0.2
 	}
 
-	aaaa = {
+	SRB_rise_of_wahhabism = {
+		missionaries = 1
 	}
 
-	aaaa = {
+	SRB_economic_centre_of_trade = {
+		merchants = 1
 	}
 
-	aaaa = {
+	SRB_army_reform = {
 	}
 
-	aaaa = {
+	SRB_arab_spring = {
 	}
 
-	aaaa = {
+	SRB_legacy_of_nejd = {
 	}
 
-	aaaa = {
+	SRB_unified_army = {
 	}
 }
 
@@ -2121,25 +2264,25 @@ SBG_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	SBG_1 = {
 	}
 
-	aaaa = {
+	SBG_2 = {
 	}
 
-	aaaa = {
+	SBG_3 = {
 	}
 
-	aaaa = {
+	SBG_4 = {
 	}
 
-	aaaa = {
+	SBG_5 = {
 	}
 
-	aaaa = {
+	SBG_6 = {
 	}
 
-	aaaa = {
+	SBG_7 = {
 	}
 }
 
@@ -2158,36 +2301,37 @@ SGF_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	SGF_1 = {
 	}
 
-	aaaa = {
+	SGF_2 = {
 	}
 
-	aaaa = {
+	SGF_3 = {
 	}
 
-	aaaa = {
+	SGF_4 = {
 	}
 
-	aaaa = {
+	SGF_5 = {
 	}
 
-	aaaa = {
+	SGF_6 = {
 	}
 
-	aaaa = {
+	SGF_7 = {
 	}
 }
 
 # Soviet Union
 SOV_ideas = { 
 	start = {
-
+		global_unrest = -2 # foundation of the NVKVD
+		min_autonomy = 0
 	}
 
 	bonus = {
-
+		culture_conversion_cost = -0.20 # Integrate the Slavs
 	}
 
 	trigger = {
@@ -2195,36 +2339,48 @@ SOV_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	SOV_enact_gulags = {
+		local_unrest = -2
 	}
 
-	aaaa = {
+	SOV_the_red_army = { # Includes a rare debuff to counter mass manpower
+		movement_speed = -0.10
+		global_manpower_modifier = 0.50
 	}
 
-	aaaa = {
+	SOV_successful_purge = {
+		global_tax_modifier = 0.10
+		yearly_corruption = -0.2
 	}
 
-	aaaa = {
+	SOV_soviet_reforms = {
+		land_forcelimit = 50
 	}
 
-	aaaa = {
+	SOV_embrace_atheism = {
+		religious_unity = 2.0
+		tolerance_heretic = -2
+		tolerance_heathen = -2
 	}
 
-	aaaa = {
+	SOV_one_party_government = {
+		legitimacy = 2
 	}
 
-	aaaa = {
+	SOV_relentless_push_east = {
+		native_uprising_chance = -0.80
 	}
 }
 
 # Sweden-Norway
 SNO_ideas = { 
 	start = {
-
+		prestige_decay = -0.05
+		heir_chance = 0.25
 	}
 
 	bonus = {
-
+		all_power_cost = -0.2
 	}
 
 	trigger = {
@@ -2233,26 +2389,70 @@ SNO_ideas = {
 	free = yes	# will be added at load.
 
 	SNO_protestant_union = {
-		global_missionary_strength = 0.03
 		missionaries = 1
 	}
 
 	SNO_treaty_of_kiel = {
+		global_missionary_strength = 0.1
 	}
 
-	SNO_ = {
+	SNO_scandinavianism = {
+		culture_conversion_cost = -0.50
 	}
 
-	SNO_ = {
+	SNO_legacy_of_charles_xv = {
+		legitimacy = 1
 	}
 
 	SNO_act_of_union = {
+		diplomatic_reputation = 1 
+		country_diplomatic_power = 2
 	}
 
-	SNO_ = {
+	SNO_integrate_norwegians = {
+		promote_culture_cost = -0.50
 	}
 
-	SNO_ = {
+	SNO_one_king_many_unions = {
+		reduced_liberty_desire_on_same_continent = 100
+		liberty_desire_from_subject_development = -0.05
+	}
+}
+
+# Tatarstan
+TAT_ideas = { 
+	start = {
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = TAT
+	}
+	free = yes	# will be added at load.
+
+	TAT_0 = {
+	}
+
+	TAT_2 = {
+	}
+
+	TAT_3 = {
+	}
+
+	TAT_4 = {
+	}
+
+	TAT_5 = {
+	}
+
+	TAT_6 = {
+	}
+
+	TAT_7 = {
 	}
 }
 
@@ -2405,11 +2605,12 @@ UKI_ideas = {
 # Yugoslavia
 YUG_ideas = { 
 	start = {
-
+		cavalry_flanking = 0.1
+		global_tax_modifier = 0.05
 	}
 
 	bonus = {
-
+		idea_cost = -0.2
 	}
 
 	trigger = {
@@ -2417,25 +2618,34 @@ YUG_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	YUG_ = {
+	YUG_east_slavs = {
+		num_accepted_cultures = 2
+	}
 
+	YUG_yugoslav_partisans = {
+		prestige_decay = -0.01
 	}
-	YUG_ = {
-	
+
+	YUG_slav_orthodox_christian_chruch = {
+		missionaries = 1
+		relation_with_heretics = -50
 	}
-	YUG_ = {
-	 
+
+	YUG_industrial_investments = {
+		build_cost = -0.1
 	}
-	YUG_ = {
-		
+
+	YUG_kingdom_of_serbs_croats_slovenes = {
+		diplomats = 1
 	}
-	YUG_ = {
-		
+
+	YUG_house_karadordevic = {
+		heir_chance = 0.5 
+		female_advisor_chance = 0.1 
 	}
-	YUG_ = {
-		
-	}
-	YUG_ = {
-		
+
+	YUG_pan_slavism = {
+		prestige = 0.5 
+		prestige_decay = -0.01
 	}	
 }
