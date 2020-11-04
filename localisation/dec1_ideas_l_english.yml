@@ -6,6 +6,8 @@
 
    # New Custom Nations
 
+ # Abyssinia
+
  ABY_ideas: "Abyssinian Ideas"
  ABY_ideas_start: "Abyssinian Traditions"
  ABY_ideas_bonus: "Culture Cores"
@@ -24,8 +26,10 @@
  ABY_strong_missionaries: "Strong Missionaries"
  ABY_strong_missionaries_desc: ""
 
+ # Adriatic Empire
+
  ADR_ideas: "Adriatic Ideas"
- ADR_ideas_start: "Legacy of Mare Superum"
+ ADR_ideas_start: "Adriatic Traditions"
  ADR_ideas_bonus: "Trade Dominion"
  ADR_control_of_venetian_trade: "Control of Venetian Trade"
  ADR_control_of_venetian_trade_desc: ""
@@ -42,18 +46,92 @@
  ADR_naval_hegemony: "Naval Hegemony"
  ADR_naval_hegemony_desc: ""
 
+ # Alpland
+
+ ALP_ideas: "Alpland Ideas"
+ ALP_ideas_start: "Alpland Traditions"
+ ALP_ideas_bonus: "Alps Transportation"
+ ALP_a_new_great_power: "A New Great Power"
+ ALP_a_new_great_power_desc: ""
+ ALP_mountain_protection: "Mountain Protection"
+ ALP_mountain_protection_desc: ""
+ ALP_alpish_culture: "Alpish Culture"
+ ALP_alpish_culture_desc: ""
+ ALP_disciplined_army: "Disciplined Army"
+ ALP_disciplined_army_desc: ""
+ ALP_tax_reforms: "Tax Reforms"
+ ALP_tax_reforms_desc: ""
+ ALP_purge_the_corrupt: "Purge The Corrupt"
+ ALP_purge_the_corrupt_desc: ""
+ ALP_legacy_of_alpland: "The Legacy of Alpland"
+ ALP_legacy_of_alpland_desc: ""
+
+ # Alscase-Lorraine
+
  ALC_ideas: "Alscace-Lorraine Ideas"
- ALC_ideas_start: "Franco-German Nationalism"
+ ALC_ideas_start: "Alscace-Lorraine Traditions"
+ ALC_ideas_bonus: "Catholic Dominance"
  ALC_dominate_the_peasants: "Dominatate the Peasants"
+ ALC_dominate_the_peasants_desc: ""
  ALC_force_government_reforms: "Enforce Governmental Reforms"
+ ALC_force_government_reforms_desc: ""
  ALC_papal_investure: "Papal Investure"
+ ALC_papal_investure_desc: ""
  ALC_resistance_to_reformation: "Resistance to Reformation"
- ACL_religious_wars: "Religious Wars"
+ ALC_resistance_to_reformation_desc: ""
+ ALC_religious_wars: "Religious Wars"
+ ALC_religious_wars_desc: ""
  ALC_lorraine_expansion: "Expansion of Lorraine" 
+ ALC_lorraine_expansion_desc: ""
  ALC_abolishment_of_heathens: "Abolish the Heathens"
+ ALC_abolishment_of_heathens_desc: ""
+
+ # Anglo-Dutch Union
+
+ AGU_ideas: "Anglo-Dutch Union Ideas"
+ AGU_ideas_start: "Anglo-Dutch Union Traditions"
+ AGU_ideas_bonus: "Anglo-Dutch Bonus"
+
+ # Arabian Kingdom
+
+ KAB_ideas: "Arabian Ideas"
+ KAB_ideas_start: "Arabian Traditions"
+ KAB_ideas_bonus: "Glorious Army of Allah"
+ KAB_legacy_of_muhammad: "Legacy of Muhammad"
+ KAB_legacy_of_muhammad_desc: ""
+ KAB_islamic_traditions: "Islamic Traditions"
+ KAB_islamic_traditions_desc: ""
+ KAB_rashidun_caliphs: "Rashidun Caliphs"
+ KAB_rashidun_caliphs_desc: ""
+ KAB_mamluk_volunteers: "Mamluk Volunteers"
+ KAB_mamluk_volunteers_desc: ""
+ KAB_the_godly_armada: "The Godly Armada"
+ KAB_the_godly_armada_desc: ""
+ KAB_early_muslim_expansionism: "Early Muslim Expansionism"
+ KAB_early_muslim_expansionism_desc: ""
+ KAB_proper_economic_reforms: "Proper Economic Reforms"
+ KAB_proper_economic_reforms_desc: ""
+
+ ARN_ideas: "Greater Armenia Ideas"
+ ARN_ideas_start: "Greater Armenia Traditions"
+ ARN_ideas_bonus: "Greater Armenia Bonus"
+ ARN_tigranes_the_great: "Tigranes the Great"
+ ARN_tigranes_the_great_desc: ""
+ ARN_roman_warfare: "Roman Warfare"
+ ARN_roman_warfare_desc: ""
+ ARN_greater_armenia: "Greater Armenian Empire"
+ ARN_greater_armenia_desc: ""
+ ARN_hellenistic_traditions: "Hellenistic Traditions"
+ ARN_hellenistic_traditions_desc: ""
+ ARN_old_zoroastrianism: "Old Zoroastrianism"
+ ARN_old_zoroastrianism_desc: ""
+ ARN_ayrudzi_cavalry: "Ayrudzi Cavalry"
+ ARN_ayrudzi_cavalry_desc: ""
+ ARN_proper_coinage: "Proper Coinage"
+ ARN_proper_coinage_desc: ""
 
  AHE_ideas: "Austro-Hungarian Ideas"
- AHE_ideas_start: "Military Fame"
+ AHE_ideas_start: "Austro-Hungarian Traditions"
  AHE_ideas_bonus: "Professional Diplomats"
  AHE_political_maneuvering: "Austro-Hungarian Political Maneuvering"
  AHE_political_maneuvering_desc: ""
@@ -71,7 +149,7 @@
  AHE_monarchy_of_the_habsburgs_desc: ""
 
  AEH_ideas: "Austrian Empire Ideas"
- AEH_ideas_start: "Österreich Sphere of Influence"
+ AEH_ideas_start: "Austrian Empire Traditions"
  AEH_ideas_bonus: "Austrian Professional Diplomats"
  AEH_austrian_noble_diplomats: "Austrian Noble Diplomats"
  AEH_austrian_noble_diplomats_desc: ""
@@ -107,7 +185,7 @@
  BTC_embrace_cultural_reform_desc: ""
 
  CTG_ideas: "Carthaginian Ideas"
- CTG_ideas_start: "Hannibalic Tradition"
+ CTG_ideas_start: "Carthaginian Traditions"
  CTG_ideas_bonus: "Legacy of Hannibal the Great"
  CTG_phoenician_trade_plans: "Phoenician Trade Plans"
  CTG_phoenician_trade_plans_desc: ""
@@ -125,7 +203,7 @@
  CTG_carthage_unique_centralized_government_desc: ""
 
  CIS_ideas: "Cisalpina Ideas"
- CIS_ideas_start: "Traditions of Republicanism"
+ CIS_ideas_start: "Cisalpina Traditions"
  CIS_ideas_bonus: "Effective State & Goverment"
  CIS_harsh_general_training: "Harsh General Training"
  CIS_harsh_general_training_desc: ""

@@ -19,6 +19,7 @@ country_decisions = {
 				tag = ARB
 				tag = HLR
 				tag = PAP
+				tag = SRB
 			}
 			OR = {
 				ai = no
@@ -49,7 +50,7 @@ country_decisions = {
 			}
 			effect = {
 				change_tag = KAB # Country TAG
-				set_country_flag = formed_arab_empire_nation_flag # Country Formation Flag
+				set_country_flag = formed_arabia_nation_flag # Country Formation Flag
 				custom_tooltip = form_arab_kingdom_tt_2 # New Missions
 				custom_tooltip = form_arab_kingdom_tt_3 # Region/Area Claims		
 				custom_tooltip = form_arab_kingdom_tt_4 # Region/Area Claims		
@@ -111,31 +112,27 @@ country_decisions = {
 							change_government = monarchy
 						}																		
 					}
-					if = {
-						limit = {	 # Custom Ideas check and ROOT check
-							OR = {
-								has_custom_ideas = no
-								NOT = { 
-									has_idea_group = KAB_ideas 
-								}
-							}
-						}
-						country_event = { 
-							id = ideagroups.1
-						}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = KAB_ideas }
 					}
-					country_event = {
-						id = dec1_events.3	# Custom Missions change
-					}
-					custom_tooltip = dec1_decisions_blank
-					add_country_modifier = {
-						name = dec1_legacy_of_muhammad	# National Ability
-						duration = 49275
-					}			
-					add_country_modifier = {
-						name = dec1_increased_centralization	# Increased Centralization
-						duration = -1
-					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_legacy_of_muhammad
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}	
 				}
 			}
 			ai_will_do = {

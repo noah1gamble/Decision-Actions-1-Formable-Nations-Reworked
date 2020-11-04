@@ -4,20 +4,18 @@ country_decisions = {
 	# Greater Armenia #
 	###################
 
-	armenia_empire_nation = {
+	armenia_empire_nation = { 
 		major = yes
 		potential = {	
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			culture_group = caucasian 
 			NOT = {
-				has_country_flag = formed_armenian_empire_nation_flag
-				exists = ARM
-				exists = ARR
-				exists = ARK
-				tag = ARM
+				has_country_flag = formed_armenia_empire_nation_flag
+				exists = ARN
+				tag = ARN
 				tag = ARR
-				tag = ARK
 				tag = HLR
 				tag = PAP
 			}
@@ -55,8 +53,8 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
-			NOT = { exists = ARM }	
+			adm_tech = 15 # Empire Rank requires 15 tech
+			NOT = { exists = ARN }	
 			is_subject = no
 			is_at_war = no	
 			OR = {
@@ -83,8 +81,8 @@ country_decisions = {
 			owns_core_province = 2305
 		}
 		effect = {
-			change_tag = ARM # Country TAG
-			set_country_flag = formed_armenia_kingdom_nation_flag # Country Formation Flag
+			change_tag = ARN # Country TAG
+			set_country_flag = formed_armenia_empire_nation_flag # Country Formation Flag
 			custom_tooltip = form_armenia_empire_tt_2 # New Missions
 			custom_tooltip = form_armenia_empire_tt_3 # Region/Area Claims
 			custom_tooltip = form_armenia_empire_tt_4 # Region/Area Claims		
@@ -92,7 +90,7 @@ country_decisions = {
 			custom_tooltip = form_armenia_empire_tt_6 # Region/Area Claims		
 			custom_tooltip = form_armenia_empire_tt_7 # Region/Area Claims	
 			custom_tooltip = dec1_decisions_blank	
-			ARM = { # Capital change and bonuses				
+			ARN = { # Capital change and bonuses				
 				set_capital = 419 # Yerevan
 				419 = {
 					add_base_tax = 1
@@ -106,7 +104,7 @@ country_decisions = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
 				# Reform Change
 				add_government_reform = autocracy_reform						
@@ -124,40 +122,40 @@ country_decisions = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARM
+						add_permanent_claim = ARN
 					}
 					samtskhe_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARM
+						add_permanent_claim = ARN
 					}	
 					erzurum_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARM
+						add_permanent_claim = ARN
 					}	
 					north_kurdistan_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARM
+						add_permanent_claim = ARN
 					}	
 					cukurova_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARM
+						add_permanent_claim = ARN
 					}	
 					# Government Rank change				
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 2
+								government_rank = 3
 								}
 							}
-						set_government_rank = 2
+						set_government_rank = 3
 					}
 					# Government Type Change
 					if = {
@@ -173,13 +171,18 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = ARM_ideas }
+						NOT = { has_idea_group = ARN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_cultural_warfare
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

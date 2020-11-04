@@ -19,43 +19,52 @@
   # Adriatic Empire
 
  dec1_mare_superum: "Mare Superum"
- dec1_mare_superum_desc: ""f
+ dec1_mare_superum_desc: ""
 
  # Alpland
 
  dec1_tough_terrain_castles: "Tough Terrain Castles"
+ dec1_tough_terrain_castles_desc: ""
 
  # Alscase-Lorraine
 
  dec1_german_french_influences: "Franco-Germanic Influences"
+ dec1_german_french_influences_desc: ""
 
  # Angevin Empire
 
  dec1_legacy_of_the_angevins: "Legacy of the Angevins"
+ dec1_legacy_of_the_angevins_desc: ""
 
  # Anglo-Dutch Union
 
  dec1_symbiotic_empire: "Symbiotic Empire"
+ dec1_symbiotic_empire_desc: ""
 
  # Arabian Kingdom
 
  dec1_legacy_of_muhammad: "Legacy of Muhammad"
+ dec1_legacy_of_muhammad_desc: ""
 
  # Armenian Empire
 
  dec1_cultural_warfare: "Cultural Warfare"
+ dec1_cultural_warfare_desc: ""
 
  # Republic of Armenia
 
  dec1_the_steppe_republic: "The Steppe Republic"
+ dec1_the_steppe_republic_desc: ""
  
  # Austrian Empire
 
  dec1_habsburg_dynasty: "Habsburg Dynasty"
+ dec1_habsburg_dynasty_desc: ""
 
  # Austro-Hungarian Empire
 
  dec1_multinational_empire: "Multi-National Empire"
+ dec1_multinational_empire_desc: ""
 
  # Balkan League
 

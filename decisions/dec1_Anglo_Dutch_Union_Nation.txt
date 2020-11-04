@@ -1,8 +1,8 @@
 country_decisions = {
 
-	#######################################################################
-	# Anglo-Dutch Union - As English Nation with Dutch nation under Union #
-	#######################################################################
+	###################################################
+	# Anglo-Dutch Union - English and Dutch Cultures  #
+	###################################################
 
 	anglo_dutch_union_nation = {
 		major = yes
@@ -15,11 +15,10 @@ country_decisions = {
 				exists = AGU
 				tag = AGU
 				tag = PAP
-				tag = FRA
 				tag = EUR
-				tag = ENG
-				tag = GBR
-				tag = UKI				
+				tag = FRA # No Anglo-Dutch France >:P
+				tag = GBR # No Great-Britain - Too Strong!
+				tag = UKI # No United Kingdom - Too Strong!
 			}	
 			OR = {
 				primary_culture = english				
@@ -197,7 +196,7 @@ country_decisions = {
 						}
 						add_permanent_claim = AGU
 					}
-					low_countries_regn = {
+					low_countries_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}

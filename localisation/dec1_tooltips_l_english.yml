@@ -79,6 +79,8 @@
  form_angevin_empire_tt_7: "Country gains a permanent claim on §YBritish Isles§! region."
  form_angevin_empire_tt_8: "Country gains a permanent claim on §YFrance§! region." 
  form_angevin_empire_tt_9: "Country inherits §YFrance§!."
+ form_angevin_empire_tt_10: "Owns core region: §YUpper England§!"
+ form_angevin_empire_tt_11: "Owns core region: §YLower England§!"
 
  form_austrian_empire_nation_tt_2: "Country obtains §YAustrian Empire§! missions."
  form_austrian_empire_nation_tt_3: "Country gains a permanent claim on §YCarpathia§! region."

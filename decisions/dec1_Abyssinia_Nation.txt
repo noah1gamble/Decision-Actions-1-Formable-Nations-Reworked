@@ -146,10 +146,11 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = ABY # Country TAG
+			set_country_flag = formed_abyssinia_nation_flag # Country Formation Flag
 			custom_tooltip = form_abyssinia_tt_2 # New Missions
 			custom_tooltip = form_abyssinia_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
-			ABY = { # Capital change and bonuses				
+			ABY = { # Capital change and bonuses
 				set_capital = 1224 # Gonder
 				1224 = {
 					add_base_tax = 1
@@ -175,7 +176,8 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					# Region/Area Claims
+				hidden_effect = { # Hidden Effects to fix bad tooltips					
+					# Region/Area Claims
 					horn_of_africa_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
@@ -201,30 +203,27 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
+				# Custom Ideas check and change		
 				if = {
-					limit = {	 # Custom Ideas check and ROOT check
+					limit = {
 						has_custom_ideas = no
-						NOT = { 
-							has_idea_group = ABY_ideas 
-						}
+						NOT = { has_idea_group = ABY_ideas }
 					}
-					country_event = { 
-						id = ideagroups.1 
-					}
-					custom_tooltip = dec1_decisions_blank
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = {
-					id = dec1_events.3	# Custom Missions change
-				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_house_of_solomon	# National Ability
+					name = dec1_house_of_solomon
 					duration = 49275
-				}			
+				}				
+				# Increased Centralization
 				add_country_modifier = {
-					name = dec1_increased_centralization	# Increased Centralization
+					name = dec1_increased_centralization
 					duration = -1
-				}						
+				}					
 			}				
 		}
 		ai_will_do = {

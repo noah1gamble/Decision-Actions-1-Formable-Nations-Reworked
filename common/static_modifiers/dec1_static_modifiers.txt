@@ -38,9 +38,9 @@ dec1_abolished_the_mandate_of_heaven = {
 
 		# Alscase-Lorraine
 
-	dec1_germanic_franco_influences = {
-		land_morale = 0.2
-		discipline = 0.2
+	dec1_german_french_influences = {
+		land_morale = 0.1
+		discipline = 0.1
 	}
 
 		# Angevin Empire
@@ -74,6 +74,7 @@ dec1_abolished_the_mandate_of_heaven = {
 		# Republic of Armenia
 
 	dec1_the_steppe_republic = {
+		reelection_cost = -0.1
 		republican_tradition = 0.5
 	}
 
@@ -449,61 +450,70 @@ dec1_abolished_the_mandate_of_heaven = {
 		# South German Ferderation
 
 	dec1_austrian_influences = {
-
+		leader_land_fire = 1
+		leader_land_manuever = 1
 	}
 
 		# Soviet Union
 
 	dec1_soviet_socialist_republics = {
-
+		vassal_income = 0.8 # 80% Vassal Income
+		land_attrition = -0.05	
 	}
 
 		# Sweden-Norway
 
 	dec1_union_of_grace = {
-
+		liberty_desire_from_subject_development = -0.10
 	}
 
 		# Tatarstan
 
 	dec1_tatar_qualities = {
-
+		horde_unity = 2
+		cavalry_cost = -0.10
 	}
 
 		# Tibetan Empire
 
 	dec1_legacy_of_the_dali_lama = {
-
+		prestige_from_land = 0.10
+		may_recruit_female_generals = yes
 	}
 
 		# Turkey
 
 	dec1_turkish_nationalism = {
-
+		discipline = 0.02
+		cav_to_inf_ratio = 0.10 
 	}
 
 		# United Kingdom
 
 	dec1_rule_britannia = {
-
+		own_coast_naval_combat_bonus = 2.0
+		naval_maintenance_modifier = -0.1 
 	}
 
 		# West Germany
 
 	dec1_western_german_rights = {
-		
+		production_efficiency = 0.15		
 	}
 
 		# Western Roman Empire
 
 	dec1_the_birth_of_empire = {
-
+		production_efficiency = 0.05
+		siege_ability = 0.10
+		siege_blockade_progress = 1
+		movement_speed = -0.10 #Debuff
 	}
 
 		# Yugoslavia
 
 	dec1_yugoslavs = {
-
+		discipline = 0.02
 	}
 
 
@@ -512,7 +522,6 @@ dec1_abolished_the_mandate_of_heaven = {
 	# Algiers
 
 	dec1_noble_amirs = {
-		estate_nobles_influence_modifier = 0.1
 		nobles_loyalty_modifier = 0.1
 	}
 
@@ -532,6 +541,104 @@ dec1_abolished_the_mandate_of_heaven = {
 	 	movement_speed = -0.2 # Debuff
 	}
 
+	# Bharat
+
+	# Bukhara
+
+	# Commonwealth
+
+	# Croatia
+
+	# Deccan
+
+	# Egypt
+
+	# Germany
+
+	# Golden Horde
+
+	# Great Britain 
+
+	# Greece
+
+	# Hanover
+
+	# Hindustan
+
+	# Holy Roman Empire
+
+	# Iceland
+
+	# Ilkhanate
+
+	# Inca
+
+	# Ireland
+
+	# Italy
+
+	# Japan
+
+	# Jerusalem
+
+	# Kurland
+
+	# Malaya
+
+	# Manchu
+
+	# Marathas
+
+	# Maya
+
+	# Mongol Empire
+
+	# Mughals
+
+	# Nagpur
+
+	# Nepal
+
+	# Netherlands
+
+	# Persia
+
+	# Punjab
+
+	# Prussia
+
+	# Qing
+
+	# Rajputana
+
+	# Romania
+	
+	# Roman Empire
+
+	# Rum
+
+	# Russia
+
+	# Ruthenia
+
+	# Sardinia-Piedmont
+
+	# Scandinavia
+
+	# Shan
+
+	# Sokoto
+
+	# Spain
+
+	# Swabia
+
+	# Tibet
+
+	# Tripoli
+
+	# Tuscany
+
 	# Two Sicilies
 
 	dec1_italian_spirit = {
@@ -539,6 +646,9 @@ dec1_abolished_the_mandate_of_heaven = {
 		land_morale = 0.05
 	}
 
+	# Westphalia
+
+	# Yuan
 
 ################## Colonial Nations ##################
 

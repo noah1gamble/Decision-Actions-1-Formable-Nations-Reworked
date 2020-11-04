@@ -18,6 +18,8 @@ country_decisions = {
 				tag = SRB
 				tag = HLR
 				tag = PAP
+				tag = KAB
+				tag = ARA
 			}
 			OR = {
 				ai = no

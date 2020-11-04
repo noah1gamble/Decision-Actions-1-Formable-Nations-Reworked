@@ -11,8 +11,8 @@ country_decisions = {
 				exists = CAU
 				tag = CAU
 				tag = PAP
-				tag = GEO
 				tag = EUR
+				tag = ARN # Armenian Empire
 			}
 			OR = {
 				ai = no

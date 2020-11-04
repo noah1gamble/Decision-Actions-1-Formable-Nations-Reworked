@@ -97,7 +97,7 @@ country_decisions = {
 			is_at_war = no
 			is_lesser_in_union = no
 			OR = {
-				HAB = {
+				HAB = { # Austria Owns all Core Provinces
 					custom_trigger_tooltip = {
 						tooltip = form_austro_hungarian_empire_tt_1
 							# Upper Bavaria (AUSTRIA)
@@ -150,7 +150,7 @@ country_decisions = {
 					}
 				}	
 				AND = { # Austria has a PU over Hungary - earlier formation, less land reqs			
-					HAB = {
+					HAB = { # Austrian cores required
 						custom_trigger_tooltip = {
 							tooltip = form_austro_hungarian_empire_tt_1
 								# Upper Bavaria (AUSTRIA)
@@ -173,12 +173,12 @@ country_decisions = {
 							owns_core_province = 1768
 						}
 					}				
-					HUN = {
+					HUN = { # Hungary is lesser in Personal Union with Austria
 						junior_union_with = HAB
 						is_lesser_in_union = yes
 						years_in_union_under = {
 							who = HAB
-							years = 30
+							years = 25
 						}
 					}					
 				}
@@ -258,15 +258,20 @@ country_decisions = {
 						NOT = { has_idea_group = AHE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_multinational_empire
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
-				}
+				}	
 			}
 		}
 		ai_will_do = {

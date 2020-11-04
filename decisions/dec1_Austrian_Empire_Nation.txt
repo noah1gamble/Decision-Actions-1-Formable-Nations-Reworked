@@ -89,7 +89,7 @@ country_decisions = {
 					# Malopolska
 				province_id = 2960
 					# Serbia
-				province_id = 4239
+				# province_id = 4239 - REMOVED
 					# Croatia
 				province_id = 1767
 				province_id = 152
@@ -104,6 +104,12 @@ country_decisions = {
 				province_id = 2970
 				province_id = 266
 				province_id = 2968
+				province_id = 4725
+				province_id = 4724
+				province_id = 4726				
+					# New Provinces from 1.30
+				province_id = 4751
+				province_id = 4753
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -124,74 +130,79 @@ country_decisions = {
 			#		hre_reform_level = 6
 			#	}
 			#}
-			custom_trigger_tooltip = {
-				tooltip = form_austrian_empire_tt_2
-					# Upper Bavaria
-				owns_core_province = 76
-					# Austria Proper
-				owns_core_province = 134
-				owns_core_province = 133
-				owns_core_province = 1770
-					# Inner Austria
-				owns_core_province = 128
-				owns_core_province = 132
-				owns_core_province = 1863
-					# Carniola
-				owns_core_province = 129
-				owns_core_province = 130
-				owns_core_province = 1769
-					# Tirol
-				owns_core_province = 73
-				owns_core_province = 110
-				owns_core_province = 1768
-					# Bohemia
-				owns_core_province = 4237
-				owns_core_province = 265
-				owns_core_province = 2970
-				owns_core_province = 266
-				owns_core_province = 2968				
-			}	
-			custom_trigger_tooltip = {
-				tooltip = form_austrian_empire_tt_3		
-					# Transdanubia
-				owns_core_province = 153
-				owns_core_province = 4126
-				owns_core_province = 1864
-				owns_core_province = 4240
-				owns_core_province = 135
-					# Slovakia
-				owns_core_province = 1772
-				owns_core_province = 4236
-				owns_core_province = 154
-				owns_core_province = 1318
-				owns_core_province = 162
-					# Alfold
-				owns_core_province = 155
-				owns_core_province = 1953
-				owns_core_province = 4125
-				owns_core_province = 1954
-					# Southern Transylvania
-				owns_core_province = 1951
-				owns_core_province = 156
-				owns_core_province = 4128
-					# Northern Transylvania
-				owns_core_province = 157
-				owns_core_province = 1952
-				owns_core_province = 4127
-				owns_core_province = 158
-					# Red Ruthenia
-				owns_core_province = 1940
-				owns_core_province = 2424
-				owns_core_province = 4541
-				owns_core_province = 2961
-				owns_core_province = 261
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = form_austrian_empire_tt_2
+						# Upper Bavaria
+					owns_core_province = 76
+						# Austria Proper
+					owns_core_province = 134
+					owns_core_province = 133
+					owns_core_province = 1770
+						# Inner Austria
+					owns_core_province = 128
+					owns_core_province = 132
+					owns_core_province = 1863
+						# Carniola
+					owns_core_province = 129
+					owns_core_province = 130
+					owns_core_province = 1769
+						# Tirol
+					owns_core_province = 73
+					owns_core_province = 110
+					owns_core_province = 1768
+						# Bohemia
+					owns_core_province = 4237
+					owns_core_province = 265
+					owns_core_province = 2970
+					owns_core_province = 266
+					owns_core_province = 2968
+					owns_core_province = 4725
+					owns_core_province = 4724
+					owns_core_province = 4726
+				}	
+				custom_trigger_tooltip = {
+					tooltip = form_austrian_empire_tt_3		
+						# Transdanubia
+					owns_or_non_sovereign_subject_of = 153
+					owns_or_non_sovereign_subject_of = 4126
+					owns_or_non_sovereign_subject_of = 1864
+					owns_or_non_sovereign_subject_of = 4240
+					owns_or_non_sovereign_subject_of = 135
+						# Slovakia
+					owns_or_non_sovereign_subject_of = 1772
+					owns_or_non_sovereign_subject_of = 4236
+					owns_or_non_sovereign_subject_of = 154
+					owns_or_non_sovereign_subject_of = 1318
+					owns_or_non_sovereign_subject_of = 162
+						# Alfold
+					owns_or_non_sovereign_subject_of = 155
+					owns_or_non_sovereign_subject_of = 1953
+					owns_or_non_sovereign_subject_of = 4125
+					owns_or_non_sovereign_subject_of = 1954
+						# Southern Transylvania
+					owns_or_non_sovereign_subject_of = 1951
+					owns_or_non_sovereign_subject_of = 156
+					owns_or_non_sovereign_subject_of = 4128
+						# Northern Transylvania
+					owns_or_non_sovereign_subject_of = 157
+					owns_or_non_sovereign_subject_of = 1952
+					owns_or_non_sovereign_subject_of = 4127
+					owns_or_non_sovereign_subject_of = 158
+				}
 			}
+				# Red Ruthenia
+			owns_or_non_sovereign_subject_of = 1940
+			owns_or_non_sovereign_subject_of = 2424
+			owns_or_non_sovereign_subject_of = 4541
+			owns_or_non_sovereign_subject_of = 2961
+			owns_or_non_sovereign_subject_of = 261			
 				# Sandomierz
-			owns_core_province = 2959
+			owns_or_non_sovereign_subject_of = 2959
 				# Malopolska
-			owns_core_province = 2960
+			owns_or_non_sovereign_subject_of = 2960
 				# Serbia
-			owns_core_province = 4239
+			# owns_core_province = 4239 - REMOVED
 				# Croatia
 			owns_core_province = 1767
 			owns_core_province = 152
@@ -199,7 +210,10 @@ country_decisions = {
 				# East Adriatic
 			owns_core_province = 1826
 			owns_core_province = 136
-			owns_core_province = 137		
+			owns_core_province = 137	
+			# New Provinces from 1.30
+			owns_core_province = 4751
+			owns_core_province = 4753				
 		}
 	 	effect = {
 			change_tag = AEH # Country TAG
@@ -264,18 +278,23 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = AEH_ideas }
+						NOT = { has_idea_group = ABY_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_habsburg_dynasty
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
-				}
+				}	
 			}
 		}
 		ai_will_do = {

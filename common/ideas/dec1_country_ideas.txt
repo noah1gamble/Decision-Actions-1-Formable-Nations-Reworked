@@ -9,44 +9,35 @@ ABY_ideas = {
 		claim_duration = 0.2
 		ae_impact = -0.1
 	}
-
 	bonus = {
 		core_creation = -0.1
 	}
-
 	trigger = {
 		tag = ABY
 	}
 	free = yes	# will be added at load.
-
 	ABY_succession_protection = {
 		heir_chance = 0.70
 	}
-
 	ABY_first_african_empire = {
 		prestige_decay = -0.2
 	}
-
 	ABY_solomonic_dynasty = {
 		monarch_admin_power = 1
 		monarch_diplomatic_power = 1
 		monarch_military_power = 1
 	}
-
 	ABY_national_reforms = {
 		harsh_treatment_cost = -0.4
 	}
-
 	ABY_feudal_laws = {
 		liberty_desire_from_subject_development = -0.20
 	}
-
 	ABY_absolute_monarchy = {
 		min_autonomy = 0
 		autonomy_change_time = -0.10
 		years_of_nationalism = -5
 	}
-
 	ABY_strong_missionaries = {
 		missionaries = 1
 	}
@@ -58,44 +49,35 @@ ADR_ideas = {
 		global_sailors_modifier = 0.1 # Adriatic Economic Domination
 		blockade_efficiency = 0.1 
 	}
-
 	bonus = {
 		build_cost = -0.2 # Victorian Architecture  
 	}
-
 	trigger = {
 		tag = ADR
 	}
 	free = yes	# will be added at load.
-
 	ADR_control_of_venetian_trade = {
 		global_trade_power = 0.1
 		global_foreign_trade_power = 0.03
 	}
-
 	ADR_multicultural_preparation = {
 		stability_cost_modifier = 0.1
 		local_culture_conversion_cost = -0.03
 	}
-
 	ADR_influx_of_artisians = {
 		production_efficiency = 0.05
 	}
-
 	ADR_ottoman_arms_race = {
 		naval_morale = 0.15
 		flagship_morale = 0.3
 	}
-
 	ADR_encourage_large_city_settlers = {
 		development_cost = -0.1
 	}
-
 	ADR_emperor_crowned_by_pope = {
 		prestige = 0.03
 		papal_influence = 0.1
 	}
-
 	ADR_naval_hegemony = {
 		naval_maintenance_modifier = -0.1
 	}
@@ -107,42 +89,33 @@ AGU_ideas = {
 		election_cycle = 10 # Anglo-Dutch Election System
 		colonists = 1 # Anglo-Dutch Colonial Empire
 	}
-
 	bonus = {
 		merchants = 1 # English-Dutch Trade Dominance
 	}
-
 	trigger = {
 		tag = AGU
 	}
 	free = yes	# will be added at load.
-
 	AGU_multicultural_union = {
 		num_accepted_cultures = 3 
 	}
-
 	AGU_control_of_economic_centers = {
 		global_trade_power = 0.1 
 	}
-
 	AGU_colonial_ambitions = {
 		local_colonial_growth = 10 
 		global_foreign_trade_power = 0.15
 	}
-
 	AGU_global_trade_power = {
 		local_production_efficiency = 0.1 
 	}
-
 	AGU_influx_of_merchants = {
 		merchants = 2
 		galley_cost = -0.1 
 	}
-
 	AGU_naval_control = {
 		navy_tradition = 1
 	}
-
 	AGU_tax_the_poor = {
 		global_tax_modifier = 0.03 
 		global_tax_income = 128
@@ -155,42 +128,33 @@ ALC_ideas = {
 		mercantilism_cost = -0.2 # Franco-German Trade
 		culture_conversion_cost = -0.25 # Conversion of the Nobles
 	}
-
 	bonus = {
 		unrest_catholic_provinces = -2 # Catholic Dominance
 	}
-
 	trigger = {
 		tag = ALC
 	}
 	free = yes	# will be added at load.
-
 	ALC_dominate_the_peasants = {
 		global_unrest = -1 
 	}
-
 	ALC_force_government_reforms = {
 		cb_on_government_enemies = yes
 	}
-
 	ALC_papal_investure = {
 		papal_influence = 0.5
 		church_power_modifier = 0.5
 	}
-
 	ALC_resistance_to_reformation = {
-		# TODO
+		global_religious_conversion_resistance = -0.1
 	}
-
 	ALC_religious_wars = {
 		extra_manpower_at_religious_war = yes
 		relation_with_heretics = -50
 	}
-
 	ALC_lorraine_expansion = {
 		build_time = -0.25
 	}
-
 	ALC_abolishment_of_heathens = {
 		warscore_cost_vs_other_religion = -0.25
 		relation_with_heretics = -50
@@ -203,42 +167,33 @@ ALP_ideas = {
 		defensiveness = 0.20 # Alpine Kingdom
 		administrative_efficiency = 0.15
 	}
-
 	bonus = {
 		movement_speed = 0.1
 	}
-
 	trigger = {
 		tag = ALP
 	}
 	free = yes	# will be added at load.
-
 	ALP_a_new_great_power = {
 		merchants = 2
 		diplomatic_reputation = 1
 	}
-
 	ALP_mountain_protection = {
 		claim_duration = 0.1
 	}
-
 	ALP_alpish_culture = {
 		culture_conversion_cost = -0.10
 	}
-
 	ALP_disciplined_army = {
 		yearly_army_professionalism = 0.07
 	}
-
 	ALP_tax_reforms = {
 		global_tax_modifier = 0.03
 		war_taxes_cost_modifier = -0.2
 	}
-
 	ALP_purge_the_corrupt = {
 		yearly_corruption = -0.2
 	}
-
 	ALP_legacy_of_alpland = {
 		prestige = 0.3
 		prestige_decay = -0.01
@@ -251,43 +206,34 @@ ANG_ideas = {
 		merchants = 1 # Unification the English & French
 		land_morale = 0.1
 	}
-
 	bonus = {
 		heir_chance = 0.5 # Angevins
 	}
-
 	trigger = {
 		tag = ANG
 	}
 	free = yes	# will be added at load.
-
 	ANG_nation_of_many_cultures = {
 		num_accepted_cultures = 2
 	}
-
 	ANG_unified_the_crown = {
 		legitimacy = 2
 	}
-
 	ANG_english_channel_domination = {
 		global_own_trade_power = 0.1
 	}
-
 	ANG_anglo_french_tactics = {
 		discipline = 0.05
 	}
-
 	ANG_united_kingdoms_together = {
 		stability_cost_to_declare_war = -1
 		stability_cost_modifier = 0.05
 		local_manpower = 0.2
 	}
-
 	ANG_anglo_french_armada = {
 		light_ship_power = 0.15
 		heavy_ship_power = 0.15
 	}
-
 	ANG_franco_bastions  = {
 		garrison_size = 0.1
 	}
@@ -299,42 +245,33 @@ KAB_ideas = {
 		missionaries = 1
 		religious_unity = 0.9
 	}
-
 	bonus = {
 		discipline = 0.2 # Glorious Army of Allah
 	}
-
 	trigger = {
 		tag = KAB
 	}
 	free = yes	# will be added at load.
-
 	KAB_legacy_of_muhammad = {
 		global_institution_spread = 0.1
 	}
-
 	KAB_islamic_traditions = {
 		global_missionary_strength = 0.20
 	}
-
 	KAB_rashidun_caliphs = {
 		local_defensiveness = 0.1 
 		garrison_growth = 0.10
 	}
-
 	KAB_mamluk_volunteers = {
 		global_manpower_modifier = 0.1
 	}
-
 	KAB_the_godly_armada = {
 		global_sailors = 5000
 		global_sailors_modifier = 0.1 
 	}
-
 	KAB_early_muslim_expansionism = {
 		ae_impact = -0.2
 	}
-
 	KAB_proper_economic_reforms = {
 		global_tax_modifier = 0.05
 		development_cost = -0.1
@@ -347,43 +284,34 @@ ARN_ideas = {
 		culture_conversion_cost = -0.10
 		monarch_military_power = 1
 	}
-
 	bonus = {
 		yearly_corruption = -0.1
 	}
-
 	trigger = {
 		tag = KAB
 	}
 	free = yes	# will be added at load.
-
 	ARN_tigranes_the_great = {
 		diplomatic_reputation = 1
 	}
-
 	ARN_roman_warfare = {
 		discipline = 0.1
 		mercenary_discipline = 0.1
 	}
-
 	ARN_greater_armenia = {
 		prestige = 0.5
 	}
-
 	ARN_hellenistic_traditions = {
 		religious_unity = 0.5
 	}
-
 	ARN_old_zoroastrianism = {
 		global_heretic_missionary_strength = 0.20
 	}
-
 	ARN_ayrudzi_cavalry= {
 		cavalry_cost = -0.2
 		cavalry_fire = 1
 		cavalry_shock = 1
 	}
-
 	ARN_proper_coinage = {
 		global_tax_modifier = 0.05
 	}
@@ -395,42 +323,33 @@ ARR_ideas = {
 		republican_tradition = 0.5 
 		discipline = 0.1 
 	}
-
 	bonus = {
 	 	global_tax_modifier = 0.10
 	}
-
 	trigger = {
 		tag = ARR
 	}
 	free = yes	# will be added at load.
-
 	ARR_our_history = {
 	 	stability_cost_to_declare_war = 1	
 	}
-
 	ARR_resistance_to_turkish_influence = {
  		mercenary_cost = -0.1
 		mercenary_manpower = 0.1
 	}
-
 	ARR_far_christianity = {
 		manpower_in_true_faith_provinces= 0.1
 	}
-
 	ARR_republican_values = {
 		reelection_cost = -0.1
 		candidate_random_bonus = 2
 	}
-
 	ARR_greater_armenian_legacy = {	# 10-Year election system
 		election_cycle = 6	
 	}
-
 	ARR_reform_the_national_assembly = {
 		reform_progress_growth = 0.1
 	}
-
 	ARR_ssr_peoples = {
 		yearly_corruption = -0.2 
 	}
@@ -442,44 +361,35 @@ AEH_ideas = {
 		unjustified_demands = -0.2 # Österreich Sphere of Influence
 		ae_impact = -0.25
 	}
-
 	bonus = {
 		diplomats = 1 # Austrian Diplomatic Capabilities
 	}
-
 	trigger = {
 		tag = AEH
 	}
 	free = yes	# will be added at load.
-
 	AEH_austrian_noble_diplomats = {
 		monarch_diplomatic_power = 2 
 	}
-
 	AEH_competent_generals = {
 		general_cost = -0.1 # Increased cost of generals for better ones
 		free_leader_pool = 1
 		may_recruit_female_generals = yes
 	}
-
 	AEH_imperial_empire = {
 		governing_capacity = 200
 		imperial_authority = 0.03
 	}
-
 	AEH_tertius_maximae_imperii = {
 		diplomatic_reputation = 1
 		imperial_authority = 0.03
 	}
-
 	AEH_absolute_rule = {
 		diplomatic_annexation_cost = -0.2
 	}
-
 	AEH_historical_victories = {
 		discipline = 0.15
 	}
-
 	AEH_empire_of_the_germans = {
 		culture_conversion_cost = -0.40
 	}
@@ -491,16 +401,13 @@ AHE_ideas = {
 		infantry_cost = -0.1
 		army_tradition_from_battle = 0.25 
 	}
-
 	bonus = {
 		diplomatic_reputation = 2 # Professional Diplomats
 	}
-
 	trigger = {
 		tag = AHE
 	}
 	free = yes	# will be added at load.
-	
 	AHE_political_maneuvering = {
 		ae_impact = -0.1 # Political Maneuvering
 	}
@@ -527,39 +434,34 @@ AHE_ideas = {
 # Belgium
 BEL_ideas = { 
 	start = {
-		colonists = 1 
-
+		colonists = 1
+		production_efficiency = 0.05
 	}
-
 	bonus = {
-
+		naval_maintenance_modifier = -0.1 
 	}
-
 	trigger = {
 		tag = BEL
 	}
 	free = yes	# will be added at load.
-
-	BEL_1 = {
+	BEL_protestant_lands = {
 		warscore_cost_vs_other_religion = -0.25 
 	}
-
-	BEL_2 = {
+	BEL_proper_military_reform = {
+		infantry_cost = -0.10
 	}
-
 	BEL_congo_exploration = {
 		global_colonial_growth = 35 
 	}
-
-	BEL_4 = {
+	BEL_belgian_advisors = {
+		advisor_cost = -0.25
 	}
-
-	BEL_5 = {
+	BEL_low_countries_economy = {
+		all_power_cost = -0.1
+		production_efficiency = 0.05
 	}
-
 	BEL_6 = {
 	}
-
 	BEL_7 = {
 	}
 }
@@ -618,7 +520,7 @@ BTC_ideas = {
 	}
 
 	bonus = {
-		land_morale = 0.10 s
+		land_morale = 0.10
 	}
 
 	trigger = {

@@ -1,6 +1,6 @@
 ﻿l_english:
  # New Countries
- KAB: "Kingdom of Arabia"
+ KAB: "Arabia"
  KAB_ADJ: "Arabian"
  BNL: "Benelux"
  BNL_ADJ: "Beneluxian"
@@ -128,6 +128,10 @@
  KRV_ADJ: "Kievan"
  TIE: "Tibetan Empire"
  TIE_ADJ: "Tibetan"
+ ARN: "Greater Armenia"
+ ARN_ADJ: "Armenian"
+ ARR: "Republic of Armenia"
+ ARR: "Armenian"
  # Vanilla Countries
  ARB: "Arabian Empire"
  ARB_ADJ: "Arabian"

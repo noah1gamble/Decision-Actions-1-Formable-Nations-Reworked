@@ -110,31 +110,27 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
+				# Custom Ideas check and change		
 				if = {
-					limit = {	 # Custom Ideas check and ROOT check
-						OR = {
-							has_custom_ideas = no
-							NOT = { 
-								has_idea_group = ALC_ideas 
-							}
-						}
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ALC_ideas }
 					}
-					country_event = { 
-						id = ideagroups.1
-					}
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = {
-					id = dec1_events.3	# Custom Missions change
-				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_germanic_franco_influences	# National Ability
+					name = dec1_german_french_influences
 					duration = 49275
-				}			
+				}				
+				# Increased Centralization
 				add_country_modifier = {
-					name = dec1_increased_centralization	# Increased Centralization
+					name = dec1_increased_centralization
 					duration = -1
-				}
+				}	
 			}					
 		}
 		ai_will_do = {
