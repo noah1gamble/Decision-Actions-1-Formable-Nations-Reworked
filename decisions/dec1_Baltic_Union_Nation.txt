@@ -1,5 +1,7 @@
 country_decisions = {
 
+	# Baltic Union - Any baltic culture
+
 	baltic_union_nation = {
 		major = yes
 		potential = {
@@ -7,15 +9,17 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = { 
-				has_country_flag = formed_baltic_union_nation_flag 
+				has_country_flag = formed_baltic_union_flag 
 				exists = BTC
+				tag = BTC
 				tag = PAP
 				tag = HLR
 				tag = PRU
 				tag = TEU
-				tag = BTC
 				tag = LIT
-				tag = EUR			
+				tag = EUR
+				tag = EPR
+				tag = NGC
 			}	
 			OR = {
 				primary_culture = lithuanian
@@ -72,18 +76,21 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			OR = {
-				custom_trigger_tooltip = {
-					tooltip = form_baltic_union_tt_1			
-					owns_core_province = 35
-					owns_core_province = 36
-					owns_core_province = 1842
-					owns_core_province = 37
-					owns_core_province = 1834
-					owns_core_province = 4241
-					owns_core_province = 273
-					owns_core_province = 1935
-					owns_core_province = 38
-					owns_core_province = 39
+				AND = {
+					total_development = 80 # To avoid Livonian instant Baltic Union for now - Will need it's own decision
+					custom_trigger_tooltip = { 
+						tooltip = form_baltic_union_tt_1			
+						owns_core_province = 35
+						owns_core_province = 36
+						owns_core_province = 1842
+						owns_core_province = 37
+						owns_core_province = 1834
+						owns_core_province = 4241
+						owns_core_province = 273
+						owns_core_province = 1935
+						owns_core_province = 38
+						owns_core_province = 39
+					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = form_baltic_union_tt_2			
@@ -108,8 +115,8 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = BTC # Country TAG
-			set_country_flag = formed_baltic_union_nation_flag # Country Formation Flag
-			custom_tooltip = form_baltic_union_tt_2 # New Missions
+			set_country_flag = formed_baltic_union_flag # Country Formation Flag
+			custom_tooltip = form_baltic_union_tt_3 # New Missions
 			custom_tooltip = dec1_decisions_blank				
 			BTC = { # Capital change and bonuses				
 				set_capital = 35
@@ -138,10 +145,10 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					add_accepted_culture = estonian
+				hidden_effect = { # Hidden Effects to fix bad tooltips				
+					add_accepted_culture = estonian
 					add_accepted_culture = lithuanian
 					add_accepted_culture = latvian				
-
 					# Government Rank change				
 					if = {
 						limit = {
@@ -168,10 +175,15 @@ country_decisions = {
 						NOT = { has_idea_group = BTC_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_baltic_trade
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -184,5 +196,7 @@ country_decisions = {
 		}
 		ai_importance = 400		
 	}
+
+	# Baltic Union - Livonian Order Unique Decision
 
 }

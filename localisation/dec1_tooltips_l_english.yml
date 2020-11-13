@@ -228,8 +228,6 @@
  form_abyssinia_tt_2: "Country obtains §YAbyssinia§! missions."
  form_abyssinia_tt_3: "Country gains a permanent claim on §YHorn of Africa§! region."
 
- form_baltic_union_tt_2: "Country obtains §YBaltic Union§! missions."
-
  form_belgium_tt_2: "Country obtains §YBelgium§! missions."
 
  form_byzantium_tt_2: "Country obtains §YByzantium§! missions."
@@ -362,6 +360,8 @@
  form_scandinavia_tt_3: "Country gains a permanent claim on §YBaltic§! region."
 
  form_basque_country_tt_2: "Country obtains §YBasque Country§! missions."
+
+ form_balkan_league_tt_2: "Country obtains §YBalkan League§! missions."
 
  ############################
  # COLONIAL NATION TOOLTIPS #

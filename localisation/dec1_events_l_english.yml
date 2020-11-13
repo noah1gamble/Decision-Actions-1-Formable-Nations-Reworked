@@ -16,6 +16,8 @@
  flavor_lse.2.EVTOPTA: "We can't afford to accept it now.."
  flavor_lse.2.EVTOPTA: "No, we don't want to make a Feitoria in $PROVINCE$"
 
+ # Holy Roman Empire Event
+
  dec1_events.1.t: "Our place in the Empire"
  dec1_events.1.d: "As we place ourselves higher we begin to question the rights of our so called Emperor.. Should we not forge our own path and take our place in the sun?"
  dec1_events.1.a: "Remain loyal to the Emperor."
@@ -25,6 +27,8 @@
  dec1_events.2.t: "[From.GetName] remains loyal to the Empire"
  dec1_events.2.d: "The Holy Roman Empire has been strengthened by the formation of the new state of [From.GetName] which has remained loyal to our Empire and supported Emperor $EMPERORNAME$. We have gained much prestige and stability within the empire due to the strengthening of our Empire!"
  dec1_events.2.a: "Excellent!"
+
+ # Customs Missions Event
 
  dec1_events.3.t: "New Missions & Objectives"
  dec1_events.3.d: "Our state is going through a range of changes that is rapidly reforming our government and political objectives. Unless we invest our time in these goals; they will remain the same without any progress to our power projection."

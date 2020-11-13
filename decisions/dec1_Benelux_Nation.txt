@@ -16,6 +16,7 @@ country_decisions = {
 				tag = FRA
 				tag = KNI
 				tag = IBE
+				tag = BEL
 			}			
 			OR = {
 				ai = no

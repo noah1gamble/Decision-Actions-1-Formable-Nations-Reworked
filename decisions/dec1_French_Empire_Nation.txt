@@ -21,6 +21,7 @@ country_decisions = {
 				tag = IBE
 				tag = ANG
 				tag = KOJ
+				tag = BSQ
 			}
 			OR = {
 				culture_group = french

@@ -1,8 +1,11 @@
-	# Formable Nations: Reworked events
+	#####################################
+	# Formable Nations: Reworked events #
+	#####################################
 
 	namespace = dec1_events
 
 	# Our place in the Empire
+	
 	country_event = {
 		id = dec1_events.1
 		title = "dec1_events.1.t"
@@ -20,53 +23,85 @@
 		# Stay in the Empire
 		option = {
 			name = "dec1_events.1.a"
+			ai_chance = { 
+				factor = 60 
+			}
 			emperor = {	 # Emperor is told about loyalty to the empire, gains imperial authority
 				country_event = { id = dec1_events.2 }
-				add_opinion = {
-					who = root
-					modifier = stayed_in_the_empire
+				hidden_effect = { # Hide gross spam
+					add_opinion = {
+						who = root
+						modifier = stayed_in_the_empire
+					}
 				}
 			}		 
 		}
 		# Leave the Empire
 		option = {
 			name = "dec1_events.1.b"
-			if = { # Remove Elector status
-				limit = {
-					is_elector = yes
+			ai_chance = { # TODO: Add any other important AI situations I missed
+				factor = 10 
+				modifier = { # is Rival to current Emperor will always leave
+					factor = 100
+					is_rival = emperor
 				}
-				elector = no
-				remove_non_electors_emperors_from_empire_effect = yes
-			}
-			add_prestige = -10	
-			if = {		
-				limit = {
-					is_part_of_hre = yes
+				modifier = { # is opposing in league with emperor will always leave
+					factor = 100
+					is_league_enemy = emperor
 				}
-				emperor = {	 # Emperor is told about the nation leaving, loses imperial authority
-					country_event = { id = hre_event.5 }
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
+				modifier = { # Prussia and Brandenburg are 80 more likely to leave
+					factor = 80
+					tag = BRA # Brandenburg
+					tag = PRU # Prussia
+				}				
+				modifier = { # Specific TAGs that are more likely to leave
+					factor = 60
+					OR = {
+						tag = NED # Netherlands
+						tag = EPR # East Prussia
+						tag = BEL # Belgium
 					}
-				}
+				}							
 			}
-			if = { # Non-Elector
-				limit = {
-					is_part_of_hre = yes
-					is_elector = no
-				}
-				every_owned_province = {
+			add_prestige = -10
+			hidden_effect = {
+				if = { # Remove Elector status
+					limit = {
+						is_elector = yes
+					}
+					elector = no
+					remove_non_electors_emperors_from_empire_effect = yes
+				}	
+				if = { # Emperor is told, loses imperial authority
 					limit = {
 						is_part_of_hre = yes
 					}
-					set_in_empire = no
-				}		
+					emperor = {	
+						country_event = { id = hre_event.5 }
+						add_opinion = {
+							who = root
+							modifier = opinion_left_empire
+						}
+					}
+				}
+				if = { # Non-Elector
+					limit = {
+						is_part_of_hre = yes
+						is_elector = no
+					}
+					every_owned_province = {
+						limit = {
+							is_part_of_hre = yes
+						}
+						set_in_empire = no
+					}		
+				}	
 			}
 		}
 	}
 
 	# Our Place in the Empire - Nation stayed in the Empire
+
 	country_event = {
 		id = dec1_events.2
 		title = "dec1_events.2.t"
@@ -76,9 +111,21 @@
 		is_triggered_only = yes
 		
 		option = {
-			name = "dec1_events.2.a" # Good!
-			add_imperial_influence = 25 # Perhaps add higher influence per government rank of nation that formed (15 duchy, 40 kingdom, 70 empire)
-			add_prestige = 10
+			name = "dec1_events.2.a" # Good!)
+			if = { # Duchy 
+				limit = {
+					government_rank = 1 
+				}
+				add_imperial_influence = 10
+				add_prestige = 10
+			}
+			if = { # Kingdom (Most likely only Electors)
+				limit = {
+					government_rank = 2 
+				}
+				add_imperial_influence = 25
+				add_prestige = 20
+			}			
 			tooltip = {
 				add_opinion = {
 					who = FROM
@@ -89,6 +136,7 @@
 	}
 
 	# New Missions & Objectives
+
 	country_event = {
 		id = dec1_events.3
 		title = "dec1_events.3.t"

@@ -15,6 +15,7 @@ country_decisions = {
 				tag = HLR
 				tag = FRA
 				tag = CAS
+				tag = BSQ
 			}
 			OR = {
 				ai = no

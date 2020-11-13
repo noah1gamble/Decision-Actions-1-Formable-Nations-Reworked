@@ -21,6 +21,7 @@ country_decisions = {
 				tag = CIS
 				tag = EUR
 				tag = ADR
+				tag = BSQ
 			}			
 			OR = {
 				AND = { # A powerful latin can control this title with growth

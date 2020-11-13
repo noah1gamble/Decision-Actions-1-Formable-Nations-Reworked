@@ -132,6 +132,8 @@
  ARN_ADJ: "Armenian"
  ARR: "Republic of Armenia"
  ARR: "Armenian"
+ BKL: "Balkan League"
+ BKL_ADJ: "Balkan"
  # Vanilla Countries
  ARB: "Arabian Empire"
  ARB_ADJ: "Arabian"

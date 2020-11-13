@@ -19,6 +19,7 @@ country_decisions = {
 				tag = EUR
 				tag = FIB
 				tag = LSE
+				tag = BSQ
 			}
 			OR = {
 				culture_group = iberian

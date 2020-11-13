@@ -17,6 +17,7 @@ country_decisions = {
 				tag = EUR
 				tag = LSE
 				tag = KOJ
+				tag = BSQ
 			}
 			OR = {
 				culture_group = iberian

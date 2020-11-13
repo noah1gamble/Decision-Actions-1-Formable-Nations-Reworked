@@ -460,9 +460,11 @@ BEL_ideas = {
 		all_power_cost = -0.1
 		production_efficiency = 0.05
 	}
-	BEL_6 = {
+	BEL_reduced_economic_costs = {
+		state_maintenance_modifier = -0.10
 	}
-	BEL_7 = {
+	BEL_the_belgian_power = {
+		prestige_decay = -0.03
 	}
 }
 
@@ -529,24 +531,34 @@ BTC_ideas = {
 	free = yes	# will be added at load.
 
 	BTC_the_entente_of_survival = {
+		diplomats = 1
 	}
 
 	BTC_anti_socialist_support = {
+		diplomatic_reputation = 1 
 	}
 
 	BTC_unified_foreign_policy = {
+		ae_impact = -0.2 
 	}
 
 	BTC_reform_article_two = {
+		global_tax_modifier = 0.05
+		land_morale = 0.05
 	}
 
 	BTC_peace_and_prosperity = {
+		defensiveness = 0.10 
 	}
 
 	BTC_the_baltic_states = {
+		unjustified_demands = -0.1
+		accept_vassalization_reasons = 20
 	}
 
 	BTC_embrace_cultural_reform = {
+		num_accepted_cultures = 2
+		culture_conversion_cost = -0.05
 	}
 }
 
@@ -627,11 +639,12 @@ BSK_ideas = {
 # Basque Country
 BSQ_ideas = { 
 	start = {
-
+		culture_conversion_cost = -0.30
+		papal_influence = 0.10
 	}
 
 	bonus = {
-
+		global_autonomy = -0.10
 	}
 
 	trigger = {
@@ -639,25 +652,34 @@ BSQ_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	BSQ_1 = {
+	BSQ_remove_conversion_taxes = {
+		culture_conversion_cost = -0.20
 	}
 
-	BSQ_2 = {
+	BSQ_strengthen_the_army = {
+		discipline = 0.01
 	}
 
-	BSQ_3 = {
+	BSQ_recruitment_drive_for_mercs = {
+		mercenary_manpower= 0.10
 	}
 
-	BSQ_4 = {
+	BSQ_slave_trade_power = {
+		global_ship_cost = -0.1
+		may_perform_slave_raid = yes
 	}
 
-	BSQ_5 = {
+	BSQ_national_desire_for_expansion = {
+		stability_cost_to_declare_war = -1
 	}
 
-	BSQ_6 = {
+	BSQ_technological_warfare = {
+		ae_impact = -0.05
+		siege_ability = 0.05
 	}
 
-	BSQ_7 = {
+	BSQ_tax_the_middle_classes = {
+		global_tax_modifier = 0.15
 	}
 }
 
