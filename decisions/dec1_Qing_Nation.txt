@@ -16,6 +16,8 @@ country_decisions = {
 			NOT = { 
 				exists = QNG
 				has_country_flag = manchu_dynasty_formed 
+				tag = CHN
+				tag = PRC
 			}
 			OR = {
 				ai = no

@@ -17,6 +17,7 @@ country_decisions = {
 				tag = ARB
 				tag = EGY
 				tag = TRP
+				tag = CTG
 			}
 			OR ={
 				primary_culture = algerian

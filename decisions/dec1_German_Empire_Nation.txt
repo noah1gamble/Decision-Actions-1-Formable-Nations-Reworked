@@ -21,6 +21,9 @@ country_decisions = {
 				tag = HLR
 				tag = ROM
 				tag = BEL
+				tag = BNL
+				tag = BRP # Brandenburg-Prussia TODO: some unique changes later
+				tag = BVE
 			}
 			OR = {
 				ai = no

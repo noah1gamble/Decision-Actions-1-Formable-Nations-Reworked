@@ -16,6 +16,7 @@ country_decisions = {
 				tag = SWI
 				tag = EUR
 				tag = BKL
+				tag = BSK
 			}
 			OR = {
 				primary_culture = croatian

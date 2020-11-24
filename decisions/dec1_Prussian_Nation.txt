@@ -656,10 +656,12 @@ country_decisions = {
 				government = theocracy				
 				exists = PRU
 				tag = PRU
+				tag = PAP
 				tag = GER
 				tag = HLR
 				tag = BRA
 				tag = TEU
+				tag = CZE
 			}
 			OR = {
 				primary_culture = prussian

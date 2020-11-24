@@ -20,6 +20,7 @@ country_decisions = {
 				tag = HLR
 				tag = EUR
 				tag = TUR
+				tag = CZE
 			}
 		}
 		provinces_to_highlight = {

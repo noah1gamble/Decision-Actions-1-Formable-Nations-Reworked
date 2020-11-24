@@ -124,12 +124,17 @@ country_decisions = {
 			custom_tooltip = form_carthage_tt_2 # New Missions
 			custom_tooltip = form_carthage_tt_3 # Region/Area Claims
 			custom_tooltip = form_carthage_tt_4 # Region/Area Claims
-			hidden_effect = { # Small hidden effect, important though! Full Religious Change
-				CTG = { 
-					change_culture = phoenician 
-				} 
+			custom_tooltip = form_carthage_tt_5 # Culture Change
+			hidden_effect = {
+				every_province = { # Culture change
+				limit = {
+					NOT = {
+						culture = phoenician
+					}
+				}
+				change_culture = phoenician
 			}
-			change_culture = phoenician
+			}
 			custom_tooltip = dec1_decisions_blank	
 			CTG = { # Capital change and bonuses			
 				set_capital = 341 # Carthage
@@ -198,10 +203,15 @@ country_decisions = {
 						NOT = { has_idea_group = CTG_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_phoenician_spirit
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

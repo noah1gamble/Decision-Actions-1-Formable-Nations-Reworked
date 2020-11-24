@@ -7,8 +7,11 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			is_nomad = no
 			is_random_new_world = no
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
+			NOT = { 
+				tag = HLR
+				tag = PAP
+				tag = CSA
+			}
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes

@@ -28,7 +28,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				# Bohemia
+					# Bohemia
 				province_id = 4237
 				province_id = 265
 				province_id = 2970
@@ -38,7 +38,7 @@ country_decisions = {
 				province_id = 2967
 				province_id = 267
 					# Slovakia
-					province_id = 1772
+				province_id = 1772
 				province_id = 154
 				province_id = 4236
 				province_id = 1318

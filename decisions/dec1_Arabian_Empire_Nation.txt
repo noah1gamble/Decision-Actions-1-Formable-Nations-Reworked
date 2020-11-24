@@ -22,6 +22,7 @@ country_decisions = {
 				tag = HLR
 				tag = PAP
 				tag = EGY
+				tag = CTG
 			}
 			OR = {
 				ai = no

@@ -102,7 +102,7 @@
  FRL_ADJ: "Frisian"
  BVE: "Bremen-Verden"
  BVE_ADJ: "Bremian"
- AEH: "Austrian Empire"
+ AEH: "Austrian Empire"                                 
  AEH_ADJ: "Austrian"
  AHE: "Austro-Hungarian Empire"
  AHE_ADJ: "Austro-Hungarian"
@@ -134,6 +134,8 @@
  ARR: "Armenian"
  BKL: "Balkan League"
  BKL_ADJ: "Balkan"
+ CSA: "Confederate States"
+ CSA_ADJ: "Confederate"
  # Vanilla Countries
  ARB: "Arabian Empire"
  ARB_ADJ: "Arabian"

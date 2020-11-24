@@ -20,6 +20,7 @@ country_decisions = {
 				tag = ARN
 				tag = HLR
 				tag = PAP
+				tag = CAU
 			}
 			OR = {
 				ai = no
@@ -41,7 +42,7 @@ country_decisions = {
 	    	}
 		}
 		allow = {
-			adm_tech = 10 # Modern Nation - Should be 15-20?
+			adm_tech = 20 # Modern Nation = 20 adm tech
 			NOT = { exists = ARR }
 			is_at_war = no
 			is_nomad = no

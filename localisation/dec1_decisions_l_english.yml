@@ -70,7 +70,7 @@
  bremen_verden_nation_desc: "Bremen-Verden, formally the Duchies of Bremen and Verden were two territories and immediate fiefs of the Holy Roman Empire, which emerged and gained imperial immediacy in 1180. By their original constitution they were prince-bishoprics of the Archdiocese of Bremen and Bishopric of Verden."
 
  burma_nation_title: "@BRM Union of Burma"
- burma_nation_desc: "During the first years of post-independence Burma, insurgencies by the Red Flag Communists led by Thakin Soe, the White Flag Communists led by Thakin Than Tun, the Yèbaw Hpyu (White-band PVO) led by Bo La Yaung, a member of the Thirty Comrades, army rebels calling themselves the Revolutionary Burma Army (RBA) led by communist officers Bo Zeya, Bo Yan Aung and Bo Yè Htut – all three of them members of the Thirty Comrades, Arakanese, and the Karen National Union (KNU)."
+ burma_nation_desc: "The unifier of Burma would emerge in the mid-sixteenth century known as Bayinnaung was an expansionist ruler who waged relentless war in order to gain increasingly larger areas of territory in which his aggression was much admired by his military rulers and the military rulers of today’s Burma, for whom he is a role model.\n\nUpon his death in 1581 at 66 years of age his rule stretched over almost all of Burma, Thailand and Laos. But such dominion, won at great cost, was difficult to hold on to, and soon after his death sections of his empire began to fall away. "
 
  carthage_nation_title: "@CTG Restore Carthage"
  carthage_nation_desc: "Phoenicians founded Carthage in 814 BC and established political hegemony over other Phoenician settlements throughout the western Mediterranean; this lasted until the end of the 3rd century BC.\n\nAt the height of the city's prominence, it served as a major hub of trade, with trading stations extending throughout the region.\n\nFor much of its history, Carthage was on hostile terms with the Greeks in Sicily and with the Roman Republic; tensions led to a series of armed conflicts known as the Sicilian Wars (c. 600–265 BC) and the Punic Wars (264–146 BC) respectively.\n\nThe city also had to deal with potentially hostile Berbers, the indigenous inhabitants of the area where Carthage was built."
@@ -89,6 +89,9 @@
 
  cisalpina_nation_title: "@CIS The Cisalpine Republic"
  cisalpina_nation_desc: "The Cisalpine Republic was a sister republic of France in Northern Italy that lasted from 1797 to 1802, The flag of the Cisalpine Republic was the Transpadane vertical Italian tricolour, with the square shape of the Cispadane flag.\n\n§YCisalpina§! §RCANNOT§! form any §YItalian§! nations."
+
+ confederate_states_nation_title: "@CSA The Confederate States"
+ confederate_states_nation_desc: "Thirteen Colonies united against British Imperialism and forced a treaty through military victory and great leadership forming one of the greatest republics the world has ever known allowing a domination of global economic matters, but many issues conflicted this nation such as slavery and taxation laying the path for the American Civil War."
 
  czechoslovakia_nation_title: "@CZE Unite Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
@@ -398,3 +401,8 @@
 
  bavaria_nation_title: "@BAV Bavarian Restoration"
  bavaria_nation_desc: "The once proud Duchy of Bavaria lies divided and weak. We must reunite its former territories and reclaim the glories of the past if we are to avoid being but a footnote in history."
+
+ # Unique Decision Localization
+
+ china_control_over_taiwan_title: "Control over Taiwan"
+ china_control_over_taiwan_desc: "We must conquer the islands of Taiwan in the name of the Republic of China!"

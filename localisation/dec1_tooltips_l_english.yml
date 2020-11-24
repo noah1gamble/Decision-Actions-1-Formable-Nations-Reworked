@@ -147,6 +147,7 @@
  form_carthage_tt_2: "Country obtains §YCarthage§! missions."
  form_carthage_tt_3: "Country gains a permanent claim on §YIberia§! region."
  form_carthage_tt_4: "Country gains a permanent claim on §YItaly§! region."
+ form_carthage_tt_5: "Every currently owned province culture will change to §YPhoenician§!."
 
  form_lusitanian_empire_nation_tt_1: "Has §YExploration Ideas§!: §YGlobal Empire§!"
  form_lusitanian_empire_nation_tt_2: "Owns cores of §YPortugal§!"
@@ -160,8 +161,9 @@
  form_germany_tt_2: "Country obtains §YGerman Kingdom§! missions."
 
  form_bharat_nation_tt_1: "Owns core provinces of §YBharat§!"
- 
  form_bharat_nation_tt_2: "Country obtains §YBharat§! missions."
+
+ form_benelux_tt_2: "country obtains §YBenelux§! missions."
 
  form_hindustan_nation_tt_1: "Owns all cores of §YHindustan§!"
  form_hindustan_nation_tt_2: "Country obtains §YHindustan§! missions."
@@ -205,6 +207,10 @@
  form_prussia_tt_3: "Country gains a permanent claim on §YPomerelia§! area."
  form_prussia_tt_4: "Country gains a permanent claim on §YWest Prussia§! area."
  form_prussia_tt_5: "Country gains a permanent claim on §YEast Prussia§! area."
+
+ form_brandenburg_prussia_tt_1: "Owns core provinces of §YBrandenburg-Prussia§!"
+ form_brandenburg_prussia_tt_2: "Country obtains §YBrandenburg-Prussia§! missions."
+ form_brandenburg_prussia_tt_3: "Country gains a permanent claim on §YNorth German§! region."
 
  form_yugoslavia_tt_2: "Country obtains §YYugoslavia§! missions."
 
@@ -288,7 +294,7 @@
  form_japan_tt_6: "Owns core §YJapanese§! areas:\n    §YKinai Area§!\n    §YHokuriku Area§!\n    §YWestern Chubu Area§!\n    §YEastern Chubu Area§!\n    §YWestern Kanto Area§!"
 
  form_celtic_union_tt_2: "Country obtains §YCeltic Union§! missions."
- form_celtic_union_tt_3: "Country gains a permanent claim on §YBritish Isles§! region."
+ form_celtic_union_tt_3: "Country gains a permanent claim on §YCaucasia§! region."
 
  form_hanover_tt_2: "Country obtains §YHanover§! missions."
  form_hanover_tt_3: "Country gains a claim on historical lands of §YHanover§!."
@@ -362,6 +368,8 @@
  form_basque_country_tt_2: "Country obtains §YBasque Country§! missions."
 
  form_balkan_league_tt_2: "Country obtains §YBalkan League§! missions."
+
+ form_confederate_states_tt_2: "Country obtains §YConfederate States§! missions."
 
  ############################
  # COLONIAL NATION TOOLTIPS #

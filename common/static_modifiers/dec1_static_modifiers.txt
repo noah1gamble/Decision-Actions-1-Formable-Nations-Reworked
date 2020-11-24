@@ -103,7 +103,7 @@ dec1_abolished_the_mandate_of_heaven = {
 		global_trade_power = 0.1
 	}
 
-		# Basque Kingdom
+		# Basque Country
 
 	dec1_ducal_kingdom = {
 		prestige = 0.5
@@ -153,7 +153,7 @@ dec1_abolished_the_mandate_of_heaven = {
 	dec1_phoenician_spirit = {
 		discipline = 0.1
 		mercenary_discipline = 0.1
-		land_morale = 0.1 
+		land_morale = 0.05
 	}
 
 		# Caucasia

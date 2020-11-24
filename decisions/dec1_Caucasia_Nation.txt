@@ -12,7 +12,7 @@ country_decisions = {
 				tag = CAU
 				tag = PAP
 				tag = EUR
-				tag = ARN # Armenian Empire
+				tag = ARN
 			}
 			OR = {
 				ai = no
@@ -39,45 +39,14 @@ country_decisions = {
 	    }
 		}
 		allow = {
-			adm_tech = 5
+			adm_tech = 15
 			is_subject = no
 			is_at_war = no
 			NOT = { exists = CAU }
-				# Circassia
-			owns_core_province = 2195
-			owns_core_province = 463
-			owns_core_province = 2197
-			owns_core_province = 2201
-				# Imerti
-			owns_core_province = 1856
-			owns_core_province = 462
-			owns_core_province = 422
-				# Dagestan
-			owns_core_province = 2208
-			owns_core_province = 2199
-			owns_core_province = 2198
-			owns_core_province = 4306
-			owns_core_province = 425
-				# Kartli-Kakheti
-			owns_core_province = 4301
-			owns_core_province = 2203
-			owns_core_province = 423
-				# Samtske
-			owns_core_province = 2196
-			owns_core_province = 4303
-			owns_core_province = 2204
-				# Armenia
-			owns_core_province = 4302
-			owns_core_province = 419
-			owns_core_province = 420
-			owns_core_province = 2205
-			owns_core_province = 2202
-				# Shirvan
-			owns_core_province = 4340
-			owns_core_province = 424
-			owns_core_province = 421
-			owns_core_province = 4299
-			owns_core_province = 4305
+			caucasia_region = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 	 	effect = {
 			change_tag = CAU # Country TAG
@@ -138,10 +107,15 @@ country_decisions = {
 						NOT = { has_idea_group = CAU_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_rough_lives
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

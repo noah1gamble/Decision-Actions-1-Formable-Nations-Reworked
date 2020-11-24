@@ -22,6 +22,7 @@ country_decisions = {
 				tag = ANG
 				tag = KOJ
 				tag = BSQ
+				tag = CEU
 			}
 			OR = {
 				culture_group = french

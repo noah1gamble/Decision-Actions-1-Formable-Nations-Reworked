@@ -13,13 +13,6 @@ country_decisions = {
 				primary_culture = hungarian
 				primary_culture = czech
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 8
-				}
-			}
 			NOT = {
 				has_country_flag = formed_austro_hungarian_empire_nation_flag
 				exists = AHE
@@ -28,7 +21,15 @@ country_decisions = {
 				tag = HLR
 				tag = TUR
 				tag = EUR
+				tag = CZE
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {

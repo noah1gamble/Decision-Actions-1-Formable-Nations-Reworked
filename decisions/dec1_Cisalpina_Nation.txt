@@ -23,13 +23,6 @@ country_decisions = {
 				tag = ADR
 			}
 			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 6
-				}
-			}
-			OR = {
 				primary_culture = ligurian
 				primary_culture = lombard
 				primary_culture = maltese
@@ -37,6 +30,13 @@ country_decisions = {
 				primary_culture = romagnan
 				primary_culture = venetian
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -83,10 +83,7 @@ country_decisions = {
 				owns_core_province = 4740
 				owns_core_province = 4728
 				owns_core_province = 2979
-			}
-			custom_trigger_tooltip = { # Cisalpina CANNOT form other italian nations
-				tooltip = form_cisalpina_tt_5
-			}			
+			}		
 		}
 	 	effect = {
 			change_tag = CIS # Country TAG
@@ -146,10 +143,10 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 3
+								government_rank = 2
 								}
 							}
-						set_government_rank = 3
+						set_government_rank = 2
 					}
 					# Government Type Change
 					if = {
@@ -168,10 +165,15 @@ country_decisions = {
 						NOT = { has_idea_group = CIS_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_italian_republic
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

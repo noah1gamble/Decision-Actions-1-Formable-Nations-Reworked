@@ -7,10 +7,11 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
-				has_country_flag = formed_china_nation_flag
+				has_country_flag = china_control_over_taiwan_completed
 				exists = CHN
 				tag = CHN
 				tag = PAP
+				tag = PRC
 			}
 			OR = {
 				primary_culture = cantonese
@@ -55,7 +56,20 @@ country_decisions = {
 			adm_tech = 10
 			NOT = { exists = CHN }
 			is_subject = no
-			is_at_war = no
+			is_at_war = no	
+			if = { # DLC check for Mandate of Heaven
+				limit = {
+					has_dlc = "Mandate of Heaven"
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				#NOTE: could be reworked better non-DLC. 1000 dev is too high
+				is_emperor_of_china = yes
+				else = {
+					government_rank = 3 # need 1000 dev basically or event-empire rank somehow
+				}
+			}					
 			north_china_region = {
 				type = all
 				owned_by = ROOT
@@ -75,20 +89,7 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			owns_core_province = 2133 # Dege
-			if = { # DLC check for Mandate of Heaven
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					any_country = {
-						is_emperor_of_china = yes
-					}
-				}
-				# DEV NOTE: this could be reworked better for people without DLC. 1000 dev is a steep req
-				is_emperor_of_china = yes
-				else = {
-					government_rank = 3
-				}
-			}			
+			owns_core_province = 2133 # Dege		
 		}
 	 	effect = {
 			change_tag = CHN # Country TAG
@@ -98,7 +99,32 @@ country_decisions = {
 			custom_tooltip = form_china_tt_4 # Claims
 			custom_tooltip = form_china_tt_5 # Claims
 			custom_tooltip = form_china_tt_6 # Claims
+			custom_tooltip = dec1_abolish_the_empire_of_china_mandate #  Abolish the Mandate of Heaven + Prestige for the previous Emperor of China country
 			custom_tooltip = dec1_decisions_blank	
+			hidden_effect = { # Hidden Effects to fix bad tooltips	
+				# Abolished the Mandate of Heaven
+				dismantle_empire_of_china = yes		
+				# Mandate Abolishment reward (TODO: REWORK)
+				add_prestige = 100
+				# Government Rank change				
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 3
+							}
+						}
+					set_government_rank = 3
+				}
+				# Government Type Change
+				if = {
+					limit = {
+						NOT = {
+							government = republic
+							}
+						}
+					change_government = republic
+				}																		
+			}			
 			CHN = { # Capital change and bonuses				
 				set_capital = 1816 # Beijing
 				1816 = {
@@ -113,10 +139,10 @@ country_decisions = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
 				# Reform Change
-				add_government_reform = autocracy_reform
+				add_government_reform = oligarchy_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
 				if = {
@@ -124,27 +150,6 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					# New Missions		
- 								
-					# Government Rank change				
-					if = {
-						limit = {
-							NOT = {
-								government_rank = 3
-								}
-							}
-						set_government_rank = 3
-					}
-					# Government Type Change
-					if = {
-						limit = {
-							NOT = {
-								government = monarchy
-								}
-							}
-						change_government = monarchy
-					}																		
 				}
 				# Custom Ideas check and change		
 				if = {
@@ -153,15 +158,22 @@ country_decisions = {
 						NOT = { has_idea_group = CHN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_middle_kingdom
+				}				
+				# Abolished the Mandate of Heaven debuff
+				add_country_modifier = {
+					name = dec1_abolished_the_mandate_of_heaven
+				}					
 			}					
 		}
 		ai_will_do = {

@@ -8,7 +8,12 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = GEO }
+			NOT = { 
+				tag = GEO
+				tag = CAU 
+				tag = HLR
+				tag = PAP
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -16,8 +21,6 @@ country_decisions = {
 					num_of_cities = 3 #Carnage
 				}
 			}
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
 			primary_culture = georgian
 			is_colonial_nation = no
 			OR = {

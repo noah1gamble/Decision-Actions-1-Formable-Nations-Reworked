@@ -565,11 +565,12 @@ BTC_ideas = {
 # Benelux
 BNL_ideas = { 
 	start = {
-
+		reinforce_speed = 0.10
+		development_cost = -0.1
 	}
 
 	bonus = {
-
+		technology_cost = -0.2
 	}
 
 	trigger = {
@@ -577,36 +578,45 @@ BNL_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	BNL_1 = {
+	BNL_enact_emergency_measures = {
+		prestige_decay = -0.05
 	}
 
-	BNL_2 = {
+	BNL_anti_piracy_warfare = {
+		cannons_for_hunting_pirates_in_fleet = 2
 	}
 
-	BNL_3 = {
+	BNL_politico_economic_union = {
+		diplomatic_reputation = 1
 	}
 
-	BNL_4 = {
+	BNL_alliances_of_europe = {
+		diplomats = 2
 	}
 
-	BNL_5 = {
+	BNL_german_merceneries = {
+		mercenary_discipline = 0.03
+		mercenary_manpower= 0.10
 	}
 
-	BNL_6 = {
+	BNL_install_new_generals = {
+		general_cost = -0.10
 	}
 
-	BNL_7 = {
+	BNL_purge_the_lower_classes = {
+		global_tax_modifier = 0.10
 	}
 }
 
 # Bosnia-Serbia
 BSK_ideas = { 
 	start = {
-
+		merc_maintenance_modifier = -0.10
+		fort_maintenance_modifier = -0.05
 	}
 
 	bonus = {
-
+		production_efficiency = 0.0
 	}
 
 	trigger = {
@@ -614,25 +624,34 @@ BSK_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	BSK_1 = {
+	BSK_bosnian_spirit = {
+		num_accepted_cultures = 2
 	}
 
-	BSK_2 = {
+	BSK_new_policy_reforms = {
+		rival_change_cost = -0.4 
+		global_tax_modifier = 0.02
 	}
 
-	BSK_3 = {
+	BSK_prestigious_leadership = {
+		stability_cost_modifier = -0.2
 	}
 
-	BSK_4 = {
+	BSK_turkish_immigrants = {
+		autonomy_change_time = -0.10
 	}
 
-	BSK_5 = {
+	BSK_embrace_new_institutions = {
+		embracement_cost = -0.1
 	}
 
-	BSK_6 = {
+	BSK_naval_preparations = {
+		global_sailors_modifier = 0.1
 	}
 
-	BSK_7 = {
+	BSK_cavalry_improvments = {
+		cavalry_cost = -0.05
+		cavalry_shock = 1
 	}
 }
 
@@ -686,11 +705,12 @@ BSQ_ideas = {
 # Brandenburg-Prussia
 BRP_ideas = { 
 	start = {
-
+		legitimacy = 1
+		culture_conversion_cost = -0.10
 	}
 
 	bonus = {
-
+		global_unrest = -2
 	}
 
 	trigger = {
@@ -698,36 +718,45 @@ BRP_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	BRP_1 = {
+	BRP_brandenburg_electorate = {
+		imperial_mercenary_cost = -0.1
+		legitimate_subject_elector = 20
 	}
 
-	BRP_2 = {
+	BRP_protestant_beliefs = {
+		global_missionary_strength = 0.03
 	}
 
-	BRP_3 = {
+	BRP_national_research = {
+		institution_growth = 1
 	}
 
-	BRP_4 = {
+	BRP_reduced_noble_control = {
+		autonomy_change_time = -0.20
 	}
 
-	BRP_5 = {
+	BRP_german_lords = {
+		warscore_cost_vs_other_religion = -0.15
 	}
 
-	BRP_6 = {
+	BRP_control_of_the_northern_trade = {
+		merchants = 1
 	}
 
-	BRP_7 = {
+	BRP_improved_forts = {
+		defensiveness = 0.10
 	}
 }
 
 # Bremen-Verden
 BVE_ideas = { 
 	start = {
-
+		discipline = 0.01
+		ae_impact = -0.1
 	}
 
 	bonus = {
-
+		idea_cost = -0.2
 	}
 
 	trigger = {
@@ -735,25 +764,80 @@ BVE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	BVE_1 = {
+	BVE_the_bremen_verden_union = {
+		all_power_cost = -0.1
 	}
 
-	BVE_2 = {
+	BVE_absolute_monarchy = {
+		legitimacy = 1
 	}
 
-	BVE_3 = {
+	BVE_germanic_contracts = {
+		imperial_mercenary_cost = -0.3
 	}
 
-	BVE_4 = {
+	BVE_superior_german_spies = {
+		discovered_relations_impact = -0.2
 	}
 
-	BVE_5 = {
+	BVE_lower_saxons = {
+		culture_conversion_cost = -0.20
 	}
 
-	BVE_6 = {
+	BVE_honest_nobles = {
+		global_unrest = -1 
 	}
 
-	BVE_7 = {
+	BVE_religious_purity = {
+		religious_unity = 0.5
+	}
+}
+
+# Burma
+BRM_ideas = { 
+	start = {
+		warscore_cost_vs_other_religion = -0.10
+		merchants = 1
+	}
+
+	bonus = {
+		siege_ability = 0.10
+	}
+
+	trigger = {
+		tag = BRM
+	}
+	free = yes	# will be added at load.
+
+	BRM_legacy_of_bayinnaung = {
+		army_tradition_decay = -0.01
+	}
+
+	BRM_armada_of_burma = {
+		global_sailors_modifier = 0.1
+	}
+
+	BRM_warfare_culture = {
+		ae_impact = -0.1
+		claim_duration = 0.1
+	}
+
+	BRM_righteous_leadership = {
+		prestige_per_development_from_conversion = 0.5
+		relation_with_heretics = -20
+	}
+
+	BRM_control_of_the_silk_road = {
+		trade_efficiency = 0.1
+	}
+
+	BRM_anti_chinese_policy = {
+		rival_border_fort_maintenance = -0.20
+	}
+
+	BRM_professional_army = {
+		land_attrition = -0.05
+		reinforce_speed = 0.05
 	}
 }
 
@@ -805,11 +889,12 @@ CTG_ideas = {
 # Caucasia
 CAU_ideas = { 
 	start = {
-
+		army_tradition_from_battle = 0.05
+		prestige_from_land = 0.10
 	}
 
 	bonus = {
-
+		embracement_cost = -0.1
 	}
 
 	trigger = {
@@ -817,36 +902,46 @@ CAU_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	CAU_proper_policy_reforms = {
+		all_power_cost = -0.03
+		yearly_patriarch_authority = 0.1
 	}
 
-	aaaa = {
+	CAU_raiding_armies = {
+		loot_amount = 0.10
 	}
 
-	aaaa = {
+	CAU_caucasus_cultures_united = {
+		num_accepted_cultures = 1 
+		culture_conversion_cost = -0.10
 	}
 
-	aaaa = {
+	CAU_tax_farms = {
+		global_tax_modifier = 0.07
 	}
 
-	aaaa = {
+	CAU_harsh_general_policies = {
+		harsh_treatment_cost = -0.2
 	}
 
-	aaaa = {
+	CAU_dynastic_marriages = {
+		heir_chance = 0.25
 	}
 
-	aaaa = {
+	CAU_military_police_reform = {
+		global_unrest = -2
 	}
 }
 
 # Celtic Union
 CEU_ideas = { 
 	start = {
-
+		relation_with_heretics = -100
+		global_tax_modifier = 0.05
 	}
 
 	bonus = {
-
+		ae_impact = -0.2
 	}
 
 	trigger = {
@@ -854,36 +949,47 @@ CEU_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	CEU_the_union_stays_strong = {
+		diplomatic_reputation = 1
 	}
 
-	aaaa = {
+	CEU_warborn_celts = {
+		discipline = 0.02
+		cav_to_inf_ratio = 0.05
 	}
 
-	aaaa = {
+	CEU_diplomatic_unity = {
+		diplomats = 2
 	}
 
-	aaaa = {
+	CEU_north_sea_empire_successor = {
+		legitimacy = 1
+		prestige_decay = -0.01
 	}
 
-	aaaa = {
+	CEU_legacy_of_vercingetorix = {
+		prestige = 0.5
 	}
 
-	aaaa = {
+	CEU_natural_born_warriors = {
+		land_morale = 0.3
 	}
 
-	aaaa = {
+	CEU_effective_tax_policy = {
+		development_cost = -0.05
+		administrative_efficiency = 0.1
 	}
 }
 
 # China
 CHN_ideas = { 
 	start = {
-
+		global_tax_modifier = 0.03
+		leader_cost = -0.10
 	}
 
 	bonus = {
-
+		may_recruit_female_generals = yes
 	}
 
 	trigger = {
@@ -891,36 +997,46 @@ CHN_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	CHN_jurchen_control = {
+		core_creation = -0.08
 	}
 
-	aaaa = {
+	CHN_raised_local_authority = {
+		global_autonomy = -0.05
 	}
 
-	aaaa = {
+	CHN_religious_tolerance_reforms = {
+		missionaries = 1
 	}
 
-	aaaa = {
+	CHN_chinese_overseas_possessions = {
+		global_colonial_growth = 10
+		native_uprising_chance = -0.10
 	}
 
-	aaaa = {
+	CHN_the_republican_tradition = {
+		liberty_desire_from_subject_development = -0.03
 	}
 
-	aaaa = {
+	CHN_chinaware_trade_policies = {
+		merchants = 1 
 	}
 
-	aaaa = {
+	CHN_the_great_wall_of_china = {
+		defensiveness = 0.03
+		siege_ability = 0.03
 	}
 }
 
 # China PRC
 PRC_ideas = { 
 	start = {
-
+		election_cycle = 12
+		diplomatic_annexation_cost = -0.1
 	}
 
 	bonus = {
-
+		prestige_decay = -0.01
 	}
 
 	trigger = {
@@ -928,25 +1044,36 @@ PRC_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	aaaa = {
+	PRC_proper_election_cycle = {
+		election_cycle = 8
 	}
 
-	aaaa = {
+	PRC_great_generals = {
+		leader_cost = -0.20
 	}
 
-	aaaa = {
+	PRC_the_chinese_state = {
+		state_governing_cost = 0.05
+		governing_capacity_modifier = 0.05
 	}
 
-	aaaa = {
+	PRC_eastern_spy_network = {
+		spy_offence = 0.1
 	}
 
-	aaaa = {
+	PRC_dictatorship_styled_rule = {
+		all_power_cost = -0.1
 	}
 
-	aaaa = {
+	PRC_lockdown_effective = {
+		global_spy_defence = 0.1
+		global_missionary_strength = 0.01
+		 
 	}
 
-	aaaa = {
+	PRC_science_of_the_future = {
+		technology_cost = -0.05
+		idea_cost = -0.05
 	}
 }
 
@@ -994,14 +1121,62 @@ CIS_ideas = {
 	}
 }
 
+# Confederate States
+CSA_ideas = {
+	start = {
+		republican_tradition = 0.3
+		land_forcelimit_modifier = 0.10
+	}
+	bonus = {
+		state_maintenance_modifier = -0.20 # Effective State & Goverment
+	}
+
+	trigger = {
+		tag = AHE
+	}
+	free = yes	# will be added at load.
+
+	CSA_slave_trade = {
+		global_tax_modifier = 0.05
+	}
+
+	CSA_war_with_america = {
+		infantry_power = 0.10
+		army_tradition_decay = -0.01
+	}
+
+	CSA_the_frontier = {
+		development_cost = -0.1
+	}
+	
+	CSA_native_manpower = {
+		global_manpower_modifier = 0.10
+	}
+
+	CSA_true_farms = {
+		administrative_efficiency = 0.2
+	}
+	
+	CSA_american_culture = {
+		same_culture_advisor_cost = -0.7
+		culture_conversion_cost = -0.03
+	}
+	
+	CSA_rising_power = {
+		prestige = 0.2
+		legitimacy = 1
+	}
+}
+
 # Czechoslovakia
 CZE_ideas = { 
 	start = {
-
+		trade_steering = 0.1
+		global_autonomy = -0.05
 	}
 
 	bonus = {
-
+		state_governing_cost = 0.1
 	}
 
 	trigger = {
@@ -1009,25 +1184,32 @@ CZE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	CZE_1 = {
+	CZE_slovakian_trade_systems = {
+		caravan_power = 0.2
 	}
 
-	CZE_2 = {
+	CZE_multi_national_kingdom = {
+		num_accepted_cultures = 3
 	}
 
-	CZE_3 = {
+	CZE_hussite_legacy = {
+		missionaries = 1
 	}
 
-	CZE_4 = {
+	CZE_land_dominance = {
+		land_morale = 0.10
 	}
 
-	CZE_5 = {
+	CZE_czech_legacy = {
+		enemy_core_creation = 0.2
 	}
 
-	CZE_6 = {
+	CZE_improved_fortifications = {
+		defensiveness = 0.10
 	}
 
-	CZE_7 = {
+	CZE_insulting_history = {
+		power_projection_from_insults = 0.2
 	}
 }
 
@@ -1046,25 +1228,25 @@ DCP_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	DCP_1 = {
+	DCP_prussian_homage = {
 	}
 
-	DCP_2 = {
+	DCP_abandonment_of_the_order = {
 	}
 
-	DCP_3 = {
+	DCP_rightful_duke_of_prussia = {
 	}
 
-	DCP_4 = {
+	DCP_legacy_of_duke_albert = {
 	}
 
-	DCP_5 = {
+	DCP_dynastic_failiure = {
 	}
 
-	DCP_6 = {
+	DCP_power_of_the_bishops = {
 	}
 
-	DCP_7 = {
+	DCP_preparation_for_transition_into_brandenburg_prussia = {
 	}
 }
 

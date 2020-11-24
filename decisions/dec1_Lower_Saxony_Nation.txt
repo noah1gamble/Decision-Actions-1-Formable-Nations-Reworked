@@ -17,6 +17,7 @@ country_decisions = {
 				tag = GER
 				tag = EUR
 				tag = WES
+				tag = BRP # Brandenburg-Prussia TODO: some unique changes later
 			}
 			OR = {
 				primary_culture = hannoverian

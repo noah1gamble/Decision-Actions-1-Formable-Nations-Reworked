@@ -116,7 +116,6 @@ country_decisions = {
 			is_subject = no	
 			custom_trigger_tooltip = {
 				tooltip = form_brandenburg_prussia_tt_1
-					# East Prussia
 				owns_core_province = 40
 				owns_core_province = 41
 				owns_core_province = 767
@@ -199,8 +198,7 @@ country_decisions = {
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
 				# Reform Change
-				add_government_reform = autocracy_reform
-				add_government_reform = prussian_monarchy
+				add_government_reform = autocracy_reform # TODO: Custom Reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
 				if = {
@@ -211,7 +209,12 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Claims
-									
+					north_german_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = BRP
+					}									
 					# Government Rank change				
 					if = {
 						limit = {
@@ -238,7 +241,6 @@ country_decisions = {
 						NOT = { has_idea_group = BRP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
 				# Custom Missions check and change
 				country_event = { id = dec1_events.3 }

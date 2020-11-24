@@ -21,6 +21,7 @@ country_decisions = {
 				tag = ADU
 				tag = FIB
 				tag = IBE
+				tag = CTG
 			}
 			OR = {
 				primary_culture = andalucian

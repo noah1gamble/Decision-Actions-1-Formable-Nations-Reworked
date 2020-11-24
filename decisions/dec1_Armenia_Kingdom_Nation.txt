@@ -10,22 +10,23 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-				NOT = {
-					has_country_flag = formed_armenia_kingdom_nation_flag
-					exists = ARM
-					exists = ARR
-					exists = ARK
-					tag = ARM
-					tag = ARR
-					tag = ARK
-					tag = HLR
-					tag = PAP
-				}
-				OR = {
-					ai = no
-					AND = {
-						ai = yes
-						num_of_cities = 6
+			culture_group = caucasian
+			NOT = {
+				has_country_flag = formed_armenia_kingdom_nation_flag
+				exists = ARM
+				exists = ARR
+				exists = ARK
+				tag = ARM
+				tag = ARR
+				tag = ARK
+				tag = HLR
+				tag = PAP
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
 					}
 				}
 			}
