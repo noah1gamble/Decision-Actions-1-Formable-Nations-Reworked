@@ -1216,11 +1216,12 @@ CZE_ideas = {
 # Ducal Prussia
 DCP_ideas = { 
 	start = {
-
+		prestige_from_land = 0.10
+		war_exhaustion = -0.10
 	}
 
 	bonus = {
-
+		land_morale = 0.05
 	}
 
 	trigger = {
@@ -1229,35 +1230,44 @@ DCP_ideas = {
 	free = yes	# will be added at load.
 
 	DCP_prussian_homage = {
+		prestige = 0.5
 	}
 
 	DCP_abandonment_of_the_order = {
+		legitimacy = 1
+		papal_influence = -1.0
 	}
 
 	DCP_rightful_duke_of_prussia = {
+		province_warscore_cost = -0.10
 	}
 
 	DCP_legacy_of_duke_albert = {
+		prestige_decay = -0.01
 	}
 
 	DCP_dynastic_failiure = {
+		diplomatic_reputation = 1
 	}
 
 	DCP_power_of_the_bishops = {
+		warscore_cost_vs_other_religion = -0.20
 	}
 
-	DCP_preparation_for_transition_into_brandenburg_prussia = {
+	DCP_preparation_the_troops = {
+		discipline = 0.05
 	}
 }
 
 # East Prussia
 EPR_ideas = { 
 	start = {
-
+		unjustified_demands = -0.1
+		global_trade_power = 0.1
 	}
 
 	bonus = {
-
+		global_tax_modifier = 0.10
 	}
 
 	trigger = {
@@ -1265,36 +1275,46 @@ EPR_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	EPR_1 = {
+	EPR_our_own_kingdom = {
+		ae_impact = -0.1
 	}
 
-	EPR_2 = {
+	EPR_the_peace_of_thorn = {
+		devotion = 1
 	}
 
-	EPR_3 = {
+	EPR_cultural_hegemon = {
+		num_accepted_cultures = 2
 	}
 
-	EPR_4 = {
+	EPR_dynastic_marriages = {
+		heir_chance = 0.5
+		prestige = 0.1
 	}
 
-	EPR_5 = {
+	EPR_land_warfare = {
+		discipline = 0.01
+		land_morale = 0.01
 	}
 
-	EPR_6 = {
+	EPR_the_national_cause = {
+		movement_speed = 0.05
 	}
 
-	EPR_7 = {
+	EPR_state_armies = {
+		global_manpower_modifier = 0.05
 	}
 }
 
 # Emilia-Romagna
 ERO_ideas = { 
 	start = {
-
+		global_trade_power = 0.1
+		num_accepted_cultures = 1
 	}
 
 	bonus = {
-
+		culture_conversion_cost = -0.25
 	}
 
 	trigger = {
@@ -1302,36 +1322,44 @@ ERO_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	ERO_1 = {
+	ERO_these_united_kingdoms = {
+		prestige_decay = -0.05
 	}
 
-	ERO_2 = {
+	ERO_hired_economic_reformers = {
+		merchants = 1
 	}
 
-	ERO_3 = {
+	ERO_protect_the_commonfolk = {
+		global_unrest = -2
 	}
 
-	ERO_4 = {
+	ERO_religious_authority = {
+		missionaries = 1
 	}
 
-	ERO_5 = {
+	ERO_trade_control = {
+		trade_efficiency = 0.1
 	}
 
-	ERO_6 = {
+	ERO_control_of_the_vassals = {
+		liberty_desire_from_subject_development = -0.20
 	}
 
-	ERO_7 = {
+	ERO_war_in_italy = {
+		cb_on_religious_enemies = yes
 	}
 }
 
 # European Union
 EUR_ideas = { 
 	start = {
-
+		culture_conversion_cost = -0.20
+		land_forcelimit_modifier = 0.20
 	}
 
 	bonus = {
-
+		defensiveness = 0.10
 	}
 
 	trigger = {
@@ -1339,36 +1367,44 @@ EUR_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	EUR_1 = {
+	EUR_european_technologies = {
+		technology_cost = -0.1
 	}
 
-	EUR_2 = {
+	EUR_the_union_fleet = {
+		naval_forcelimit_modifier = 0.1
 	}
 
-	EUR_3 = {
+	EUR_annexation_through_diplomacy = {
+		diplomatic_annexation_cost = -0.2
 	}
 
-	EUR_4 = {
+	EUR_governing_the_union = {
+		governing_capacity_modifier = 0.1
 	}
 
-	EUR_5 = {
+	EUR_unified_states = {
+		state_governing_cost = 0.1
 	}
 
-	EUR_6 = {
+	EUR_europe_military_police = {
+		global_unrest = -2
 	}
 
-	EUR_7 = {
+	EUR_expansionism_policies = {
+		liberty_desire_from_subject_development = -0.30
 	}
 }
 
-# Franco-Iberian Empire
-FIB_ideas = { 
+# Empire of Japan
+JAE_ideas = { 
 	start = {
-
+		governing_capacity_modifier = 0.1
+		diplomatic_reputation = 1
 	}
 
 	bonus = {
-
+		land_forcelimit_modifier = 0.10
 	}
 
 	trigger = {
@@ -1376,36 +1412,96 @@ FIB_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	FIB_1 = {
+	JAE_dissolution_of_the_shogunate = {
+		legitimacy = 1
 	}
 
-	FIB_2 = {
+	JAE_meiji_restoration = {
+		technology_cost = -0.06
+		embracement_cost = -0.06
 	}
 
-	FIB_3 = {
+	JAE_imperial_policy = {
+		all_power_cost = -0.1
 	}
 
-	FIB_4 = {
+	JAE_war_torn_country = {
+		army_tradition_from_battle = 0.05
 	}
 
-	FIB_5 = {
+	JAE_united_armies_of_japan = {
+		global_manpower_modifier = 0.10
+		army_tradition_decay = -0.01
 	}
 
-	FIB_6 = {
+	JAE_protect_isolation_policies = {
+		administrative_efficiency = 0.2
 	}
 
-	FIB_7 = {
+	JAE_the_japanese_navy = {
+		global_ship_cost = -0.1
+	}
+}
+
+# Franco-Iberia
+FIB_ideas = { 
+	start = {
+		army_tradition_decay = -0.01
+		global_tax_modifier = 0.10
+	}
+
+	bonus = {
+		ae_impact = -0.2
+	}
+
+	trigger = {
+		tag = FIB
+	}
+	free = yes	# will be added at load.
+
+	FIB_cultural_unity = {
+		culture_conversion_cost = -0.20
+	}
+
+	FIB_heavy_fleet_of_the_seas = {
+		heavy_ship_cost = -0.05
+		heavy_ship_power = 0.1
+	}
+
+	FIB_european_ramparts = {
+		hostile_attrition = 1
+	}
+
+	FIB_proper_leaders_from_england = {
+		general_cost = -0.10
+		admiral_cost = -0.05
+	}
+
+	FIB_the_economic_union = {
+		diplomatic_reputation = 2
+	}
+
+	FIB_monarch_leadership = {
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
+	}
+
+	FIB_franco_spies = {
+		discovered_relations_impact = -0.2
+		rebel_support_efficiency = 0.1
 	}
 }
 
 # Franconia
 FRC_ideas = { 
 	start = {
-
+		rebel_support_efficiency = 0.35
+		religious_unity = 0.20
 	}
 
 	bonus = {
-
+		missionaries = 1
 	}
 
 	trigger = {
@@ -1413,25 +1509,33 @@ FRC_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	FRC_1 = {
+	FRC_franconia_religious_authority = {
+		global_heretic_missionary_strength = 0.05
 	}
 
-	FRC_2 = {
+	FRC_control_over_cultural_law = {
+		num_accepted_cultures = 1
 	}
 
-	FRC_3 = {
+	FRC_franconian_nobility = {
+		heir_chance = 0.35
 	}
 
-	FRC_4 = {
+	FRC_the_kingdom_of_francs = {
+		prestige = 0.1
+		prestige_decay = -0.01
 	}
 
-	FRC_5 = {
+	FRC_reduce_garrison_taxation = {
+		fort_maintenance_modifier = -0.20
 	}
 
-	FRC_6 = {
+	FRC_reform_the_army = {
+		army_tradition_decay = -0.01
 	}
 
-	FRC_7 = {
+	FRC_merchants_of_germania = {
+		merchants = 2
 	}
 }
 
@@ -1879,44 +1983,40 @@ KOG_ideas = {
 	}
 }
 
-# Kievan Rus
-KRV_ideas = { 
+# Kievan Rus	
+KRV_ideas = {
 	start = {
-
+		years_of_nationalism = -5
+		ae_impact = 0.15
 	}
-
 	bonus = {
-
+		religious_unity = 0.3 # Returning To The Old Gods
 	}
-
 	trigger = {
 		tag = KRV
 	}
 	free = yes	# will be added at load.
-
-	KRV_east_slavic_kingdom = {
+	KRV_reduced_liberty_desire = {
+		reduced_liberty_desire = 10 # Rein In The Tribes
 	}
-
-	KRV_legacy_of_oleg = {
+	KRV_global_missionary_strenght = {
+		global_missionary_strength = 0.05 # Our Northern Crusade
 	}
-
-	KRV_pagan_warriors = {
+	KRV_cavalry_fire = {
+		cavalry_fire = 2 # The Cossacks Ride With Us
 	}
-
-	KRV_ruso_identity = {
+	KRV_heavy_global_tax_reform = {
+		global_tax_modifier = 0.25 # Restablishing Our Trade Hub In Kyiv
 	}
-
-	KRV_reformation_of_the_fleets = {
+	KRV_war_score_cost_vs_other_religion = {
+			warscore_cost_vs_other_religion = -0.35 # Our Time Of Reckoning Has Come
 	}
-
-	KRV_consolidate_the_federation = {
+	KRV_heir_chance = {
+		heir_chance = 0.5 # Bring Forth The Women As Vladimir Once Did
 	}
-
-	KRV_centralized_reforms = {
+	KRV_defensiveness = {
+		defensiveness = 0.10 # The Forest, It Speak Slavonic
 	}
-
-	KRV_the_rus = {
-	}	
 }
 
 # Lombardy-Venetia

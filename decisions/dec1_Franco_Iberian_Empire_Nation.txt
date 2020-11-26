@@ -36,7 +36,6 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				owns_core_province = 219
 				region = france_region
 				region = iberia_region
 			}
@@ -50,7 +49,6 @@ country_decisions = {
 			NOT = { exists = FIB }
 			is_subject = no
 			is_at_war = no
-				# Conquest
 			france_region = {
 				type = all
 				owned_by = ROOT
@@ -61,8 +59,6 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			owns_core_province = 219
-				# Diplomacy
-				# Union	
 		}
 	 	effect = {
 			change_tag = FIB # Country TAG
@@ -124,10 +120,15 @@ country_decisions = {
 						NOT = { has_idea_group = FIB_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_castilian_franco_cultural_unity
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
