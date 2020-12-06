@@ -136,6 +136,8 @@
 
  form_german_empire_nation_tt_1: "Owns all core provinces of the §YGerman Empire§!"
  form_german_empire_nation_tt_2: "Country obtains §YGerman Empire§! missions." 
+ form_german_empire_nation_tt_3: "Country gains a permanent claim on §YNorth German§! region."
+ form_german_empire_nation_tt_4: "Country gains a permanent claim on §YSouth German§! region."
 
  form_cisalpina_tt_1: "Owns core §YCisalpina§! provinces"
  form_cisalpina_tt_2: "Country obtains §YCisalpina§! missions."  
@@ -372,6 +374,8 @@
  form_balkan_league_tt_2: "Country obtains §YBalkan League§! missions."
 
  form_confederate_states_tt_2: "Country obtains §YConfederate States§! missions."
+
+ form_magna_frisia_tt_2: "Country obtains §YFrieslande§! missions."
 
  ############################
  # COLONIAL NATION TOOLTIPS #

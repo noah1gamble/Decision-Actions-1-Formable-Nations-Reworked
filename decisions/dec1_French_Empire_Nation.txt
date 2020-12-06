@@ -1,7 +1,7 @@
 country_decisions = {
 
 	###################################################################
-	# French First Empire (French Empire; Napoleon's Empire & Dynasty #
+	# French First Empire (French Empire- Napoleon's Empire & Dynasty #
 	###################################################################
 
 	french_empire_nation = {

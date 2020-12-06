@@ -19,6 +19,7 @@ country_decisions = {
 				tag = KOJ
 				tag = BSQ
 				tag = CEU
+				tag = FRE
 			}
 			OR = {
 				culture_group = iberian

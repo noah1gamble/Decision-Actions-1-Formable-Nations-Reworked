@@ -616,7 +616,7 @@ BSK_ideas = {
 	}
 
 	bonus = {
-		production_efficiency = 0.0
+		production_efficiency = 0.05
 	}
 
 	trigger = {
@@ -628,13 +628,13 @@ BSK_ideas = {
 		num_accepted_cultures = 2
 	}
 
-	BSK_new_policy_reforms = {
-		rival_change_cost = -0.4 
-		global_tax_modifier = 0.02
+	BSK_cavalry_improvments = {
+		cavalry_cost = -0.05
+		cavalry_shock = 1
 	}
 
 	BSK_prestigious_leadership = {
-		stability_cost_modifier = -0.2
+		stability_cost_modifier = -0.1
 	}
 
 	BSK_turkish_immigrants = {
@@ -649,9 +649,9 @@ BSK_ideas = {
 		global_sailors_modifier = 0.1
 	}
 
-	BSK_cavalry_improvments = {
-		cavalry_cost = -0.05
-		cavalry_shock = 1
+	BSK_new_policy_reforms = {
+		rival_change_cost = -0.4 
+		global_tax_modifier = 0.01
 	}
 }
 
@@ -1542,11 +1542,12 @@ FRC_ideas = {
 # French Empire
 FRE_ideas = { 
 	start = {
-
+		siege_ability = 0.10
+		ae_impact = -0.1
 	}
 
 	bonus = {
-
+		unjustified_demands = -0.2
 	}
 
 	trigger = {
@@ -1554,36 +1555,47 @@ FRE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	FRE_1 = {
+	FRE_the_first_french_empire = {
+		diplomatic_annexation_cost = -0.1 
 	}
 
-	FRE_2 = {
+	FRE_napoleonic_leadership = {
+		rival_change_cost = -0.1
+		general_cost = -0.10
 	}
 
-	FRE_3 = {
+	FRE_swiss_mercenaries = {
+		mercenary_manpower= 0.10
 	}
 
-	FRE_4 = {
+	FRE_client_control = {
+		diplomatic_reputation = 2 
 	}
 
-	FRE_5 = {
+	FRE_ambitious_conquest = {
+		province_warscore_cost = -0.1
 	}
 
-	FRE_6 = {
+	FRE_global_power_at_land = {
+		infantry_cost = -0.10
+		infantry_fire = 1
+		leader_land_fire = 1
 	}
 
-	FRE_7 = {
+	FRE_conscription_law_reform = {
+		global_manpower_modifier = 0.20
 	}
 }
 
 # Frieslande
 FRL_ideas = { 
 	start = {
-
+		state_governing_cost = 0.1
+		global_tax_modifier = 0.03
 	}
 
 	bonus = {
-
+		diplomatic_annexation_cost = -0.2
 	}
 
 	trigger = {
@@ -1591,36 +1603,44 @@ FRL_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	FRL_1 = {
+	FRL_magna_frisia = {
+		diplomatic_upkeep = 1
 	}
 
-	FRL_2 = {
+	FRL_frisian_feudal_laws = {
+ 		all_power_cost = -0.1
 	}
 
-	FRL_3 = {
+	FRL_the_trade_kingdom = {
+		trade_company_governing_cost = 0.1
 	}
 
-	FRL_4 = {
+	FRL_etheling_system = {
+		prestige_decay = -0.01
 	}
 
-	FRL_5 = {
+	FRL_frisian_frankish_wars = {
+		ae_impact = -0.1
 	}
 
-	FRL_6 = {
+	FRL_successive_dynasty = {
+		diplomatic_reputation = 1
 	}
 
-	FRL_7 = {
+	FRL_rampart_defenses = {
+		land_attrition = -0.10
 	}
 }
 
 # German Empire
 GEP_ideas = { 
 	start = {
-
+		province_warscore_cost = -0.1
+		war_exhaustion = -0.10
 	}
 
 	bonus = {
-
+		land_morale = 0.05
 	}
 
 	trigger = {
@@ -1628,25 +1648,33 @@ GEP_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	GEP_1 = {
+	GEP_kaiser_of_germany = {
+		prestige = 0.3
+		prestige_decay = -0.01
 	}
 
-	GEP_2 = {
+	GEP_diplomatic_ties = {
+		diplomatic_upkeep = 1	
 	}
 
-	GEP_3 = {
+	GEP_economic_growth = {
+		production_efficiency = 0.03
 	}
 
-	GEP_4 = {
+	GEP_unification_through_conquest = {
+		unjustified_demands = -0.2
 	}
 
-	GEP_5 = {
+	GEP_the_german_colonial_empire = {
+		colonists = 1
 	}
 
-	GEP_6 = {
+	GEP_integrate_non_germans = {
+		min_autonomy = 10
 	}
 
-	GEP_7 = {
+	GEP_provoke_the_nobility = {
+		global_tax_modifier = 0.10
 	}
 }
 

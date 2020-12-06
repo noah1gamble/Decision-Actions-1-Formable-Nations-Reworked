@@ -20,6 +20,7 @@ country_decisions = {
 				tag = GBR # No Great-Britain - Too Strong!
 				tag = UKI # No United Kingdom - Too Strong!
 				tag = BNL
+				tag = FRL
 			}	
 			OR = {
 				primary_culture = english				

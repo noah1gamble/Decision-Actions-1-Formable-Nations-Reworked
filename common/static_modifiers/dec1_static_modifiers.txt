@@ -278,7 +278,7 @@ dec1_abolished_the_mandate_of_heaven = {
 
 	dec1_frisian_legacy = {
 		legitimacy = 1
-		power_projection_from_insults = 0.1
+		power_projection_from_insults = 1
 	}
 
 		# German Empire

@@ -15,6 +15,7 @@ country_decisions = {
 				tag = BNL
 				tag = BEL
 				tag = EUR
+				tag = FRL
 			}		
 			OR = {
 				primary_culture = dutch

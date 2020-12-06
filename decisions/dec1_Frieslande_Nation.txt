@@ -6,9 +6,10 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			primary_culture = dutch
 			NOT = { 
 				has_country_flag = formed_magna_frisia_nation_flag
+				exists = FRL
+				tag = FRL
 				tag = PAP 
 				tag = RHE
 				tag = NED
@@ -16,6 +17,10 @@ country_decisions = {
 				tag = BEL
 				tag = EUR
 				tag = BNL
+			}
+			OR = {
+				primary_culture = dutch
+				primary_culture = frisian
 			}
 			OR = {
 				ai = no

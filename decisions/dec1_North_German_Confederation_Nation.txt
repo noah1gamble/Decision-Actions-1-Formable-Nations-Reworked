@@ -16,6 +16,7 @@ country_decisions = {
 				tag = HLR
 				tag = EUR
 				tag = BTC
+				tag = GEP
 			}			
 			OR = {
 				primary_culture = hannoverian

@@ -24,6 +24,7 @@ country_decisions = {
 				tag = BNL
 				tag = BRP # Brandenburg-Prussia TODO: some unique changes later
 				tag = BVE
+				tag = FRL
 			}
 			OR = {
 				ai = no
@@ -173,23 +174,13 @@ country_decisions = {
 				lower_bavaria_area = {
 					type = all
 					owned_by = ROOT
-				}
-				upper_swabia_area = {
-					type = all
-					owned_by = ROOT
-				}
-				owns_core_province = 1763
-				owns_core_province = 1931
-				owns_core_province = 188
-				owns_core_province = 189
-				owns_core_province = 2955
-				owns_core_province = 65
-			}
 		}
 		effect = {
 			change_tag = GEP # Country TAG
 			set_country_flag = formed_german_empire_nation_flag # Country Formation Flag
 			custom_tooltip = form_german_empire_nation_tt_2 # New Missions
+			custom_tooltip = form_german_empire_nation_tt_3 # Claims
+			custom_tooltip = form_german_empire_nation_tt_4 # Claims
 			custom_tooltip = dec1_decisions_blank
 			GEP = { # Capital change and bonuses				
 				set_capital = 50 # Berlin
@@ -218,6 +209,18 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
+					north_german_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = GEP
+					}
+					south_german_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = GEP
+					}					
 					# Government Rank change				
 					if = {
 						limit = {
@@ -244,10 +247,15 @@ country_decisions = {
 						NOT = { has_idea_group = GEP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_german_union
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
