@@ -21,6 +21,7 @@ country_decisions = {
 				tag = HLR
 				tag = EUR
 				tag = PON
+				tag = ISI
 			}					
 			OR = {
 				ai = no

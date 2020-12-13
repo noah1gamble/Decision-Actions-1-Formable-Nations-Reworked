@@ -1,5 +1,8 @@
 country_decisions = {
 
+	# TODO: change name to Iberian Union, and add a decision allowing players to rename
+	# themselves to the Iberian Empire, and also reducing authority of the Portugese Nobility
+
 	iberian_empire_nation = {
 		major = yes
 		potential = {

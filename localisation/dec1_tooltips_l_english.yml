@@ -185,6 +185,7 @@
 
  form_italian_empire_tt_1: "Owns all cores of the §YItalian Empire§!"
  form_italian_empire_tt_2: "Country obtains §YItalian Empire§! missions."  
+ form_italian_empire_tt_3: "Country gains a permanent claim on §YItalian Empire§! historical claims."
 
  form_italy_tt_1: "Country obtains §YItaly§! missions."
  form_italy_tt_2: "Country gains a permanent claim on §YItaly§! region."
@@ -376,6 +377,13 @@
  form_confederate_states_tt_2: "Country obtains §YConfederate States§! missions."
 
  form_magna_frisia_tt_2: "Country obtains §YFrieslande§! missions."
+
+ form_islamic_state_tt_2: "Country obtains §YIslamic State§! missions."
+ form_islamic_state_tt_3: "Country gains a permanent claim on §YMashriq§! region."
+ form_islamic_state_tt_4: "Country gains a permanent claim on §YDulkadir§! area."
+ form_islamic_state_tt_5: "Country gains a permanent claim on §YNorth Kurdistan§! area."
+
+ form_hanseatic_league_tt_2: "Country obtains §YHanseatic League§! missions."
 
  ############################
  # COLONIAL NATION TOOLTIPS #

@@ -1,14 +1,19 @@
 country_decisions = {
 
-	hanse_nation = {
+	# TODO: split simple formation and complicated formation between government types
+	# (Republics can see the simple formation, Monarchies cannot. 
+	# Monarchies see complicated formation but not simple formation.)
+
+	hanseatic_league_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no			
 			NOT = { 
-				has_country_flag = formed_hanse_nation_flag
+				has_country_flag = formed_hanseatic_league_flag
 				exists = HNS
+				tag = HNS
 				tag = PAP
 				tag = GER
 				tag = PRU
@@ -19,6 +24,9 @@ country_decisions = {
 			OR = {
 				primary_culture = pommeranian
 				primary_culture = hannoverian
+				primary_culture = lower_saxon
+				primary_culture = hessian
+				primary_culture = frisian
 			}
 			OR = {
 				ai = no
@@ -34,6 +42,16 @@ country_decisions = {
 				province_id = 1874 # Bremen
 				province_id = 45 # Lübeck
 				province_id = 46 # Rostok
+				area = weser_area
+				area = lower_saxony_area
+				area = mecklenburg_area
+				area = vorpommern_area
+				area = hinter_pommern_area
+				area = west_prussia_area
+				area = east_prussia_area
+				area = curonia_area
+				area = estonia_ingria_area
+				area = livonia_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -46,14 +64,17 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			OR = { 
-				AND = { # Simple formation of Hansa
+				AND = { # Simple formation of Hansa (Must be a republic)
+					government = republic
 					owns_core_province = 44 # Hamburg
 					owns_core_province = 1874 # Bremen
 					owns_core_province = 45 # Lübeck
 					owns_core_province = 46 # Rostok
 				}
-				AND = { # Coastal area control formation of Hansa
-					#
+				AND = { # Coastal area control formation of Hansa (NOT a republic)
+					NOT = {
+						government = republic
+					}
 					weser_area = {
 						type = all
 						owned_by = ROOT
@@ -74,7 +95,7 @@ country_decisions = {
 						type = all
 						owned_by = ROOT
 					}
-					#
+					# Eastern
 					west_prussia_area = {
 						type = all
 						owned_by = ROOT
@@ -99,7 +120,79 @@ country_decisions = {
 			}
 		}
 	 	effect = {
-			
+			change_tag = HNS # Country TAG
+			set_country_flag = formed_hanseatic_league_flag # Country Formation Flag
+			custom_tooltip = form_hanseatic_league_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank				
+			HNS = { # Capital change and bonuses
+				set_capital = 44 # Hamburg
+				44 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = HNS_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_hansa
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}			
 		}
 		ai_will_do = {
 			factor = 1

@@ -1644,7 +1644,7 @@ GEP_ideas = {
 	}
 
 	trigger = {
-		tag = GKR
+		tag = GEP
 	}
 	free = yes	# will be added at load.
 
@@ -1670,7 +1670,7 @@ GEP_ideas = {
 	}
 
 	GEP_integrate_non_germans = {
-		min_autonomy = 10
+		min_autonomy = -10
 	}
 
 	GEP_provoke_the_nobility = {
@@ -1681,11 +1681,13 @@ GEP_ideas = {
 # Goguryeo
 GKR_ideas = { 
 	start = {
-
+		heir_chance = 0.3
+		discipline = 0.01
 	}
 
 	bonus = {
-
+		infantry_cost = -0.05
+		cavalry_cost = -0.05
 	}
 
 	trigger = {
@@ -1694,35 +1696,44 @@ GKR_ideas = {
 	free = yes	# will be added at load.
 
 	GKR_united_korean_kingdom = {
+		army_tradition_decay = -0.02
 	}
 
-	GKR_2 = {
+	GKR_east_asian_power = {
+		diplomatic_reputation = 1
 	}
 
-	GKR_3 = {
+	GKR_holy_king_of_the_east = {
+		ae_impact = -0.1
 	}
 
-	GKR_4 = {
+	GKR_large_populace = {
+		manpower_recovery_speed = 0.10
 	}
 
-	GKR_5 = {
+	GKR_dongmyeong_of_goguryeo = {
+		legitimacy = 1
 	}
 
-	GKR_6 = {
+	GKR_religious_tolerance = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1 
 	}
 
-	GKR_7 = {
+	GKR_challange_the_chinese_emperors = {
+		land_morale = 0.05
 	}
 }
 
-# Hesse-Nassau
+# Hanseatic League
 HEN_ideas = { 
 	start = {
-
+		global_trade_power = 0.1
+		global_unrest = -1
 	}
 
 	bonus = {
-
+		culture_conversion_cost = -0.10
 	}
 
 	trigger = {
@@ -1730,36 +1741,89 @@ HEN_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	HEN_1 = {
+	HEN_austro_prussian_war_claimant = {
+		siege_ability = 0.10
 	}
 
-	HEN_2 = {
+	HEN_oberprasident = {
+		legitimacy = 1
 	}
 
-	HEN_3 = {
+	HEN_origin_of_the_dutch_royal_house = {
+		ae_impact = -0.05
 	}
 
-	HEN_4 = {
+	HEN_provinces_of_prussia = {
+		enemy_core_creation = 0.2
 	}
 
-	HEN_5 = {
+	HEN_state_control = {
+		trade_efficiency = 0.1
 	}
 
-	HEN_6 = {
+	HEN_trade_posts = {
+		merchants = 1 	
 	}
 
-	HEN_7 = {
+	HEN_vote_of_waldeck = {
+		vassal_forcelimit_bonus = 0.2
+	}
+}
+
+# Hesse-Nassau
+HEN_ideas = { 
+	start = {
+		global_trade_power = 0.1
+		global_unrest = -1
+	}
+
+	bonus = {
+		culture_conversion_cost = -0.10
+	}
+
+	trigger = {
+		tag = HEN
+	}
+	free = yes	# will be added at load.
+
+	HEN_austro_prussian_war_claimant = {
+		siege_ability = 0.10
+	}
+
+	HEN_oberprasident = {
+		legitimacy = 1
+	}
+
+	HEN_origin_of_the_dutch_royal_house = {
+		ae_impact = -0.05
+	}
+
+	HEN_provinces_of_prussia = {
+		enemy_core_creation = 0.2
+	}
+
+	HEN_state_control = {
+		trade_efficiency = 0.1
+	}
+
+	HEN_trade_posts = {
+		merchants = 1 	
+	}
+
+	HEN_vote_of_waldeck = {
+		vassal_forcelimit_bonus = 0.2
 	}
 }
 
 # Himalayan Empire
 HIM_ideas = { 
 	start = {
-
+		cavalry_cost = -0.10
+		cavalry_shock = 1
 	}
 
 	bonus = {
-
+		ae_impact = -0.1
 	}
 
 	trigger = {
@@ -1767,36 +1831,44 @@ HIM_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	HIM_1 = {
+	HIM_himalayan_routes = {
+		envoy_travel_time = -0.1
 	}
 
-	HIM_2 = {
+	HIM_empire_of_the_mountains = {
+		core_creation = -0.1
 	}
 
-	HIM_3 = {
+	HIM_administrative_reform = {
+		free_policy = 1
 	}
 
-	HIM_4 = {
+	HIM_improve_roadworks = {
+		build_cost = -0.1
 	}
 
-	HIM_5 = {
+	HIM_emperor_of_the_east = {
+		prestige_decay = -0.01
 	}
 
-	HIM_6 = {
+	HIM_fort_locations = {
+		defensiveness = 0.10 
 	}
 
-	HIM_7 = {
+	HIM_silk_road_merchants = {
+		merchants = 1
 	}
 }
 
 # Iberian Empire
 IBE_ideas = { 
 	start = {
-
+		curia_powers_cost = 0.2
+		unjustified_demands = -0.1
 	}
 
 	bonus = {
-
+		vassal_forcelimit_bonus = 0.2
 	}
 
 	trigger = {
@@ -1804,36 +1876,92 @@ IBE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	IBE_1 = {
+	IBE_victorious_against_the_muslims = {
+		discipline = 0.01
 	}
 
-	IBE_2 = {
+	IBE_the_iberian_armada = {
+		navy_tradition_decay = -0.01 
 	}
 
-	IBE_3 = {
+	IBE_colonial_administration = {
+		vassal_income = 0.3
+		colonist_placement_chance = 0.03
 	}
 
-	IBE_4 = {
+	IBE_european_theatre = {
+		diplomatic_upkeep = 1
 	}
 
-	IBE_5 = {
+	IBE_monarchy_reformation = {
+		all_power_cost = -0.1
 	}
 
-	IBE_6 = {
+	IBE_iberian_empire = {
+		prestige = 0.3
 	}
 
-	IBE_7 = {
+	IBE_secure_dynastic_legacy = {
+		heir_chance = 0.3
+	}
+}
+
+# Islamic State
+ISI_ideas = { 
+	start = {
+		culture_conversion_cost = -0.20
+		rebel_support_efficiency = 0.5
+	}
+
+	bonus = {
+		liberty_desire_from_subject_development = -0.20		
+	}
+
+	trigger = {
+		tag = ISI
+	}
+	free = yes	# will be added at load.
+
+	ISI_abu_bakr_al_baghdadi = {
+		yearly_corruption = -0.1
+	}
+
+	ISI_soldiers_harvest = {
+		reinforce_speed = 0.03
+	}
+
+	ISI_campaign_of_slaughter = {
+		land_morale = 0.15
+		ae_impact = 0.1 # Debuff
+	}
+
+	ISI_desert_warfare = {
+		land_attrition = -0.10
+	}
+
+	ISI_embrace_islamic_law = {
+		global_autonomy = -0.15
+		diplomatic_reputation = -1 # Debuff
+	}
+
+	ISI_propeganda_campaign = {
+		unrest_muslim_provinces = -2
+	}
+
+	ISI_religious_warriors = {
+		warscore_cost_vs_other_religion = -0.10
 	}
 }
 
 # Italian Empire
 ITE_ideas = { 
 	start = {
-
+		merchants = 1
+		prestige_decay = -0.01	
 	}
 
 	bonus = {
-
+		embracement_cost = -0.2
 	}
 
 	trigger = {
@@ -1841,25 +1969,32 @@ ITE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	ITE_1 = {
+	ITE_italian_revolution = {
+		global_trade_power = 0.1
 	}
 
-	ITE_2 = {
+	ITE_unification_of_the_empire = {
+		global_unrest = -2
 	}
 
-	ITE_3 = {
+	ITE_raised_tariff_tax = {
+		global_tariffs = 0.10
 	}
 
-	ITE_4 = {
+	ITE_spread_of_italian_culture = {
+		culture_conversion_cost = -0.20
 	}
 
-	ITE_5 = {
+	ITE_regioni_d_italia = {
+		global_autonomy = -0.05
 	}
 
-	ITE_6 = {
+	ITE_la_leggenda_del_piave = {
+		legitimacy = 1
 	}
 
-	ITE_7 = {
+	ITE_succession_of_italy = {
+		heir_chance = 0.2
 	}
 }
 

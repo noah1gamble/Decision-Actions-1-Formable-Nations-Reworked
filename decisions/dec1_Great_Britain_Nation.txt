@@ -21,6 +21,7 @@ country_decisions = {
 				tag = PAP
 				tag = HLR
 				tag = EUR
+				tag = ANG
 			}
 			OR = {
 				culture_group = british
@@ -436,4 +437,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+
+	# SCOTLAND - ONLY IF THEY ARE ANGEVIN
 }

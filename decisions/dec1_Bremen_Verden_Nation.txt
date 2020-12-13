@@ -17,6 +17,7 @@ country_decisions = {
 				tag = NGC
 				tag = PRU
 				tag = GEP
+				tag = HNS
 			}
 			OR = {
 				primary_culture = hannoverian

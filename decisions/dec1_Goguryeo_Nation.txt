@@ -3,165 +3,168 @@ country_decisions = {
 	goguryeo_nation = {
 		major = yes
 		potential = {
-	  	is_former_colonial_nation = no
-	  is_playing_custom_nation = no
-	  is_colonial_nation = no
-		NOT = {
-			has_country_flag = formed_goguryeo_nation_flag
-			exists = GKR
-			tag = MNG
-			tag = GKR
-			tag = PAP
-		}
-		OR = {
-			primary_culture = korean
-			primary_culture = jurchen
-		}		
-		OR = {
-			ai = no
+			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			AND = {
-				ai = yes
-				num_of_cities = 6
+			is_colonial_nation = no
+			primary_culture = korean
+			NOT = {
+				has_country_flag = formed_goguryeo_nation_flag
+				exists = GKR
+				tag = MNG
+				tag = GKR
+				tag = PAP
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
 			}
 		}
-	}
-	provinces_to_highlight = {
-		OR = {
+		provinces_to_highlight = {
+			OR = {
+					# Greater Korea
+				province_id = 2113
+				province_id = 2112
+				province_id = 4652
+				province_id = 726
+				province_id = 2111
+				province_id = 4201
+				province_id = 2110
+				province_id = 2109
+				province_id = 2187
+				province_id = 4200
+				province_id = 2188
+				province_id = 730
+				province_id = 4661
+				province_id = 4653
+				province_id = 2107
+				province_id = 2108
+				province_id = 4654
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = GKR }
+			is_subject = no
+			is_at_war = no
 				# Greater Korea
-    		province_id = 2113
-			province_id = 2112
-			province_id = 4652
-			province_id = 726
-			province_id = 2111
-			province_id = 4201
-			province_id = 2110
-			province_id = 2109
-			province_id = 2187
-			province_id = 4200
-			province_id = 2188
-			province_id = 730
-			province_id = 4661
-			province_id = 4653
-			province_id = 2107
-			province_id = 2108
-			province_id = 4654
+			owns_core_province = 2113
+			owns_core_province = 2112
+			owns_core_province = 4652
+			owns_core_province = 726
+			owns_core_province = 2111
+			owns_core_province = 4201
+			owns_core_province = 2110
+			owns_core_province = 2109
+			owns_core_province = 2187
+			owns_core_province = 4200
+			owns_core_province = 2188
+			owns_core_province = 730
+			owns_core_province = 4661
+			owns_core_province = 4653
+			owns_core_province = 2107
+			owns_core_province = 2108
+			owns_core_province = 4654
 		}
-		OR = {
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-		}
-	}
-	allow = {
-		adm_tech = 10
-		NOT = { exists = GKR }
-		is_subject = no
-		is_at_war = no
-			# Greater Korea
-		owns_core_province = 2113
-		owns_core_province = 2112
-		owns_core_province = 4652
-		owns_core_province = 726
-		owns_core_province = 2111
-		owns_core_province = 4201
-		owns_core_province = 2110
-		owns_core_province = 2109
-		owns_core_province = 2187
-		owns_core_province = 4200
-		owns_core_province = 2188
-		owns_core_province = 730
-		owns_core_province = 4661
-		owns_core_province = 4653
-		owns_core_province = 2107
-		owns_core_province = 2108
-		owns_core_province = 4654
-	}
- 	effect = {
-		change_tag = GKR # Country TAG
-		set_country_flag = formed_goguryeo_nation_flag # Country Formation Flag
-		custom_tooltip = form_goguryeo_tt_2 # New Missions
-		custom_tooltip = form_goguryeo_tt_3 # Claims
-		custom_tooltip = form_goguryeo_tt_4 # Claims
-		custom_tooltip = dec1_decisions_blank	
-		GKR = { # Capital change and bonuses				
-			set_capital = 4201 # Jianzhou
-			4201 = {
-				rename_capital = "Jolbon"
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
+		effect = {
+			change_tag = GKR # Country TAG
+			set_country_flag = formed_goguryeo_nation_flag # Country Formation Flag
+			custom_tooltip = form_goguryeo_tt_2 # New Missions
+			custom_tooltip = form_goguryeo_tt_3 # Claims
+			custom_tooltip = form_goguryeo_tt_4 # Claims
 			custom_tooltip = dec1_decisions_blank				
-			custom_tooltip = dec1_government_rank_2 # Government Rank Change
-			# Dharma DLC check to prevent ugly tooltip
-			if = {
-				limit = {
-					has_dlc = "Dharma"
+			GKR = { # Capital change and bonuses
+				set_capital = 4201 # Jianzhou
+				4201 = {
+					rename_capital = "Jolbon"
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_government_change_monarchy # Government Type Change
-			}				
-			add_government_reform = autocracy_reform
-			custom_tooltip = dec1_decisions_blank						
-			# Our Place in the Empire Custom Event
-			if = {
-				limit = {
-					is_part_of_hre = yes
-				}
-				country_event = { id = dec1_events.1 }
-			}	
-			hidden_effect = { # Hidden Effects to fix bad tooltips
-				swap_non_generic_missions = yes  # New Missions	
-				# Claims
-				korea_region = {
-					limit = {
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = GKR
-				}
-				manchuria_region = {
-					limit = {
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = GKR
-				}
-				# Government Rank change				
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						NOT = {
-							government_rank = 2
-							}
-						}
-					set_government_rank = 2
-				}
-				# Government Type Change
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
-						NOT = {
-							government = monarchy
-							}
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					korea_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-					change_government = monarchy
-				}																		
-			}
-			# Custom Ideas check and change		
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = GKR_ideas }
+						add_permanent_claim = GKR
+					}
+					manchuria_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = GKR
+					}			
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
 				}
-				country_event = { id = ideagroups.1 }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = GKR_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_korean_kingdom
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
 			}
-			custom_tooltip = dec1_decisions_blank
-			# Increased Centralization
-			add_country_modifier = {
-				name = dec1_increased_centralization
-			}
-		}					
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400			
 	}
-	ai_will_do = {
-		factor = 1
-	}
-	ai_importance = 400
-}
-
 }

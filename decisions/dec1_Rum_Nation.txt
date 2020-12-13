@@ -17,6 +17,7 @@ country_decisions = {
 				tag = RUS
 				tag = PRU
 				tag = ENG
+				tag = ISI
 			}
 		}
 		provinces_to_highlight = {

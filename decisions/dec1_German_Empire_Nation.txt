@@ -25,6 +25,7 @@ country_decisions = {
 				tag = BRP # Brandenburg-Prussia TODO: some unique changes later
 				tag = BVE
 				tag = FRL
+				tag = HNS
 			}
 			OR = {
 				ai = no
@@ -174,6 +175,8 @@ country_decisions = {
 				lower_bavaria_area = {
 					type = all
 					owned_by = ROOT
+				}
+			}
 		}
 		effect = {
 			change_tag = GEP # Country TAG
@@ -268,5 +271,4 @@ country_decisions = {
 		}
 		ai_importance = 400	
 	}
-
 }
