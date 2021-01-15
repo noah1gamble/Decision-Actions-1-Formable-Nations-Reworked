@@ -124,7 +124,7 @@
  frieslande_nation_desc: "The Frisian Kingdom, also known as Magna Frisia, is a modern name for the Frisian realm in the period when it was at its largest (650-734). This empire was ruled by kings and emerged in the mid-7th century and probably ended with the Battle of the Boarn in 734 when the Frisians were defeated by the Frankish Empire."
 
  german_empire_nation_title: "@GEP Proclamation of the German Empire"
- german_empire_nation_desc: "The proclamation of the German Empire, also known as the Deutsche Reichsgründung, took place in January 1871 after the joint victory of the German states in the Franco-Prussian War.\n\nAs a result of the November Treaties of 1870s, the southern German states of Baden, Hesse-Darmstadt, with their territories south of the Main line, Württemberg and Bavaria, joined the Prussian-dominated 'German Confederation' on 1 January 1871. On the same day, the new Constitution of the German Confederation came into force, thereby significantly extending the federal German lands to the newly created German Empire.\n\nThe Day of the founding of the German Empire, January 18, became a day of celebration, marking when the Prussian King William I was proclaimed German Emperor in Versailles."
+ german_empire_nation_desc: "The proclamation of the German Empire, also known as the Deutsche Reichsgründung, took place in January 1871 after the joint victory of the German states in the Franco-Prussian War.\n\nAs a result of the November Treaties of 1870s, the southern German states of Baden, Hesse-Darmstadt, with their territories south of the main line, Württemberg and Bavaria, joined the Prussian-dominated 'German Confederation' on 1 January 1871.\n\nOn the same day, the new Constitution of the German Confederation came into force, thereby significantly extending the federal German lands to the newly created German Empire.\n\nThe Day of the founding of the German Empire, January 18, became a day of celebration, marking when the Prussian King William I was proclaimed German Emperor in Versailles."
 
  georgia_nation_title: "@GEO Unite the Georgians"
  georgia_nation_desc: "Ever since the abdication of Alexander I, Georgia has been divided and devastated by in-fighting.. this has allowed other countries to control the internal politics of the region and oppress our people.\n\nThe time has come to once again unite the Georgian people and reforge the kingdom that was once lost!"
@@ -139,10 +139,10 @@
  hesse_nassau_nation_desc: "The Province of Hesse-Nassau was a province of the Kingdom of Prussia from 1868 to 1918, then a province of the Free State of Prussia until 1944."
 
  tibetan_empire_nation_title: "@TIE The Tibetan Empire"
- tibetan_empire_nation_desc: "The Tibetan Empire was a mountainous country in the Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, Kinnara Kingdom etc." 
+ tibetan_empire_nation_desc: "The Tibetan Empire was a mountainous country in the Himalayas mentioned in the Puranas, the Indian epic Mahabharata doesn't mention a kingdom named Himalaya, but mentions many kingdoms in the Himalaya mountains like the Kuninda Kingdom, Parvata Kingdom, Nepa Kingdom, Kirata Kingdom, Kimpurusha Kingdom, and the Kinnara Kingdom." 
 
  himalayan_empire_nation_title: "@HIM Proclaim the Himalayan Empire"
- himalayan_empire_nation_desc: "The Himalaya kingdom was a mountainous country in the Himalayas mentioned in the Puranas.\n\nHimavat was its ruler and His daughter Parvati, who became a wife of Lord Siva, was a princess from this kingdom. The Indian epic Mahabharata mentions many kingdoms in the Himalaya mountains like the Kuninda, Parvata, Nepa, Kirata, Kimpurusha, and Kinnara."
+ himalayan_empire_nation_desc: "The Himalaya Kingdom was a mountainous country in the Himalayas mentioned in the Puranas.\n\nHimavat was its ruler and his daughter Parvati, who became a wife of Lord Siva, was a princess from this empire."
 
  iberian_empire_nation_title: "@IBE Restore the Iberian Union"
  iberian_empire_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV.\n\nThe union between Portugal and Spain began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
@@ -162,8 +162,8 @@
  jagiellonian_empire_nation_lithuania_title: "@JGE Lithuanian Empire"
  jagiellonian_empire_nation_lithuania_desc: "The Jagiellonian dynasty was a royal dynasty, founded by Jogaila, the Grand Duke of Lithuania. Therefore we shall take the title in the name of Jogaila and found a new Jagiellonian Dynasty under the Lithuianian houses.\n\nThrough this campaign of conquest and integration we shall gain much prestige for the Royal House of Lithuania-Jagiellonia."
 
- arab_kingdom_nation_title: "@KAB The Arabian Sultunate"
- arab_kingdom_nation_desc: "The Sultunate of Arabia is a country encompassing the entirety of the Arabian Peninsula.\n\nIt is bordered by Iraq, Jordan and Egypt to the north, with the Red Sea to its west, the Persian Gulf to its east.\n\nThe political capital is Mecca and the Sunni Islam religious center.\n\nThrough conquest for Allah in his name we shall found a great kingdom!"
+ arab_kingdom_nation_title: "@KAB The Arabian Kingdom"
+ arab_kingdom_nation_desc: "The Kingdom of Arabia is a country encompassing the entirety of the Arabian Peninsula.\n\nIt is bordered by Iraq, Jordan and Egypt to the north, with the Red Sea to its west, the Persian Gulf to its east.\n\nThe political capital is Mecca and the Sunni Islam religious center.\n\nThrough conquest for Allah in his name we shall found a great kingdom!"
 
  lombardy_venetia_nation_title: "@LVE Restore the Lombardy-Venetia Kingdom"
  lombardy_venetia_nation_desc: "The Kingdom of Lombardy–Venetia, commonly called the 'Lombardo-Venetian Kingdom', was a constituent land (crown land) of the Austrian Empire.\n\nIt was created in 1815 by resolution of the Congress of Vienna in recognition of the Austrian House of Habsburg-Lorraine's rights to Lombardy and the former Republic of Venice after the Napoleonic Kingdom of Italy, proclaimed in 1805, had collapsed."
@@ -257,11 +257,20 @@
  bukhara_nation_title: "@BUK Settle into the Silk Roads"
  bukhara_nation_desc: "Giving up the wild steppe for the ancient settled cities of the Silk Road in Transoxania will allow us to settle in the lands whose very names vall to midn fabulous wealth, but if we push this far south into settled land our wild cousins to the north will no longer accept our authority." 
 
+ commonwealth_poland_nation_title: "@PLC Polish-Lithuanian Commonwealth"
+ commonwealth_poland_nation_desc: "Replace the personal union between Poland and Lithuania with a real union, welding the two countries together into one powerful state, capable of withstanding our enemies."
+
+ commonwealth_lithuania_nation_title: "@PLC Lithuanian-Polish Commonwealth"
+ commonwealth_lithuania_nation_desc: "Replace the personal union between Poland and Lithuania with a real union, welding the two countries together into one powerful state, capable of withstanding our enemies."
+
  form_great_yuan_nation_title: "@YUA Restore the Great Yuan"
  form_great_yuan_nation_desc: "The heirs of Kublai Khan once ruled over all Chinese and Mongol lands. Let us rise to reclaim the legacy of the old Yuan and crush the weaker lineages that have attempted to claim the Empire that is our Birthright!" 
 
  german_kingdom_nation_title: "@GER Restore the German Kingdom"
  german_kingdom_nation_desc: "The tripartite division of the Carolingian Empire effected by the Treaty of Verdun was challenged very early on with the death of the Emperor Lothair I in 855. He had divided his kingdom of Middle Francia between his three sons and immediately the northernmost of the three divisions, Lotharingia, was disputed between the kings of East and West Francia. The war over Lotharingia lasted until 925. Lothair II of Lotharingia died in 869 and the Treaty of Meerssen (870) divided his kingdom between East and West Francia, but the West Frankish sovereigns relinquished their rightful portion to East Francia by the Treaty of Ribemont in 880. Ribemont determined the border between France and Germany until the fourteenth century. The Lotharingian nobility tried to preserve their independence of East of West Frankish rule by switching allegiance at will with the death of king Louis the Child in 911, but in 925 Lotharingia was finally ceded to East Francia by Rudolph of West Francia and it thereafter formed the Duchy of Lorraine within the East Frankish kingdom."
+
+ golden_horde_nation_title: "@GLH Re-form the Golden Horde"
+ golden_horde_nation_desc: "Centuries ago our Great Father united our ancestors in their ancient homeland. He died leaving his sons to squabble and split his mighty empire into petty fiefs, small, weak and unworthy of his legacy! The disjointed remnants still sweep across the steppes instilling fear in the hearts of his enemies just like the Great Mongol army once did.\n\nNo more! A worthy people still carrying the banner of his legacy ride across these lands! While we now bow before a new God, the blood of Genghis Khan still flows through our veins. We are the Golden Horde and we are coming for what is rightfully ours!"
 
  great_britain_nation_title: "@GBR Form Great Britain"
  great_britain_nation_desc: "The Treaty of Union specified the name of the new all-island state as "Great Britain", while describing it as "One Kingdom". therefore, the all-island state that existed between 1707 and 1800 is "Great Britain" or the "Kingdom of Great Britain"."
@@ -284,8 +293,8 @@
  restore_roman_empire_nation_title: "@ROM Restoration of the Roman Empire"
  restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
 
- russian_nation_muscovy_title: "@RUS Tsardom of Russia"
- russian_nation_muscovy_desc: "The Tsardom of Russia, also called the Tsardom of Muscovy, was the centralized Russian state from the assumption of the title of Tsar by Ivan IV in 1547 until the foundation of the Russian Empire by Peter the Great in 1721."
+ russian_tsardom_nation_title: "@RUS Tsardom of Russia"
+ russian_tsardom_nation_desc: "The Tsardom of Russia, also called the Tsardom of Muscovy, was the centralized Russian state from the assumption of the title of Tsar by Ivan IV in 1547 until the foundation of the Russian Empire by Peter the Great in 1721."
 
  russian_nation_novgorod_title: "@RUS The Russian Republic"
  russian_nation_novgorod_desc: "The Russian Republic was a short-lived state which controlled, de jure, the territory of the former Russian Empire after its proclamation by the Russian Provisional Government on 1 September 1917 in a decree signed by Alexander Kerensky as Minister-President and Alexander Zarudny as Minister of Justice.\n\nLess than six weeks later, the Republic was overtaken by the October Revolution beginning on 25 October and was then superseded by the Russian Soviet Republic."

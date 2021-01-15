@@ -14,8 +14,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_armenia_kingdom_nation_flag
 				exists = ARM
-				exists = ARR
-				exists = ARK
 				tag = ARM
 				tag = ARR
 				tag = ARK
@@ -58,8 +56,9 @@ country_decisions = {
 			allow = {
 				NOT = { exists = ARM }
 				is_at_war = no
-				is_free_or_tributary_trigger = yes
 				is_nomad = no
+				is_subject = no
+				is_free_or_tributary_trigger = no
 				OR = {
 					religion = catholic
 					religion = coptic
@@ -100,13 +99,13 @@ country_decisions = {
 						add_base_manpower = 1
 					}
 					custom_tooltip = dec1_decisions_blank				
-					custom_tooltip = dec1_government_rank_3 # Government Rank Change
+					custom_tooltip = dec1_government_rank_2 # Government Rank Change
 					# Dharma DLC check to prevent ugly tooltip
 					if = {
 						limit = {
 							has_dlc = "Dharma"
 						}
-						custom_tooltip = dec1_government_change_english_monarchy # Government Type Change
+						custom_tooltip = dec1_government_change_monarchy # Government Type Change
 					}				
 					add_government_reform = autocracy_reform						
 					custom_tooltip = dec1_decisions_blank
@@ -168,24 +167,32 @@ country_decisions = {
 							change_government = monarchy
 						}																		
 					}
-					# Custom Ideas check and change		
-					if = {
-						limit = {
-							has_custom_ideas = no
-							NOT = { has_idea_group = ARM_ideas }
-						}
-						country_event = { id = ideagroups.1 }
-						custom_tooltip = dec1_decisions_blank
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ARM_ideas }
 					}
-					# Increased Centralization
-					add_country_modifier = {
-						name = dec1_increased_centralization
-					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_classical_antiquity
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
 				}
 			}
-			ai_will_do = {
-				factor = 1
-			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
 		ai_importance = 400
 	}
 }

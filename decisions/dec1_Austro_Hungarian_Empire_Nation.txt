@@ -22,6 +22,8 @@ country_decisions = {
 				tag = TUR
 				tag = EUR
 				tag = CZE
+				tag = SBG
+				tag = SGF
 			}
 			OR = {
 				ai = no

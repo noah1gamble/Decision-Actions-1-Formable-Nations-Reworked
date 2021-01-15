@@ -8,12 +8,14 @@ country_decisions = {
 			is_colonial_nation = no
 			NOT = { 
 				has_country_flag = formed_tibetan_empire_nation_flag
-				exists = TIE				
+				exists = TIE
+				exists = TIB				
 				tag = TIE
 				tag = PAP
 				tag = HIN
 				tag = BHA
 				tag = TIB
+				tag = HIM
 			}
 			OR = {
 				primary_culture = nepali
@@ -71,7 +73,7 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 7 # Early formable
+			# adm_tech = 7 # Early formable - REMOVED, better without it.
 			NOT = { exists = TIE }
 			is_subject = no
 			is_at_war = no
@@ -176,10 +178,15 @@ country_decisions = {
 						NOT = { has_idea_group = TIE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_legacy_of_the_dali_lama
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -191,7 +198,5 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
-		}
 	}
-
 }

@@ -19,6 +19,7 @@ country_decisions = {
 				tag = BYZ # Byzantium cannot restore Macedon, but can restore other larger historical nations (Alexanders Empire, etc)
 				tag = TUR # No Turkish Ottomans, or Turkish Culture
 				tag = PAP
+				tag = GRE
 			}
 			OR = {
 				ai = no
@@ -50,10 +51,22 @@ country_decisions = {
 			NOT = { exists = MAC }
 			is_subject = no
 			is_at_war = no
-				# Macedon
-			owns_core_province = 148
-			owns_core_province = 1853
-			owns_core_province = 3001
+			OR = {
+				AND = {
+					total_development = 120
+					# Core Macedon
+					owns_core_province = 148
+					owns_core_province = 1853
+					owns_core_province = 3001
+				}
+				AND = {
+					num_of_owned_provinces_with = {
+						value = 10
+						region = balkan_region
+						is_core = ROOT
+					}
+				}				
+			}
 		}
 	 	effect = {			
 			change_tag = MAC # Country TAG
@@ -64,7 +77,7 @@ country_decisions = {
 			define_ruler = {
 				name = "Perseus II"
 				dynasty = "Antigonid"
-				claim = 150
+				claim = 100
 				adm = 6
 				dip = 5
 				mil = 6
@@ -73,7 +86,7 @@ country_decisions = {
 			define_heir = {
 				name = "Perseus III"
 				dynasty = "Antigonid"
-				claim = 110
+				claim = 100
 				adm = 2
 				dip = 3
 				mil = 2
@@ -107,14 +120,15 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					# Custom hidden culture changes
+				hidden_effect = { # Hidden Effects to fix bad tooltips					
+					# hidden culture change
 					if = {
 						limit = {
 							NOT = { primary_culture = greek }
 						}
 						change_primary_culture = greek
 					}
-					# Custom hidden culture changes
+					# hidden culture province changes
 					if = {
 						limit = {
 							all_owned_province = {
@@ -125,7 +139,6 @@ country_decisions = {
 							change_primary_culture = greek
 						}
 					}				
-
 					# Region/Area Claims
 					balkan_region = {
 						limit = {
@@ -159,10 +172,15 @@ country_decisions = {
 						NOT = { has_idea_group = MAC_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_alexanders_kingdom
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -176,6 +194,13 @@ country_decisions = {
 				factor = 0
 				government_rank = 3
 			}
+			modifier = { # Desire for Epirus and Athens to Kill Byzantium and Restore Macedon
+				factor = 100
+				OR = {
+					tag = EPI
+					tag = ATH
+				}
+			}			
 		}
 		ai_importance = 400
 	}

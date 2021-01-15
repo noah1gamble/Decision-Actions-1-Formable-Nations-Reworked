@@ -56,11 +56,14 @@ country_decisions = {
 			NOT = { is_core = ROOT }
 		}
 		allow = {
-#			adm_tech = 10
-			NOT = { exists = CHN }
+			adm_tech = 10
+			NOT = { exists = PRC }
 			is_subject = no
 			is_at_war = no
-		
+			north_china_region = {
+				type = all
+				owned_by = ROOT
+			}		
 		}
 	 	effect = {		 
 			change_tag = PRC # Country TAG			

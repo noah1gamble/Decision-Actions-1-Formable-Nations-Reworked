@@ -21,6 +21,7 @@
 				tag = ITA
 				tag = TTS
 				tag = YUG
+				tag = ROP
 			}
 			OR = {
 				primary_culture = albanian

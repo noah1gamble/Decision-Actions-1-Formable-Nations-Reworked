@@ -10,7 +10,10 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = PLC }
-			NOT = { tag = POL }
+			NOT = { 
+				tag = POL
+				tag = JGE
+			}
 			OR = {
 				ai = no
 				AND = {

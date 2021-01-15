@@ -19,7 +19,8 @@ country_decisions = {
 				tag = ITA
 				tag = KOG
 				tag = ROP
-				tag = CIS			
+				tag = CIS	
+				tag = LVE		
 			}
 			OR = {
 				ai = no

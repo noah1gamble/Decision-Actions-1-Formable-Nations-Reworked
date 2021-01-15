@@ -1,5 +1,53 @@
 country_decisions = {
 
+	#############################################################################################
+	# Gods Kingdom - Pope Disables the Papacy after conquering Italy and forming Kingdom of God #
+	#############################################################################################
+
+	gods_kingdom = {
+		major = yes
+		potential = {
+			technology_group = western
+			religion_group = christian
+			owns_core_province = 118
+			tag = PAP
+		}
+		allow = {
+			# Ecclesiastical provinces of Northern Italy
+			owns_core_province = 101	# Genoa
+			owns_core_province = 103	# Torino
+			owns_core_province = 104	# Milano
+			owns_core_province = 106	# Modena
+			owns_core_province = 110	# Trento
+			owns_core_province = 111	# Udine / Aquileia
+			owns_core_province = 112	# Venice
+			owns_core_province = 114	# Bologna + Ravenna
+			owns_core_province = 116	# Firenze
+			owns_core_province = 115	# Pisa
+			owns_core_province = 119	# Ancona + Fermo
+			owns_core_province = 2976	# Perugia
+			owns_core_province = 2977	# Pesaro
+		}
+		effect = {
+			set_country_flag = gods_kingdom
+			custom_tooltip = dec1_kingdom_of_god_warning
+			country_event  = { id = catholic_flavor.2 } # Disables the Papacy
+			custom_tooltip = dec1_kingdom_of_god_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = italy_region
+						NOT = { owned_by = PAP }
+					}
+					add_permanent_claim = PAP
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	##################################################################
 	# Gods Kingdom - The Papal Formable Nation upon conquering Italy #
 	##################################################################
@@ -7,26 +55,9 @@ country_decisions = {
 	kingdom_of_god_nation = {
 		major = yes
 		potential = {
-			is_former_colonial_nation = no
-			is_playing_custom_nation = no
-			is_colonial_nation = no
 			technology_group = western
 			religion_group = christian
 			tag = PAP
-			exists = PAP
-			owns_core_province = 118
-			NOT = {
-				exists = ITA
-				tag = ITA
-				tag = NAP
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 8
-				}
-			}
 		}
 		provinces_to_highlight = {
 			OR = {	
@@ -54,6 +85,12 @@ country_decisions = {
 			NOT = { exists = ALP }
 			is_subject = no
 			is_at_war = no
+			custom_trigger_tooltip = {
+				tooltip = dec1_declared_the_kingdom_of_god
+				hidden_trigger = {
+					has_country_flag = gods_kingdom
+				}
+			}
 			# Ecclesiastical provinces of Northern Italy
 			owns_core_province = 101	# Genoa
 			owns_core_province = 103	# Torino
@@ -128,10 +165,15 @@ country_decisions = {
 						NOT = { has_idea_group = KOG_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_messenger_of_god
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -144,73 +186,6 @@ country_decisions = {
 		}
 		ai_importance = 400			
 	}	
-
-	#############################################################################################
-	# Gods Kingdom - Pope Disables the Papacy after conquering Italy and forming Kingdom of God #
-	#############################################################################################
-
-	gods_kingdom = {
-		major = yes
-		potential = {
-			is_former_colonial_nation = no
-			is_playing_custom_nation = no
-			is_colonial_nation = no
-			technology_group = western
-			religion_group = christian
-			owns_core_province = 118
-			tag = KOG
-			NOT = {
-				exists = PAP
-				tag = PAP
-				tag = NAP
-				tag = ITA
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 8
-				}
-			}
-		}
-		allow = {
-			is_at_war = no
-			NOT = {
-				exists = NAP
-			}
-				# Ecclesiastical provinces of Northern Italy
-			owns_core_province = 101	# Genoa
-			owns_core_province = 103	# Torino
-			owns_core_province = 104	# Milano
-			owns_core_province = 106	# Modena
-			owns_core_province = 110	# Trento
-			owns_core_province = 111	# Udine / Aquileia
-			owns_core_province = 112	# Venice
-			owns_core_province = 114	# Bologna + Ravenna
-			owns_core_province = 116	# Firenze
-			owns_core_province = 115	# Pisa
-			owns_core_province = 119	# Ancona + Fermo
-			owns_core_province = 2976	# Perugia
-			owns_core_province = 2977	# Pesaro
-		}
-		effect = {
-			set_country_flag = gods_kingdom
-			country_event  = { id = catholic_flavor.2 } # Disables the Papacy
-			custom_tooltip = dec1_kingdom_of_god_claims
-			hidden_effect = {
-				every_province = {
-					limit = {
-						region = italy_region
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	#################################################################
 	# Gods Dynasty - Papacy (Establish a papal Dynastic government) #

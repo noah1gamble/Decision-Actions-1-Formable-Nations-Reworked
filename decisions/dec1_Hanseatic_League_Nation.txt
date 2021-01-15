@@ -20,6 +20,8 @@ country_decisions = {
 				tag = EPR
 				tag = NGC
 				tag = WES
+				tag = HEN
+				tag = RHE
 			}
 			OR = {
 				primary_culture = pommeranian

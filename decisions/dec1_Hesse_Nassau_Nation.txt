@@ -60,8 +60,8 @@ country_decisions = {
 			custom_tooltip = form_hesse_nassau_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank	
 			HEN = { # Capital change and bonuses				
-				set_capital = 1744 # Antwerpen
-				1744 = {
+				set_capital = 81 # Hessen
+				81 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -113,10 +113,15 @@ country_decisions = {
 						NOT = { has_idea_group = HEN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_legacy_of_nassau
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

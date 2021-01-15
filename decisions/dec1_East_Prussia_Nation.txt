@@ -20,6 +20,7 @@ country_decisions = {
 				tag = BTC
 				tag = BRP # Brandenburg-Prussia TODO: some unique changes later (Prob not for east prussia tho)
 				tag = GEP
+				tag = LSX
 			}
 			OR = {
 				primary_culture = prussian

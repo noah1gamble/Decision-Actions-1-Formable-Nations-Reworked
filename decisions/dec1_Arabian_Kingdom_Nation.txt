@@ -15,11 +15,13 @@ country_decisions = {
 			NOT = {
 				primary_culture = turkish
 				has_country_flag = formed_arabia_nation_flag
-				exists = ARB
+				exists = KAB
+				tag = KAB
 				tag = ARB
 				tag = HLR
 				tag = PAP
 				tag = SRB
+				
 			}
 			OR = {
 				ai = no
@@ -40,13 +42,7 @@ country_decisions = {
 				}
 			}
 			allow = {
-				is_at_war = no
-				adm_tech = 5
-				arabia_region = {
-					type = all
-					owned_by = ROOT
-				}
-				owns_core_province = 385
+
 			}
 			effect = {
 				change_tag = KAB # Country TAG

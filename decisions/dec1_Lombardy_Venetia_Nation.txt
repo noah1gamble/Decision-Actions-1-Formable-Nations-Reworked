@@ -1,8 +1,8 @@
 country_decisions = {
 
-	############################
-	# Italian Empire - General #
-	############################
+	####################
+	# Lombardy-Venetia #
+	####################
 
 	lombardy_venetia_nation = {
 		major = yes
@@ -11,12 +11,12 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no	
 			NOT = { 
-				has_country_flag = formed_lombardy_venetia_nation_flag
+				has_country_flag = formed_lombardy_venetia_flag
 				exists = LVE
+				tag = LVE
 				tag = PAP 
 				tag = HAB
 				tag = HLR
-				tag = LVE
 				tag = ITA
 				tag = IMA
 				tag = TTS
@@ -24,6 +24,7 @@ country_decisions = {
 				tag = CIS
 				tag = EUR
 				tag = ADR
+				tag = ROP
 			}	
 			OR = {
 				primary_culture = venetian
@@ -72,7 +73,7 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = LVE # Country TAG
-			set_country_flag = formed_lombardy_venetia_nation_flag # Country Formation Flag
+			set_country_flag = formed_lombardy_venetia_flag # Country Formation Flag
 			custom_tooltip = form_lombardy_venetia_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank	
 			LVE = { # Capital change and bonuses				
@@ -136,16 +137,21 @@ country_decisions = {
 						NOT = { has_idea_group = LVE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_french_warfare
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}				
 		}
 		ai_will_do = {
 			factor = 1

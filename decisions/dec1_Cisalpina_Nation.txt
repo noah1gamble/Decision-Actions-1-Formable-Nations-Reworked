@@ -21,6 +21,8 @@ country_decisions = {
 				tag = ALP
 				tag = EUR
 				tag = ADR
+				tag = IMA
+				tag = LVE
 			}
 			OR = {
 				primary_culture = ligurian

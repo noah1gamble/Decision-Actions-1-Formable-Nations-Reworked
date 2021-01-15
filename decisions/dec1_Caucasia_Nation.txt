@@ -13,6 +13,7 @@ country_decisions = {
 				tag = PAP
 				tag = EUR
 				tag = ARN
+				tag = ARM
 			}
 			OR = {
 				ai = no

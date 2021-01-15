@@ -21,6 +21,7 @@ country_decisions = {
 				tag = CIS
 				tag = EUR
 				tag = ADR
+				tag = ROP
 			}
 			OR = {
 				primary_culture = sicilian

@@ -6,12 +6,17 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			owns = 118
+			OR = {
+				owns = 118
+				AND = {
+					tag = PON # Pontus Roman Desires
+					tag = ROP # Roman Republic -> Roman Empire
+				}
+			}
 			NOT = {
 				has_country_flag = restored_roman_empire_nation_flag
 				exists = ROM
 				tag = ROM
-				tag = ROP
 				tag = HLR
 				tag = PAP
 				tag = EUR
@@ -34,20 +39,17 @@ country_decisions = {
 				province_id = 361 # Cairo
 				province_id = 236 # London
 				province_id = 245 # Yorkshire
-				province_id = 96 # Zeeland
+				#province_id = 96 # Zeeland - REMOVED, Not historical
 				province_id = 134 # Vienna
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 10
-			dip_tech = 10
-			mil_tech = 10
+			adm_tech = 15
 			NOT = { exists = ROP }
-			is_free_or_tributary_trigger = yes
 			is_subject = no
-			is_nomad = no
 			is_at_war = no
+			owns = 118 # Rome
 			owns = 236 # London
 			owns = 183 # Paris
 			owns = 96 # Zeeland

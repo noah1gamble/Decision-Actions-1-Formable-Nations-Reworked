@@ -17,6 +17,7 @@ country_decisions = {
 				tag = EUR
 				tag = BTC
 				tag = GEP
+				tag = HEN
 			}			
 			OR = {
 				primary_culture = hannoverian
@@ -230,9 +231,9 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = NGC # Country TAG
-			set_country_flag = formed_north_german_conferdation_nation_flag # Country Formation Flag
-			custom_tooltip = form_rhine_confederation_tt_2 # New Missions
-			custom_tooltip = form_rhine_confederation_tt_3 # Region/Area Claims
+			set_country_flag = formed_north_german_confedertion_nation_flag # Country Formation Flag
+			custom_tooltip = form_north_german_confederation_tt_2 # New Missions
+			custom_tooltip = form_north_german_confederation_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
 			NGC = { # Capital change and bonuses				
 				set_capital = 50 # Berlin
@@ -294,10 +295,15 @@ country_decisions = {
 						NOT = { has_idea_group = NGC_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_prussian_influences
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

@@ -3,11 +3,31 @@ country_decisions = {
 	nepal_nation = {
 		major = yes
 		potential = {
-			
-			NOT = { has_country_flag = formed_nepal_flag }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = { 
+				has_country_flag = formed_nepal_flag
+				exists = NPL				
+				tag = NPL
+				tag = PAP
+				tag = HIN
+				tag = BHA
+				tag = HIM
+				tag = TIB
+			}
+			OR = {
+				primary_culture = nepali
+				primary_culture = tibetan
+				primary_culture = assamese
+				primary_culture = kashmiri
+			}
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
 			}
 			OR = {
 				primary_culture = nepali
@@ -22,14 +42,6 @@ country_decisions = {
 				AND = {
 					ai = yes
 					is_year = 1700
-				}
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
 				}
 			}
 		}

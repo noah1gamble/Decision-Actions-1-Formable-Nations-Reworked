@@ -64,26 +64,16 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 5
-			dip_tech = 5
-			mil_tech = 5
-			NOT = { exists = GLH }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes			
+			NOT = { exists = TAT }
 			has_reform = steppe_horde
-			num_of_cities = 30
 			owns_core_province = 284 #Crimea
 			owns_core_province = 302 #Tambov
 			owns_core_province = 464 #Astrakhan
 			owns_core_province = 465 #Nogai
 			owns_core_province = 466 #Sarai
 			owns_core_province = 476 #Kypchak
-			owns_core_province = 1075 #Chimgi-Tura
-			owns_core_province = 1082 #Kazan
-			owns_core_province = 1778 #Qasim
-			owns_core_province = 2411 #Mansur
-			294 = { #Tver 
-				country_or_non_sovereign_subject_holds = ROOT 
+			294 = { #Tver
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			295 = { #Moscow
 				country_or_non_sovereign_subject_holds = ROOT
@@ -94,20 +84,14 @@ country_decisions = {
 			307 = { #Vladimir
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			308 = { #Yaroslavl
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1956 = { #Suzdal
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
-			change_tag = GLH # Country TAG
+			change_tag = TAT # Country TAG
 			set_country_flag = formed_tatar_nation_flag # Country Formation Flag
 			custom_tooltip = form_tatar_tt_2 # New Missions
 			custom_tooltip = form_tatar_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
-			GLH = { # Capital change and bonuses				
+			TAT = { # Capital change and bonuses				
 				set_capital = 284 # Crimea
 				284 = {
 					add_base_tax = 1
@@ -139,7 +123,7 @@ country_decisions = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = GLH
+						add_permanent_claim = TAT
 					}	
 					# Government Rank change				
 					if = {
@@ -164,13 +148,18 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = GLH_ideas }
+						NOT = { has_idea_group = TAT_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_tatar_qualities
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

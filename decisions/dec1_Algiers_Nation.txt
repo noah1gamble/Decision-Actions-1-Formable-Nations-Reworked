@@ -39,7 +39,7 @@ country_decisions = {
 			}
 		}		
 		allow = {
-			adm_tech = 3 # unique req - early formable
+			adm_tech = 5 # unique req - early formable
 			NOT = { exists = ALG }
 			is_at_war = no
 			is_subject = no
@@ -147,7 +147,7 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_blank
 			# National Ability
 			add_country_modifier = {
-				name = dec1_house_of_solomon
+				name = dec1_noble_amirs
 				duration = 49275
 			}				
 			# Increased Centralization

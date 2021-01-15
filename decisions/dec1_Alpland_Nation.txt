@@ -20,6 +20,7 @@ country_decisions = {
 				tag = EUR
 				tag = ADR
 				tag = AHE
+				tag = SGF
 			}
 			OR = {
 				primary_culture = austrian

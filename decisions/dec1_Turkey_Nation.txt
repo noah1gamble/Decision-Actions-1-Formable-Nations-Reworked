@@ -15,6 +15,7 @@ country_decisions = {
 			NOT = {
 				primary_culture = armenian # genocide lul
 				has_country_flag = formed_turkey_nation_flag
+				exists = TRR
 				tag = TRR
 				tag = TUR
 				tag = PAP
@@ -109,7 +110,7 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no	
 			custom_trigger_tooltip = {
-				tooltip = form_turkey_nation_tt_1
+				tooltip = form_turkey_tt_1
 					# Thrace
 				owns_core_province = 151
 				owns_core_province = 1764
@@ -180,7 +181,6 @@ country_decisions = {
 			change_tag = TRR # Country TAG
 			set_country_flag = formed_turkey_nation_flag # Country Formation Flag
 			custom_tooltip = form_turkey_tt_2 # New Missions
-			custom_tooltip = form_turkey_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank	
 			TRR = { # Capital change and bonuses				
 				set_capital = 151 # Constantinple
@@ -235,10 +235,15 @@ country_decisions = {
 						NOT = { has_idea_group = TRR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_turkish_nationalism
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -268,6 +273,7 @@ country_decisions = {
 			NOT = {
 				primary_culture = armenian # genocide lul
 				has_country_flag = formed_turkey_nation_flag
+				exists = TRR
 				tag = TRR
 				tag = PAP
 				tag = HLR
@@ -356,7 +362,7 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no	
 			custom_trigger_tooltip = {
-				tooltip = form_turkey_nation_tt_1
+				tooltip = form_turkey_tt_1
 					# Thrace
 				owns_core_province = 151
 				owns_core_province = 1764
@@ -423,7 +429,7 @@ country_decisions = {
 				owns_core_province = 2204				
 			}
 			AND = {
-				# TODO: add a req for ottomans not controlling greece region provinces	
+				# TODO: add a req for ottomans not controlling greece region provinces
 				OR = {
 					NOT = { # No Longer Muslim or Dominant Religion
 						religion_group = muslim	
@@ -497,10 +503,15 @@ country_decisions = {
 						NOT = { has_idea_group = TRR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_turkish_nationalism
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

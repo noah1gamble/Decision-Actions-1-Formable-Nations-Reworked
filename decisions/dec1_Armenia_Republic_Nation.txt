@@ -18,6 +18,7 @@ country_decisions = {
 				exists = ARN
 				tag = ARR
 				tag = ARN
+				tag = ARM
 				tag = HLR
 				tag = PAP
 				tag = CAU

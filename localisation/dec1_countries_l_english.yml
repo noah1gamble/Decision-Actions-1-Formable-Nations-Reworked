@@ -1,6 +1,6 @@
 ﻿l_english:
  # New Countries
- KAB: "Arabia"
+ KAB: "Arabian Kingdom"
  KAB_ADJ: "Arabian"
  BNL: "Benelux"
  BNL_ADJ: "Beneluxian"
@@ -68,7 +68,7 @@
  CAU_ADJ: "Caucasian"
  BRM: "Burma"
  BRM_ADJ: "Burmese"
- UKI: "United Kingdom"
+ UKI: "The United Kingdom"
  UKI_ADJ: "British"
  MGH: "Maghreb"
  MGH_ADJ: "Maghreb"
@@ -119,7 +119,7 @@
  MAC: "Macedon"
  MAC_ADJ: "Macedonian"
  SRB: "Saudi Arabia"
- SRC_ADJ: "Saudi"
+ SRB_ADJ: "Saudi"
  CTG: "Carthage"
  CTG_ADJ: "Carthaginian"
  LSE: "Lusitanian Empire"
@@ -133,7 +133,7 @@
  ARN: "Greater Armenia"
  ARN_ADJ: "Armenian"
  ARR: "Republic of Armenia"
- ARR: "Armenian"
+ ARR_ADJ: "Armenian"
  BKL: "Balkan League"
  BKL_ADJ: "Balkan"
  CSA: "Confederate States"
@@ -141,6 +141,8 @@
  # Vanilla Countries
  ARB: "Arabian Empire"
  ARB_ADJ: "Arabian"
+ ARM: "Kingdom of Armenia"
+ ARM_ADJ: "Armenian"
  GER: "Kingdom of Germany"
  GER_ADJ: "German"
  KOG: "Kingdom of God"

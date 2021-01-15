@@ -1,0 +1,120 @@
+country_decisions = {
+	
+	# Restore the Ilkhanate as Independent Empire
+
+	restore_ilkhanate_decision = {
+		major = yes
+		potential = {
+			
+			NOT = { has_country_flag = formed_ilkhanate_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				culture_group = tartar
+				culture_group = altaic
+			}
+			capital_scope = {
+				region = persia_region
+			}
+			has_reform = steppe_horde
+			NOT = { tag = TIM }
+			NOT = { tag = PER }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = MUG }
+			NOT = { tag = ARB }
+			NOT = { dynasty = "Timurid" }
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { exists = ILK }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			persia_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			change_tag = ILK
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_ilkhanate_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Restore the Ilkhanate as the Mongol Empire / Yuan / Golden Horde
+
+	restore_ilkhanate_decision_march = {
+		major = yes
+		potential = {
+			
+			owns = 4338
+			OR = {
+				tag = YUA
+				tag = GLH
+				tag = MGE
+			}
+			NOT = { has_country_flag = restored_ilkhanate_decision_flag }
+			NOT = { has_mission = mission_conquer_persia_tatars }
+			NOT = { exists = ILK }
+			NOT = {
+				capital_scope = {
+					region = persia_region
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = persia_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			persia_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			set_country_flag = restored_ilkhanate_decision_flag
+			persia_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_core = ILK
+			}
+			release = ILK
+			create_march = ILK
+			ILK = {
+				change_government = monarchy
+				change_primary_culture = ROOT
+				change_religion = ROOT
+				define_ruler = {
+					dynasty = ROOT
+					culture = ROOT
+					religion = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

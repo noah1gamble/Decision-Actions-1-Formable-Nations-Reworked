@@ -15,6 +15,7 @@ country_decisions = {
 				tag = MUG
 				tag = BHA
 				tag = HIN
+				tag = HIM
 			}
 			OR = {
 				culture_group = dravidian
@@ -125,8 +126,8 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					# New Missions	
- 
+				hidden_effect = { # Hidden Effects to fix bad tooltips					
+				# New Missions	
 					# Claims
 					coromandel_region = {
 						limit = {
@@ -177,23 +178,28 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = BHA_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_foundation_of_an_indian_state
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}			
 		}
 		ai_will_do = {
 			factor = 1

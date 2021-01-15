@@ -40,13 +40,15 @@ country_decisions = {
 			}
 		}
 		allow = {
+			adm_tech = 5
 			NOT = { exists = DEC }
 			is_at_war = no
-			adm_tech = 5
-			is_free_or_tributary_trigger = yes
-			custom_trigger_tooltip = { # Deccan region
+			is_nomad = no
+			is_subject = no
+			is_free_or_tributary_trigger = no		
+			custom_trigger_tooltip = { 
 				tooltip = form_deccan_nation_tt_1
-				deccan_region = {
+				egypt_region = {
 					type = all
 					owned_by = ROOT
 				}
@@ -135,29 +137,25 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
+				# Custom Ideas check and change
 				if = {
-					limit = {	 # Custom Ideas check and ROOT check
-						OR = {
-							has_custom_ideas = no
-							NOT = { 
-								has_idea_group = ALP_ideas 
-							}
-						}
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CRO_ideas }
 					}
-					country_event = { 
-						id = ideagroups.1
-					}
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = {
-					id = dec1_events.3	# Custom Missions change
-				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_tough_terrain_castles	# National Ability
+					name = dec1_sultans_of_india
 					duration = 49275
-				}			
+				}				
+				# Increased Centralization
 				add_country_modifier = {
-					name = dec1_increased_centralization	# Increased Centralization
+					name = dec1_increased_centralization
 					duration = -1
 				}
 			}					

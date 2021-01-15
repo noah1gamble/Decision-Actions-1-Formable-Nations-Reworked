@@ -43,7 +43,7 @@ country_decisions = {
 							value = 200 
 						}
 					}
-					legitimacy = 100					
+					legitimacy = 95					
 				}
 			}		
 			owns_core_province = 53	# Lüneburg
@@ -58,8 +58,8 @@ country_decisions = {
 			custom_tooltip = form_hanover_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
 			HAN = { # Capital change and bonuses				
-				set_capital = 1869 # Zurich
-				1869 = {
+				set_capital = 1758 # Hannover
+				1758 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -122,17 +122,22 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = HAN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_british_influences
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

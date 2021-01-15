@@ -19,6 +19,7 @@ country_decisions = {
 				exists = RMN
 				tag = HLR
 				tag = PAP
+				tag = SBG
 			}
 		}
 		provinces_to_highlight = {
@@ -36,6 +37,8 @@ country_decisions = {
 			NOT = {
 				exists = RMN
 				exists = BYZ
+				exists = ROM
+				exists = ROP
 			}
 			is_nomad = no
 			is_at_war = no
@@ -118,10 +121,15 @@ country_decisions = {
 						NOT = { has_idea_group = RMN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_twenty_castles
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

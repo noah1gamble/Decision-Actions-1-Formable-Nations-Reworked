@@ -354,7 +354,7 @@ dec1_abolished_the_mandate_of_heaven = {
 
 		# Jagiellonian Empire
 
-	dec1_jagiellonian_empire_union_of_persistence = {
+	dec1_union_of_persistence = {
 		monarch_diplomatic_power = 2
 	}
 
@@ -535,109 +535,312 @@ dec1_abolished_the_mandate_of_heaven = {
 	# Arabian Empire
 
 	dec1_muhammads_conquests = {
-		cb_on_religious_enemies = yes 
-		discipline = 0.1
+		cb_on_religious_enemies = yes
 		siege_ability = 0.1
 	 	movement_speed = -0.2 # Debuff
 	}
 
+	# Armenia
+
+	dec1_classical_antiquity = {
+		prestige_from_land = 0.10 
+	}
+
 	# Bharat
+
+	dec1_foundation_of_an_indian_state = {
+		manpower_in_true_faith_provinces= 0.10
+	}
 
 	# Bukhara
 
+	dec1_sunni_uzbeks = {
+		religious_unity = 0.1
+		tolerance_own = 1 
+	}
+
 	# Commonwealth
+
+	dec1_the_commonwealth_union = {
+		liberty_desire_from_subject_development = -0.10
+	}
 
 	# Croatia
 
+	dec1_croats_and_slovenes = {
+		num_accepted_cultures = 1 
+	}
+
 	# Deccan
+
+	dec1_sultans_of_india = {
+		manpower_in_true_faith_provinces= 0.10 
+	}
 
 	# Egypt
 
+	dec1_kingdom_of_pharaohs = {
+		loot_amount = 0.10 
+	}
+
 	# Germany
+
+	dec1_germany_proper = {
+		general_cost = -0.10 
+	}
 
 	# Golden Horde
 
+	dec1_remnants_of_the_mongols = {
+		raze_power_gain = 0.10 
+	}
+
 	# Great Britain 
+
+	dec1_the_british_commonwealth = {
+		free_leader_pool = 2 
+	}
 
 	# Greece
 
+	dec1_greek_hegemony = {
+		defensiveness = 0.10
+	}
+
 	# Hanover
+	
+	dec1_british_influences = {
+		administrative_efficiency = 0.2 
+	}
 
 	# Hindustan
 
+	dec1_hindu_union = {
+		religious_unity = 0.2
+	}
+
 	# Holy Roman Empire
+
+	dec1_legacy_of_the_holy_roman_empire = {
+		yearly_army_professionalism = 0.01 
+	}
 
 	# Iceland
 
+	dec1_reykjavik_imports = {
+		production_efficiency = 0.05
+	}
+
 	# Ilkhanate
+
+	dec1_muslim_mongols = {
+		cavalry_power = 0.10
+		cavalry_flanking = 0.10
+	}
 
 	# Inca
 
+	dec1_native_empire = {
+
+	}
+
 	# Ireland
+
+	dec1_irish_spirit = {
+		years_of_nationalism = -5
+	}
 
 	# Italy
 
+	dec1_the_crown_of_lombardy = {
+		all_power_cost = -0.1
+	}
+
 	# Japan
 
+	dec1_dissolution_of_the_shogunate = {
+		embracement_cost = -0.1
+	}
+	
 	# Jerusalem
+
+	dec1_united_christianity = {
+		unrest_catholic_provinces = -5
+	}
 
 	# Kurland
 
+	dec1_battle_memoirs = {
+
+	}
+
 	# Malaya
+
+	dec1_eastern_trade_route = {
+
+	}
 
 	# Manchu
 
+	dec1_manchu_banner_camps = {
+
+	}
+
 	# Marathas
+
+	dec1_maratha_warriors = {
+
+	}
 
 	# Maya
 
+	dec1_league_of_mayapan = {
+
+	}
+
 	# Mongol Empire
+
+	dec1_temujins_legacy_reborn = {
+
+	}
 
 	# Mughals
 
+	dec1_empire_of_the_mughal_tribe = {
+
+	}
+
 	# Nagpur
+
+	dec1_transcend_tribal_loyalties = {
+		 
+	}
 
 	# Nepal
 
+	dec1_dalai_lama_of_tibet = {
+
+	}
+
 	# Netherlands
+
+	dec1_dutch_trade_empire = {
+
+	}
 
 	# Persia
 
+	dec1_the_empire_of_ages = {
+
+	}
+
 	# Punjab
+
+	dec1_gem_of_india = {
+
+	}
 
 	# Prussia
 
+	dec1_prussian_greatness = {
+
+	}
+
 	# Qing
+
+	dec1_qings_of_china = {
+
+	}
 
 	# Rajputana
 
+	dec1_unite_the_princes = {
+
+	}
+
 	# Romania
 	
+	dec1_legacy_of_rome = {
+
+	}
+
 	# Roman Empire
+
+	dec1_true_roman_successor = {
+
+	}
 
 	# Rum
 
+	dec1_who_stole_the_rum = {
+
+	}
+
 	# Russia
+
+	dec1_third_rome = {
+
+	}
 
 	# Ruthenia
 
+	dec1_the_rus_people = {
+
+	}
+
 	# Sardinia-Piedmont
+
+	dec1_kingdom_of_italy = {
+
+	}
 
 	# Scandinavia
 
+	dec1_viking_spirit = {
+
+	}
+
 	# Shan
+
+	dec1_confederation_of_the_shan = {
+		
+	}
 
 	# Sokoto
 
+	dec1_the_sokoto_caliphate = {
+
+	}
+
 	# Spain
+
+	dec1_castilian_heritage = {
+
+	}
 
 	# Swabia
 
+	dec1_great_kingdom_of_germany = {
+
+	}
+
 	# Tibet
+
+	dec1_legacy_of_the_tibetan_empire = {
+
+	}
 
 	# Tripoli
 
+	dec1_recognized_kingdom = {
+
+	}
+
 	# Tuscany
+
+	dec1_tuscan_raiders = {
+
+	}
 
 	# Two Sicilies
 
@@ -648,7 +851,15 @@ dec1_abolished_the_mandate_of_heaven = {
 
 	# Westphalia
 
+	dec1_german_spirit = {
+
+	}
+
 	# Yuan
+
+	dec1_the_yuan_dynasty = {
+
+	}
 
 ################## Colonial Nations ##################
 

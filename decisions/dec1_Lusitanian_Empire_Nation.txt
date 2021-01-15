@@ -16,6 +16,7 @@ country_decisions = {
 				tag = FRA
 				tag = CAS
 				tag = BSQ
+				tag = IBE
 			}
 			OR = {
 				ai = no
@@ -130,152 +131,152 @@ country_decisions = {
 				has_idea = global_empire
 			}
 			custom_trigger_tooltip = {
-				tooltip = form_lusitanian_empire_nation_tt_2
-					# Portuguese cores
-				beieras_area = {
+			tooltip = form_lusitanian_empire_nation_tt_2
+			# Portuguese cores
+			beieras_area = {
+				type = all
+				owned_by = ROOT
+			}
+			alentejo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 1749
+			owns_core_province = 1744
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_lusitanian_empire_nation_tt_5
+				# Various african colonies
+				owns_core_province = 1751
+				owns_core_province = 334
+				owns_core_province = 342
+				owns_core_province = 4564
+				owns_core_province = 2469
+				owns_core_province = 345
+				owns_core_province = 1111
+				owns_core_province = 1096
+				owns_core_province = 1114
+				owns_core_province = 1139
+				owns_core_province = 1097
+				owns_core_province = 1306
+				kongo_region = {
 					type = all
 					owned_by = ROOT
 				}
-				alentejo_area = {
+					# East African colonies
+				mozambique_area = {
 					type = all
 					owned_by = ROOT
 				}
-				owns_core_province = 1749
-				owns_core_province = 1744
+				uticulo_makuana_area = {
+					type = all
+					owned_by = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = form_lusitanian_empire_nation_tt_5
-						# Various african colonies
-					owns_core_province = 1751
-					owns_core_province = 334
-					owns_core_province = 342
-					owns_core_province = 4564
-					owns_core_province = 2469
-					owns_core_province = 345
-					owns_core_province = 1111
-					owns_core_province = 1096
-					owns_core_province = 1114
-					owns_core_province = 1139
-					owns_core_province = 1097
-					owns_core_province = 1306
-					kongo_region = {
-						type = all
-						owned_by = ROOT
-					}
-						# East African colonies
-					mozambique_area = {
-						type = all
-						owned_by = ROOT
-					}
-					uticulo_makuana_area = {
-						type = all
-						owned_by = ROOT
-					}
-					shire_area = {
-						type = all
-						owned_by = ROOT
-					}
-					upper_zambezi_area = {
-						type = all
-						owned_by = ROOT
-					}
-					ruvuma_area = {
-						type = all
-						owned_by = ROOT
-					}
-					ngonde_area = {
-						type = all
-						owned_by = ROOT
-					}
+				shire_area = {
+					type = all
+					owned_by = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = form_lusitanian_empire_nation_tt_4
-						# Various colonies
-					owns_core_province = 4029
-					owns_core_province = 1201
-					owns_core_province = 1202
-					owns_core_province = 1203
-					owns_core_province = 2796
-					owns_core_province = 1099
-					owns_core_province = 388
-					owns_core_province = 4279
-					owns_core_province = 394
-					owns_core_province = 396
-					owns_core_province = 2999
-					owns_core_province = 398
-					owns_core_province = 399
-					owns_core_province = 400
-					owns_core_province = 4455
-					owns_core_province = 2051
-					owns_core_province = 4457
-					owns_core_province = 517
-					owns_core_province = 4430
-					owns_core_province = 529
-					owns_core_province = 2089
-					owns_core_province = 2030
-					owns_core_province = 531
-					owns_core_province = 2029
-					owns_core_province = 4413
-					owns_core_province = 534
-					owns_core_province = 535
-					owns_core_province = 537
-					owns_core_province = 536
-					owns_core_province = 2026
-					owns_core_province = 540
-					owns_core_province = 539
-					owns_core_province = 543
-					owns_core_province = 2084
-					owns_core_province = 549
-					owns_core_province = 561
-					owns_core_province = 568
-					owns_core_province = 4399
-					owns_core_province = 586
-					owns_core_province = 596
-					owns_core_province = 668
-					owns_core_province = 4182
-					owns_core_province = 649
-					owns_core_province = 641
-					owns_core_province = 2695
-					owns_core_province = 635
-					owns_core_province = 633
-					owns_core_province = 572
-					owns_core_province = 4408
-					owns_core_province = 2100
-					owns_core_province = 4409
+				upper_zambezi_area = {
+					type = all
+					owned_by = ROOT
 				}
-					# Brazil colony
-				owns_core_province = 501
-				custom_trigger_tooltip = {
-					tooltip = form_lusitanian_empire_nation_tt_3
-						# South African colonies
-					butua_area = {
-						type = all
-						owned_by = ROOT
-					}
-					zimbabwe_area = {
-						type = all
-						owned_by = ROOT
-					}
-					quelimane_area = {
-						type = all
-						owned_by = ROOT
-					}
-					owns_core_province = 1183
-					owns_core_province = 1186
-					limpopo_area = {
-						type = all
-						owned_by = ROOT
-					}
+				ruvuma_area = {
+					type = all
+					owned_by = ROOT
 				}
-				OR = {
-					brazil_region = {
-						type = all
-						owned_by = ROOT
-					}
-					any_subject_country = {
-						is_colonial_nation = yes
-						capital_scope = {
-							colonial_region = colonial_brazil
+				ngonde_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_lusitanian_empire_nation_tt_4
+					# Various colonies
+				owns_core_province = 4029
+				owns_core_province = 1201
+				owns_core_province = 1202
+				owns_core_province = 1203
+				owns_core_province = 2796
+				owns_core_province = 1099
+				owns_core_province = 388
+				owns_core_province = 4279
+				owns_core_province = 394
+				owns_core_province = 396
+				owns_core_province = 2999
+				owns_core_province = 398
+				owns_core_province = 399
+				owns_core_province = 400
+				owns_core_province = 4455
+				owns_core_province = 2051
+				owns_core_province = 4457
+				owns_core_province = 517
+				owns_core_province = 4430
+				owns_core_province = 529
+				owns_core_province = 2089
+				owns_core_province = 2030
+				owns_core_province = 531
+				owns_core_province = 2029
+				owns_core_province = 4413
+				owns_core_province = 534
+				owns_core_province = 535
+				owns_core_province = 537
+				owns_core_province = 536
+				owns_core_province = 2026
+				owns_core_province = 540
+				owns_core_province = 539
+				owns_core_province = 543
+				owns_core_province = 2084
+				owns_core_province = 549
+				owns_core_province = 561
+				owns_core_province = 568
+				owns_core_province = 4399
+				owns_core_province = 586
+				owns_core_province = 596
+				owns_core_province = 668
+				owns_core_province = 4182
+				owns_core_province = 649
+				owns_core_province = 641
+				owns_core_province = 2695
+				owns_core_province = 635
+				owns_core_province = 633
+				owns_core_province = 572
+				owns_core_province = 4408
+				owns_core_province = 2100
+				owns_core_province = 4409
+			}
+				# Brazil colony
+			owns_core_province = 501
+			custom_trigger_tooltip = {
+				tooltip = form_lusitanian_empire_nation_tt_3
+					# South African colonies
+				butua_area = {
+					type = all
+					owned_by = ROOT
+				}
+				zimbabwe_area = {
+					type = all
+					owned_by = ROOT
+				}
+				quelimane_area = {
+					type = all
+					owned_by = ROOT
+				}
+				owns_core_province = 1183
+				owns_core_province = 1186
+				limpopo_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+			OR = {
+				brazil_region = {
+					type = all
+					owned_by = ROOT
+				}
+				any_subject_country = {
+					is_colonial_nation = yes
+					capital_scope = {
+						colonial_region = colonial_brazil
 					}
 				}
 			}
@@ -294,7 +295,7 @@ country_decisions = {
 				}
 				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2
+				custom_tooltip = dec1_government_rank_3
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -317,10 +318,10 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 2
+								government_rank = 3
 								}
 							}
-						set_government_rank = 2
+						set_government_rank = 3
 					}
 					# Government Type Change
 					if = {
@@ -339,10 +340,15 @@ country_decisions = {
 						NOT = { has_idea_group = LSE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_spice_empire
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

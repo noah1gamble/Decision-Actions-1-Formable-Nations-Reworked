@@ -3,35 +3,26 @@ country_decisions = {
 	croatian_nation = {
 		major = yes
 		potential = {
-			
-			NOT = { has_country_flag = formed_croatia_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
+			is_colonial_nation = no
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			primary_culture = croatian	
+			tag = SHY		
+			NOT = { 
+				has_country_flag = formed_croatia_flag
+				has_reform = celestial_empire
+				exists = CRO
+				tag = BUK
+				tag = HLR
+				tag = PAP
 			}
-			NOT = { tag = HLR }
-			NOT = { tag = CRO }
-			NOT = { tag = PAP }
-			OR = {
-				NOT = { exists = CRO}
-				ai = no
-			}
-			primary_culture = croatian
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 5
+					num_of_cities = 6
 				}
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -48,10 +39,11 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = CRO}
-			is_free_or_tributary_trigger = yes
+			NOT = { exists = CRO }
+			is_at_war = no
 			is_nomad = no
-			is_at_war = no			
+			is_subject = no
+			is_free_or_tributary_trigger = no	
 			owns_core_province = 131			# Zagreb
 			owns_core_province = 136			# Dalmatia
 			owns_core_province = 137			# Ragusa
@@ -60,7 +52,79 @@ country_decisions = {
 			owns_core_province = 1826			# Lika
 		}
 		effect = {
-
+			change_tag = CRO # Country TAG
+			set_country_flag = formed_croatia_flag # Country Formation Flag
+			custom_tooltip = form_croatia_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			CRO = { # Capital change and bonuses				
+				set_capital = 131 # Zagreb
+				131 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips					
+				# New Missions									
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = CRO_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_croats_and_slovenes
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

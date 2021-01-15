@@ -1863,7 +1863,7 @@ HIM_ideas = {
 # Iberian Empire
 IBE_ideas = { 
 	start = {
-		curia_powers_cost = 0.2
+		curia_powers_cost = -0.2
 		unjustified_demands = -0.1
 	}
 
@@ -2001,11 +2001,13 @@ ITE_ideas = {
 # Italian Merchant Alliance
 IMA_ideas = { 
 	start = {
-
+		all_power_cost = -0.1
+		global_tax_modifier = 0.10
 	}
 
 	bonus = {
-
+		transfer_trade_power_reasons = 35
+		global_ship_cost = -0.03
 	}
 
 	trigger = {
@@ -2013,25 +2015,33 @@ IMA_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	IMA_1 = {
+	IMA_italian_nationalism = {
+		enemy_core_creation = 0.2
 	}
 
-	IMA_2 = {
+	IMA_upgrades_of_ambition = {
+		build_cost = -0.1
 	}
 
-	IMA_3 = {
+	IMA_control_of_the_adriatic = {
+		galley_cost = -0.05
+		galley_power = 0.05
 	}
 
-	IMA_4 = {
+	IMA_guns_of_urban = {
+		leader_siege = 1
 	}
 
-	IMA_5 = {
+	IMA_improved_structures = {
+		build_time = -0.10
 	}
 
-	IMA_6 = {
+	IMA_italian_national_army = {
+		army_tradition_decay = -0.01
 	}
 
-	IMA_7 = {
+	IMA_italian_subjects = {
+		liberty_desire_from_subject_development = -0.15
 	}
 }
 
@@ -2050,36 +2060,46 @@ JAE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	JAE_1 = {
+	JAE_dissolution_of_the_shogunate = {
+		global_unrest = -2
 	}
 
-	JAE_2 = {
+	JAE_meiji_restoration = {
+		production_efficiency = 0.10
 	}
 
-	JAE_3 = {
+	JAE_imperial_policy = {
+		promote_culture_cost = -0.05
+		global_tax_modifier = 0.05
 	}
 
-	JAE_4 = {
+	JAE_war_torn_country = {
+		stability_cost_to_declare_war = -1
 	}
 
-	JAE_5 = {
+	JAE_united_armies_of_japan = {
+		army_tradition_decay = -0.01
 	}
 
-	JAE_6 = {
+	JAE_protect_isolation_policies = {
+		unjustified_demands = -0.1
 	}
 
-	JAE_7 = {
+	JAE_the_japanese_navy = {
+		navy_tradition_decay = -0.05
 	}
 }
 
 # Jagiellonian Empire
 JGE_ideas = { 
 	start = {
-
+		leader_cost = -0.20
+		all_power_cost = -0.1
+		monthly_support_heir_gain = 0.05
 	}
 
 	bonus = {
-
+		core_creation = -0.1
 	}
 
 	trigger = {
@@ -2087,36 +2107,46 @@ JGE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	JGE_1 = {
+	JGE_the_commonwealth = {
+		global_tax_modifier = 0.03
+		production_efficiency = 0.02
 	}
 
-	JGE_2 = {
+	JGE_wladyslaw_jegiello = {
+		army_tradition_decay = -0.02
 	}
 
-	JGE_3 = {
+	JGE_king_of_bohemia = {
+ 		legitimacy = 1
 	}
 
-	JGE_4 = {
+	JGE_habsburg_rivalry = {
+		naval_forcelimit_modifier = 0.1
+		naval_tradition_from_battle = 0.1
 	}
 
-	JGE_5 = {
+	JGE_polish_royal_army = {
+		yearly_army_professionalism = 0.02
 	}
 
-	JGE_6 = {
+	JGE_king_of_hungary = {
+		global_unrest = -2
 	}
 
-	JGE_7 = {
+	JGE_union_of_dominance = {
+		liberty_desire_from_subject_development = -0.10
 	}
 }
 
 # Kingdom of God
 KOG_ideas = { 
 	start = {
-
+		global_unrest = -2
+		cb_on_religious_enemies = yes 
 	}
 
 	bonus = {
-
+		global_religious_conversion_resistance = -0.2
 	}
 
 	trigger = {
@@ -2125,24 +2155,33 @@ KOG_ideas = {
 	free = yes	# will be added at load.
 
 	KOG_the_holy_seplechure = {
+		global_religious_conversion_resistance = -0.1
 	}
 
 	KOG_holy_lands_east_to_west = {
+		religious_unity = 0.5
 	}
 
 	KOG_papal_authority = {
+		enforce_religion_cost = -0.5
 	}
 
 	KOG_right_to_rule = {
+		warscore_cost_vs_other_religion = -0.10
 	}
 
 	KOG_reform_our_questionable_army = {
+		army_tradition_decay = -0.02
+		land_morale = 0.05
 	}
 
 	KOG_enact_papal_decree = {
+		global_heathen_missionary_strength = 0.08
 	}
 
 	KOG_influence_european_politics = {
+		diplomats = 1
+		diplomatic_reputation = 1
 	}
 }
 
@@ -2150,7 +2189,7 @@ KOG_ideas = {
 KRV_ideas = {
 	start = {
 		years_of_nationalism = -5
-		ae_impact = 0.15
+		ae_impact = 0.10
 	}
 	bonus = {
 		religious_unity = 0.3 # Returning To The Old Gods
@@ -2159,37 +2198,45 @@ KRV_ideas = {
 		tag = KRV
 	}
 	free = yes	# will be added at load.
-	KRV_reduced_liberty_desire = {
-		reduced_liberty_desire = 10 # Rein In The Tribes
+
+	KRV_rein_in_the_tribes = {
+		reduced_liberty_desire = 10
 	}
-	KRV_global_missionary_strenght = {
-		global_missionary_strength = 0.05 # Our Northern Crusade
+
+	KRV_our_northern_crusade = {
+		global_missionary_strength = 0.05
 	}
-	KRV_cavalry_fire = {
-		cavalry_fire = 2 # The Cossacks Ride With Us
+
+	KRV_the_cossacks_ride_with_us = {
+		cavalry_fire = 2
 	}
-	KRV_heavy_global_tax_reform = {
-		global_tax_modifier = 0.25 # Restablishing Our Trade Hub In Kyiv
+
+	KRV_reestablishing_our_trade_hub_in_kyiv = {
+		global_tax_modifier = 0.15
 	}
-	KRV_war_score_cost_vs_other_religion = {
-			warscore_cost_vs_other_religion = -0.35 # Our Time Of Reckoning Has Come
+
+	KRV_the_time_of_reckoning = {
+			warscore_cost_vs_other_religion = -0.20
 	}
-	KRV_heir_chance = {
-		heir_chance = 0.5 # Bring Forth The Women As Vladimir Once Did
+
+	KRV_bring_the_women = {
+		heir_chance = 0.5
 	}
-	KRV_defensiveness = {
-		defensiveness = 0.10 # The Forest, It Speak Slavonic
+
+	KRV_the_forest_it_speaks_slavonic = {
+		defensiveness = 0.10
 	}
 }
 
 # Lombardy-Venetia
 LVE_ideas = { 
 	start = {
-
+		production_efficiency = 0.10
+		all_power_cost = -0.05
 	}
 
 	bonus = {
-
+		diplomatic_annexation_cost = -0.2
 	}
 
 	trigger = {
@@ -2198,35 +2245,45 @@ LVE_ideas = {
 	free = yes	# will be added at load.
 
 	LVE_god_save_francis = {
+		diplomatic_reputation = 1
 	}
 
 	LVE_congress_of_vienna = {
+		army_tradition_decay = -0.01
+		land_morale = 0.05
+		ae_impact = 0.1 # Random Debuff related to the Congres of Vienna (decision to fix?)
 	}
 
 	LVE_napoleonic_studies = {
+		embracement_cost = -0.1
 	}
 
 	LVE_italian_nationalism = {
+		manpower_recovery_speed = 0.10
 	}
 
 	LVE_house_of_habsburg_lorraine = {
+		global_unrest = -2
 	}
 
 	LVE_the_crown_of_lombardy = {
+		unjustified_demands = -0.1
 	}
 
 	LVE_national_reforms = {
+		culture_conversion_cost = -0.10
 	}
 }
 
 # Lower Saxony
 LSX_ideas = { 
 	start = {
-
+		technology_cost = -0.1
+		liberty_desire_from_subject_development = -0.05
 	}
 
 	bonus = {
-
+		years_of_nationalism = -10
 	}
 
 	trigger = {
@@ -2235,36 +2292,44 @@ LSX_ideas = {
 	free = yes	# will be added at load.
 
 	LSX_english_influence = {
+		army_tradition_from_battle = 0.01 
 	}
 
 	LSX_kingdom_of_hannover = {
+		claim_duration = 0.2
 	}
 
 	LSX_german_diplomacy = {
+		diplomatic_reputation = 1
+		ae_impact = -0.05
 	}
 
 	LSX_the_holy_roman_empire = {
+		global_tax_modifier = 0.10
 	}
 
 	LSX_germanic_saxons = {
+		culture_conversion_cost = -0.10
 	}
 
 	LSX_migration_culture = {
+		global_garrison_growth = 0.15
 	}
 
 	LSX_army_drills = {
+ 		yearly_army_professionalism = 0.03
 	}
 }
 
 # Lusitanian Empire
 LSE_ideas = { 
 	start = {
-		trade_range_modifier = 0.35
-		trade_efficiency = 0.50
+		trade_range_modifier = 0.10
+		trade_efficiency = 0.10
 	}
 
 	bonus = {
-		global_tariffs = 0.25
+		global_tariffs = 0.15
 	}
 
 	trigger = {
@@ -2273,44 +2338,45 @@ LSE_ideas = {
 	free = yes	# will be added at load.
 
 	LSE_legacy_of_the_navigator = {
-		range = 0.30
-		global_sailors_modifier = 0.30
+		range = 0.10
+		global_sailors_modifier = 0.05
 	}
 
 	LSE_afonsine_ordinances = {
-		global_trade_goods_size_modifier = 0.2
+		global_trade_goods_size_modifier = 0.05
 	}
 
 	LSE_case_de_india = {
-		global_trade_power = 0.2
+		global_trade_power = 0.10
 	}
 
 	LSE_the_bandeirantes = {
-		merchants = 2
+		merchants = 1
 	}
 
 	LSE_royal_absolutism = {
-		build_cost = -0.20
+		build_cost = -0.10
 		yearly_absolutism = 0.2
 	}
 
 	LSE_land_before_faith = {
-		global_colonial_growth = 25
+		global_colonial_growth = 15
 	}
 
 	LSE_open_up_the_guilds = {
-		trade_efficiency = 0.2
+		trade_efficiency = 0.1
 	}
 }
 
 # Macedon
 MAC_ideas = { 
 	start = {
-
+		land_forcelimit_modifier = 0.10
+		infantry_shock = 3
 	}
 
 	bonus = {
-
+		army_tradition_decay = -0.05
 	}
 
 	trigger = {
@@ -2319,35 +2385,47 @@ MAC_ideas = {
 	free = yes	# will be added at load.
 
 	MAC_legacy_of_alexander = {
+		infantry_cost = -0.10 
+		land_morale = 0.03
 	}
 
 	MAC_breakaway_empire = {
+		diplomats = 2
+		diplomatic_reputation = -1 # Random historical debuff
 	}
 
 	MAC_fallen_phalanx = {
+		cavalry_flanking = 0.15
 	}
 
 	MAC_enact_needed_reforms = {
+		build_cost = -0.05
+		production_efficiency = 0.03
 	}
 
-	MAC_conquer_greece = {
+	MAC_conquest_of_greece = {
+		unjustified_demands = -0.1
+		enemy_core_creation = 0.03
 	}
 
 	MAC_taxation_reform = {
+		global_tax_modifier = 0.05
 	}
 
 	MAC_greek_hegemony = {
+		ae_impact = -0.2
 	}
 }
 
 # Maghrebia
 MGH_ideas = { 
 	start = {
-
+		global_ship_cost = -0.05
+		global_tax_modifier = 0.05
 	}
 
 	bonus = {
-
+ 		navy_tradition_decay = -0.10
 	}
 
 	trigger = {
@@ -2356,35 +2434,46 @@ MGH_ideas = {
 	free = yes	# will be added at load.
 
 	MGH_united_the_maghrebs = {
+		vassal_forcelimit_bonus = 0.2
 	}
 
 	MGH_tribal_warfare = {
+		land_morale = 0.10
 	}
 
 	MGH_camel_cultivation = {
+		movement_speed = 0.10
 	}
 
 	MGH_canopy_entrenchment = {
+		development_cost = -0.05
+		defensiveness = 0.05
 	}
 
 	MGH_legacy_of_africa = {
+		prestige_decay = -0.03
 	}
 
 	MGH_cultural_oppression = {
+		promote_culture_cost = -0.10
 	}
 
 	MGH_naval_raiding = {
+		global_sailors_modifier = 0.05
+		may_perform_slave_raid = yes 
+		may_perform_slave_raid_on_same_religion = yes 
 	}
 }
 
 # North German Confederation
 NGC_ideas = { 
 	start = {
-
+		culture_conversion_cost = -0.05
+		global_unrest = -2
 	}
 
 	bonus = {
-
+		liberty_desire_from_subject_development = -0.10
 	}
 
 	trigger = {
@@ -2392,36 +2481,47 @@ NGC_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	NGC_1 = {
+	NGC_german_federal_state = {
+		global_autonomy = -0.10
 	}
 
-	NGC_2 = {
+	NGC_confederacy_of_germany = {
+		global_autonomy = -0.05
 	}
 
-	NGC_3 = {
+	NGC_constitutional_monarch = {
+		legitimacy = 1 
 	}
 
-	NGC_4 = {
+	NGC_bundesprasidium = {
+		monarch_admin_power = 1
+		monarch_diplomatic_power = 1
+		monarch_military_power = 1
 	}
 
-	NGC_5 = {
+	NGC_interests_in_unification = {
+		heir_chance = 0.3
 	}
 
-	NGC_6 = {
+	NGC_suppress_liberal_ambitions = {
+		prestige = 0.5
+		prestige_decay = -0.01
 	}
 
-	NGC_7 = {
+	NGC_habsburg_rivalry = {
+		prestige_decay = -0.03
 	}
 }
 
 # North Sea Empire
 NSE_ideas = { 
 	start = {
-
+		global_unrest = -2	
+		global_autonomy = -0.05
 	}
 
 	bonus = {
-
+		admiral_skill_gain_modifier = 0.2
 	}
 
 	trigger = {
@@ -2430,36 +2530,43 @@ NSE_ideas = {
 	free = yes	# will be added at load.
 
 	NSE_united_thalassocracy = {
-		
+		naval_tradition_from_battle = 0.1
 	}
 
-	NSE_2 = {
+	NSE_sweyn_forkbeard = {
+		leader_cost = -0.05
 	}
 
-	NSE_3 = {
+	NSE_cnut_the_great_empire = {
+		manpower_in_true_faith_provinces= 0.10
 	}
 
-	NSE_4 = {
+	NSE_christian_norse_paganism = {
+		religious_unity = 0.3
 	}
 
-	NSE_5 = {
+	NSE_age_of_the_vikings = {
+		global_missionary_strength = 0.03
 	}
 
-	NSE_6 = {
+	NSE_personal_unions = {
+		liberty_desire_from_subject_development = -0.10
 	}
 
-	NSE_7 = {
+	NSE_defend_the_future_of_the_empire = {
+		years_of_nationalism = -8
 	}
 }
 
 # Pontus
 PON_ideas = { 
 	start = {
-
+		prestige_decay = -0.01
+		heir_chance = 0.5
 	}
 
 	bonus = {
-
+		all_power_cost = -0.1
 	}
 
 	trigger = {
@@ -2467,36 +2574,45 @@ PON_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	PON_1 = {
+	PON_mithridates_of_cius = {
+		production_efficiency = 0.05
 	}
 
-	PON_2 = {
+	PON_rightful_basileus = {
+		governing_capacity_modifier = 0.1
 	}
 
-	PON_3 = {
+	PON_friends_of_rome = {
+		ae_impact = -0.1
 	}
 
-	PON_4 = {
+	PON_mithridatic_war = {
+		may_perform_slave_raid_on_same_religion = yes 
 	}
 
-	PON_5 = {
+	PON_client_kingdoms = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
 	}
 
-	PON_6 = {
+	PON_hellenistic_coinage = {
+		global_tax_modifier = 0.05
 	}
 
-	PON_7 = {
+	PON_varied_ethnic_armies = {
+		global_manpower_modifier = 0.10
 	}
 }
 
 # Rhine Confederation
 RHE_ideas = { 
 	start = {
-
+		culture_conversion_cost = -0.10
+		legitimacy = 1
 	}
 
 	bonus = {
-
+		promote_culture_cost = -0.10
 	}
 
 	trigger = {
@@ -2504,25 +2620,32 @@ RHE_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	RHE_ = {
+	RHE_rheinbund = {
+ 		all_power_cost = -0.1
 	}
 
-	RHE_ = {
+	RHE_influences_of_the_french = {
+		monarch_diplomatic_power = 3
 	}
 
-	RHE_ = {
+	RHE_member_monarchies = {
+		liberty_desire_from_subject_development = -0.10
 	}
 
-	RHE_ = {
+	RHE_radical_autonomy = {
+		harsh_treatment_cost = -0.2
 	}
 
-	RHE_ = {
+	RHE_napoleonic_code = {
+		global_unrest = -2
 	}
 
-	RHE_ = {
+	RHE_state_founded_from_war = {
+		min_autonomy_in_territories = 0.1
 	}
 
-	RHE_ = {
+	RHE_national_agitation = {
+		stability_cost_modifier = -0.1
 	}
 }
 
@@ -2621,11 +2744,12 @@ SRB_ideas = {
 # Siebenbuergen
 SBG_ideas = { 
 	start = {
-
+		defensiveness = 0.10
+		global_tax_modifier = 0.05
 	}
 
 	bonus = {
-
+		prestige_decay = -0.01
 	}
 
 	trigger = {
@@ -2633,36 +2757,44 @@ SBG_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	SBG_1 = {
+	SBG_ultra_silvam = {
+		heir_chance = 0.5
 	}
 
-	SBG_2 = {
+	SBG_kingdom_of_succession = {
+		legitimacy = 1 
 	}
 
-	SBG_3 = {
+	SBG_enact_military_police_units = {
+		global_unrest = -2
 	}
 
-	SBG_4 = {
+	SBG_transylvanian_saxons = {
+		global_autonomy = -0.05
 	}
 
-	SBG_5 = {
+	SBG_rumaniendeutsche = {
+		global_missionary_strength = 0.03
 	}
 
-	SBG_6 = {
+	SBG_conquest_of_religion = {
+		warscore_cost_vs_other_religion = -0.10
 	}
 
-	SBG_7 = {
+	SBG_cheap_missionaries = {
+		prestige_per_development_from_conversion = 0.5
 	}
 }
 
 # South German Federation
 SGF_ideas = { 
 	start = {
-
+		merchants = 1
+		power_projection_from_insults = 0.1
 	}
 
 	bonus = {
-
+		province_warscore_cost = -0.2
 	}
 
 	trigger = {
@@ -2670,25 +2802,34 @@ SGF_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	SGF_1 = {
+	SGF_revolution_of_germany = {
+		candidate_random_bonus = 2
 	}
 
-	SGF_2 = {
+	SGF_german_federal_republic = {
+		republican_tradition = 0.2
 	}
 
-	SGF_3 = {
+	SGF_formation_through_warfare = {
+		prestige_decay = -0.01
 	}
 
-	SGF_4 = {
+	SGF_glorious_leadership = {
+		all_power_cost = -0.05
+		technology_cost = -0.05
 	}
 
-	SGF_5 = {
+	SGF_three_hurrahs_for_germany = {
+		prestige_decay = -0.02
 	}
 
-	SGF_6 = {
+	SGF_southern_german_culture = {
+		culture_conversion_cost = -0.05
+		promote_culture_cost = -0.05
 	}
 
-	SGF_7 = {
+	SGF_anti_prussian_policies = {
+		ae_impact = -0.05
 	}
 }
 
@@ -2791,11 +2932,12 @@ SNO_ideas = {
 # Tatarstan
 TAT_ideas = { 
 	start = {
-
+		prestige_decay = -0.01
+		free_policy = 1
 	}
 
 	bonus = {
-
+		global_tax_modifier = 0.10
 	}
 
 	trigger = {
@@ -2803,25 +2945,36 @@ TAT_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	TAT_0 = {
+	TAT_great_tartary = {
+		administrative_efficiency = 0.2
 	}
 
-	TAT_2 = {
+	TAT_turko_mongols = {
+		culture_conversion_cost = -0.03
+		promote_culture_cost = -0.03
 	}
 
-	TAT_3 = {
+	TAT_european_traders = {
+		merchants = 1
 	}
 
-	TAT_4 = {
+	TAT_greek_tartarus  = {
+		defensiveness = 0.05
 	}
 
-	TAT_5 = {
+	TAT_the_silk_road = {
+		caravan_power = 0.2
 	}
 
-	TAT_6 = {
+	TAT_barbarous_kingdoms = {
+		global_manpower_modifier = 0.10
 	}
 
-	TAT_7 = {
+	TAT_cavalry_usages = {
+		cavalry_cost = -0.03
+		cavalry_power = 0.01
+		cavalry_fire = 1
+		cavalry_shock = 1
 	}
 }
 

@@ -47,85 +47,74 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = BUK
-			set_country_flag = formed_bukhara_nation_flag
-			BUK = {
-				add_prestige = 10
-				set_capital = 442
-				442 = {
+			change_tag = BUK # Country TAG
+			set_country_flag = formed_bukhara_nation_flag # Country Formation Flag
+			custom_tooltip = form_bukhara_nation_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			BHA = { # Capital change and bonuses				
+				set_capital = 522 # Delhi
+				522 = {
 					add_base_tax = 1
 					add_base_production = 1
-					add_base_manpower = 2
+					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			BUK = {
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_1 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips					
+				# New Missions									
+					# Government Rank change				
+					if = {
 						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
+							NOT = {
+								government_rank = 1
+								}
+							}
+						set_government_rank = 1
 					}
-				}
-			}
-			BUK = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
 							}
-						}
-					change_government = monarchy
+						change_government = monarchy
+					}																		
 				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 1
-							}
-						}
-					set_government_rank = 1
-				}
-				add_government_reform = iqta
-			}
-			custom_tooltip = dec1_decisions_spacing
-			BUK = {
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
+						NOT = { has_idea_group = BUK_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_sunni_uzbeks
+					duration = 49275
+				}				
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1

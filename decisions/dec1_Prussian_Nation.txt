@@ -23,6 +23,8 @@ country_decisions = {
 				tag = TEU
 				tag = CZE
 				tag = GEP
+				tag = LSX
+				tag = NGC
 			}
 			OR = {
 				primary_culture = prussian

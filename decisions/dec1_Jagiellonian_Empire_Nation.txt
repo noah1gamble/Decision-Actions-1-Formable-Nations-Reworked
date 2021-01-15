@@ -1,7 +1,9 @@
 country_decisions = {
 
 	####################################################################
-	# Jagiellonian Empire - Union with Hungary, Bohemia, and Lithuania #
+	# 						Jagiellonian Empire                        #
+	#						West Slavic Culture						   #
+	# 			Union with Hungary, Bohemia, and Lithuania             #
 	####################################################################
 
 	jagiellonian_empire_nation = {
@@ -15,6 +17,8 @@ country_decisions = {
 				has_country_flag = formed_jagiellon_empire_flag
 				exists = JGE
 				tag = JGE
+				tag = HUN
+				tag = LIT
 				tag = PAP
 				tag = RUS
 				tag = HLR
@@ -22,46 +26,25 @@ country_decisions = {
 				tag = TUR
 				tag = CZE
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}					
 		}
 		provinces_to_highlight = {
-			OR = {	
-				AND = {		
-					# Hungary
-				}
-				AND = {
-					# Bohemia
-					province_id = 263			
-					province_id = 4237			
-					province_id = 265			
-					province_id = 264			
-					province_id = 4238			
-					province_id = 2970			
-					province_id = 2966			
-					province_id = 60			
-					province_id = 1763			
-					province_id = 2968			
-					province_id = 266			
-					province_id = 1771			
-					province_id = 2967			
-					province_id = 267						
-				}	
-				AND = {
-					exists = LIT
-					junior_union_with = LIT
-					is_subject_of = LIT						
-				}
+			OR = {
+				province_id = 153
+				province_id = 262
+				province_id = 272
+				province_id = 266
 			}
 			OR = {
-				NOT = { 
-					is_subject_of = ROOT 
-					junior_union_with = ROOT
-					NOT = {
-						exists = HUN
-						exists = BOH
-						exists = LIT
-					}
-				}
-			}
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}						
 		}		
 		allow = {
 			adm_tech = 15
@@ -100,9 +83,12 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = JGE # Country TAG
-			set_country_flag = formed_jagiellon_empire_flag # Country Formation Flag
-			custom_tooltip = form_jagiellon_empire_tt_4 # New Missions
-			custom_tooltip = form_jagiellon_empire_tt_5 # Region/Area Claims
+			set_country_flag = formed_jagiellonian_empire_flag # Country Formation Flag
+			custom_tooltip = form_jagiellonian_empire_tt_4 # New Missions
+			custom_tooltip = form_jagiellonian_empire_tt_7 # Region/Area Claims
+			inherit = HUN
+			inherit = BOH
+			inherit = LIT
 			custom_tooltip = dec1_decisions_blank	
 			JGE = { # Capital change and bonuses				
 				set_capital = 134 # Wien
@@ -136,7 +122,7 @@ country_decisions = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = AEH
+						add_permanent_claim = JGE
 					}
 					# Government Rank change				
 					if = {
@@ -161,13 +147,18 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = AEH_ideas }
+						NOT = { has_idea_group = JGE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_union_of_persistence
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -181,9 +172,11 @@ country_decisions = {
 		ai_importance = 400
 	}
 
-	###################################
-	# Jagiellonian Empire - Lithuania #
-	###################################
+	####################################################################
+	# 						Jagiellonian Empire                        #
+	#						   as Lithuania						       #
+	# 			Union with Hungary, Bohemia, and Lithuania             #	
+	####################################################################
 
 	jagiellonian_empire_nation_lithuania = {
 		major = yes
@@ -195,15 +188,28 @@ country_decisions = {
 			tag = LIT
 			NOT = {
 				has_country_flag = formed_jagiellon_empire_flag
-				exists = JGE
-				tag = JGE
-				tag = PAP
-				tag = RUS
-				tag = HLR
-				tag = EUR
-				tag = TUR				
+				exists = JGE			
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}				
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 153
+				province_id = 262
+				province_id = 272
+				province_id = 266
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}			
 		allow = {
 			adm_tech = 15
 			NOT = { exists = JGE }
@@ -213,12 +219,9 @@ country_decisions = {
 				OR = {
 					NOT = { exists = HUN }
 					HUN = {
-						custom_trigger_tooltip = {
-							tooltip = form_jagiellonian_empire_tt_1
-							OR = {
-								junior_union_with = ROOT
-								vassal_of = ROOT
-							}
+						OR = {
+							junior_union_with = ROOT
+							vassal_of = ROOT
 						}
 					}
 				}
@@ -244,21 +247,22 @@ country_decisions = {
 		}
 	 	effect = {
 			change_tag = JGE # Country TAG
-			set_country_flag = formed_jagiellon_empire_flag # Country Formation Flag
-			custom_tooltip = formed_jagiellon_empire_tt_4 # New Missions
-			custom_tooltip = formed_jagiellon_empire_tt_5 # Region/Area Claims	
-			custom_tooltip = formed_jagiellon_empire_tt_6 # Region/Area Claims	
-			custom_tooltip = formed_jagiellon_empire_tt_7 # Region/Area Claims	
-			custom_tooltip = formed_jagiellon_empire_tt_8 # Region/Area Claims	
+			set_country_flag = formed_jagiellonian_empire_flag # Country Formation Flag
+			custom_tooltip = form_jagiellonian_empire_tt_4 # New Missions
+			custom_tooltip = form_jagiellonian_empire_tt_5 # Region/Area Claims	
+			custom_tooltip = form_jagiellonian_empire_tt_6 # Region/Area Claims	
+			custom_tooltip = form_jagiellonian_empire_tt_7 # Region/Area Claims	
+			custom_tooltip = form_jagiellonian_empire_tt_8 # Region/Area Claims	
+			inherit = HUN
+			inherit = BOH
+			inherit = POL
 			custom_tooltip = dec1_decisions_blank	
 			JGE = { # Capital change and bonuses				
 				set_capital = 257 # Warszawa
-				JGE = {
-					257 = {
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
-					}
+				257 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank				
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
@@ -331,19 +335,19 @@ country_decisions = {
 						NOT = { has_idea_group = JGE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
-				# National Ability check and change
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_jagiellonian_empire_union_of_persistence
-					duration = 18250 # 50 years
-				}
+					name = dec1_union_of_persistence
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
-					duration = -1 # forever
+					duration = -1
 				}
 			}
 		}

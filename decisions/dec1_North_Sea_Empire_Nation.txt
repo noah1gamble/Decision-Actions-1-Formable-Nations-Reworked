@@ -1,7 +1,7 @@
 country_decisions = {
 
 	##############################
-	# North Sea Empire - Denmark #
+	# North Sea Empire - Denmark # # note : this is conquest, needs MASS REWORK
 	##############################
 
 	north_sea_empire_nation_denmark = {
@@ -101,19 +101,7 @@ country_decisions = {
 			NOT = { exists = NSE }
 			is_subject = no
 			is_at_war = no
-			is_great_power = yes
-			DAN = {
-				AND = {
-					is_lesser_in_union = no
-					junior_union_with = ENG
-					ENG = {
-						years_in_union_under = {
-							who = DAN
-							years = 10
-						}
-					}
-				}
-			}
+			is_lesser_in_union = no
 			owns_core_province = 236
 			owns_core_province = 12
 			owns_core_province = 17
@@ -159,21 +147,6 @@ country_decisions = {
 					owns_core_province = 26
 					owns_core_province = 13
 				}
-				custom_trigger_tooltip = {
-					tooltip = form_north_sea_empire_tt_3 # Norway
-					owns_core_province = 17
-					owns_core_province = 16
-					owns_core_province = 4143
-					owns_core_province = 4144
-					owns_core_province = 4145
-					owns_core_province = 24
-					owns_core_province = 22
-					owns_core_province = 23
-					owns_core_province = 2752
-					owns_core_province = 20
-					owns_core_province = 10
-					owns_core_province = 21
-				}
 			}
 		}
 		effect = {
@@ -181,27 +154,7 @@ country_decisions = {
 			set_country_flag = formed_north_sea_empire_nation_flag # Country Formation Flag
 			custom_tooltip = form_north_sea_empire_tt_4 # New Missions
 			custom_tooltip = form_north_sea_empire_tt_5 # Region/Area Claims
-			custom_tooltip = form_north_sea_empire_tt_6 # Region/Area Claims
-			if = {
-				limit = {
-					ROOT = {
-						junior_union_with = ENG
-					}
-				}
-				custom_tooltip = form_north_sea_empire_tt_8 # Inherit if under union
-				limit = {
-					ROOT = {
-						junior_union_with = DAN
-					}
-				}	
-				custom_tooltip = form_north_sea_empire_tt_9 # Inherit if under union	
-				limit = {
-					ROOT = {
-						junior_union_with = NOR
-					}
-				}
-				custom_tooltip = form_north_sea_empire_tt_10 # Inherit if under union						
-			}				
+			custom_tooltip = form_north_sea_empire_tt_6 # Region/Area Claims			
 			custom_tooltip = dec1_decisions_blank	
 			NSE = { # Capital change and bonuses				
 				set_capital = 12
@@ -269,10 +222,15 @@ country_decisions = {
 						NOT = { has_idea_group = NSE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_empire_of_trade
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -284,5 +242,7 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
+		do_not_integrate = ENG
+		do_not_integrate = NOR
 	}
 }

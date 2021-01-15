@@ -49,117 +49,101 @@ country_decisions = {
 			owns_core_province = 361
 		}
 		effect = {
-			change_tag = EGY
-			set_country_flag = formed_arabia_nation_flag
-			EGY = {
-				add_prestige = 25
-				add_stability = 1
-				set_capital = 385 # Mecca
-				385 = {
-					add_base_tax = 2
+			change_tag = EGY # Country TAG
+			set_country_flag = formed_egyptian_nation_flag # Country Formation Flag
+			custom_tooltip = form_egypt_tt_2 # New Missions
+			custom_tooltip = form_egypt_tt_3 # Claims
+			custom_tooltip = form_egypt_tt_4 # Claims
+			custom_tooltip = form_egypt_tt_5 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			EGY = { # Capital change and bonuses				
+				set_capital = 361 # Cairo
+				361 = {
+					add_base_tax = 1
 					add_base_production = 1
-					add_base_manpower = 5
+					add_base_manpower = 1
 				}
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = al_misr_arabic }
-				}
-				change_primary_culture = al_misr_arabic
-			}
-			mashriq_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = EGY
-			}
-			arabia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = EGY
-			}
-			egypt_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = EGY
-			}
-			custom_tooltip = dec1_decisions_blank
-			EGY = {
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			EGY = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 3
-							}
-						}
-					set_government_rank = 3
-				}
-				if = {
-					limit = {
-						has_reform = mamluk_government
-					}
-					add_stability = -1
-				}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Change
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			EGY = {
+				custom_tooltip = dec1_decisions_blank	
+				# Claims
+				mashriq_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = EGY
+				}
+				arabia_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = EGY
+				}
+				egypt_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = EGY
+				}			
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
+						NOT = { has_idea_group = EGY_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_kingdom_of_pharaohs
+					duration = 49275
+				}				
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}
+			}					
 		}
 		ai_will_do = {
 			factor = 0

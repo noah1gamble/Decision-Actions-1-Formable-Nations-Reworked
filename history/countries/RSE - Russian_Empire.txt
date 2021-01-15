@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = russian
+religion = orthodox
+technology_group = eastern
+unit_type = eastern
+capital = 295 # Moskva
+government_rank = 3

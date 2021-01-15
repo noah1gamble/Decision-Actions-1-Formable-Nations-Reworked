@@ -1,24 +1,27 @@
 country_decisions = {
 
-	#########################
-	# Sweden-Norway General #
-	#########################
+	##########################
+	# Sweden-Norway - Sweden #
+	##########################
 
 	sweden_norway_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no			
+			is_colonial_nation = no
+			tag = SWE			
 			NOT = { 
 				has_country_flag = formed_sweden_norway_nation_flag
 				exists = SNO
 				tag = SNO
+				tag = NOR
 				tag = PAP
 				tag = SCA
 				tag = NSE
 				tag = EUR
 				tag = GBR
+				tag = DAN
 			}
 			OR = {
 				primary_culture = swedish
@@ -47,7 +50,6 @@ country_decisions = {
 				province_id = 4164
 				province_id = 4163
 				province_id = 4166
-				province_id = 2
 				province_id = 4
 				province_id = 5
 				province_id = 1985
@@ -79,7 +81,7 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			custom_trigger_tooltip = {
-				tooltip = formed_sweden_norway_tt_1
+				tooltip = form_sweden_norway_tt_1
 					# Denmark
 				owns_core_province = 6
 				owns_core_province = 4165
@@ -88,7 +90,6 @@ country_decisions = {
 				owns_core_province = 26
 					# Sweden
 				owns_core_province = 3
-				owns_core_province = 2
 				owns_core_province = 7
 				owns_core_province = 4164
 				owns_core_province = 4163
@@ -115,98 +116,88 @@ country_decisions = {
 				owns_core_province = 21
 			}
 		}
-	 	effect = {
-			change_tag = SNO
-			set_country_flag = formed_sweden_norway_nation_flag
-			SNO = {				
-				add_prestige = 15
-				set_capital = 16 # Bahusalen
-				16 = {
-					add_base_tax = 7
-					add_base_production = 7
-					add_base_manpower = 3
+		effect = {
+			change_tag = SNO # Country TAG
+			set_country_flag = formed_sweden_norway_nation_flag # Country Formation Flag
+			custom_tooltip = form_sweden_norway_tt_2 # New Missions
+			inherit = NOR
+			custom_tooltip = dec1_decisions_blank	
+			SNO = { # Capital change and bonuses				
+				set_capital = 2 
+				2 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-			}			
-			custom_tooltip = dec1_decisions_blank
-			SNO = {		
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
-				}				
-			}
-			hidden_effect = { 
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			SNO = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}							
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
+					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			SNO = {
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Region/Area Claims						
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = SNO_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_union_of_grace
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
+					duration = -1
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400			
-		}
+		ai_importance = 400
+		do_not_integrate = NOR
 	}
-	
-	#########################################
-	# Sweden-Norway Sweden Unique Formation #
-	#########################################
 	
 	#########################################
 	# Sweden-Norway Norway Unique Formation #

@@ -11,6 +11,7 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_maghrebia_nation_flag
 				exists = MGH
+				tag = MGH
 				tag = PAP
 				tag = HLR
 				tag = ALG
@@ -18,6 +19,7 @@ country_decisions = {
 				tag = EGY
 				tag = TRP
 				tag = CTG
+				tag = ADU
 			}
 			OR ={
 				primary_culture = algerian
@@ -120,10 +122,15 @@ country_decisions = {
 						NOT = { has_idea_group = MGH_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_muslim_superiority
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

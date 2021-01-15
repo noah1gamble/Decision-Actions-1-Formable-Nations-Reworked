@@ -21,11 +21,19 @@ country_decisions = {
 			technology_group = western
 			dominant_religion = catholic
 			owns = 118
+			# Add capital instead of Rome, and make it so any catholic can do this if pope dies
 			NOT = {
 				exists = ITA
 				exists = PAP
 				tag = ITA
 				tag = PAP
+				tag = NAP # Naples is a rival of the Pope!
+				tag = ARA # Aragon and Castile are Papal Rivals!
+				tag = CAS
+				tag = SPA
+				tag = ROM
+				tag = EUR
+				tag = ROP
 			}
 			OR = {
 				ai = no

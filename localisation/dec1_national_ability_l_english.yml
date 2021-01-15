@@ -220,7 +220,7 @@
 
  # Jagiellonian Empire
 
- dec1_jagiellonian_empire_union_of_persistence: "Union of Persistence"
+ dec1_union_of_persistence: "Union of Persistence"
 
  # Kievan Rus
 
@@ -322,16 +322,229 @@
  # Vanilla Countries #
  #####################
 
+ # Algiers
+
  dec1_noble_amirs: "Noble Amirs"
+
+ # Andalusia
 
  dec1_caliphate_of_cordoba: "Caliphate of Cordoba"
 
+ # Arabia
+
  dec1_muhammads_conquests: "Muhammad's Conquests"
 
- dec1_kingdom_of_the_arabs: "Kingdom of the Arabs"
+ # Armenia
 
- dec1_abolished_the_mandate_of_heaven: "Abolished the Mandate of Heaven"
- dec1_abolished_the_mandate_of_heaven_desc: ""
+ dec1_classical_antiquity: "Classical Antiquity"
+
+ # Bharat
+
+ dec1_foundation_of_an_indian_state: "Foundation of an Indian State"
+
+ # Bukhara
+
+ dec1_sunni_uzbeks: "Sunni Uzbeks"
+
+ # Commonwealth
+
+ dec1_the_commonwealth_union: "The Commonwealth Union"
+
+ # Croatia
+
+ dec1_croats_and_slovenes: "Croats and Slovenes"
+
+ # Deccan
+
+ dec1_sultans_of_india: "Sultans of India"
+
+ # Egypt
+
+ dec1_kingdom_of_pharaohs: "Kingdom of Pharaohs"
+
+ # Germany
+
+ dec1_germany_proper: "Germany Proper"
+
+ # Golden Horde
+
+ dec1_remnants_of_the_mongols: "Remnants of the Mongols"
+
+ # Great Britain 
+
+ dec1_the_british_commonwealth: "The British Commonwealth"
+
+ # Greece
+
+ dec1_greek_hegemony: "Greek Hegemony"
+
+ # Hanover
+
+ dec1_british_influences: "British Influences"
+
+ # Hindustan
+
+ dec1_hindu_union: "Hindu Union"
+
+ # Holy Roman Empire
+
+ dec1_legacy_of_the_holy_roman_empire: "The Holy Roman Empire"
+
+ # Iceland
+
+ dec1_reykjavik_imports: "Reykjavik Imports"
+
+ # Ilkhanate
+
+ dec1_muslim_mongols: "Muslim Mongols"
+
+ # Inca
+
+ dec1_native_empire: "Native Empire"
+
+ # Ireland
+
+ dec1_irish_spirit: "Irish Spirit"
+
+ # Italy
+
+ dec1_the_crown_of_lombardy: "The Crown of Lombardy"
+
+ # Japan
+
+ dec1_dissolution_of_the_shogunate: "Dissolution of the Shogunate"
+
+ # Jerusalem
+
+ dec1_united_christianity: "United Christianity"
+
+ # Kurland
+
+ dec1_battle_memoirs: "Battle Memoirs"
+
+ # Malaya
+
+ dec1_eastern_trade_route: "Eastern Trade Route"
+
+ # Manchu
+
+ dec1_manchu_banner_camps: "Manchu Banner Camps"
+
+ # Marathas
+
+ dec1_maratha_warriors: "Maratha Warriors"
+
+ # Maya
+
+ dec1_league_of_mayapan: "League of Mayapan"
+
+ # Mongol Empire
+
+ dec1_temujins_legacy_reborn: "Temujins Legacy Reborn"
+
+ # Mughals
+
+ dec1_empire_of_the_mughal_tribe: "Empire of the Mughal Tribes"
+
+ # Nagpur
+
+ dec1_transcend_tribal_loyalties: "Transcend Tribal Loyalties"
+
+ # Nepal
+
+ dec1_dalai_lama_of_tibet: "Dalai Lama of Tibet"
+
+ # Netherlands
+
+ dec1_dutch_trade_empire: "Dutch Trade Empire"
+
+ # Persia
+
+ dec1_the_empire_of_ages: "The Empire of Ages"
+
+ # Punjab
+
+ dec1_gem_of_india: "Gem of India"
+
+ # Prussia
+
+ dec1_prussian_greatness: "Prussian Greatness"
+
+ # Qing
+
+ dec1_qings_of_china: "Qings of China"
+
+ # Rajputana
+
+ dec1_unite_the_princes: "Unite the Princes"
+
+ # Romania
+
+ dec1_legacy_of_rome: "Legacy of Rome"
+	
+ # Roman Empire
+
+ dec1_true_roman_successor: "True Roman Successor"
+
+ # Rum
+
+ dec1_who_stole_the_rum: "Who Stole the Rum?"
+
+ # Russia
+
+ dec1_third_rome: "Third Rome"
+
+ # Ruthenia
+
+ dec1_the_rus_people: "The Rus People"
+
+ # Sardinia-Piedmont
+
+ dec1_kingdom_of_italy: "Kingdom of Italy"
+
+ # Scandinavia
+
+ dec1_viking_spirit: "Viking Spirit"
+
+ # Shan
+
+ dec1_confederation_of_the_shan: "Confederation of the Shan"
+
+ # Sokoto
+
+ dec1_the_sokoto_caliphate: "The Sokoto Caliphate"
+
+ # Spain
+
+ dec1_castilian_heritage: "Castilian Heritage"
+
+ # Swabia
+
+ dec1_great_kingdom_of_germany: "Great Kingdom of Germany"
+
+ # Tibet
+
+ dec1_legacy_of_the_tibetan_empire: "Legacy of the Tibetan Empire"
+
+ # Tripoli
+
+ dec1_recognized_kingdom: "Recognized Kingdom"
+
+ # Tuscany
+
+ dec1_tuscan_raiders: "Tuscan Raiders"
+
+ # Two Sicilies
+
+ dec1_italian_spirit: "Italian Spirit"
+
+ # Westphalia
+
+ dec1_german_spirit: "German Spirit"
+
+ # Yuan
+
+ dec1_the_yuan_dynasty: "The Yuan Dynasty"
 
  ########################
  # Reformable Countries #
@@ -340,6 +553,13 @@
   # Papal States
 
  dec1_the_pope: "The Pope"
+
+ #####################
+ # Special Modifiers #
+ #####################
+
+ dec1_abolished_the_mandate_of_heaven: "Abolished the Mandate of Heaven"
+ dec1_abolished_the_mandate_of_heaven_desc: "We have enacted policies that make the Mandate of Heaven null and void.\n\nno longer shall we tremble before some false title!"
 
  ###########################################
  # END UNIQUE NATIONAL TRAITS LOCALISATION #

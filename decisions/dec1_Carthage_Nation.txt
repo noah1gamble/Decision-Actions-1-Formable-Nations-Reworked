@@ -22,6 +22,10 @@ country_decisions = {
 				tag = EUR
 				tag = ADR
 				tag = BSQ
+				tag = IBE
+				tag = MGH
+				tag = ALG
+				tag = ADU
 			}			
 			OR = {
 				AND = { # A powerful latin can control this title with growth

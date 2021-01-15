@@ -16,6 +16,7 @@ country_decisions = {
 				tag = HIN
 				tag = BHA
 				tag = TIB
+				tag = HIM
 			}
 			OR = {
 				primary_culture = nepali

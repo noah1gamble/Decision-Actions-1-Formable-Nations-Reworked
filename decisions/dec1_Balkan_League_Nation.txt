@@ -20,6 +20,9 @@ country_decisions = {
 				tag = TUR
 				tag = BSK
 				tag = YUG
+				tag = MAC
+				tag = TRE
+				tag = PON
 			}
 			OR = {
 				ai = no

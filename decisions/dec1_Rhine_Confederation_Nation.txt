@@ -14,7 +14,10 @@ country_decisions = {
 				tag = GER
 				tag = NGC
 				tag = PRU
-				tag = EUR			
+				tag = EUR	
+				tag = HEN
+				tag = GEP
+				tag = EPR	
 			}			
 			OR = {
 				ai = no
@@ -147,10 +150,15 @@ country_decisions = {
 						NOT = { has_idea_group = RHE_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_legacy_of_bonaparte
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

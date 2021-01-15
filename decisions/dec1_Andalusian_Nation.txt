@@ -1,8 +1,8 @@
 country_decisions = {
 
-	##########################
-	# Abdalusia
-	###########################
+	#############
+	# Abdalusia #
+	#############
 
 	andalusian_nation = {
 		major = yes
@@ -15,13 +15,15 @@ country_decisions = {
 				has_country_flag = formed_andalusian_nation_flag
 				has_reform = celestial_empire
 				exists = ADU
+				tag = ADU
 				tag = PAP
 				tag = HLR
 				tag = SPA
-				tag = ADU
 				tag = FIB
 				tag = IBE
 				tag = CTG
+				tag = MGH
+				tag = ALG
 			}
 			OR = {
 				primary_culture = andalucian
@@ -46,16 +48,10 @@ country_decisions = {
 				province_id = 1749 # Cadiz
 				province_id = 218 # Badajoz
 				province_id = 222 # Almeria
-				OR = {
-					AND = {
-						province_id = 230 # Algarve
-						province_id = 229 # Alentejo
-					}
-					AND = {
-						owns_core_province = 1750 # Alicante
-						owns_core_province = 220 # Valencia
-					}
-				}
+				province_id = 230 # Algarve
+				province_id = 229 # Alentejo
+				province_id = 1750 # Alicante
+				province_id = 220 # Valencia								
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -154,29 +150,25 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
+				# Custom Ideas check and change		
 				if = {
-					limit = {	 # Custom Ideas check and ROOT check
-						OR = {
-							has_custom_ideas = no
-							NOT = { 
-								has_idea_group = ADU_ideas 
-							}
-						}
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ADU_ideas }
 					}
-					country_event = { 
-						id = ideagroups.1
-					}
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = {
-					id = dec1_events.3	# Custom Missions change
-				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_caliphate_of_cordoba	# National Ability
+					name = dec1_caliphate_of_cordoba
 					duration = 49275
-				}			
+				}
+				# Increased Centralization
 				add_country_modifier = {
-					name = dec1_increased_centralization	# Increased Centralization
+					name = dec1_increased_centralization
 					duration = -1
 				}
 			}

@@ -22,6 +22,7 @@ country_decisions = {
 				tag = PAP
 				tag = FRA
 				tag = EUR
+				tag = UKI
 			}
 			OR = {
 				ai = no

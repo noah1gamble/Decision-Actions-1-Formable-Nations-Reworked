@@ -6,9 +6,11 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			owns = 118 # Must own Rome
+			lazio_area = { # Owns one province in the Lazio area
+				owned_by = ROOT
+			}				
 			NOT = {
-				has_country_flag = restored_roman_republic_nation_flag
+				has_country_flag = restored_roman_republic_flag
 				exists = ROP
 				exists = ROM
 				tag = ROM
@@ -20,12 +22,13 @@ country_decisions = {
 			OR = {
 				religion_group = christian
 				religion_group = pagan
+				primary_culture = greek
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					owns = 118 # AI Just needs Rome
+					area = lazio_area # AI Just needs province in lazio area (rome)
 				}
 			}			
 		}
@@ -81,7 +84,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ROP # Country TAG
-			set_country_flag = restored_roman_republic_nation_flag # Country Formation Flag
+			set_country_flag = restored_roman_republic_flag # Country Formation Flag
 			custom_tooltip = form_roman_republic_tt_2 # New Missions
 			custom_tooltip = form_roman_republic_tt_3 # Claim on all historical Roman Empire
 			custom_tooltip = dec1_decisions_blank	
@@ -138,10 +141,15 @@ country_decisions = {
 						NOT = { has_idea_group = ROP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_rebirth_of_the_republic
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

@@ -10,10 +10,8 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			OR = {
-				religion_group = muslim
-				culture_group = turko_semitic
-			}
+			religion_group = muslim
+			culture_group = turko_semitic
 			NOT = {
 				primary_culture = turkish
 				has_country_flag = formed_arabia_nation_flag
@@ -23,6 +21,7 @@ country_decisions = {
 				tag = PAP
 				tag = EGY
 				tag = CTG
+				tag = SRB
 			}
 			OR = {
 				ai = no
@@ -141,29 +140,25 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
+				# Custom Ideas check and change		
 				if = {
-					limit = {	 # Custom Ideas check and ROOT check
-						OR = {
-							has_custom_ideas = no
-							NOT = { 
-								has_idea_group = ARB_ideas 
-							}
-						}
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ARB_ideas }
 					}
-					country_event = { 
-						id = ideagroups.1
-					}
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = {
-					id = dec1_events.3	# Custom Missions change
-				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_muhammads_conquests	# National Ability
+					name = dec1_muhammads_conquests
 					duration = 49275
-				}			
+				}				
+				# Increased Centralization
 				add_country_modifier = {
-					name = dec1_increased_centralization	# Increased Centralization
+					name = dec1_increased_centralization
 					duration = -1
 				}
 			}

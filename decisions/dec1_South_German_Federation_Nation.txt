@@ -15,6 +15,7 @@ country_decisions = {
 				tag = GER
 				tag = HLR
 				tag = EUR
+				tag = HAB # Must be Austrian Empire or Austro-Hungarian Empire!
 			}			
 			OR = {
 				primary_culture = franconian
@@ -22,6 +23,7 @@ country_decisions = {
 				primary_culture = swabian
 				primary_culture = austrian
 				primary_culture = swiss
+				# REPLACE WITH AUSTRIA, WURTTEMBERG, BAVARIA (AND THE SMALLER ONES), BADEN
 			}
 			OR = {
 				ai = no
@@ -64,38 +66,6 @@ country_decisions = {
 					type = all
 					owned_by = ROOT
 				}
-				lower_swabia_area = {
-					type = all
-					owned_by = ROOT
-				}
-				upper_bavaria_area = {
-					type = all
-					owned_by = ROOT
-				}
-				palatinate_area = {
-					type = all
-					owned_by = ROOT
-				}
-				upper_rhineland_area = {
-					type = all
-					owned_by = ROOT
-				}
-				switzerland_area = {
-					type = all
-					owned_by = ROOT
-				}
-				romandie_area = {
-					type = all
-					owned_by = ROOT
-				}
-				austria_proper_area = {
-					type = all
-					owned_by = ROOT
-				}
-				inner_austria_area = {
-					type = all
-					owned_by = ROOT
-				}
 			}
 		}
 		effect = {
@@ -111,7 +81,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -140,10 +110,10 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 3
+								government_rank = 2 # TODO: Should be changed. If Austria forms, rank 3. if others form, rank 2 (with unique government?)
 								}
 							}
-						set_government_rank = 3
+						set_government_rank = 2 # TODO: Should be changed. If Austria forms, rank 3. if others form, rank 2 (with unique government?)
 					}
 					# Government Type Change
 					if = {
@@ -162,10 +132,15 @@ country_decisions = {
 						NOT = { has_idea_group = SGF_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_austrian_influences
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
