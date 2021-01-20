@@ -239,6 +239,10 @@
  form_greece_tt_3: "Country gains a permanent claim on §YGreek§! historical areas."
 
  form_golden_horde_tt_1: "§YGolden Horde§! gains a permanent claim on §Yall Historical Golden Horde§! territory."
+ form_golden_horde_tt_2: "Country obtains §YGolden Horde§! missions."
+ form_golden_horde_tt_3: "Country gains a permanent claim on §YRussian§! region."
+ form_golden_horde_tt_4: "Country gains a permanent claim on §YUral§! region."
+ form_golden_horde_tt_5: "Country gains a permanent claim on §YPontic Steppe§! region."
 
  form_bharat_tt_2: "Country obtains §YBharat§! missions."
  form_bharat_tt_3: "Country gains a permanent claim on §YCoromandel§! region."
@@ -282,7 +286,7 @@
  form_jerusalem_tt_3: "Country gains a claim on historical lands of §YJerusalem§!." 
 
  form_japan_tt_2: "Country obtains §YJapan§! missions."
- form_japan_tt_4: "§YJapan§! will lose all cores owned by previous Daimyo."
+ form_japan_tt_4: "\n§YJapan§! will lose all cores owned by previous Daimyo."
  form_japan_tt_5: "Every Daimyo Subject of §YJapan§!:\n  Will become independent.\n  Abolish §YDaimyo§! Government Reform.\n  Enact §YDespotic Monarchy§! Government Reform."
  form_japan_tt_6: "Owns core §YJapanese§! areas:\n    §YKinai Area§!\n    §YHokuriku Area§!\n    §YWestern Chubu Area§!\n    §YEastern Chubu Area§!\n    §YWestern Kanto Area§!"
 
@@ -415,6 +419,26 @@
  form_germany_tt_2: "Owns core §YSouthern§! provinces of the §YGerman Kingdom§!"
  form_germany_tt_3: "Country obtains §YGermany§! missions."
  form_germany_tt_4: "Country gains a permanent claim on §YGerman§! historical cores."
+
+ form_mamluks_tt_2: "Country obtains §YMamluk§! missions."
+
+ form_courland_tt_2: "Country obtains §YKurland§! missions."
+
+ form_manchu_tt_2: "Country obtains §YManchu§! missions."
+ form_manchu_tt_3: "Country gains §YManchu§! historical cores"
+
+ form_maratha_tt_2: "Country obtains §YMaratha§! missions."
+ form_maratha_tt_3: "Country gains a permanent claim on §YDeccan§! region."
+ form_maratha_tt_4: "Country gains a permanent claim on §YWest India§! region."
+
+ form_mayapan_tt_2: "Country obtains §YMayapan§! missions."
+ form_mayapan_tt_3: "Country gains a permanent claim on §Yucatan§! area."
+ form_mayapan_tt_4: "Country gains a permanent claim on §YEast Yucatan§! area."
+
+ form_mughal_empire_tt_2: "Country obtains §YMughal§! missions."
+ form_mughal_empire_tt_3: "Country gains a permanent claim on §YNagpur§! cores."
+
+ form_nepal_tt_2: "Country obtains §YNepal§! missions."
 
  ############################
  # COLONIAL NATION TOOLTIPS #

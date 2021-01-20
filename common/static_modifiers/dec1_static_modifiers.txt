@@ -641,7 +641,8 @@ dec1_abolished_the_mandate_of_heaven = {
 	# Inca
 
 	dec1_native_empire = {
-
+		loot_amount = 0.10 
+		general_cost = -0.10 
 	}
 
 	# Ireland
@@ -661,7 +662,7 @@ dec1_abolished_the_mandate_of_heaven = {
 	dec1_dissolution_of_the_shogunate = {
 		embracement_cost = -0.1
 	}
-	
+
 	# Jerusalem
 
 	dec1_united_christianity = {
@@ -671,175 +672,190 @@ dec1_abolished_the_mandate_of_heaven = {
 	# Kurland
 
 	dec1_battle_memoirs = {
-
-	}
+		war_exhaustion = -0.10
+	}		
 
 	# Malaya
 
 	dec1_eastern_trade_route = {
-
+		culture_conversion_cost = -0.03
+		merchants = 1
 	}
 
 	# Manchu
 
 	dec1_manchu_banner_camps = {
-
+		land_morale = 0.10 
 	}
 
 	# Marathas
 
 	dec1_maratha_warriors = {
-
+		discipline = 0.01
 	}
 
 	# Maya
 
 	dec1_league_of_mayapan = {
-
+		diplomatic_reputation = 1 
 	}
 
 	# Mongol Empire
 
 	dec1_temujins_legacy_reborn = {
-
+		siege_ability = 0.10
 	}
 
 	# Mughals
 
 	dec1_empire_of_the_mughal_tribe = {
-
+		backrow_artillery_damage = 0.10
 	}
 
 	# Nagpur
 
 	dec1_transcend_tribal_loyalties = {
-		 
+		ae_impact = -0.1
 	}
 
 	# Nepal
 
 	dec1_dalai_lama_of_tibet = {
-
+		all_power_cost = -0.1
 	}
 
 	# Netherlands
 
 	dec1_dutch_trade_empire = {
-
+		global_trade_power = 0.1 
+		placed_merchant_power = 2 
 	}
 
 	# Persia
 
 	dec1_the_empire_of_ages = {
-
+		global_manpower_modifier = 0.10
 	}
 
 	# Punjab
 
 	dec1_gem_of_india = {
-
+		production_efficiency = 0.05
 	}
 
 	# Prussia
 
 	dec1_prussian_greatness = {
-
+		discipline = 0.01
+		land_morale = 0.03
 	}
 
 	# Qing
 
 	dec1_qings_of_china = {
-
+		prestige_decay = -0.01
+		manpower_recovery_speed = 0.01
+		yearly_corruption = 0.05 # Debuff
 	}
 
 	# Rajputana
 
 	dec1_unite_the_princes = {
-
+		prestige_from_land = 0.10
 	}
 
 	# Romania
 	
 	dec1_legacy_of_rome = {
-
+		prestige = 0.1
+		prestige_decay = -0.01
 	}
 
 	# Roman Empire
 
 	dec1_true_roman_successor = {
-
+		religious_unity = 0.1
+		legitimacy = 1
+		all_power_cost = -0.1
 	}
 
 	# Rum
 
-	dec1_who_stole_the_rum = {
-
+	dec1_anatolian_islam = {
+		religious_unity = 0.1
+		global_missionary_strength = 0.01
 	}
 
 	# Russia
 
 	dec1_third_rome = {
-
+		missionaries = 1 
+		tolerance_heathen = -1
 	}
 
 	# Ruthenia
 
 	dec1_the_rus_people = {
-
+		culture_conversion_cost = -0.20
+		num_accepted_cultures = -1
 	}
 
 	# Sardinia-Piedmont
 
 	dec1_kingdom_of_italy = {
-
+		land_morale = 0.05
+		fire_damage = 0.05
 	}
 
 	# Scandinavia
 
 	dec1_viking_spirit = {
-
+		loot_amount = 0.20
 	}
 
 	# Shan
 
 	dec1_confederation_of_the_shan = {
-		
+		diplomatic_reputation = 1
 	}
 
 	# Sokoto
 
 	dec1_the_sokoto_caliphate = {
-
+		religious_unity = 0.7 
 	}
 
 	# Spain
 
 	dec1_castilian_heritage = {
-
+		legitimacy = 1
+		power_projection_from_insults = 0.1
 	}
 
 	# Swabia
 
 	dec1_great_kingdom_of_germany = {
-
+		shock_damage = 0.10
+		shock_damage_received = -0.10 
 	}
 
 	# Tibet
 
 	dec1_legacy_of_the_tibetan_empire = {
-
+		defensiveness = 0.10
 	}
 
 	# Tripoli
 
 	dec1_recognized_kingdom = {
-
+		army_tradition = 1
 	}
 
 	# Tuscany
 
 	dec1_tuscan_raiders = {
-
+		global_ship_cost = -0.05
+		may_perform_slave_raid = yes
 	}
 
 	# Two Sicilies
@@ -852,13 +868,15 @@ dec1_abolished_the_mandate_of_heaven = {
 	# Westphalia
 
 	dec1_german_spirit = {
-
+		leader_siege = 1
+		general_cost = -0.10
 	}
 
 	# Yuan
 
 	dec1_the_yuan_dynasty = {
-
+		reinforce_cost_modifier = -0.05
+		years_of_nationalism = -3
 	}
 
 ################## Colonial Nations ##################

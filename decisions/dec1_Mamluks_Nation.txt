@@ -1,6 +1,6 @@
 country_decisions = {
 
-		adopt_mamluk_government = {
+	adopt_mamluk_government = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
@@ -56,8 +56,8 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MAM # Country TAG
-			set_country_flag = formed_belgium_nation_flag # Country Formation Flag
-			custom_tooltip = form_belgium_tt_2 # New Missions
+			set_country_flag = formed_mamluks # Country Formation Flag
+			custom_tooltip = form_mamluks_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank	
 			MAM = { # Capital change and bonuses				
 				set_capital = 361 # Cairo
@@ -115,7 +115,12 @@ country_decisions = {
 					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_union_of_two
+					duration = 49275
+				}					
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

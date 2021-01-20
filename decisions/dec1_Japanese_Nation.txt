@@ -22,7 +22,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 4 # changed from 10 for testing
 				}
 			}
 		}
@@ -105,7 +105,12 @@ country_decisions = {
 					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_dissolution_of_the_shogunate
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -254,7 +259,12 @@ country_decisions = {
 					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_dissolution_of_the_shogunate
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -390,7 +400,12 @@ country_decisions = {
 					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_dissolution_of_the_shogunate
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

@@ -1,35 +1,35 @@
 country_decisions = {
 
-	maratha_nation = {
+	couronian_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no		
-			primary_culture = marathi	
+			is_colonial_nation = no
+			culture_group = baltic
 			NOT = { 
-				has_country_flag = formed_maratha_flag
-				exists = MAR
-				tag = MAR
+				has_country_flag = formed_courland_flag
+				exists = KUR
+				tag = LIV
+				tag = RIG
+			}
+			OR = {
+				ai = no
+				is_religion_enabled = protestant
+				is_religion_enabled = reformed
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 1 # Only needs to be an OPM
 				}
-			}	
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 516 #Broach
-				province_id = 546 #Nagpur
-				province_id = 1946 #Satara
-				province_id = 2033 #Savanur
-				province_id = 2034 #Pune
-				province_id = 4429 #Rajapur
-				province_id = 2026 #Tanjore
-				province_id = 4431 #Kolhapur
+				province_id = 39	 # Kurland
+				province_id = 1935	 # Semigallia
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -38,38 +38,33 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = MAR }			
+			NOT = { exists = KUR }			
 			is_subject = no
 			is_at_war = no
-			owns_core_province = 546 #Nagpur
-			owns_core_province = 1946 #Satar
-			owns_core_province = 2033 #Savanur
-			owns_core_province = 2034 #Pune
-			owns_core_province = 4429 #Rajapur
-			owns_core_province = 4431 #Kolhapur
 			OR = {
-				owns_core_province = 2026 #Tanjore
-				owns_core_province = 516 #Broach
+				religion = reformed
+				religion = protestant
 			}
+			owns_core_province = 39	 # Kurland
+			owns_core_province = 1935 # Semigallia
 		}
 		effect = {
-			change_tag = MAR # Country TAG
-			set_country_flag = formed_maratha_flag # Country Formation Flag
-			custom_tooltip = form_maratha_tt_2 # New Missions
-			custom_tooltip = form_maratha_tt_3 # Claims
-			custom_tooltip = form_maratha_tt_4 # Claims
-			# Indian Units
-			if = {
-				limit = {
-					NOT = { technology_group = indian }
+			change_tag = KUR # Country TAG
+			set_country_flag = formed_courland_flag # Country Formation Flag
+			custom_tooltip = form_courland_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank	
+			every_neighbor_country = {
+				limit = { 
+					government = monarchy 
 				}
-				change_technology_group = indian
-				change_unit_type = indian
-			}				
-			custom_tooltip = dec1_decisions_blank				
-			MAR = { # Capital change and bonuses
-				set_capital = 44 # Hamburg
-				44 = {
+				add_opinion = { 
+					who = ROOT 
+					modifier = secularized_monastic_order 
+				}
+			}						
+			KUR = { # Capital change and bonuses
+				set_capital = 1935
+				1935 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -93,19 +88,7 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }	
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Claims	
-					deccan_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = MAR
-					}
-					west_india_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = MAR
-					}					
+					# Claims
 					# Government Rank change				
 					if = {
 						limit = {
@@ -129,7 +112,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = MAR_ideas }
+						NOT = { has_idea_group = KUR_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -138,7 +121,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_maratha_warriors
+					name = dec1_battle_memoirs
 					duration = 49275
 				}				
 				# Increased Centralization
@@ -146,12 +129,9 @@ country_decisions = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400
 	}
-
 }

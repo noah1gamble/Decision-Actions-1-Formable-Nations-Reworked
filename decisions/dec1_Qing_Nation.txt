@@ -170,7 +170,12 @@ country_decisions = {
 					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_qings_of_china
+					duration = 49275
+				}					
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

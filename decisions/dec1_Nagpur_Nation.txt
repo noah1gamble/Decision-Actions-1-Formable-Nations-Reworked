@@ -1,30 +1,39 @@
 country_decisions = {
 
-	manchu_nation = {
+	gond_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			primary_culture = manchu		
+			is_colonial_nation = no						
+			culture_group = central_indic
 			NOT = { 
-				has_country_flag = formed_manchu_flag
-				exists = MCH
-				tag = MCH
+				has_country_flag = formed_mughal_empire_flag
+				has_reform = celestial_empire
+				exists = NAG	
+				tag = NAG	
+				tag = PER
+				tag = TUR
+				tag = HLR
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 4
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 730 # Girin
-				province_id = 1053 # Hinggan
-				province_id = 2108 # Huncun
+				province_id = 551 #Mandla
+				province_id = 546 #Nagpur
+				province_id = 2082 #Raipur
+				province_id = 547 #Bastar
+				province_id = 2050 #Chanda
+				province_id = 560 #Jharkhand
+				province_id = 552 #Cuttack
+				province_id = 548 #Illichpur
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -32,23 +41,30 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 5
-			NOT = { exists = MCH }			
+			adm_tech = 10
+			NOT = { exists = NAG }
 			is_subject = no
 			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			owns_core_province = 730 # Girin
-			owns_core_province = 1053 # Hinggan
-			owns_core_province = 2108 # Huncun
+			owns_core_province = 551 #Mandla
+			owns_core_province = 546 #Nagpur
+			owns_core_province = 2082 #Raipur
+			owns_core_province = 547 #Bastar
+			owns_core_province = 2050 #Chanda
+			owns_core_province = 560 #Jharkhand
+			OR = {
+				owns_core_province = 552 #Cuttack
+				owns_core_province = 548 #Illichpur
+			}
 		}
 		effect = {
-			change_tag = MCH # Country TAG
-			set_country_flag = formed_manchu_flag # Country Formation Flag
-			custom_tooltip = form_manchu_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank				
-			MCH = { # Capital change and bonuses
-				set_capital = 730 # Girin
-				730 = {
+			change_tag = NAG # Country TAG
+			set_country_flag = formed_mughal_empire_flag # Country Formation Flag
+			custom_tooltip = form_mughal_empire_tt_2 # New Missions
+			custom_tooltip = form_mughal_empire_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank
+			NAG = { # Capital change and bonuses
+				set_capital = 546 # Nagpur
+				546 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -73,57 +89,57 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					custom_trigger_tooltip = {
-						tooltip = form_manchu_tt_3
-						ilan_hala_area = {
+ 					custom_trigger_tooltip = {
+						tooltip = form_mughal_empire_tt_3
+						upper_mahanadi_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_core = MCH
+							add_permanent_claim = NAG
 						}
-						central_jilin_area = {
+						berar_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_core = MCH
+							add_permanent_claim = NAG
 						}
-						ningguta_area = {
+						garjat_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_core = MCH
+							add_permanent_claim = NAG
 						}
-						jilin_area = {
+						orissa_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_core = MCH
+							add_permanent_claim = NAG
 						}
-						liaoning_area = {
+						baghelkhand_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_core = MCH
+							add_permanent_claim = NAG
 						}
-						central_heilongjiang_area = {
+						gondwana_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_core = MCH
+							add_permanent_claim = NAG
 						}
-						heilongjiang_area = {
+						jharkhand_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_permanent_claim = MCH
+							add_permanent_claim = NAG
 						}
-						east_heilongjiang_area = {
+						andhra_area = {
 							limit = {
-								NOT = { is_core = ROOT }
+								NOT = { owned_by = ROOT }
 							}
-							add_permanent_claim = MCH
+							add_permanent_claim = NAG
 						}						
-					}					
+					}
 					# Government Rank change				
 					if = {
 						limit = {
@@ -147,7 +163,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = MCH_ideas }
+						NOT = { has_idea_group = NAG_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -156,7 +172,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_manchu_banner_camps
+					name = dec1_transcend_tribal_loyalties
 					duration = 49275
 				}				
 				# Increased Centralization
@@ -164,9 +180,12 @@ country_decisions = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}			
+			}
 		}
-		ai_importance = 400		
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
 	}
 
-} 
+}

@@ -45,8 +45,10 @@ country_decisions = {
 		allow = {
 			adm_tech = 10
 			NOT = { exists = ICE }
-			is_subject = no
 			is_at_war = no
+			is_nomad = no
+			is_subject = no
+			is_free_or_tributary_trigger = no
 			owns_core_province = 370
 			owns_core_province = 371
 		}

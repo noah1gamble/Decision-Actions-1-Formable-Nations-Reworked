@@ -3,29 +3,24 @@ country_decisions = {
 	maya_nation = {
 		major = yes
 		potential = {
-			is_random_new_world = no
-			NOT = { has_country_flag = formed_mayapan_flag }
-			
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				ai = no
-				num_of_cities = 6
-			}
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no		
 			culture_group = maya
-			religion = mesoamerican_religion
-			NOT = { has_reform = celestial_empire }
-			NOT = { exists = MAY }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }			
-			is_colonial_nation = no
+			religion = mesoamerican_religion				
+			NOT = { 
+				has_country_flag = formed_mayapan_flag
+				exists = MAY
+				tag = MAY
+				tag = PAP
+				tag = GER
+				tag = HLR
+			}
 			OR = {
-				is_former_colonial_nation = no
+				ai = no
 				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					ai = yes
+					num_of_cities = 3
 				}
 			}
 		}
@@ -44,13 +39,11 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = { exists = MAY }			
+			is_subject = no
 			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
 			if = {
-				limit = {
-					has_dlc = "El Dorado"
-				}
+				limit = { has_dlc = "El Dorado" }
 				is_religion_reformed = yes
 			}
 			else = {
@@ -64,31 +57,91 @@ country_decisions = {
 			owns_core_province = 2632 #Xicallanco
 		}
 		effect = {
-			change_tag = MAY
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 3 }
+			change_tag = MAY # Country TAG
+			set_country_flag = formed_mayapan_flag # Country Formation Flag
+			custom_tooltip = form_mayapan_tt_2 # New Missions
+			custom_tooltip = form_mayapan_tt_3 # Claims
+			custom_tooltip = form_mayapan_tt_4 # Claims
+			custom_tooltip = dec1_decisions_blank				
+			MAY = { # Capital change and bonuses
+				set_capital = 2636 # Chacuyal
+				2636 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				set_government_rank = 3
-			}
-			yucatan_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					yucatan_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MAY
+					}
+					east_yucatan_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MAY
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
 				}
-				add_permanent_claim = MAY
-			}
-			east_yucatan_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = MAY_ideas }
+					}
+					country_event = { id = ideagroups.1 }
 				}
-				add_permanent_claim = MAY
-			}
-			add_prestige = 25
-			set_country_flag = formed_mayapan_flag
-			if = {
-				limit = { is_tribal = yes }
-				change_government = monarchy
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_league_of_mayapan
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
 			}
 		}
 		ai_will_do = {

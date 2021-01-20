@@ -2,7 +2,10 @@ country_decisions = {
 
 	# kingdom of jerusalem as player and handling of catholics and  french catholics forming it
 
-	# DEVNOTE: this whole decision could be reworked to be really cool. I suggest it being split into a few different choices - form kingdom, form kingdom as march/vassal, and one for knights/cyprus/provence and how they will uniquely handle it, as they have historical relevance to jerusalem. lots of other good thoughts, i just have a migraine, so im typing it poorly. lots to expand on for the holy city tho.
+	# DEVNOTE: this whole decision could be reworked to be really cool. I suggest it being split into a few different choices
+	# form kingdom, form kingdom as march/vassal, and one for knights/cyprus/provence 
+	# and how they will uniquely handle it, as they have historical relevance to jerusalem. 
+	# lots of other good thoughts, i just have a migraine, so im typing it poorly. lots to expand on for the holy city tho.
 
 	kingdom_of_jerusalem = {
 		major = yes
@@ -16,6 +19,8 @@ country_decisions = {
 				government = republic 
 				has_reform = celestial_empire
 				exists = KOJ
+				tag = PAP
+				tag = ROM
 			}
 			OR = {
 				owns = 379 # Any catholic ruler owns Jerusalem
@@ -49,7 +54,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 3
+			adm_tech = 5
 			NOT = { exists = KOJ }
 			is_subject = no
 			is_at_war = no
@@ -159,7 +164,8 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					# Claims
+				hidden_effect = { # Hidden Effects to fix bad tooltips					
+				# Claims
 					every_province = {
 						limit = {
 							OR = {
@@ -193,29 +199,25 @@ country_decisions = {
 						change_government = monarchy
 					}																		
 				}
+				# Custom Ideas check and change		
 				if = {
-					limit = {	 # Custom Ideas check and ROOT check
-						OR = {
-							has_custom_ideas = no
-							NOT = { 
-								has_idea_group = ALP_ideas 
-							}
-						}
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = KOJ_ideas }
 					}
-					country_event = { 
-						id = ideagroups.1
-					}
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = {
-					id = dec1_events.3	# Custom Missions change
-				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
+				# National Ability
 				add_country_modifier = {
-					name = dec1_tough_terrain_castles	# National Ability
+					name = dec1_united_christianity
 					duration = 49275
-				}			
+				}				
+				# Increased Centralization
 				add_country_modifier = {
-					name = dec1_increased_centralization	# Increased Centralization
+					name = dec1_increased_centralization
 					duration = -1
 				}
 			}					
@@ -226,5 +228,6 @@ country_decisions = {
 		ai_importance = 400 
 		# todo: desire for french catholics to desire this when low papal relations and whatnot
 	}
+
 	# restore jerusalem as a march
 }

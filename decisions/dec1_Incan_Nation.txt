@@ -3,38 +3,29 @@ country_decisions = {
 	incan_nation = {
 		major = yes
 		potential = {
-			is_random_new_world = no
-			
-			NOT = { has_country_flag = formed_inca_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
-			NOT = { tag = INC }
-			religion_group = pagan
-			OR = {
-				ai = no
-				NOT = { exists = INC }
-			}
-			OR = {
+			is_random_new_world = no # New World Country so this should be here
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = {
+				has_country_flag = formed_inca_flag
+				exists = INC
+				tag = INC
+				tag = HLR
+				tag = ROM
+				tag = PAP
+		 	}
+			 OR = {
 				culture_group = andean_group
 				primary_culture = cara
 				primary_culture = chachapoyan
 			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
 			OR = {
 				ai = no
-				num_of_cities = 8
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -66,10 +57,12 @@ country_decisions = {
 			}
 		}
 		allow = {
+			adm_tech = 10
 			NOT = { exists = INC }
 			is_at_war = no
-			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			is_subject = no
+			is_free_or_tributary_trigger = no	
 			owns_core_province = 808 #Qusqu
 			owns_core_province = 813 #Kashamarka
 			owns_core_province = 810 #Wankawilka
@@ -84,6 +77,84 @@ country_decisions = {
 			}
 		}
 		effect = {
+			change_tag = INC # Country TAG
+			set_country_flag = formed_inca_flag # Country Formation Flag
+			custom_tooltip = form_inca_ # New Missions
+			custom_tooltip = dec1_decisions_blank
+			if = { # Remove the Empire of China if ROOT is current emperor
+				limit = {
+					is_emperor_of_china = yes
+				}
+				dismantle_empire_of_china = yes
+			}				
+			INC = { # Capital change and bonuses				
+				set_capital = 808 # Cusco
+				808 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_tribal # Government Type Change
+				}				
+				# Reform Change
+				add_government_reform = tribal_despotism
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = INC_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
+				}
+                country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_native_empire
+					duration = 49275
+				}					
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}					
 		}
 		ai_will_do = {
 			factor = 1

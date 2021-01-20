@@ -130,14 +130,14 @@ country_decisions = {
 			custom_tooltip = form_carthage_tt_4 # Region/Area Claims
 			custom_tooltip = form_carthage_tt_5 # Culture Change
 			hidden_effect = {
-				every_province = { # Culture change
+				every_owned_province = { # Culture change
 				limit = {
 					NOT = {
 						culture = phoenician
 					}
 				}
 				change_culture = phoenician
-			}
+				}
 			}
 			custom_tooltip = dec1_decisions_blank	
 			CTG = { # Capital change and bonuses			

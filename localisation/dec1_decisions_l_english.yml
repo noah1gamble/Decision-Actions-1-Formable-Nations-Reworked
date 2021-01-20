@@ -269,7 +269,7 @@
  german_kingdom_nation_title: "@GER Restore the German Kingdom"
  german_kingdom_nation_desc: "The tripartite division of the Carolingian Empire effected by the Treaty of Verdun was challenged very early on with the death of the Emperor Lothair I in 855. He had divided his kingdom of Middle Francia between his three sons and immediately the northernmost of the three divisions, Lotharingia, was disputed between the kings of East and West Francia. The war over Lotharingia lasted until 925. Lothair II of Lotharingia died in 869 and the Treaty of Meerssen (870) divided his kingdom between East and West Francia, but the West Frankish sovereigns relinquished their rightful portion to East Francia by the Treaty of Ribemont in 880. Ribemont determined the border between France and Germany until the fourteenth century. The Lotharingian nobility tried to preserve their independence of East of West Frankish rule by switching allegiance at will with the death of king Louis the Child in 911, but in 925 Lotharingia was finally ceded to East Francia by Rudolph of West Francia and it thereafter formed the Duchy of Lorraine within the East Frankish kingdom."
 
- golden_horde_nation_title: "@GLH Re-form the Golden Horde"
+ golden_horde_nation_title: "@GLH Restore the Golden Horde"
  golden_horde_nation_desc: "Centuries ago our Great Father united our ancestors in their ancient homeland. He died leaving his sons to squabble and split his mighty empire into petty fiefs, small, weak and unworthy of his legacy! The disjointed remnants still sweep across the steppes instilling fear in the hearts of his enemies just like the Great Mongol army once did.\n\nNo more! A worthy people still carrying the banner of his legacy ride across these lands! While we now bow before a new God, the blood of Genghis Khan still flows through our veins. We are the Golden Horde and we are coming for what is rightfully ours!"
 
  great_britain_nation_title: "@GBR Form Great Britain"
@@ -390,7 +390,31 @@
  netherlands_nation_desc: "The Dutch are emerging as one of Europe's most capable naval and colonial powers. Lucrative trade opportunities, locally and overseas, have resulted in a swift evolution for the country into one of the first capitalist countries in the world."
 
  tuscan_nation_title: "@TUS Foundation of Tuscany"
- tuscan_nation_desc: "Not since the days of the Margraviate of Tuscany has a single power controlled as much of the the Tuscan lands as we do. Let us adopt a new title to better reflect our new standing among the states of Italy. "
+ tuscan_nation_desc: "Not since the days of the Margraviate of Tuscany has a single power controlled as much of the the Tuscan lands as we do. Let us adopt a new title to better reflect our new standing among the states of Italy."
+
+ restore_ilkhanate_decision_title: "@ILK Restore the Ilkhanate"
+ restore_ilkhanate_decision_desc: "As the Great Khan did long ago, we should delegate Persia to a subordinate Khan to ease the burden of ruling our vast empire."
+ 
+ restore_ilkhanate_decision_march_title: "@ILK Re-establish the Ilkhanate"
+ restore_ilkhanate_decision_march_desc: "Following a hard-fought campaign, the [Root.Monarch.GetTitle] has called for a Kurultai at the recently conquered city of Soltanieh. An assembly of generals and lesser Khans gathers outside a most auspicious location; the Mausoleum of the Ilkhan Oljeitu.\n\nSpeaking before the Kurultai, [Root.Monarch.GetTitle] [Root.Monarch.GetName] raises the pressing question of how Iran is to be ruled; [Root.Monarch.GetSheHe] gestures toward the Mausoleum and boldly proposes that the Ilkhanate should be restored. Invoking the legacy of the great Mongol Empire and the conquests of Genghis Khan, [Root.Monarch.GetSheHe] makes a compelling case for the revival of the subordinate Khanate"
+
+ irish_nation_title: "@IRE Declaration of Irish Independence"
+ irish_nation_desc: "For decades England has attempted to subjugate the Irish population and take control of the island. To unite the Irish lands under a sole flag may be our only chance to repel them."
+
+ couronian_nation_title: "@KUR Reform into Kurland"
+ couronian_nation_desc: "The Northern Crusade has long come to an end. Our Crusader identity will soon bring us no more than nothing and maybe one day, it will eventually become a burden... By secularizing the state and reforming it into a duchy which is led by the former Grandmaster and his knights - now the Duke and his vassals - we can rouse the state from decadence and ameliorate our diplomatic situation."
+
+ manchu_nation_title: "@MCH Embrace the Manchu Culture"
+ manchu_nation_desc: "With the three capitals of the ancient Jurchen tribes firmly in our hands, it is now time to proclaim our people's unification through the adoption of a new identity: Manchu."
+
+ maratha_nation_title: "@MAR Maratha Confederation"
+ maratha_nation_desc: "The Maratha warriors all over Deccan will gather to our banners if we show clear leadership and acquire all the great forts of the Desh. Let us unite the clans and go forth to rule India!"
+
+ maya_nation_title: "@MAY Reunite the League of Mayapan"
+ maya_nation_desc: "Once all Maya states of importance fought under the same banner. Let us recreate the League of Mayapan and put the petty conflicts that once shattered the confederation behind us."
+
+ punjab_nation_title: "@PUN Kingdom of Punjab"
+ punjab_nation_desc: "We must unite the Punjabi people if we are ever to be able to stand against foreign invaders. Together we will build a modern state with armies capable of taking on the many enemies who would attack us for our lands, and who would do anything to extinguish our faith!"
 
  # Colonial Nations
 

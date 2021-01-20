@@ -9,7 +9,7 @@ country_decisions = {
 			culture_group = tartar
 			has_reform = steppe_horde
 			NOT = { 
-				has_country_flag = formed_tatar_flag 
+				has_country_flag = formed_golden_horde_flag 
 				exists = TAT
 				tag = TAT
 				tag = GLH
@@ -103,9 +103,11 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = GLH # Country TAG
-			set_country_flag = formed_tatar_nation_flag # Country Formation Flag
-			custom_tooltip = form_tatar_tt_2 # New Missions
-			custom_tooltip = form_tatar_tt_3 # Region/Area Claims
+			set_country_flag = formed_golden_horde_flag # Country Formation Flag
+			custom_tooltip = form_golden_horde_tt_2 # New Missions
+			custom_tooltip = form_golden_horde_tt_3 # Region/Area Claims
+			custom_tooltip = form_golden_horde_tt_4 # Region/Area Claims
+			custom_tooltip = form_golden_horde_tt_5 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
 			GLH = { # Capital change and bonuses				
 				set_capital = 284 # Crimea
@@ -134,14 +136,25 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Region/Area Claims
+					# Region/Area Claims [TODO: Rework these to be more accurate, these are poorly done.]
 					russia_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = GLH
-					}	
-					# todo: add historical mongol empire cores
+					}
+					ural_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = GLH
+					}							
+					pontic_steppe_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = GLH
+					}
 					# Government Rank change				
 					if = {
 						limit = {
