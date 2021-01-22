@@ -3,86 +3,142 @@ country_decisions = {
 	quebec_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no			
+			is_playing_custom_nation = no
+			NOT = { 
+				has_country_flag = changed_from_colonial_nation 
+				has_country_flag = formed_quebec_flag 
+				exists = QUE
+				tag = QUE
+				tag = POR
+				tag = COL
+				tag = PAP
+			}
+			capital_scope = { # Has a capital in Colonial Region
+				colonial_region = colonial_canada
+				is_core = ROOT
+			}			
 			OR = {
+				AND = { # Natives have reformed religion, and has at least 10 provinces
+					is_religion_reformed = yes
+					num_of_cities = 10
+				}
+				# is former colonial nation
 				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_canada = {
-				owned_by = ROOT
-			}
+				# is current colonial nation
+				is_colonial_nation = yes 
+			}		
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 6 # Colonial Nation owns at least 6 provinces
 				}
-			}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 996	# Innu
-				province_id = 995	# Atikamekw
-				province_id = 994	# stadacona
-				province_id = 990	# Kwedech
-				province_id = 992	# Algonquin
-				province_id = 1002	# Abitbi
-				province_id = 1000	# Cree
-				province_id = 999	# Nunavik
-				province_id = 998	# Ungava
-				province_id = 997	# Labrador
+				colonial_region = colonial_canada
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}			
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
 			NOT = { exists = QUE }
-			owns_core_province = 996	# Innu
-			owns_core_province = 995	# Atikamekw
-			owns_core_province = 994	# stadacona
-			owns_core_province = 990	# Kwedech
-			owns_core_province = 992	# Algonquin
-			owns_core_province = 1002	# Abitbi
-			owns_core_province = 1000	# Cree
-			owns_core_province = 999	# Nunavik
-			owns_core_province = 998	# Ungava
-			owns_core_province = 997	# Labrador
+			is_subject = no
+			is_colonial_nation = no
+			is_former_colonial_nation = yes
+			is_at_war = no
+			owns = 1090
+			num_of_cities = 12 # Colonial nations need 12
 		}
 		effect = {
-			change_tag = QUE
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			colonial_canada = {
-				limit = {
-					NOT = { owned_by = ROOT }
+			change_tag = QUE # Country TAG
+			set_country_flag = formed_quebec_flag # Country Formation Flag
+			set_country_flag = changed_from_colonial_nation # Colonial Nation flag
+			custom_tooltip = form_quebec_tt_2 # New Missions
+			custom_tooltip = form_quebec_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank
+			QUE = { # Capital change and bonuses				
+				set_capital = 986 # Kespek
+				986 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = QUE
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Changes
+				add_government_reform = autocracy_reform						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Region/Area Claims
+					colonial_canada = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = QUE
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = QUE_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_northern_republic
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 
 }

@@ -4,30 +4,26 @@ country_decisions = {
 
 	confederate_states_nation = {
 		major = yes
-		potential = {			
+		potential = {	
+			is_former_colonial_nation = yes
+			is_colonial_nation = yes		
 			NOT = { 
 				has_country_flag = changed_from_colonial_nation
 				tag = CSA
 				tag = HLR
 				tag = PAP
 			 }
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-				AND = {
-					NOT = {
-						OR = {
-							technology_group = north_american
-							technology_group = mesoamerican
-							technology_group = andean
-							technology_group = high_american
-							technology_group = south_american
-						}
-					}
-					capital_scope = {
-						colonial_region = colonial_eastern_america
-						is_core = ROOT
-					}
+			 capital_scope = {
+				colonial_region = colonial_eastern_america
+				is_core = ROOT
+			}				 
+			NOT = {
+				OR = {
+					technology_group = north_american
+					technology_group = mesoamerican
+					technology_group = andean
+					technology_group = high_american
+					technology_group = south_american
 				}
 			}
 			OR = {

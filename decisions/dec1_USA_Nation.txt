@@ -3,71 +3,143 @@ country_decisions = {
 	usa_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			was_never_end_game_tag_trigger = yes
-			is_nomad = no
-			is_random_new_world = no			
+			is_playing_custom_nation = no
+			NOT = { 
+				has_country_flag = changed_from_colonial_nation 
+				has_country_flag = formed_usa_flag 
+				exists = USA
+				tag = USA
+				tag = CSA
+				tag = POR
+				tag = COL
+				tag = PAP
+			}
+			capital_scope = { # Has a capital in Colonial Region
+				colonial_region = colonial_eastern_america
+				is_core = ROOT
+			}			
 			OR = {
+				AND = { # Natives have reformed religion, and has at least 10 provinces
+					is_religion_reformed = yes
+					num_of_cities = 10
+				}
+				# is former colonial nation
 				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_eastern_america = {
-				owned_by = ROOT
-			}
+				# is current colonial nation
+				is_colonial_nation = yes 
+			}		
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 13 # Colonial Nation owns at least 13 provinces
 				}
-			}
+			}			
 		}
+		provinces_to_highlight = {
+			OR = {
+				colonial_region = colonial_eastern_america
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}			
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_eastern_america
-				is_core = ROOT
-			}
 			NOT = { exists = USA }
+			is_subject = no
+			is_colonial_nation = no
+			is_former_colonial_nation = yes
+			is_at_war = no
+			owns = 965
+			num_of_cities = 13 # Colonial nations need 13
 		}
 		effect = {
-			change_tag = USA
-			remove_non_electors_emperors_from_empire_effect = yes
-			swap_non_generic_missions = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			if = {
-				limit = {
-					culture_group = british
-					NOT = { primary_culture = american }
+			change_tag = USA # Country TAG
+			set_country_flag = formed_usa_flag # Country Formation Flag
+			set_country_flag = changed_from_colonial_nation # Colonial Nation flag
+			custom_tooltip = form_usa_tt_2 # New Missions
+			custom_tooltip = form_usa_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank
+			USA = { # Capital change and bonuses				
+				set_capital = 965 # Manhattan 
+				965 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				change_primary_culture = american
-			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			colonial_eastern_america = {
-				limit = {
-					NOT = { owned_by = ROOT }
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Changes
+				add_government_reform = american_republic						
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Region/Area Claims
+					colonial_california = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = USA
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = republic
+								}
+							}
+						change_government = republic
+					}																		
 				}
-				add_permanent_claim = USA
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = USA_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_land_of_freedom
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 
 }

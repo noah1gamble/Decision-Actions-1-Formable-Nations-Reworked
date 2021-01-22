@@ -445,46 +445,6 @@
  form_rajput_tt_2: "Country obtains §YRajput§! missions."
  form_rajput_tt_3: "Country gains a permanent claim on §YWest India§! region."
 
- ############################
- # COLONIAL NATION TOOLTIPS #
- ############################
-
- form_australia_tt_2: "Country obtains §YAustralia§! missions."
- form_australia_tt_3: "Country gains a permanent claim on §YOceania§! region."
-
- form_brazil_tt_2: "Country obtains §YBrazil§! missions."
- form_brazil_tt_3: "Country gains a permanent claim on §YAmazonia§!."
-
- form_upca_tt_2: "Country obtains §YUnied Central America§! missions."
- form_upca_tt_3: "Country gains a permanent claim on §YMexico§! colonial region."
-
- form_california_tt_2: "Country obtains §YCalifornia§! missions."
- form_california_tt_3: "Country gains a permanent claim on §YCalifornia§! colonial region."
-
- form_canada_tt_2: "Country obtains §YCanada§! missions."
- form_canada_tt_3: "Country gains a permanent claim on §Y   §! colonial region."
-
- form_columbia_tt_2: "Country obtains §YColumbia§! missions."
- form_columbia_tt_3: "Country gains a permanent claim on §Y   §! colonial region."
-
- form_chile_tt_2: "Country obtains §YChile§! missions."
- form_chile_tt_2: "Country gains a permanent claim on §YAndean§! region."
-
- form_haiti_tt_2: "Country obtains §YHaiti§! missions."
- form_haiti_tt_3: "Country gains a permanent claim on §YHaiti§! colonial region."
-
- form_la_plata_tt_2: "Country obtains §YLa Plata§! missions."
- form_la_plata_tt_3: "Country gains a permanent claim on §YLa Plata§! colonial region."
-
- form_louisiana_tt_2: "Country obtains §YLouisiana§! missions."
- form_louisiana_tt_3: "Country gains a permanent claim on §YLouisiana§! colonial region."
-
- form_mexico_tt_2: "Country obtains §YMexico§! missions."
- form_mexico_tt_3: "Country gains a permanent claim on §YMexico§! colonial region."
-
- form_paraguay_tt_2: "Country obtains §YParaguay§! missions."
- form_paraguay_tt_3: "Country gains a permanent claim on §YParaguay§! colonial region."
-
  form_roman_empire_tt_2: "Country obtains §YRoman Empire§! missions."
 
  form_russian_nation_tt_3: "Country gains a permanent claim on §YRussian Empire§! historical cores."
@@ -503,15 +463,72 @@
  form_tuscany_tt_2: "Country obtains §YTuscany§! missions."
  form_tuscany_tt_3: "Country gains a permanent claim on all provinces with §YTuscan§! culture."
 
- ############
- # COLONIES #
- ############
+ ############################
+ # COLONIAL NATION TOOLTIPS #
+ ############################
 
- dec1_colonial_brazil: "Owns one province in the Colonial Region §YBrazil§!:\nOwned by [Root.GetAdjective] AND is the §YCapital§!"
+ form_alaska_tt_2: "Country obtains §YAustralia§! missions."
+ form_alaska_tt_3: "Country gains a permanent claim on §YAlaska§! colonial region."
 
- dec1_colonial_upca: "Owns one province in the Colonial Region §YMexico§!:\nOwned by [Root.GetAdjective] AND is the §YCapital§!"
+ form_australia_tt_2: "Country obtains §YAustralia§! missions."
+ form_australia_tt_3: "Country gains a permanent claim on §YOceania§! colonial region."
 
- dec1_colonial_australia: "Owns one province in the Colonial Region §YAustralia§!:\nOwned by [Root.GetAdjective] AND is the §YCapital§!"
+ form_brazil_tt_2: "Country obtains §YBrazil§! missions."
+ form_brazil_tt_3: "Country gains a permanent claim on §YAmazonia§!."
+
+ form_upca_tt_2: "Country obtains §YUnied Central America§! missions."
+ form_upca_tt_3: "Country gains a permanent claim on §YMexico§! colonial region."
+
+ form_usa_tt_2: "Country obtains §YUnied States of America§! missions."
+ form_usa_tt_3: "Country gains a permanent claim on §YEastern America§! colonial region."
+
+ form_california_tt_2: "Country obtains §YCalifornia§! missions."
+ form_california_tt_3: "Country gains a permanent claim on §YCalifornia§! colonial region."
+
+ form_canada_tt_2: "Country obtains §YCanada§! missions."
+ form_canada_tt_3: "Country gains a permanent claim on §YCanada§! colonial region."
+
+ form_columbia_tt_2: "Country obtains §YColumbia§! missions."
+ form_columbia_tt_3: "Country gains a permanent claim on §YColumbia§! colonial region."
+
+ form_chile_tt_2: "Country obtains §YChile§! missions."
+ form_chile_tt_2: "Country gains a permanent claim on §YAndean§! region."
+
+ form_haiti_tt_2: "Country obtains §YHaiti§! missions."
+ form_haiti_tt_3: "Country gains a permanent claim on §YCarribean§! colonial region."
+
+ form_la_plata_tt_2: "Country obtains §YLa Plata§! missions."
+ form_la_plata_tt_3: "Country gains a permanent claim on §YLa Plata§! colonial region."
+
+ form_louisiana_tt_2: "Country obtains §YLouisiana§! missions."
+ form_louisiana_tt_3: "Country gains a permanent claim on §YLouisiana§! colonial region."
+
+ form_mexico_tt_2: "Country obtains §YMexico§! missions."
+ form_mexico_tt_3: "Country gains a permanent claim on §YMexico§! colonial region."
+
+ form_paraguay_tt_2: "Country obtains §YParaguay§! missions."
+ form_paraguay_tt_3: "Country gains a permanent claim on §YParaguay§! colonial region."
+
+ form_cascadia_tt_2: "Country obtains §YCascadia§! missions."
+ form_cascadia_tt_3: "Country gains a permanent claim on §YAlaska§! colonial region."
+
+ form_illinois_tt_2: "Country obtains §YIllinois§! missions."
+ form_illinois_tt_3: "Country gains a permanent claim on §YIllinois§! colonial region."
+
+ form_peru_tt_2: "Country obtains §YPeru§! missions."
+ form_peru_tt_3: "Country gains a permanent claim on §YPeru§! colonial region."
+
+ form_sonora_tt_2: "Country obtains §YSonora§! missions."
+ form_sonora_tt_3: "Country gains a permanent claim on §YCalifornia§! colonial region."
+
+ form_venezuela_tt_2: "Country obtains §YVenezuela§! missions."
+ form_venezuela_tt_3: "Country gains a permanent claim on §YColumbia§! colonial region."
+
+ form_vermont_tt_2: "Country obtains §YVermont§! missions."
+ form_vermont_tt_3: "Country gains a permanent claim on §YEastern America§! colonial region."
+
+ form_zealandia_tt_2: "Country obtains §YZealandia§! missions."
+ form_zealandia_tt_3: "Country gains a permanent claim on §YAustralia§! colonial region."
 
  ########################
  # SPACING LOCALI1TION #

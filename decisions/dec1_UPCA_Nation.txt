@@ -6,73 +6,51 @@ country_decisions = {
 			is_playing_custom_nation = no
 			NOT = { 
 				has_country_flag = changed_from_colonial_nation 
-				has_country_flag = formed_upca_flag
+				has_country_flag = formed_upca_flag 
 				exists = CAM
 				tag = CAM
-				tag = MEX
+				tag = POR
+				tag = COL
 				tag = PAP
 			}
+			capital_scope = { # Has a capital in Colonial Region
+				colonial_region = colonial_mexico
+				is_core = ROOT
+			}			
 			OR = {
-				# natives that have a capital in colonial region
-				capital_scope = {
-					colonial_region = colonial_mexico
-					is_core = ROOT
+				AND = { # Natives have reformed religion, and has at least 10 provinces
+					is_religion_reformed = yes
+					num_of_cities = 10
 				}
-				# is former colonial nation or  is current colonial nation
-				OR = {
-					is_former_colonial_nation = yes
-					is_colonial_nation = yes
-				}
-				# non-colonial nations (usually colonizers) that has at least 20 provinces
-				AND = {
-					num_of_owned_provinces_with = {
-						colonial_region = colonial_mexico
-						value = 20
-					}
-					NOT = {
-						num_of_owned_provinces_with = {
-							colonial_region = colonial_mexico
-							value = 20
-						}			
-					}							
-				}
+				# is former colonial nation
+				is_former_colonial_nation = yes
+				# is current colonial nation
+				is_colonial_nation = yes 
 			}		
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 1 # Colonial United Central America
+					num_of_cities = 4 # Colonial Nation owns at least 4 provinces
 				}
-			}
+			}			
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 838	# Mosquito
-				province_id = 837	# Nicaragua
-				province_id = 840	# Honduras
-				province_id = 839	# Pipil
-				province_id = 841	# Guatemala
-				province_id = 842	# Pet�n
-				province_id = 843	# Belize
+				colonial_region = colonial_mexico
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}			
 		allow = {
 			adm_tech = 10
 			NOT = { exists = CAM }
+			is_subject = no
+			is_colonial_nation = no
+			is_former_colonial_nation = yes
 			is_at_war = no
 			owns = 841
-			num_of_cities = 10
-			owns_core_province = 838	# Mosquito
-			owns_core_province = 837	# Nicaragua
-			owns_core_province = 840	# Honduras
-			owns_core_province = 839	# Pipil
-			owns_core_province = 841	# Guatemala
-			owns_core_province = 842	# Pet�n
-			owns_core_province = 843	# Belize			
+			num_of_cities = 4 # Colonial nations need 4
 		}
 		effect = {
 			change_tag = CAM # Country TAG
@@ -83,12 +61,10 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_blank
 			CAM = { # Capital change and bonuses				
 				set_capital = 841 # Guatemala
-				CAM = {
-					841 = {
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
-					}
+				841 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank				
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
@@ -97,10 +73,10 @@ country_decisions = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}				
 				# Reform Changes
-				add_government_reform = autocracy_reform						
+				add_government_reform = oligarchy_reform						
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -113,9 +89,7 @@ country_decisions = {
 					# Region/Area Claims
 					colonial_mexico = {
 						limit = {
-							NOT = { 
-								owned_by = ROOT 
-							}
+							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = CAM
 					}
@@ -132,33 +106,39 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government = monarchy
+								government = republic
 								}
 							}
-						change_government = monarchy
+						change_government = republic
 					}																		
 				}
 				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
+						NOT = { has_idea_group = CAM_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_republic_of_hispania
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
-					duration = -1 # forever
+					duration = -1
 				}
 			}
-
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
 
 }

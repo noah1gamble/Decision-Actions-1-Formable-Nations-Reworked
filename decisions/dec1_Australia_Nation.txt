@@ -11,36 +11,25 @@ country_decisions = {
 				tag = AUS
 				tag = PAP
 			}
+			capital_scope = { # Has a capital in Colonial Region
+				colonial_region = colonial_australia
+				is_core = ROOT
+			}
 			OR = {
-				# natives that have a capital in colonial region
-				capital_scope = {
-					colonial_region = colonial_brazil
-					is_core = ROOT
+				AND = { # Natives have reformed religion, and has at least 10 provinces
+					is_religion_reformed = yes
+					num_of_cities = 10
 				}
-				# is former colonial nation or  is current colonial nation
-				OR = {
-					is_former_colonial_nation = yes
-					is_colonial_nation = yes
-				}
-				# non-colonial nations (usually colonizers) that has at least 20 provinces
-				AND = {
-					num_of_owned_provinces_with = {
-						colonial_region = colonial_australia
-						value = 20
-					}
-					NOT = {
-						num_of_owned_provinces_with = {
-							colonial_region = colonial_australia
-							value = 20
-						}			
-					}							
-				}
-			}		
+				# is former colonial nation
+				is_former_colonial_nation = yes
+				# is current colonial nation
+				is_colonial_nation = yes 
+			}	
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 1 # Colonial Australia
+					num_of_cities = 6 # Colonial Nation owns at least 6 provinces
 				}
 			}			
 		}
@@ -54,6 +43,9 @@ country_decisions = {
 		allow = {
 			adm_tech = 10
 			NOT = { exists = AUS }
+			is_subject = no
+			is_colonial_nation = no
+			is_former_colonial_nation = yes
 			is_at_war = no
 			owns = 1090
 			num_of_cities = 12
@@ -67,12 +59,10 @@ country_decisions = {
 			custom_tooltip = dec1_decisions_blank
 			AUS = { # Capital change and bonuses				
 				set_capital = 1090 # Eora
-				AUS = {
-					763 = {
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
-					}
+				763 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank				
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
@@ -95,7 +85,7 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
-					central_america_region = {
+					oceania_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
@@ -127,14 +117,19 @@ country_decisions = {
 						NOT = { has_idea_group = AUS_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_down_under
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
-					duration = -1 # forever
+					duration = -1
 				}
 			}
 		}
@@ -143,4 +138,5 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	
 }

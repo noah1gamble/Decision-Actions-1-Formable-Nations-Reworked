@@ -881,6 +881,163 @@ dec1_abolished_the_mandate_of_heaven = {
 
 ################## Colonial Nations ##################
 
+	# Alaska
+
+	dec1_chilling_kingdom = {
+		legitimacy = 1
+	}
+
+	# Australia
+
+	dec1_down_under = {
+		stability_cost_modifier = -0.1
+	}
+
+	# Brazil
+
+	dec1_imperial_ambitions = {
+		years_of_nationalism = -5
+		global_unrest = -1
+	}
+
+	# California
+
+	dec1_the_golden_state = {
+		all_power_cost = -0.1
+	}
+
+	# Canada <3
+
+	dec1_great_white_north = {
+		global_tax_modifier = 0.05
+	}
+
+	# Cascadia
+
+	dec1_beauty_in_cascadia = {
+		global_unrest = -2
+	}
+
+	# Chile
+
+	dec1_chilean_pride = {
+		diplomats = 1
+	}
+
+	# Columbia
+
+	dec1_dreams_of_gran_columbia = {
+ 		development_cost = -0.1
+	}
+
+	# Cuba
+	
+	dec1_cuban_hostilities = {
+		garrison_size = 0.10
+	}
+
+	# Florida
+
+	dec1_the_heat_of_florida = {
+		land_attrition = -0.05
+		hostile_attrition = 1 
+	}
+
+	# Haiti
+
+	dec1_independence_movement = {
+		legitimacy = 1
+	}
+
+	# Illinois
+
+	dec1_chicago_river = {
+		production_efficiency = 0.10
+	}
+
+	# La Plata
+
+	dec1_kingdom_of_la_plata = {
+		autonomy_change_time = -0.25
+	}
+
+	# Louisiana
+
+	dec1_louisiana_purchase = {
+		production_efficiency = 0.03
+		global_tax_modifier = 0.02
+	}
+
+	# Mexico
+
+	dec1_legacy_of_the_empire = {
+		army_tradition_decay = -0.01
+		discipline = 0.01
+	}
+
+	# Paraguay
+
+	dec1_national_pride_of_paraguay = {
+		diplomatic_reputation = 1
+	}
+
+	# Peru
+
+	dec1_peruvian_unity = {
+		garrison_size = 0.05
+		global_garrison_growth = 0.05
+	}
+
+	# Quebec
+
+	dec1_northern_republic = {
+		republican_tradition = 0.5 
+	}
+
+	# Sonora
+
+	dec1_mexican_opposition = {
+		land_morale = 0.10
+	}
+
+	# Texas
+
+	dec1_lone_star = {
+		land_forcelimit_modifier = 0.10 
+	}
+
+	# United Central America
+
+	dec1_republic_of_hispania = {
+		global_ship_cost = -0.05
+		global_ship_repair = 0.05
+	}
+
+	# United States
+
+	dec1_the_land_of_freedom = {
+		governing_capacity_modifier = 0.1
+		global_unrest = -1
+	}
+
+	# Venezuela
+
+	dec1_oil_research = {
+		production_efficiency = 0.10
+	}
+
+	# Vermont
+
+	dec1_english_success = {
+		discipline = 0.01
+	}
+
+	# Zeelandia
+
+	dec1_new_identity = {
+		administrative_efficiency = 0.2
+	}
+
 ################## Reformable Nations ##################
 
 	# Papal States

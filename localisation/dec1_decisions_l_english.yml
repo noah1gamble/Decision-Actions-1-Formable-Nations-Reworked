@@ -49,7 +49,7 @@
  austro_hungarian_empire_nation_desc: "Austria-Hungary, often referred to as the Austro-Hungarian Empire or the Dual Monarchy, was a constitutional monarchy in Central and Eastern Europe between 1867 and 1918.\n\nIt was formed when the Austrian Empire adopted a new constitution; as a result Austria and Hungary were placed on equal footing.\n\nThe Austro-Hungarian Empire was dissolved into several new states at the end of the First World War." 
 
  balkan_league_nation_title: "@BKL The Balkan League"
- balkan_league_nation_desc: ""
+ balkan_league_nation_desc: "The Balkan League is a the union between all major baltic powers into a single political entity; allowing us to defend our home from the great powers who seek to conquer our lands for themselves."
 
  baltic_union_nation_title: "@BTC The Baltic Union"
  baltic_union_nation_desc: "The United Baltic Duchy, also known as the Grand Duchy of Livonia, was a state proposed by the Baltic German nobility and exiled Russian nobility after the Russian Revolution and German occupation of the Courland, Livonian, and Estonian governorates of the Russian Empire."
@@ -238,7 +238,7 @@
  yugoslavia_nation_desc: "The country was formed in 1918 immediately after World War I as the Kingdom of Serbs, Croats and Slovenes by union of the State of Slovenes, Croats and Serbs and the Kingdom of Serbia. It was commonly referred to at the time as the 'Versailles state'."
 
  kievan_rus_nation_title: "@KRV The Kieven Rus"
- kievan_rus_nation_desc: ""
+ kievan_rus_nation_desc: "The Kievan Rus was a federation of East Slavic,Finno-Ugric, and many other peoples in Europe from the 9th to mid-13th century, under the reign of the Rurik dynasty.\n\nThe modern nations of Belarus, Russia, and Ukraine all claim Kievan Rus as their cultural ancestors with Belarus and Russia deriving their names from such.\n\nWe must form a new federation and unite our fellow brothers from those who seek to do us harm."
 
  brandenburg_prussia_nation_title: "@BRP Brandenburg-Prussia"
  brandenburg_prussia_nation_desc: "Based in the Electorate of Brandenburg, the main branch of the Hohenzollern intermarried with the branch ruling the Duchy of Prussia, and secured succession upon the latter's extinction in the male line in 1618. Another consequence of the intermarriage was the incorporation of the lower Rhenish principalities of Cleves, Mark and Ravensberg after the Treaty of Xanten in 1614."
@@ -422,27 +422,135 @@
  romanian_nation_title: "@RMN Romania"
  romanian_nation_desc: "The last vestiges of the Roman Empire are gone or captured by us, and although many would make claim to the imperial crown, we are its true descendants. With all the ancestral lands united under our wise rule, we can usher in a new era of prosperity. We are the children of Rome - the people of Romania!"
 
- # Colonial Nations
+ ###############################################
+ ############## Colonial Nations ###############
+ ###############################################
 
- brazil_nation_title: "@BRZ Brazilian Nation"
+  # Alaska
+
+ alaska_nation_title: "@ALA Alaska"
+ alaska_nation_desc: "Although our home is cold and harsh, we have mastered its terrain and called it home. Countless empires have attempted to build and buy us, but now we stand alone and independent, ready to carve out a name for ourselves."
+
+  # Australia
+
+ australia_nation_title: "@AUS Australia"
+ australia_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region. "
+
+ # Brazil
+
+ brazil_nation_title: "@BRZ Brazil"
  brazil_nation_desc: "The colonial masters who wished to enslave us are gone. It is time to form a truly independent country of our own. From this day forth the watchword of Brazil will be 'Independence or Death!'"
 
  por_flee_to_brazil_title: "@BRZ Flee to Brazil"
  por_flee_to_brazil_desc: "Portugal is in ruins! The monarch and the court must make haste across the sea before our enemies descend upon us once more. Though it will be painful to leave Portugal behind, we shall surely create a glorious new Empire in Brazil."
 
- upca_nation_title: "@CAM Central American Nation"
- upca_nation_desc: "Our people have endured years of foreign meddling, subjugation, incursions, and our lands divided... Enough! The time has come to liberate and unite our people under one banner, and write our own destiny. We will form a liberal nation enriched by the trade passing between the Atlantic and the Pacific oceans."
+  # Mexico
 
- australia_nation_title: "@AUS Australian Nation"
- australia_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region. "
-
- mexico_nation_title: "@MEX Mexican Nation"
+ mexico_nation_title: "@MEX Mexico"
  mexico_nation_desc: "We must leave the last of our colonial heritage behind and reform into a proper independent state. The nation of Mexico will become the protector of all of Mesoamerica!"
 
- california_nation_title: "@CAL Californian Nation"
+  # California
+
+ california_nation_title: "@CAL California"
  california_nation_desc: "We have made a home in this rugged land. It is time for us to muster our strength and cast off the oppression of our colonial overlords, so that we may build a paradise in the West."
 
- # Reformable Countries
+  # Canada
+
+ canada_nation_title: "@CAN Canada"
+ canada_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Columbia
+
+ colombia_nation_title: "@COL Columbia"
+ colombia_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Haiti
+
+ haiti_nation_title: "@HAT Haiti"
+ haiti_nation_desc: "It is not enough to have expelled the barbarians who have bloodied our land. We must forever assure liberty in the country of our birth and take any hope of re-enslaving us away from the inhuman government that for so long kept us oppressed. In the end we must live independent or die. "
+
+  # West Indies
+
+ west_indies_nation_title: "@NZL West Indies"
+ west_indies_nation_desc: "Now that our islands have been cut from the corrupt and weak powers of the Old World, we must federalise ourselves into a nation capable of uniting our disporate islands and their countless cultures and languages. We will never be one people, but in the West Indies Federation, we will dwell together in unity."
+
+  # Cascadia
+
+ cascadia_nation_title: "@CSC Cascadia"
+ cascadia_nation_desc: "All along the Columbia river and on the Pacific coast of America, our colonies stand united and independent and it is time we decided a name for our new nation, free from the labels of our colonial overlords. As Cascadia, we will lay claim to all lands north of the Columbia river and create a new nation of trade, freedom, and beauty!"
+
+  # Cuba
+
+ cuba_nation_title: "@CUB Cuba"
+ cuba_nation_desc: "Our island has finally been freed from colonial oppressors, but this is not enough. We must unite our people behind a new identity free from the burden of the Old World if we are to maintain our independence."
+
+  # Florida
+
+ florida_nation_title: "@FLO Florida"
+ florida_nation_desc: "Here in this rugged land of swamps, alligators, and sunny beaches we have managed to make a home. It is in these lands that we shall make a home, and the great exploits of the Florida Men will become known throughout America and the world!"
+
+  # Illinois
+
+ illinois_nation_title: "@ILI Illinois"
+ illinois_nation_desc: "The Illinois Country has long been an administrative branch of the colony of Louisiana, but now that we are free we may begin to turn our attention away from the immeasurable length of the Mississippi and towards the Great Lakes."
+
+  # la Plata
+
+ la_plata_nation_title: "@LAP La Plata"
+ la_plata_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Louisiana
+
+ louisiana_nation_title: "@LOU Louisiana"
+ louisiana_nation_desc: "Our people have had to adopt a hardened frontier lifestyle in this great wilderness. We are now simply a different people than Europeans: a coarser, tougher breed of men, wilder, intermarrying with the Indian. Let us build on the trade and soil of these rich riverlands, and amaze the world with our rugged prowess."
+
+  # Paraguay
+
+ paraguay_nation_title: "@PRG Paraguay"
+ paraguay_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Peru
+
+ peru_nation_title: "@PEU Peru"
+ peru_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Quebec
+
+ quebec_nation_title: "@QUE Quebec"
+ quebec_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Sonora
+
+ sonora_nation_title: "@SNA Sonora"
+ sonora_nation_dec: "Here in the lush fertile lands of the American Northwest and free from the colonial powers of the Old World, we find ourselves capable of cutting all ties with our old identity and drafting a constitution that promises to protect the rights of citizens and landowners. We will form a new nation on the principles of freedom and unity."
+
+  # Texas
+
+ texas_nation_title: "@TEX Texas"
+ texas_nation_desc: "When a government has ceased to protect the lives, liberty and property of the people, from whom its legitimate powers are derived, and for the advancement of whose happiness it was instituted, and so far from being a guarantee for the enjoyment of those inestimable and inalienable rights, becomes an instrument in the hands of evil rulers for their oppression."
+
+  # United Republic of Central America
+
+ upca_nation_title: "@CAM Central America"
+ upca_nation_desc: "Our people have endured years of foreign meddling, subjugation, incursions, and our lands divided... Enough! The time has come to liberate and unite our people under one banner, and write our own destiny. We will form a liberal nation enriched by the trade passing between the Atlantic and the Pacific oceans."
+
+  # United States of America
+
+ usa_nation_title: "@USA United States of America"
+ usa_nation_desc: "Long have these proud colonies been subject to the greed and oppression of the European powers, but no more! The surge of liberty in the colonies has granted us an opportunity of forming a proud federation of independent states free from tyranny.\n\nThe United States of America!"
+
+  # Venezuela
+
+ venezuela_nation_title: "@VNZ Venezuela"
+ venezuela_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
+
+  # Vermont
+
+  # Zeelandia
+
+ ###################################################################
+ ################### Reformable Countries ##########################
+ ###################################################################
 
  bavaria_nation_title: "@BAV Bavarian Restoration"
  bavaria_nation_desc: "The once proud Duchy of Bavaria lies divided and weak. We must reunite its former territories and reclaim the glories of the past if we are to avoid being but a footnote in history."

@@ -1,20 +1,20 @@
 country_decisions = {
 
-	cuba_nation = {
+	la_plata_nation = {
 		major = yes
 		potential = {
 			is_playing_custom_nation = no
 			NOT = { 
 				has_country_flag = changed_from_colonial_nation 
-				has_country_flag = formed_cuba_flag 
-				exists = CUB
-				tag = CUB
+				has_country_flag = formed_la_plata_flag 
+				exists = LAP
+				tag = LAP
 				tag = POR
 				tag = COL
 				tag = PAP
 			}
 			capital_scope = { # Has a capital in Colonial Region
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_la_plata
 				is_core = ROOT
 			}			
 			OR = {
@@ -37,31 +37,31 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				colonial_region = colonial_the_carribean
+				colonial_region = colonial_california
 			}
 			NOT = { owned_by = ROOT }
 			NOT = { is_core = ROOT }
 		}			
 		allow = {
 			adm_tech = 10
-			NOT = { exists = CUB }
+			NOT = { exists = LAP }
 			is_subject = no
 			is_colonial_nation = no
 			is_former_colonial_nation = yes
 			is_at_war = no
-			owns = 484
-			num_of_cities = 8 # Colonial nations need 8
+			owns = 778
+			num_of_cities = 12 # Colonial nations need 12
 		}
 		effect = {
-			change_tag = CUB # Country TAG
-			set_country_flag = formed_cuba_flag # Country Formation Flag
+			change_tag = LAP # Country TAG
+			set_country_flag = formed_la_plata_flag # Country Formation Flag
 			set_country_flag = changed_from_colonial_nation # Colonial Nation flag
-			custom_tooltip = form_cuba_tt_2 # New Missions
-			custom_tooltip = form_cuba_tt_3 # Region/Area Claims
+			custom_tooltip = form_la_plata_tt_2 # New Missions
+			custom_tooltip = form_la_plata_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank
-			CUB = { # Capital change and bonuses				
-				set_capital = 484 # Havana
-				484	 = {
+			LAP = { # Capital change and bonuses				
+				set_capital = 778
+				778 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -91,7 +91,7 @@ country_decisions = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = CAL
+						add_permanent_claim = LAP
 					}
 					# Government Rank change				
 					if = {
@@ -116,7 +116,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = CUB_ideas }
+						NOT = { has_idea_group = LAP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -125,7 +125,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_cuban_hostilities
+					name = dec1_kingdom_of_la_plata
 					duration = 49275
 				}				
 				# Increased Centralization
