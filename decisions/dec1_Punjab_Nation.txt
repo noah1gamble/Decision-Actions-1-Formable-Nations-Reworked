@@ -114,7 +114,11 @@ country_decisions = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
+			}
 		}
+		ai_will_do = {
+			factor = 1
+		}		
 	}
 
 }

@@ -69,8 +69,6 @@ country_decisions = {
 			set_country_flag = formed_tuscan_nation_flag # Country Formation Flag
 			custom_tooltip = form_tuscany_tt_2 # New Missions
 			custom_tooltip = form_tuscany_tt_3 # Claims
-			custom_tooltip = form_tuscany_tt_4 # Claims
-			custom_tooltip = form_tuscany_tt_5 # Claims
 			custom_tooltip = dec1_decisions_blank
 			TUS = { # Capital change and bonuses				
 				set_capital = 115 # Tuscany
@@ -100,6 +98,15 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Claims
+					every_province = {
+						limit = {
+							culture = tuscan
+							NOT = { owned_by = ROOT }
+							continent = europe
+						}
+						add_permanent_claim = TUS
+					}					
 					# Government Rank change				
 					if = {
 						limit = {
@@ -126,10 +133,15 @@ country_decisions = {
 						NOT = { has_idea_group = TUS_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_tuscan_raiders
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

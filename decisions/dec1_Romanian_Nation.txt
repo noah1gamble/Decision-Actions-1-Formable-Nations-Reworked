@@ -20,7 +20,16 @@ country_decisions = {
 				tag = HLR
 				tag = PAP
 				tag = SBG
+				tag = PAP
+				tag = ROM
 			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}				
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -34,16 +43,32 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 5
-			NOT = {
-				exists = RMN
-				exists = BYZ
-				exists = ROM
-				exists = ROP
+			NOT = { exists = RMN }
+			custom_trigger_tooltip = { # Roman Successors Handler - TODO: Rewrite this to be more dynamic and proper.
+				tooltip = form_romania_tt_4			
+				OR =  {
+					NOT = { # Roman Successors cannot exist
+						exists = BYZ
+						exists = ROM
+						exists = ROP
+					}
+					OR = { # Roman Successors are vassals
+						AND = {
+							BYZ = { is_subject_of = ROOT } # Byzantium is a subject of ROOT
+						}
+						AND = {
+							ROP = { is_subject_of = ROOT } # Roman Republic is a subject of ROOT
+						}					
+						AND = {
+							ROM = { is_subject_of = ROOT } # Roman Empire is a subject of ROOT
+						}
+					}
+				}
 			}
 			is_nomad = no
 			is_at_war = no
 			custom_trigger_tooltip = {
-				tooltip = form_romanian_nation_tt_1
+				tooltip = form_romania_tt_1
 				wallachia_area = {
 					type = all
 					owned_by = ROOT
@@ -57,8 +82,8 @@ country_decisions = {
 		effect = {
 			change_tag = RMN # Country TAG
 			set_country_flag = formed_romanian_nation_flag # Country Formation Flag
-			custom_tooltip = form_romanian_tt_2 # New Missions
-			custom_tooltip = form_romanian_tt_3 # Region/Area Claims
+			custom_tooltip = form_romania_tt_2 # New Missions
+			custom_tooltip = form_romania_tt_3 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank	
 			RMN = { # Capital change and bonuses				
 				set_capital = 4531 # Bucuresti
@@ -127,7 +152,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_twenty_castles
+					name = dec1_legacy_of_rome
 					duration = 49275
 				}				
 				# Increased Centralization

@@ -4,27 +4,23 @@ country_decisions = {
 	shan_nation = {
 		major = yes
 		potential = {
-			
-			NOT = { has_country_flag = formed_shan_flag }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no	
+			primary_culture = shan		
+			NOT = {
+				has_country_flag = formed_shan_flag
+				exists = SST
+				tag = SST
+			}
 			OR = {
 				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = SST }
-			primary_culture = shan
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
 				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					ai = yes
+					num_of_cities = 4
 				}
-			}
-			OR = {
-				ai = no
-				num_of_cities = 6
-			}
-		}
+			}			
+		}		
 		provinces_to_highlight = {
 			OR = {
 				province_id = 580 #Kale
@@ -41,6 +37,10 @@ country_decisions = {
 			}
 		}
 		allow = {
+			adm_tech = 5
+			NOT = { exists = SST }
+			is_subject = no
+			is_at_war = no			
 			owns_core_province = 580 #Kale
 			owns_core_province = 582 #Mong Yang
 			owns_core_province = 583 #Hsenwi
@@ -48,32 +48,90 @@ country_decisions = {
 			owns_core_province = 2396 #Mong Kawng
 			owns_core_province = 2399 #Pagan
 			owns_core_province = 2400 #Hsipaw
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
 		}
 		effect = {
-			add_prestige = 20
-			change_tag = SST
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			every_province = {
-				limit = {
-					culture = shan
-					NOT = {
-						is_core = SST
+			change_tag = SST # Country TAG
+			set_country_flag = formed_shan_flag # Country Formation Flag
+			custom_tooltip = form_shan_tt_1 # New Missions
+			# TODO: add claims custom tooltip, i just want to finish the update....
+			custom_tooltip = dec1_decisions_blank				
+			SST = { # Capital change and bonuses
+				set_capital = 580 # Kale
+				580 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					every_province = {
+						limit = {
+							culture = shan
+							NOT = {
+								is_core = SST
+							}
+						}
+						add_permanent_claim = SST
+					}					
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
 					}
 				}
-				add_permanent_claim = SST
-			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_shan_flag
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = SST_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_confederation_of_the_shan
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}		
+			}	
 		}
 		ai_will_do = {
 			factor = 1

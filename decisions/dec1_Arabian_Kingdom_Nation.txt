@@ -28,7 +28,6 @@ country_decisions = {
 				AND = {
 					ai = yes
 					num_of_cities = 6
-					}
 				}
 			}
 			provinces_to_highlight = {
@@ -53,7 +52,7 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = SRB }
@@ -134,37 +133,36 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}																	
 				}
-			# Custom Ideas check and change		
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = KAB_ideas }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = KAB_ideas }
+					}
+					country_event = { id = ideagroups.1 }
 				}
-				country_event = { id = ideagroups.1 }
-			}
-			# Custom Missions check and change
-			country_event = { id = dec1_events.3 }
-			custom_tooltip = dec1_decisions_blank
-			# National Ability
-			add_country_modifier = {
-				name = dec1_legacy_of_muhammad
-				duration = 49275
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_legacy_of_muhammad
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}					
 			}				
-			# Increased Centralization
-			add_country_modifier = {
-				name = dec1_increased_centralization
-				duration = -1
-			}	
-			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0 # Unlikely to happen
 		}
-		ai_importance = 400					
 	}
-
+		
 
 	###########################################################################
 	# Arabia Kingdom - Area of Arab Independence Promised to the Arabs in WW1 ###############

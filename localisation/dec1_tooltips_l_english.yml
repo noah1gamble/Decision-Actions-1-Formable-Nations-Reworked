@@ -163,8 +163,10 @@
  form_deccan_nation_tt_1: "Owns all cores of the §YDeccan§! region"
  form_deccan_nation_tt_2: "Country obtains §YDeccan§! missions." 
 
- form_romanian_nation_tt_1: "Owns all core §YRomanian§! provinces"
- form_romanian_nation_tt_2: "Country obtains §YRomania§! missions."
+ form_romania_tt_1: "Owns all core §YRomanian§! provinces"
+ form_romania_tt_2: "Country obtains §YRomania§! missions."
+ form_romania_tt_3: "Country gains a permanent claim on §YCarpathia§! region."
+ form_romania_tt_4: "§YBynaztium§!, §YRoman Republic§!, and §YRoman Empire§! must all not exist, or §Y[Root.GetName]§! must control one of these existing nations as a subject."
 
  form_celtic_union_tt_1: "Owns all cores of the §YCeltic Union§!"
  form_celtic_union_tt_2: "Country obtains §YCeltic§! missions."
@@ -440,6 +442,9 @@
 
  form_nepal_tt_2: "Country obtains §YNepal§! missions."
 
+ form_rajput_tt_2: "Country obtains §YRajput§! missions."
+ form_rajput_tt_3: "Country gains a permanent claim on §YWest India§! region."
+
  ############################
  # COLONIAL NATION TOOLTIPS #
  ############################
@@ -479,6 +484,24 @@
 
  form_paraguay_tt_2: "Country obtains §YParaguay§! missions."
  form_paraguay_tt_3: "Country gains a permanent claim on §YParaguay§! colonial region."
+
+ form_roman_empire_tt_2: "Country obtains §YRoman Empire§! missions."
+
+ form_russian_nation_tt_3: "Country gains a permanent claim on §YRussian Empire§! historical cores."
+
+ form_ruthenia_tt_2: "Country obtains §YRuthenia§! missions."
+ form_ruthenia_tt_3: "Country gains a permanent claim on §YRuthenia§! region."
+ form_ruthenia_tt_4: "Country gains a permanent claim on §YRed Ruthenia§! area."
+
+ form_shan_tt_1: "Country obtains §YShan§! missions."
+
+ form_sokoto_tt_2: "Country obtains §YSokoto§! missions."
+ form_sokoto_tt_3: "Country gains a permanent claim on §YSokoto§! cores"
+
+ form_tripoli_tt_2: "Country obtains §YTripoli§! missions."
+
+ form_tuscany_tt_2: "Country obtains §YTuscany§! missions."
+ form_tuscany_tt_3: "Country gains a permanent claim on all provinces with §YTuscan§! culture."
 
  ############
  # COLONIES #

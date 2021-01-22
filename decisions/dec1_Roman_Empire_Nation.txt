@@ -8,7 +8,7 @@ country_decisions = {
 			is_colonial_nation = no
 			OR = {
 				owns = 118
-				AND = {
+				OR = {
 					tag = PON # Pontus Roman Desires
 					tag = ROP # Roman Republic -> Roman Empire
 				}
@@ -46,7 +46,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 15
-			NOT = { exists = ROP }
+			NOT = { exists = ROM }
 			is_subject = no
 			is_at_war = no
 			owns = 118 # Rome
@@ -85,105 +85,81 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = ROM
-			set_country_flag = restored_roman_empire_nation_flag
-			add_stability = 3
-			if = {
-				limit = {
-					government = monarchy 
-				}
-				add_legitimacy = 100
-			}				
-			if = {
-				limit = {
-					NOT = { 
-						government = monarchy 
-					}
-				}
-				add_republican_tradition = 100
-			}				
-			add_prestige = 100				
-			ROM = {
-				set_capital = 118 # Roma
-				118 = {
-					add_base_tax = 10
-					add_base_production = 10
-					add_base_manpower = 10
-				}
-			}
+			change_tag = ROM # Country TAG
+			set_country_flag = restored_roman_empire_flag # Country Formation Flag
+			custom_tooltip = form_roman_empire_tt_2 # New Missions
 			custom_tooltip = roman_culture_provinces_tooltip
-			hidden_effect = {
+			custom_tooltip = dec1_decisions_blank	
+			ROM = { # Capital change and bonuses				
+				set_capital = 118 # Rome
+				118 = {
+					add_base_tax = 6
+					add_base_production = 6
+					add_base_manpower = 6
+				}
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						NOT = { primary_culture = roman }
+						has_dlc = "Dharma"
 					}
-					change_primary_culture = roman
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
-				every_owned_province = {
-					limit = {
-						has_owner_culture = yes
-					}
-					change_culture = roman
-				}
-			}			
-			custom_tooltip = dec1_decisions_blank
-			ROM = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}
-					}
-					custom_tooltip = dec1_decisions_blank
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			ROM = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-							}
-						}
-					change_government = monarchy
-				}
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 3
-							}
-						}
-					set_government_rank = 3
-				}
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			ROM = {
+				custom_tooltip = dec1_decisions_blank						
+				# TODO: Create a custom Holy Roman Empire handler?
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Culture Handler
+					if = { # Convert to Roman
+						limit = {
+							NOT = { primary_culture = roman }
+						}
+						change_primary_culture = roman
+					}				
+					every_owned_province = { # Convert all provinces with ROOT culture to Roman Culture
+						limit = {
+							has_owner_culture = yes
+						}
+						change_culture = roman
+					}			
+					add_stability = 3
+					# Max Government bonus
+					if = {
+						limit = {
+							government = monarchy 
+						}
+						add_legitimacy = 100
+					}				
+					if = {
+						limit = {
+							NOT = { 
+								government = monarchy 
+							}
+						}
+						add_republican_tradition = 100
+					}					
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -191,11 +167,20 @@ country_decisions = {
 					}
 					country_event = { id = ideagroups.1 }
 				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_true_roman_successor
+					duration = 49275
+				}				
+				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}											
+			}					
 		}
 	}
 

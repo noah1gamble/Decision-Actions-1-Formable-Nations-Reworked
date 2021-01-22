@@ -38,7 +38,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 5
+			adm_tech = 10
 			NOT = { 
 				exists = RUM 
 				exists = TUR
@@ -126,7 +126,12 @@ country_decisions = {
 					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_anatolian_islam
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

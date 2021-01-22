@@ -4,8 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { 
-				has_country_flag = formed_westphalia_flag 
-				has_reform = celestial_empire 
+				has_country_flag = formed_westphalia_flag
 				exists = WES
 				tag = HLR
 				tag = HAN 
@@ -133,10 +132,15 @@ country_decisions = {
 						NOT = { has_idea_group = WES_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_german_spirit
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

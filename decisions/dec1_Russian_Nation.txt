@@ -100,7 +100,7 @@ country_decisions = {
 			change_tag = RUS # Country TAG
 			set_country_flag = formed_russian_nation_flag # Country Formation Flag
 			custom_tooltip = form_russian_nation_tt_2 # New Missions
-			custom_tooltip = form_russian_nation_tt_3 # Claim on all historical Roman Empire
+			custom_tooltip = form_russian_nation_tt_3 # Claim on all historical Russian Empire lands
 			custom_tooltip = dec1_decisions_blank	
 			RUS = { # Capital change and bonuses				
 				set_capital = 295 # Moskva
@@ -188,7 +188,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_todo
+					name = dec1_third_rome
 					duration = 49275
 				}				
 				# Increased Centralization

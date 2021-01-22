@@ -26,17 +26,6 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
-				}
-			}
-			OR = {
-				primary_culture = nepali
-				primary_culture = pahari
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
 					num_of_cities = 4
 				}
 				AND = {

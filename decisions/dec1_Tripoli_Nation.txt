@@ -2,8 +2,7 @@ country_decisions = {
 	
 	tripoli_nation = {
 		major = yes
-		potential = {
-			
+		potential = {	
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -43,90 +42,83 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = TRP
-			set_country_flag = formed_tripoli_nation_flag
-			TRP = {				
-				add_prestige = 25
-				set_capital = 354 # Tripoli
+			change_tag = TRP # Country TAG
+			set_country_flag = formed_tripoli_nation_flag # Country Formation Flag
+			custom_tooltip = form_tripoli_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank				
+			TRP = { # Capital change and bonuses
+				set_capital = 354 
 				354 = {
-					add_base_tax = 4
+					add_base_tax = 1
 					add_base_production = 1
-					add_base_manpower = 5
+					add_base_manpower = 1
 				}
-			}
-			custom_tooltip = dec1_decisions_blank
-			TRP = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
-				}				
-			}
-			hidden_effect = { 
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			TRP = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}							
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}				
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			TRP = {
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
+						NOT = { has_idea_group = TRP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_recognized_kingdom
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}
+					duration = -1
+				}
+			}			
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		#ai_importance = 400
+		ai_importance = 200
 	}
 	
 	
