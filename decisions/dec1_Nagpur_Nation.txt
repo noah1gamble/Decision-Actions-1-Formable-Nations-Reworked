@@ -91,57 +91,54 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
- 					custom_trigger_tooltip = {
-						tooltip = form_mughal_empire_tt_3
-						upper_mahanadi_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
+					upper_mahanadi_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
 						}
-						berar_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}
-						garjat_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}
-						orissa_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}
-						baghelkhand_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}
-						gondwana_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}
-						jharkhand_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}
-						andhra_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-							}
-							add_permanent_claim = NAG
-						}						
+						add_permanent_claim = NAG
 					}
+					berar_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}
+					garjat_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}
+					orissa_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}
+					baghelkhand_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}
+					gondwana_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}
+					jharkhand_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}
+					andhra_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = NAG
+					}	
 					# Government Rank change				
 					if = {
 						limit = {

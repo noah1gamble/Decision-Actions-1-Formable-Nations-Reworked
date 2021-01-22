@@ -7,13 +7,20 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			primary_culture = bavarian
-			NOT = {
+			NOT = { 
 				has_country_flag = formed_bavaria_nation_flag
 				exists = BSQ
 				tag = PAP
 				tag = HLR
 				tag = EUR
 				tag = FIB
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -163,89 +170,36 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = BAV # Country TAG
-			restore_country_name_effect = yes # Unique Reformation Effect
 			set_country_flag = formed_bavaria_nation_flag # Country Formation Flag
 			custom_tooltip = form_bavaria_tt_2 # New Missions
-			if = {
-				limit = {
-					UBV = { is_subject_of = ROOT }
-				}
-				inherit = UBV
-			}
-			if = {
-				limit = {
-					LBV = { is_subject_of = ROOT }
-				}
-				inherit = LBV
-			}
-			if = {
-				limit = {
-					ING = { is_subject_of = ROOT }
-				}
-				inherit = ING
-			}	
-			custom_tooltip = dec1_decisions_blank						
-			BAV = { # Capital change and bonuses				
-				set_capital = 65 # Munich
-				65 = {
+			custom_tooltip = dec1_decisions_blank				
+			BAV = { # Capital change and bonuses
+				set_capital = 134 # Wien
+				134 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
-				# Reform Change
+				}			
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank											
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					country_event = { id = dec1_events.1 }
+					country_event = { id = dec1_events.1 }	
 				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
-					if = {
-						limit = {
-							NOT = { tag = UBV }
-							NOT = { tag = LBV }
-							NOT = { tag = ING }
-							NOT = { was_tag = UBV }
-							NOT = { was_tag = LBV }
-							NOT = { was_tag = ING }
-						}
-						swap_non_generic_missions = yes
-					}				
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					lower_bavaria_area = {
-						limit = {
-							NOT = { owned_by = root }
-							NOT = { is_permanent_claim = root }
-						}
-						add_permanent_claim = root
-					}
-					upper_bavaria_area = {
-						limit = {
-							NOT = { owned_by = root }
-							NOT = { is_permanent_claim = root }
-						}
-						add_permanent_claim = root
-					}
-					east_bavaria_area = {
-						limit = {
-							NOT = { owned_by = root }
-							NOT = { is_permanent_claim = root }
-						}
-						add_permanent_claim = root
-					}					
 					# Government Rank change				
 					if = {
 						limit = {
@@ -263,7 +217,7 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
 				# Custom Ideas check and change		
 				if = {
@@ -272,20 +226,26 @@ country_decisions = {
 						NOT = { has_idea_group = BAV_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
-                country_event = { id = dec1_events.3 }
-                custom_tooltip = dec1_decisions_blank
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_unification_of_bavaria
+					duration = 49275
+				}				
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}
+			}			
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
+
 }

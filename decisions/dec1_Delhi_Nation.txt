@@ -1,18 +1,30 @@
 country_decisions = {
-	
+
 	sultan_of_delhi = {
 		major = yes
 		potential = {
-			
-			government = monarchy
-			NOT = { has_country_flag = formed_delhi }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
 			religion_group = muslim
 			OR = {
 				culture_group = hindusthani
 				culture_group = western_aryan
 				culture_group = eastern_aryan
+			}			
+			NOT = { 
+				has_country_flag = formed_delhi_flag
+				exists = DLH				
+				tag = DLH
+				tag = HLR
 			}
-			NOT = { tag = DLH }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -40,101 +52,148 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			is_tribal = no
+			adm_tech = 10
 			NOT = { exists = DLH }
-			owns_core_province = 522 #Delhi
-			OR = {
-				owns_core_province = 510 #Sirhind
-				owns_core_province = 524 #Agra
-			}
-			OR = {
-				owns_core_province = 507 #Lahore
-				owns_core_province = 555 #Jaunpur
-			}
+			is_at_war = no
+			is_nomad = no
+			is_subject = no
+			is_free_or_tributary_trigger = no
 		}
 		effect = {
-			522 = {
-				move_capital_effect = yes
-			}
-			change_tag = DLH
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
+			change_tag = DLH # Country TAG
+			set_country_flag = formed_delhi_flag # Country Formation Flag
+			custom_tooltip = form_delhi_tt_2 # New Missions
+			custom_tooltip = form_delhi_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank				
+			DLH = { # Capital change and bonuses
+				set_capital = 522 #Delhi
+				522 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 3650
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = kanauji }
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Culture
+					if = {
+						limit = {
+							NOT = { primary_culture = kanauji }
+						}
+						change_primary_culture = kanauji
+					}
+					# Claims
+					upper_doab_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					lower_doab_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					oudh_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					katehar_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					sirhind_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					lahore_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					sind_sagar_area = {
+						limit = {
+							NOT = { owned_by = DLH }
+							NOT = { is_core = DLH }
+						}
+						add_permanent_claim = DLH
+					}
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
 				}
-				change_primary_culture = kanauji
-			}
-			upper_doab_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = DLH_ideas }
+					}
+					country_event = { id = ideagroups.1 }
 				}
-				add_permanent_claim = DLH
-			}
-			lower_doab_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_indian_empire
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
 				}
-				add_permanent_claim = DLH
-			}
-			oudh_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
-				}
-				add_permanent_claim = DLH
-			}
-			katehar_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
-				}
-				add_permanent_claim = DLH
-			}
-			sirhind_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
-				}
-				add_permanent_claim = DLH
-			}
-			lahore_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
-				}
-				add_permanent_claim = DLH
-			}
-			sind_sagar_area = {
-				limit = {
-					NOT = { owned_by = DLH }
-					NOT = { is_core = DLH }
-				}
-				add_permanent_claim = DLH
-			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_delhi
+			}			
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		ai_importance = 400
 	}
+
 }

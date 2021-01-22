@@ -45,6 +45,7 @@ country_decisions = {
 			change_tag = MCH # Country TAG
 			set_country_flag = formed_manchu_flag # Country Formation Flag
 			custom_tooltip = form_manchu_tt_2 # New Missions
+			custom_tooltip = form_manchu_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank				
 			MCH = { # Capital change and bonuses
 				set_capital = 730 # Girin
@@ -73,57 +74,54 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					custom_trigger_tooltip = {
-						tooltip = form_manchu_tt_3
-						ilan_hala_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_core = MCH
+					ilan_hala_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						central_jilin_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_core = MCH
+						add_core = MCH
+					}
+					central_jilin_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						ningguta_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_core = MCH
+						add_core = MCH
+					}
+					ningguta_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						jilin_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_core = MCH
+						add_core = MCH
+					}
+					jilin_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						liaoning_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_core = MCH
+						add_core = MCH
+					}
+					liaoning_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						central_heilongjiang_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_core = MCH
+						add_core = MCH
+					}
+					central_heilongjiang_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						heilongjiang_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_permanent_claim = MCH
+						add_core = MCH
+					}
+					heilongjiang_area = {
+						limit = {
+							NOT = { is_core = ROOT }
 						}
-						east_heilongjiang_area = {
-							limit = {
-								NOT = { is_core = ROOT }
-							}
-							add_permanent_claim = MCH
-						}						
-					}					
+						add_permanent_claim = MCH
+					}
+					east_heilongjiang_area = {
+						limit = {
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = MCH
+					}				
 					# Government Rank change				
 					if = {
 						limit = {

@@ -231,9 +231,6 @@
 
  form_belgium_tt_2: "Country obtains §YBelgium§! missions."
 
- form_byzantium_tt_2: "Country obtains §YByzantium§! missions."
- form_byzantium_tt_3: "Country gains claims on §YByzantine§! historical areas."
-
  form_macedon_tt_2: "Country obtains §YMaceodon§! missions."
  form_macedon_tt_3: "Country gains a permanent claim on §YMacedon§! historical areas."
 
@@ -471,7 +468,7 @@
  form_alaska_tt_3: "Country gains a permanent claim on §YAlaska§! colonial region."
 
  form_australia_tt_2: "Country obtains §YAustralia§! missions."
- form_australia_tt_3: "Country gains a permanent claim on §YOceania§! colonial region."
+ form_australia_tt_3: "Country gains a permanent claim on §YOceanea§! colonial region."
 
  form_brazil_tt_2: "Country obtains §YBrazil§! missions."
  form_brazil_tt_3: "Country gains a permanent claim on §YAmazonia§!."
@@ -488,8 +485,8 @@
  form_canada_tt_2: "Country obtains §YCanada§! missions."
  form_canada_tt_3: "Country gains a permanent claim on §YCanada§! colonial region."
 
- form_columbia_tt_2: "Country obtains §YColumbia§! missions."
- form_columbia_tt_3: "Country gains a permanent claim on §YColumbia§! colonial region."
+ form_colombia_tt_2: "Country obtains §YColombia§! missions."
+ form_colombia_tt_3: "Country gains a permanent claim on §YColombia§! colonial region."
 
  form_chile_tt_2: "Country obtains §YChile§! missions."
  form_chile_tt_2: "Country gains a permanent claim on §YAndean§! region."
@@ -522,13 +519,27 @@
  form_sonora_tt_3: "Country gains a permanent claim on §YCalifornia§! colonial region."
 
  form_venezuela_tt_2: "Country obtains §YVenezuela§! missions."
- form_venezuela_tt_3: "Country gains a permanent claim on §YColumbia§! colonial region."
+ form_venezuela_tt_3: "Country gains a permanent claim on §YColombia§! colonial region."
 
  form_vermont_tt_2: "Country obtains §YVermont§! missions."
  form_vermont_tt_3: "Country gains a permanent claim on §YEastern America§! colonial region."
 
  form_zealandia_tt_2: "Country obtains §YZealandia§! missions."
  form_zealandia_tt_3: "Country gains a permanent claim on §YAustralia§! colonial region."
+
+ ########################
+ # REFORMABLE COUNTRIES #
+ ########################
+
+ form_austria_tt_2: "Country obtains §YAustria§! missions."
+
+ form_bavaria_tt_2: "Country obtains §YBavaria§! missions."
+
+ form_byzantium_tt_2: "Country obtains §YByzantium§! missions."
+ form_byzantium_tt_3: "Country gains claims on §YByzantium§! historical cores."
+
+ form_delhi_tt_2: "Country obtains §YDelhi§! missions."
+ form_delhi_tt_3: "Country gains claims on §YDelhi§! historical cores."
 
  ########################
  # SPACING LOCALI1TION #

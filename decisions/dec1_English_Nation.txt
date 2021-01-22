@@ -22,7 +22,7 @@ country_decisions = {
 				tag = HLR
 				tag = ANG
 				tag = EUR
-			}			
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -33,7 +33,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# London
+				# London
 				province_id = 236
 				province_id = 235
 				province_id = 4371
@@ -67,55 +67,97 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
+			adm_tech = 10
 			NOT = { exists = ENG }
-			is_subject = no
 			is_at_war = no
-			custom_trigger_tooltip = {
-				tooltip = form_england_tt_1			
-					# London
-				owns_core_province = 236
-				owns_core_province = 235
-				owns_core_province = 4371
-				owns_core_province = 237
-					# East Anglia
-				owns_core_province = 238	
-				owns_core_province = 1860				
-				owns_core_province = 4370
-					# Wessex
-				owns_core_province = 234					
-				owns_core_province = 4374
-				owns_core_province = 4130
-				owns_core_province = 4373
-				owns_core_province = 233
-					# West Midlands
-				owns_core_province = 239
-				owns_core_province = 240
-				owns_core_province = 4372
-				owns_core_province = 4375
-				owns_core_province = 244
-					# East Midlands
-				owns_core_province = 243
-				owns_core_province = 4376
-				owns_core_province = 1861
-					# Yorkshire
-				owns_core_province = 245	
-				owns_core_province = 4367
-				owns_core_province = 4368
-			}
+			is_nomad = no
+			is_subject = no
+			is_free_or_tributary_trigger = no
 		}
 		effect = {
-			
+			change_tag = ENG # Country TAG
+			set_country_flag = formed_austria_flag # Country Formation Flag
+			custom_tooltip = form_austria_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank				
+			ENG = { # Capital change and bonuses
+				set_capital = 236 # London
+				236 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ENG_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_english_restoration
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}			
 		}
 		ai_will_do = {
 			factor = 1
 			modifier = { # Scottish AI refuses to subject itself to English
 				tag = SCO
 				factor = 0
-			}		
+			}			
 		}
 		ai_importance = 400
 	}
-	
+
 }

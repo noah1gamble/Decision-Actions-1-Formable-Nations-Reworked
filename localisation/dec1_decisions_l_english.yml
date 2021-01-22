@@ -329,9 +329,6 @@
  mughal_nation_title: "@MUG The Mughal Empire"
  mughal_nation_desc: "$MONARCH$ has begun to lay the foundation of his new empire. Although inferior in numbers, his well-disciplined troops have managed to achieve several decisive victories against the Sultans of India. The battle of $CAPITAL$ became the first great victory in a series of territorial expansions and, with time, the empire of the Mughals could stretch over the larger part of the Indian plateau."
 
- restore_byzantine_empire_title: "@BYZ Restore the Byzantine Empire"
- restore_byzantine_empire_desc: "The glorious Byzantine Empire is gone, but as long as there are Greeks in Constantinople, there is hope of resurrection. We can take its place in spirit, but we cannot take its name unless we prove worthy..."
-
  greek_nation_title: "@GRE Kingdom of Greece"
  greek_nation_desc: "For years Hellas has been divided among several kingdoms or occupied by foreigners at the pleasing of our common enemies. To unite the Greek lands under a sole flag and one ruler, is our only way to greatness."
 
@@ -546,14 +543,29 @@
 
   # Vermont
 
+ vermont_nation_title: "@VRM Vermont"
+ vermont_nation_desc: "Here in the lush fertile lands of the American Northwest and free from the colonial powers of the Old World, we find ourselves capable of cutting all ties with our old identity and drafting a constitution that promises to protect the rights of citizens and landowners. We will form a new nation on the principles of freedom and unity."
+
   # Zeelandia
+
+ zealandia_nation_title: "@NZL Zealandia"
+ zealandia_nation_desc: "The time has come to shake off the last remains of our colonial past. We must form a proper nation and solidify our claims to this region."
 
  ###################################################################
  ################### Reformable Countries ##########################
  ###################################################################
 
+ austria_nation_title: "@HAB Reclaim the Archduchy of Austria"
+ austria_nation_desc: "From Wien, the Habsburg once held absolute power of the Holy Roman Empire, and the very core of their power was the Archduchy of Austria. Now, their empire has long since turned to ash and it is left for us to reclaim the Archduchy and the seat of power in the Empire!"
+
  bavaria_nation_title: "@BAV Bavarian Restoration"
  bavaria_nation_desc: "The once proud Duchy of Bavaria lies divided and weak. We must reunite its former territories and reclaim the glories of the past if we are to avoid being but a footnote in history."
+
+ restore_byzantine_empire_title: "@BYZ Restore the Byzantine Empire"
+ restore_byzantine_empire_desc: "The glorious Byzantine Empire is gone, but as long as there are Greeks in Constantinople, there is hope of resurrection. We can take its place in spirit, but we cannot take its name unless we prove worthy..."
+
+ sultan_of_delhi_title: "@DLH Sultan of Delhi"
+ sultan_of_delhi_desc: "Delhi was once the capital of the entire Indian subcontinent and our own state is in many ways a continuation of their traditions.\n\nLet us reclaim the heritage of the sultans of Delhi, and rule the subcontinent from their ancient capital in the Doab."
 
  # Unique Decision Localization
 

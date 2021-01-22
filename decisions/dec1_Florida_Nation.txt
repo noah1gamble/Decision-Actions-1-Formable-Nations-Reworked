@@ -37,7 +37,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = east_florida_area
+				area = north_florida_area
 				area = florida_area
 				# colonial_region = colonial_eastern_america ?
 			}

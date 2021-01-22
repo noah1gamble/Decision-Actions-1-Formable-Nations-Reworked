@@ -7,8 +7,8 @@ country_decisions = {
 			NOT = { 
 				has_country_flag = changed_from_colonial_nation 
 				has_country_flag = formed_zealandia_flag 
-				exists = CAL
-				tag = CAL
+				exists = NZL
+				tag = NZL
 				tag = POR
 				tag = COL
 				tag = PAP
@@ -44,12 +44,12 @@ country_decisions = {
 		}			
 		allow = {
 			adm_tech = 10
-			NOT = { exists = CAL }
+			NOT = { exists = NZL }
 			is_subject = no
 			is_colonial_nation = no
 			is_former_colonial_nation = yes
 			is_at_war = no
-			owns = 1090
+			owns = 2738
 			num_of_cities = 4 # Colonial nations need 4
 			num_of_owned_provinces_with = {
 				value = 4

@@ -1945,7 +1945,7 @@ ISI_ideas = {
 	}
 
 	ISI_propeganda_campaign = {
-		unrest_islam_provinces = -2
+		global_unrest = -0.05
 	}
 
 	ISI_religious_warriors = {

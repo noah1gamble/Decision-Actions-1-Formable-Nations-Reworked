@@ -85,7 +85,7 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
-					oceania_region = {
+					oceanea_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}

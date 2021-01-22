@@ -580,7 +580,7 @@
 
   # Columbia
 
- dec1_dreams_of_gran_columbia: "Dreams of Gran Columbia"
+ dec1_dreams_of_gran_colombia: "Dreams of Gran Colombia"
 
   # Cuba
 
@@ -654,9 +654,69 @@
  # Reformable Countries #
  ########################
 
+  # Austria
+
+ dec1_restore_the_habsburgs: "Restore the Habsburgs"
+
+  # Bavaria
+
+ dec1_unification_of_bavaria: "Unification of Bavaria"
+
+  # Byzantium
+
+ dec1_eastern_roman_successor: "Eastern Roman Successor"
+
+	# Delhi
+
+ dec1_indian_empire: "Indian Empire"
+
+	# England
+
+ dec1_english_restoration: "English Restoration"
+
+	# France
+
+ dec1_french_restoration: "French Restoration"
+
+	# Georgia
+
+ dec1_united_georgians: "United Georgians"
+
+	# Mamluks
+
+ dec1_restoration_of_the_mamluks: "Restoration of the Mamluks"
+
+	# Morocco
+
+ dec1_moroccan_unity: "Moroccan Unity"
+
+	# Orissa
+
+ dec1_trade_control: "Trade Control"
+
   # Papal States
 
  dec1_the_pope: "The Pope"
+
+	# Poland
+
+ dec1_polish_uprising: "Polish Uprising"
+
+	# Scotland
+
+ dec1_restoration_of_scotland: "Restoration of Scotland"
+
+	# Timurids
+
+ dec1_restore_the_timurids: "Restore the Timurids"
+
+	# Tunis
+
+ dec1_tunisian_nationalism: "Tunisian Nationalism"
+
+	# Yemen
+
+ dec1_restore_yemeni_freedom: "Restore Yemeni Freedom"
 
  #####################
  # Special Modifiers #

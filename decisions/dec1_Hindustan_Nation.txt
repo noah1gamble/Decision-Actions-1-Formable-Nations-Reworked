@@ -192,10 +192,10 @@ country_decisions = {
 					duration = -1
 				}
 			}
-			ai_will_do = {
-				factor = 1
-			}
-			ai_importance = 400
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400		
 	}
 }

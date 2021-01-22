@@ -30,16 +30,6 @@ country_decisions = {
 					num_of_cities = 6
 				}
 			}
-			provinces_to_highlight = {
-				OR = {
-					province_id = 385
-					region = arabia_region
-				}
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -48,10 +38,8 @@ country_decisions = {
 				area = bahrain_area
 				area = yamamah_area
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
 		}
 		allow = {
 			adm_tech = 10

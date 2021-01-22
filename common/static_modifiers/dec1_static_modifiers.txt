@@ -926,7 +926,7 @@ dec1_abolished_the_mandate_of_heaven = {
 
 	# Columbia
 
-	dec1_dreams_of_gran_columbia = {
+	dec1_dreams_of_gran_colombia = {
  		development_cost = -0.1
 	}
 
@@ -1040,8 +1040,102 @@ dec1_abolished_the_mandate_of_heaven = {
 
 ################## Reformable Nations ##################
 
+	# Austria
+
+	dec1_restore_the_habsburgs = {
+		legitimacy = 1
+		imperial_authority = 0.05 
+	}
+
+	# Bavaria
+
+	dec1_unification_of_bavaria = {
+		defensiveness = 0.10 
+	}
+
+	# Byzantium
+
+	dec1_eastern_roman_successor = {
+		legitimacy = 1 
+		siege_ability = 0.03
+	}
+
+	# Delhi
+
+	dec1_indian_empire = {
+		all_power_cost = -0.05
+	}
+
+	# England
+
+	dec1_english_restoration = {
+		idea_cost = -0.1
+	}
+
+	# France
+
+	dec1_french_restoration = {
+		technology_cost = -0.1
+	}
+
+	# Georgia
+
+	dec1_united_georgians = {
+		global_institution_spread = 0.05
+	}
+
+	# Mamluks
+
+	dec1_restoration_of_the_mamluks = {
+		prestige_decay = -0.01
+	}
+
+	# Morocco
+
+	dec1_moroccan_unity = {
+		free_policy = 1
+	}
+
+	# Orissa
+
+	dec1_trade_control = {
+		missionaries = 1
+	}
+
 	# Papal States
 
 	dec1_the_pope = {
 		missionaries = 1
 	}
+
+	# Poland
+
+	dec1_polish_uprising = {
+		culture_conversion_cost = -0.20
+	}
+
+	# Scotland
+
+	dec1_restoration_of_scotland = {
+		religious_unity = 0.5 
+		tolerance_heathen = -1
+	}
+
+	# Timurids
+
+	dec1_restore_the_timurids = {
+		prestige_per_development_from_conversion = 0.5
+	}
+
+	# Tunis
+
+	dec1_tunisian_nationalism = {
+		culture_conversion_cost = -0.10
+	}
+
+	# Yemen
+
+	dec1_restore_yemeni_freedom = {
+		merchants = 1 
+	}
+	
