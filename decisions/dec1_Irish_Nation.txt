@@ -113,7 +113,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = IRE_ideas }
+						NOT = { has_idea_group = irish_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank

@@ -96,7 +96,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = TRP_ideas }
+						NOT = { has_idea_group = berber_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}

@@ -1726,7 +1726,7 @@ GKR_ideas = {
 }
 
 # Hanseatic League
-HEN_ideas = { 
+HNS_ideas = { 
 	start = {
 		global_trade_power = 0.1
 		global_unrest = -1
@@ -3171,3 +3171,5 @@ YUG_ideas = {
 		prestige_decay = -0.01
 	}	
 }
+
+	# VANILLA IDEAS?
