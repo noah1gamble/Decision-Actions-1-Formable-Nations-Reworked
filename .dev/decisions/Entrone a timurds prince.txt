@@ -1,0 +1,97 @@
+	###################################################################################
+	# Place a Tirmurid Prince on the Throne - Path to overthrowing the Timurid Empire #
+	###################################################################################
+
+	enthrone_timurid_prince = {
+		major = yes
+		potential = {
+			is_colonial_nation = no
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			religion_group = muslim
+			NOT = { 
+				has_reform = feudal_theocracy
+				has_reform = tribal_federation
+				dynasty = "Timurid" 
+				is_year = 1490
+				tag = HLR
+				tag = ROM
+				tag = MUG
+				tag = PER
+				tag = QOM
+				tag = KHO
+				tag = FRS
+				tag = YZD
+				tag = AFG
+				tag = TRS				
+			}
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			OR = {
+				culture_group = iranian
+				primary_culture = uzbehk
+				primary_culture = turkmeni
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Does not require hardcore reqs - this is just the prince enthronement
+				province_id = 428	# Teheran/Rayy
+				province_id = 429	# Isfahan
+				province_id = 446	# Herat
+				province_id = 451	# Kabul
+				province_id = 458	# Ferghana
+				province_id = 454	# Samarkand
+				province_id = 2213	# Qom
+				province_id = 2214	# Astarabad
+				province_id = 2218	# Shiraz
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_subject = no
+			NOT = { 
+				dynasty = "Timurid" 
+				is_year = 1490
+				has_reform = feudal_theocracy
+				has_reform = tribal_federation				
+			}			
+			OR = {
+					# Does not require hardcore reqs - this is just the prince enthronement
+				owns_core_province = 428	# Teheran/Rayy
+				owns_core_province = 429	# Isfahan
+				owns_core_province = 446	# Herat
+				owns_core_province = 451	# Kabul
+				owns_core_province = 458	# Ferghana
+				owns_core_province = 454	# Samarkand
+				owns_core_province = 2213	# Qom
+				owns_core_province = 2214	# Astarabad
+				owns_core_province = 2218	# Shiraz				
+			}
+		}
+		effect = {
+			custom_tooltip = tooltip_about_timurid_empire
+			define_ruler = {
+				dynasty = "Timurid"
+			}
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				remove_heir = yes
+			}
+			define_heir = {
+				dynasty = "Timurid"
+			}
+			add_legitimacy = 20
+			add_stability = -2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}

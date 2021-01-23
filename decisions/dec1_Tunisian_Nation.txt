@@ -77,104 +77,96 @@ country_decisions = {
 			}										
 		}
 		effect = {
-			change_tag = TUN
-			set_country_flag = formed_tunisian_nation_flag
-			TUN = {
-				add_prestige = 20
-				set_capital = 344
+			change_tag = TUN # Country TAG
+			set_country_flag = formed_tunis_flag # Country Formation Flag
+			custom_tooltip = form_tunis_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank				
+			TUN = { # Capital change and bonuses
+				set_capital = 344 
 				344 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-			}
-			djerba_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = TUN
-			}
-			djerba_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = TUN
-			}			
-			kabylia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = TUN
-			}				
-			custom_tooltip = dec1_decisions_blank
-			TUN = {		
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
-						is_part_of_hre = yes
+						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_hre_province_removal
-					set_in_empire = no
-				}
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}			
-					emperor = {
-						country_event = { id = hre_event.5 }
-						add_opinion = {
-							who = root
-							modifier = opinion_left_empire
-						}	
-					}
-					custom_tooltip = dec1_decisions_blank
-				}				
-			}
-			hidden_effect = { 
-				if = {
-					limit = {
-						is_part_of_hre = yes
-						is_elector = no
-					}
-					every_owned_province = {
-						limit = {
-							is_part_of_hre = yes
-						}
-						set_in_empire = no
-					}
-				}
-			}
-			TUN = {
-				if = { 
-					limit = { 
-						NOT = { 
-							government = monarchy
-							}	
-						}
-					change_government = monarchy
-				}						
-				if = { 
-					limit = { 
-						NOT = { 
-							government_rank = 2 
-							}
-						}
-					set_government_rank = 2
-				}				
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
 				add_government_reform = autocracy_reform
-			}
-			custom_tooltip = dec1_decisions_spacing
-			TUN = {
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					djerba_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = TUN
+					}
+					djerba_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = TUN
+					}			
+					kabylia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = TUN
+					}				
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change		
 				if = {
 					limit = {
 						has_custom_ideas = no
 						NOT = { has_idea_group = TUN_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-				}			
-				add_country_modifier = { 
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_dalai_lama_of_tibet
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
 					name = dec1_increased_centralization
-				}	
-			}
+					duration = -1
+				}
+			}			
 		}
 		ai_will_do = {
 			factor = 1

@@ -320,12 +320,6 @@
  persian_nation_title: "@PER The Persian Empire"
  persian_nation_desc: "At the mere age of 15, monarch has taken his father's position as head of the Shiite Turkmen tribe. He has quickly established a base of power in the northwest and proclaimed himself Shah of Iran. Several of the neighboring regions have been conquered and the possibility of a resurrected Iranian nation doesn't seem so absent anymore."
 
- timurid_nation_title: "@TIM The Timurid Empire"
- timurid_nation_desc: "As the descendant of Timur Lenk, the great conqueror of Iran, Transoxiana and Khorasan, it is our duty to reclaim his legacy. With the traditional Timurid Strongholds under our control we can at last proclaim ourselves the head of Timur's dynasty, and the leader of all of the Ghurkani princes."
-
- enthrone_timurid_prince_title: "@TIM Enthrone Timurid Prince"
- enthrone_timurid_prince_desc: "Amir Timur once crushed all realms in this region and entrusted their rule to his relatives. Ever since they have been torn apart by the Timurid princes' lust to rule it all, and there are many princes who could yet stake their claim to Timur's empire. Some local rulers have been known to invite Timurid claimants to their states, propping them up as leaders, and using the strength Timur's name to extend their rulership over all lands he once ruled."
-
  mughal_nation_title: "@MUG The Mughal Empire"
  mughal_nation_desc: "$MONARCH$ has begun to lay the foundation of his new empire. Although inferior in numbers, his well-disciplined troops have managed to achieve several decisive victories against the Sultans of India. The battle of $CAPITAL$ became the first great victory in a series of territorial expansions and, with time, the empire of the Mughals could stretch over the larger part of the Indian plateau."
 
@@ -566,6 +560,30 @@
 
  sultan_of_delhi_title: "@DLH Sultan of Delhi"
  sultan_of_delhi_desc: "Delhi was once the capital of the entire Indian subcontinent and our own state is in many ways a continuation of their traditions.\n\nLet us reclaim the heritage of the sultans of Delhi, and rule the subcontinent from their ancient capital in the Doab."
+
+ english_nation_title: "@ENG Restoration of England"
+ english_nation_desc: "Trade has long been a foundation of English national policy. By extending our influence across borders and controlling its political development domestically, we have managed to become one of the foremost European powers. Our colonial expansion is becoming a major factor in promoting our nation's economic growth, reinforcing our position in world affairs."
+
+ french_nation_title: "@FRA Restoration of France"
+ french_nation_desc: "This year will mark the beginning of an evolutionary period for our nation. The old feudal ways will begin to make way for a more modern centralized nation. Although struggling financially due to miscalculated projects and military campaigns, we have managed to transform ourselves into one of the most dominant powers of Europe."
+
+ georgia_nation_title: "@GEO Georgia"
+ georgia_nation_desc: "Ever since the abdication of Alexander I, Georgia has been divided and devastated by in-fighting. This has allow ed other countries to control the internal politics of the region and oppress our people. The time has come to once again unite the Georgian people and reforge the kingdom that was once lost!"
+
+ moroccan_nation_title: "@MOR Morocco"
+ moroccan_nation_desc: "While she has often been divided Morocco is considered by many to be the strongest nation in the Maghreb spiritually, economically and militarily. Once we control all of the constituent principalities of the kingdom we can reunite the area and rule the western Maghreb from Marrakesh as so many dynasties have done before us."
+
+ orissa_nation_title: "@ORI Orissa"
+ orissa_nation_desc: "With the heartlands of Orissa under our control it is time we claim our legacy as servitors of Jagannath and proclaim ourselves kings over the entire region!"
+
+ timurid_nation_title: "@TIM The Timurid Empire"
+ timurid_nation_desc: "As the descendant of Timur Lenk, the great conqueror of Iran, Transoxiana and Khorasan, it is our duty to reclaim his legacy. With the traditional Timurid Strongholds under our control we can at last proclaim ourselves the head of Timur's dynasty, and the leader of all of the Ghurkani princes."
+
+ enthrone_timurid_prince_title: "@TIM Enthrone Timurid Prince"
+ enthrone_timurid_prince_desc: "Amir Timur once crushed all realms in this region and entrusted their rule to his relatives. Ever since they have been torn apart by the Timurid princes' lust to rule it all, and there are many princes who could yet stake their claim to Timur's empire. Some local rulers have been known to invite Timurid claimants to their states, propping them up as leaders, and using the strength Timur's name to extend their rulership over all lands he once ruled."
+
+ yemen_nation_title: "@YEM Yemeni Restoration"
+ yemen_nation_desc: "For too long the fertile lands of Yemen have suffered in the hands of incompetent dynasties intent only on plundering her treasures. We must unite these lands so that they can once again prosper under an able ruler."
 
  # Unique Decision Localization
 

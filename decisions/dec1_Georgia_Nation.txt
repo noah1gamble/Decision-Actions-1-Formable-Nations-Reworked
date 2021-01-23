@@ -3,31 +3,21 @@ country_decisions = {
 	georgia_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = formed_georgia_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			primary_culture = georgian
 			NOT = { 
+				has_country_flag = formed_georgia_flag
+				exists = GEO				
 				tag = GEO
-				tag = CAU 
-				tag = HLR
 				tag = PAP
 			}
 			OR = {
 				ai = no
 				AND = {
-					NOT = { exists = GEO }
-					num_of_cities = 3 #Carnage
-				}
-			}
-			primary_culture = georgian
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
+					ai = yes
+					num_of_cities = 4
 				}
 			}
 		}
@@ -60,10 +50,12 @@ country_decisions = {
 			}
 		}
 		allow = {
+			adm_tech = 10
 			NOT = { exists = GEO }
 			is_at_war = no
-			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			is_subject = no
+			is_free_or_tributary_trigger = no
 			owns_core_province = 422	# Imereti
 			owns_core_province = 423	# Tblisi
 			owns_core_province = 2203	# Kahketi
@@ -76,51 +68,83 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = GEO
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			kartli_kakheti_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+			change_tag = GEO # Country TAG
+			set_country_flag = formed_georgia_flag # Country Formation Flag
+			custom_tooltip = form_georgia_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank				
+			GEO = { # Capital change and bonuses
+				set_capital = 423 
+				423 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
 				}
-				add_permanent_claim = GEO
-			}
-			samtskhe_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}			
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank											
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }	
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
 				}
-				add_permanent_claim = GEO
-			}
-			imereti_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = GEO_ideas }
+					}
+					country_event = { id = ideagroups.1 }
 				}
-				add_permanent_claim = GEO
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = GEO_ideas }
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_united_georgians
+					duration = 49275
+				}				
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_georgia_flag
+			}			
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
-	
+
 }

@@ -338,9 +338,6 @@
  form_lombardy_venetia_tt_2: "Country obtains §YLombardy-Venetia§! missions."
  form_lombardy_venetia_tt_3: "Country gains a permanent claim on §YEmilia-Romagna§! area."
 
- form_french_nation_tt_2: "Country obtains §YFrance§! missions."
- form_french_nation_tt_3: "Country gains a permanent claim on §YFrance§! region."
-
  form_anglo_dutch_union_tt_1: "Owns core §YEnglish§! & §YDutch§! provinces"
  form_anglo_dutch_union_tt_2: "Country obtains §YAnglo-Dutch Union§! missions."
  form_anglo_dutch_union_tt_3: "Country gains a permanent claim on §YBritish Isles§! region."
@@ -418,8 +415,6 @@
  form_germany_tt_2: "Owns core §YSouthern§! provinces of the §YGerman Kingdom§!"
  form_germany_tt_3: "Country obtains §YGermany§! missions."
  form_germany_tt_4: "Country gains a permanent claim on §YGerman§! historical cores."
-
- form_mamluks_tt_2: "Country obtains §YMamluk§! missions."
 
  form_courland_tt_2: "Country obtains §YKurland§! missions."
 
@@ -541,13 +536,32 @@
  form_delhi_tt_2: "Country obtains §YDelhi§! missions."
  form_delhi_tt_3: "Country gains claims on §YDelhi§! historical cores."
 
+ form_french_nation_tt_2: "Country obtains §YFrance§! missions."
+ form_french_nation_tt_3: "Country gains a permanent claim on §YFrance§! region."
+
+ form_england_tt_2: "Country obtains §YEngland§! missions."
+
+ form_georgia_tt_2: "Country obtains §YGeorgia§! missions."
+
+ form_mamluks_tt_2: "Country obtains §YMamluks§! missions."
+
+ form_morocco_tt_2: "Country obtains §YMorocco§! missions."
+
+ form_scotland_tt_2: "Country obtains §YScotland§! missions."
+
+ form_timurids_tt_2: "Country obtains §YTimurids§! missions."
+ form_timurids_tt_3: "Country gains a permanent claim on §YKhorasan§! region."
+ form_timurids_tt_4: "Country gains a permanent claim on §YPersia§! region."
+
+ form_yemen_tt_2: "Country obtains §YYemen§! missions."
+
  ########################
  # SPACING LOCALI1TION #
  ########################
 
  dec1_decisions_spacing: "\n"
 
- dec1_decisions_blank: "        "
+ dec1_decisions_blank: "        " # Noah is very cool :)
 
  #######################
  # UNIQUE LOCALISATION #

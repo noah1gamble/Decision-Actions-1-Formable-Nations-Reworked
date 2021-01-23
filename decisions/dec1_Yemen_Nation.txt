@@ -1,67 +1,49 @@
 country_decisions = {
 
-	english_nation = {
+	yemen_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			primary_culture = english
+			primary_culture = yemeni_culture			
 			NOT = { 
-				has_country_flag = formed_england_nation_flag
-				exists = ENG
-				exists = NSE 
-				exists = ANG 
-				exists = GBR 
-				exists = UKI
-				tag = ENG
-				tag = GBR
-				tag = UKI
+				has_country_flag = formed_yemen_flag
+				exists = YEM				
+				tag = YEM
+				tag = ARB
 				tag = PAP
-				tag = NSE
 				tag = HLR
-				tag = ANG
-				tag = EUR
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 4
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-					# London
-				province_id = 236
-				province_id = 235
-				province_id = 4371
-				province_id = 237
-					# East Anglia
-				province_id = 238	
-				province_id = 1860				
-				province_id = 4370
-					# Wessex
-				province_id = 234					
-				province_id = 4374
-				province_id = 4130
-				province_id = 4373
-				province_id = 233
-					# West Midlands
-				province_id = 239
-				province_id = 240
-				province_id = 4372
-				province_id = 4375
-				province_id = 244
-					# East Midlands
-				province_id = 243
-				province_id = 4376
-				province_id = 1861
-					# Yorkshire
-				province_id = 245	
-				province_id = 4367
-				province_id = 4368
+				province_id = 387	# Mocha
+				province_id = 388	# Aden
+				province_id = 390	# Sa'ana
+				province_id = 4280	# Taiz
+				AND = {
+					province_id = 389
+					ROOT = { NOT = { owns_core_province = 391 } }
+					ROOT = { NOT = { owns_core_province = 2346 } }
+				}
+				AND = {
+					province_id = 2346
+					ROOT = { NOT = { owns_core_province = 391 } }
+					ROOT = { NOT = { owns_core_province = 389 } }
+				}
+				AND = {
+					province_id = 391
+					ROOT = { NOT = { owns_core_province = 2346 } }
+					ROOT = { NOT = { owns_core_province = 389 } }
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -70,20 +52,29 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = ENG }
+			NOT = { exists = YEM }
 			is_at_war = no
 			is_nomad = no
 			is_subject = no
 			is_free_or_tributary_trigger = no
+			owns_core_province = 387	# Mocha
+			owns_core_province = 388	# Aden
+			owns_core_province = 390	# Sa'ana
+			owns_core_province = 4280	# Taiz
+			OR = {
+				owns_core_province = 389 #Mukalla
+				owns_core_province = 391 #Najran
+				owns_core_province = 2346 #Jazan
+			}
 		}
 		effect = {
-			change_tag = ENG # Country TAG
-			set_country_flag = formed_england_nation_flag # Country Formation Flag
-			custom_tooltip = form_england_tt_2 # New Missions
+			change_tag = YEM # Country TAG
+			set_country_flag = formed_yemen_flag # Country Formation Flag
+			custom_tooltip = form_yemen_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank				
-			ENG = { # Capital change and bonuses
-				set_capital = 236 # London
-				236 = {
+			YEM = { # Capital change and bonuses
+				set_capital = 557 # Nepal
+				557 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -131,7 +122,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = ENG_ideas }
+						NOT = { has_idea_group = YEM_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -140,7 +131,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_english_restoration
+					name = dec1_restore_yemeni_freedom
 					duration = 49275
 				}				
 				# Increased Centralization
@@ -152,10 +143,6 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = { # Scottish AI refuses to subject itself to English
-				tag = SCO
-				factor = 0
-			}			
 		}
 		ai_importance = 400
 	}
