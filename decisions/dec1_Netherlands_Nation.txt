@@ -65,12 +65,12 @@ country_decisions = {
 			owns_core_province = 4383
 		}
 	 	effect = {
-			change_tag = EPR # Country TAG
+			change_tag = NED # Country TAG
 			set_country_flag = formed_netherlands_nation_flag # Country Formation Flag
 			custom_tooltip = form_netherlands_tt_2 # New Missions
 			custom_tooltip = form_netherlands_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank	
-			EPR = { # Capital change and bonuses				
+			NED = { # Capital change and bonuses				
 				set_capital = 97 # Amsterdam
 				97 = {
 					add_base_tax = 1
@@ -135,7 +135,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = EPR_ideas }
+						NOT = { has_idea_group = NED_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 					custom_tooltip = dec1_decisions_blank

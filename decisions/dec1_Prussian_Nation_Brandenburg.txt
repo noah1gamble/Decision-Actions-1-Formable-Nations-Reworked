@@ -1,37 +1,23 @@
 country_decisions = {
 
-	#############################
-	# PRUSSIAN NATION - GENERAL #
-	#############################
+	#################################
+	# PRUSSIAN NATION - BRANDENBURG #
+	#################################
 
-	prussian_nation = {
+	prussian_nation_brandenburg = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			government = theocracy
+			tag = BRA
 			NOT = {
 				has_country_flag = formed_prussia_nation_flag
-				has_reform = celestial_empire			
 				exists = PRU
 				tag = PRU
-				tag = PAP
-				tag = GER
-				tag = HLR
-				tag = BRA
-				tag = TEU
-				tag = CZE
-				tag = GEP
-				tag = LSX
-				tag = NGC
 			}
-			OR = {
-				primary_culture = prussian
-				primary_culture = pommeranian
-				primary_culture = saxon
-				primary_culture = czech
-			}
-			AND = { # Protestant/Reformed Reformation Handler
+			AND = { # Protestant/Reformed Handler
 				OR = {
 					ai = no
 					OR = {
@@ -48,14 +34,14 @@ country_decisions = {
 						religion = protestant
 					}
 				}	
-			}		
+			}				
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 6
 				}
-			}						
+			}				
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -94,7 +80,7 @@ country_decisions = {
 				government = theocracy
 			}
 			is_at_war = no
-			is_subject = no	
+			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = form_prussia_tt_1
 				east_prussia_area = {
@@ -180,14 +166,14 @@ country_decisions = {
 				holstein_area = {
 					type = all
 					owned_by = ROOT
-				}	
+				}
 				mecklenburg_area = {
 					type = all
 					owned_by = ROOT
-				}																															
+				}																																	
 			}				
 		}
-	 	effect = {
+		effect = {
 			change_tag = PRU # Country TAG
 			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
 			custom_tooltip = form_prussia_tt_2 # New Missions
@@ -274,7 +260,7 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_prussian_greatness
 					duration = 49275
-				}					
+				}						
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

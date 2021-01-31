@@ -73,6 +73,24 @@
 				}
 			}
 			hidden_effect = {
+				if = { # Government Rank Handler - Duchy
+					limit = {
+						has_country_flag = dec1_our_place_in_the_empire_duchy_rank
+					}
+					set_government_rank  = 1
+				}				
+				if = { # Government Rank Handler - Kingdom
+					limit = {
+						has_country_flag = dec1_our_place_in_the_empire_kingdom_rank
+					}
+					set_government_rank  = 2
+				}
+				if = {  # Government Rank Handler - Empire
+					limit = {
+						has_country_flag = dec1_our_place_in_the_empire_empire_rank
+					}
+					set_government_rank  = 3
+				}											
 				if = { # Remove Elector status
 					limit = {
 						is_elector = yes

@@ -55,14 +55,15 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = EPR }
+			NOT = { 
+				exists = EPR
+				government = theocracy 
+				is_emperor = yes
+			}
 			is_at_war = no
 			is_subject = no
-			is_nomad = no
-			is_emperor = no 
-			NOT = { government = theocracy }
 			custom_trigger_tooltip = {
-				tooltip = form_east_prussia_nation_tt_1
+				tooltip = form_east_prussia_tt_1
 				owns_core_province = 41
 				owns_core_province = 42
 				owns_core_province = 1841

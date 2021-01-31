@@ -1,11 +1,16 @@
 country_decisions = {
 
+	########################################
+	# North German Confederation - Prussia #
+	########################################
+
 	north_german_confederation_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			tag = PRU
 			NOT = { 
 				has_country_flag = formed_north_german_confederation_nation_flag
 				exists = NGC
@@ -27,7 +32,6 @@ country_decisions = {
 				primary_culture = prussian
 			}
 			OR = {
-				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 8
@@ -316,4 +320,5 @@ country_decisions = {
 		}
 		ai_importance = 400	
 	}
+
 }

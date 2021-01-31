@@ -31,7 +31,10 @@ country_decisions = {
 				tag = RHE
 			}
 			OR = {
-				ai = no
+				AND = { # prevents German player decisions clog
+					ai = no
+					num_of_cities = 14
+				}
 				AND = {
 					ai = yes
 					num_of_cities = 8

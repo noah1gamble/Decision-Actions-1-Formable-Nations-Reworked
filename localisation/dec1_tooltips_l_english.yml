@@ -194,8 +194,9 @@
  form_turkey_tt_1: "Owns all core §YTurkey§! provinces"
  form_turkey_tt_2: "Country obtains §YTurkish§! missions."
 
- form_east_prussia_tt_2: "Owns all core §YEast Prussia§! provinces"
- form_east_prussia_tt_3: "Country obtains §YEast Prussia§! missions."
+ form_east_prussia_tt_1: "Owns core provinces of §YEast Prussia§!"
+ form_east_prussia_tt_2: "Country obtains §YEast Prussia§! missions."
+ form_east_prussia_tt_3: "Country gains a permanent claim on §YBaltic§! region."
 
  form_prussia_tt_1: "Owns core provinces of §YPrussia§!"
  form_prussia_tt_2: "Country obtains §YPrussia§! missions."

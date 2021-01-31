@@ -48,7 +48,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 5
 			NOT = { exists = DCP }
 			is_at_war = no
 			is_subject = no	
@@ -98,7 +98,7 @@ country_decisions = {
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}				
 				# Reform Change
-				add_government_reform = prussian_monarchy
+				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank						
 				# Our Place in the Empire Custom Event
 				if = {
