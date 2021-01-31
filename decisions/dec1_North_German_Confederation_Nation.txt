@@ -23,6 +23,7 @@ country_decisions = {
 				tag = BTC
 				tag = GEP
 				tag = HEN
+				tag = DCP
 			}			
 			OR = {
 				primary_culture = hannoverian

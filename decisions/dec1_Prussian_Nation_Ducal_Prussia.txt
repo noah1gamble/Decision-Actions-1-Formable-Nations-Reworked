@@ -1,0 +1,232 @@
+country_decisions = {
+
+	###################################
+	# PRUSSIAN NATION - Ducal Prussia #
+	###################################
+
+	prussian_ducal_prussia_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			tag = DCP
+			AND = { # Protestant/Reformed Reformation Handler
+				OR = {
+					ai = no
+					OR = {
+						ai = yes
+						is_religion_enabled = protestant
+						is_religion_enabled = reformed
+					}
+				}
+				OR = {
+					ai = no
+					OR = {
+						ai = yes
+						religion = reformed
+						religion = protestant
+					}
+				}	
+			}		
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}						
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_prussia_area # East Prussia
+				area = west_prussia_area # West Prussia
+				area = kuyavia_area # Kuyavia
+				area = wielkopolska_area # Wielkopolska
+				area = hinter_pommern_area # Hinter Pommern
+				area = neumark_area # Neumark
+				area = mittelmark_area # Mittelmark
+				area = vorpommern_area # Vorpommern
+				area = northern_saxony_area # North Saxony
+				area = south_saxony_area # South Saxony
+				area = lower_saxony_area # Lower Saxony
+				area = thuringia_area # Thuringia
+				area = braunschweig_area # Braunschweig
+				area = mecklenburg_area # Mecklenburg
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}	
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { 
+				exists = PRU
+				government = theocracy
+			}
+			is_at_war = no
+			is_subject = no	
+			custom_trigger_tooltip = {
+				tooltip = form_prussia_tt_1
+				east_prussia_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				west_prussia_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				kuyavia_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				wielkopolska_area = {
+					type = all
+					owned_by = ROOT
+				}
+				hinter_pommern_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				neumark_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				mittelmark_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				vorpommern_area = {
+					type = all
+					owned_by = ROOT
+				}
+				northern_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				south_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				lower_saxony_area = {
+					type = all
+					owned_by = ROOT
+				}
+				thuringia_area = {
+					type = all
+					owned_by = ROOT
+				}
+				braunschweig_area = {
+					type = all
+					owned_by = ROOT
+				}	
+				mecklenburg_area = {
+					type = all
+					owned_by = ROOT
+				}																																			
+			}				
+		}
+	 	effect = {
+			change_tag = PRU # Country TAG
+			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
+			custom_tooltip = form_prussia_tt_2 # New Missions
+			custom_tooltip = form_prussia_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank	
+			PRU = { # Capital change and bonuses				
+				set_capital = 41 # Konigsberg
+				41 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}				
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank						
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}	
+				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Claims
+					pomerelia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}					
+					west_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}	
+					east_prussia_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = PRU
+					}									
+					# Government Rank change				
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}																		
+				}
+				# Custom Ideas check and change		
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = PRU_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+					custom_tooltip = dec1_decisions_blank
+				}
+                country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_prussian_greatness
+					duration = 49275
+				}					
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}					
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

@@ -29,6 +29,7 @@ country_decisions = {
 				tag = HEN
 				tag = LSX
 				tag = RHE
+				tag = DCP
 			}
 			OR = {
 				AND = { # prevents German player decisions clog
