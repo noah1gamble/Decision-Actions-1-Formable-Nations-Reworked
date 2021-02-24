@@ -1,0 +1,23 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_faction_dec1_french_parliament"
+		texturefile = "gfx//interface//factions//faction_dec1_french_parliament.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_bg_dec1_french_parliament"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+	}
+
+	spriteType = {
+		name = "GFX_faction_dec1_british_parliament"
+		texturefile = "gfx//interface//factions//faction_dec1_british_parliament.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_bg_dec1_british_parliament"
+		texturefile = "gfx//interface//faction_red_frame.tga"
+	}	
+
+}

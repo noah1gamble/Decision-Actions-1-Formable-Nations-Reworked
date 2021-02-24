@@ -2,29 +2,35 @@
 # Formable Nations Factions #
 #############################
 
-dec1_communist_party_of_china = {
-	monarch_power = DIP
-	always = yes
+# dec1_communist_party_of_china
 
-	modifier = {
-		
-	}
-}
+# dec1_politburo
 
-dec1_politburo = {
+# dec1_national_peoples_congress
+
+#################################
+# Dual Monarchy Unique Factions #
+#################################
+
+dec1_french_parliament = {
 	monarch_power = MIL
 	always = yes
 
-	modifier = {
-		
-	}
+    modifier = {
+		diplomatic_reputation = 1
+		global_manpower_modifier = 0.10
+		manpower_recovery_speed = 0.10
+    }
 }
 
-dec1_national_peoples_congress = {
-	monarch_power = ADM
+dec1_british_parliament = {
+	monarch_power = DIP
 	always = yes
 
-	modifier = {
-		
-	}
+    modifier = {
+		trade_efficiency = 0.1
+		global_sailors_modifier = 0.1
+		heavy_ship_power = 0.1
+		heavy_ship_cost = -0.03
+    }
 }

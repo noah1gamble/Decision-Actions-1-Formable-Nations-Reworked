@@ -14,8 +14,6 @@ country_decisions = {
 				has_country_flag = formed_spanish_nation_flag
 				exists = SPA
 				tag = SPA
-				tag = ARA
-				tag = CAS
 				tag = PAP
 				tag = FRA
 				tag = KNI
@@ -144,6 +142,7 @@ country_decisions = {
 			change_tag = SPA # Country TAG
 			set_country_flag = formed_spanish_nation_flag # Country Formation Flag
 			custom_tooltip = form_spain_tt_2 # New Missions
+			custom_tooltip = form_spain_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank	
 			SPA = { # Capital change and bonuses				
 				set_capital = 219 # Toledo
@@ -173,6 +172,13 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips	
+					# Region/Area Claims
+					iberia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = SPA
+					}				
 					# Government Rank change				
 					if = {
 						limit = {

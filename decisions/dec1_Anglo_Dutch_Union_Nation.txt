@@ -22,6 +22,7 @@ country_decisions = {
 				tag = BNL
 				tag = FRL
 				tag = ANG
+				tag = DUM
 			}	
 			OR = {
 				primary_culture = english				

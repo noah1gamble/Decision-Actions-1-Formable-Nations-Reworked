@@ -96,6 +96,20 @@
  czechoslovakia_nation_title: "@CZE Unite Czechoslovakia"
  czechoslovakia_nation_desc: "The First Czechoslovak Republic, often called The First Republic was the Czechoslovak state that existed from 1918 to 1938. The state was commonly called Czechoslovakia. It was composed of Bohemia, Moravia, Czech Silesia, Slovakia and Subcarpathian Ruthenia."
 
+  #################
+  # Dual Monarchy #
+  #################
+
+ dual_monarchy_nation_title: "@DUM The Dual Monarchy"
+ dual_monarchy_nation_desc: "The Dual Monarchy is a country situated in Western Europe, widely regarded as the foremost power in the region and potentially the world. The European homeland consists of the southern majority of the island of Great Britain in size and the vast majority of its population, the entirety of Ireland, and nearly all of historical Occitanian and French lands.\n\nWhile technically the kingdoms of both France and England are separate, in practice they are without a doubt one. Their monarch and ruling Parliaments (Parliament of the lords and Parliament of the People) are the same, and both largely take great caution and pride in ruling both sides of the channel."
+
+ anglois_cultural_icon_title: "Anglois Cultural Icon"
+ anglois_cultural_icon_desc: "[Root.Monarch.GetName] has shown himself to be a true Anglois [Root.Monarch.GetTitle] and so he should proclaim himself as such!"
+
+  #################
+  # Ducal Prussia #
+  #################
+
  ducal_prussia_nation_title: "@DCP Ducal Prussia"
  ducal_prussia_nation_desc: "The Duchy of Prussia also known as 'Ducal Prussia' was a duchy in the region of Prussia established as a result of secularization of the Teutonic Order during the Protestant Reformation in 1525."
 

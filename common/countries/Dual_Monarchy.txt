@@ -1,0 +1,81 @@
+# Dual Monarchy
+
+graphical_culture = westerngfx
+
+color = { 150 112 179 }
+
+historical_idea_groups = {
+	economic_ideas
+	offensive_ideas
+	exploration_ideas
+	defensive_ideas
+	administrative_ideas
+	maritime_ideas
+	quality_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_longbow
+	gaelic_mercenary
+	gaelic_free_shooter
+	french_caracolle
+	irish_charge
+	anglofrench_line
+	french_dragoon
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Henry" = 100
+	"Edward" = 60
+	"Charles" = 40
+	"James" = 40
+	"William" = 20
+	"Richard" = 20
+}
+
+leader_names = {
+	"de Beauharnais"
+	"de Bercy"
+	"de Boissieu"
+	"de Bonnefoy"
+	"de Bonneuil"
+	"du Bosquet"
+	"de Broglie"
+	"de Castaing"
+	"de Caumartin"
+	"de Chambly"
+	"de Chambronne"
+	"de Champmartin"
+	"de Chevigny"
+	"de Crussol"
+	"de Dampierre"
+	"du Fournay"
+	"de Galard"
+	"des Coulons"
+	"des Herbiers"
+}
+
+ship_names = {
+	"La Royale"
+}
+
+army_names = {
+	"Grande Armée"
+	"Grande Armée de $PROVINCE$"
+}
+
+fleet_names = {
+	"Escadre Bleue"
+	"Escadre Rouge"
+	"Escadre Blanche"
+}

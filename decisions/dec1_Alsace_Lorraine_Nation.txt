@@ -3,6 +3,9 @@ country_decisions = {
 	alsace_lorraine_nation = {
 		major = yes
 		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no					
 			NOT = {
 				has_country_flag = formed_alscace_lorraine_nation_flag
 				exists = ALC
@@ -16,7 +19,8 @@ country_decisions = {
 				tag = ALP
 				tag = CIS
 				tag = ADR
-			}				
+				tag = ANG
+			}
 			OR = {
 				primary_culture = swabian
 				primary_culture = burgundian

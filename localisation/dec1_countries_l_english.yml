@@ -138,6 +138,8 @@
  BKL_ADJ: "Balkan"
  CSA: "Confederate States"
  CSA_ADJ: "Confederate"
+ DUM: "Dual Monarchy"
+ DUM_ADJ: "Anglois"
  # Vanilla Countries
  ARB: "Arabian Empire"
  ARB_ADJ: "Arabian"

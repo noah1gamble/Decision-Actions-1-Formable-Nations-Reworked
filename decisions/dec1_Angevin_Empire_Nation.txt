@@ -13,7 +13,7 @@ country_decisions = {
 			OR = {
 				primary_culture = english
 				tag = ENG
-			}			
+			}
 			NOT = {
 				has_country_flag = formed_angevin_empire_england_nation_flag
 				has_reform = celestial_empire
@@ -23,6 +23,7 @@ country_decisions = {
 				tag = FRA
 				tag = EUR
 				tag = UKI
+				tag = DUM
 			}
 			OR = {
 				ai = no

@@ -1,0 +1,101 @@
+dual_monarchy_anglois_civil_war = {
+	ended_by_country_breaking_to_rebels = no
+
+	potential = {
+		tag = DUM
+		NOT = { has_country_flag = dual_monarchy_anglois_civil_war_happened }
+		has_reform = parliament_of_the_lords_reform
+		is_lesser_in_union = no
+	}
+
+	can_start = {
+		has_any_disaster = no
+		NOT = { stability = 1 }
+		num_of_owned_provinces_with = { # Anglois Culture not spread
+			value = 10
+			NOT = { culture = anglois }
+			is_core = root
+			is_overseas = no
+		}
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+		is_year = 1800
+		AND = { # Cultural solution and has 3 stability
+			num_of_owned_provinces_with = { # Anglois Culture not spread
+				value = 10
+				culture = anglois
+				is_core = root
+				is_overseas = no
+			}
+			stability = 3
+		}
+	}
+
+	progress = {
+		modifier = { # Single Faction Control over 80%
+			factor = 2.0
+			OR = {
+				faction_influence = {
+					faction = dec1_french_parliament
+					influence > 80
+				}
+				faction_influence = {
+					faction = dec1_british_parliament
+					influence > 80
+				}
+			}
+		}
+		modifier = { # Small Parliament
+			factor = 2.0
+			NOT = { current_size_of_parliament = 30 }
+		}
+		modifier = { # Cultural Influence
+			factor = 0.2
+			num_of_owned_provinces_with = {
+				value > 10
+				NOT = { culture = anglois }
+				is_core = root
+				is_overseas = no
+			}
+		}
+		modifier = { # Stability not at least 1
+			factor = 0.1
+			NOT = { stability = 1 }
+		}
+	}
+
+	modifier = {
+		global_unrest = 5
+		culture_conversion_cost = 0.01
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 3
+			}
+			num_of_owned_provinces_with = { # Anglois Cultural Solution
+				value = 10
+				culture = anglois
+				is_core = root
+				is_overseas = no
+			}
+		}
+	}
+
+	#on_start = dec1_disaster_events_anglois_civil_war.1
+	#on_end = dec1_disaster_events_anglois_civil_war.100
+
+	on_monthly = {
+		events = { }
+		random_events = {
+			1000 = 0
+			# TODO: Unique Random Events
+		}
+	}
+}
+

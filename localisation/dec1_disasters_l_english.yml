@@ -1,0 +1,22 @@
+﻿l_english:
+
+ ##########################
+ # DISASTERS LOCALISATION #
+ ##########################
+
+  # Dual Monarchy
+
+ dual_monarchy_anglois_civil_war: "Anglois Civil War"
+ dual_monarchy_anglois_civil_war_desc: ""
+
+  ################################
+  # DISASTER EVENTS LOCALISATION #
+  ################################
+
+  # Dual Monarchy
+
+ dec1_disaster_events_anglois_civil_war.1.t: "The Anglois Civil War"
+ dec1_disaster_events_anglois_civil_war.1.d: "With the foundation of the Dual Monarchy came the cultural mix of British and French cultures known as the 'Anglois'. Many French and English populace have yet to embrace this new natural evolution of our Grand Protectorate and many have even begun openly resisting this change, leading to an armed conflict between the Anglois dominated peoples against what remains of English and French cultural holdouts.\n\nWe must crush this resistance if we wish for this Dual Monarchy to not become a simple footnote in history!"
+ dec1_disaster_events_anglois_civil_war.1.a: "Suppress the Rebels"
+ dec1_disaster_events_anglois_civil_war.1.b: "Appease the British and French"
+ dec1_disaster_events_anglois_civil_war.1.c: "Surrender the Anglois Culture"

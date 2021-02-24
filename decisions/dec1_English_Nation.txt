@@ -22,6 +22,7 @@ country_decisions = {
 				tag = HLR
 				tag = ANG
 				tag = EUR
+				tag = DUM
 			}
 			OR = {
 				ai = no

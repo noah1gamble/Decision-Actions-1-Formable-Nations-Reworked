@@ -1,0 +1,27 @@
+﻿l_english:
+
+ ########################
+ # FACTION LOCALISATION #
+ ########################
+
+  # Dual Monarchy
+
+ dec1_french_parliament: "French Parliament"
+ dec1_french_parliament_influence: "French Influence"
+ dec1_french_parliament_FACTION_DESC: "The French Parliament is the political body that dominates French politics in the Dual Monarchy which draws much of the French population into the political life. French nobles are commonly plotting to undermine the authority of national politics which can negatively effect the population."
+
+ dec1_british_parliament: "British Parliament"
+ dec1_british_parliament_influence: "British Influence"
+ dec1_british_parliament_FACTION_DESC: "The British Parliament is the ruling Parliament that overlooks the British part of the union which commonly desire to lead the Grand Parliament as they are economically superior in the union. "
+
+ ###############################
+ # STATES GENERAL LOCALISATION #
+ ###############################
+
+  # Dual Monarchy
+
+ nationalist_influence: "Nationalists Influence"
+ nationalist_influence_MECHANIC_TOOLTIP: "Nationalists"
+
+ union_influence: "Unionists Influence"
+ union_influence_MECHANIC_TOOLTIP: "Unionists"

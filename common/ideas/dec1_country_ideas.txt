@@ -1213,6 +1213,57 @@ CZE_ideas = {
 	}
 }
 
+# Dual Monarchy
+DUM_ideas = {
+	start = {
+		trade_steering = 0.1
+		global_autonomy = -0.05
+	}
+
+	bonus = {
+		state_governing_cost = 0.1
+	}
+
+	trigger = {
+		tag = DUM
+	}
+	free = yes	# will be added at load.
+
+	DUM_occitan_sailors = {
+		heavy_ship_power = 0.1
+		heavy_ship_cost = -0.05
+	}
+
+	DUM_english_diplomacy = {
+		diplomatic_annexation_cost = -0.2
+		governing_capacity_modifier = 0.2
+	}
+
+	DUM_colonial_reform = {
+		liberty_desire_from_subject_development = -0.10
+		diplomatic_upkeep = 2
+	}
+
+	DUM_the_enlightenment = {
+		technology_cost = -0.10
+	}
+
+	DUM_combined_arms_professionalism = {
+		discipline = 0.01
+		infantry_shock = 1 
+	}
+
+	DUM_industrialisation_age = {
+		trade_goods_size_modifier = 0.25
+	}
+
+	DUM_british_warfare_doctrine = {
+		global_trade_power = 0.1
+		navy_tradition = 1
+		land_forcelimit_modifier = 0.10
+	}
+}
+
 # Ducal Prussia
 DCP_ideas = { 
 	start = {

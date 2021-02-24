@@ -12,6 +12,10 @@ dec1_abolished_the_mandate_of_heaven = {
 	legitimacy = -1
 }
 
+dec1_anglois_icon = {
+	culture_conversion_cost = -0.10
+}
+
 ######################
 # National Abilities #
 ######################
@@ -203,6 +207,12 @@ dec1_abolished_the_mandate_of_heaven = {
 
 	dec1_czech_unity = {
 		promote_culture_cost = -0.25
+	}
+
+		# Dual Monarchy
+
+	dec1_franco_british_union = {
+		production_efficiency = 0.10
 	}
 
 		# Ducal Prussia

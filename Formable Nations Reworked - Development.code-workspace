@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\Steam\\steamapps\\common\\Europa Universalis IV"
 		}
 	]
 }

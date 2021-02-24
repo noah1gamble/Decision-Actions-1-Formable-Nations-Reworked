@@ -4,7 +4,7 @@ graphical_culture = westerngfx
 
 color = { 157 51 167 }
 
-preferred_religion = protestant
+preferred_religion = anglican
 
 historical_idea_groups = {
 	administrative_ideas

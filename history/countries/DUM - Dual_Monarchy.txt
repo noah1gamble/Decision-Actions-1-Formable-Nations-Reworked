@@ -1,0 +1,7 @@
+government = dual_monarchy_government
+add_government_reform = parliament_of_the_lords_reform
+primary_culture = anglois
+religion = catholic
+technology_group = western
+capital = 183 # Paris
+national_focus = MIL

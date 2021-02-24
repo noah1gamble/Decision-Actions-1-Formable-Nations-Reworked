@@ -1,0 +1,15 @@
+# Formable Nations Reworked Personalities
+
+anglois_icon_personality = {
+
+	allow = {
+		primary_culture = anglois
+		NOT = { 
+			ruler_has_personality = tolerant_personality # cannot be tolerant
+			religious_unity = 0.50 # Not at least 20% religious unity
+		}
+	}
+
+	culture_conversion_cost = -0.10
+}
+

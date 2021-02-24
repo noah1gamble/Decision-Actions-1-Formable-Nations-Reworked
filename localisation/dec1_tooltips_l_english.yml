@@ -50,9 +50,13 @@
  form_cisalpina_tt_4: "Country gains a permanent claim on §YLiguria§! area."
  form_cisalpina_tt_5: "§YCisalpina§! §RCANNOT§! form any §YItalian§! nations"
 
- form_spanish_nation_tt_1: "Owns core region: §YSpain§!"
- form_spanish_nation_tt_2: "Country obtains §YSpain§! missions."
- form_spanish_nation_tt_3: "§YSpain§! gains a permanent claim on §YIberia§! region." 
+ form_dual_monarchy_tt_6: "Country obtains §YDual Monarchy§! missions."
+ form_dual_monarchy_tt_7: "Country gains a permanent claim on §YBritish Isles§! region."
+ form_dual_monarchy_tt_8: "Country gains a permanent claim on §YFrance§! region."
+
+ form_spain_tt_1: "Owns core region: §YSpain§!"
+ form_spain_tt_2: "Country obtains §YSpain§! missions."
+ form_spain_tt_3: "§YSpain§! gains a permanent claim on §YIberia§! region."
 
  form_great_britain_tt_1: "Owns core region: §YEngland§!"
  form_great_britain_tt_2: "Country obtains §YGreat Britain§! missions."
@@ -577,22 +581,6 @@
  dec1_kingdom_of_god_warning: "§RThis will disable the Papacy!§!"
 
  dec1_declared_the_kingdom_of_god: "Declared the Kingdom of God on Earth"
-
- #############################
- # GOVERNMENT RANKS TOOLTIPS #
- #############################
-
- dec1_government_change_monarchy: "The type of Government changes to §YMonarchy§!."
- dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
- dec1_government_change_prussian_monarchy: "The type of Government changes to §YPrussian Monarchy§!."
- dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
- dec1_government_change_dutch_republic: "The type of Government changes to §YDutch Republic§!."
- dec1_government_change_prc: "The type of Government changes to §YSocialist Republic§!."
- dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
- dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
- dec1_government_rank_1: "The Government Rank changes to §YDuchy§!."
- dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
- dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."
 
  #############################
  # COUNTRY FLAG LOCALIZATION #

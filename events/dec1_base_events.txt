@@ -1,11 +1,11 @@
-	#####################################
-	# Formable Nations: Reworked events #
-	#####################################
+	##########################################
+	# Formable Nations: Reworked Base events #
+	##########################################
 
 	namespace = dec1_events
 
 	# Our place in the Empire
-	
+
 	country_event = {
 		id = dec1_events.1
 		title = "dec1_events.1.t"
@@ -161,6 +161,8 @@
 		}
 	}
 
+	# Our Place in the Empire - Nation left the Empire
+
 	# New Missions & Objectives
 
 	country_event = {
@@ -181,4 +183,44 @@
 			ai_chance = { factor = 0 }
 			# No Effect
 		}
-	}	
+	}
+
+	##############################################
+	# Formable Nations: Reworked Disaster Events #
+	##############################################
+
+	### Dual Monarchy ###
+
+	# The Anglois Civil War
+
+	country_event = {
+		id = dec1_disaster_events_anglois_civil_war.1
+		title = "dec1_disaster_events_anglois_civil_war.1.t"
+		desc = "dec1_disaster_events_anglois_civil_war.1.d"
+		picture = CIVIL_WAR_eventPicture
+
+		is_triggered_only = yes
+
+		option = { # Suppress the Rebels
+			name = "dec1_disaster_events_anglois_civil_war.1.a"
+			ai_chance = { factor = 0 }
+		}
+		option = { # Appease the British and French
+			name = "dec1_disaster_events_anglois_civil_war.1.b"
+			ai_chance = { factor = 0 }
+		}
+	}
+
+	# End of the Civil War
+
+	######################################################
+	# Formable Nations: Reworked Country specific events #
+	######################################################
+
+	#################
+	# Dual Monarchy #
+	#################
+
+	### Nationalist VS Unionists Random Events ###
+
+	# Debate between the General Assembly over crown land reform (nats VS unions)

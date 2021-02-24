@@ -43,8 +43,7 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			#adm_tech = 10 - No admin tech required!
-			religious_unity = 0.90
+			adm_tech = 5
 			religion_group = muslim	
 			owns_core_province = 407 # Raqqa		
 			aleppo_area = {

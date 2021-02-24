@@ -1,27 +1,48 @@
 ﻿l_english:
 
- ###########################
- # GOVERNMENT LOCALISATION #
- ###########################
+  #############################
+  # GOVERNMENT TYPES TOOLTIPS #
+  #############################
 
- socialist_republic_prc: "one-party Socialist Republic"
- socialist_republic_prc_desc: "The People's Republic of China Government System - TODO"
- 
- ###################################
- # GOVERNMENT REFORMS LOCALISATION #
- ###################################
+ dual_monarchy_government_name: "Dual Monarchy"
+ dual_monarchy_government_desc: ""
 
-    # Highest Authority
- dec1_communist_party_of_china: "The Communist Party of China"
- dec1_communist_party_of_china_influence: "Communist Party Influence"
- dec1_communist_party_of_china_FACTION_DESC: "The People's Party Description - TODO"
+  ################################
+  # Dual Monarchy Unique Reforms #
+  ################################
 
-    # Most Centralized Authority
- dec1_politburo: "The Politburo of China"
- dec1_politburo_influence: "Politburo Influence"
- dec1_politburo_FACTION_DESC: "The Politburo Description - TODO"
- 
-    # Lowest Authority
- dec1_national_peoples_congress: "National People's Congress"
- dec1_national_peoples_congress_influence: "People's Congress Influence"
- dec1_national_peoples_congress_FACTION_DESC: "National People's Congress Description - TODO"
+ parliament_of_the_lords_reform: "Grand Parliament of Lords and People"
+ parliament_of_the_lords_reform_desc: "The Grand Parliament is the branching governing body over the Dual Monarchy. Both Britain and France having their own national parliament which allows it to stand as the political bond between both members of this union."
+
+  #############################
+  # GOVERNMENT NAMES TOOLTIPS #
+  #############################
+
+ DUCAL_PROTECTORATE: "Ducal Protectorate"
+ PROTECTORATE: "Protectorate"
+ GRAND_PROTECTORATE: "Grand Protectorate"
+
+ DUKE_PROTECTOR: "Duke-Protector"
+ PROTECTOR: "Protector"
+ GRAND_PROTECTOR: "Grand Protector"
+
+ DUCHESS_PROTECTRESS: "Duchess-Protectress"
+ PROTECTRESS: "Protectress"
+ GRAND_PROTECTRESS: "Grand Protectress"
+
+  #############################
+  # GOVERNMENT RANKS TOOLTIPS #
+  #############################
+
+ dec1_government_change_monarchy: "The type of Government changes to §YMonarchy§!."
+ dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
+ dec1_government_change_monarchy_of_dual_monarchy: "The type of Government changes to §YDual Monarchy§!."
+ dec1_government_change_prussian_monarchy: "The type of Government changes to §YPrussian Monarchy§!."
+ dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
+ dec1_government_change_dutch_republic: "The type of Government changes to §YDutch Republic§!."
+ dec1_government_change_prc: "The type of Government changes to §YSocialist Republic§!."
+ dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
+ dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
+ dec1_government_rank_1: "The Government Rank changes to §YDuchy§!."
+ dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
+ dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."

@@ -1,0 +1,15 @@
+﻿l_english:
+
+ ########################
+ # CULTURE LOCALISATION #
+ ########################
+
+ anglois: "Anglois"
+ anglois_desc: "Anglois is a culture in western Europe, and is almost exclusively in the Dual Monarchy, serving as the nation's primary culture. Anglois is a mix of French and English cultures due to the intermingling of the two in metropolitan areas such as Londres (London) and Paris proceeding the end of the Hundred years' war. The nobility of the Dual Monarchy are almost exclusively Anglois as well, due to the kings of the Dual Monarchy speaking French, and the ruling Nobility at the times fondness for English language and culture they started speaking French and English, mainly French after a while though, This is also the Likely origin of the Anglois culture and language."
+
+ ##############################
+ # CULTURE GROUP LOCALISATION #
+ ##############################
+
+ franco_british: "Franco-British"
+ franco_british_desc: ""

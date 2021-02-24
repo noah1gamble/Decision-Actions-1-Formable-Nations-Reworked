@@ -506,6 +506,26 @@
  CZE_insulting_history: "Insulting History"
  CZE_insulting_history_desc: "§RDescription Available in 4.1.0§!"
 
+  # Dual Monarchy
+
+ DUM_ideas: "Dual Monarchy Ideas"
+ DUM_ideas_start: "Dual Monarchy Traditions"
+ DUM_ideas_bonus: "The Union of Britain and France"
+ DUM_occitan_sailors: "Occitan Sailors"
+ DUM_occitan_sailors_desc: "§RDescription Available in 4.1.0§!"
+ DUM_english_diplomacy: "English Diplomacy"
+ DUM_english_diplomacy_desc: "§RDescription Available in 4.1.0§!"
+ DUM_colonial_reform: "Colonial Reform"
+ DUM_colonial_reform_desc: "§RDescription Available in 4.1.0§!"
+ DUM_the_enlightenment: "The Enlightenment"
+ DUM_the_enlightenment_desc: "§RDescription Available in 4.1.0§!"
+ DUM_combined_arms_professionalism: "Combined Arms Professionalism"
+ DUM_combined_arms_professionalism_desc: "§RDescription Available in 4.1.0§!"
+ DUM_industrialisation_age: "Industrialisation Age"
+ DUM_industrialisation_age_desc: "§RDescription Available in 4.1.0§!"
+ DUM_british_warfare_doctrine: "British Naval Doctrine"
+ DUM_british_warfare_doctrine_desc: "§RDescription Available in 4.1.0§!"
+
  DCP_ideas: "Ducal Prussia Ideas"
  DCP_ideas_start: "Ducal Prussia Traditions"
  DCP_ideas_bonus: "The Duchy of Prussia"

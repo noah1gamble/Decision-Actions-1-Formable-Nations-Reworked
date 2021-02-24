@@ -1,0 +1,14 @@
+﻿l_english:
+
+ #################################
+ # STATIC MODIFIERS LOCALISATION #
+ #################################
+
+  #################
+  # Dual Monarchy #
+  #################
+
+ dec1_anglois_icon: "Icon of Anglois"
+ dec1_anglois_icon_desc: "This ruler has shown himself to be a true Anglois [Root.Monarch.GetTitle]"
+
+

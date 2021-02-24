@@ -14,7 +14,7 @@ country_decisions = {
 				has_country_flag = formed_great_britain_nation_flag
 				exists = NSE
 				exists = UKI
-				exists = GBR                                      
+				exists = GBR
 				tag = ENG
 				tag = GBR
 				tag = UKI
@@ -22,6 +22,7 @@ country_decisions = {
 				tag = HLR
 				tag = EUR
 				tag = ANG
+				tag = DUM
 			}
 			OR = {
 				culture_group = british
