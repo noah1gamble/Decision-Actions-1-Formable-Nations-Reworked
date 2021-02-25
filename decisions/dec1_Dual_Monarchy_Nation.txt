@@ -10,7 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			#tag = GBR
+			tag = GBR
 			NOT = {
 				has_country_flag = formed_dual_monarchy_nation_flag
 				has_reform = celestial_empire
@@ -98,11 +98,36 @@ country_decisions = {
 			}
 		}
 		allow = {
-			#adm_tech = 15 # Empire Rank requires 15 tech
+			adm_tech = 15 # Empire Rank requires 15 tech
 			NOT = { exists = DUM }
 			is_subject = no
 			is_at_war = no
-
+			OR = {
+				GBR = { # Owns france in a union
+					AND = {
+					owns_core_province = 178
+					senior_union_with = FRA
+					FRA = {
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = GBR
+							years = 50
+							}
+							NOT = { liberty_desire = 40 }
+						}
+					}
+				}
+				AND = { # Owns british isles region and france region
+					british_isles_region = {
+						type = all
+						owned_by = ROOT
+					}
+					france_region = {
+						type = all
+						owned_by = ROOT
+					}
+				}
+			}
 		}
 	 	effect = {
 			change_tag = DUM # Country TAG
@@ -111,6 +136,7 @@ country_decisions = {
 			custom_tooltip = form_dual_monarchy_tt_7 # Region/Area Claims
 			custom_tooltip = form_dual_monarchy_tt_8 # Region/Area Claims
 			change_primary_culture = anglois
+			set_ruler_culture = anglois
 			183 = { change_culture = anglois }
 			236 = { change_culture = anglois }
 			add_accepted_culture = anglois
