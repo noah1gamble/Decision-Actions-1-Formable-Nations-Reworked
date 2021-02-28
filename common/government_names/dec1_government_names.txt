@@ -1,43 +1,93 @@
-# For specific combinations of culture, religion and other such triggers
-# Will pick the first valid one it finds in list
+	####################
+	# GOVERNMENT NAMES #
+	####################
 
-#Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+	# Dual Monarchy
 
-dual_monarchy_government = {
-	rank = {
-		1 = DUCAL_PROTECTORATE
-		2 = PROTECTORATE
-		3 = GRAND_PROTECTORATE
+	dual_monarchy_government = {
+		rank = {
+			3 = GRAND_PROTECTORATE
+		}
+
+		ruler_male = {
+			3 = GRAND_PROTECTOR
+		}
+
+		ruler_female = {
+			3 = GRAND_PROTECTRESS
+		}
+
+		heir_male = {
+			3 = HEIR_APPARENT
+		}
+
+		heir_female = {
+			3 = HEIRESS_APPARENT
+		}
+
+		trigger = {
+			government = dual_monarchy_government
+			has_reform = parliament_of_the_lords_reform
+			tag = DUM
+		}
 	}
 
-	ruler_male = {
-		1 = DUKE_PROTECTOR
-		2 = PROTECTOR
-		3 = GRAND_PROTECTOR
+	# People's Republic of China
+
+	chinese_communism_government = {
+		rank = {
+			3 = PEOPLES_REPUBLIC
+		}
+
+		ruler_male = {
+			3 = SUPREME_LEADER
+		}
+
+		ruler_female = {
+			3 = MADAM_SUPREME_LEADER
+		}
+
+		heir_male = {
+			3 = CENTRAL_GUARD
+		}
+
+		heir_female = {
+			3 = CENTRAL_GUARD
+		}
+
+		trigger = {
+			government = chinese_communism_government
+			has_reform = communist_party_of_china_reform
+			tag = PRC
+		}
 	}
 
-	ruler_female = {
-		1 = DUCHESS_PROTECTRESS
-		2 = PROTECTRESS
-		3 = GRAND_PROTECTRESS
-	}
-	
-	heir_male = {
-		1 = DUKE_PROTECTOR
-		2 = PROTECTOR
-		3 = GRAND_PROTECTOR
-	}
-	
-	heir_female = {
-		1 = DUCHESS_PROTECTRESS
-		2 = PROTECTRESS
-		3 = GRAND_PROTECTRESS
-	}
+	# Eastern Roman Empire
 
-	trigger = {
-		government = dual_monarchy_government
-		has_reform = parliament_of_the_lords_reform
-		tag = DUM
-	}
-}
+	byzantine_bureaucracy_government = {
+		rank = {
+			3 = ROMAN_REPUBLIC
+		}
 
+		ruler_male = {
+			3 = EASTERN_ROMAN_EMPEROR
+		}
+
+		ruler_female = {
+			3 = EASTERN_ROMAN_EMPRESS
+		}
+
+		heir_male = {
+			3 = SUCCESSOR
+		}
+
+		heir_female = {
+			3 = SUCCESSOR
+		}
+
+		trigger = {
+			government = byzantine_bureaucracy_government
+			has_reform = eastern_roman_senate_reform
+			tag = ERP
+		}
+	}

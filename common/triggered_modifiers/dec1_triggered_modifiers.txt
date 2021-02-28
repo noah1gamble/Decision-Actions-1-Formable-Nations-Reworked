@@ -1,0 +1,32 @@
+
+dec1_control_of_the_democratic_socialists = {
+	potential = {
+		tag = PRC
+	}
+	trigger = {
+		has_factions = yes
+		custom_trigger_tooltip = {
+			tooltip = dec1_hardline_communists_tt
+			has_faction = dec1_hardline_communists
+		}
+		custom_trigger_tooltip = {
+			tooltip = dec1_democratic_socialists_tt
+			has_faction = dec1_democratic_socialists
+		}
+		AND = {
+			faction_influence = {
+				faction = dec1_hardline_communists
+				influence = 50
+			}
+			NOT = {
+				faction_influence = {
+					faction = dec1_democratic_socialists
+					influence = 10
+				}
+			}
+		}
+	}
+	country_admin_power = 1
+	country_diplomatic_power = 1
+	country_military_power = 1
+}

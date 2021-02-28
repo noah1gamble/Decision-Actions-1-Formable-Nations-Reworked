@@ -21,6 +21,7 @@ country_decisions = {
 				tag = CEU
 				tag = FRE
 				tag = IBE
+				tag = ROP
 			}
 			OR = {
 				culture_group = iberian

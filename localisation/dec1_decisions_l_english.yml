@@ -307,6 +307,9 @@
  restore_roman_republic_nation_title: "@ROM Proclaim the new Republic"
  restore_roman_republic_nation_desc: "The Roman Republic was the era of classical Roman civilization beginning with the overthrow of the Roman Kingdom, traditionally dated to 509 BC, and ending in 27 BC with the establishment of the Roman Empire. It was during this period that Rome's control expanded from the city's immediate surroundings to hegemony over the entire Mediterranean world."
 
+ eastern_roman_empire_nation_title: "@ERP Eastern Roman Empire"
+ eastern_roman_empire_nation_desc: "The Eastern Empire has been seperated from Rome along with the Scism has created for us a situation that requires us to no longer identify as a Roman Successor but as our own Eastern Roman Empire."
+
  restore_roman_empire_nation_title: "@ROM Restoration of the Roman Empire"
  restore_roman_empire_nation_desc: "Not since the Romans in the second century has one empire commanded the entirety of the Mediterranean and beyond. If we claim this land, we can scoff at whatever pretenders may claim in Constantinople or the Holy Roman Empire and proclaim ourselves the true successors of Rome."
 

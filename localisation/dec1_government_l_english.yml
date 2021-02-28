@@ -1,48 +1,120 @@
 ﻿l_english:
 
-  #############################
-  # GOVERNMENT TYPES TOOLTIPS #
-  #############################
+  # DEVELOPER NOTE: THESE NAMES SHOULD BE REWORKED FOR COMPATIBILITY EX: PROTECTORATE SHOULD CHANGE TO DEC1_DUAL_MONARCHY_GOVERNMENT_RANK_2
 
- dual_monarchy_government_name: "Dual Monarchy"
- dual_monarchy_government_desc: ""
+  ####################
+  # GOVERNMENT TYPES #
+  ####################
 
-  ################################
-  # Dual Monarchy Unique Reforms #
-  ################################
+    # Dual Monarchy
 
- parliament_of_the_lords_reform: "Grand Parliament of Lords and People"
- parliament_of_the_lords_reform_desc: "The Grand Parliament is the branching governing body over the Dual Monarchy. Both Britain and France having their own national parliament which allows it to stand as the political bond between both members of this union."
+   dual_monarchy_government_name: "Dual Monarchy"
+   dual_monarchy_government_desc: ""
 
-  #############################
-  # GOVERNMENT NAMES TOOLTIPS #
-  #############################
+    # People's Republic of China
 
- DUCAL_PROTECTORATE: "Ducal Protectorate"
- PROTECTORATE: "Protectorate"
- GRAND_PROTECTORATE: "Grand Protectorate"
+   chinese_communism_government_name: "Chinese Communism"
+   chinese_communism_government_desc: ""
 
- DUKE_PROTECTOR: "Duke-Protector"
- PROTECTOR: "Protector"
- GRAND_PROTECTOR: "Grand Protector"
+   # Eastern Roman Empire
 
- DUCHESS_PROTECTRESS: "Duchess-Protectress"
- PROTECTRESS: "Protectress"
- GRAND_PROTECTRESS: "Grand Protectress"
+   byzantine_bureaucracy_government_name: "Byzantine Bureaucracy"
+   byzantine_bureaucracy_government_desc: "The Eastern Roman Empire had a complex system of aristocracy and bureaucracy, which was inherited from the Roman Empire. At the apex of the hierarchy stood the emperor, yet Byzantium was a republican absolute monarchy and not primarily a monarchy by divine right'"
 
-  #############################
-  # GOVERNMENT RANKS TOOLTIPS #
-  #############################
+  ######################
+  # GOVERNMENT REFORMS #
+  ######################
 
- dec1_government_change_monarchy: "The type of Government changes to §YMonarchy§!."
- dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
- dec1_government_change_monarchy_of_dual_monarchy: "The type of Government changes to §YDual Monarchy§!."
- dec1_government_change_prussian_monarchy: "The type of Government changes to §YPrussian Monarchy§!."
- dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
- dec1_government_change_dutch_republic: "The type of Government changes to §YDutch Republic§!."
- dec1_government_change_prc: "The type of Government changes to §YSocialist Republic§!."
- dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
- dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
- dec1_government_rank_1: "The Government Rank changes to §YDuchy§!."
- dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
- dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."
+    #################
+    # Dual Monarchy #
+    #################
+
+     # Tier 1
+
+     parliament_of_the_lords_reform: "Grand Parliament of Lords and People"
+     parliament_of_the_lords_reform_desc: "The Grand Parliament is the branching governing body over the Dual Monarchy. Both Britain and France having their own national parliament which allows it to stand as the political bond between both members of this union."
+
+    ##############################
+    # People's Republic of China #
+    ##############################
+
+     # Tier 1
+
+     communist_party_of_china_reform: "Communist Party of China"
+     communist_party_of_china_reform_desc: ""
+
+     democratic_socialists_reform: "Democratic Socialist Party of China"
+     democratic_socialists_reform_desc: ""
+
+     # Tier 2
+
+     # Tier 3
+
+     abolish_term_limits_reform: "Abolish Term Limits"
+     abolish_term_limits_reform_desc: ""
+
+     reduced_term_limits_reform:  "Reform and Reduction"
+     reduced_term_limits_reform_desc:  ""
+
+    ########################
+    # Eastern Roman Empire #
+    ########################
+
+     # Tier 1
+
+     eastern_roman_senate_reform: "Eastern Roman Senate"
+     eastern_roman_senate_reform_desc: ""
+
+  ####################
+  # GOVERNMENT NAMES #
+  ####################
+
+    # Dual Monarchy
+
+   GRAND_PROTECTORATE: "Grand Protectorate"
+
+   GRAND_PROTECTOR: "Grand Protector"
+
+   GRAND_PROTECTRESS: "Grand Protectress"
+
+   HEIR_APPARENT: "Heir Apparent"
+
+   HEIRESS_APPARENT: "Heiress Apparent"
+
+    # People's Republic of China
+
+   PEOPLES_REPUBLIC: "People's Republic"
+
+   SUPREME_LEADER: "Supreme Leader"
+
+   MADAM_SUPREME_LEADER: "Madam Supreme Leader"
+
+   CENTRAL_GUARD: "Central Guard Commander"
+
+    # Eastern Roman Empire
+
+   ROMAN_REPUBLIC: "Roman Republic"
+
+   EASTERN_ROMAN_EMPEROR: "Eastern Roman Emperor"
+
+   EASTERN_ROMAN_EMPRESS: "Eastern Roman Empress"
+
+   SUCCESSOR: "Successor"
+
+  ####################
+  # GOVERNMENT RANKS #
+  ####################
+
+   dec1_government_change_monarchy: "The type of Government changes to §YMonarchy§!."
+   dec1_government_change_english_monarchy: "The type of Government changes to §YEnglish Monarchy§!."
+   dec1_government_change_monarchy_of_dual_monarchy: "The type of Government changes to §YDual Monarchy§!."
+   dec1_government_change_chinese_communism_government: "The type of Government changes to §YChinese Communism§!."
+   dec1_government_change_prussian_monarchy: "The type of Government changes to §YPrussian Monarchy§!."
+   dec1_government_change_tribal_monarchy: "The type of Government changes to §YTribal Monarchy§!."
+   dec1_government_change_dutch_republic: "The type of Government changes to §YDutch Republic§!."
+   dec1_government_change_prc: "The type of Government changes to §YSocialist Republic§!."
+   dec1_government_change_republic: "The type of Government changes to §YRepublic§!."
+   dec1_government_change_theocracy: "The type of Government changes to §YTheocracy§!."
+   dec1_government_rank_1: "The Government Rank changes to §YDuchy§!."
+   dec1_government_rank_2: "The Government Rank changes to §YKingdom§!."
+   dec1_government_rank_3: "The Government Rank changes to §YEmpire§!."

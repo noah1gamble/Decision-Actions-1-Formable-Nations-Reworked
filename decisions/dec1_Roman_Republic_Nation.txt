@@ -8,7 +8,7 @@ country_decisions = {
 			is_colonial_nation = no
 			lazio_area = { # Owns one province in the Lazio area
 				owned_by = ROOT
-			}				
+			}
 			NOT = {
 				has_country_flag = restored_roman_republic_flag
 				exists = ROP
@@ -28,9 +28,11 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					area = lazio_area # AI Just needs province in lazio area (rome)
+					any_owned_province = {
+						area = lazio_area # AI Just needs province in lazio area (rome)
+					}
 				}
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -62,7 +64,7 @@ country_decisions = {
 			is_at_war = no
 			owns = 118 # Must own Rome
 			custom_trigger_tooltip = {
-			tooltip = form_roman_republic_tt_1			
+			tooltip = form_roman_republic_tt_1
 				owns = 118
 				owns = 2976
 				owns = 119
@@ -79,16 +81,16 @@ country_decisions = {
 				owns = 2978
 				owns = 116
 				owns = 115
-				owns = 117		
-			}	
+				owns = 117
+			}
 		}
 		effect = {
 			change_tag = ROP # Country TAG
 			set_country_flag = restored_roman_republic_flag # Country Formation Flag
 			custom_tooltip = form_roman_republic_tt_2 # New Missions
 			custom_tooltip = form_roman_republic_tt_3 # Claim on all historical Roman Empire
-			custom_tooltip = dec1_decisions_blank	
-			ROP = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			ROP = { # Capital change and bonuses
 				set_capital = 118 # Rome
 				118 = {
 					add_base_tax = 1

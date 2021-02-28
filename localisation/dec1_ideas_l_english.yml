@@ -544,6 +544,24 @@
  DCP_preparation_the_troops: "Prepare The Army"
  DCP_preparation_the_troops_desc: "§RDescription Available in 4.1.0§!"
 
+ ERP_ideas: "Eastern Roman Empire Ideas"
+ ERP_ideas_start: "Eastern Roman Empire Traditions"
+ ERP_ideas_bonus: "Eastern Roman Wealth"
+ ERP_city_of_worlds_desire: "City of Desire"
+ ERP_city_of_worlds_desire_desc: "Constantinople is located in important east-west and north-south trade routes that would pass through the capital."
+ ERP_reform_the_theme_system: "Reform the Theme System"
+ ERP_reform_the_theme_system_desc: "The rework of the Theme System would make all the provinces use this system instead of the anatolian provinces."
+ ERP_belisarius_discipline: "Belisarius Discipline"
+ ERP_belisarius_discipline_desc: "Belisarius is the most famous Byzantine Generals, he was theone to reconquer italia from our enemies he trained his troopsand his recruits from the city of rome and they were severelyoutnumbered and his training show the enemies howdiscipline and how high morale his troops were."
+ ERP_byzantine_arts: "Byzantine Arts"
+ ERP_byzantine_arts_desc: "Most of the famous arts of our empire is found in our capitolConstantinople. These arts inspire our people of thiswonderful empire to help make more and produce more to thecause of the arts."
+ ERP_eastern_roman_legions: "Legions & Greek Fire"
+ ERP_eastern_roman_legions_desc: "From our Roman legions and our Greek fire, we decided tocombine the two and make our legions have superior weapons for combat at a distance."
+ ERP_restoration_of_the_pentarchy: "Restoration of the Pentarchy"
+ ERP_restoration_of_the_pentarchy_desc: "With our capitol being the main Pentarchy of the orthodoxworld, we need to expand orthodoxy to other places."
+ ERP_justinians_code: "Justinians Code"
+ ERP_justinians_code_desc: "Justinian is known as a defender of the people and law; truly a man of Roman historical greatness!"
+
  EPR_ideas: "East Prussia Ideas"
  EPR_ideas_start: "East Prussia Traditions"
  EPR_ideas_bonus: "Eastern Prussia"
@@ -1065,6 +1083,8 @@
  RHE_state_founded_from_war_desc: "§RDescription Available in 4.1.0§!"
  RHE_national_agitation: "National Agitation"
  RHE_national_agitation_desc: "§RDescription Available in 4.1.0§!"
+
+  # Roman Republic
 
  ROP_ideas: "Roman Republic Ideas"
  ROP_ideas_start: "Rebirth of Rome"

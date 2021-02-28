@@ -1,29 +1,27 @@
 country_decisions = {
 
-	restore_roman_empire_nation = {
+	eastern_roman_empire_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			OR = {
-				owns = 118
-				OR = {
-					tag = PON # Pontus Roman Desires
-					tag = ROP # Roman Republic -> Roman Empire
-					tag = ERP # Eastern Roman Empire -> Roman Empire
-					tag = TRE # Roman Successor
-					tag = ATH # Greek Potential
-					tag = EPI # Greek Potential
-				}
+			OR = { # Roman Successors
+				tag = BYZ
+				tag = ROP
+				tag = TRE
+				tag = ATH
+				tag = EPI
 			}
 			NOT = {
-				has_country_flag = restored_roman_empire_nation_flag
-				exists = ROM
+				has_country_flag = eastern_roman_empire_nation_flag
+				exists = ERP
+				tag = ERP
 				tag = ROM
 				tag = HLR
 				tag = PAP
 				tag = EUR
+				tag = FEO
 			}
 			OR = {
 				religion_group = christian
@@ -32,49 +30,23 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = italy_region
-				region = france_region
-				region = iberia_region
+				province_id = 151 # Constantinople
+				province_id = 341 # Tunis
+				province_id = 361 # Cairo
 				region = balkan_region
 				region = anatolia_region
 				region = mashriq_region
-				province_id = 343 # Fez
-				province_id = 341 # Tunis
-				province_id = 361 # Cairo
-				province_id = 236 # London
-				province_id = 245 # Yorkshire
-				#province_id = 96 # Zeeland - REMOVED, Not historical
-				province_id = 134 # Vienna
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 15
-			NOT = { exists = ROM }
+			adm_tech = 10 # is already empire as BYZ, so only needs 10
+			NOT = { exists = ERP }
 			is_subject = no
 			is_at_war = no
-			owns = 118 # Rome
-			owns = 236 # London
-			owns = 183 # Paris
-			owns = 96 # Zeeland
-			owns = 219 # Toledo
-			owns = 245 # Yorkshire
-			owns = 134 # Vienna
-			owns = 343 # Fez
+			owns = 151 # Constantinople
 			owns = 341 # Tunis
 			owns = 361 # Cairo
-			italy_region = {
-				type = all
-				owned_by = ROOT
-			}
-			france_region = {
-				type = all
-				owned_by = ROOT
-			}
-			iberia_region = {
-				type = all
-				owned_by = ROOT
-			}
 			balkan_region = {
 				type = all
 				owned_by = ROOT
@@ -89,17 +61,18 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = ROM # Country TAG
-			set_country_flag = restored_roman_empire_flag # Country Formation Flag
-			custom_tooltip = form_roman_empire_tt_2 # New Missions
+			change_tag = ERP # Country TAG
+			set_country_flag = eastern_roman_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_eastern_roman_empire_tt_2 # New Missions
+			custom_tooltip = form_eastern_roman_empire_tt_3 # Culture
 			custom_tooltip = roman_culture_provinces_tooltip
 			custom_tooltip = dec1_decisions_blank
-			ROM = { # Capital change and bonuses
-				set_capital = 118 # Rome
-				118 = {
-					add_base_tax = 6
-					add_base_production = 6
-					add_base_manpower = 6
+			ERP = { # Capital change and bonuses
+				set_capital = 151 # Constantinople
+				151 = {
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 3
 				}
 				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank
@@ -111,7 +84,6 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
-				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# TODO: Create a custom Holy Roman Empire handler?
 				hidden_effect = { # Hidden Effects to fix bad tooltips
@@ -124,7 +96,13 @@ country_decisions = {
 					}
 					every_owned_province = { # Convert all provinces with ROOT culture to Roman Culture
 						limit = {
-							has_owner_culture = yes
+							culture = greek
+						}
+						change_culture = roman
+					}
+					every_owned_province = { # Convert all provinces with Turkish culture to Roman Culture
+						limit = {
+							culture = turkish
 						}
 						change_culture = roman
 					}
@@ -136,14 +114,6 @@ country_decisions = {
 						}
 						add_legitimacy = 100
 					}
-					if = {
-						limit = {
-							NOT = {
-								government = monarchy
-							}
-						}
-						add_republican_tradition = 100
-					}
 					# Government Rank change
 					if = {
 						limit = {
@@ -153,21 +123,15 @@ country_decisions = {
 							}
 						set_government_rank = 3
 					}
-					# Government Type Change
-					if = {
-						limit = {
-							NOT = {
-								government = monarchy
-								}
-							}
-						change_government = monarchy
-					}
+					# Government
+					change_government = byzantine_bureaucracy_government
+					add_government_reform = eastern_roman_senate_reform
 				}
 				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = ROM_ideas }
+						NOT = { has_idea_group = ERP_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -176,7 +140,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_true_roman_successor
+					name = dec1_wealth_trade_empire
 					duration = 49275
 				}
 				# Increased Centralization

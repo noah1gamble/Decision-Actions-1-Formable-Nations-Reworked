@@ -50,6 +50,11 @@
  form_cisalpina_tt_4: "Country gains a permanent claim on §YLiguria§! area."
  form_cisalpina_tt_5: "§YCisalpina§! §RCANNOT§! form any §YItalian§! nations"
 
+  # Dual Monarchy
+
+ form_dual_monarchy_tt_3: "Owns all §YFrench§! historical cores."
+ form_dual_monarchy_tt_4: "Owns all §YIrish§! historical cores."
+ form_dual_monarchy_tt_5: "Owns all §YEnglish§! historical cores."
  form_dual_monarchy_tt_6: "Country obtains §YDual Monarchy§! missions."
  form_dual_monarchy_tt_7: "Country gains a permanent claim on §YBritish Isles§! region."
  form_dual_monarchy_tt_8: "Country gains a permanent claim on §YFrance§! region."
@@ -165,7 +170,7 @@
  form_hindustan_nation_tt_2: "Country obtains §YHindustan§! missions."
 
  form_deccan_nation_tt_1: "Owns all cores of the §YDeccan§! region"
- form_deccan_nation_tt_2: "Country obtains §YDeccan§! missions." 
+ form_deccan_nation_tt_2: "Country obtains §YDeccan§! missions."
 
  form_romania_tt_1: "Owns all core §YRomanian§! provinces"
  form_romania_tt_2: "Country obtains §YRomania§! missions."
@@ -179,8 +184,11 @@
  form_roman_republic_tt_2: "Country obtains §YRoman Republic§! missions."
  form_roman_republic_tt_3: "Country gains a permanent claim on §YRoman Empire§! historical cores."
 
+ form_eastern_roman_empire_tt_2: "Country obtains §YEastern Roman Empire§! missions."
+ form_eastern_roman_empire_tt_3: "All §YGreek§! and §YTurkish§! provinces will now have §YRoman§! Culture."
+
  form_italian_empire_tt_1: "Owns all cores of the §YItalian Empire§!"
- form_italian_empire_tt_2: "Country obtains §YItalian Empire§! missions."  
+ form_italian_empire_tt_2: "Country obtains §YItalian Empire§! missions."
  form_italian_empire_tt_3: "Country gains a permanent claim on §YItalian Empire§! historical claims."
 
  form_italy_tt_1: "Country obtains §YItaly§! missions."
@@ -582,8 +590,13 @@
 
  dec1_declared_the_kingdom_of_god: "Declared the Kingdom of God on Earth"
 
+ dec1_hardline_communists_tt: "Has the §YHardline Communists§! Faction"
+ dec1_democratic_socialists_tt: "Has the §YDemocratic Socialists§! Faction"
+
  #############################
  # COUNTRY FLAG LOCALIZATION #
  #############################
 
  gods_kingdom: "Gods Kingdom" # I don't think this is even needed TBH
+
+ dec1_democratic_socialism_enforced_tt: " Democratic Socialism Enforced"

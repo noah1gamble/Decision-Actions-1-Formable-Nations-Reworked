@@ -1,4 +1,6 @@
-#Country Name: Please see filename.
+# People's Republic of China
+
+# TODO: Historical Information and Accurate monarch/generl names, etc
 
 graphical_culture = asiangfx
 

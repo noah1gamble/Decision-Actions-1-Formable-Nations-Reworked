@@ -1,0 +1,87 @@
+dec1_prc_democratic_socialist_revolt = {
+	ended_by_country_breaking_to_rebels = no
+
+	potential = {
+		tag = PRC
+		NOT = { has_country_flag = dec1_prc_democratic_socialist_revolt_happened }
+		has_reform = communist_party_of_china_reform
+	}
+
+	can_start = {
+		has_any_disaster = no
+		faction_influence = {
+			faction = dec1_democratic_socialists
+			influence = 80
+		}
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+		NOT = {
+			faction_influence = {
+				faction = dec1_democratic_socialists
+				influence = 80
+			}
+		}
+	}
+
+	progress = {
+		modifier = { # Democratic Socialists too Influential (80)
+			factor = 1.0
+			faction_influence = {
+				faction = dec1_democratic_socialists
+				influence = 80
+			}
+		}
+		modifier = { # Democratic Socialists too Influential (70)
+			factor = 0.7
+			faction_influence = {
+				faction = dec1_democratic_socialists
+				influence = 70
+			}
+		}
+		modifier = { # Hardliner Communists not Influential Enough (60)
+			factor = 0.4
+			NOT = {
+				faction_influence = {
+					faction = dec1_hardline_communists
+					influence = 60
+				}
+			}
+		}
+		modifier = { # Stability not at least 1
+			factor = 0.1
+			NOT = { stability = 1 }
+		}
+	}
+
+	modifier = {
+		global_unrest = 5
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 2
+			}
+			faction_influence = {
+				faction = dec1_democratic_socialists
+				influence = 0
+			}
+		}
+	}
+
+	#on_start = dec1_disaster_events_anglois_civil_war.1
+	#on_end = dec1_disaster_events_anglois_civil_war.100
+
+	on_monthly = {
+		events = { }
+		random_events = {
+			1000 = 0
+			# TODO: Unique Random Events
+		}
+	}
+}
+

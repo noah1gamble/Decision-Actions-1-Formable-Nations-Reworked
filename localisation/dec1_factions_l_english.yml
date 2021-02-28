@@ -14,6 +14,16 @@
  dec1_british_parliament_influence: "British Influence"
  dec1_british_parliament_FACTION_DESC: "The British Parliament is the ruling Parliament that overlooks the British part of the union which commonly desire to lead the Grand Parliament as they are economically superior in the union. "
 
+  # People's Republic of China
+
+ dec1_hardline_communists: "Hardline Communists"
+ dec1_hardline_communists_influence: "Communist Influence"
+ dec1_hardline_communists_FACTION_DESC: "Hardliner Communists are supporters of the Chinese Communist Party and truly believe in the Communist lifestyle in all aspects. Many of the Chinese population is unwillingly forced to join the CCP creating tensions among the populace."
+
+ dec1_democratic_socialists: "Democratic Socialists"
+ dec1_democratic_socialists_influence: "Democratic Socialism Influence"
+ dec1_democratic_socialists_FACTION_DESC: "While China remains Communist; the global reliance on Chinese product has slowly forced us to adopt a pseudo-capitalist government allowing many Chinese citizens to openly call for reform.\n\n\n\nBy remaining above §G50§! Communist Influence and below §R10§! Democratic Socialists Influence we will gain: §G+1§! £adm£ §G+1§! £dip£ §G+1§! £mil£ \n\n§RAllowing the Democratic Socialists to gain above 80 influence will lead to Civil War and removal of the Chinese Communist Party for Democratic Socialists§!"
+
  ###############################
  # STATES GENERAL LOCALISATION #
  ###############################

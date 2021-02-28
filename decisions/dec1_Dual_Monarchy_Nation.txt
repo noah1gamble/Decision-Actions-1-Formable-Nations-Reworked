@@ -1,8 +1,8 @@
 country_decisions = {
 
-	#################################
-	# Dual Monarchy - Great Britain #
-	#################################
+	############################################
+	# Dual Monarchy - English & French Culture #
+	############################################
 
 	dual_monarchy_nation = {
 		major = yes
@@ -10,7 +10,11 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			tag = GBR
+			OR = {
+				culture_group = british
+				culture = english
+				culture = cosmopolitan_french
+			}
 			NOT = {
 				has_country_flag = formed_dual_monarchy_nation_flag
 				has_reform = celestial_empire
@@ -27,70 +31,30 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-					# London
-				province_id = 235
-				province_id = 236
-				province_id = 237
-				province_id = 4371
-					# East Anglia
-				province_id = 4370
-				province_id = 1860
-				province_id = 238
-					# Wessex
-				province_id = 233
-				province_id = 234
-				province_id = 4130
-				province_id = 4374
-				province_id = 4373
-					# Wales
-				province_id = 241
-				province_id = 4369
-					# West Midlands
-				province_id = 4372
-				province_id = 239
-				province_id = 240
-				province_id = 4375
-				province_id = 244
-					# Yorkshire
-				province_id = 245
-				province_id = 4367
-				province_id = 4368
-					# Scottish Marches
-				province_id = 246
-				province_id = 247
+					# English Cores
+				area = scottish_marches_area
+				area = yorkshire_area
+				area = west_midlands_area
+				area = east_midlands_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				province_id = 4365
 					# Ireland
-				province_id = 373
-				province_id = 374
-					# Brittany
-				province_id = 4384
-				province_id = 172
-				province_id = 169
-				province_id = 171
-				province_id = 170
-					# Normandy
-				province_id = 4385
-				province_id = 168
-				province_id = 1879
-				province_id = 167
-					# Loire
-				province_id = 177
-				province_id = 4389
-				province_id = 178
-					# Poitou
-				province_id = 4386
-				province_id = 180
-				province_id = 4111
-				province_id = 4387
-					# Guyenne
-				province_id = 194
-				province_id = 4112
-					# Gascony
-				province_id = 174
-				province_id = 173
-				province_id = 175
-				province_id = 176
-					# Massif Central
-				province_id = 195
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+					# France
+				area = pyrenees_area
+				area = languedoc_area
+				area = guyenne_area
+				area = orleans_area
+				area = loire_area
+				area = brittany_area
+				area = normandy_area
+				area = ile_de_france_area
+				area = massif_central_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -117,14 +81,100 @@ country_decisions = {
 						}
 					}
 				}
-				AND = { # Owns british isles region and france region
-					british_isles_region = {
-						type = all
-						owned_by = ROOT
+				AND = { # Owns england proper, ireland, and French lands (NOT burgundy)
+					custom_trigger_tooltip = { # English Cores
+						tooltip = form_dual_monarchy_tt_5
+						scottish_marches_area = {
+							type = all
+							owned_by = ROOT
+						}
+						yorkshire_area = {
+							type = all
+							owned_by = ROOT
+						}
+						west_midlands_area = {
+							type = all
+							owned_by = ROOT
+						}
+						east_midlands_area = {
+							type = all
+							owned_by = ROOT
+						}
+						wessex_area = {
+							type = all
+							owned_by = ROOT
+						}
+						home_counties_area = {
+							type = all
+							owned_by = ROOT
+						}
+						east_anglia_area = {
+							type = all
+							owned_by = ROOT
+						}
+						owns_core_province = 4365 # Isle of Mann
 					}
-					france_region = {
-						type = all
-						owned_by = ROOT
+					custom_trigger_tooltip = { # Irish Cores
+						tooltip = form_dual_monarchy_tt_4
+						munster_area = {
+							type = all
+							owned_by = ROOT
+						}
+						connacht_area = {
+							type = all
+							owned_by = ROOT
+						}
+						leinster_area = {
+							type = all
+							owned_by = ROOT
+						}
+						ulster_area = {
+							type = all
+							owned_by = ROOT
+						}
+					}
+					custom_trigger_tooltip = { # French Cores
+						tooltip = form_dual_monarchy_tt_3
+						pyrenees_area = {
+							type = all
+							owned_by = ROOT
+						}
+						languedoc_area = {
+							type = all
+							owned_by = ROOT
+						}
+						guyenne_area = {
+							type = all
+							owned_by = ROOT
+						}
+						poitou_area = {
+							type = all
+							owned_by = ROOT
+						}
+						orleans_area = {
+							type = all
+							owned_by = ROOT
+						}
+						loire_area = {
+							type = all
+							owned_by = ROOT
+						}
+						brittany_area = {
+							type = all
+							owned_by = ROOT
+						}
+						normandy_area = {
+							type = all
+							owned_by = ROOT
+						}
+						ile_de_france_area = {
+							type = all
+							owned_by = ROOT
+						}
+						massif_central_area = {
+							type = all
+							owned_by = ROOT
+						}
 					}
 				}
 			}
@@ -136,12 +186,6 @@ country_decisions = {
 			custom_tooltip = form_dual_monarchy_tt_7 # Region/Area Claims
 			custom_tooltip = form_dual_monarchy_tt_8 # Region/Area Claims
 			change_primary_culture = anglois
-			set_ruler_culture = anglois
-			183 = { change_culture = anglois }
-			236 = { change_culture = anglois }
-			add_accepted_culture = anglois
-			add_accepted_culture = english
-			add_accepted_culture = cosmopolitan_french
 			custom_tooltip = dec1_decisions_blank
 			DUM = { # Capital change and bonuses
 				set_capital = 183 # Paris
@@ -159,6 +203,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy_of_dual_monarchy # Government Type Change
 				}
+				change_government = dual_monarchy_government
 				add_government_reform = parliament_of_the_lords_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -169,6 +214,13 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Culture changes
+					set_ruler_culture = anglois
+					183 = { change_culture = anglois }
+					236 = { change_culture = anglois }
+					add_accepted_culture = anglois
+					add_accepted_culture = english
+					add_accepted_culture = cosmopolitan_french
 					# Region/Area Claims
 					british_isles_region = {
 						limit = {
@@ -191,9 +243,6 @@ country_decisions = {
 							}
 						set_government_rank = 3
 					}
-					# Government Type Change
-					change_government = dual_monarchy_government
-					add_government_reform = parliament_of_the_lords_reform
 				}
 				# Custom Ideas check and change
 				if = {
@@ -238,7 +287,6 @@ country_decisions = {
 		}
 		allow = {
 			NOT = {
-				ruler_has_personality = zealous_personality # cannot be zealous
 				num_of_owned_provinces_with = {
 					value = 30
 					culture = root

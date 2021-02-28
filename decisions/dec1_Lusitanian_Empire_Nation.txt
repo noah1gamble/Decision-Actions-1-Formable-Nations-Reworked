@@ -17,6 +17,7 @@ country_decisions = {
 				tag = CAS
 				tag = BSQ
 				tag = IBE
+				tag = ROP
 			}
 			OR = {
 				ai = no

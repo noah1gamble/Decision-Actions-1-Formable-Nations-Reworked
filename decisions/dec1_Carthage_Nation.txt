@@ -26,6 +26,7 @@ country_decisions = {
 				tag = MGH
 				tag = ALG
 				tag = ADU
+				tag = ROP
 			}			
 			OR = {
 				AND = { # A powerful latin can control this title with growth

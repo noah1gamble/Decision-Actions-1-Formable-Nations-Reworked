@@ -23,6 +23,7 @@ country_decisions = {
 				tag = FIB
 				tag = LSE
 				tag = BSQ
+				tag = ROP
 			}
 			OR = {
 				culture_group = iberian

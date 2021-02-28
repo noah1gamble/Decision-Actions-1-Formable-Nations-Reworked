@@ -51,6 +51,7 @@ country_decisions = {
 						exists = BYZ
 						exists = ROM
 						exists = ROP
+						exists = ERP
 					}
 					OR = { # Roman Successors are vassals
 						AND = {
@@ -58,9 +59,12 @@ country_decisions = {
 						}
 						AND = {
 							ROP = { is_subject_of = ROOT } # Roman Republic is a subject of ROOT
-						}					
+						}
 						AND = {
 							ROM = { is_subject_of = ROOT } # Roman Empire is a subject of ROOT
+						}
+						AND = {
+							ERP = { is_subject_of = ROOT } # Eastern Roman Empire is a subject of ROOT
 						}
 					}
 				}

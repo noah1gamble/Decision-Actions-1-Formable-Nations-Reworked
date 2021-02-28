@@ -9,6 +9,11 @@
  dual_monarchy_anglois_civil_war: "Anglois Civil War"
  dual_monarchy_anglois_civil_war_desc: ""
 
+  # People's Republic of China
+
+ dec1_prc_democratic_socialist_revolt: "Democratic Socialist Revolt"
+ dec1_prc_democratic_socialist_revolt_desc: ""
+
   ################################
   # DISASTER EVENTS LOCALISATION #
   ################################
@@ -20,3 +25,5 @@
  dec1_disaster_events_anglois_civil_war.1.a: "Suppress the Rebels"
  dec1_disaster_events_anglois_civil_war.1.b: "Appease the British and French"
  dec1_disaster_events_anglois_civil_war.1.c: "Surrender the Anglois Culture"
+
+  # People's Republic of China

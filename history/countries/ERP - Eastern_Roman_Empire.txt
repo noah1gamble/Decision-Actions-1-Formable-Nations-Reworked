@@ -1,0 +1,6 @@
+government = republic
+add_government_reform = eastern_roman_senate_reform
+primary_culture = umbrian
+religion = orthodox
+technology_group = eastern
+capital = 151

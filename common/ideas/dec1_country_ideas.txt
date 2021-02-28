@@ -1221,7 +1221,7 @@ DUM_ideas = {
 	}
 
 	bonus = {
-		state_governing_cost = 0.1
+		state_governing_cost = -0.1
 	}
 
 	trigger = {
@@ -1236,7 +1236,7 @@ DUM_ideas = {
 
 	DUM_english_diplomacy = {
 		diplomatic_annexation_cost = -0.2
-		governing_capacity_modifier = 0.2
+		governing_capacity_modifier = 0.1
 	}
 
 	DUM_colonial_reform = {
@@ -1250,7 +1250,7 @@ DUM_ideas = {
 
 	DUM_combined_arms_professionalism = {
 		discipline = 0.01
-		infantry_shock = 1 
+		infantry_shock = 1
 	}
 
 	DUM_industrialisation_age = {
@@ -2703,8 +2703,9 @@ RHE_ideas = {
 # Roman Republic
 ROP_ideas = { 
 	start = {
-		monarch_admin_power = 2
-		monarch_military_power = 2
+		country_admin_power = 1
+		country_diplomatic_power = 1
+		country_military_power = 1
 	}
 
 	bonus = {
@@ -2718,12 +2719,12 @@ ROP_ideas = {
 	free = yes	# will be added at load.
 
 	ROP_the_roman_senate = {
-		reform_progress_growth = 0.2
+		reform_progress_growth = 0.1
 		legitimacy = 1
 	}
 
 	ROP_roman_polytheism = {
-		religious_unity = 0.5
+		religious_unity = 0.15
 		no_religion_penalty = yes
 	}
 
@@ -2732,22 +2733,72 @@ ROP_ideas = {
 	}
 
 	ROP_hoplite_tactics = {
-		discipline = 0.1 
+		discipline = 0.1
 	}
 
 	ROP_we_are_roman = {
-		culture_conversion_cost = -0.20
+		culture_conversion_cost = -0.10
 	}
 
 	ROP_enact_standing_legions = {
-		global_manpower_modifier = 0.1
-		land_maintenance_modifier = -0.2
+		land_maintenance_modifier = -0.1
+		global_manpower_modifier = 0.05
 	}
 
 	ROP_the_late_republic = {
-		republican_tradition = 0.5
+		republican_tradition = 0.1
 	}
 }
+
+# Eastern Roman Empire
+ERP_ideas = { 
+	start = {
+		development_cost = -0.1
+		recover_army_morale_speed = 0.10
+	}
+
+	bonus = {
+		mercenary_discipline = 0.10
+		mercenary_cost = -0.10
+	}
+
+	trigger = {
+		tag = ERP
+	}
+	free = yes	# will be added at load.
+
+	ERP_city_of_worlds_desire = {
+		trade_efficiency = 0.1
+	}
+
+	ERP_reform_the_theme_system = {
+		global_manpower_modifier = 0.10
+	}
+
+	ERP_belisarius_discipline = {
+		discipline = 0.075
+		yearly_absolutism = 0.1
+	}
+
+	ERP_byzantine_arts = {
+		prestige_decay = -0.01
+		global_trade_goods_size_modifier = 0.05
+	}
+
+	ERP_eastern_roman_legions = {
+		infantry_power = 0.05
+		fire_damage = 0.10
+	}
+
+	ERP_restoration_of_the_pentarchy = {
+		global_missionary_strength = 0.03
+	}
+
+	ERP_justinians_code = {
+		global_unrest = -2
+	}
+}
+
 
 # Saudi Arabia
 SRB_ideas = { 

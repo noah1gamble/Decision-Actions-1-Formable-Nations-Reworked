@@ -10,7 +10,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			culture_group = japanese
+			culture_group = japanese_g
 			NOT = {
 				has_country_flag = formed_empire_of_japan_nation_flag
 				exists = JAE
@@ -28,7 +28,7 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 6
 				}
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
