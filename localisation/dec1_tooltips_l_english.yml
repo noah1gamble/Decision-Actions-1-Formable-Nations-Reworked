@@ -49,6 +49,7 @@
  form_cisalpina_tt_3: "Country gains a permanent claim on §YPiedmont§! area."
  form_cisalpina_tt_4: "Country gains a permanent claim on §YLiguria§! area."
  form_cisalpina_tt_5: "§YCisalpina§! §RCANNOT§! form any §YItalian§! nations"
+ dec1_cisalpina_cannot_form_italy: "§YCisalpina§! can §YNOT§! form §YItaly§! or any other variations due to proclaiming itself as the true successor Italian state, §Yla Grande Repubblica§!."
 
   # Dual Monarchy
 
@@ -268,7 +269,7 @@
  form_franco_iberia_tt_4: "Country gains a permanent claim on §YIberia§! region."
 
  form_iberian_empire_tt_2: "Country obtains §YIberian Empire§! missions."
- form_iberian_empire_tt_3: "Country gains a permanent claim on §YIberia§! region." 
+ form_iberian_empire_tt_3: "Country gains a permanent claim on §YIberia§! region."
 
  form_french_empire_tt_2: "Country obtains §YFrench Empire§! missions."
  form_french_empire_tt_3: "Country gains a claim on historical §YFrench Empire§! cores."
@@ -283,7 +284,9 @@
  form_china_PRC_tt_3: "Country gains a permanent claim on §YNorth China§! region."
  form_china_PRC_tt_4: "Country gains a permanent claim on §YSouth China§! region."
  form_china_PRC_tt_5: "Country gains a permanent claim on §YXinan§! region."
- form_china_PRC_tt_6: "Country gains a permanent claim on §YTibet§! region." 
+ form_china_PRC_tt_6: "Country gains a permanent claim on §YTibet§! region."
+ dec1_hardline_communists_tt: "Has the §YHardline Communists§! Faction"
+ dec1_democratic_socialists_tt: "Has the §YDemocratic Socialists§! Faction"
 
  form_yuan_tt_2: "Country obtains §YGreat Yuan§! missions."
  form_yuan_tt_3: "Country gains a permanent claim on §YChina Super-region§!."
@@ -295,7 +298,7 @@
  form_malaya_tt_3: "Country gains permanent claims on all §YMalayan claims§!."
 
  form_jerusalem_tt_2: "Country obtains §YJerusalem§! missions."
- form_jerusalem_tt_3: "Country gains a claim on historical lands of §YJerusalem§!." 
+ form_jerusalem_tt_3: "Country gains a claim on historical lands of §YJerusalem§!."
 
  form_japan_tt_2: "Country obtains §YJapan§! missions."
  form_japan_tt_4: "\n§YJapan§! will lose all cores owned by previous Daimyo."
@@ -322,6 +325,9 @@
  form_european_union_tt_2: "Country obtains §YEuropean Union§! missions."
 
  form_kingdom_of_god_tt_2: "Country obtains §YKingdom of God§! missions."
+ dec1_kingdom_of_god_claims: "The §YPapal State§! gains a permanent claim on all not owned provinces of the §YItalian§! region."
+ dec1_kingdom_of_god_warning: "§RThis will disable the Papacy!§!"
+ dec1_declared_the_kingdom_of_god: "Declared the Kingdom of God on Earth"
 
  form_iceland_tt_2: "Country obtains §YIceland§! missions."
 
@@ -484,6 +490,8 @@
  form_upca_tt_2: "Country obtains §YUnied Central America§! missions."
  form_upca_tt_3: "Country gains a permanent claim on §YMexico§! colonial region."
 
+  # United States of America
+
  form_usa_tt_2: "Country obtains §YUnied States of America§! missions."
  form_usa_tt_3: "Country gains a permanent claim on §YEastern America§! colonial region."
 
@@ -568,35 +576,12 @@
 
  form_yemen_tt_2: "Country obtains §YYemen§! missions."
 
- ########################
- # SPACING LOCALI1TION #
- ########################
-
- dec1_decisions_spacing: "\n"
-
- dec1_decisions_blank: "        " # Noah is very cool :)
-
  #######################
  # UNIQUE LOCALISATION #
  #######################
 
- dec1_cisalpina_cannot_form_italy: "§YCisalpina§! can §YNOT§! form §YItaly§! or any other variations due to proclaiming itself as the true successor Italian state, §Yla Grande Repubblica§!."
-
  dec1_abolish_the_empire_of_china_mandate: "The §YEmpire of China§! is §Rdisabled§! and the §YMandate of Heaven§! is §Rabolished§!.\nThe previous nation to control the §YEmpire of China§! gains §G100§! Prestige."
 
- dec1_kingdom_of_god_claims: "The §YPapal State§! gains a permanent claim on all not owned provinces of the §YItalian§! region."
+ dec1_decisions_spacing: "\n"
 
- dec1_kingdom_of_god_warning: "§RThis will disable the Papacy!§!"
-
- dec1_declared_the_kingdom_of_god: "Declared the Kingdom of God on Earth"
-
- dec1_hardline_communists_tt: "Has the §YHardline Communists§! Faction"
- dec1_democratic_socialists_tt: "Has the §YDemocratic Socialists§! Faction"
-
- #############################
- # COUNTRY FLAG LOCALIZATION #
- #############################
-
- gods_kingdom: "Gods Kingdom" # I don't think this is even needed TBH
-
- dec1_democratic_socialism_enforced_tt: " Democratic Socialism Enforced"
+ dec1_decisions_blank: "        " # Noah is very cool :)

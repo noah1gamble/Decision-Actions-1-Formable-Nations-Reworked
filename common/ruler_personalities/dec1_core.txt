@@ -2,6 +2,8 @@
 
 anglois_icon_personality = {
 
+	nation_designer_cost = 10
+
 	allow = {
 		primary_culture = anglois
 		NOT = { 

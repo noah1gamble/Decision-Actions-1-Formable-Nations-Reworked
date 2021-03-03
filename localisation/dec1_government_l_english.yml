@@ -8,18 +8,23 @@
 
     # Dual Monarchy
 
-   dual_monarchy_government_name: "Dual Monarchy"
-   dual_monarchy_government_desc: ""
+      dual_monarchy_government_name: "Dual Monarchy"
+      dual_monarchy_government_desc: "The kingdoms of both France and England are technically separate, though in practice they are without a doubt one as their monarch and ruling Parliaments (Parliament of the lords and Parliament of the People) are the same."
 
     # People's Republic of China
 
-   chinese_communism_government_name: "Chinese Communism"
-   chinese_communism_government_desc: ""
+      chinese_communism_government_name: "Chinese Communism"
+      chinese_communism_government_desc: "The Chinese Communist Party is the founding and sole governing political party of the People's Republic of China leading eight other legally permitted subordinate minor parties together as the United Front."
 
    # Eastern Roman Empire
 
-   byzantine_bureaucracy_government_name: "Byzantine Bureaucracy"
-   byzantine_bureaucracy_government_desc: "The Eastern Roman Empire had a complex system of aristocracy and bureaucracy, which was inherited from the Roman Empire. At the apex of the hierarchy stood the emperor, yet Byzantium was a republican absolute monarchy and not primarily a monarchy by divine right'"
+      byzantine_bureaucracy_government_name: "Byzantine Bureaucracy"
+      byzantine_bureaucracy_government_desc: "The Eastern Roman Empire had a complex system of aristocracy and bureaucracy, which was inherited from the Roman Empire. At the apex of the hierarchy stood the emperor, yet Byzantium was a republican absolute monarchy and not primarily a monarchy by divine right'"
+
+   # Confederate States
+
+      confederacy_government_name: "Confederacy"
+      confederacy_government_desc: "The Confederate States of America was a confederate union of 11 secessionist from the United States in 1860 following the election of President Abraham Lincoln and Led by Jefferson Davis which existed from 1861 to 1865."
 
   ######################
   # GOVERNMENT REFORMS #
@@ -65,6 +70,15 @@
      eastern_roman_senate_reform: "Eastern Roman Senate"
      eastern_roman_senate_reform_desc: ""
 
+    #################################
+    # Confederate States of America #
+    #################################
+
+     # Tier 1
+
+     confederate_state_war_congress_reform: "Confederate State War Congress"
+     confederate_state_war_congress_reform_desc: "We are at war with America! Our Congress has more authority and political power than ever before."
+
   ####################
   # GOVERNMENT NAMES #
   ####################
@@ -100,6 +114,14 @@
    EASTERN_ROMAN_EMPRESS: "Eastern Roman Empress"
 
    SUCCESSOR: "Successor"
+
+    # Confederate States of America
+
+   DEC1_CONFEDERACY: "Confederacy"
+
+   DEC1_CONFEDERATE_PRESIDENT: "President"
+
+   DEC1_CONFEDERATE_MADAM_PRESIDENT: "Madam President"
 
   ####################
   # GOVERNMENT RANKS #

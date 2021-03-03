@@ -1,0 +1,7 @@
+namespace = dec1_country_events
+
+#####################
+# Lusitanian Empire #
+#####################
+
+

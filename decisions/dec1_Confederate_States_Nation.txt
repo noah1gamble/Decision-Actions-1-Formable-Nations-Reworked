@@ -4,10 +4,10 @@ country_decisions = {
 
 	confederate_states_nation = {
 		major = yes
-		potential = {	
+		potential = {
 			is_former_colonial_nation = yes
-			is_colonial_nation = yes		
-			NOT = { 
+			is_colonial_nation = yes
+			NOT = {
 				has_country_flag = changed_from_colonial_nation
 				tag = CSA
 				tag = HLR
@@ -16,7 +16,7 @@ country_decisions = {
 			 capital_scope = {
 				colonial_region = colonial_eastern_america
 				is_core = ROOT
-			}				 
+			}
 			NOT = {
 				OR = {
 					technology_group = north_american
@@ -30,7 +30,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 3
 				}
 			}
 		}
@@ -59,30 +59,10 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = CSA # Country TAG			
+			change_tag = CSA # Country TAG
 			set_country_flag = formed_confederate_states_nation_flag # Country Formation Flag
 			custom_tooltip = form_confederate_states_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank
-			hidden_effect = { # Hidden Effects to fix bad tooltips
-				# Government Rank change				
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 2
-							}
-						}
-					set_government_rank = 2
-				}
-				# Government Type Change
-				if = {
-					limit = {
-						NOT = {
-							government = republic
-							}
-						}
-					change_government = republic
-				}																		
-			}					
 			CSA = { # Capital change and bonuses
 				set_capital = 932
 				932 = {
@@ -98,18 +78,38 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_republic # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = oligarchy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				# Custom Ideas check and change		
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Government Rank change
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = republic
+								}
+							}
+						change_government = republic
+					}
+				}
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -127,8 +127,8 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
-				}											
-			}	
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

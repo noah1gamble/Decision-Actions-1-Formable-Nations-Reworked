@@ -1,0 +1,30 @@
+namespace = dec1_disaster_events
+
+##############################################
+# Formable Nations: Reworked Disaster Events #
+##############################################
+
+	#################
+	# Dual Monarchy #
+	#################
+
+		# The Anglois Civil War
+
+		country_event = {
+			id = dec1_disaster_events.1
+			title = "dec1_disaster_events.1.t"
+			desc = "dec1_disaster_events.1.d"
+			picture = CIVIL_WAR_eventPicture
+
+			is_triggered_only = yes
+
+			option = { # Support the Anglois
+				name = "dec1_disaster_events.1.a"
+				ai_chance = { factor = 80 }
+			}
+			option = { # Support the British and French
+				name = "dec1_disaster_events.1.b"
+				ai_chance = { factor = 20 }
+			}
+		}
+

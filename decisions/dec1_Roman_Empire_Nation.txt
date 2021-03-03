@@ -97,9 +97,9 @@ country_decisions = {
 			ROM = { # Capital change and bonuses
 				set_capital = 118 # Rome
 				118 = {
-					add_base_tax = 6
-					add_base_production = 6
-					add_base_manpower = 6
+					add_base_tax = 4
+					add_base_production = 4
+					add_base_manpower = 4
 				}
 				# Government Rank Change
 				custom_tooltip = dec1_decisions_blank

@@ -1,0 +1,16 @@
+
+	#country_decisions = {
+
+		#dec1_test_code = {
+		#	major = yes
+		#	potential = {
+
+		#	}
+		#	allow = {
+		#		ai = no
+		#	}
+		# 	effect = {
+
+		#	}
+	#	}
+	#}

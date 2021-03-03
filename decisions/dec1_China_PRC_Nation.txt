@@ -56,11 +56,30 @@ country_decisions = {
 			NOT = { is_core = ROOT }
 		}
 		allow = {
-			# adm_tech = 20 # Late game nation
+			adm_tech = 20 # Late game nation
 			NOT = { exists = PRC }
 			is_subject = no
 			is_at_war = no
-			# TODO: proper cores required
+			owns = 1816 # Beijing
+			owns = 667 # Canton
+			owns = 679 # Chengdu
+			owns = 2133 # Dege
+			north_china_region = {
+				type = all
+				owned_by = ROOT
+			}
+			south_china_region = {
+				type = all
+				owned_by = ROOT
+			}
+			xinan_region = {
+				type = all
+				owned_by = ROOT
+			}
+			tibet_region = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 	 	effect = {
 			change_tag = PRC # Country TAG
@@ -150,16 +169,18 @@ country_decisions = {
 				# Abolished the Mandate of Heaven debuff
 				add_country_modifier = {
 					name = dec1_abolished_the_mandate_of_heaven
+					duration = 49275
 				}
 				# National Ability
 				add_country_modifier = {
 					name = dec1_foundation_chinese_communist_party
+					duration = 49275
 				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
-				}											
+				}
 			}
 		}
 		ai_will_do = {

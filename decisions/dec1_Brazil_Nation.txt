@@ -54,7 +54,6 @@ country_decisions = {
 			is_colonial_nation = no
 			is_former_colonial_nation = yes
 			is_at_war = no
-			owns = 1090
 			num_of_cities = 20 # Brazil needs 20, not 12
 		}
 		effect = {

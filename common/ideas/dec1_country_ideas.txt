@@ -1031,12 +1031,12 @@ CHN_ideas = {
 # China PRC
 PRC_ideas = { 
 	start = {
-		election_cycle = 12
+		cb_on_religious_enemies = yes
 		diplomatic_annexation_cost = -0.1
 	}
 
 	bonus = {
-		prestige_decay = -0.01
+		prestige_decay = -0.15
 	}
 
 	trigger = {
@@ -1044,8 +1044,8 @@ PRC_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	PRC_proper_election_cycle = {
-		election_cycle = 8
+	PRC_defensive_stance = {
+		fort_maintenance_modifier = -0.20
 	}
 
 	PRC_great_generals = {
@@ -1053,8 +1053,8 @@ PRC_ideas = {
 	}
 
 	PRC_the_chinese_state = {
-		state_governing_cost = 0.05
-		governing_capacity_modifier = 0.05
+		state_governing_cost = 0.10
+		governing_capacity_modifier = 0.10
 	}
 
 	PRC_eastern_spy_network = {
@@ -1068,12 +1068,11 @@ PRC_ideas = {
 	PRC_lockdown_effective = {
 		global_spy_defence = 0.1
 		global_missionary_strength = 0.01
-		 
 	}
 
 	PRC_science_of_the_future = {
-		technology_cost = -0.05
-		idea_cost = -0.05
+		technology_cost = -0.10
+		idea_cost = -0.10
 	}
 }
 
@@ -1249,7 +1248,7 @@ DUM_ideas = {
 	}
 
 	DUM_combined_arms_professionalism = {
-		discipline = 0.01
+		discipline = 0.1
 		infantry_shock = 1
 	}
 
@@ -2042,6 +2041,8 @@ ITE_ideas = {
 
 	ITE_la_leggenda_del_piave = {
 		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
 	}
 
 	ITE_succession_of_italy = {
@@ -2168,7 +2169,9 @@ JGE_ideas = {
 	}
 
 	JGE_king_of_bohemia = {
- 		legitimacy = 1
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
 	}
 
 	JGE_habsburg_rivalry = {
@@ -2541,7 +2544,9 @@ NGC_ideas = {
 	}
 
 	NGC_constitutional_monarch = {
-		legitimacy = 1 
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
 	}
 
 	NGC_bundesprasidium = {
@@ -2660,6 +2665,8 @@ RHE_ideas = {
 	start = {
 		culture_conversion_cost = -0.10
 		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
 	}
 
 	bonus = {

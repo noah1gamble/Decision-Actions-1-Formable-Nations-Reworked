@@ -4,19 +4,7 @@
  # START BASE EVENTS #
  #####################
 
- # Lusitanian Empire
-
- flavor_lse.1.EVTNAME: "The Merchants Arrive"
- flavor_lse.1.EVTDESC: "The Merchants are here boys"
- flavor_lse.1.EVTOPTA: "Interesting.."
-
- flavor_lse.2.EVTNAME: "The Founding of a new Feitoria"
- flavor_lse.2.EVTDESC: "Merchants want to found a new Feitoria in $PROVINCE$! They are willing to give us credit and make a fort right away, but in exchange we have to pay then every month for ten years! If we do not do so, the local population might see weakness and try to rebel!"
- flavor_lse.2.EVTOPTA: "Let's accept the deal!"
- flavor_lse.2.EVTOPTA: "We can't afford to accept it now.."
- flavor_lse.2.EVTOPTA: "No, we don't want to make a Feitoria in $PROVINCE$"
-
- # Holy Roman Empire Event
+ # Holy Roman Empire - Our Place in the Empire Event
 
  dec1_events.1.t: "Our place in the Empire"
  dec1_events.1.d: "As we place ourselves higher we begin to question the rights of our so called Emperor.. Should we not forge our own path and take our place in the sun?"
@@ -24,13 +12,31 @@
  dec1_events.1.b: "We must forge our own path!"
  dec1_events.1.c: "We are the rightful Emperor!"
 
+  # Holy Roman Empire - Our Place in the Empire - [From.GetName] remains loyal to the empire
+
  dec1_events.2.t: "[From.GetName] remains loyal to the Empire"
  dec1_events.2.d: "The Holy Roman Empire has been strengthened by the formation of the new state of [From.GetName] which has remained loyal to our Empire and supported Emperor $EMPERORNAME$. We have gained much prestige and stability within the empire due to the strengthening of our Empire!"
  dec1_events.2.a: "Excellent!"
 
- # Customs Missions Event
+ # Customs Missions - New Missions & Objectives Event
 
  dec1_events.3.t: "New Missions & Objectives"
  dec1_events.3.d: "Our state is going through a range of changes that is rapidly reforming our government and political objectives. Unless we invest our time in these goals; they will remain the same without any progress to our power projection.\n\nDeveloper Note: §RNew Missions are not included yet!§!"
  dec1_events.3.a: "Yes, Please!"
  dec1_events.3.b: "No, we cannot abandon our roots."
+
+ ###########################
+ # COUNTRY SPECIFIC EVENTS #
+ ###########################
+
+ # Lusitanian Empire
+
+ flavor_lse.1.EVTNAME: "The Merchants Arrive"
+ flavor_lse.1.EVTDESC: "The Merchants are here boys"
+ flavor_lse.1.EVTOPTA: "Interesting.."
+
+ flavor_lse.2.EVTNAME: "The Founding of a new Feitoria"
+ flavor_lse.2.EVTDESC: "Merchants want to found a new Feitoria in $PROVINCE$! They are willing to give us credit and make a fort right away, but in exchange we have to pay then every month for ten years!\n\nIf we do so, the local population might see weakness and try to rebel!"
+ flavor_lse.2.EVTOPTA: "Let's accept the deal!"
+ flavor_lse.2.EVTOPTA: "We can't afford to accept it now.."
+ flavor_lse.2.EVTOPTA: "No, we don't want to make a Feitoria in $PROVINCE$"

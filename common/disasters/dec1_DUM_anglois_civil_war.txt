@@ -11,25 +11,11 @@ dual_monarchy_anglois_civil_war = {
 	can_start = {
 		has_any_disaster = no
 		NOT = { stability = 1 }
-		num_of_owned_provinces_with = { # Anglois Culture not spread
-			value = 10
-			NOT = { culture = anglois }
-			is_core = root
-			is_overseas = no
-		}
 	}
 
 	can_stop = {
-		has_any_disaster = yes
-		is_year = 1800
-		AND = { # Cultural solution and has 3 stability
-			num_of_owned_provinces_with = { # Anglois Culture not spread
-				value = 10
-				culture = anglois
-				is_core = root
-				is_overseas = no
-			}
-			stability = 3
+		OR = {
+			has_any_disaster = yes
 		}
 	}
 
@@ -67,23 +53,25 @@ dual_monarchy_anglois_civil_war = {
 	}
 
 	modifier = {
-		global_unrest = 5
-		culture_conversion_cost = 0.01
+		global_unrest = 10
+		culture_conversion_cost = 0.05
 	}
 
 	can_end = {
-		OR = {
-			AND = {
-				NOT = { num_of_rebel_armies = 1 }
-				NOT = { num_of_rebel_controlled_provinces = 1 }
-				stability = 3
-			}
-			num_of_owned_provinces_with = { # Anglois Cultural Solution
-				value = 10
+		AND = { # Cultural solution 3 stability
+			num_of_owned_provinces_with = { # Anglois Culture at least 15 core provinces in British Isles region
+				value = 15
 				culture = anglois
 				is_core = root
-				is_overseas = no
+				region = british_isles_region
 			}
+			num_of_owned_provinces_with = { # Anglois Culture at least 15 provinces in England & France
+				value = 15
+				culture = anglois
+				is_core = root
+				region = france_region
+			}
+			stability = 3
 		}
 	}
 

@@ -1,0 +1,36 @@
+country_decisions = {
+
+	# Restore the Union
+
+	dec1_restore_the_american_union = {
+		major = yes
+		potential = {
+			has_disaster = dec1_usa_american_civil_war
+			TAG = USA
+		}
+		provinces_to_highlight = {
+			CSA = {
+				any_owned_province = {
+					always = yes
+				}
+			}
+		}
+		allow = {
+			CSA = {
+				junior_union_with = USA
+			}
+		}
+		effect = {
+			CSA = {
+				every_owned_province = {
+					cede_province = USA
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 # USA WANTS THIS!
+	}
+
+}

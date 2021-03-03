@@ -1,8 +1,0 @@
-spriteTypes = {
-    spriteType = {
-    name = "GFX_disaster_dec1_prc_democratic_socialist_revolt"
-    texturefile = "gfx//interface//disasters//dec1_prc_democratic_socialist_revolt.dds"
-    noOfFrames = 3
-    loadType = "INGAME"
-    }
-}

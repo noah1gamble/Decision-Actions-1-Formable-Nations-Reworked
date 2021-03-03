@@ -44,14 +44,21 @@
 			}
 		}
 
-		allow_normal_conversion = no # Locked Reform
-		monarchy = yes
+		custom_attributes = {
+			# Government Type
+			monarchy = yes
+			# Government Mechanics
+			has_parliament = yes
+			maintain_dynasty = yes
+			royal_marriage = no
+			# Ruler, Heir, Queen
+			heir = yes
+			queen = yes
+			# Locked Reform
+			allow_normal_conversion = no
+		}
+
 		fixed_rank = 3
-		has_parliament = yes
-		maintain_dynasty = yes
-		heir = yes
-		queen = yes
-		royal_marriage = no
 	 }
 
 ##############################
@@ -92,15 +99,24 @@
 			}
 		}
 
-		republic = yes
+		custom_attributes = {
+			# Government Type
+			republic = yes
+			# Government Mechanics
+			has_parliament = yes
+			maintain_dynasty = yes
+			heirs_can_be_generals = yes
+			rulers_can_be_generals = no
+			royal_marriage = no
+			has_meritocracy = no
+			# Ruler, Heir, Queen
+			heir = yes
+			queen = no
+			# Locked Reform
+			allow_normal_conversion = no
+		}
+
 		fixed_rank = 3
-		maintain_dynasty = yes
-		royal_marriage = no
-		queen = no
-		heir = yes
-		rulers_can_be_generals = no
-		heirs_can_be_generals = yes
-		has_meritocracy = no
 	 }
 
 	 democratic_socialists_reform = {
@@ -127,12 +143,23 @@
 			global_tax_modifier = 0.10
 		}
 
-		republic = yes
+		custom_attributes = {
+			# Government Type
+			republic = yes
+			# Government Mechanics
+			has_parliament = yes
+			has_meritocracy = yes
+			royal_marriage = yes
+			maintain_dynasty = no
+			has_meritocracy = no
+			# Ruler, Heir, Queen
+			queen = yes
+			republic = yes
+			# Locked Reform
+			allow_normal_conversion = no
+		}
+
 		fixed_rank = 3
-		maintain_dynasty = no
-		royal_marriage = yes
-		queen = yes
-		has_meritocracy = yes
 	 }
 
 	 # tier 2
@@ -200,6 +227,8 @@
 
 		custom_attributes = {
 			enables_nepotism = yes
+			has_meritocracy = yes
+			has_parliament = yes
 		}
 
 		republic = yes
@@ -210,6 +239,44 @@
 		heir = yes
 		rulers_can_be_generals = yes
 		heirs_can_be_generals = yes
-		has_meritocracy = yes
-		has_parliament = yes
+	 }
+
+
+#################################
+# Confederate States of America #
+#################################
+
+	 # tier 1
+
+	 confederate_state_war_congress_reform = {
+		icon = "paper_with_seal"
+
+		potential = {
+			tag = CSA
+			CSA = {
+				war_with = USA
+			}
+		}
+
+		conditional = {
+			allow = { has_dlc = "Common Sense" }
+		}
+
+		modifiers = {
+			land_forcelimit_modifier = 0.75
+			fort_maintenance_modifier = -0.50
+			war_exhaustion = -0.25
+			reelection_cost = -0.25
+			election_cycle = 4
+			global_autonomy = -100
+			min_autonomy_in_territories = 0
+		}
+
+		custom_attributes = {
+			republic = yes
+			enables_nepotism = yes
+			has_parliament = yes
+			royal_marriage = no
+			rulers_can_be_generals = no
+		}
 	 }

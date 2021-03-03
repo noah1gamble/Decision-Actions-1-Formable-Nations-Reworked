@@ -1,0 +1,23 @@
+spriteTypes = {
+    # Dual Monarchy - Anglois Civil War
+    spriteType = {
+    name = "GFX_disaster_dual_monarchy_anglois_civil_war"
+    texturefile = "gfx//interface//disasters//dual_monarchy_anglois_civil_war.dds"
+    noOfFrames = 3
+    loadType = "INGAME"
+    }
+    # People's Republic of China - Democratic Socialist Revolt
+    spriteType = {
+        name = "GFX_disaster_dec1_prc_democratic_socialist_revolt"
+        texturefile = "gfx//interface//disasters//dec1_prc_democratic_socialist_revolt.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+    # United States of America - American Civil War
+    spriteType = {
+        name = "GFX_disaster_dec1_usa_american_civil_war"
+        texturefile = "gfx//interface//disasters//dec1_usa_american_civil_war.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+}

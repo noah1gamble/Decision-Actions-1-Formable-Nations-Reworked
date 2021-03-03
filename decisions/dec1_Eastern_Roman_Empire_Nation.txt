@@ -85,7 +85,6 @@ country_decisions = {
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
 				custom_tooltip = dec1_decisions_blank
-				# TODO: Create a custom Holy Roman Empire handler?
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Culture Handler
 					if = { # Convert to Roman

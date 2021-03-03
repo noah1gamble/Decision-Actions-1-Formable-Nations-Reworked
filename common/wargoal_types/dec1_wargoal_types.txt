@@ -1,0 +1,35 @@
+
+
+american_civil_war = {
+	type = defend_capital
+
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 2.0
+		peace_cost_factor = 0.5
+
+		allowed_provinces = {
+			superregion = north_america_superregion
+		}
+
+		peace_options = {
+			po_form_personal_union
+		}
+	}
+
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 2.0
+		peace_cost_factor = 0.5
+
+		allowed_provinces = {
+			superregion = north_america_superregion
+		}
+
+		peace_options = {
+			po_form_personal_union
+		}
+	}
+
+	war_name = dec1_usa_american_civil_war
+}

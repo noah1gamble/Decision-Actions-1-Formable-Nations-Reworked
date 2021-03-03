@@ -2,4 +2,5 @@ government = republic
 technology_group = western
 primary_culture = american
 religion = protestant
-capital = 932 # Charleston
+set_capital = 932 # Charleston
+932 = { rename_capital = "Charleston" }

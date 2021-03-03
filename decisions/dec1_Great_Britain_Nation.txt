@@ -23,6 +23,8 @@ country_decisions = {
 				tag = EUR
 				tag = ANG
 				tag = DUM
+				tag = USA
+				tag = CSA
 			}
 			OR = {
 				culture_group = british
@@ -238,20 +240,8 @@ country_decisions = {
 			tag = ENG
 			NOT = {
 				has_country_flag = formed_great_britain_nation_flag
-				exists = NSE
-				exists = UKI
-				exists = GBR
-				tag = IRE
-				tag = GBR
-				tag = UKI
-				tag = PAP
-				tag = HLR
-				tag = EUR
-			}
-			OR = {
-				culture_group = british
-				primary_culture = welsh
-				primary_culture = irish
+				exists = ENG
+				tag = ENG
 			}
 			OR = {
 				ai = no
@@ -259,7 +249,7 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 6
 				}
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {

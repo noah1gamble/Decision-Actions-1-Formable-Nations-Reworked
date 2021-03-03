@@ -1,0 +1,49 @@
+namespace = dec1_faction_events
+
+############################################
+# Dual Monarchy France vs British Factions #
+############################################
+
+	# British Faction demands further economic concessions - somewhat common event
+
+		country_event = {
+			id = dec1_faction_events.1
+			title = "dec1_faction_events.1.t"
+			desc = "dec1_faction_events.1.d"
+			picture = HRE_eventPicture
+
+			is_triggered_only = yes
+
+			trigger = {
+				AND = {
+					has_faction = enuchs
+					has_faction = enuchs
+				}
+			}
+
+			# Refuse Concessions
+			option = {
+				name = "dec1_faction_events.1.a"
+				ai_chance = {
+					factor = 65
+				}
+			}
+			# Allow Concessions
+			option = {
+				name = "dec1_faction_events.1.b"
+				ai_chance = {
+					factor = 35
+				}
+			}
+		}
+
+	# British Faction coup in the night, many French Faction influential members dead - very rare event
+
+		#
+
+	# British Faction weakened
+
+
+	# Debate between the General Assembly over crown land reform (nats VS unions)
+
+		#

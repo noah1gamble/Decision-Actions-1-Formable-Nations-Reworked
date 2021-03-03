@@ -1,6 +1,6 @@
 country_decisions = {
 
-	california_nation = {
+	californian_nation = {
 		major = yes
 		potential = {
 			is_playing_custom_nation = no
@@ -49,7 +49,7 @@ country_decisions = {
 			is_colonial_nation = no
 			is_former_colonial_nation = yes
 			is_at_war = no
-			owns = 1090
+			owns = 2476
 			num_of_cities = 12 # Colonial nations need 12
 		}
 		effect = {

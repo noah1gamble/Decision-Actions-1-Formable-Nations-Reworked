@@ -462,8 +462,8 @@
 
   # California
 
- california_nation_title: "@CAL California"
- california_nation_desc: "We have made a home in this rugged land. It is time for us to muster our strength and cast off the oppression of our colonial overlords, so that we may build a paradise in the West."
+ californian_nation_title: "@CAL California"
+ californian_nation_desc: "We have made a home in this rugged land. It is time for us to muster our strength and cast off the oppression of our colonial overlords, so that we may build a paradise in the West."
 
   # Canada
 
@@ -609,3 +609,26 @@
 
  china_control_over_taiwan_title: "Control over Taiwan"
  china_control_over_taiwan_desc: "We must conquer the islands of Taiwan in the name of the Republic of China!"
+
+  #######################
+  # DISASTERS DECISIONS #
+  #######################
+
+    # American Civil War
+
+      # USA Decision
+
+      dec1_restore_the_american_union_title: "Victory over the Confederacy"
+      dec1_restore_the_american_union_desc: "We are victorious in the American Civil War against the Confederates and must restore the United States of America."
+
+      # CSA Decision
+
+      dec1_confederate_victory_title: "Victory against the Union"
+      dec1_confederate_victory_desc: "We have defeated the Union and secured victory for the Confederacy.. it is time to integrate the North!"
+
+      # Restore the Union peacefully (white peace, time, etc)
+
+ # Developer Tools
+
+ dec1_test_code_title: "Code Tester"
+ dec1_test_code_desc: "Written by Noah :D"

@@ -5,10 +5,9 @@ graphical_culture = westerngfx
 colonial_parent = USA
 random_nation_chance = 0
 
-historical_score = 50000 # USA STRONG! 
+historical_score = 40000 # CSA STRONG!
 
 color = { 99 99 99 }
-revolutionary_colors = { 99 99 99 }
 
 historical_idea_groups = {
 	plutocracy_ideas

@@ -2,92 +2,125 @@
 	# GOVERNMENT NAMES #
 	####################
 
-	# Dual Monarchy
+		# TODO: Change all naming to have dec1 prefix (ROMAN_REPUBLIC TO DEC1_ROMAN_REPUBLIC)
 
-	dual_monarchy_government = {
-		rank = {
-			3 = GRAND_PROTECTORATE
+		#################
+		# Dual Monarchy #
+		#################
+
+			dual_monarchy_government = {
+				rank = {
+					3 = GRAND_PROTECTORATE
+				}
+
+				ruler_male = {
+					3 = GRAND_PROTECTOR
+				}
+
+				ruler_female = {
+					3 = GRAND_PROTECTRESS
+				}
+
+				heir_male = {
+					3 = HEIR_APPARENT
+				}
+
+				heir_female = {
+					3 = HEIRESS_APPARENT
+				}
+
+				trigger = {
+					government = dual_monarchy_government
+					has_reform = parliament_of_the_lords_reform
+					tag = DUM
+				}
+			}
+
+		##############################
+		# People's Republic of China #
+		##############################
+
+			chinese_communism_government = {
+				rank = {
+					3 = PEOPLES_REPUBLIC
+				}
+
+				ruler_male = {
+					3 = SUPREME_LEADER
+				}
+
+				ruler_female = {
+					3 = MADAM_SUPREME_LEADER
+				}
+
+				heir_male = {
+					3 = CENTRAL_GUARD
+				}
+
+				heir_female = {
+					3 = CENTRAL_GUARD
+				}
+
+				trigger = {
+					government = chinese_communism_government
+					has_reform = communist_party_of_china_reform
+					tag = PRC
+				}
+			}
+
+		########################
+		# Eastern Roman Empire #
+		########################
+
+			byzantine_bureaucracy_government = {
+				rank = {
+					3 = ROMAN_REPUBLIC
+				}
+
+				ruler_male = {
+					3 = EASTERN_ROMAN_EMPEROR
+				}
+
+				ruler_female = {
+					3 = EASTERN_ROMAN_EMPRESS
+				}
+
+				heir_male = {
+					3 = SUCCESSOR
+				}
+
+				heir_female = {
+					3 = SUCCESSOR
+				}
+
+				trigger = {
+					government = byzantine_bureaucracy_government
+					has_reform = eastern_roman_senate_reform
+					tag = ERP
+				}
+			}
+
+		#################################
+		# Confederate States of America #
+		#################################
+
+		confederacy_government = {
+			rank = {
+				3 = DEC1_CONFEDERACY
+			}
+
+			ruler_male = {
+				3 = DEC1_CONFEDERATE_PRESIDENT
+			}
+
+			ruler_female = {
+				3 = DEC1_CONFEDERATE_MADAM_PRESIDENT
+			}
+
+			trigger = {
+				government = confederacy_government
+				has_reform = confederate_state_war_congress_reform
+				tag = CSA
+			}
 		}
 
-		ruler_male = {
-			3 = GRAND_PROTECTOR
-		}
-
-		ruler_female = {
-			3 = GRAND_PROTECTRESS
-		}
-
-		heir_male = {
-			3 = HEIR_APPARENT
-		}
-
-		heir_female = {
-			3 = HEIRESS_APPARENT
-		}
-
-		trigger = {
-			government = dual_monarchy_government
-			has_reform = parliament_of_the_lords_reform
-			tag = DUM
-		}
-	}
-
-	# People's Republic of China
-
-	chinese_communism_government = {
-		rank = {
-			3 = PEOPLES_REPUBLIC
-		}
-
-		ruler_male = {
-			3 = SUPREME_LEADER
-		}
-
-		ruler_female = {
-			3 = MADAM_SUPREME_LEADER
-		}
-
-		heir_male = {
-			3 = CENTRAL_GUARD
-		}
-
-		heir_female = {
-			3 = CENTRAL_GUARD
-		}
-
-		trigger = {
-			government = chinese_communism_government
-			has_reform = communist_party_of_china_reform
-			tag = PRC
-		}
-	}
-
-	# Eastern Roman Empire
-
-	byzantine_bureaucracy_government = {
-		rank = {
-			3 = ROMAN_REPUBLIC
-		}
-
-		ruler_male = {
-			3 = EASTERN_ROMAN_EMPEROR
-		}
-
-		ruler_female = {
-			3 = EASTERN_ROMAN_EMPRESS
-		}
-
-		heir_male = {
-			3 = SUCCESSOR
-		}
-
-		heir_female = {
-			3 = SUCCESSOR
-		}
-
-		trigger = {
-			government = byzantine_bureaucracy_government
-			has_reform = eastern_roman_senate_reform
-			tag = ERP
-		}
-	}
