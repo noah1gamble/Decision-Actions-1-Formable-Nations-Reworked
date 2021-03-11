@@ -65,60 +65,60 @@
 	# Confederacy - Confederate States of America #
 	###############################################
 
-	confederacy_government = {
+		confederacy_government = {
 
-		basic_reform = republic_mechanic
+			basic_reform = republic_mechanic
 
-		color = { 163 156 155 }
+			color = { 163 156 155 }
 
-		reform_levels = {
-			feudalism_vs_autocracy = {
-				reforms = {
-					confederate_state_war_congress_reform
+			reform_levels = {
+				feudalism_vs_autocracy = {
+					reforms = {
+						confederate_state_congress_reform
+					}
+				}
+				hereditary_vs_nobility = {
+					reforms = {
+						enforce_privileges_reform
+						quash_noble_power_reform
+						enforce_trader_privileges_reform
+					}
+				}
+				bureaucracy = {
+					reforms = {
+						centralize_reform
+						decentralize_reform
+					}
+				}
+				growth_of_administration = {
+					reforms = {
+						clergy_in_administration_reform
+						of_noble_bearing_reform
+						meritocratic_focus_reform
+					}
+				}
+				deliberative_assembly = {
+					reforms = {
+						royal_decree_reform
+						aristocratic_court_reform
+						general_estates_reform
+					}
+				}
+				absolute_rule_vs_constitutional = {
+					reforms = {
+						letat_cest_moi_reform
+						regional_representation_reform
+					}
+				}
+				separation_of_power = {
+					reforms = {
+						political_absolutism_reform
+						legislative_houses_reform
+					}
 				}
 			}
-			hereditary_vs_nobility = {
-				reforms = {
-					enforce_privileges_reform
-					quash_noble_power_reform
-					enforce_trader_privileges_reform
-				}
-			}
-			bureaucracy = {
-				reforms = {
-					centralize_reform
-					decentralize_reform
-				}
-			}
-			growth_of_administration = {
-				reforms = {
-					clergy_in_administration_reform
-					of_noble_bearing_reform
-					meritocratic_focus_reform
-				}
-			}
-			deliberative_assembly = {
-				reforms = {
-					royal_decree_reform
-					aristocratic_court_reform
-					general_estates_reform
-				}
-			}
-			absolute_rule_vs_constitutional = {
-				reforms = {
-					letat_cest_moi_reform
-					regional_representation_reform
-				}
-			}
-			separation_of_power = {
-				reforms = {
-					political_absolutism_reform
-					legislative_houses_reform
-				}
-			}
+
 		}
-
-	}
 
 	##################################################
 	# Chinese Communism - People's Republic of China #

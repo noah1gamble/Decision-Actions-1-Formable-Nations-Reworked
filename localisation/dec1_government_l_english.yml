@@ -76,8 +76,8 @@
 
      # Tier 1
 
-     confederate_state_war_congress_reform: "Confederate State War Congress"
-     confederate_state_war_congress_reform_desc: "We are at war with America! Our Congress has more authority and political power than ever before."
+     confederate_state_congress_reform: "Confederate States Congress"
+     confederate_state_congress_reform_desc: ""
 
   ####################
   # GOVERNMENT NAMES #

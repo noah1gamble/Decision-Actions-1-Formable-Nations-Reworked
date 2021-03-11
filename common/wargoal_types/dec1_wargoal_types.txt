@@ -1,15 +1,15 @@
 
 
-american_civil_war = {
-	type = defend_capital
+dec1_war_goal_american_civil_war = {
+	type = take_capital
 
 	attacker = {
-		badboy_factor = 0.5
-		prestige_factor = 2.0
-		peace_cost_factor = 0.5
+		badboy_factor = 0.10
+		prestige_factor = 0.1
+		peace_cost_factor = 0.1 # More expensive for America to win
 
 		allowed_provinces = {
-			superregion = north_america_superregion
+			always = no
 		}
 
 		peace_options = {
@@ -18,12 +18,11 @@ american_civil_war = {
 	}
 
 	defender = {
-		badboy_factor = 0.5
-		prestige_factor = 2.0
+		badboy_factor = 0.10
+		prestige_factor = 1.0
 		peace_cost_factor = 0.5
 
 		allowed_provinces = {
-			superregion = north_america_superregion
 		}
 
 		peace_options = {
@@ -31,5 +30,7 @@ american_civil_war = {
 		}
 	}
 
-	war_name = dec1_usa_american_civil_war
+	po_change_government = no
+	po_demand_provinces = no
+	war_name = dec1_american_civil_war
 }

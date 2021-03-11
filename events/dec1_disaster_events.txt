@@ -28,3 +28,144 @@ namespace = dec1_disaster_events
 			}
 		}
 
+	############################
+	# United States of America #
+	############################
+
+		# The American Civil War Start Event - USA
+
+		country_event = {
+			id = dec1_disaster_events_usa_civil_war.1
+			title = "dec1_disaster_events_usa_civil_war.1.t"
+			desc = "dec1_disaster_events_usa_civil_war.1.d"
+			picture = CIVIL_WAR_eventPicture
+
+			is_triggered_only = yes
+
+			immediate = {
+				custom_tooltip = dec1_usa_american_civil_war_tt_2
+				hidden_effect = {
+					# CSA
+					CSA = {
+						# Balancing (will all be adjusted after the war)
+						add_years_of_income = 24 # Income to sustain the armed forces
+						add_prestige = 200 # max prestige
+						add_stability = 6 # max stability
+						add_treasury = 20000 # 20,000 ducats
+						add_manpower = 400 # 400,000 manpower
+						add_republican_tradition = 100 # republican tradition
+						add_absolutism = 100 # max absolutism
+						add_army_tradition = 100 # max army tradition
+						add_navy_tradition = 50 # half navy tradition
+						add_mercantilism = 50 # half mercantilism
+						# CSA army + CORES
+						every_owned_province = {
+							infantry = PREV
+							artillery = PREV
+							add_core = CSA
+						}
+						# CSA navy
+						random_owned_province = {
+							limit = {
+								region = mississippi_region
+								has_port = yes
+							}
+							build_to_forcelimit = {
+								heavy_ship = 0.7
+								light_ship = 0.3
+								transport = 0
+							}
+						}
+						# Forts along american border
+						2547 = {
+							add_building = fort_18th
+						}
+						2544 = {
+							add_building = fort_18th
+						}
+						2548 = {
+							add_building = fort_18th
+						}
+						940 = {
+							add_building = fort_18th
+						}
+						918 = {
+							add_building = fort_18th
+						}
+						920 = {
+							add_building = fort_18th
+						}
+						931 = {
+							add_building = fort_18th
+						}
+						2543 = {
+							add_building = fort_18th
+						}
+						924 = { add_building = fort_18th } # Capital Fort
+						# 3 Random Forts
+						random_owned_province = {
+							add_building = fort_18th
+						}
+						random_owned_province = {
+							add_building = fort_18th
+						}
+						random_owned_province = {
+							add_building = fort_18th
+						}
+						# Slave Prices
+						change_price = { # Massive increase in the value of slaves
+							trade_goods = slaves
+							key = dec1_american_slavery
+							value = 5.0
+							duration = -1
+						}
+						# CSA land discovery
+						north_america = { discover_country = CSA }
+						europe_superregion = { discover_country = CSA }
+						east_american_sea_superregion = { discover_country = CSA }
+						north_european_sea_superregion = { discover_country = CSA }
+					}
+					# USA
+					USA = {
+						# America moves the capital to Washington (Maryland)
+						set_capital = 953
+						953 = {
+							change_province_name = "Washington"
+							rename_capital = "Washington, D.C."
+						}
+					}
+				}
+			}
+
+			option = { # Rally the troops!
+				name = "dec1_disaster_events_usa_civil_war.1.a"
+				USA = {
+					declare_war_with_cb = {
+						who = CSA
+						casus_belli = cb_american_civil_war
+					}
+				}
+			}
+		}
+
+	#################################
+	# Confederate States of America #
+	#################################
+
+		# The American Civil War Start Event - CSA
+
+		country_event = {
+			id = dec1_disaster_events_csa_civil_war.1
+			title = "dec1_disaster_events_csa_civil_war.1.t"
+			desc = "dec1_disaster_events_csa_civil_war.1.d"
+			picture = CIVIL_WAR_eventPicture
+
+			is_triggered_only = yes
+
+			immediate = {
+			}
+
+			option = { # The Union will fall
+				name = "dec1_disaster_events_csa_civil_war.1.a"
+			}
+		}

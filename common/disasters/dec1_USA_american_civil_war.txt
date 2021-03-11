@@ -4,7 +4,7 @@ dec1_usa_american_civil_war = {
 	potential = {
 		tag = USA
 		is_lesser_in_union = no
-		NOT = { has_country_flag = usa_american_civil_war_happened }
+		NOT = { has_country_flag = dec1_american_civil_war_happened }
 	}
 
 	can_start = {
@@ -48,187 +48,88 @@ dec1_usa_american_civil_war = {
 
 	modifier = {
 		global_unrest = 20
+		land_forcelimit_modifier = -0.50
 	}
 
 	can_end = {
 		CSA = { exists = no }
-		num_of_owned_provinces_with = { # Has captured all slave provinces
-			value = 10
-			trade_goods = slaves
-			continent = north_america
-		}
 	}
 
 	on_start_effect = {
-		southeast_america_region = {
-			limit = {
-				NOT = {
-					area = great_valley_area
-					area = chesapeake_area
-				}
-			}
-			cede_province = CSA
-
-		}
-		southeast_america_region = {
-			limit = {
-				trade_goods = cotton
-			}
-			change_trade_goods = slaves
-		}
-		mississippi_region = {
-			limit = {
-				NOT = {
-					area = upper_louisiana_area
-					area = appalachia_area
-				}
-			}
-			cede_province = CSA
-		}
-		mississippi_region = {
-			limit = {
-				trade_goods = cotton
-			}
-			change_trade_goods = slaves
-		}
-		USA = {
-			# America moves the capital to Washington (Maryland)
-			set_capital = 953
-			953 = {
-				change_province_name = "Washington"
-				rename_capital = "Washington, D.C."
-			}
-			# Confederate Supporters (Used to Prevent USA raping CSA, and add some difficulty)
-			capital_scope = { confederate_loyalists_rebels = 9 }
-			random_owned_province = {
-				confederate_loyalists_rebels = 8
-			}
-			random_owned_province = {
-				confederate_loyalists_rebels = 7
-			}
-			random_owned_province = {
+		USA = { # Confederate Supporters (Used to Prevent USA raping CSA, and add some difficulty + PLAYER SHOULD SEE THIS)
+			capital_scope = {
 				confederate_loyalists_rebels = 6
 			}
 			random_owned_province = {
 				confederate_loyalists_rebels = 5
 			}
-			declare_war_with_cb = {
-				who = CSA
-				casus_belli = cb_american_civil_war
+			random_owned_province = {
+				confederate_loyalists_rebels = 4
+			}
+			random_owned_province = {
+				confederate_loyalists_rebels = 4
 			}
 		}
-		custom_tooltip = dec1_american_slavery_tt
 		hidden_effect = {
 			CSA = {
-				# Capital
-				set_capital = 924
+				set_capital = 924 # Capital
 				942 = { add_building = fort_18th }
 				# Government, Culture, Religion
 				change_government = confederacy_government
-				add_government_reform = confederate_state_war_congress_reform
+				add_government_reform = confederate_state_congress_reform
 				change_government_reform_progress = 3200
 				set_government_rank = 3
 				change_primary_culture = american
 				add_accepted_culture = american
 				change_religion = protestant
-				# Ruler
-				define_ruler = {
+				define_ruler = { # Ruler
 					name = "Jefferson Davis"
 					adm = 3
-					dip = 3
-					mil = 3
+					dip = 4
+					mil = 2
 					age = 53 # Historical Age
 				}
-				# Balancing
-				add_years_of_income = 12 # Income to sustain the nation
-				add_prestige = 200 # max prestige
-				add_stability = 6 # max stability
- 				add_treasury = 10000 # 10,000 ducats
-				add_manpower = 400 # 400,000 manpower
-				add_republican_tradition = 100 # republican tradition
-				add_absolutism = 100 # max absolutism
-				add_army_tradition = 100 # max army tradition
-				add_navy_tradition = 50 # half navy tradition
-				add_mercantilism = 50 # half mercantilism
-				# CSA army
-				every_owned_province = {
-					infantry = PREV
-					artillery = PREV
-				}
-				# CSA navy
-				random_owned_province = {
+			}
+			# Southeast America slaves + cede provinces
+			southeast_america_region = {
+				if = {
 					limit = {
-						region = mississippi_region
-						has_port = yes
+						NOT = {
+							area = great_valley_area
+							area = chesapeake_area
+						}
 					}
-					build_to_forcelimit = {
-						heavy_ship = 0.8
-						light_ship = 0.2
-						transport = 0
+					cede_province = CSA
+				}
+				if = {
+					limit = {
+						trade_goods = cotton
 					}
-				}
-				# province changes
-				southeast_america_region = {
-					change_culture = american
-					add_core = CSA
-				}
-				mississippi_region = {
-					change_culture = american
-					add_core = CSA
-				}
-				# Forts along american border
-				2547 = {
-					add_building = fort_18th
-				}
-				2544 = {
-					add_building = fort_18th
-				}
-				2548 = {
-					add_building = fort_18th
-				}
-				940 = {
-					add_building = fort_18th
-				}
-				918 = {
-					add_building = fort_18th
-				}
-				920 = {
-					add_building = fort_18th
-				}
-				931 = {
-					add_building = fort_18th
-				}
-				2543 = {
-					add_building = fort_18th
-				}
-				924 = { add_building = fort_18th } # Capital Fort
-				# 3 Random Forts
-				random_owned_province = {
-					add_building = fort_18th
-				}
-				random_owned_province = {
-					add_building = fort_18th
-				}
-				random_owned_province = {
-					add_building = fort_18th
-				}
-				# Slave Prices
-				change_price = { # Massive increase in the value of slaves
-					trade_goods = slaves
-					key = dec1_american_slavery
-					value = 5.0
-					duration = -1
+					change_trade_goods = slaves
 				}
 			}
-			# CSA land discovery
-			north_america = { discover_country = CSA }
-			europe_superregion = { discover_country = CSA }
-			east_american_sea_superregion = { discover_country = CSA }
-			north_european_sea_superregion = { discover_country = CSA }
+			# Mississippi slaves + cede provinces
+			mississippi_region = {
+				if = {
+					limit = {
+						NOT = {
+							area = upper_louisiana_area
+							area = appalachia_area
+						}
+					}
+					cede_province = CSA
+				}
+				if = {
+					limit = {
+						trade_goods = cotton
+					}
+					change_trade_goods = slaves
+				}
+			}
 		}
 	}
 
-	#on_start = dec1_disaster_events_usa_civil_war.1
+	on_start = dec1_disaster_events_usa_civil_war.1
 	#on_end = dec1_disaster_events_usa_civil_war.100
 
 	on_monthly = {

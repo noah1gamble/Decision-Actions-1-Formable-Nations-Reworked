@@ -25,13 +25,10 @@ country_decisions = {
 				primary_culture = jin
 				primary_culture = manchu
 				primary_culture = min
-				primary_culture = shandong
 				primary_culture = sichuanese
 				primary_culture = wu
 				primary_culture = xiang
 				primary_culture = xibei
-				primary_culture = zhili
-				primary_culture = zhonggyuan
 			}
 			OR = {
 				ai = no
@@ -39,7 +36,7 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 5 # Unique.. Can form PRC as a smaller chinese nation
 				}
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {

@@ -5,7 +5,7 @@ graphical_culture = westerngfx
 colonial_parent = USA
 random_nation_chance = 0
 
-historical_score = 40000 # CSA STRONG!
+historical_score = 5000
 
 color = { 99 99 99 }
 

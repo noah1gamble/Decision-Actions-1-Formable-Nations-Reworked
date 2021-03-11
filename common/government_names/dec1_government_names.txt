@@ -31,7 +31,6 @@
 
 				trigger = {
 					government = dual_monarchy_government
-					has_reform = parliament_of_the_lords_reform
 					tag = DUM
 				}
 			}
@@ -95,7 +94,6 @@
 
 				trigger = {
 					government = byzantine_bureaucracy_government
-					has_reform = eastern_roman_senate_reform
 					tag = ERP
 				}
 			}
@@ -104,23 +102,22 @@
 		# Confederate States of America #
 		#################################
 
-		confederacy_government = {
-			rank = {
-				3 = DEC1_CONFEDERACY
-			}
+			confederacy_government = {
+				rank = {
+					3 = DEC1_CONFEDERACY
+				}
 
-			ruler_male = {
-				3 = DEC1_CONFEDERATE_PRESIDENT
-			}
+				ruler_male = {
+					3 = DEC1_CONFEDERATE_PRESIDENT
+				}
 
-			ruler_female = {
-				3 = DEC1_CONFEDERATE_MADAM_PRESIDENT
-			}
+				ruler_female = {
+					3 = DEC1_CONFEDERATE_MADAM_PRESIDENT
+				}
 
-			trigger = {
-				government = confederacy_government
-				has_reform = confederate_state_war_congress_reform
-				tag = CSA
+				trigger = {
+					government = confederacy_government
+					tag = CSA
+				}
 			}
-		}
 

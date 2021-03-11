@@ -1,4 +1,4 @@
-country_decisions = {
+ country_decisions = {
 
 	tibetan_nation = {
 		major = yes
@@ -8,9 +8,9 @@ country_decisions = {
 			is_colonial_nation = no
 			NOT = { 
 				has_country_flag = formed_tibetan_empire_nation_flag
-				exists = TIE	
+				exists = TIE
 				exists = TIB
-				tag = TIB			
+				tag = TIB
 				tag = TIE
 				tag = PAP
 				tag = HIN

@@ -6,14 +6,13 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_himalayan_empire_flag
-				exists = HIM				
+				exists = HIM
 				tag = HIM
 				tag = PAP
 				tag = HIN
 				tag = BHA
-				tag = TIB
 				tag = TIE
 			}
 			OR = {

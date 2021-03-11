@@ -1,8 +1,8 @@
 ﻿l_english:
 
-  ##########################
+  #########################
   # DISASTERS LOCALISATION #
-  ##########################
+  #########################
 
     # Dual Monarchy
 
@@ -14,28 +14,55 @@
       dec1_prc_democratic_socialist_revolt: "Democratic Socialist Revolt"
       dec1_prc_democratic_socialist_revolt_desc: ""
 
-    # American Civil War
+    # American Civil War - USA
 
-    dec1_usa_american_civil_war: "American Civil War"
+      dec1_usa_american_civil_war: "American Civil War"
+      dec1_usa_american_civil_war_desc: ""
+
+    # American Civil War - CSA
+
+      dec1_csa_american_civil_war: "American Civil War"
+      dec1_csa_american_civil_war_desc: ""
 
   ################################
   # DISASTER EVENTS LOCALISATION #
   ################################
 
-   # Dual Monarchy
+    # Dual Monarchy
 
-    dec1_disaster_events_anglois_civil_war.1.t: "The Anglois Civil War"
-    dec1_disaster_events_anglois_civil_war.1.d: "With the foundation of the Dual Monarchy came the cultural mix of British and French cultures known as the 'Anglois'. Many French and English populace have yet to embrace this new natural evolution of our Grand Protectorate and many have even begun openly resisting this change, leading to an armed conflict between the Anglois dominated peoples against what remains of English and French cultural holdouts.\n\nWe must crush this resistance if we wish for this Dual Monarchy to not become a simple footnote in history!"
-    dec1_disaster_events_anglois_civil_war.1.a: "Suppress the Rebels"
-    dec1_disaster_events_anglois_civil_war.1.b: "Appease the British and French"
-    dec1_disaster_events_anglois_civil_war.1.c: "Surrender the Anglois Culture"
+      dec1_disaster_events_anglois_civil_war.1.t: "The Anglois Civil War"
+      dec1_disaster_events_anglois_civil_war.1.d: "With the foundation of the Dual Monarchy came the cultural mix of British and French cultures known as the 'Anglois'. Many French and English populace have yet to embrace this new natural evolution of our Grand Protectorate and many have even begun openly resisting this change, leading to an armed conflict between the Anglois dominated peoples against what remains of English and French cultural holdouts.\n\nWe must crush this resistance if we wish for this Dual Monarchy to not become a simple footnote in history!"
+      dec1_disaster_events_anglois_civil_war.1.a: "Suppress the Rebels"
+      dec1_disaster_events_anglois_civil_war.1.b: "Appease the British and French"
+      dec1_disaster_events_anglois_civil_war.1.c: "Surrender the Anglois Culture"
 
-   # People's Republic of China
+    # People's Republic of China
+
+  ######################
+  # DISASTER DECISIONS #
+  ######################
+
+    # American Civil War
+
+      # USA Decision
+
+      dec1_restore_the_american_union_title: "Victory over the Confederacy"
+      dec1_restore_the_american_union_desc: "We are victorious in the American Civil War against the Confederates and must restore the United States of America."
+
+      # CSA Decision
+
+      dec1_confederate_victory_title: "Victory against the Union"
+      dec1_confederate_victory_desc: "We have defeated the Union and secured victory for the Confederacy.. it is time to integrate the North!"
+
+      # Restore the Union peacefully (white peace, time, etc)
 
   #################################
   # DISASTER TOOLTIP LOCALISATION #
   #################################
 
-   # United States of America
+    # United States of America
 
-    dec1_usa_american_civil_war_tt_1: "owns at least §Y14§! provinces in §YSoutheast America§! or §YMississippi§! regions producing §YCotton§!"
+      dec1_usa_american_civil_war_tt_1: "Owns at least §Y14§! provinces in §YSoutheast America§! or §YMississippi§! regions producing §YCotton§!"
+      dec1_usa_american_civil_war_tt_2: ""
+
+    # Confederate States of America

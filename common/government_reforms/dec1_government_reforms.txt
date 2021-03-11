@@ -248,7 +248,7 @@
 
 	 # tier 1
 
-	 confederate_state_war_congress_reform = {
+	 confederate_state_congress_reform = {
 		icon = "paper_with_seal"
 
 		potential = {

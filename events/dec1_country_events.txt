@@ -1,7 +1,14 @@
 namespace = dec1_country_events
 
-#####################
-# Lusitanian Empire #
-#####################
+	#####################
+	# Lusitanian Empire #
+	#####################
 
+		#
 
+	#################################
+	# Confederate States of America #
+	#################################
+
+		#
+		

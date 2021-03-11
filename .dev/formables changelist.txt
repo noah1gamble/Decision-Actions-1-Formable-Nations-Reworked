@@ -1,0 +1,13 @@
+-added Our Place in the Empire - Nation left the Empire event, allows reconquest of imperial territory
+-removed useless missions
+-removed incorrect cultures from China
+-fixed PRC issues
+-fixed california not working
+-fixed anglois civil war issues
+-fixed colonial issue with some nations requiring australian core eora
+-fixed great britain england reqs
+-fixed great britain showing up as formable for USA
+-started random faction events
+-started American Civil War event for USA which can spawn CSA
+-reorganized events
+-reorganized gfx/interface/disasters
