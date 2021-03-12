@@ -1458,7 +1458,7 @@ JAE_ideas = {
 	}
 
 	trigger = {
-		tag = FIB
+		tag = JAE
 	}
 	free = yes	# will be added at load.
 
@@ -2098,13 +2098,15 @@ IMA_ideas = {
 }
 
 # Empire of Japan
-JAE_ideas = { 
+JAE_ideas = {
 	start = {
-
+		defensiveness = 0.10
+		siege_ability = 0.05
 	}
 
 	bonus = {
-
+		discipline = 0.01
+		land_morale = 0.05
 	}
 
 	trigger = {
@@ -2114,6 +2116,7 @@ JAE_ideas = {
 
 	JAE_dissolution_of_the_shogunate = {
 		global_unrest = -2
+		years_of_nationalism = -10
 	}
 
 	JAE_meiji_restoration = {
@@ -2121,8 +2124,8 @@ JAE_ideas = {
 	}
 
 	JAE_imperial_policy = {
-		promote_culture_cost = -0.05
-		global_tax_modifier = 0.05
+		promote_culture_cost = -0.10
+		global_tax_modifier = 0.10
 	}
 
 	JAE_war_torn_country = {
@@ -2130,7 +2133,7 @@ JAE_ideas = {
 	}
 
 	JAE_united_armies_of_japan = {
-		army_tradition_decay = -0.01
+		army_tradition_decay = -0.5
 	}
 
 	JAE_protect_isolation_policies = {
@@ -2138,7 +2141,7 @@ JAE_ideas = {
 	}
 
 	JAE_the_japanese_navy = {
-		navy_tradition_decay = -0.05
+		navy_tradition_decay = -0.10
 	}
 }
 
