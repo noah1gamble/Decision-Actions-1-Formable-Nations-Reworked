@@ -55,8 +55,8 @@ country_decisions = {
 			custom_tooltip = form_egypt_tt_3 # Claims
 			custom_tooltip = form_egypt_tt_4 # Claims
 			custom_tooltip = form_egypt_tt_5 # Claims
-			custom_tooltip = dec1_decisions_blank	
-			EGY = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			EGY = { # Capital change and bonuses
 				set_capital = 361 # Cairo
 				361 = {
 					add_base_tax = 1
@@ -64,7 +64,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -72,10 +72,10 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank	
+				custom_tooltip = dec1_decisions_blank
 				# Claims
 				mashriq_region = {
 					limit = {
@@ -94,16 +94,16 @@ country_decisions = {
 						NOT = { owned_by = ROOT }
 					}
 					add_permanent_claim = EGY
-				}			
+				}
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
-					# Government Rank change				
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -120,7 +120,7 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
 				# Custom Ideas check and change
 				if = {
@@ -137,16 +137,16 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_kingdom_of_pharaohs
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 

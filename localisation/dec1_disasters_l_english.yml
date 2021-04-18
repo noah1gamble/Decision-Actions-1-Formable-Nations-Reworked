@@ -6,8 +6,8 @@
 
     # Dual Monarchy
 
-      dual_monarchy_anglois_civil_war: "Anglois Civil War"
-      dual_monarchy_anglois_civil_war_desc: ""
+      dec1_dual_monarchy_anglois_civil_war: "Anglois Civil War"
+      dec1_dual_monarchy_anglois_civil_war_desc: "The Anglois Civil War was caused due to the shift in cultural change with the foundation of the Dual Monarchy leading to an unstable situation among our populace."
 
     # People's Republic of China
 
@@ -30,31 +30,20 @@
 
     # Dual Monarchy
 
-      dec1_disaster_events_anglois_civil_war.1.t: "The Anglois Civil War"
-      dec1_disaster_events_anglois_civil_war.1.d: "With the foundation of the Dual Monarchy came the cultural mix of British and French cultures known as the 'Anglois'. Many French and English populace have yet to embrace this new natural evolution of our Grand Protectorate and many have even begun openly resisting this change, leading to an armed conflict between the Anglois dominated peoples against what remains of English and French cultural holdouts.\n\nWe must crush this resistance if we wish for this Dual Monarchy to not become a simple footnote in history!"
-      dec1_disaster_events_anglois_civil_war.1.a: "Suppress the Rebels"
-      dec1_disaster_events_anglois_civil_war.1.b: "Appease the British and French"
-      dec1_disaster_events_anglois_civil_war.1.c: "Surrender the Anglois Culture"
+      dec1_disaster_events.1.t: "The Anglois Civil War"
+      dec1_disaster_events.1.d: "With the foundation of the Dual Monarchy came the cultural mix of British and French cultures known as the 'Anglois'. Many French and English populace have yet to embrace this new natural evolution of our Grand Protectorate and many have even begun openly resisting this change, leading to an armed conflict between the Anglois dominated peoples against what remains of English and French cultural holdouts.\n\nWe must crush this resistance if we wish for this Dual Monarchy to not become a simple footnote in history!"
+      dec1_disaster_events.1.a: "Suppress the Rebels"
+      dec1_disaster_events.1.b: "Appease the British and French"
+      dec1_disaster_events.1.c: "Surrender the Anglois Culture"
+
+    # United States of America
+
+      dec1_disaster_events.2.t: "The American Civil War"
+      dec1_disaster_events.2.d: "'Those who deny freedom to others, deserve it not for themselves; and, under a just God, can not long retain it.'\n\nThe American Civil War has come upon us and we are now a fractured nation.."
+      dec1_disaster_events.2.a: "An unjust world."
+      dec1_disaster_events.2.b: "Perhaps they are right."
 
     # People's Republic of China
-
-  ######################
-  # DISASTER DECISIONS #
-  ######################
-
-    # American Civil War
-
-      # USA Decision
-
-      dec1_restore_the_american_union_title: "Victory over the Confederacy"
-      dec1_restore_the_american_union_desc: "We are victorious in the American Civil War against the Confederates and must restore the United States of America."
-
-      # CSA Decision
-
-      dec1_confederate_victory_title: "Victory against the Union"
-      dec1_confederate_victory_desc: "We have defeated the Union and secured victory for the Confederacy.. it is time to integrate the North!"
-
-      # Restore the Union peacefully (white peace, time, etc)
 
   #################################
   # DISASTER TOOLTIP LOCALISATION #
@@ -63,6 +52,5 @@
     # United States of America
 
       dec1_usa_american_civil_war_tt_1: "Owns at least §Y14§! provinces in §YSoutheast America§! or §YMississippi§! regions producing §YCotton§!"
-      dec1_usa_american_civil_war_tt_2: ""
 
     # Confederate States of America

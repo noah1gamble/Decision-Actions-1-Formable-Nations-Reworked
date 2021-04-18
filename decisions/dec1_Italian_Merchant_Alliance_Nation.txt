@@ -6,6 +6,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			government = republic
 			NOT = {
 				has_country_flag = formed_italian_merchant_alliance_nation_flag
 				exists = IMA

@@ -20,6 +20,7 @@ country_decisions = {
 				tag = PAP
 				tag = KAB
 				tag = ARA
+				tag = TUR
 			}
 			OR = {
 				ai = no
@@ -43,9 +44,10 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			adm_tech = 5
-			religion_group = muslim	
-			owns_core_province = 407 # Raqqa		
+			adm_tech = 15
+			religion_group = muslim
+			religious_unity = 0.75 # 75% religious unity
+			owns_core_province = 407 # Raqqa
 			aleppo_area = {
 				type = all
 				owned_by = ROOT
@@ -57,11 +59,11 @@ country_decisions = {
 			north_kurdistan_area = {
 				type = all
 				owned_by = ROOT
-			}	
+			}
 			syrian_desert_area = {
 				type = all
 				owned_by = ROOT
-			}										
+			}
 		}
 		effect = {
 		change_tag = ISI # Country TAG
@@ -71,30 +73,30 @@ country_decisions = {
 		custom_tooltip = form_islamic_state_tt_4 # Region/Area Claims
 		custom_tooltip = form_islamic_state_tt_5 # Region/Area Claims
 		custom_tooltip = dec1_decisions_blank
-			ISI = { # Capital change and bonuses				
+			ISI = { # Capital change and bonuses
 				set_capital = 407 # Raqqa
 				407 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
-				add_government_reform = iqta						
+					custom_tooltip = dec1_government_change_theocracy # Government Type Change
+				}
+				add_government_reform = iqta
 				custom_tooltip = dec1_decisions_blank
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					mashriq_region = {
@@ -102,20 +104,20 @@ country_decisions = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = ISI
-					}	
+					}
 					dulkadir_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ISI						
+						add_permanent_claim = ISI
 					}
 					north_kurdistan_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = ISI
-					}					
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -128,13 +130,13 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government = monarchy
+								government = theocracy
 								}
 							}
-						change_government = monarchy
-					}																		
+						change_government = theocracy
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -149,7 +151,7 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_the_new_caliphate
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -160,6 +162,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400			
+		ai_importance = 400
 	}
 }

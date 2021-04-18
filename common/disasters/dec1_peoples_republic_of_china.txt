@@ -3,7 +3,6 @@ dec1_prc_democratic_socialist_revolt = {
 
 	potential = {
 		tag = PRC
-		NOT = { has_country_flag = dec1_prc_democratic_socialist_revolt_happened }
 		has_reform = communist_party_of_china_reform
 	}
 

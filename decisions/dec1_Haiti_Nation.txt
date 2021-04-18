@@ -4,7 +4,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			is_playing_custom_nation = no
-			NOT = { 
+			NOT = {
 				has_country_flag = changed_from_colonial_nation 
 				has_country_flag = formed_haiti_flag 
 				exists = HAT
@@ -16,7 +16,7 @@ country_decisions = {
 			capital_scope = { # Has a capital in Colonial Region
 				colonial_region = colonial_the_carribean
 				is_core = ROOT
-			}			
+			}
 			OR = {
 				AND = { # Natives have reformed religion, and has at least 10 provinces
 					is_religion_reformed = yes
@@ -25,15 +25,15 @@ country_decisions = {
 				# is former colonial nation
 				is_former_colonial_nation = yes
 				# is current colonial nation
-				is_colonial_nation = yes 
-			}		
+				is_colonial_nation = yes
+			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 6 # Colonial Nation owns at least 6 provinces
 				}
-			}			
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -84,16 +84,11 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
-					colonial_the_carribean = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = colonial_the_carribean
-					}
-					# Government Rank change				
+
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -110,9 +105,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no

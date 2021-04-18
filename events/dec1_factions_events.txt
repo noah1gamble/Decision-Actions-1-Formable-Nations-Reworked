@@ -4,46 +4,128 @@ namespace = dec1_faction_events
 # Dual Monarchy France vs British Factions #
 ############################################
 
-	# British Faction demands further economic concessions - somewhat common event
+	# Random Event - British demand Naval Concessions
 
 		country_event = {
 			id = dec1_faction_events.1
 			title = "dec1_faction_events.1.t"
 			desc = "dec1_faction_events.1.d"
-			picture = HRE_eventPicture
+			picture = SHIP_SAILING_eventPicture
 
-			is_triggered_only = yes
-
-			trigger = {
-				AND = {
-					has_faction = enuchs
-					has_faction = enuchs
-				}
+			mean_time_to_happen = {
+				months = 400
 			}
 
-			# Refuse Concessions
-			option = {
+			option = { # Refuse Concessions
 				name = "dec1_faction_events.1.a"
-				ai_chance = {
-					factor = 65
+				ai_chance = { factor = 65 }
+				add_faction_influence = {
+					faction = dec1_british_parliament
+					influence = -10
+				}
+				add_faction_influence = {
+					faction = dec1_french_parliament
+					influence = 10
 				}
 			}
-			# Allow Concessions
-			option = {
+			option = { # Support British Concessions
 				name = "dec1_faction_events.1.b"
-				ai_chance = {
-					factor = 35
+				ai_chance = { factor = 35 }
+				add_faction_influence = {
+					faction = dec1_british_parliament
+					influence = 25
+				}
+				add_country_modifier = {
+					name = dec1_british_parliament_british_naval_concessions
+					desc = dec1_british_parliament_british_naval_concessions_desc # 4 years
+					duration = 1460
 				}
 			}
 		}
 
-	# British Faction coup in the night, many French Faction influential members dead - very rare event
+	# Random Event - British naval integration into the Dual Monarchy navy
 
-		#
+		country_event = {
+			id = dec1_faction_events.2
+			title = "dec1_faction_events.2.t"
+			desc = "dec1_faction_events.2.d"
+			picture = SHIP_SAILING_eventPicture
+
+			mean_time_to_happen = {
+				months = 200
+			}
+
+			option = { # Refuse Naval Integration
+				name = "dec1_faction_events.2.a"
+				ai_chance = { factor = 55 }
+				add_faction_influence = {
+					faction = dec1_british_parliament
+					influence = -10
+				}
+				add_faction_influence = {
+					faction = dec1_french_parliament
+					influence = 10
+				}
+			}
+			option = { # Integrate British Traditions
+				name = "dec1_faction_events.2.b"
+				ai_chance = { factor = 45 }
+				add_faction_influence = {
+					faction = dec1_british_parliament
+					influence = 30
+				}
+				add_country_modifier = {
+					name = dec1_british_parliament_british_naval_concessions
+					desc = dec1_british_parliament_british_naval_concessions_desc # 4 years
+					duration = 1460
+				}
+			}
+		}
+
+	# Random Event - French demand for increased autonomy in Britain and reduced autonomy in France
+
+		country_event = {
+			id = dec1_faction_events.3
+			title = "dec1_faction_events.3.t"
+			desc = "dec1_faction_events.3.d"
+			picture = SHIP_SAILING_eventPicture
+
+			mean_time_to_happen = {
+				months = 300
+			}
+
+			option = { # Refuse French Demands
+				name = "dec1_faction_events.3.a"
+				ai_chance = { factor = 60 }
+				add_faction_influence = {
+					faction = dec1_british_parliament
+					influence = 10
+				}
+				add_faction_influence = {
+					faction = dec1_french_parliament
+					influence = -20
+				}
+			}
+			option = { # Support French demands against British
+				name = "dec1_faction_events.3.b"
+				ai_chance = { factor = 40 }
+				add_faction_influence = {
+					faction = dec1_british_parliament
+					influence = 20
+				}
+				add_faction_influence = {
+					faction = dec1_french_parliament
+					influence = -40
+				}
+			}
+		}
+
+	# Random Event - French army tactic integration into the Dual Monarchy army
+
+	# British Faction demands further economic concessions - somewhat common event
+
+	# British Faction coup in the night, many French Faction influential members dead - very rare event
 
 	# British Faction weakened
 
-
 	# Debate between the General Assembly over crown land reform (nats VS unions)
-
-		#

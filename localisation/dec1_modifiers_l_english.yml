@@ -8,7 +8,9 @@
   # Dual Monarchy #
   #################
 
- dec1_anglois_icon: "Icon of Anglois"
- dec1_anglois_icon_desc: "This ruler has shown himself to be a true Anglois [Root.Monarch.GetTitle]"
+  dec1_anglois_icon: "Icon of Anglois"
+  dec1_anglois_icon_desc: "This ruler has shown himself to be a true Anglois [Root.Monarch.GetTitle]"
 
+  dec1_british_parliament_british_naval_concessions: "British Naval Concessions"
+  dec1_british_parliament_british_naval_concessions_desc: ""
 

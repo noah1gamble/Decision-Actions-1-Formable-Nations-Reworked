@@ -153,35 +153,29 @@ country_decisions = {
 				}				
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					pomerelia_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = PRU
-					}					
 					west_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PRU
-					}	
+					}
 					east_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PRU
-					}									
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {

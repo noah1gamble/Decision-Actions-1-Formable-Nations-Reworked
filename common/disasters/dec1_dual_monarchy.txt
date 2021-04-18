@@ -1,0 +1,87 @@
+	###########################
+	# Dual Monarchy Disasters #
+	###########################
+
+		# Anglois Civil War
+
+			dec1_dual_monarchy_anglois_civil_war = {
+				ended_by_country_breaking_to_rebels = no
+
+				potential = {
+					tag = DUM
+					is_lesser_in_union = no
+				}
+
+				can_start = {
+					has_any_disaster = no
+					NOT = { stability = 1 }
+				}
+
+				can_stop = {
+					has_any_disaster = yes
+				}
+
+				progress = {
+					# TODO: Lack of Anglois Culture in at least 12 (3.0)
+					modifier = { # Single Faction Control over 75%
+						factor = 2.5
+						OR = {
+							faction_influence = {
+								faction = dec1_french_parliament
+								influence = 75
+							}
+							faction_influence = {
+								faction = dec1_british_parliament
+								influence = 75
+							}
+						}
+					}
+					modifier = { # Lack of Anglois Culture as Dominant culture
+						factor = 2.0
+						NOT = { dominant_culture = anglois }
+					}
+					modifier = { # Small Parliament
+						factor = 1.0
+						NOT = { current_size_of_parliament = 30 }
+					}
+					modifier = { # Stability not at least 1
+						factor = 0.5
+						NOT = { stability = 1 }
+					}
+				}
+
+				modifier = {
+					global_unrest = 10
+					culture_conversion_cost = 0.05
+				}
+
+				can_end = {
+					AND = { # Cultural solution 3 stability
+						num_of_owned_provinces_with = { # Anglois Culture at least 15 core provinces in British Isles region
+							value = 15
+							culture = anglois
+							is_core = root
+							region = british_isles_region
+						}
+						num_of_owned_provinces_with = { # Anglois Culture at least 15 provinces in England & France
+							value = 15
+							culture = anglois
+							is_core = root
+							region = france_region
+						}
+						stability = 3
+					}
+				}
+
+				on_start = dec1_disaster_events.1
+				#on_end = dec1_disaster_events_anglois_civil_war.100
+
+				on_monthly = {
+					events = { }
+					random_events = {
+						1000 = 0
+						# 100 = dec1_disaster_events.4 #
+					}
+				}
+			}
+

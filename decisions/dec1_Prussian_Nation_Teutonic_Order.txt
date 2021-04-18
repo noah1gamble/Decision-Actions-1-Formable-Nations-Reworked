@@ -186,7 +186,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -194,10 +194,10 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
@@ -205,28 +205,22 @@ country_decisions = {
 					}
 					country_event = { id = dec1_events.1 }
 					set_country_flag = dec1_our_place_in_the_empire_kingdom_rank
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips										
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					pomerelia_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = PRU
-					}					
 					west_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PRU
-					}	
+					}
 					east_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PRU
-					}									
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = { government_rank = 2 }

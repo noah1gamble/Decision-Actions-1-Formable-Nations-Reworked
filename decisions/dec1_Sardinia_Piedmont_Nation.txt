@@ -7,24 +7,29 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
 			culture_group = latin
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_sardinia_piedmont_flag
+				government = republic
 				exists = SPI
 				tag = SPI
 				tag = PAP
-				tag = SAV
-				tag = SAR
-				tag = ARA # Aragon Cannot form Sardinia-Piedmont; Perhaps change to allow Aragon
-				tag = COR
+				tag = ARA # Aragon Cannot form Sardinia-Piedmont; Perhaps change to allow Aragon (unique decision?)
 				tag = IMA
 				tag = ITA
 				tag = KOG
 				tag = ROP
-				tag = CIS	
-				tag = LVE		
-			}		
+				tag = CIS
+				tag = LVE
+			}
+			OR = {
+				tag = COR
+				tag = SAV
+				tag = SAR
+				tag = GEN
+				tag = MLO
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -155,171 +160,5 @@ country_decisions = {
 	}
 
 	# Sardinia-Piedmont Unique Formation for Savoy, Sardinia, and Corsica
-
-	sardinia_piedmont_nation_savoy_sardinia_corsica = {
-		major = yes
-		potential = {
-			is_former_colonial_nation = no
-			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			NOT = { 
-				has_country_flag = formed_sardinia_piedmont_flag
-				exists = SPI
-				tag = SPI
-				tag = ARA # Aragon Cannot form Sardinia-Piedmont; Perhaps change to allow Aragon
-				tag = IMA
-				tag = ITA
-				tag = KOG
-				tag = ROP
-				tag = CIS			
-			}
-			OR = {
-				tag = SAV
-				tag = SAR
-				tag = COR
-			}				
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 102	# Nice
-				province_id = 103	# Piedmont
-				province_id = 127	# Sardinia
-				province_id = 205	# Savoie
-				province_id = 1875	# Cuneo	
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			adm_tech = 10
-			NOT = { exists = SPI }
-			is_subject = no
-			is_at_war = no
-			OR = {
-				AND = {
-					tag = SAR
-					NOT = { exists = SAV }
-				}
-				AND = {
-					tag = SAV
-					NOT = { exists = SAR }
-				}				
-			}			
-			owns_core_province = 102	# Nice
-			owns_core_province = 103	# Piedmont
-			owns_core_province = 127	# Sardinia
-			owns_core_province = 205	# Savoie
-			owns_core_province = 1875	# Cuneo	
-		}
-		effect = {
-			change_tag = SPI # Country TAG
-			set_country_flag = formed_sardinia_piedmont_flag # Country Formation Flag
-			custom_tooltip = form_sardinia_piedmont_tt_2 # New Missions
-			custom_tooltip = form_sardinia_piedmont_tt_3 # Claims
-			custom_tooltip = form_sardinia_piedmont_tt_4 # Claims
-			custom_tooltip = form_sardinia_piedmont_tt_5 # Claims
-			custom_tooltip = dec1_decisions_blank	
-			SPI = { # Capital change and bonuses				
-				set_capital = 103 # Piedmont
-				103 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_2
-				# Dharma DLC check to prevent ugly tooltip
-				if = {
-					limit = {
-						has_dlc = "Dharma"
-					}
-					custom_tooltip = dec1_government_change_republic # Government Type Change
-				}				
-				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
-				# Our Place in the Empire Custom Event
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
-					# Region/Area Claims
-					liguria_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = SPI
-					}
-					western_mediterrenean_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = SPI
-					}
-					piedmont_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = SPI
-					}						
-					# Government Rank change				
-					if = {
-						limit = {
-							NOT = {
-								government_rank = 2
-								}
-							}
-						set_government_rank = 2
-					}
-					# Government Type Change
-					if = {
-						limit = {
-							NOT = {
-								government = republic
-								}
-							}
-						change_government = republic
-					}																		
-				}
-				# Custom Ideas check and change		
-				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = SPI_ideas }
-					}
-					country_event = { id = ideagroups.1 }
-				}
-				# Custom Missions check and change
-				country_event = { id = dec1_events.3 }
-				custom_tooltip = dec1_decisions_blank
-				# National Ability
-				add_country_modifier = {
-					name = dec1_kingdom_of_italy
-					duration = 49275
-				}				
-				# Increased Centralization
-				add_country_modifier = {
-					name = dec1_increased_centralization
-					duration = -1
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
 
 }

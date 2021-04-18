@@ -11,6 +11,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
+				senior_union_with = ARA # Does not show if Castile gains union over Aragon, instead Union decision shows
 				has_country_flag = formed_spanish_nation_flag
 				exists = SPA
 				tag = SPA
@@ -29,7 +30,7 @@ country_decisions = {
 			OR = {
 				culture_group = iberian
 				primary_culture = basque
-			}			
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -144,8 +145,8 @@ country_decisions = {
 			set_country_flag = formed_spanish_nation_flag # Country Formation Flag
 			custom_tooltip = form_spain_tt_2 # New Missions
 			custom_tooltip = form_spain_tt_3 # Claims
-			custom_tooltip = dec1_decisions_blank	
-			SPA = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			SPA = { # Capital change and bonuses
 				set_capital = 219 # Toledo
 				219 = {
 					add_base_tax = 1
@@ -153,7 +154,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -161,26 +162,26 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					iberia_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = SPA
-					}				
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -197,9 +198,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -214,13 +215,217 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_castilian_heritage
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	######################################
+	# Spanish Nation - Union with Aragon #
+	######################################
+
+	spanish_nation_castile_wedding = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			senior_union_with = ARA # show if Castile gains union over Aragon
+			NOT = {
+				has_country_flag = formed_spanish_nation_flag
+				exists = SPA
+				tag = SPA
+				tag = PAP
+				tag = FRA
+				tag = KNI
+				tag = GRA
+				tag = ADU
+				tag = IBE
+				tag = EUR
+				tag = FIB
+				tag = LSE
+				tag = BSQ
+				tag = ROP
+			}
+			OR = {
+				culture_group = iberian
+				primary_culture = basque
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 6
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+					# Toledo
+				province_id = 219
+				province_id = 2751
+				province_id = 2754
+				province_id = 4547
+				province_id = 221
+					# Lower Andalucia
+				province_id = 1748
+				province_id = 225
+				province_id = 224
+				province_id = 4548
+				province_id = 1749
+					# Leon
+				province_id = 218
+				province_id = 1747
+				province_id = 216
+				province_id = 4553
+				province_id = 208
+					# Castille
+				province_id = 215
+				province_id = 4551
+				province_id = 217
+				province_id = 2755
+					# Asturias
+				province_id = 4552
+				province_id = 1746
+				province_id = 1745
+				province_id = 207
+					# Galicia
+				province_id = 4558
+				province_id = 4554
+				province_id = 4555
+				province_id = 206
+					# Grenada
+				province_id = 226
+				province_id = 4546
+				province_id = 223
+				province_id = 222
+					# Vasconia
+				province_id = 210
+				province_id = 209
+				province_id = 2989
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			NOT = { exists = SPA }
+			is_subject = no
+			is_at_war = no
+			CAS = { # Union with Aragon
+				AND = {
+					owns_core_province = 219
+					senior_union_with = ARA
+					ARA = {
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = CAS
+							years = 30 # Only needs 30 years
+						}
+						NOT = { liberty_desire = 25 }
+					}
+				}
+			}
+		}
+		effect = {
+			change_tag = SPA # Country TAG
+			set_country_flag = formed_spanish_nation_flag # Country Formation Flag
+			custom_tooltip = form_spain_tt_2 # New Missions
+			custom_tooltip = form_spain_tt_3 # Claims
+			inherit = ARA
+			add_casus_belli = {
+				target = POR
+				type = cb_restore_personal_union
+				months = 24
+			}
+			custom_tooltip = dec1_decisions_blank
+			SPA = { # Capital change and bonuses
+				set_capital = 219 # Toledo
+				219 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_2
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Region/Area Claims
+					iberia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = SPA
+					}
+					# Government Rank change
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 2
+								}
+							}
+						set_government_rank = 2
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = SPA_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_castilian_heritage
+					duration = 49275
+				}
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1

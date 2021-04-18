@@ -6,19 +6,16 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			culture_group = altaic
+			NOT = {
 				has_country_flag = formed_yuan_flag
-				exists = YUA 
+				exists = YUA
 				tag = YUA
 				tag = MUG
 				tag = QNG
 				tag = MNG
 				tag = MCH
 				tag = TIE
-			}
-			OR = {
-				culture_group = altaic
-				culture_group = tibetan
 			}
 			OR = {
 				ai = no

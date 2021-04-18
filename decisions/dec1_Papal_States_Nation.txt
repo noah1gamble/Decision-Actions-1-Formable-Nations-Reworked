@@ -20,9 +20,10 @@ country_decisions = {
 			is_colonial_nation = no
 			technology_group = western
 			dominant_religion = catholic
-			owns = 118
-			# Add capital instead of Rome, and make it so any catholic can do this if pope dies
+			papacy_active = yes
+			owns = 118 # Add capital instead of Rome, and make it so any catholic can do this if pope dies
 			NOT = {
+				has_country_flag = gods_kingdom
 				exists = ITA
 				exists = PAP
 				tag = ITA
@@ -34,6 +35,7 @@ country_decisions = {
 				tag = ROM
 				tag = EUR
 				tag = ROP
+				tag = KOG
 			}
 			OR = {
 				ai = no
@@ -84,8 +86,8 @@ country_decisions = {
 			custom_tooltip = restore_papal_states_tt_2 # New Missions
 			custom_tooltip = restore_papal_states_tt_3 # Region/Area Claims	
 			custom_tooltip = restore_papal_states_tt_4 # You are becoming the popeman
-			custom_tooltip = restore_papal_states_tt_5 # All italians gain papal influence	
-			PAP = { # Capital change and bonuses				
+			custom_tooltip = restore_papal_states_tt_5 # All italians gain papal influence
+			PAP = { # Capital change and bonuses
 				set_capital = 118 # Roma
 				118 = {
 					add_base_tax = 3
@@ -93,7 +95,7 @@ country_decisions = {
 					add_base_manpower = 3
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -101,8 +103,8 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_theocracy # Government Type Change
-				}				
-				add_government_reform = papacy_reform						
+				}
+				add_government_reform = papacy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -110,7 +112,7 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					italy_region = {
@@ -118,8 +120,8 @@ country_decisions = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PAP
-					}	
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -137,15 +139,9 @@ country_decisions = {
 							}
 						change_government = theocracy
 					}
-					every_country = {
-						limit = {
-							region = italy_region
-							NOT = { owned_by = ROOT }
-						}
-						add_papal_influence = 25
-					}																						
+					# TODO: every country in italy gains 25 papal influence
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no

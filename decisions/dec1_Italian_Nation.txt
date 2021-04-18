@@ -9,6 +9,7 @@ country_decisions = {
 			culture_group = latin
 			NOT = {
 				has_country_flag = formed_italian_nation_flag
+				government = republic
 				exists = ITA
 				tag = PAP
 				tag = ITA
@@ -21,6 +22,7 @@ country_decisions = {
 				tag = EUR
 				tag = ADR
 				tag = ROP
+				tag = KOG
 			}
 		}
 		provinces_to_highlight = {

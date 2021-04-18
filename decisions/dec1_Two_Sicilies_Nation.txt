@@ -10,10 +10,12 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_two_sicilies_nation_flag
-				tag = PAP 
+				government = republic
+				exists = TTS
 				tag = TTS
+				tag = PAP
 				tag = HLR
 				tag = ITA
 				tag = IMA
@@ -22,6 +24,7 @@ country_decisions = {
 				tag = EUR
 				tag = ADR
 				tag = ROP
+				tag = TUS
 			}
 			OR = {
 				primary_culture = sicilian
@@ -42,26 +45,26 @@ country_decisions = {
 				province_id = 2982
 				province_id = 125
 				province_id = 126
+				province_id = 4736
+				province_id = 4737
 					# Calabria
 				province_id = 123
 				province_id = 2984
 				province_id = 1934
 					# Naples (NO Rome)
-				province_id = 2983 
+				province_id = 2983
 				province_id = 121
 					# Apulia
 				province_id = 122
 				province_id = 1933
-				province_id = 2985 
+				province_id = 2985
 					# Central Italy
 				province_id = 120
-					# Sicily
-				province_id = 124
-				province_id = 2982
-				province_id = 125
 			}
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }			
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			adm_tech = 10
@@ -74,31 +77,30 @@ country_decisions = {
 				owns_core_province = 2982
 				owns_core_province = 125
 				owns_core_province = 126
+				owns_core_province = 4736
+				owns_core_province = 4737
 					# Calabria
 				owns_core_province = 123
 				owns_core_province = 2984
 				owns_core_province = 1934
 					# Naples (No Roma)
-				owns_core_province = 2983 
+				owns_core_province = 2983
 				owns_core_province = 121
 					# Apulia
 				owns_core_province = 122
 				owns_core_province = 1933
-				owns_core_province = 2985 
+				owns_core_province = 2985
 					# Central Italy
 				owns_core_province = 120
-					# Sicily
-				owns_core_province = 124
-				owns_core_province = 2982
-				owns_core_province = 125				
 			}
 		}
 	 	effect = {
 			change_tag = TTS # Country TAG
 			set_country_flag = formed_two_sicilies_nation_flag # Country Formation Flag
 			custom_tooltip = form_two_sicilies_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank	
-			TTS = { # Capital change and bonuses				
+			custom_tooltip = form_two_sicilies_tt_3 # Claims
+			custom_tooltip = dec1_decisions_blank
+			TTS = { # Capital change and bonuses
 				set_capital = 121 # Napoli
 				121 = {
 					add_base_tax = 1
@@ -106,7 +108,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -114,26 +116,26 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank	
+				custom_tooltip = dec1_decisions_blank
 				# Claims
 				italy_region = {
 					limit = {
 						NOT = { owned_by = ROOT }
 					}
 					add_permanent_claim = TTS
-				}			
+				}
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
-					# Government Rank change				
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -150,9 +152,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -166,13 +168,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_italian_spirit
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -184,7 +186,7 @@ country_decisions = {
 	# Two Sicilies - Unique Naples Formation + Event Chain #
 	########################################################
 
-	# For when naples breaks free from spain - can gain roma? 
+	# For when naples breaks free from spain - can gain roma?
 	# Unique events for when they break free
-	
+
 }

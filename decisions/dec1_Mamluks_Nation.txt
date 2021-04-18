@@ -7,7 +7,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			has_reform = iqta
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_mamluks
 				has_reform = celestial_empire
 				exists = MAM
@@ -26,7 +26,7 @@ country_decisions = {
 					region = maghreb_region
 					region = horn_of_africa_region
 				}
-			}			
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -55,14 +55,20 @@ country_decisions = {
 			is_nomad = no
 			is_subject = no
 			is_free_or_tributary_trigger = no
-			region = egypt_region
-			region = arabia_region
+			egypt_region = {
+				type = all
+				owned_by = ROOT
+			}
+			arabia_region = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			change_tag = MAM # Country TAG
 			set_country_flag = formed_mamluks # Country Formation Flag
 			custom_tooltip = form_mamluks_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank				
+			custom_tooltip = dec1_decisions_blank
 			MAM = { # Capital change and bonuses
 				set_capital = 361 # Cairo
 				361 = {
@@ -70,7 +76,7 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -78,9 +84,9 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}			
+				}
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank											
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {

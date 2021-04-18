@@ -208,12 +208,6 @@ country_decisions = {
 				}	
 				hidden_effect = { # Hidden Effects to fix bad tooltips	
 					# Claims
-					pomerelia_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = PRU
-					}					
 					west_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }

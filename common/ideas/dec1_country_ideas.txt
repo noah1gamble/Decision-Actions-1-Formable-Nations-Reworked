@@ -1446,55 +1446,8 @@ EUR_ideas = {
 	}
 }
 
-# Empire of Japan
-JAE_ideas = { 
-	start = {
-		governing_capacity_modifier = 0.1
-		diplomatic_reputation = 1
-	}
-
-	bonus = {
-		land_forcelimit_modifier = 0.10
-	}
-
-	trigger = {
-		tag = JAE
-	}
-	free = yes	# will be added at load.
-
-	JAE_dissolution_of_the_shogunate = {
-		legitimacy = 1
-	}
-
-	JAE_meiji_restoration = {
-		technology_cost = -0.06
-		embracement_cost = -0.06
-	}
-
-	JAE_imperial_policy = {
-		all_power_cost = -0.1
-	}
-
-	JAE_war_torn_country = {
-		army_tradition_from_battle = 0.05
-	}
-
-	JAE_united_armies_of_japan = {
-		global_manpower_modifier = 0.10
-		army_tradition_decay = -0.01
-	}
-
-	JAE_protect_isolation_policies = {
-		administrative_efficiency = 0.2
-	}
-
-	JAE_the_japanese_navy = {
-		global_ship_cost = -0.1
-	}
-}
-
 # Franco-Iberia
-FIB_ideas = { 
+FIB_ideas = {
 	start = {
 		army_tradition_decay = -0.01
 		global_tax_modifier = 0.10
@@ -1544,7 +1497,7 @@ FIB_ideas = {
 }
 
 # Franconia
-FRC_ideas = { 
+FRC_ideas = {
 	start = {
 		rebel_support_efficiency = 0.35
 		religious_unity = 0.20
@@ -2105,8 +2058,8 @@ JAE_ideas = {
 	}
 
 	bonus = {
-		discipline = 0.01
-		land_morale = 0.05
+		discipline = 0.10
+		land_morale = 0.10
 	}
 
 	trigger = {
@@ -2133,7 +2086,7 @@ JAE_ideas = {
 	}
 
 	JAE_united_armies_of_japan = {
-		army_tradition_decay = -0.5
+		army_tradition_decay = -0.05
 	}
 
 	JAE_protect_isolation_policies = {
@@ -2580,7 +2533,7 @@ NSE_ideas = {
 	}
 
 	bonus = {
-		admiral_skill_gain_modifier = 0.2
+		global_ship_cost = -0.1
 	}
 
 	trigger = {

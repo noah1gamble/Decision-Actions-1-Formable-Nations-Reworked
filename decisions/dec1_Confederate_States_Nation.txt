@@ -10,6 +10,7 @@ country_decisions = {
 			NOT = {
 				has_country_flag = changed_from_colonial_nation
 				tag = CSA
+				tag = USA
 				tag = HLR
 				tag = PAP
 			 }
@@ -17,9 +18,10 @@ country_decisions = {
 				colonial_region = colonial_eastern_america
 				is_core = ROOT
 			}
-			NOT = {
-				OR = {
-					technology_group = north_american
+			OR = {
+				technology_group = north_american
+				technology_group = high_american
+				NOT = {
 					technology_group = mesoamerican
 					technology_group = andean
 					technology_group = high_american
@@ -42,11 +44,11 @@ country_decisions = {
 			trade_goods = cotton
 			NOT = { owned_by = ROOT }
 			NOT = { is_core = ROOT }
-		}		
+		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = CSA }
-			is_at_war = no	
+			is_at_war = no
 			ROOT = {
 				southeast_america_region = {
 					trade_goods = cotton
@@ -71,7 +73,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -80,7 +82,7 @@ country_decisions = {
 					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}
 				# Reform Change
-				add_government_reform = oligarchy_reform
+				add_government_reform = confederate_state_congress_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -103,10 +105,10 @@ country_decisions = {
 					if = {
 						limit = {
 							NOT = {
-								government = republic
+								government = confederacy_government
 								}
 							}
-						change_government = republic
+						change_government = confederacy_government
 					}
 				}
 				# Custom Ideas check and change
@@ -122,6 +124,7 @@ country_decisions = {
 				# National Ability
 				add_country_modifier = {
 					name = dec1_slave_income
+					duration = -1 # Unique (unlimited)
 				}
 				# Increased Centralization
 				add_country_modifier = {

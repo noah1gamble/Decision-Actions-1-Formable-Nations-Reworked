@@ -1,92 +1,93 @@
-######################################################################
-# Republican Rebels for the Neapolitan Republican Uprising
-######################################################################
-#Should never spawn except via event. Copied from revolutionaries, with changes for special circumstances
-confederate_loyalists_rebels = {
 
-	color = { 50 85 210 }
+	#########################
+	# Confederate Loyalists #
+	#########################
 
-	area = nation 					# Stays within the nation
-	government = republic
-	defection = none				# Does not defect
-	independence = none				# Does not strive for independence
-	unit_transfer = yes
-	gfx_type = culture_province
-	will_relocate = yes
+	dec1_confederate_loyalists_rebels = {
 
-	resilient = yes
-	reinforcing = yes
-	general = yes
-	smart = yes
+		color = { 50 85 210 }
 
-	artillery = 0.2
-	infantry = 0.8
-	cavalry = 0
+		area = nation 					# Stays within the nation
+		government = republic
+		defection = none				# Does not defect
+		independence = none				# Does not strive for independence
+		unit_transfer = yes
+		gfx_type = culture_province
+		will_relocate = yes
 
-	morale = 2.0
+		resilient = yes
+		reinforcing = yes
+		general = yes
+		smart = yes
 
-	# Possible handle actions
-	handle_action_negotiate = no
-	handle_action_stability = no
-	handle_action_build_core = no
-	handle_action_send_missionary = no
+		artillery = 0.2
+		infantry = 0.8
+		cavalry = 0
 
-	# The rebel type with the highest modifier for this province gets picked
-	spawn_chance = {
-		factor = 0
-	}
+		morale = 2.0
 
- 	# This is checked for EACH province in the Area of Operations
-	movement_evaluation = {
-		factor = 1
-		modifier = {
-			factor = 0.1
-			units_in_province = 1
+		# Possible handle actions
+		handle_action_negotiate = no
+		handle_action_stability = no
+		handle_action_build_core = no
+		handle_action_send_missionary = no
+
+		# The rebel type with the highest modifier for this province gets picked
+		spawn_chance = {
+			factor = 0
 		}
-		modifier = {
-			factor = 0.001
-			controlled_by = REB
-		}
-		modifier = {
-			factor = 10
-			is_capital = yes
-		}
-		modifier = {
-			factor = 1.5
-			unrest = 2
-		}
-		modifier = {
-			factor = 1.5
-			unrest = 4
-		}
-		modifier = {
-			factor = 1.5
-			unrest = 6
-		}
-	}
- 
- 	# Province Scope
- 	siege_won_trigger = {
- 	}
-	siege_won_effect = {
-		# USA event, province falls to Confederates (CSA gets event, allowing them to gain a core, or create a vassal)
-	}
 
-	# Country scope
-	can_negotiate_trigger = {
-		always = no
-	}
+		# This is checked for EACH province in the Area of Operations
+		movement_evaluation = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				units_in_province = 1
+			}
+			modifier = {
+				factor = 0.001
+				controlled_by = REB
+			}
+			modifier = {
+				factor = 10
+				is_capital = yes
+			}
+			modifier = {
+				factor = 1.5
+				unrest = 2
+			}
+			modifier = {
+				factor = 1.5
+				unrest = 4
+			}
+			modifier = {
+				factor = 1.5
+				unrest = 6
+			}
+		}
+	
+		# Province Scope
+		siege_won_trigger = {
+		}
+		siege_won_effect = {
+			# USA event, province falls to Confederates (CSA gets event, allowing them to gain a core, or create a vassal)
+		}
 
-	# Country scope
-	can_enforce_trigger = {
-		always = no
-	}
+		# Country scope
+		can_negotiate_trigger = {
+			always = no
+		}
 
-	# Localisation for their demands
-	demands_description = "dec1_weaken_the_united_states"
+		# Country scope
+		can_enforce_trigger = {
+			always = no
+		}
 
-	# Country Scope	
-	demands_enforced_effect = {
-		# Confederate Loyalists cannot enforce demands, and simply hope to continue to spread allowing USA to fall to CSA
+		# Localisation for their demands
+		demands_description = "dec1_weaken_the_united_states"
+
+		# Country Scope	
+		demands_enforced_effect = {
+			# Confederate Loyalists cannot enforce demands, and simply hope to continue to spread allowing USA to fall to CSA
+		}
 	}
-}

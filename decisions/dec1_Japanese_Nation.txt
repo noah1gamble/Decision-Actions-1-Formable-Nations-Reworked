@@ -6,12 +6,12 @@ country_decisions = {
 
 	japanese_nation_shogun_diplomatic = {
 		major = yes
-		potential = {			
+		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no		
+			is_colonial_nation = no
 			has_reform = shogunate
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_japanese_nation_flag # for general formation - will be added later
 				has_country_flag = formed_japanese_nation_flag_shogun
 				has_country_flag = formed_japanese_nation_flag_daimyo
@@ -127,7 +127,7 @@ country_decisions = {
 		}
 		ai_importance = 400		
 	}
-	
+
 	#####################################################
 	# Unite Japan as the ruling shogun through conquest #
 	#####################################################
@@ -163,11 +163,11 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			NOT = { exists = JAP }
 			is_at_war = no
-			japan_region = { # Must own provinces in Japan for formation to count
+			japan_region = { # Must own 10 provinces in Japan
 				ROOT = {
 					num_of_cities = 10
 				}
@@ -176,8 +176,14 @@ country_decisions = {
 			owns = 1028
 			custom_trigger_tooltip = {
 				tooltip = form_japan_tt_6 # Core Japanese areas
-				area = kinai_area
-				area = hokuriku_area
+				kinai_area = {
+					type = all
+					owned_by = ROOT
+				}
+				hokuriku_area = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 		}
 		effect = {
@@ -332,8 +338,14 @@ country_decisions = {
 			owns = 1028 # Mushashi
 			custom_trigger_tooltip = {
 				tooltip = form_japan_tt_6 # Core Japanese areas
-				area = hokuriku_area
-				area = chubu_area
+				hokuriku_area = {
+					type = all
+					owned_by = ROOT
+				}
+				chubu_area = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 		}
 		effect = {
@@ -419,5 +431,4 @@ country_decisions = {
 		ai_importance = 400	
 	}
 
-	
 }

@@ -33,7 +33,7 @@ country_decisions = {
 				area = beieras_area
 				area = alentejo_area
 				province_id = 1749
-				province_id = 17440
+				province_id = 1744
 					# Various colonies
 				province_id = 1751
 				province_id = 334

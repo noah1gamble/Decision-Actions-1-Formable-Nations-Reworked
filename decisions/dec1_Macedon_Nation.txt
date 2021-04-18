@@ -35,11 +35,10 @@ country_decisions = {
 				province_id = 148
 				province_id = 1853
 				province_id = 3001
-				num_of_owned_provinces_with = {
-					value = 8
-					region = balkan_region
-					is_core = root
-				}				
+				balkan_region = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -112,15 +111,15 @@ country_decisions = {
 				}				
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# hidden culture change
 					if = {
 						limit = {
@@ -135,10 +134,8 @@ country_decisions = {
 								NOT = { culture = greek }
 							}
 						}
-						every_owned_province = {
-							change_primary_culture = greek
-						}
-					}				
+						change_primary_culture = greek
+					}
 					# Region/Area Claims
 					balkan_region = {
 						limit = {
@@ -146,7 +143,7 @@ country_decisions = {
 						}
 						add_permanent_claim = MAC
 					}
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {

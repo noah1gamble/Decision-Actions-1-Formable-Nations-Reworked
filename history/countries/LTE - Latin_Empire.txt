@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 3
+primary_culture = greek
+religion = catholic
+technology_group = eastern
+historical_rival = BYZ
+historical_rival = VEN
+historical_rival = RUM
+capital = 151 # Constantinople

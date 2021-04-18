@@ -33,14 +33,19 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				region = japan_region
+				region = korea_region
+				region = manchuria_region
+				area = hebei_area
+				area = taiwan_area
+				province_id = 1235
 			}
 			AND = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}			
+		}
 		allow = {
-			adm_tech = 15
+			adm_tech = 20
 			NOT = { exists = JAE }
 			is_subject = no
 			is_at_war = no
@@ -48,6 +53,23 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
+			korea_region = {
+				type = all
+				owned_by = ROOT
+			}
+			manchuria_region = {
+				type = all
+				owned_by = ROOT
+			}
+			hebei_area = {
+				type = all
+				owned_by = ROOT
+			}
+			taiwan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 1235
 		}
 		effect = {
 			change_tag = JAE # Country TAG
@@ -69,20 +91,20 @@ country_decisions = {
 				name = "Taisho"
 				dynasty = "Yamato"
 				claim = 100
-				adm = 3
+				adm = 2
 				dip = 3
-				mil = 4
+				mil = 2
 				age = 1
-			}				
-			custom_tooltip = dec1_decisions_blank	
-			JAE = {			
+			}
+			custom_tooltip = dec1_decisions_blank
+			JAE = {
 				set_capital = 1020 # Kyoto
 				1020 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -90,32 +112,26 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
-					korea_region = {
+					moluccas_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ERO
+						add_permanent_claim = JAE
 					}
-					manchuria_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = ERO
-					}												
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -132,9 +148,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -149,13 +165,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_the_meiji_era
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1

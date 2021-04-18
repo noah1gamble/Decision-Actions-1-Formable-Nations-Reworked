@@ -5,8 +5,8 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_benelux_nation_flag
 				exists = BNL
 				tag = PAP
@@ -18,7 +18,7 @@ country_decisions = {
 				tag = IBE
 				tag = BEL
 				tag = FRL
-			}			
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -31,7 +31,6 @@ country_decisions = {
 				primary_culture = dutch
 				primary_culture = flemish
 				primary_culture = wallonian
-				primary_culture = belgian
 			}
 		}
 		provinces_to_highlight = {

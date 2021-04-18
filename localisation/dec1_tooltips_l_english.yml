@@ -275,18 +275,11 @@
  form_french_empire_tt_3: "Country gains a claim on historical §YFrench Empire§! cores."
 
  form_china_tt_2: "Country obtains §YChina§! missions."
- form_china_tt_3: "Country gains a permanent claim on §YNorth China§! region."
- form_china_tt_4: "Country gains a permanent claim on §YSouth China§! region."
- form_china_tt_5: "Country gains a permanent claim on §YXinan§! region."
- form_china_tt_6: "Country gains a permanent claim on §YTibet§! region."
+ form_china_tt_3: "Country gains a permanent claim on §YTibet§! region."
 
- form_china_PRC_tt_2: "Country obtains §YPeople's Republic of China§! missions."
- form_china_PRC_tt_3: "Country gains a permanent claim on §YNorth China§! region."
- form_china_PRC_tt_4: "Country gains a permanent claim on §YSouth China§! region."
- form_china_PRC_tt_5: "Country gains a permanent claim on §YXinan§! region."
- form_china_PRC_tt_6: "Country gains a permanent claim on §YTibet§! region."
- dec1_hardline_communists_tt: "Has the §YHardline Communists§! Faction"
- dec1_democratic_socialists_tt: "Has the §YDemocratic Socialists§! Faction"
+ form_china_prc_tt_2: "Country obtains §YPeople's Republic of China§! missions."
+ form_china_prc_tt_3: "Country gains a permanent claim on §YXinan§! region."
+ form_china_PRC_tt_4: "Country gains a permanent claim on §YTibet§! region."
 
  form_yuan_tt_2: "Country obtains §YGreat Yuan§! missions."
  form_yuan_tt_3: "Country gains a permanent claim on §YChina Super-region§!."
@@ -326,7 +319,6 @@
 
  form_kingdom_of_god_tt_2: "Country obtains §YKingdom of God§! missions."
  dec1_kingdom_of_god_claims: "The §YPapal State§! gains a permanent claim on all not owned provinces of the §YItalian§! region."
- dec1_kingdom_of_god_warning: "§RThis will disable the Papacy!§!"
  dec1_declared_the_kingdom_of_god: "Declared the Kingdom of God on Earth"
 
  form_iceland_tt_2: "Country obtains §YIceland§! missions."
@@ -363,8 +355,7 @@
  form_anglo_dutch_union_tt_4: "Country gains a permanent claim on §YLow Countries§! region."
 
  form_empire_of_japan_tt_2: "Country obtains §YEmpire of Japan§! missions."
- form_empire_of_japan_tt_3: "Country gains a permanent claim on §YKorea§! region."
- form_empire_of_japan_tt_4: "Country gains a permanent claim on §YManchuria§! region."
+ form_empire_of_japan_tt_3: "Country gains a permanent claim on §YMoluccas§! region."
 
  form_kievan_rus_tt_2: "Country obtains §YKievan Rus§! missions."
 
@@ -474,6 +465,9 @@
  form_tuscany_tt_2: "Country obtains §YTuscany§! missions."
  form_tuscany_tt_3: "Country gains a permanent claim on all provinces with §YTuscan§! culture."
 
+ form_two_sicilies_tt_2: "Country obtains §YTwo Sicilies§! missions."
+ form_two_sicilies_tt_3: "Country gains a permanent claim on §YItaly§! region."
+
  ############################
  # COLONIAL NATION TOOLTIPS #
  ############################
@@ -575,6 +569,10 @@
  form_timurids_tt_4: "Country gains a permanent claim on §YPersia§! region."
 
  form_yemen_tt_2: "Country obtains §YYemen§! missions."
+
+ form_tibet_tt_2: "Country obtains §YTibet§! missions."
+ form_tibet_tt_2: "Country gains a permanent claim on §Tibet§! region."
+ form_tibet_tt_2: "Country gains a permanent claim on §Shanshan§! area."
 
  #######################
  # UNIQUE LOCALISATION #

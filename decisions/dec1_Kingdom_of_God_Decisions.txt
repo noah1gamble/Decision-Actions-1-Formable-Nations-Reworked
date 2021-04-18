@@ -1,0 +1,59 @@
+country_decisions = {
+
+	#############################################################################################
+	# Gods Kingdom - Pope Disables the Papacy after conquering Italy and forming Kingdom of God #
+	#############################################################################################
+
+	gods_kingdom = {
+		major = yes
+		potential = {
+			technology_group = western
+			religion_group = christian
+			owns_core_province = 118
+			tag = PAP
+			NOT = { has_country_flag = gods_kingdom }
+			OR = { # AI pope wants Kingdom of God
+				ai = no
+				tag = PAP
+				AND = {
+					ai = yes
+					tag = PAP
+				}
+			}
+		}
+		allow = {
+			# Ecclesiastical provinces of Northern Italy
+			owns_core_province = 101	# Genoa
+			owns_core_province = 103	# Torino
+			owns_core_province = 104	# Milano
+			owns_core_province = 106	# Modena
+			owns_core_province = 110	# Trento
+			owns_core_province = 111	# Udine / Aquileia
+			owns_core_province = 112	# Venice
+			owns_core_province = 114	# Bologna + Ravenna
+			owns_core_province = 116	# Firenze
+			owns_core_province = 115	# Pisa
+			owns_core_province = 119	# Ancona + Fermo
+			owns_core_province = 2976	# Perugia
+			owns_core_province = 2977	# Pesaro
+		}
+		effect = {
+			set_country_flag = gods_kingdom
+			country_event  = { id = catholic_flavor.2 } # Disables the Papacy
+			custom_tooltip = dec1_kingdom_of_god_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						region = italy_region
+						NOT = { owned_by = PAP }
+					}
+					add_permanent_claim = PAP
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

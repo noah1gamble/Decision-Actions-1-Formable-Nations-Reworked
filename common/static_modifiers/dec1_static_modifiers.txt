@@ -16,6 +16,11 @@ dec1_anglois_icon = {
 	culture_conversion_cost = -0.10
 }
 
+dec1_british_parliament_british_naval_concessions = {
+	naval_tradition_from_trade = 0.1
+	global_ship_cost = -0.1
+}
+
 ######################
 # National Abilities #
 ######################
@@ -424,7 +429,7 @@ dec1_anglois_icon = {
 		# North Sea Empire
 
 	dec1_empire_of_trade = {
-		trade_power_in_fleet_modifier = 4 
+		light_ship_cost = -0.1
 	}
 
 		# Pontus

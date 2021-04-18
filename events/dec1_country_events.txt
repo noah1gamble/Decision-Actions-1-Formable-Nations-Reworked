@@ -1,4 +1,10 @@
-namespace = dec1_country_events
+# namespace = dec1_country_events
+
+	#################
+	# Dual Monarchy #
+	#################
+
+		#
 
 	#####################
 	# Lusitanian Empire #
@@ -11,4 +17,3 @@ namespace = dec1_country_events
 	#################################
 
 		#
-		

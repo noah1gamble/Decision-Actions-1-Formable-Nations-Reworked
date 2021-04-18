@@ -30,7 +30,5 @@ dec1_war_goal_american_civil_war = {
 		}
 	}
 
-	po_change_government = no
-	po_demand_provinces = no
 	war_name = dec1_american_civil_war
 }

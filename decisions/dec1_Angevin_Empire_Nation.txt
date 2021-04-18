@@ -323,7 +323,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			OR = {
-				primary_culture = francien
+				primary_culture = cosmopolitan_french
 				tag = FRA
 			}
 			NOT = {

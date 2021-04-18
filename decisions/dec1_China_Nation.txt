@@ -50,23 +50,10 @@ country_decisions = {
 			NOT = { is_core = ROOT }
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 15
 			NOT = { exists = CHN }
 			is_subject = no
 			is_at_war = no
-			if = { # DLC check for Mandate of Heaven
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					any_country = {
-						is_emperor_of_china = yes
-					}
-				}
-				#NOTE: could be reworked better non-DLC. 1000 dev is too high
-				is_emperor_of_china = yes
-				else = {
-					government_rank = 3 # need 1000 dev basically or event-empire rank somehow
-				}
-			}
 			owns_core_province = 1816 # Beijing
 			owns_core_province = 667 # Canton
 			owns_core_province = 679 # Chengdu
@@ -83,10 +70,6 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			tibet_region = {
-				type = all
-				owned_by = ROOT
-			}
 		}
 	 	effect = {
 			change_tag = CHN # Country TAG
@@ -94,9 +77,6 @@ country_decisions = {
 			custom_tooltip = form_china_tt_2 # New Missions
 			custom_tooltip = form_china_tt_3 # Claims
 			custom_tooltip = form_china_tt_4 # Claims
-			custom_tooltip = form_china_tt_5 # Claims
-			custom_tooltip = form_china_tt_6 # Claims
-			custom_tooltip = dec1_abolish_the_empire_of_china_mandate #  Abolish the Mandate of Heaven + Prestige for the previous Emperor of China country
 			custom_tooltip = dec1_decisions_blank
 			CHN = { # Capital change and bonuses
 				set_capital = 1816 # Beijing
@@ -125,10 +105,6 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Abolished the Mandate of Heaven
-					dismantle_empire_of_china = yes
-					# Mandate Abolishment reward (TODO: REWORK)
-					add_prestige = 100
 					# Government Rank change
 					if = {
 						limit = {
@@ -158,14 +134,9 @@ country_decisions = {
 				}
 				country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
-				# Abolished the Mandate of Heaven debuff
-				add_country_modifier = {
-					name = dec1_abolished_the_mandate_of_heaven
-					duration = 49275
-				}
 				# National Ability
 				add_country_modifier = {
-					name = dec1_foundation_chinese_communist_party
+					name = dec1_the_middle_kingdom
 					duration = 49275
 				}
 				# Increased Centralization

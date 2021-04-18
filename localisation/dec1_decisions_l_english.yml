@@ -281,7 +281,7 @@
     commonwealth_lithuania_nation_title: "@PLC Lithuanian-Polish Commonwealth"
     commonwealth_lithuania_nation_desc: "Replace the personal union between Poland and Lithuania with a real union, welding the two countries together into one powerful state, capable of withstanding our enemies."
 
-    form_great_yuan_nation_title: "@YUA Restore the Great Yuan"
+    form_great_yuan_nation_title: "@YUA Great Yuan"
     form_great_yuan_nation_desc: "The heirs of Kublai Khan once ruled over all Chinese and Mongol lands. Let us rise to reclaim the legacy of the old Yuan and crush the weaker lineages that have attempted to claim the Empire that is our Birthright!" 
 
     german_kingdom_nation_title: "@GER Restore the German Kingdom"
@@ -341,7 +341,7 @@
     persian_nation_title: "@PER The Persian Empire"
     persian_nation_desc: "At the mere age of 15, monarch has taken his father's position as head of the Shiite Turkmen tribe. He has quickly established a base of power in the northwest and proclaimed himself Shah of Iran. Several of the neighboring regions have been conquered and the possibility of a resurrected Iranian nation doesn't seem so absent anymore."
 
-    mughal_nation_title: "@MUG The Mughal Empire"
+    mughal_nation_title: "@MUG The Mughals"
     mughal_nation_desc: "$MONARCH$ has begun to lay the foundation of his new empire. Although inferior in numbers, his well-disciplined troops have managed to achieve several decisive victories against the Sultans of India. The battle of $CAPITAL$ became the first great victory in a series of territorial expansions and, with time, the empire of the Mughals could stretch over the larger part of the Indian plateau."
 
     greek_nation_title: "@GRE Kingdom of Greece"
@@ -406,9 +406,12 @@
 
     restore_ilkhanate_decision_title: "@ILK Restore the Ilkhanate"
     restore_ilkhanate_decision_desc: "As the Great Khan did long ago, we should delegate Persia to a subordinate Khan to ease the burden of ruling our vast empire."
-    
+
     restore_ilkhanate_decision_march_title: "@ILK Re-establish the Ilkhanate"
     restore_ilkhanate_decision_march_desc: "Following a hard-fought campaign, the [Root.Monarch.GetTitle] has called for a Kurultai at the recently conquered city of Soltanieh. An assembly of generals and lesser Khans gathers outside a most auspicious location; the Mausoleum of the Ilkhan Oljeitu.\n\nSpeaking before the Kurultai, [Root.Monarch.GetTitle] [Root.Monarch.GetName] raises the pressing question of how Iran is to be ruled; [Root.Monarch.GetSheHe] gestures toward the Mausoleum and boldly proposes that the Ilkhanate should be restored. Invoking the legacy of the great Mongol Empire and the conquests of Genghis Khan, [Root.Monarch.GetSheHe] makes a compelling case for the revival of the subordinate Khanate"
+
+    restore_mongol_empire_title: "@MGE The Mongol Empire"
+    restore_mongol_empire_desc: "The empire of Genghis Khan has fallen, broken into many parts. We must restore his legacy by replicating the Great Khan's conquests. We will reconquer the Mongol Empire!"
 
     irish_nation_title: "@IRE Declaration of Irish Independence"
     irish_nation_desc: "For decades England has attempted to subjugate the Irish population and take control of the island. To unite the Irish lands under a sole flag may be our only chance to repel them."
@@ -597,7 +600,7 @@
     orissa_nation_title: "@ORI Orissa"
     orissa_nation_desc: "With the heartlands of Orissa under our control it is time we claim our legacy as servitors of Jagannath and proclaim ourselves kings over the entire region!"
 
-    timurid_nation_title: "@TIM The Timurid Empire"
+    timurid_nation_title: "@TIM Restore the Timurid Empire"
     timurid_nation_desc: "As the descendant of Timur Lenk, the great conqueror of Iran, Transoxiana and Khorasan, it is our duty to reclaim his legacy. With the traditional Timurid Strongholds under our control we can at last proclaim ourselves the head of Timur's dynasty, and the leader of all of the Ghurkani princes."
 
     enthrone_timurid_prince_title: "@TIM Enthrone Timurid Prince"
@@ -606,7 +609,5 @@
     yemen_nation_title: "@YEM Yemeni Restoration"
     yemen_nation_desc: "For too long the fertile lands of Yemen have suffered in the hands of incompetent dynasties intent only on plundering her treasures. We must unite these lands so that they can once again prosper under an able ruler."
 
- # Developer Tools
-
- dec1_test_code_title: "Code Tester"
- dec1_test_code_desc: "Written by Noah :D"
+    nepal_nation_title: "@NPL Unification of Nepal"
+    nepal_nation_desc: "While many of them have proud and ancient histories the Himalayan kingdoms are weak and divided. We must unite the entire mountain region under the rule of one kingdom. Together we will be an unstoppable force to the kings of Hindusthan. Content to live of their wealth they have squandered their riches for generations, and will be no match for our hardened armies."

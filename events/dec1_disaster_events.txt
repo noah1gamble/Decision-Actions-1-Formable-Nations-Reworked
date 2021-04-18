@@ -10,23 +10,73 @@ namespace = dec1_disaster_events
 
 		# The Anglois Civil War
 
-		country_event = {
-			id = dec1_disaster_events.1
-			title = "dec1_disaster_events.1.t"
-			desc = "dec1_disaster_events.1.d"
-			picture = CIVIL_WAR_eventPicture
+			# Start Event
 
-			is_triggered_only = yes
+				country_event = {
+					id = dec1_disaster_events.1
+					title = "dec1_disaster_events.1.t"
+					desc = "dec1_disaster_events.1.d"
+					picture = CIVIL_WAR_eventPicture
 
-			option = { # Support the Anglois
-				name = "dec1_disaster_events.1.a"
-				ai_chance = { factor = 80 }
-			}
-			option = { # Support the British and French
-				name = "dec1_disaster_events.1.b"
-				ai_chance = { factor = 20 }
-			}
-		}
+					is_triggered_only = yes
+
+					option = { # Support the Anglois
+						name = "dec1_disaster_events.1.a"
+						ai_chance = { factor = 60 }
+						# Random owned provinces spawn anglois rebels
+						random_owned_province = {
+							limit = { region = france_region }
+							dec1_anglois_rebels = 2
+						}
+						random_owned_province = {
+							limit = { region = british_isles_region }
+							dec1_anglois_rebels = 2
+						}
+						# A few provinces become anglois
+						random_owned_province = {
+							limit = { region = british_isles_region }
+							change_culture = anglois
+						}
+						random_owned_province = {
+							limit = { region = british_isles_region }
+							change_culture = anglois
+						}
+						random_owned_province = {
+							limit = { region = france_region }
+							change_culture = anglois
+						}
+						# French and British parliament influence increase
+						add_faction_influence = {
+							faction = dec1_french_parliament
+							influence = 40
+						}
+						add_faction_influence = {
+							faction = dec1_british_parliament
+							influence = 40
+						}
+					}
+					option = { # Support the British and French
+						name = "dec1_disaster_events.1.b"
+						ai_chance = { factor = 40 }
+						# british and french factions influence lowered
+						add_faction_influence = {
+							faction = dec1_french_parliament
+							influence = -20
+						}
+						add_faction_influence = {
+							faction = dec1_british_parliament
+							influence = -20
+						}
+					}
+				}
+
+			# Random Event - French revolt against the Dual Monarchy
+
+			# Random Event - British revolt against the Dual Monarchy
+
+			# Random Event - Revolt of Paris which leads to Treaty of Brittany (Adds two new estates called French Nobility and British Nobility)
+
+			# Random Event - French Nobility revolts against the crown (REQUIRES Treaty of Brittany)
 
 	############################
 	# United States of America #
@@ -34,98 +84,57 @@ namespace = dec1_disaster_events
 
 		# The American Civil War Start Event - USA
 
-		country_event = {
-			id = dec1_disaster_events_usa_civil_war.1
-			title = "dec1_disaster_events_usa_civil_war.1.t"
-			desc = "dec1_disaster_events_usa_civil_war.1.d"
-			picture = CIVIL_WAR_eventPicture
+			country_event = {
+				id = dec1_disaster_events.2
+				title = "dec1_disaster_events.2.t"
+				desc = "dec1_disaster_events.2.d"
+				picture = CIVIL_WAR_eventPicture
 
-			is_triggered_only = yes
+				is_triggered_only = yes
 
-			immediate = {
-				custom_tooltip = dec1_usa_american_civil_war_tt_2
-				hidden_effect = {
-					# CSA
-					CSA = {
-						# Balancing (will all be adjusted after the war)
-						add_years_of_income = 24 # Income to sustain the armed forces
-						add_prestige = 200 # max prestige
-						add_stability = 6 # max stability
-						add_treasury = 20000 # 20,000 ducats
-						add_manpower = 400 # 400,000 manpower
-						add_republican_tradition = 100 # republican tradition
-						add_absolutism = 100 # max absolutism
-						add_army_tradition = 100 # max army tradition
-						add_navy_tradition = 50 # half navy tradition
-						add_mercantilism = 50 # half mercantilism
-						# CSA army + CORES
-						every_owned_province = {
-							infantry = PREV
-							artillery = PREV
-							add_core = CSA
-						}
-						# CSA navy
-						random_owned_province = {
-							limit = {
-								region = mississippi_region
-								has_port = yes
+				immediate = {
+					hidden_effect = {
+						# Southeast America slaves + cede provinces
+						southeast_america_region = {
+							if = {
+								limit = {
+									NOT = {
+										area = great_valley_area
+										area = chesapeake_area
+									}
+								}
+								add_core = CSA
 							}
-							build_to_forcelimit = {
-								heavy_ship = 0.7
-								light_ship = 0.3
-								transport = 0
+							if = {
+								limit = {
+									trade_goods = cotton
+								}
+								change_trade_goods = slaves
 							}
 						}
-						# Forts along american border
-						2547 = {
-							add_building = fort_18th
+						# Mississippi slaves + cede provinces
+						mississippi_region = {
+							if = {
+								limit = {
+									NOT = {
+										area = upper_louisiana_area
+										area = appalachia_area
+									}
+								}
+								add_core = CSA
+							}
+							if = {
+								limit = {
+									trade_goods = cotton
+								}
+								change_trade_goods = slaves
+							}
 						}
-						2544 = {
-							add_building = fort_18th
-						}
-						2548 = {
-							add_building = fort_18th
-						}
-						940 = {
-							add_building = fort_18th
-						}
-						918 = {
-							add_building = fort_18th
-						}
-						920 = {
-							add_building = fort_18th
-						}
-						931 = {
-							add_building = fort_18th
-						}
-						2543 = {
-							add_building = fort_18th
-						}
-						924 = { add_building = fort_18th } # Capital Fort
-						# 3 Random Forts
-						random_owned_province = {
-							add_building = fort_18th
-						}
-						random_owned_province = {
-							add_building = fort_18th
-						}
-						random_owned_province = {
-							add_building = fort_18th
-						}
-						# Slave Prices
-						change_price = { # Massive increase in the value of slaves
-							trade_goods = slaves
-							key = dec1_american_slavery
-							value = 5.0
-							duration = -1
-						}
-						# CSA land discovery
-						north_america = { discover_country = CSA }
-						europe_superregion = { discover_country = CSA }
-						east_american_sea_superregion = { discover_country = CSA }
-						north_european_sea_superregion = { discover_country = CSA }
 					}
-					# USA
+				}
+
+				option = { # Rally the troops!
+					name = "dec1_disaster_events.2.a"
 					USA = {
 						# America moves the capital to Washington (Maryland)
 						set_capital = 953
@@ -134,19 +143,14 @@ namespace = dec1_disaster_events
 							rename_capital = "Washington, D.C."
 						}
 					}
-				}
-			}
-
-			option = { # Rally the troops!
-				name = "dec1_disaster_events_usa_civil_war.1.a"
-				USA = {
-					declare_war_with_cb = {
-						who = CSA
-						casus_belli = cb_american_civil_war
+					change_price = { # Massive increase in the value of slaves
+						trade_goods = slaves
+						key = dec1_american_slavery
+						value = 1.0
+						duration = -1
 					}
 				}
 			}
-		}
 
 	#################################
 	# Confederate States of America #
@@ -154,18 +158,29 @@ namespace = dec1_disaster_events
 
 		# The American Civil War Start Event - CSA
 
-		country_event = {
-			id = dec1_disaster_events_csa_civil_war.1
-			title = "dec1_disaster_events_csa_civil_war.1.t"
-			desc = "dec1_disaster_events_csa_civil_war.1.d"
-			picture = CIVIL_WAR_eventPicture
+			country_event = {
+				id = dec1_disaster_events.3
+				title = "dec1_disaster_events.3.t"
+				desc = "dec1_disaster_events.3.d"
+				picture = CIVIL_WAR_eventPicture
 
-			is_triggered_only = yes
+				is_triggered_only = yes
 
-			immediate = {
+				option = {
+					name = "disaster_events.3.a"
+					# CSA
+					set_capital = 924 # Capital
+					change_government = confederacy_government
+					add_government_reform = confederate_state_congress_reform
+					change_primary_culture = american
+					add_accepted_culture = american
+					change_religion = protestant
+					# Slave Prices
+					change_price = { # Massive increase in the value of slaves
+						trade_goods = slaves
+						key = dec1_american_slavery
+						value = 5.0
+						duration = -1
+					}
+				}
 			}
-
-			option = { # The Union will fall
-				name = "dec1_disaster_events_csa_civil_war.1.a"
-			}
-		}

@@ -1,13 +1,13 @@
 country_decisions = {
 
-	manchu_nation = {
+	manchu_nation = { # change from manchu cause eu4 is g a y
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			primary_culture = manchu		
-			NOT = { 
+			is_colonial_nation = no
+			primary_culture = manchu # jurchen
+			NOT = {
 				has_country_flag = formed_manchu_flag
 				exists = MCH
 				tag = MCH
@@ -16,7 +16,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 2
 				}
 			}
 		}
@@ -33,7 +33,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 5
-			NOT = { exists = MCH }			
+			NOT = { exists = MCH }
 			is_subject = no
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
@@ -46,7 +46,7 @@ country_decisions = {
 			set_country_flag = formed_manchu_flag # Country Formation Flag
 			custom_tooltip = form_manchu_tt_2 # New Missions
 			custom_tooltip = form_manchu_tt_3 # Claims
-			custom_tooltip = dec1_decisions_blank				
+			custom_tooltip = dec1_decisions_blank
 			MCH = { # Capital change and bonuses
 				set_capital = 730 # Girin
 				730 = {
@@ -54,7 +54,7 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -62,16 +62,16 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}			
+				}
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank											
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					country_event = { id = dec1_events.1 }	
-				}	
+					country_event = { id = dec1_events.1 }
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
 					ilan_hala_area = {
@@ -121,8 +121,8 @@ country_decisions = {
 							NOT = { is_core = ROOT }
 						}
 						add_permanent_claim = MCH
-					}				
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -141,7 +141,7 @@ country_decisions = {
 						change_government = monarchy
 					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -156,15 +156,15 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_manchu_banner_camps
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}			
+			}
 		}
-		ai_importance = 400		
+		ai_importance = 400
 	}
 
-} 
+}

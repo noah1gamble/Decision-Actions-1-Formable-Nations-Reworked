@@ -172,7 +172,7 @@ country_decisions = {
 				silesia_area = {
 					type = all
 					owned_by = ROOT
-				}	
+				}
 				lusatia_area = {
 					type = all
 					owned_by = ROOT
@@ -180,20 +180,20 @@ country_decisions = {
 				holstein_area = {
 					type = all
 					owned_by = ROOT
-				}	
+				}
 				mecklenburg_area = {
 					type = all
 					owned_by = ROOT
-				}																															
-			}				
+				}
+			}
 		}
 	 	effect = {
 			change_tag = PRU # Country TAG
 			set_country_flag = formed_prussia_nation_flag # Country Formation Flag
 			custom_tooltip = form_prussia_tt_2 # New Missions
 			custom_tooltip = form_prussia_tt_3 # Claims
-			custom_tooltip = dec1_decisions_blank	
-			PRU = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			PRU = { # Capital change and bonuses
 				set_capital = 41 # Konigsberg
 				41 = {
 					add_base_tax = 1
@@ -201,7 +201,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -209,38 +209,32 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					pomerelia_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = PRU
-					}					
 					west_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PRU
-					}	
+					}
 					east_prussia_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = PRU
-					}									
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {

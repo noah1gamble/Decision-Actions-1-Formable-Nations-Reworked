@@ -23,8 +23,8 @@
 		# Stay in the Empire
 		option = {
 			name = "dec1_events.1.a"
-			ai_chance = { 
-				factor = 60 
+			ai_chance = {
+				factor = 60
 			}
 			emperor = {	 # Emperor is told about loyalty to the empire, gains imperial authority
 				country_event = { id = dec1_events.2 }
@@ -34,16 +34,16 @@
 						modifier = stayed_in_the_empire
 					}
 				}
-			}		 
+			}
 		}
 		# Leave the Empire
 		option = {
 			name = "dec1_events.1.b"
-			ai_chance = { 
-				# TODO: 
+			ai_chance = {
+				# TODO:
 				# - Add any other important AI situations I missed
 				# - Fix AI weight factors, they are not correct
-				factor = 10 
+				factor = 10
 				modifier = { # is Rival to current Emperor will always leave
 					factor = 100
 					is_rival = emperor
@@ -56,7 +56,7 @@
 					factor = 80
 					tag = BRA # Brandenburg
 					tag = PRU # Prussia
-				}				
+				}
 				modifier = { # Specific TAGs that are more likely to leave
 					factor = 60
 					OR = {
@@ -64,11 +64,11 @@
 						tag = EPR # East Prussia
 						tag = BEL # Belgium
 					}
-				}							
+				}
 			}
 			add_prestige = -10
 			tooltip = { # Tooltip to show the player leaving the HRE
-				emperor = {	
+				emperor = {
 					country_event = { id = hre_event.5 }
 				}
 			}
@@ -78,7 +78,7 @@
 						has_country_flag = dec1_our_place_in_the_empire_duchy_rank
 					}
 					set_government_rank  = 1
-				}				
+				}
 				if = { # Government Rank Handler - Kingdom
 					limit = {
 						has_country_flag = dec1_our_place_in_the_empire_kingdom_rank
@@ -90,19 +90,19 @@
 						has_country_flag = dec1_our_place_in_the_empire_empire_rank
 					}
 					set_government_rank  = 3
-				}											
+				}
 				if = { # Remove Elector status
 					limit = {
 						is_elector = yes
 					}
 					elector = no
 					remove_non_electors_emperors_from_empire_effect = yes
-				}	
+				}
 				if = { # Emperor is told, loses imperial authority
 					limit = {
 						is_part_of_hre = yes
 					}
-					emperor = {	
+					emperor = {
 						country_event = { id = hre_event.5 }
 						add_opinion = {
 							who = root
@@ -120,8 +120,8 @@
 							is_part_of_hre = yes
 						}
 						set_in_empire = no
-					}		
-				}	
+					}
+				}
 			}
 		}
 	}

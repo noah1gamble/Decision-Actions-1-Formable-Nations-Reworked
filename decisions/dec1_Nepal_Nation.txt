@@ -6,9 +6,9 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_nepal_flag
-				exists = NPL				
+				exists = NPL
 				tag = NPL
 				tag = PAP
 				tag = HIN
@@ -27,10 +27,6 @@ country_decisions = {
 				AND = {
 					ai = yes
 					num_of_cities = 4
-				}
-				AND = {
-					ai = yes
-					is_year = 1700
 				}
 			}
 		}
@@ -64,7 +60,8 @@ country_decisions = {
 			change_tag = NPL # Country TAG
 			set_country_flag = formed_nepal_flag # Country Formation Flag
 			custom_tooltip = form_nepal_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank				
+			custom_tooltip = form_nepal_tt_2 # Claims
+			custom_tooltip = dec1_decisions_blank
 			NPL = { # Capital change and bonuses
 				set_capital = 557 # Nepal
 				557 = {
@@ -72,7 +69,7 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -80,19 +77,20 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}			
+				}
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank											
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					country_event = { id = dec1_events.1 }	
-				}	
+					country_event = { id = dec1_events.1 }
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					# Government Rank change				
+
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -111,7 +109,7 @@ country_decisions = {
 						change_government = monarchy
 					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -126,13 +124,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_dalai_lama_of_tibet
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}			
+			}
 		}
 		ai_will_do = {
 			factor = 1

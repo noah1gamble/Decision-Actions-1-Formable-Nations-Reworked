@@ -9,12 +9,12 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_lombardy_venetia_flag
 				exists = LVE
 				tag = LVE
-				tag = PAP 
+				tag = PAP
 				tag = HAB
 				tag = HLR
 				tag = ITA
@@ -25,12 +25,13 @@ country_decisions = {
 				tag = EUR
 				tag = ADR
 				tag = ROP
-			}	
+				tag = SPI
+			}
 			OR = {
 				primary_culture = venetian
 				primary_culture = lombard
 				primary_culture = romagnan
-			}				
+			}
 			OR = {
 				ai = no
 				AND = {

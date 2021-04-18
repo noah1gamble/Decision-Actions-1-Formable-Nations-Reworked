@@ -8,7 +8,7 @@
 			is_colonial_nation = no
 			NOT = {
 				has_country_flag = formed_adriatic_empire_nation_flag
-				has_reform = celestial_empire
+				government = republic
 				exists = ADR
 				tag = PAP
 				tag = ADR
@@ -22,14 +22,60 @@
 				tag = TTS
 				tag = YUG
 				tag = ROP
+				tag = KOG
+			}
+			AND = {
+				OR = { # Has Any Italian Culture
+					primary_culture = albanian
+					primary_culture = croatian
+					primary_culture = venetian
+					primary_culture = umbrian
+					primary_culture = romagnan
+					primary_culture = neapolitan
+				}
+				OR = { # Has any coastal province
+					# Venitia
+					owns = 112
+					owns = 1774
+					owns = 111
+						# Emilia-Romagna
+					owns = 113
+					owns = 114
+						# Central Italy
+					owns = 2977
+					owns = 119
+					owns = 120
+						# Apulia
+					owns = 2985
+					owns = 1933
+					owns = 122
+						# Carniola
+					owns = 4729
+					owns = 4733
+					owns = 4738
+					owns = 4752
+					owns = 130
+						# East Adriatic
+					owns = 1826
+					owns = 136
+					owns = 137
+						# Rascia
+					owns = 4754
+						# Albania
+					owns = 4174
+					owns = 4175
+					owns = 143
+						# Corfu
+					owns = 142
+					owns = 144
+				}
 			}
 			OR = {
-				primary_culture = albanian
-				primary_culture = croatian
-				primary_culture = venetian
-				primary_culture = umbrian
-				primary_culture = romagnan
-				primary_culture = neapolitan
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
 			}
 		}
 		provinces_to_highlight = {

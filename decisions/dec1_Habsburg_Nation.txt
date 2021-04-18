@@ -41,12 +41,11 @@ country_decisions = {
 		effect = {
 			change_tag = HAB # Country TAG
 			set_country_flag = formed_habsburg_nation_flag # Country Formation Flag
-			custom_tooltip = form_habsburg_tt_2 # New Missions
-			custom_tooltip = form_habsburg_tt_3 # Region/Area Claims
-			custom_tooltip = form_habsburg_tt_4 # Region/Area Claims
-			change_culture = austrian
-			custom_tooltip = dec1_decisions_blank	
-			HAB = { # Capital change and bonuses			
+			# custom_tooltip = form_habsburg_tt_2 # New Missions
+			# custom_tooltip = form_habsburg_tt_3 # Region/Area Claims
+			# custom_tooltip = form_habsburg_tt_4 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank
+			HAB = { # Capital change and bonuses
 				set_capital = 134 # Carthage
 				134 = {
 					rename_capital = "Vienna"
@@ -54,7 +53,7 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {

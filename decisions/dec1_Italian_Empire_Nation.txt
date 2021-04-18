@@ -13,6 +13,7 @@ country_decisions = {
 			culture_group = latin
 			NOT = {
 				has_country_flag = formed_italian_empire_nation_flag
+				government = republic
 				exists = ITE
 				tag = PAP
 				tag = ITE
@@ -26,10 +27,18 @@ country_decisions = {
 				tag = EUR
 				tag = ADR
 				tag = ROP
+				tag = KOG
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 30 # big empire
+				}
 			}
 		}
 		provinces_to_highlight = {
-			OR = {			
+			OR = {
 					# Liguria
 				province_id = 102
 				province_id = 2992
@@ -126,55 +135,50 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
+			adm_tech = 20
 			NOT = { exists = ITE }
 			is_subject = no
 			is_at_war = no
-			OR = {
-				italy_region = {
-					type = all
-					owned_by = ROOT
-				}
-				custom_trigger_tooltip = {
-					tooltip = form_italian_empire_tt_1	
-						# Italian isles
-					owns_core_province = 1247
-					owns_core_province = 127
-					owns_core_province = 2986
-						# Albania
-					owns_core_province = 4174
-					owns_core_province = 143
-					owns_core_province = 4175
-						# Aegean Archipelago
-					owns_core_province = 320
-						# Crete
-					owns_core_province = 163
-						# Cyrenaica
-					owns_core_province = 356
-					owns_core_province = 357
-					owns_core_province = 2326
-					owns_core_province = 2325
-						# Triplitania
-					owns_core_province = 335
-					owns_core_province = 2451
-					owns_core_province = 354
-					owns_core_province = 2452
-						# Djerba
-					owns_core_province = 353
-					owns_core_province = 2453
-					owns_core_province = 2954
-						# Tunisia
-					owns_core_province = 2473
-					owns_core_province = 341
-					owns_core_province = 4566
-					owns_core_province = 2454
-					owns_core_province = 2455
-						# Fezzan
-					owns_core_province = 4567
-					owns_core_province = 2449
-					owns_core_province = 2448
-					owns_core_province = 2474
-				}				
+			num_of_cities = 30
+			custom_trigger_tooltip = {
+				tooltip = form_italian_empire_tt_1
+					# Italian isles
+				owns_core_province = 1247
+				owns_core_province = 127
+				owns_core_province = 2986
+					# Albania
+				owns_core_province = 4174
+				owns_core_province = 143
+				owns_core_province = 4175
+					# Aegean Archipelago
+				owns_core_province = 320
+					# Crete
+				owns_core_province = 163
+					# Cyrenaica
+				owns_core_province = 356
+				owns_core_province = 357
+				owns_core_province = 2326
+				owns_core_province = 2325
+					# Triplitania
+				owns_core_province = 335
+				owns_core_province = 2451
+				owns_core_province = 354
+				owns_core_province = 2452
+					# Djerba
+				owns_core_province = 353
+				owns_core_province = 2453
+				owns_core_province = 2954
+					# Tunisia
+				owns_core_province = 2473
+				owns_core_province = 341
+				owns_core_province = 4566
+				owns_core_province = 2454
+				owns_core_province = 2455
+					# Fezzan
+				owns_core_province = 4567
+				owns_core_province = 2449
+				owns_core_province = 2448
+				owns_core_province = 2474
 			}
 		}
 		effect = {
@@ -182,16 +186,16 @@ country_decisions = {
 			set_country_flag = formed_italian_empire_flag # Country Formation Flag
 			custom_tooltip = form_italian_empire_tt_2 # New Missions
 			custom_tooltip = form_italian_empire_tt_3 # Region/Area Claims
-			custom_tooltip = dec1_decisions_blank	
-			ITE = { # Capital change and bonuses				
-				set_capital = 101 
+			custom_tooltip = dec1_decisions_blank
+			ITE = { # Capital change and bonuses
+				set_capital = 101
 				101 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_3
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -199,17 +203,17 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					horn_of_africa_region = { # TODO: historical claims
@@ -217,8 +221,8 @@ country_decisions = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = ITE
-					}					
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -235,9 +239,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -252,17 +256,17 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_rebirth_of_the_renaissance
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}				
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400		
+		ai_importance = 400
 	}
 }

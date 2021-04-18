@@ -286,12 +286,10 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				num_of_owned_provinces_with = {
-					value = 30
-					culture = root
-					is_overseas = yes
-				}
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = root
+				is_overseas = yes
 			}
 			prestige = 80
 			adm = 3

@@ -6,277 +6,278 @@
 # Dual Monarchy #
 #################
 
-		# tier 1
+	# tier 1
 
-	 parliament_of_the_lords_reform = {
-		icon = "constitution"
+		parliament_of_the_lords_reform = {
+			icon = "constitution"
 
-		potential = {
-			tag = DUM
-		}
-
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
-
-		modifiers = {
-			legitimacy = 1
-			global_unrest = -2
-			min_autonomy_in_territories = -0.2
-		}
-
-		factions = {
-			dec1_french_parliament
-			dec1_british_parliament
-		}
-
-		states_general_mechanic = {
-			nationalist_influence = {
-				discipline = 0.05
-				global_naval_barrage_cost = -0.5
-				warscore_cost_vs_other_religion = -0.10
+			potential = {
+				tag = DUM
 			}
-			union_influence = {
-				same_culture_advisor_cost = -0.5
-				diplomatic_reputation = 1
-				yearly_absolutism = 0.1
-				culture_conversion_cost = -0.1
+
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
 			}
-		}
 
-		custom_attributes = {
-			# Government Type
-			monarchy = yes
-			# Government Mechanics
-			has_parliament = yes
-			maintain_dynasty = yes
-			royal_marriage = no
-			# Ruler, Heir, Queen
-			heir = yes
-			queen = yes
-			# Locked Reform
-			allow_normal_conversion = no
-		}
+			modifiers = {
+				legitimacy = 1
+				global_unrest = -2
+				min_autonomy_in_territories = -0.2
+			}
 
-		fixed_rank = 3
-	 }
+			factions = {
+				dec1_french_parliament
+				dec1_british_parliament
+			}
+
+			states_general_mechanic = {
+				nationalist_influence = {
+					discipline = 0.05
+					global_naval_barrage_cost = -0.5
+					warscore_cost_vs_other_religion = -0.10
+				}
+				union_influence = {
+					same_culture_advisor_cost = -0.5
+					diplomatic_reputation = 1
+					yearly_absolutism = 0.1
+					culture_conversion_cost = -0.1
+				}
+			}
+
+			custom_attributes = {
+				# Government Type
+				monarchy = yes
+				# Government Mechanics
+				has_parliament = yes
+				maintain_dynasty = yes
+				royal_marriage = no
+				# Ruler, Heir, Queen
+				heir = yes
+				queen = yes
+				# Locked Reform
+				allow_normal_conversion = no
+			}
+
+			fixed_rank = 3
+		}
 
 ##############################
 # People's Republic of China #
 ##############################
 
-	 # tier 1
+	# tier 1
 
-	 communist_party_of_china_reform = {
-		icon = "become_rev_republic_reform"
+		communist_party_of_china_reform = {
+			icon = "become_rev_republic_reform"
 
-		potential = {
-			tag = PRC
-		}
-
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
-
-		modifiers = {
-			global_autonomy = -0.10
-			yearly_corruption = 0.1
-		}
-
-		custom_attributes = {
-			enables_nepotism = yes
-		}
-
-		factions = {
-			dec1_hardline_communists
-			dec1_democratic_socialists
-		}
-
-		effect = {
-			hidden_effect = { # IDK why this isn't adding via factions = {} but whatever, adding it here. fk u paradox
-				add_faction = dec1_hardline_communists
-				add_faction = dec1_democratic_socialists
+			potential = {
+				tag = PRC
 			}
-		}
 
-		custom_attributes = {
-			# Government Type
-			republic = yes
-			# Government Mechanics
-			has_parliament = yes
-			maintain_dynasty = yes
-			heirs_can_be_generals = yes
-			rulers_can_be_generals = no
-			royal_marriage = no
-			has_meritocracy = no
-			# Ruler, Heir, Queen
-			heir = yes
-			queen = no
-			# Locked Reform
-			allow_normal_conversion = no
-		}
-
-		fixed_rank = 3
-	 }
-
-	 democratic_socialists_reform = {
-		icon = "parliament_highlighted"
-
-		potential = {
-			tag = PRC
-		}
-
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = dec1_democratic_socialism_enforced_tt
-				has_country_flag = democratic_socialism_enforced
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
 			}
+
+			modifiers = {
+				global_autonomy = -0.10
+				yearly_corruption = 0.1
+			}
+
+			custom_attributes = {
+				enables_nepotism = yes
+			}
+
+			factions = {
+				dec1_hardline_communists
+				dec1_democratic_socialists
+			}
+
+			effect = {
+				hidden_effect = { # IDK why this isn't adding via factions = {} but whatever, adding it here. fk u paradox
+					add_faction = dec1_hardline_communists
+					add_faction = dec1_democratic_socialists
+				}
+			}
+
+			custom_attributes = {
+				# Government Type
+				republic = yes
+				# Government Mechanics
+				has_parliament = yes
+				maintain_dynasty = yes
+				heirs_can_be_generals = yes
+				rulers_can_be_generals = no
+				royal_marriage = no
+				has_meritocracy = no
+				# Ruler, Heir, Queen
+				heir = yes
+				queen = no
+				# Locked Reform
+				allow_normal_conversion = no
+			}
+
+			fixed_rank = 3
 		}
 
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
+		democratic_socialists_reform = {
+			icon = "parliament_highlighted"
 
-		modifiers = {
-			yearly_corruption = 0.2
-			production_efficiency = 0.10
-			global_tax_modifier = 0.10
-		}
+			potential = {
+				tag = PRC
+			}
 
-		custom_attributes = {
-			# Government Type
-			republic = yes
-			# Government Mechanics
-			has_parliament = yes
-			has_meritocracy = yes
-			royal_marriage = yes
-			maintain_dynasty = no
-			has_meritocracy = no
-			# Ruler, Heir, Queen
-			queen = yes
-			republic = yes
-			# Locked Reform
-			allow_normal_conversion = no
-		}
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = dec1_democratic_socialism_enforced_tt
+				}
+			}
 
-		fixed_rank = 3
-	 }
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
+			}
+
+			modifiers = {
+				yearly_corruption = 0.2
+				production_efficiency = 0.10
+				global_tax_modifier = 0.10
+			}
+
+			custom_attributes = {
+				# Government Type
+				republic = yes
+				# Government Mechanics
+				has_parliament = yes
+				has_meritocracy = yes
+				royal_marriage = yes
+				maintain_dynasty = no
+				has_meritocracy = no
+				# Ruler, Heir, Queen
+				queen = yes
+				republic = yes
+				# Locked Reform
+				allow_normal_conversion = no
+			}
+
+			fixed_rank = 3
+		}
 
 	 # tier 2
 
 	 # tier 3
 
-	 reduced_term_limits_reform = {
-		icon = "legislative_assembly_reform"
+		reduced_term_limits_reform = {
+			icon = "legislative_assembly_reform"
 
-		potential = {
-			tag = PRC
+			potential = {
+				tag = PRC
+			}
+
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
+			}
+
+			modifiers = {
+				election_cycle = -6 # 10 year elections
+				global_tax_modifier = 0.10
+				max_absolutism = -20
+				yearly_absolutism = -0.1
+			}
 		}
 
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
+		abolish_term_limits_reform = {
+			icon = "paper_with_seal"
 
-		modifiers = {
-			election_cycle = -6 # 10 year elections
-			global_tax_modifier = 0.10
-			max_absolutism = -20
-			yearly_absolutism = -0.1
-		}
-	 }
+			potential = {
+				tag = PRC
+			}
 
-	 abolish_term_limits_reform = {
-		icon = "paper_with_seal"
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
+			}
 
-		potential = {
-			tag = PRC
+			modifiers = {
+				election_cycle = 84 # 100 year election.. fake republic
+				max_absolutism = 10
+				yearly_absolutism = 0.1
+				interest = 1
+			}
 		}
-
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
-
-		modifiers = {
-			election_cycle = 84 # 100 year election.. fake republic
-			max_absolutism = 10
-			yearly_absolutism = 0.1
-			interest = 1
-		}
-	 }
 
 ########################
 # Eastern Roman Empire #
 ########################
 
-	 # tier 1
+	# tier 1
 
-	 eastern_roman_senate_reform = {
-		icon = "united_cantons_reform"
+		eastern_roman_senate_reform = {
+			icon = "united_cantons_reform"
 
-		potential = {
-			tag = ERP
+			potential = {
+				tag = ERP
+			}
+
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
+			}
+
+			modifiers = {
+				global_autonomy = -0.05
+			}
+
+			custom_attributes = {
+				enables_nepotism = yes
+				has_meritocracy = yes
+				has_parliament = yes
+			}
+
+			republic = yes
+			fixed_rank = 3
+			maintain_dynasty = yes
+			royal_marriage = yes
+			queen = no
+			heir = yes
+			rulers_can_be_generals = yes
+			heirs_can_be_generals = yes
 		}
-
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
-
-		modifiers = {
-			global_autonomy = -0.05
-		}
-
-		custom_attributes = {
-			enables_nepotism = yes
-			has_meritocracy = yes
-			has_parliament = yes
-		}
-
-		republic = yes
-		fixed_rank = 3
-		maintain_dynasty = yes
-		royal_marriage = yes
-		queen = no
-		heir = yes
-		rulers_can_be_generals = yes
-		heirs_can_be_generals = yes
-	 }
 
 
 #################################
 # Confederate States of America #
 #################################
 
-	 # tier 1
+	# tier 1
 
-	 confederate_state_congress_reform = {
-		icon = "paper_with_seal"
+		confederate_state_congress_reform = {
+			icon = "paper_with_seal"
 
-		potential = {
-			tag = CSA
-			CSA = {
-				war_with = USA
+			potential = {
+				tag = CSA
+			}
+
+			conditional = {
+				allow = { has_dlc = "Common Sense" }
+			}
+
+			modifiers = {
+				land_forcelimit_modifier = 0.75
+				fort_maintenance_modifier = -0.50
+				war_exhaustion = -0.25
+				reelection_cost = -0.25
+				election_cycle = 4
+				global_autonomy = -100
+				min_autonomy_in_territories = 0
+			}
+
+			custom_attributes = {
+				republic = yes
+				enables_nepotism = yes
+				has_parliament = yes
+				royal_marriage = no
+				rulers_can_be_generals = no
 			}
 		}
 
-		conditional = {
-			allow = { has_dlc = "Common Sense" }
-		}
+###################
+# Empire of Japan #
+###################
 
-		modifiers = {
-			land_forcelimit_modifier = 0.75
-			fort_maintenance_modifier = -0.50
-			war_exhaustion = -0.25
-			reelection_cost = -0.25
-			election_cycle = 4
-			global_autonomy = -100
-			min_autonomy_in_territories = 0
-		}
-
-		custom_attributes = {
-			republic = yes
-			enables_nepotism = yes
-			has_parliament = yes
-			royal_marriage = no
-			rulers_can_be_generals = no
-		}
-	 }

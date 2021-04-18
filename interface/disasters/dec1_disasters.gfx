@@ -1,8 +1,8 @@
 spriteTypes = {
     # Dual Monarchy - Anglois Civil War
     spriteType = {
-    name = "GFX_disaster_dual_monarchy_anglois_civil_war"
-    texturefile = "gfx//interface//disasters//dual_monarchy_anglois_civil_war.dds"
+    name = "GFX_disaster_dec1_dual_monarchy_anglois_civil_war"
+    texturefile = "gfx//interface//disasters//dec1_dual_monarchy_anglois_civil_war.dds"
     noOfFrames = 3
     loadType = "INGAME"
     }

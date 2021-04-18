@@ -192,9 +192,9 @@ country_decisions = {
 		effect = {
 			change_tag = UKI # Country TAG
 			set_country_flag = formed_united_kingdom_nation_flag # Country Formation Flag
-			custom_tooltip = form_united_kingdom_tt_5 # New Missions				
-			custom_tooltip = dec1_decisions_blank	
-			UKI = { # Capital change and bonuses				
+			custom_tooltip = form_united_kingdom_tt_5 # New Missions
+			custom_tooltip = dec1_decisions_blank
+			UKI = { # Capital change and bonuses
 				set_capital = 236 # London
 				236 = {
 					add_base_tax = 1
@@ -202,7 +202,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -210,9 +210,8 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
-
-				add_government_reform = english_monarchy_reform						
+				}
+				add_government_reform = english_monarchy
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -220,9 +219,9 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {

@@ -4,10 +4,22 @@
  # REBEL TOOLTIPS #
  ##################
 
- confederate_loyalists_rebels_title: "Confederate Loyalists"
- confederate_loyalists_rebels_name: "Confederate Loyalists"
- confederate_loyalists_rebels_desc: "Confederate Loyalists"
- confederate_loyalists_rebels_army: "Confederate Loyalist Militia"
+  # Confederate States
 
- dec1_weaken_the_united_states: "Weaken the [USA.GovernmentName]"
- dec1_weaken_the_united_states_desc: "Confederate Loyalists have risen up due to the conflict with [CSA.GetName] and seek to weaken the power of America allowing Confederates to fight on equal terms."
+    dec1_confederate_loyalists_rebels_title: "Confederate Loyalists"
+    dec1_confederate_loyalists_rebels_name: "Confederate Loyalists"
+    dec1_confederate_loyalists_rebels_desc: "Confederate Loyalists"
+    dec1_confederate_loyalists_rebels_army: "Confederate Loyalist Militia"
+
+    dec1_weaken_the_united_states: "Weaken the [USA.GovernmentName]"
+    dec1_weaken_the_united_states_desc: "Confederate Loyalists have risen up due to the conflict with [CSA.GetName] and seek to weaken the power of America allowing Confederates to fight on equal terms."
+
+  # Dual Monarchy
+
+    dec1_anglois_rebels_title: "Anglois Rebels"
+    dec1_anglois_rebels_name: "Anglois Rebels"
+    dec1_anglois_rebels_desc: "Anglois Rebels"
+    dec1_anglois_rebels_army: "Anglois Militia"
+
+    dec1_weaken_the_dual_monarchy: "Weaken the [DUM.GovernmentName]"
+    dec1_weaken_the_dual_monarchy_desc: ""
