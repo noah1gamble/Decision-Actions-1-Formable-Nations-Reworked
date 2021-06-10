@@ -1269,7 +1269,7 @@
  YUG_ideas: "Yugoslavian Ideas"
  YUG_ideas_start: "Yugoslavian Traditions"
  YUG_ideas_bonus: "Maritime Empire"
- 
+
     # Vanilla Formable Nations
 
  ADU_ideas: "Andalusian Ideas"
@@ -1279,6 +1279,26 @@
  ALG_ideas: "Algerian Ideas"
  ALG_ideas_start: "Algerian Traditions"
  ALG_ideas_bonus: "Algerian Ideas"
+
+  # Scandinavia
+
+ SCA_ideas: "Scandinavian Ideas"
+ SCA_ideas_start: "Scandinavian Traditions"
+ SCA_ideas_bonus: "Scandinavian Ideas"
+ SCA_norse_legends: "Norse Legends"
+ SCA_norse_legends_desc: "§RDescription Available in 4.1.0§!"
+ SCA_defend_the_empire: "Defend the Empire"
+ SCA_defend_the_empire_desc: "§RDescription Available in 4.1.0§!"
+ SCA_religious_control: "Religious Control"
+ SCA_religious_control_desc: "§RDescription Available in 4.1.0§!"
+ SCA_military_raid_tactics: "Military Raid Tactics"
+ SCA_military_raid_tactics_desc: "§RDescription Available in 4.1.0§!"
+ SCA_creative_difference: "Creative Difference"
+ SCA_creative_difference_desc: "§RDescription Available in 4.1.0§!"
+ SCA_enact_local_reform_policies: "Enact Local Reform Policy"
+ SCA_enact_local_reform_policies_desc: "§RDescription Available in 4.1.0§!"
+ SCA_enlist_all_cultures: "Enlist All Cultures"
+ SCA_enlist_all_cultures: "§RDescription Available in 4.1.0§!"
 
  ##########################
  # END IDEAS LOCALISATION #

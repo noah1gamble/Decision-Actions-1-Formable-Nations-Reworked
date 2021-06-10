@@ -3242,12 +3242,12 @@ YUG_ideas = {
 # Scandinavia
 SCA_ideas = {
 	start = {
-
-
+		movement_speed = 0.05
+		siege_ability = 0.10
 	}
 
 	bonus = {
-
+		flagship_cost = -0.25
 	}
 
 	trigger = {
@@ -3255,31 +3255,34 @@ SCA_ideas = {
 	}
 	free = yes	# will be added at load.
 
-	SCA_ = {
-		
+	SCA_norse_legends = {
+		prestige_decay = -0.05
 	}
 
-	SCA_ = {
-		
+	SCA_defend_the_empire = {
+		fort_maintenance_modifier = -0.05
 	}
 
-	SCA_ = {
-
+	SCA_religious_control = {
+		missionaries = 1
 	}
 
-	SCA_ = {
-
+	SCA_military_raid_tactics = {
+		cav_to_inf_ratio = 0.10
+		cavalry_power = 0.05
+		cavalry_shock = 1
 	}
 
-	SCA_ = {
-
+	SCA_creative_difference = {
+		merchants = 1
 	}
 
-	SCA_ = {
-
+	SCA_enact_local_reform_policies = {
+		global_supply_limit_modifier = 0.05
 	}
 
-	SCA_ = {
-
+	SCA_enlist_all_cultures = {
+		culture_conversion_cost = -0.05
+		global_manpower_modifier = 0.05
 	}
 }
