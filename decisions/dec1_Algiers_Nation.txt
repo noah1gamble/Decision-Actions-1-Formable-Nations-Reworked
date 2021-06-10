@@ -1,12 +1,12 @@
 country_decisions = {
-	
+
 	algiers_nation = {
 		major = yes
-		potential = {	
+		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_algiers_nation_flag
 				has_reform = celestial_empire
 				exists = ALG
@@ -14,7 +14,7 @@ country_decisions = {
 				tag = PAP
 				tag = HLR
 				tag = MGH
-			}	
+			}
 			# TODO: Weakened Berbers can form Algiers
 			OR = {
 				primary_culture = algerian
@@ -37,7 +37,7 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5 # unique req - early formable
 			NOT = { exists = ALG }
@@ -45,7 +45,7 @@ country_decisions = {
 			is_subject = no
 			is_nomad = no
 			OR = { # North or South Algierian Culture Provinces
-				AND = { 
+				AND = {
 					owns_core_province = 338
 					owns_core_province = 2461
 					owns_core_province = 337
@@ -66,8 +66,8 @@ country_decisions = {
 			custom_tooltip = form_algiers_tt_3 # Region/Area Claims
 			custom_tooltip = form_algiers_tt_4 # Region/Area Claims
 			custom_tooltip = form_algiers_tt_2 # Region/Area Claims
-			custom_tooltip = dec1_decisions_blank	
-			ALG = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			ALG = { # Capital change and bonuses
 				set_capital = 338 # Algiers
 				338 = {
 					add_base_tax = 1
@@ -75,7 +75,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -83,7 +83,7 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
 				# Our Place in the Empire Custom Event
@@ -92,8 +92,8 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}											
-				custom_tooltip = dec1_decisions_blank	
+				}
+				custom_tooltip = dec1_decisions_blank
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					algiers_area = {
@@ -113,8 +113,8 @@ country_decisions = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = ALG
-					}						
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -134,7 +134,7 @@ country_decisions = {
 					}
 				}
 			}
-			# Custom Ideas check and change		
+			# Custom Ideas check and change
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -149,16 +149,16 @@ country_decisions = {
 			add_country_modifier = {
 				name = dec1_noble_amirs
 				duration = 49275
-			}				
+			}
 			# Increased Centralization
 			add_country_modifier = {
 				name = dec1_increased_centralization
 				duration = -1
-			}				
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400				
-	}	
+		ai_importance = 400
+	}
 }

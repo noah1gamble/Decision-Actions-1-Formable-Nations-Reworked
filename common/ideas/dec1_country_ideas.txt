@@ -2948,7 +2948,7 @@ SOV_ideas = {
 }
 
 # Sweden-Norway
-SNO_ideas = { 
+SNO_ideas = {
 	start = {
 		prestige_decay = -0.05
 		heir_chance = 0.25
@@ -3190,7 +3190,7 @@ UKI_ideas = {
 }
 
 # Yugoslavia
-YUG_ideas = { 
+YUG_ideas = {
 	start = {
 		cavalry_flanking = 0.1
 		global_tax_modifier = 0.05
@@ -3227,14 +3227,59 @@ YUG_ideas = {
 	}
 
 	YUG_house_karadordevic = {
-		heir_chance = 0.5 
-		female_advisor_chance = 0.1 
+		heir_chance = 0.5
+		female_advisor_chance = 0.1
 	}
 
 	YUG_pan_slavism = {
-		prestige = 0.5 
+		prestige = 0.5
 		prestige_decay = -0.01
-	}	
+	}
 }
 
-	# VANILLA IDEAS?
+	# VANILLA IDEAS
+
+# Scandinavia
+SCA_ideas = {
+	start = {
+
+
+	}
+
+	bonus = {
+
+	}
+
+	trigger = {
+		tag = SCA
+	}
+	free = yes	# will be added at load.
+
+	SCA_ = {
+		
+	}
+
+	SCA_ = {
+		
+	}
+
+	SCA_ = {
+
+	}
+
+	SCA_ = {
+
+	}
+
+	SCA_ = {
+
+	}
+
+	SCA_ = {
+
+	}
+
+	SCA_ = {
+
+	}
+}

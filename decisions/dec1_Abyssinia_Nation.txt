@@ -166,6 +166,8 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
+				# Reform Change
+				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -173,8 +175,8 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					horn_of_africa_region = {
 						limit = {
@@ -200,8 +202,6 @@ country_decisions = {
 							}
 						change_government = monarchy
 					}
-					# Reform Change
-					add_government_reform = autocracy_reform
 				}
 				# Custom Ideas check and change
 				if = {
@@ -218,17 +218,17 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_house_of_solomon
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
-				}					
-			}				
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400	
+		ai_importance = 400
 	}
 }

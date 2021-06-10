@@ -12,7 +12,7 @@ country_decisions = {
 			is_colonial_nation = no
 			NOT = {
 				has_country_flag = formed_prussia_nation_flag
-				has_reform = celestial_empire			
+				has_reform = celestial_empire
 				exists = PRU
 				tag = PRU
 				tag = PAP
@@ -24,6 +24,7 @@ country_decisions = {
 				tag = GEP
 				tag = LSX
 				tag = NGC
+				tag = BOH
 			}
 			OR = {
 				primary_culture = prussian

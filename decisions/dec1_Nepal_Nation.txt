@@ -6,6 +6,7 @@ country_decisions = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			# CULTURE
 			NOT = {
 				has_country_flag = formed_nepal_flag
 				exists = NPL
@@ -15,6 +16,7 @@ country_decisions = {
 				tag = BHA
 				tag = HIM
 				tag = TIB
+				tag = PLC
 			}
 			OR = {
 				primary_culture = nepali

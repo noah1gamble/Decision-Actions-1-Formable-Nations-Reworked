@@ -1,0 +1,357 @@
+country_decisions = {
+
+	# TODO: change name to Iberian Union, and add a decision allowing players to rename
+	# themselves to the Iberian Empire, and also reducing authority of the Portugese Nobility
+
+	iberian_union_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = {
+				has_country_flag = formed_iberian_empire_nation_flag
+				exists = IBE
+				tag = IBE
+				tag = PAP
+				tag = HLR
+				tag = FRA
+				tag = KNI
+				tag = GRA
+				tag = ADU
+				tag = EUR
+				tag = FIB
+				tag = LSE
+				tag = BSQ
+				tag = ROP
+			}
+			OR = {
+				culture_group = iberian
+				primary_culture = basque
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = iberia_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = IBE }
+			is_subject = no
+			is_at_war = no
+			OR = { # Must own a major city
+				owns = 220 # Valencia
+				owns = 219 # Toledo
+				owns = 208 # leon
+				owns = 227 # Lisboa
+			}
+			OR = {
+				custom_trigger_tooltip = { # Owns all iberian core provinces
+					tooltip = form_spain_tt_1
+						# Toldo
+					owns_core_province = 219
+					owns_core_province = 2751
+					owns_core_province = 2754
+					owns_core_province = 4547
+					owns_core_province = 221
+						# Lower Andalucia
+					owns_core_province = 1748
+					owns_core_province = 225
+					owns_core_province = 224
+					owns_core_province = 4548
+					owns_core_province = 1749
+						# Leon
+					owns_core_province = 218
+					owns_core_province = 1747
+					owns_core_province = 216
+					owns_core_province = 4553
+					owns_core_province = 208
+						# Castille
+					owns_core_province = 215
+					owns_core_province = 4551
+					owns_core_province = 217
+					owns_core_province = 2755
+						# Asturias
+					owns_core_province = 4552
+					owns_core_province = 1746
+					owns_core_province = 1745
+					owns_core_province = 207
+						# Galicia
+					owns_core_province = 4558
+					owns_core_province = 4554
+					owns_core_province = 4555
+					owns_core_province = 206
+						# Portugal
+					owns_core_province = 230
+					owns_core_province = 229
+					owns_core_province = 4150
+					owns_core_province = 227
+					owns_core_province = 228
+					owns_core_province = 1851
+					owns_core_province = 4556
+					owns_core_province = 232
+					owns_core_province = 231
+						# Grenada
+					owns_core_province = 226
+					owns_core_province = 4546
+					owns_core_province = 223
+					owns_core_province = 222
+						# Vasconia
+					owns_core_province = 210
+					owns_core_province = 209
+					owns_core_province = 2989
+				}
+				AND = {
+					num_of_owned_provinces_with = { # owns at least 50% of iberian core provinces (61->45) - changed to 25.. 45 is too high
+						value = 25
+						region = iberia_region
+					}
+					OR = { # is in union with anyone in Iberia (TODO: make it so if you are one of these it does not show)
+						ARA = {
+							years_in_union_under = {
+								who = ROOT
+								years = 40
+							}
+						}
+						CAS = {
+							years_in_union_under = {
+								who = ROOT
+								years = 40
+							}
+						}
+						LON = {
+							years_in_union_under = {
+								who = ROOT
+								years = 40
+							}
+						}
+						POR = {
+							years_in_union_under = {
+								who = ROOT
+								years = 40
+							}
+						}
+						NAV = {
+							years_in_union_under = {
+								who = ROOT
+								years = 40
+							}
+						}
+					}
+				}
+			}
+		}
+	 	effect = {
+			if = { # Iberian Union faction system
+				limit = { # Aragon
+					OR = {
+						tag = ARA
+					}
+				}
+				hidden_effect = { add_faction = dec1_aragon_nobility } # hidden to prevent ugly tooltip
+				set_country_flag = dec1_iberian_union_enable_aragon_faction
+			}
+			if = { # Castile
+				limit = {
+					OR = {
+						tag = CAS
+					}
+				}
+				hidden_effect = { add_faction = dec1_castile_nobility } # hidden to prevent ugly tooltip
+				set_country_flag = dec1_iberian_union_enable_castile_faction
+			}
+			if = { # Leon
+				limit = {
+					tag = LON
+				}
+				hidden_effect = { add_faction = dec1_leon_nobility } # hidden to prevent ugly tooltip
+				set_country_flag = dec1_iberian_union_enable_leon_faction
+			}
+			if = { # Portugal
+				limit = {
+					OR = {
+						tag = POR
+					}
+				}
+				hidden_effect = { add_faction = dec1_portugal_nobility } # hidden to prevent ugly tooltip
+				set_country_flag = dec1_iberian_union_enable_portugal_faction
+			}
+			if = { # Navarra
+				limit = {
+					tag = NAV
+				}
+				hidden_effect = { add_faction = dec1_navarra_nobility } # hidden to prevent ugly tooltip
+				set_country_flag = dec1_iberian_union_enable_navarra_faction
+			}
+			change_tag = IBE # Country TAG
+			set_country_flag = formed_iberian_empire_nation_flag # Country Formation Flag
+			custom_tooltip = form_iberian_union_tt_2 # New Missions
+			custom_tooltip = form_iberian_union_tt_3 # Claims
+			country_event = { id = dec1_country_events.1 } # The Iberian Nobles
+			if = {
+				limit = {
+					ARA = { junior_union_with = ROOT }
+				}
+				inherit = ARA
+			}
+			if = {
+				limit = {
+					CAS = { junior_union_with = ROOT }
+				}
+				inherit = CAS
+			}
+			if = {
+				limit = {
+					LON = { junior_union_with = ROOT }
+				}
+				inherit = LON
+			}
+			if = {
+				limit = {
+					POR = { junior_union_with = ROOT }
+				}
+				inherit = POR
+			}
+			if = {
+				limit = {
+					POR = { junior_union_with = ROOT }
+				}
+				inherit = NAV
+			}
+			custom_tooltip = dec1_decisions_blank
+			IBE = { # Capital change and bonuses
+				custom_tooltip = form_iberian_union_tt_4
+				if = {
+					limit = { # Valencia
+						owns = 220
+					}
+					set_capital = 220 # Valencia
+					220 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				if = {
+					limit = { # Toledo
+						owns = 220
+					}
+					set_capital = 219 # Toledo
+					219 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				if = {
+					limit = { # Leon
+						owns = 208
+					}
+					set_capital = 208 # Leon
+					208 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				if = {
+					limit = { # Lisboa (If capital is in Lisboa and owns Toldeo, it will move to Toledo)
+						AND = {
+							owns = 227
+							owns = 220
+						}
+					}
+					set_capital = 220 # Toledo
+					220 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					iberia_region = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = IBE
+					}
+					# Government Rank change
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = IBE_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_christian_empire_in_iberia
+					duration = 49275
+				}
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

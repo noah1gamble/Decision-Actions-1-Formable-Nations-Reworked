@@ -1,4 +1,44 @@
-# namespace = dec1_country_events
+namespace = dec1_country_events
+
+	#################
+	# Iberian Union #
+	#################
+
+	country_event = {
+		id = dec1_country_events.1
+		title = "dec1_country_events.1.t"
+		desc = "dec1_country_events.1.d"
+		picture = HRE_eventPicture
+
+		is_triggered_only = yes
+
+		trigger = {
+			tag = IBE
+		}
+
+		# Hurrah!
+		option = {
+			name = "dec1_country_events.1.a"
+			ai_chance = { factor = 100 }
+			if = {
+				limit = { # equals 10, so its legit kekw
+					OR = {
+						num_of_owned_provinces_with = {
+							value = 4
+							culture = aragonese
+							is_overseas = no
+						}
+						num_of_owned_provinces_with = {
+							value = 6
+							culture = catalan
+							is_overseas = no
+						}
+					}
+				}
+				add_faction = dec1_aragon_nobility
+			}
+		}
+	}
 
 	#################
 	# Dual Monarchy #

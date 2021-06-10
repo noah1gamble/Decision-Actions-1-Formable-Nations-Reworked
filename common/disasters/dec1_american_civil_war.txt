@@ -2,9 +2,9 @@ dec1_usa_american_civil_war = {
 	ended_by_country_breaking_to_rebels = no
 
 	potential = {
-		tag = USA
-		is_lesser_in_union = no
-		has_any_disaster = no
+		#tag = USA DISABLED FOR NOW :)
+		#is_lesser_in_union = no
+		#has_any_disaster = no
 	}
 
 	can_start = {

@@ -142,20 +142,6 @@ country_decisions = {
 					}
 					if = {
 						limit = {
-							has_dlc = "Dharma"
-							has_reform_level = 3
-						}
-						add_government_reform = mansabdari_reform
-					}
-					if = {
-						limit = {
-							has_dlc = "Dharma"
-							has_reform_level = 4
-						}
-						add_government_reform = zabt_reform
-					}
-					if = {
-						limit = {
 							has_reform = states_general_reform
 						}
 						remove_government_reform = states_general_reform
@@ -166,8 +152,8 @@ country_decisions = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = MUG
-					}					
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {

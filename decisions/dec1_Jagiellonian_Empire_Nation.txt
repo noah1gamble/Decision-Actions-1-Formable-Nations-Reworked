@@ -25,6 +25,7 @@ country_decisions = {
 				tag = EUR
 				tag = TUR
 				tag = CZE
+				tag = BOH
 			}
 			OR = {
 				ai = no
@@ -32,7 +33,7 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 8
 				}
-			}					
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -119,191 +120,6 @@ country_decisions = {
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					carpathia_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = JGE
-					}
-					# Government Rank change				
-					if = {
-						limit = {
-							NOT = {
-								government_rank = 3
-								}
-							}
-						set_government_rank = 3
-					}
-					# Government Type Change
-					if = {
-						limit = {
-							NOT = {
-								government = monarchy
-								}
-							}
-						change_government = monarchy
-					}																		
-				}
-				# Custom Ideas check and change		
-				if = {
-					limit = {
-						has_custom_ideas = no
-						NOT = { has_idea_group = JGE_ideas }
-					}
-					country_event = { id = ideagroups.1 }
-				}
-				# Custom Missions check and change
-				country_event = { id = dec1_events.3 }
-				custom_tooltip = dec1_decisions_blank
-				# National Ability
-				add_country_modifier = {
-					name = dec1_union_of_persistence
-					duration = 49275
-				}				
-				# Increased Centralization
-				add_country_modifier = {
-					name = dec1_increased_centralization
-					duration = -1
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
-
-	####################################################################
-	# 						Jagiellonian Empire                        #
-	#						   as Lithuania						       #
-	# 			Union with Hungary, Bohemia, and Lithuania             #	
-	####################################################################
-
-	jagiellonian_empire_nation_lithuania = {
-		major = yes
-		potential = {
-			is_former_colonial_nation = no
-			is_playing_custom_nation = no
-			is_colonial_nation = no
-			dynasty = "Jagiellon"
-			tag = LIT
-			NOT = {
-				has_country_flag = formed_jagiellon_empire_flag
-				exists = JGE			
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 8
-				}
-			}				
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 153
-				province_id = 262
-				province_id = 272
-				province_id = 266
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}			
-		allow = {
-			adm_tech = 15
-			NOT = { exists = JGE }
-			is_subject = no
-			is_at_war = no
-			AND = {
-				OR = {
-					NOT = { exists = HUN }
-					HUN = {
-						OR = {
-							junior_union_with = ROOT
-							vassal_of = ROOT
-						}
-					}
-				}
-				OR = {
-					NOT = { exists = BOH }
-					BOH = {
-						OR = {
-							junior_union_with = ROOT
-							vassal_of = ROOT
-						}
-					}
-				}
-				OR = {
-					NOT = { exists = POL }
-					POL = {
-						OR = {
-							junior_union_with = ROOT
-							vassal_of = ROOT
-						}
-					}
-				}
-			}
-		}
-	 	effect = {
-			change_tag = JGE # Country TAG
-			set_country_flag = formed_jagiellonian_empire_flag # Country Formation Flag
-			custom_tooltip = form_jagiellonian_empire_tt_4 # New Missions
-			custom_tooltip = form_jagiellonian_empire_tt_5 # Region/Area Claims	
-			custom_tooltip = form_jagiellonian_empire_tt_6 # Region/Area Claims	
-			custom_tooltip = form_jagiellonian_empire_tt_7 # Region/Area Claims	
-			custom_tooltip = form_jagiellonian_empire_tt_8 # Region/Area Claims	
-			inherit = HUN
-			inherit = BOH
-			inherit = POL
-			custom_tooltip = dec1_decisions_blank	
-			JGE = { # Capital change and bonuses				
-				set_capital = 257 # Warszawa
-				257 = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				custom_tooltip = dec1_decisions_blank				
-				custom_tooltip = dec1_government_rank_3 # Government Rank Change
-				# Dharma DLC check to prevent ugly tooltip
-				if = {
-					limit = {
-						has_dlc = "Dharma"
-					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
-				# Reform Changes
-				add_government_reform = autocracy_reform						
-				custom_tooltip = dec1_decisions_blank
-				# Our Place in the Empire Custom Event
-				if = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Region/Area Claims
-					poland_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = JGE
-					}
-					ruthenia_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = JGE
-					}
-					carpathia_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = JGE
-					}
-					baltic_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}

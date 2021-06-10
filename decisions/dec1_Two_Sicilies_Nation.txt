@@ -93,6 +93,11 @@ country_decisions = {
 					# Central Italy
 				owns_core_province = 120
 			}
+			ARA = {
+				NOT = {
+					overlord_of = NAP
+				}
+			}
 		}
 	 	effect = {
 			change_tag = TTS # Country TAG

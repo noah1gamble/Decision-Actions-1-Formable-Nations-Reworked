@@ -13,8 +13,8 @@ country_decisions = {
 			culture_group = caucasian 
 			NOT = {
 				has_country_flag = formed_armenia_empire_nation_flag
-				exists = ARN
-				tag = ARN
+				exists = ARE
+				tag = ARE
 				tag = ARR
 				tag = ARM
 				tag = HLR
@@ -56,7 +56,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 15 # Empire Rank requires 15 tech
-			NOT = { exists = ARN }	
+			NOT = { exists = ARE }	
 			is_subject = no
 			is_at_war = no	
 			OR = {
@@ -83,7 +83,7 @@ country_decisions = {
 			owns_core_province = 2305
 		}
 		effect = {
-			change_tag = ARN # Country TAG
+			change_tag = ARE # Country TAG
 			set_country_flag = formed_armenia_empire_nation_flag # Country Formation Flag
 			custom_tooltip = form_armenia_empire_tt_2 # New Missions
 			custom_tooltip = form_armenia_empire_tt_3 # Region/Area Claims
@@ -92,7 +92,7 @@ country_decisions = {
 			custom_tooltip = form_armenia_empire_tt_6 # Region/Area Claims		
 			custom_tooltip = form_armenia_empire_tt_7 # Region/Area Claims	
 			custom_tooltip = dec1_decisions_blank	
-			ARN = { # Capital change and bonuses				
+			ARE = { # Capital change and bonuses				
 				set_capital = 419 # Yerevan
 				419 = {
 					add_base_tax = 1
@@ -124,31 +124,31 @@ country_decisions = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARN
+						add_permanent_claim = ARE
 					}
 					samtskhe_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARN
+						add_permanent_claim = ARE
 					}	
 					erzurum_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARN
+						add_permanent_claim = ARE
 					}	
 					north_kurdistan_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARN
+						add_permanent_claim = ARE
 					}	
 					cukurova_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
-						add_permanent_claim = ARN
+						add_permanent_claim = ARE
 					}	
 					# Government Rank change				
 					if = {

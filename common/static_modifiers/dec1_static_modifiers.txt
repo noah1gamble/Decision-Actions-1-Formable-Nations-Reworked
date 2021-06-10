@@ -249,13 +249,14 @@ dec1_british_parliament_british_naval_concessions = {
 		# Emilia-Romagna
 
 	dec1_italian_strength = {
-		cb_on_religious_enemies = yes 
+		cb_on_religious_enemies = yes
 	}
 
 		# Empire of Japan
 
 	dec1_the_meiji_era = {
-		all_power_cost = -0.2
+		all_power_cost = -0.05
+		infantry_power = 0.05
 	}
 
 		# European Union
@@ -339,12 +340,13 @@ dec1_british_parliament_british_naval_concessions = {
  		trade_efficiency = -0.1	# Debuff
 	}
 
-		# Iberian Empire
+		# Iberian Union
 
 	dec1_christian_empire_in_iberia = {
-		missionaries = 2
-	 	papal_influence = 0.3
-		tolerance_heathen = -2 # Debuff
+		missionaries = 1
+	 	papal_influence = 0.5
+		tolerance_heathen = 1
+		tolerance_own = 1
 	}
 
 		# Islamic State

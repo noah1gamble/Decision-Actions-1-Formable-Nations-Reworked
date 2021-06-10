@@ -41,7 +41,7 @@ country_decisions = {
 				region = arabia_region
 				region = mashriq_region
 				region = maghreb_region
-				region = horn_of_africa_region	
+				region = horn_of_africa_region
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -85,18 +85,18 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
-				add_government_reform = autocracy_reform
+				add_government_reform = mamluk_government
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					country_event = { id = dec1_events.1 }	
-				}	
+					country_event = { id = dec1_events.1 }
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -115,7 +115,7 @@ country_decisions = {
 						change_government = monarchy
 					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -130,13 +130,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_restoration_of_the_mamluks
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}			
+			}
 		}
 		ai_will_do = {
 			factor = 1

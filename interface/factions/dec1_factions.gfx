@@ -3,6 +3,30 @@ spriteTypes = {
 	# Unique Faction Icons
 
 	#################
+	# Iberian Union #
+	#################
+
+	spriteType = {
+		name = "GFX_faction_dec1_aragon_nobility"
+		texturefile = "gfx//interface//factions//faction_dec1_aragon_nobility.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_bg_dec1_aragon_nobility"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+	}
+
+	spriteType = {
+		name = "GFX_faction_dec1_castile_nobility"
+		texturefile = "gfx//interface//factions//faction_dec1_castile_nobility.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_faction_bg_dec1_castile_nobility"
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+	}
+
+	#################
 	# Dual Monarchy #
 	#################
 

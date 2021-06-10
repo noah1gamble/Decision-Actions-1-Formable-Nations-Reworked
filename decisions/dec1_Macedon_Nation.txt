@@ -64,10 +64,10 @@ country_decisions = {
 						region = balkan_region
 						is_core = ROOT
 					}
-				}				
+				}
 			}
 		}
-	 	effect = {			
+	 	effect = {
 			change_tag = MAC # Country TAG
 			set_country_flag = formed_macedon_nation_flag # Country Formation Flag
 			custom_tooltip = form_macedon_tt_2 # New Missions
@@ -90,9 +90,9 @@ country_decisions = {
 				dip = 3
 				mil = 2
 				age = 12
-			}			
-			custom_tooltip = dec1_decisions_blank		
-			MAC = { # Capital change and bonuses				
+			}
+			custom_tooltip = dec1_decisions_blank
+			MAC = { # Capital change and bonuses
 				set_capital = 148 # Selanik
 				148 = {
 					add_base_tax = 1
@@ -100,7 +100,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -108,7 +108,7 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
@@ -160,9 +160,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -177,13 +177,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_alexanders_kingdom
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -197,7 +197,7 @@ country_decisions = {
 					tag = EPI
 					tag = ATH
 				}
-			}			
+			}
 		}
 		ai_importance = 400
 	}

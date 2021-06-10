@@ -37,7 +37,19 @@ country_decisions = {
 			NOT = { exists = KOG }
 			is_subject = no
 			is_at_war = no
-
+			province_id = 101	# Genoa
+			province_id = 103	# Torino
+			province_id = 104	# Milano
+			province_id = 106	# Modena
+			province_id = 110	# Trento
+			province_id = 111	# Udine / Aquileia
+			province_id = 112	# Venice
+			province_id = 114	# Bologna + Ravenna
+			province_id = 116	# Firenze
+			province_id = 115	# Pisa
+			province_id = 119	# Ancona + Fermo
+			province_id = 2976	# Perugia
+			province_id = 2977	# Pesaro
 		}
 	 	effect = {
 			change_tag = KOG # Country TAG

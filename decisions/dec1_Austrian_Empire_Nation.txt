@@ -21,19 +21,19 @@ country_decisions = {
 				tag = CZE
 				tag = SBG
 				tag = SGF
-			}	
+				tag = BOH
+			}
 			OR = {
 				primary_culture = austrian
 				primary_culture = hungarian
-				primary_culture = czech
-			}					
+			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 8
 				}
-			}		
+			}
 		}
 		provinces_to_highlight = {
 			OR = {	

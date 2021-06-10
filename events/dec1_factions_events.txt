@@ -12,6 +12,15 @@ namespace = dec1_faction_events
 			desc = "dec1_faction_events.1.d"
 			picture = SHIP_SAILING_eventPicture
 
+			trigger = {
+				tag = DUM
+				has_factions = yes
+				AND = {
+					has_faction = dec1_british_parliament
+					has_faction = dec1_french_parliament
+				}
+			}
+
 			mean_time_to_happen = {
 				months = 400
 			}
@@ -51,6 +60,15 @@ namespace = dec1_faction_events
 			desc = "dec1_faction_events.2.d"
 			picture = SHIP_SAILING_eventPicture
 
+			trigger = {
+				tag = DUM
+				has_factions = yes
+				AND = {
+					has_faction = dec1_british_parliament
+					has_faction = dec1_french_parliament
+				}
+			}
+
 			mean_time_to_happen = {
 				months = 200
 			}
@@ -89,6 +107,15 @@ namespace = dec1_faction_events
 			title = "dec1_faction_events.3.t"
 			desc = "dec1_faction_events.3.d"
 			picture = SHIP_SAILING_eventPicture
+
+			trigger = {
+				tag = DUM
+				has_factions = yes
+				AND = {
+					has_faction = dec1_british_parliament
+					has_faction = dec1_french_parliament
+				}
+			}
 
 			mean_time_to_happen = {
 				months = 300

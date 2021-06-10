@@ -9,13 +9,16 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no	
+			is_colonial_nation = no
 			any_owned_province = {
-				superregion = china_superregion # Any nation has access to form Qing	
-			}			
-			NOT = { 
+				AND = {
+					superregion = china_superregion # Any chinese nation has access to form Qing
+					is_capital = yes
+				}
+			}
+			NOT = {
+				has_country_flag = manchu_dynasty_formed
 				exists = QNG
-				has_country_flag = manchu_dynasty_formed 
 				tag = CHN
 				tag = PRC
 			}
@@ -23,7 +26,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 10
+					num_of_cities = 20
 				}
 			}
 		}
@@ -32,7 +35,7 @@ country_decisions = {
 				province_id = 704	# Liaoxi
 				province_id = 723	# Xilin Gol
 				province_id = 726	# Liaodong
-				province_id = 1816	# Beijing				
+				province_id = 1816	# Beijing
 			}
 			NOT = { owned_by = ROOT }
 			NOT = { is_core = ROOT }

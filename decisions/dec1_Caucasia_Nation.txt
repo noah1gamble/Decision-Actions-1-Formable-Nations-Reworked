@@ -2,7 +2,7 @@ country_decisions = {
 
 	caucasia_nation = {
 		major = yes
-		potential = {	
+		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
@@ -12,7 +12,7 @@ country_decisions = {
 				tag = CAU
 				tag = PAP
 				tag = EUR
-				tag = ARN
+				tag = ARE
 				tag = ARM
 			}
 			OR = {
@@ -53,9 +53,9 @@ country_decisions = {
 			change_tag = CAU # Country TAG
 			set_country_flag = formed_caucasia_nation_flag # Country Formation Flag
 			custom_tooltip = form_caucasia_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank	
-			CAU = { # Capital change and bonuses				
-				set_capital = 463 # 
+			custom_tooltip = dec1_decisions_blank
+			CAU = { # Capital change and bonuses
+				set_capital = 463 #
 				463 = {
 					add_base_tax = 1
 					add_base_production = 1
@@ -69,20 +69,20 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips					# New Missions		
- 								
-					# Government Rank change				
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# New Missions
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -99,9 +99,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -116,13 +116,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_rough_lives
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1

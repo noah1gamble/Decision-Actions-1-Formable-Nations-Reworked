@@ -268,8 +268,9 @@
  form_franco_iberia_tt_3: "Country gains a permanent claim on §YFrance§! region."
  form_franco_iberia_tt_4: "Country gains a permanent claim on §YIberia§! region."
 
- form_iberian_empire_tt_2: "Country obtains §YIberian Empire§! missions."
- form_iberian_empire_tt_3: "Country gains a permanent claim on §YIberia§! region."
+ form_iberian_union_tt_2: "Country obtains §YIberian Empire§! missions."
+ form_iberian_union_tt_3: "Country gains a permanent claim on §YIberia§! region."
+ form_iberian_union_tt_4: "The new capital is based on which cities you own."
 
  form_french_empire_tt_2: "Country obtains §YFrench Empire§! missions."
  form_french_empire_tt_3: "Country gains a claim on historical §YFrench Empire§! cores."

@@ -4,6 +4,28 @@
  # FACTION LOCALISATION #
  ########################
 
+    # Iberian Union
+
+      dec1_aragon_nobility: "Aragonese Nobility"
+      dec1_aragon_nobility_influence: "Aragonese Influence"
+      dec1_aragon_nobility_FACTION_DESC: "The Aragonese Nobility"
+
+      dec1_castile_nobility: "Castilian Nobility"
+      dec1_castile_nobility_influence: "Castilian Influence"
+      dec1_castile_nobility_FACTION_DESC: "The Castilian Nobility"
+
+      dec1_leon_nobility: "Leonese Nobility"
+      dec1_leon_nobility_influence: "Leonese Influence"
+      dec1_leon_nobility_FACTION_DESC: "The Leonese Nobility"
+
+      dec1_portugal_nobility: "Portuguese Nobility"
+      dec1_portugal_nobility_influence: "Portuguese Influence"
+      dec1_portugal_nobility_FACTION_DESC: "The Portuguese Nobility"
+
+      dec1_navarra_nobility: "Navarrese Nobility"
+      dec1_navarra_nobility_influence: "Navarrese Influence"
+      dec1_navarra_nobility_FACTION_DESC: "The Navarrese Nobility"
+
     # Dual Monarchy
 
       dec1_french_parliament: "French Parliament"
@@ -23,18 +45,6 @@
       dec1_democratic_socialists: "Democratic Socialists"
       dec1_democratic_socialists_influence: "Democratic Socialism Influence"
       dec1_democratic_socialists_FACTION_DESC: "While China remains Communist; the global reliance on Chinese product has slowly forced us to adopt a pseudo-capitalist government allowing many Chinese citizens to openly call for reform.\n\n\n\nBy remaining above §G50§! Communist Influence and below §R10§! Democratic Socialists Influence we will gain: §G+1§! £adm£ §G+1§! £dip£ §G+1§! £mil£ \n\n§RAllowing the Democratic Socialists to gain above 80 influence will lead to Civil War and removal of the Chinese Communist Party for Democratic Socialists§!"
-
- ##############################
- # FACTION EVENT LOCALISATION #
- ##############################
-
-    # Dual Monarchy
-
-      dec1_country_events.1: "British Demand Naval Concessions"
-      dec1_country_events.1.t: "British Demand Naval Concessions"
-      dec1_country_events.1.d: "The British Parliament has levied new laws upon the state and is demanding we allow concessions upon the naval structure to allow British tactics and morale."
-      dec1_country_events.1.a: "Refuse Concessions"
-      dec1_country_events.1.b: "Support British Concessions"
 
  ###############################
  # STATES GENERAL LOCALISATION #

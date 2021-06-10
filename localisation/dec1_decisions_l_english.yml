@@ -40,7 +40,7 @@
     armenia_republic_nation_title: "@ARR The Republic of Armenia"
     armenia_republic_nation_desc: "Armenia is a nation, and former Soviet republic, in the mountainous Caucasus region between Asia and Europe. Among the earliest Christian civilizations, it’s defined by religious sites including the Greco-Roman Temple of Garni and 4th-century Etchmiadzin Cathedral, headquarters of the Armenian Church. Khor Virap Monastery is a pilgrimage site near Mount Ararat, a dormant volcano just across the border in Turkey."
 
-    armenia_empire_nation_title: "@ARN Greater Armenia"
+    armenia_empire_nation_title: "@ARE Greater Armenia"
     armenia_empire_nation_desc: "Greater Armenia is a successive union of three dynasties that ruled over what is now referred to  as the Armenian Empire."
 
     austrian_empire_nation_title: "@AEH The Austrian Empire"
@@ -74,7 +74,7 @@
     burma_nation_desc: "The unifier of Burma would emerge in the mid-sixteenth century known as Bayinnaung was an expansionist ruler who waged relentless war in order to gain increasingly larger areas of territory in which his aggression was much admired by his military rulers and the military rulers of today’s Burma, for whom he is a role model.\n\nUpon his death in 1581 at 66 years of age his rule stretched over almost all of Burma, Thailand and Laos. But such dominion, won at great cost, was difficult to hold on to, and soon after his death sections of his empire began to fall away. "
 
     carthage_nation_title: "@CTG Restore Carthage"
-    carthage_nation_desc: "Phoenicians founded Carthage in 814 BC and established political hegemony over other Phoenician settlements throughout the western Mediterranean; this lasted until the end of the 3rd century BC.\n\nAt the height of the city's prominence, it served as a major hub of trade, with trading stations extending throughout the region.\n\nFor much of its history, Carthage was on hostile terms with the Greeks in Sicily and with the Roman Republic; tensions led to a series of armed conflicts known as the Sicilian Wars (c. 600–265 BC) and the Punic Wars (264–146 BC) respectively.\n\nThe city also had to deal with potentially hostile Berbers, the indigenous inhabitants of the area where Carthage was built."
+    carthage_nation_desc: "Phoenicians founded Carthage in 814 BC and established political hegemony over other Phoenician settlements throughout the western Mediterranean; this lasted until the end of the 3rd century BC.\n\nAt the height of the city's prominence, it served as a major hub of trade, with trading stations extending throughout the region.\n\nFor much of its history, Carthage was on hostile terms with the Greeks in Sicily and with the Roman Republi led to a series of armed conflicts known as the Sicilian Wars (600–265 BC) and the Punic Wars (264–146 BC) respectively.\n\nThe city also had to deal with potentially hostile Berbers, the indigenous inhabitants of the area where Carthage was built."
 
     caucasia_nation_title: "@CAU Caucasia"
     caucasia_nation_desc: "A united Caucasian Kingdom can proclaim the true emperorship of a newly proclaimed Empire of Caucasia under one nation, one ruler, one true emperor."
@@ -121,10 +121,10 @@
     east_prussia_nation_desc: "Its capital city was Königsberg. East Prussia was the main part of the region of Prussia along the southeastern Baltic Coast. The bulk of the ancestral lands of the Baltic Old Prussians were enclosed within East Prussia."
 
     emilia_romagna_nation_title: "@ERO Emilia-Romagna"
-    emilia_romagna_nation_desc: "Emilia-Romagna is one of the wealthiest and most developed regions in Europe, unifying it as one kingdom will allow us to conquer many foes." 
+    emilia_romagna_nation_desc: "Emilia-Romagna is one of the wealthiest and most developed regions in Europe, unifying it as one kingdom will allow us to conquer many foes."
 
     empire_of_japan_nation_title: "@JAE The Empire of Japan"
-    empire_of_japan_nation_desc: "Japan's rapid industrialization and militarization under the slogan Fukoku Kyōhei and Shokusan Kōgyō led to its emergence as a world power and the establishment of a colonial empire following the First Sino-Japanese War, the Boxer Rebellion, the Russo-Japanese War, and World War I.\n\nEconomic and political turmoil in the 1920s led to the rise of militarism, nationalism and totalitarianism, eventually culminating in Japan's membership in the Axis alliance and the conquest of a large part of the Asia-Pacific in World War II."
+    empire_of_japan_nation_desc: "Japan began rapid industrialization and militarization under the slogan Fukoku Kyōhei and Shokusan Kogyo led to its emergence as a world power and the establishment of a colonial empire following the First Sino-Japanese War, the Boxer Rebellion, the Russo-Japanese War, and World War I.\n\nEconomic and political turmoil in the 1920s led to the rise of militarism, nationalism and totalitarianism, eventually culminating in Japan's membership in the Axis alliance and the conquest of a large part of the Asia-Pacific in World War II."
 
     europe_nation_title: "@EUR The European Union"
     europe_nation_desc: "The union's purpose is to promote peace, establish a unified economic and monetary system, promote inclusion and combat discrimination, break down barriers to trade and borders, encourage technological and scientific developments, champion environmental protection, and, among others, promote goals like a competitive global market and social progress." 
@@ -133,7 +133,7 @@
     franconia_nation_desc: "The small, franconian nations are no more unimportant and can achieve big victories against their enemies."
 
     franco_iberia_nation_title: "@FIB The Franco-Iberian Empire"
-    franco_iberia_nation_desc: "The Franco-Iberian Empire is the cultural hegemony consisting of Spain, Portugal, and France under one Emperor of the Franco-Iberians." 
+    franco_iberia_nation_desc: "The Franco-Iberian Empire is the cultural hegemony consisting of Spain, Portugal, and France under one Emperor of the Franco-Iberians."
 
     french_empire_nation_title: "@FRE The French Empire"
     french_empire_nation_desc: "In 1804, the Constitution of the Year XII established the First French Empire with Napoleon Bonaparte I, Emperor of the French. Senate and was crowned Emperor of the French at the cathedral of Notre Dame.\n\nThe title emphasized that the emperor ruled over the French people, the nation, and not over France, the republic."
@@ -162,8 +162,8 @@
     himalayan_empire_nation_title: "@HIM Proclaim the Himalayan Empire"
     himalayan_empire_nation_desc: "The Himalaya Kingdom was a mountainous country in the Himalayas mentioned in the Puranas.\n\nHimavat was its ruler and his daughter Parvati, who became a wife of Lord Siva, was a princess from this empire."
 
-    iberian_empire_nation_title: "@IBE Restore the Iberian Union"
-    iberian_empire_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV.\n\nThe union between Portugal and Spain began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
+    iberian_union_nation_title: "@IBE Restore the Iberian Union"
+    iberian_union_nation_desc: "The Iberian Union was the dynastic union of the Kingdom of Portugal and the Spanish Crown between 1580 and 1640, bringing the entire Iberian Peninsula, as well as Spanish and Portuguese overseas possessions, under the Spanish Habsburg kings Philip II, Philip III and Philip IV.\n\nThe union between Portugal and Spain began as a result of the Portuguese crisis of succession and the ensuing War of the Portuguese Succession."
 
     italian_merchant_alliance_nation_title: "@IMA The Italian Merchant Alliance"
     italian_merchant_alliance_nation_desc: " The Italian Merchant Alliance in Italy is an alliance of Maritime Republics into one nation state under a Merchant-Oriented Government of the Mediterranean Basin of which there is much historical presedence such as Venice, Genoa, Pisa, and Amalfi; less known, but not always forgotten are the nations of Ragus, Gaeta, Ancona, and the little republic of Noli.\n\nThrough unification and perseverance we may yet become a dominant great power in Greater Europe."
@@ -240,7 +240,7 @@
     turkey_nation_ottomans_title: "@TRR The Turkish Republic"
     turkey_nation_ottomans_desc: "The Republic of Turkey was created after the overthrow of Sultan Mehmet VI Vahdettin by the new Republican Parliament in 1922.\n\nThis new regime delivered the coup de grâce to the Ottoman state which had been practically wiped away from the world stage following the First World War." 
 
-    two_sicilies_nation_title: "@TTS Restore the Kingdom of Two Sicilies"
+    two_sicilies_nation_title: "@TTS Unite the Two Sicilies"
     two_sicilies_nation_desc: "The Kingdom of Two Sicilies is the union between the Kingdom Sicily and the Kingdom Naples. Together these kingdoms can compete with the Spaniards just as with other Italians."
 
     united_kingdom_nation_title: "@UKI The United Kingdom"
@@ -582,8 +582,8 @@
     restore_byzantine_empire_title: "@BYZ Restore the Byzantine Empire"
     restore_byzantine_empire_desc: "The glorious Byzantine Empire is gone, but as long as there are Greeks in Constantinople, there is hope of resurrection. We can take its place in spirit, but we cannot take its name unless we prove worthy..."
 
-    sultan_of_delhi_title: "@DLH Sultan of Delhi"
-    sultan_of_delhi_desc: "Delhi was once the capital of the entire Indian subcontinent and our own state is in many ways a continuation of their traditions.\n\nLet us reclaim the heritage of the sultans of Delhi, and rule the subcontinent from their ancient capital in the Doab."
+    delhi_nation_title: "@DLH Sultan of Delhi"
+    delhi_nation_desc: "Delhi was once the capital of the entire Indian subcontinent and our own state is in many ways a continuation of their traditions.\n\nLet us reclaim the heritage of the sultans of Delhi, and rule the subcontinent from their ancient capital in the Doab."
 
     english_nation_title: "@ENG Restoration of England"
     english_nation_desc: "Trade has long been a foundation of English national policy. By extending our influence across borders and controlling its political development domestically, we have managed to become one of the foremost European powers. Our colonial expansion is becoming a major factor in promoting our nation's economic growth, reinforcing our position in world affairs."
@@ -611,3 +611,9 @@
 
     nepal_nation_title: "@NPL Unification of Nepal"
     nepal_nation_desc: "While many of them have proud and ancient histories the Himalayan kingdoms are weak and divided. We must unite the entire mountain region under the rule of one kingdom. Together we will be an unstoppable force to the kings of Hindusthan. Content to live of their wealth they have squandered their riches for generations, and will be no match for our hardened armies."
+
+    restore_dai_viet_title: "@DAI Restore Dai Viet"
+    restore_dai_viet_desc: "Dai Viet has been torn apart by feuding noble houses. We must unite the Vietnamese people and restore our kingdom."
+
+     restore_lan_xang_title: "@LXA Restore Lan Xang"
+     restore_lan_xang_desc: "The great Lao nation has been shattered into pieces. It is up to us to reunite the nation by controlling the most important cities and eliminating contenders to the throne."

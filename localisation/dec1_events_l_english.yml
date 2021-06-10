@@ -1,9 +1,5 @@
 ﻿l_english:
 
-  #####################
-  # START BASE EVENTS #
-  #####################
-
     # Holy Roman Empire - Our Place in the Empire Event
 
       dec1_events.1.t: "Our place in the Empire"
@@ -24,34 +20,4 @@
       dec1_events.3.d: "Our state is going through a range of changes that is rapidly reforming our government and political objectives. Unless we invest our time in these goals; they will remain the same without any progress to our power projection.\n\nDeveloper Note: §RNew Missions are not included yet!§!"
       dec1_events.3.a: "Yes, Please!"
       dec1_events.3.b: "No, we cannot abandon our roots."
-
-  ###########################
-  # COUNTRY SPECIFIC EVENTS #
-  ###########################
-
-    #################
-    # Dual Monarchy #
-    #################
-
-    #####################
-    # Lusitanian Empire #
-    #####################
-
-    # planned code, unused for now
-
-    #  dec1_disaster_events_lse_fietoria_crisis.1: "The Merchants Arrive"
-    #  dec1_disaster_events_lse_fietoria_crisis.1.t: "The Merchants Arrive"
-    #  dec1_disaster_events_lse_fietoria_crisis.1.d: "The Merchants are here boys"
-    #  dec1_disaster_events_lse_fietoria_crisis.1.a: "Interesting.."
-
-    #  dec1_disaster_events_lse_fietoria_crisis.2: "The Founding of a new Feitoria"
-    #  dec1_disaster_events_lse_fietoria_crisis.2.t: "The Founding of a new Feitoria"
-    #  dec1_disaster_events_lse_fietoria_crisis.2.d: "Merchants want to found a new Feitoria in $PROVINCE$! They are willing to give us credit and make a fort right away, but in exchange we have to pay then every month for ten years!\n\nIf we do so, the local population might see weakness and try to rebel!"
-    #  dec1_disaster_events_lse_fietoria_crisis.2.a: "Let's accept the deal!"
-    #  dec1_disaster_events_lse_fietoria_crisis.2.b: "We can't afford to accept it now.."
-    #  dec1_disaster_events_lse_fietoria_crisis.2.c: "No, we don't want to make a Feitoria in $PROVINCE$"
-
-    ############################
-    # United States of America #
-    ############################
 

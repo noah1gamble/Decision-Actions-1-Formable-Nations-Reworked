@@ -7,6 +7,50 @@
 	# dec1_national_peoples_congress
 
   #################################
+  # Iberian Union Unique Factions #
+  #################################
+
+	dec1_aragon_nobility = {
+		monarch_power = ADM
+
+		modifier = {
+			army_tradition_decay = -0.01
+		}
+	}
+
+	dec1_castile_nobility = {
+		monarch_power = ADM
+
+		modifier = {
+			naval_maintenance_modifier = -0.1
+		}
+	}
+
+	dec1_leon_nobility = {
+		monarch_power = ADM
+
+		modifier = {
+			core_creation = -0.1
+		}
+	}
+
+	dec1_portugal_nobility = {
+		monarch_power = ADM
+
+		modifier = {
+			global_colonial_growth = 10
+		}
+	}
+
+	dec1_navarra_nobility = {
+		monarch_power = ADM
+
+		modifier = {
+			global_unrest = -2
+		}
+	}
+
+  #################################
   # Dual Monarchy Unique Factions #
   #################################
 

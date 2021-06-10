@@ -16,50 +16,49 @@ country_decisions = {
 				tag = BEL
 				tag = EUR
 				tag = FRL
-			}		
+			}
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
 				tag = BUR
-			}					
+			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
 					num_of_cities = 1 # Unique Netherlands Requirement
 				}
-			}		
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
 					# Dutch
-				province_id = 95 
-				province_id = 96 
-				province_id = 97 
-				province_id = 98 
-				province_id = 99 
-				province_id = 100 
+				province_id = 95
+				province_id = 96
+				province_id = 97
+				province_id = 98
+				province_id = 99
+				province_id = 100
 				province_id = 4381
 				province_id = 4382
-				province_id = 4383				
+				province_id = 4383
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}			
+		}
 		allow = {
 			adm_tech = 10
 			NOT = { exists = NED }
 			is_subject = no
 			is_at_war = no
-				# Dutch
-			owns_core_province = 95 
-			owns_core_province = 96 
-			owns_core_province = 97 
-			owns_core_province = 98 
-			owns_core_province = 99 
-			owns_core_province = 100 
+			owns_core_province = 95
+			owns_core_province = 96
+			owns_core_province = 97
+			owns_core_province = 98
+			owns_core_province = 99
+			owns_core_province = 100
 			owns_core_province = 4381
 			owns_core_province = 4382
 			owns_core_province = 4383
@@ -69,8 +68,8 @@ country_decisions = {
 			set_country_flag = formed_netherlands_nation_flag # Country Formation Flag
 			custom_tooltip = form_netherlands_tt_2 # New Missions
 			custom_tooltip = form_netherlands_tt_3 # Claims
-			custom_tooltip = dec1_decisions_blank	
-			NED = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			NED = { # Capital change and bonuses[
 				set_capital = 97 # Amsterdam
 				97 = {
 					add_base_tax = 1
@@ -78,7 +77,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank[
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -86,17 +85,17 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_dutch_republic # Government Type Change
-				}				
+				}[
 				# Reform Change
 				add_government_reform = dutch_republic
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Culture
 					if = {
@@ -112,7 +111,7 @@ country_decisions = {
 						}
 						add_permanent_claim = NED
 					}
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -129,9 +128,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -146,21 +145,22 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_dutch_trade_empire
 					duration = 49275
-				}					
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1
 			modifier = { # Burgundy doesn't like Dutch people.. what a dick
 				factor = 0
 				tag = BUR
-			}			
+			}
 		}
 		ai_importance = 400
-	}	
+	}
+
 }

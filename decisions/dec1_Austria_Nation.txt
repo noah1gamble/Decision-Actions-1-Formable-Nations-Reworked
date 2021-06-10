@@ -7,9 +7,9 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			primary_culture = austrian
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_austria_flag
-				exists = HAB				
+				exists = HAB
 				tag = HAB
 				tag = PAP
 				tag = HLR
@@ -44,7 +44,7 @@ country_decisions = {
 			change_tag = HAB # Country TAG
 			set_country_flag = formed_austria_flag # Country Formation Flag
 			custom_tooltip = form_austria_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank				
+			custom_tooltip = dec1_decisions_blank
 			HAB = { # Capital change and bonuses
 				set_capital = 134 # Wien
 				134 = {
@@ -52,7 +52,7 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -60,19 +60,19 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}			
+				}
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank											
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					country_event = { id = dec1_events.1 }	
-				}	
+					country_event = { id = dec1_events.1 }
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -91,7 +91,7 @@ country_decisions = {
 						change_government = monarchy
 					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -106,13 +106,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_restore_the_habsburgs
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}			
+			}
 		}
 		ai_will_do = {
 			factor = 1

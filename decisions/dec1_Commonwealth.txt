@@ -31,18 +31,16 @@ country_decisions = {
 				ai = yes
 				exists = yes
 				was_player = no
-			}	
+			}
 			OR = {
 				ai = no
 				AND = {
 					senior_union_with = LIT
 					LIT = { # This overlaps with allow for AI, is meant to negate do_not_integrate
-						NOT = {
-							num_of_cities = 58 # Keep this number the same as in allow. Original 38 +10
-						}
+						NOT = { num_of_cities = 48 } # Original 38 +10
 					}
 				}
-			}					
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -68,44 +66,54 @@ country_decisions = {
 			PLC = { exists = no }
 			MAZ = { exists = no }
 			is_subject = no
-			is_at_war = no		
+			is_at_war = no
 			owns_core_province = 262 # Krakow
 			owns_core_province = 257 # Warszawa
 			owns_core_province = 43 # Danzig
 			owns_core_province = 1841 # Marienburg
 			LIT = {
-				senior_union_with = POL
-				NOT = { 
-					num_of_cities = 58 # Keep this number the same as in potential. Original 38 +10
-				} 
-			}				
+				OR = {
+					AND = {
+						junior_union_with = POL
+						NOT = {
+							num_of_cities = 48 # Original 38 +10
+							num_of_cities = POL
+						}
+					}
+					AND = {
+						junior_union_with = POL
+						years_in_union_under = {
+							who = POL
+							years = 100
+						}
+					}
+				}
+			}
 		}
 		effect = {
 			change_tag = PLC # Country TAG
 			set_country_flag = formed_commonwealth_flag # Country Formation Flag
 			custom_tooltip = form_commonwealth_tt_4 # New Missions
-			custom_tooltip = form_commonwealth_tt_5 # Region/Area Claims	
-			custom_tooltip = form_commonwealth_tt_6 # Region/Area Claims	
-			custom_tooltip = form_commonwealth_tt_7 # Region/Area Claims	
-			custom_tooltip = form_commonwealth_tt_8 # Region/Area Claims	
+			custom_tooltip = form_commonwealth_tt_5 # Region/Area Claims
+			custom_tooltip = form_commonwealth_tt_6 # Region/Area Claims
+			custom_tooltip = form_commonwealth_tt_7 # Region/Area Claims
+			custom_tooltip = form_commonwealth_tt_8 # Region/Area Claims
 			if = {
 				limit = {
-					NOT = { 
-						accepted_culture = lithuanian 
-					}
+					NOT = { accepted_culture = lithuanian }
 				}
 				add_accepted_culture = lithuanian
-			}		
+			}
 			inherit = LIT
-			custom_tooltip = dec1_decisions_blank	
-			PLC = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			PLC = { # Capital change and bonuses
 				set_capital = 262 # Krakow
 				262 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -113,9 +121,9 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Changes
-				add_government_reform = autocracy_reform						
+				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -123,11 +131,10 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
-					# Poland
-					if = {
+					if = { # Poland
 						limit = {
 							poland_region = {
 								NOT = { owned_by = POL }
@@ -139,8 +146,7 @@ country_decisions = {
 							add_permanent_claim = PLC
 						}
 					}
-					# White Ruthenia
-					if = {
+					if = { # White Ruthenia
 						limit = {
 							white_ruthenia_area = {
 								NOT = { owned_by = POL }
@@ -152,8 +158,7 @@ country_decisions = {
 							add_permanent_claim = PLC
 						}
 					}
-					# Lithuania
-					if = {
+					if = { # Lithuania
 						limit = {
 							lithuania_area = {
 								NOT = { owned_by = POL }
@@ -165,8 +170,7 @@ country_decisions = {
 							add_permanent_claim = PLC
 						}
 					}
-					# Pripyat
-					if = {
+					if = { # Pripyat
 						limit = {
 							pripyat_area = {
 								NOT = { owned_by = POL }
@@ -178,7 +182,7 @@ country_decisions = {
 							add_permanent_claim = PLC
 						}
 					}
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -195,9 +199,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -212,7 +216,7 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_the_commonwealth_union
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
@@ -224,9 +228,8 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
-		do_not_integrate = LIT		
+		do_not_integrate = LIT
 	}
 
 	# Removed Lithuania Unique Formation for now
-	
 }
