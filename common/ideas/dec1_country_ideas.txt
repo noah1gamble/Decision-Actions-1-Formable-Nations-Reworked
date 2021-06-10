@@ -3256,7 +3256,7 @@ SCA_ideas = {
 	free = yes	# will be added at load.
 
 	SCA_norse_legends = {
-		prestige_decay = -0.05
+		prestige_decay = -0.10
 	}
 
 	SCA_defend_the_empire = {
