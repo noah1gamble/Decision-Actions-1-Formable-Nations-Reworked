@@ -69,15 +69,15 @@ dec1_british_parliament_british_naval_concessions = {
 		# Arabian Kingdom
 
 	dec1_legacy_of_muhammad = {
-		discipline = 0.1 
-		land_morale = 0.1 
+		discipline = 0.1
+		land_morale = 0.1
 	}
 
 		# Armenian Empire
-		
+
 	dec1_cultural_warfare = {
 		culture_conversion_cost = -0.40
-		num_accepted_cultures = -2	
+		num_accepted_cultures = -2
 	}
 
 		# Republic of Armenia
@@ -236,7 +236,7 @@ dec1_british_parliament_british_naval_concessions = {
 		# East Germany
 
 	dec1_combloc_formations = {
-		reserves_organisation = 0.2 
+		reserves_organisation = 0.2
 	}
 
 		# Eastern Roman Empire
@@ -262,8 +262,8 @@ dec1_british_parliament_british_naval_concessions = {
 		# European Union
 
 	dec1_the_union = {
-		country_admin_power = 2 
-		country_diplomatic_power = 2 
+		country_admin_power = 2
+		country_diplomatic_power = 2
 	}
 
 		# Franco-Iberian Empire
@@ -300,17 +300,17 @@ dec1_british_parliament_british_naval_concessions = {
 		# German Empire
 
 	dec1_the_german_union = {
-		legitimacy = 1 
+		legitimacy = 1
 		monarch_admin_power = 1
-		monarch_diplomatic_power = 3 
+		monarch_diplomatic_power = 3
 		ae_impact = 0.1 # Debuff
 	}
 
 		# Goguryeo
 
 	dec1_korean_kingdom = {
-		global_tax_modifier = 0.10 
-		war_taxes_cost_modifier = -0.2 
+		global_tax_modifier = 0.10
+		war_taxes_cost_modifier = -0.2
 	}
 
 		# Hansa
@@ -376,9 +376,9 @@ dec1_british_parliament_british_naval_concessions = {
 	}
 
 		# Kievan Rus
-	
+
 	dec1_kievan_kingdom = {
-		land_morale = 0.1 
+		land_morale = 0.1
 		defensiveness = 0.10
 	}
 
@@ -424,7 +424,7 @@ dec1_british_parliament_british_naval_concessions = {
 		# North German Confederation
 
 	dec1_prussian_influences = {
-		drill_gain_modifier = 0.1 
+		drill_gain_modifier = 0.1
 		yearly_army_professionalism = 0.01
 	}
 
@@ -455,7 +455,13 @@ dec1_british_parliament_british_naval_concessions = {
 		# Saudi Arabia
 
 	dec1_house_of_saud = {
-		culture_conversion_cost = -0.15	
+		culture_conversion_cost = -0.15
+	}
+
+		# Serbian Empire
+
+	dec1_the_mighty_serbia = {
+		siege_ability = 0.10
 	}
 
 		# Siebenbuergen
@@ -475,7 +481,7 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_soviet_socialist_republics = {
 		vassal_income = 0.8 # 80% Vassal Income
-		land_attrition = -0.05	
+		land_attrition = -0.05
 	}
 
 		# Sweden-Norway
@@ -502,20 +508,20 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_turkish_nationalism = {
 		discipline = 0.02
-		cav_to_inf_ratio = 0.10 
+		cav_to_inf_ratio = 0.10
 	}
 
 		# United Kingdom
 
 	dec1_rule_britannia = {
 		own_coast_naval_combat_bonus = 2.0
-		naval_maintenance_modifier = -0.1 
+		naval_maintenance_modifier = -0.1
 	}
 
 		# West Germany
 
 	dec1_western_german_rights = {
-		production_efficiency = 0.15		
+		production_efficiency = 0.15
 	}
 
 		# Western Roman Empire
@@ -542,7 +548,7 @@ dec1_british_parliament_british_naval_concessions = {
 		nobles_loyalty_modifier = 0.1
 	}
 
-	# Andalusia 
+	# Andalusia
 
 	dec1_caliphate_of_cordoba = {
 		warscore_cost_vs_other_religion = -0.10
@@ -560,7 +566,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Armenia
 
 	dec1_classical_antiquity = {
-		prestige_from_land = 0.10 
+		prestige_from_land = 0.10
 	}
 
 	# Bharat
@@ -573,7 +579,7 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_sunni_uzbeks = {
 		religious_unity = 0.1
-		tolerance_own = 1 
+		tolerance_own = 1
 	}
 
 	# Commonwealth
@@ -585,37 +591,37 @@ dec1_british_parliament_british_naval_concessions = {
 	# Croatia
 
 	dec1_croats_and_slovenes = {
-		num_accepted_cultures = 1 
+		num_accepted_cultures = 1
 	}
 
 	# Deccan
 
 	dec1_sultans_of_india = {
-		manpower_in_true_faith_provinces= 0.10 
+		manpower_in_true_faith_provinces= 0.10
 	}
 
 	# Egypt
 
 	dec1_kingdom_of_pharaohs = {
-		loot_amount = 0.10 
+		loot_amount = 0.10
 	}
 
 	# Germany
 
 	dec1_germany_proper = {
-		general_cost = -0.10 
+		general_cost = -0.10
 	}
 
 	# Golden Horde
 
 	dec1_remnants_of_the_mongols = {
-		raze_power_gain = 0.10 
+		raze_power_gain = 0.10
 	}
 
-	# Great Britain 
+	# Great Britain
 
 	dec1_the_british_commonwealth = {
-		free_leader_pool = 2 
+		free_leader_pool = 2
 	}
 
 	# Greece
@@ -625,9 +631,9 @@ dec1_british_parliament_british_naval_concessions = {
 	}
 
 	# Hanover
-	
+
 	dec1_british_influences = {
-		administrative_efficiency = 0.2 
+		administrative_efficiency = 0.2
 	}
 
 	# Hindustan
@@ -639,7 +645,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Holy Roman Empire
 
 	dec1_legacy_of_the_holy_roman_empire = {
-		yearly_army_professionalism = 0.01 
+		yearly_army_professionalism = 0.01
 	}
 
 	# Iceland
@@ -658,8 +664,8 @@ dec1_british_parliament_british_naval_concessions = {
 	# Inca
 
 	dec1_native_empire = {
-		loot_amount = 0.10 
-		general_cost = -0.10 
+		loot_amount = 0.10
+		general_cost = -0.10
 	}
 
 	# Ireland
@@ -690,7 +696,7 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_battle_memoirs = {
 		war_exhaustion = -0.10
-	}		
+	}
 
 	# Malaya
 
@@ -702,7 +708,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Manchu
 
 	dec1_manchu_banner_camps = {
-		land_morale = 0.10 
+		land_morale = 0.10
 	}
 
 	# Marathas
@@ -714,7 +720,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Maya
 
 	dec1_league_of_mayapan = {
-		diplomatic_reputation = 1 
+		diplomatic_reputation = 1
 	}
 
 	# Mongol Empire
@@ -744,8 +750,8 @@ dec1_british_parliament_british_naval_concessions = {
 	# Netherlands
 
 	dec1_dutch_trade_empire = {
-		global_trade_power = 0.1 
-		placed_merchant_power = 2 
+		global_trade_power = 0.1
+		placed_merchant_power = 2
 	}
 
 	# Persia
@@ -782,7 +788,7 @@ dec1_british_parliament_british_naval_concessions = {
 	}
 
 	# Romania
-	
+
 	dec1_legacy_of_rome = {
 		prestige = 0.1
 		prestige_decay = -0.01
@@ -806,7 +812,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Russia
 
 	dec1_third_rome = {
-		missionaries = 1 
+		missionaries = 1
 		tolerance_heathen = -1
 	}
 
@@ -839,7 +845,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Sokoto
 
 	dec1_the_sokoto_caliphate = {
-		religious_unity = 0.7 
+		religious_unity = 0.7
 	}
 
 	# Spain
@@ -853,7 +859,7 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_great_kingdom_of_germany = {
 		shock_damage = 0.10
-		shock_damage_received = -0.10 
+		shock_damage_received = -0.10
 	}
 
 	# Tibet
@@ -948,7 +954,7 @@ dec1_british_parliament_british_naval_concessions = {
 	}
 
 	# Cuba
-	
+
 	dec1_cuban_hostilities = {
 		garrison_size = 0.10
 	}
@@ -957,7 +963,7 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_the_heat_of_florida = {
 		land_attrition = -0.05
-		hostile_attrition = 1 
+		hostile_attrition = 1
 	}
 
 	# Haiti
@@ -1008,7 +1014,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Quebec
 
 	dec1_northern_republic = {
-		republican_tradition = 0.5 
+		republican_tradition = 0.5
 	}
 
 	# Sonora
@@ -1020,7 +1026,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Texas
 
 	dec1_lone_star = {
-		land_forcelimit_modifier = 0.10 
+		land_forcelimit_modifier = 0.10
 	}
 
 	# United Central America
@@ -1061,19 +1067,19 @@ dec1_british_parliament_british_naval_concessions = {
 
 	dec1_restore_the_habsburgs = {
 		legitimacy = 1
-		imperial_authority = 0.05 
+		imperial_authority = 0.05
 	}
 
 	# Bavaria
 
 	dec1_unification_of_bavaria = {
-		defensiveness = 0.10 
+		defensiveness = 0.10
 	}
 
 	# Byzantium
 
 	dec1_eastern_roman_successor = {
-		legitimacy = 1 
+		legitimacy = 1
 		siege_ability = 0.03
 	}
 
@@ -1134,7 +1140,7 @@ dec1_british_parliament_british_naval_concessions = {
 	# Scotland
 
 	dec1_restoration_of_scotland = {
-		religious_unity = 0.5 
+		religious_unity = 0.5
 		tolerance_heathen = -1
 	}
 
@@ -1153,6 +1159,5 @@ dec1_british_parliament_british_naval_concessions = {
 	# Yemen
 
 	dec1_restore_yemeni_freedom = {
-		merchants = 1 
+		merchants = 1
 	}
-	

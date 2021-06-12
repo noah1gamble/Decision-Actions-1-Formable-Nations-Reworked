@@ -1,43 +1,63 @@
 country_decisions = {
 
-	polish_nation = {
+	###################################
+	# German Reich - as German Empire #
+	###################################
+
+	german_reich_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			tag = GEP
 			NOT = {
-				has_country_flag = formed_poland_flag
-				exists = POL
-				tag = POL
-				tag = LIT
-				tag = JGE
-				tag = HLR
+				has_country_flag = formed_german_reich_nation_flag
+				has_reform = celestial_empire
 				tag = PAP
-			}
-			OR = {
-				primary_culture = polish
-				primary_culture = pommeranian
-				primary_culture = schlesian
-				tag = DNZ
+				tag = HLR
+				tag = ROM
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 6
+					num_of_cities = 12
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 262	# Krakow
-				province_id = 257	# Warszawa
-				province_id = 4528	# Kujawy
-				province_id = 255	# Kalish
-				province_id = 258	# Sieradz
-				province_id = 259	# Sandomierz
-				province_id = 1939	# Leczyca
+				area = wielkopolska_area
+				area = silesia_area
+				area = kuyavia_area
+				area = west_prussia_area
+				area = east_prussia_area
+				area = holstein_area
+				area = mecklenburg_area
+				area = lower_saxony_area
+				area = weser_area
+				area = vorpommern_area
+				area = mittelmark_area
+				area = northern_saxony_area
+				area = braunschweig_area
+				area = westphalia_area
+				area = hesse_area
+				area = north_rhine_area
+				area = lower_rhineland_area
+				area = south_saxony_area
+				area = palatinate_area
+				area = franconia_area
+				area = upper_rhineland_area
+				area = lower_swabia_area
+				area = lower_bavaria_area
+				area = upper_swabia_area
+				area = thuringia_area
+				province_id = 1763
+				province_id = 1931
+				province_id = 188
+				province_id = 2955
+				province_id = 65
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -45,40 +65,31 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
-			NOT = { exists = POL }
-			is_at_war = no
+			adm_tech = 15
+			NOT = { exists = NAZ }
 			is_subject = no
-			owns_core_province = 262	# Krakow
-			owns_core_province = 257	# Warszawa
-			owns_core_province = 254	# Poznan
-			owns_core_province = 255	# Kalish
-			owns_core_province = 258	# Sieradz
-			owns_core_province = 259	# Sandomierz
-			owns_core_province = 1939	# Leczyca
+			is_at_war = no
+			NOT = {
+				is_emperor = yes
+				government = theocracy
+			}
+			owns_core_province = 50 # Berlin
 		}
 		effect = {
-			change_tag = POL # Country TAG
-			set_country_flag = formed_poland_flag # Country Formation Flag
-			custom_tooltip = form_poland_tt_2 # New Missions
+			change_tag = NAZ # Country TAG
+			set_country_flag = formed_german_reich_nation_flag # Country Formation Flag
+			custom_tooltip = form_german_reich_tt_2 # New Missions
+			custom_tooltip = form_german_reich_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank
-			if = {
-				limit = {
-					NOT = {
-						primary_culture = polish
-					}
-				}
-				change_primary_culture = polish
-			}
-			POL = { # Capital change and bonuses
-				set_capital = 262 # Krakow
-				262 = {
+			NAZ = { # Capital change and bonuses
+				set_capital = 50 # Berlin
+				85 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
 				custom_tooltip = dec1_decisions_blank
-				custom_tooltip = dec1_government_rank_2 # Government Rank Change
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
 					limit = {
@@ -86,6 +97,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
+				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -96,16 +108,15 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Culture
-					# Claims
+					# Claims on Greater German Reich
 					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 2
+								government_rank = 3
 								}
 							}
-						set_government_rank = 2
+						set_government_rank = 3
 					}
 					# Government Type Change
 					if = {
@@ -121,7 +132,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = POL_ideas }
+						NOT = { has_idea_group = NAZ_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -130,7 +141,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_polish_uprising
+					name = dec1_national_socialist_workers_party
 					duration = 49275
 				}
 				# Increased Centralization
@@ -143,7 +154,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #If there is no Poland then Polish minors will prioritize reforming it.
+		ai_importance = 400
 	}
 
 }

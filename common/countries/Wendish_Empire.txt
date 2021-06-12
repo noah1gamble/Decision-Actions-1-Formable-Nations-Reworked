@@ -1,19 +1,19 @@
-#Poland
+# Wendish Empire
 
 graphical_culture = easterngfx
 
-color = { 197  92  106 }
+color = { 156 28 45 }
 
-revolutionary_colors = { 5  0  5 }
+revolutionary_colors = { 107 14 26 }
 
 historical_idea_groups = {
 	diplomatic_ideas
-	humanist_ideas	
+	humanist_ideas
 	trade_ideas
 	offensive_ideas
 	administrative_ideas
 	defensive_ideas
-	aristocracy_ideas	
+	aristocracy_ideas
 	quality_ideas
 }
 
@@ -37,14 +37,9 @@ historical_units = {
 
 monarch_names = {
 	"August #1" = 60
-	"Wladyslaw #3" = 60
-	"Stanislaw #0" = 40
 	"Kazimierz #3" = 20
 	"Aleksander #0" = 20
 	"Henryk #0" = 20
-	"Jan #0" = 20
-	"Jan #0 Olbracht" = 20
-	"Jan #0 Kazimierz" = 20
 	"Michal #0" = 20
 	"Stefan #0" = 20
 	"Zygmunt #0" = 20
@@ -53,7 +48,6 @@ monarch_names = {
 	"Zygmunt #0 Kazimierz" = 15
 	"Krzysztof #0" = 10
 	"Fryderyk #0" = 10
-	"Jan #0 Zygmunt" = 10
 	"Karol #0 Ferdynand" = 10
 	"Olbracht #0" = 10
 	"Albert #0" = 0

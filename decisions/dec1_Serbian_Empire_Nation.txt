@@ -1,0 +1,203 @@
+country_decisions = {
+
+	##################
+	# Serbian Empire #
+	##################
+
+	serbian_empire_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			primary_culture = serbian
+			NOT = {
+				has_country_flag = formed_serbian_empire_flag
+				exists = LVE
+				tag = MAC
+				tag = BYZ
+				tag = TUR
+				tag = PAP
+				tag = GRE
+				tag = BUL
+				tag = ROM
+				tag = BOS
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				# Core Serbia
+				province_id = 4176
+				province_id = 141
+				province_id = 4757
+				province_id = 3000
+				province_id = 1827
+				province_id = 138
+				province_id = 1766
+				# Bosnia
+				province_id = 4755
+				province_id = 3002
+				# Herzegovina
+				province_id = 1831
+				# Ragusa
+				province_id = 137
+				# Venitian Colonies
+				province_id = 4174
+				province_id = 4754
+				# Albania
+				province_id = 4750
+				province_id = 4175
+				# Turkish Lands
+				province_id = 4703
+				province_id = 3001
+				province_id = 4702
+				province_id = 148
+				province_id = 4780
+				province_id = 1853
+				province_id = 147
+				province_id = 144
+				province_id = 143
+				# Epirus
+				province_id = 4699
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = SRE }
+			is_subject = no
+			is_at_war = no
+			# Core Serbia
+			owns_core_province = 4176
+			owns_core_province = 141
+			owns_core_province = 4757
+			owns_core_province = 3000
+			owns_core_province = 1827
+			owns_core_province = 138
+			owns_core_province = 1766
+			# Bosnia
+			owns_core_province = 4755
+			owns_core_province = 3002
+			# Herzegovina
+			owns_core_province = 1831
+			# Ragusa
+			owns_core_province = 137
+			# Venitian Colonies
+			owns_core_province = 4174
+			owns_core_province = 4754
+			# Albania
+			owns_core_province = 4750
+			owns_core_province = 4175
+			# Turkish Lands
+			owns_core_province = 4703
+			owns_core_province = 3001
+			owns_core_province = 4702
+			owns_core_province = 148
+			owns_core_province = 4780
+			owns_core_province = 1853
+			owns_core_province = 147
+			owns_core_province = 144
+			owns_core_province = 143
+			# Epirus
+			owns_core_province = 4699
+		}
+	 	effect = {
+			change_tag = SRE # Country TAG
+			set_country_flag = formed_serbian_empire_flag # Country Formation Flag
+			custom_tooltip = form_serbian_empire_tt_2 # New Missions
+			custom_tooltip = dec1_decisions_blank
+			SRE = { # Capital change and bonuses
+				set_capital = 1827 # Raska
+				1827 = {
+					rename_capital = "Nerodimlje"
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				# Government Rank Change
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_3
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}
+				# Reform Change
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Claims
+					thrace_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = SRE
+					}
+					# Government Rank change
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = SRE_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_the_mighty_serbia # named after stefan dusan
+					duration = 49275
+				}
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

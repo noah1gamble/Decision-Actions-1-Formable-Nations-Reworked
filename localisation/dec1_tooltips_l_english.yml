@@ -179,7 +179,7 @@
  form_romania_tt_4: "§YBynaztium§!, §YRoman Republic§!, and §YRoman Empire§! must all not exist, or §Y[Root.GetName]§! must control one of these existing nations as a subject."
 
  form_celtic_union_tt_1: "Owns all cores of the §YCeltic Union§!"
- form_celtic_union_tt_2: "Country obtains §YCeltic§! missions."
+ form_celtic_union_tt_2: "Country obtains §YCeltic Union§! missions."
 
  form_roman_republic_tt_1: "Owns all cores of the §YRoman Republic§!"
  form_roman_republic_tt_2: "Country obtains §YRoman Republic§! missions."
@@ -396,6 +396,21 @@
 
  form_sweden_norway_tt_2: "Country obtains §YSweden-Norway§! missions."
 
+ form_serbian_empire_tt_2: "Country obtains §YSerbian Empire§! missions."
+ form_serbian_empire_tt_3: "Country gains a permanent claim on §YThrace§! area."
+
+ form_wendish_empire_tt_2: "Owns all cores of the §YWendish Empire§!"
+ form_wendish_empire_tt_3: "Country obtains §YWendish Empire§! missions."
+
+ form_hungarian_empire_tt_1: "Owns all cores of the §YHungarian Empire§!"
+ form_hungarian_empire_tt_2: "Country obtains §YHungarian Empire§! missions."
+
+ form_madagascar_tt_2: "Country obtains §YMadagascar§! missions."
+ form_madagascar_tt_3: "Country gains a permanent claim on §YMozambique§! area."
+
+ form_occitania_nation_tt_2: "Country obtains §YOccitania§! missions."
+ form_occitania_nation_tt_3: "Country gains a permanent claim on all §YGascon§! cores."
+
  ###########################
  # VANILLA NATION TOOLTIPS #
  ###########################
@@ -405,7 +420,7 @@
  form_armenia_kingdom_tt_4: "Country gains a permanent claim on §YSamtskhe§! area."
  form_armenia_kingdom_tt_5: "Country gains a permanent claim on §YErzurum§! area."
  form_armenia_kingdom_tt_6: "Country gains a permanent claim on §YNorth Kurdistan§! area."
- form_armenia_kingdom_tt_7: "Country gains a permanent claim on §YCukurova§! area." 
+ form_armenia_kingdom_tt_7: "Country gains a permanent claim on §YCukurova§! area."
 
  form_commonwealth_tt_4: "Country obtains §YCommonwealth§! missions."
  form_commonwealth_tt_5: "Country gains a permanent claim on §YPoland§! region."

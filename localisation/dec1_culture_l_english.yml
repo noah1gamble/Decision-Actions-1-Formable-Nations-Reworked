@@ -7,6 +7,9 @@
  anglois: "Anglois"
  anglois_desc: "Anglois is a culture in western Europe, and is almost exclusively in the Dual Monarchy, serving as the nation's primary culture. Anglois is a mix of French and English cultures due to the intermingling of the two in metropolitan areas such as Londres (London) and Paris proceeding the end of the Hundred years' war. The nobility of the Dual Monarchy are almost exclusively Anglois as well, due to the kings of the Dual Monarchy speaking French, and the ruling Nobility at the times fondness for English language and culture they started speaking French and English, mainly French after a while though, This is also the Likely origin of the Anglois culture and language."
 
+ wendish: "Wendish"
+ wendish_desc: "Wends were any member of a group of Slavic tribes that had settled in the area between the Oder River and the Elbe and Saale rivers by the 5th century AD in what is now eastern Germany. The Wends occupied the eastern borders of the domain of the Franks and other Germanic peoples. From the 6th century the Franks warred sporadically against the Wends, and, under Charlemagne in the early 9th century, they began a campaign to subjugate the Wends and forcibly convert them to Christianity. German annexation of the Wendish territories began under Henry I in 929, but the Germans’ control of the area east of the Elbe collapsed during a Wendish rebellion in 983. During their periodic rebellions against both Slavic and German overlords, the Wendish peasantry would also repudiate Christianity."
+
  ##############################
  # CULTURE GROUP LOCALISATION #
  ##############################
@@ -14,8 +17,11 @@
  franco_british: "Franco-British"
  franco_british_desc: ""
 
-
  angevin: "Angevin"
-
+ angevin_desc: ""
 
  anglo_dutch: "Anglo-Dutch"
+ anglo_dutch_desc: ""
+
+ west_slavic_lost_culture: "West Slavic Lost Cultures"
+ west_slavic_lost_culture_desc: ""

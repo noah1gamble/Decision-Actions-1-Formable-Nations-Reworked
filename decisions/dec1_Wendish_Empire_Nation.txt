@@ -1,0 +1,327 @@
+country_decisions = {
+
+	wendish_empire_nation = {
+		major = yes
+		potential = {
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
+			NOT = {
+				has_country_flag = formed_wendish_empire_flag
+				exists = WNE
+				tag = WNE
+				tag = POL
+				tag = JGE
+				tag = HLR
+				tag = PAP
+			}
+			OR = {
+				culture_group = west_slavic
+				culture_group = germanic
+				culture_group = baltic
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 12
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				# Livonia
+				province_id = 35
+				province_id = 37
+				province_id = 1834
+				province_id = 4241
+				province_id = 38
+				province_id = 1935
+				province_id = 39
+				province_id = 273
+				# Lithuania
+				province_id = 275
+				province_id = 770
+				province_id = 4535
+				province_id = 272
+				province_id = 271
+				province_id = 1936
+				province_id = 270
+				province_id = 4536
+				province_id = 1936
+				province_id = 1937
+				province_id = 269
+				# Mazovia
+				province_id = 1938
+				province_id = 257
+				province_id = 256
+				province_id = 4525
+				# Poland
+				province_id = 259
+				province_id = 262
+				province_id = 4527
+				province_id = 1939
+				province_id = 258
+				province_id = 4533
+				province_id = 255
+				province_id = 4528
+				province_id = 4524
+				province_id = 4526
+				province_id = 4523
+				province_id = 254
+				province_id = 2963
+				# Opole
+				province_id = 264
+				province_id = 4723
+				province_id = 263
+				# Glogow
+				province_id = 4238
+				province_id = 2966
+				# Teutonic Order
+				province_id = 40
+				province_id = 767
+				province_id = 41
+				province_id = 42
+				province_id = 2958
+				province_id = 1841
+				province_id = 43
+				province_id = 2997
+				province_id = 1859
+				# Bohemia
+				province_id = 2970
+				province_id = 1771
+				province_id = 60
+				province_id = 4778
+				province_id = 1763
+				# Saxony
+				province_id = 61
+				province_id = 4744
+				province_id = 62
+				province_id = 59
+				# Magdeburg
+				province_id = 52
+				province_id = 4741
+				# Wolgast
+				province_id = 2995
+				province_id = 48
+				province_id = 2994
+				province_id = 47
+				province_id = 4745
+				# Stettin
+				province_id = 4746
+				province_id = 1858
+				# Brandenburg
+				province_id = 2969
+				province_id = 50
+				province_id = 2993
+				province_id = 1759
+				province_id = 51
+				province_id = 4748
+				province_id = 4786
+				province_id = 2964
+				# Anhalt
+				province_id = 58
+				# Mecklenburg
+				province_id = 4749
+				province_id = 46
+				province_id = 2996
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = WNE }
+			is_at_war = no
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_wendish_empire_tt_2
+				# Livonia
+				owns_core_province = 35
+				owns_core_province = 37
+				owns_core_province = 1834
+				owns_core_province = 4241
+				owns_core_province = 38
+				owns_core_province = 1935
+				owns_core_province = 39
+				owns_core_province = 273
+				# Lithuania
+				owns_core_province = 275
+				owns_core_province = 770
+				owns_core_province = 4535
+				owns_core_province = 272
+				owns_core_province = 271
+				owns_core_province = 1936
+				owns_core_province = 270
+				owns_core_province = 4536
+				owns_core_province = 1936
+				owns_core_province = 1937
+				owns_core_province = 269
+				# Mazovia
+				owns_core_province = 1938
+				owns_core_province = 257
+				owns_core_province = 256
+				owns_core_province = 4525
+				# Poland
+				owns_core_province = 259
+				owns_core_province = 262
+				owns_core_province = 4527
+				owns_core_province = 1939
+				owns_core_province = 258
+				owns_core_province = 4533
+				owns_core_province = 255
+				owns_core_province = 4528
+				owns_core_province = 4524
+				owns_core_province = 4526
+				owns_core_province = 4523
+				owns_core_province = 254
+				owns_core_province = 2963
+				# Opole
+				owns_core_province = 264
+				owns_core_province = 4723
+				owns_core_province = 263
+				# Glogow
+				owns_core_province = 4238
+				owns_core_province = 2966
+				# Teutonic Order
+				owns_core_province = 40
+				owns_core_province = 767
+				owns_core_province = 41
+				owns_core_province = 42
+				owns_core_province = 2958
+				owns_core_province = 1841
+				owns_core_province = 43
+				owns_core_province = 2997
+				owns_core_province = 1859
+				# Bohemia
+				owns_core_province = 2970
+				owns_core_province = 1771
+				owns_core_province = 60
+				owns_core_province = 4778
+				owns_core_province = 1763
+				# Saxony
+				owns_core_province = 61
+				owns_core_province = 4744
+				owns_core_province = 62
+				owns_core_province = 59
+				# Magdeburg
+				owns_core_province = 52
+				owns_core_province = 4741
+				# Wolgast
+				owns_core_province = 2995
+				owns_core_province = 48
+				owns_core_province = 2994
+				owns_core_province = 47
+				owns_core_province = 4745
+				# Stettin
+				owns_core_province = 4746
+				owns_core_province = 1858
+				# Brandenburg
+				owns_core_province = 2969
+				owns_core_province = 50
+				owns_core_province = 2993
+				owns_core_province = 1759
+				owns_core_province = 51
+				owns_core_province = 4748
+				owns_core_province = 4786
+				owns_core_province = 2964
+				# Anhalt
+				owns_core_province = 58
+				# Mecklenburg
+				owns_core_province = 4749
+				owns_core_province = 46
+				owns_core_province = 2996
+			}
+		}
+		effect = {
+			change_tag = WNE # Country TAG
+			set_country_flag = formed_wendish_empire_flag # Country Formation Flag
+			custom_tooltip = form_wendish_empire_tt_3 # New Missions
+			custom_tooltip = dec1_decisions_blank
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = wendish
+					}
+				}
+				change_primary_culture = wendish
+			}
+			WNE = { # Capital change and bonuses
+				set_capital = 254 # Poznan
+				254 = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+				custom_tooltip = dec1_decisions_blank
+				custom_tooltip = dec1_government_rank_3 # Government Rank Change
+				# Dharma DLC check to prevent ugly tooltip
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+				}
+				add_government_reform = autocracy_reform
+				custom_tooltip = dec1_decisions_blank
+				# Our Place in the Empire Custom Event
+				if = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					country_event = { id = dec1_events.1 }
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Culture
+					# Claims
+					# Government Rank change
+					if = {
+						limit = {
+							NOT = {
+								government_rank = 3
+								}
+							}
+						set_government_rank = 3
+					}
+					# Government Type Change
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+								}
+							}
+						change_government = monarchy
+					}
+				}
+				# Custom Ideas check and change
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = WNE_ideas }
+					}
+					country_event = { id = ideagroups.1 }
+				}
+				# Custom Missions check and change
+				country_event = { id = dec1_events.3 }
+				custom_tooltip = dec1_decisions_blank
+				# National Ability
+				add_country_modifier = {
+					name = dec1_revenge_for_the_wendish_crusade
+					duration = 49275
+				}
+				# Increased Centralization
+				add_country_modifier = {
+					name = dec1_increased_centralization
+					duration = -1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #If there is no Poland then Polish minors will prioritize reforming it.
+	}
+
+}

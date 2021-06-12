@@ -51,13 +51,13 @@ country_decisions = {
 				province_id = 107
 				province_id = 108
 				province_id = 1774
-				province_id = 111				
+				province_id = 111
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5
 			NOT = { exists = LVE }
@@ -76,8 +76,8 @@ country_decisions = {
 			change_tag = LVE # Country TAG
 			set_country_flag = formed_lombardy_venetia_flag # Country Formation Flag
 			custom_tooltip = form_lombardy_venetia_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank	
-			LVE = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			LVE = { # Capital change and bonuses
 				set_capital = 104 # Milan
 				104 = {
 					add_base_tax = 1
@@ -85,7 +85,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -93,26 +93,26 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
-				hidden_effect = { # Hidden Effects to fix bad tooltips	
+				}
+				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
 					emilia_romagna_area = {
 						limit = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = LVE
-					}	
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -129,9 +129,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -146,17 +146,17 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_french_warfare
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}				
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400		
+		ai_importance = 400
 	}
 }

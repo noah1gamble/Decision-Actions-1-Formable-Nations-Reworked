@@ -2794,20 +2794,76 @@ SRB_ideas = {
 	}
 
 	SRB_army_reform = {
+		land_morale = 0.05
+		discipline = 0.05
+		mercenary_discipline = 0.005
 	}
 
 	SRB_arab_spring = {
+		culture_conversion_cost = -0.20
+		num_accepted_cultures = 1
 	}
 
 	SRB_legacy_of_nejd = {
+		institution_spread_from_true_faith = 0.1
 	}
 
 	SRB_unified_army = {
+		global_manpower_modifier = 0.05
+		extra_manpower_at_religious_war = yes
+	}
+}
+
+# Serbian Empire
+SRE_ideas = {
+	start = {
+		land_morale = 0.10
+		artillery_cost = -0.10
+	}
+
+	bonus = {
+		global_tax_modifier = 0.15
+	}
+
+	trigger = {
+		tag = SRE
+	}
+	free = yes	# will be added at load.
+
+	SRE_seizure_of_territory = {
+		governing_capacity_modifier = 0.1
+		max_absolutism = 10
+	}
+
+	SRE_rule_of_stefan_dusan = {
+		diplomatic_reputation = 2
+	}
+
+	SRE_protectorates_of_serbia = {
+		vassal_forcelimit_bonus = 0.1
+		vassal_income = 0.2
+	}
+
+	SRE_reign_in_our_falling_empire = {
+		defensiveness = 0.10
+	}
+
+	SRE_zakonopravilo = {
+		no_religion_penalty = yes
+	}
+
+	SRE_serbian_orthodox_church = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+
+	SRE_the_balkan_empire = {
+		prestige_decay = -0.01
+		legitimacy = 1
 	}
 }
 
 # Siebenbuergen
-SBG_ideas = { 
+SBG_ideas = {
 	start = {
 		defensiveness = 0.10
 		global_tax_modifier = 0.05
@@ -2827,7 +2883,7 @@ SBG_ideas = {
 	}
 
 	SBG_kingdom_of_succession = {
-		legitimacy = 1 
+		legitimacy = 1
 	}
 
 	SBG_enact_military_police_units = {
@@ -2852,7 +2908,7 @@ SBG_ideas = {
 }
 
 # South German Federation
-SGF_ideas = { 
+SGF_ideas = {
 	start = {
 		merchants = 1
 		power_projection_from_insults = 0.1

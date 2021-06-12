@@ -3,10 +3,15 @@ country_decisions = {
 	unite_hawaii = {
 		major = yes
 		potential = {
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			NOT = { tag = UHW }
+			is_former_colonial_nation = no
+			is_playing_custom_nation = no
+			is_colonial_nation = no
 			primary_culture = polynesian
+			NOT = {
+				tag = HLR
+				tag = PAP
+				tag = UHW
+			}
 			capital_scope = {
 				area = northern_polynesia_area
 				is_core = ROOT
@@ -18,7 +23,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 2	
+					num_of_cities = 2
 				}
 			}
 		}
@@ -33,7 +38,9 @@ country_decisions = {
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
+			adm_tech = 5
+			NOT = { exists = UHW }
+			is_subject = no
 			is_at_war = no
 			capital_scope = {
 				area = northern_polynesia_area
@@ -44,7 +51,6 @@ country_decisions = {
 				area = northern_polynesia_area
 				is_city = yes
 			}
-			NOT = { exists = UHW }
 		}
 		effect = {
 			change_tag = UHW

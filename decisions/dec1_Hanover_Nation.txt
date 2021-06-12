@@ -7,7 +7,7 @@ country_decisions = {
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			primary_culture = hannoverian
-			NOT = { 
+			NOT = {
 				has_country_flag = formed_hanover_nation_flag
 				exists = HAN
 				tag = HAN
@@ -16,7 +16,14 @@ country_decisions = {
 				tag = GER
 				tag = PRU
 				tag = HSA
-			}	
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 2
+				}
+			}
 		}
 		provinces_to_highlight = {
 			OR = {

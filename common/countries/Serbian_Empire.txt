@@ -1,10 +1,10 @@
-#Country Name: Please see filename.
+# Serbian Empire
 
 graphical_culture = easterngfx
 
-color = { 166  72  57 }
+color = { 204 185 126 }
 
-revolutionary_colors = { 13  0  5 }
+revolutionary_colors = { 201 177 36 }
 
 historical_idea_groups = {
 	defensive_ideas

@@ -5,13 +5,14 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no		
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
+				num_of_cities = 8 # Cannot have more than 8 cities for this to show
 				has_country_flag = formed_siebenbuergen_nation_flag
 				exists = SBG
 				tag = SBG
 				tag = PAP
-				tag = TUR 
+				tag = TUR
 				tag = EUR
 			}
 			OR = {
@@ -29,17 +30,17 @@ country_decisions = {
 			OR = {
 				province_id = 4128 # Koenigsboden
 				province_id = 158 # Maros
-				province_id = 4127 # Turda				
+				province_id = 4127 # Turda
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5
 			NOT = { exists = SBG }
-			NOT = { num_of_cities = 8  }			
+			NOT = { num_of_cities = 8 }
 			is_subject = no
 			is_at_war = no
 			owns_core_province = 4128 # Koenigsboden
@@ -51,8 +52,8 @@ country_decisions = {
 			set_country_flag = formed_siebenbuergen_nation_flag # Country Formation Flag
 			custom_tooltip = form_siebenbuergen_tt_2 # New Missions
 			custom_tooltip = form_siebenbuergen_tt_3 # Region/Area Claims
-			custom_tooltip = dec1_decisions_blank	
-			SBG = { # Capital change and bonuses				
+			custom_tooltip = dec1_decisions_blank
+			SBG = { # Capital change and bonuses
 				set_capital = 158 # Köln
 				158 = {
 					add_base_tax = 1
@@ -60,7 +61,7 @@ country_decisions = {
 					add_base_manpower = 1
 				}
 				# Government Rank Change
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -68,17 +69,17 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank						
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					carpathia_region = {
@@ -86,8 +87,8 @@ country_decisions = {
 							NOT = { owned_by = ROOT }
 						}
 						add_permanent_claim = SBG
-					}	
-					# Government Rank change				
+					}
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -104,9 +105,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -121,18 +122,18 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_twenty_castles
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}					
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400	
+		ai_importance = 400
 	}
-	
+
 }

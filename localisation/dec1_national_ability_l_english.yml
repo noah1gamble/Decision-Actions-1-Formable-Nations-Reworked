@@ -1,18 +1,18 @@
 ﻿l_english:
- 
+
  #######################################
  # UNIQUE NATIONAL TRAITS LOCALISATION #
  #######################################
- 
+
  dec1_increased_centralization: "Increased Centralization"
  dec1_increased_centralization_desc: "With the foundation of a new state we have increased our authority over local polities; with this comes great benifit of reducing the autonomy of our subjects."
 
- ######################## 
+ ########################
  # New Custom Countries #
  ########################
 
   # Abyssinia
-  
+
  dec1_house_of_solomon: "the Royal House of Solomon"
  dec1_house_of_solomon_desc: ""
 
@@ -278,6 +278,10 @@
 
  dec1_house_of_saud: "House of Saud"
 
+ # Serbian Empire
+
+ dec1_the_mighty_serbia: "The Mighty Serbia"
+
  # Siebenbuergen
 
  dec1_twenty_castles: "20 Castle Doctrine"
@@ -374,7 +378,7 @@
 
  dec1_remnants_of_the_mongols: "Remnants of the Mongols"
 
- # Great Britain 
+ # Great Britain
 
  dec1_the_british_commonwealth: "The British Commonwealth"
 
@@ -485,7 +489,7 @@
  # Romania
 
  dec1_legacy_of_rome: "Legacy of Rome"
-	
+
  # Roman Empire
 
  dec1_true_roman_successor: "True Roman Successor"

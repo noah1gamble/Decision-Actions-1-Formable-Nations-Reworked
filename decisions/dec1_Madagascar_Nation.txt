@@ -1,43 +1,39 @@
 country_decisions = {
 
-	polish_nation = {
+	madagascar_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			primary_culture = madagasque
 			NOT = {
-				has_country_flag = formed_poland_flag
-				exists = POL
-				tag = POL
-				tag = LIT
-				tag = JGE
-				tag = HLR
+				has_country_flag = formed_madagascar_nation_flag
+				exists = MGS
+				tag = MGS
 				tag = PAP
-			}
-			OR = {
-				primary_culture = polish
-				primary_culture = pommeranian
-				primary_culture = schlesian
-				tag = DNZ
+				tag = HLR
+				tag = ALG
+				tag = ARB
+				tag = EGY
+				tag = CTG
+				tag = ADU
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 6
+					num_of_cities = 8
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 262	# Krakow
-				province_id = 257	# Warszawa
-				province_id = 4528	# Kujawy
-				province_id = 255	# Kalish
-				province_id = 258	# Sieradz
-				province_id = 259	# Sandomierz
-				province_id = 1939	# Leczyca
+				# Madagascar
+				area = madagascar_highlands_area
+				area = betsimasaraka_area
+				area = sakalava_area
+				area = southern_madagascar
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -46,33 +42,35 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			NOT = { exists = POL }
-			is_at_war = no
+			NOT = { exists = MGS }
 			is_subject = no
-			owns_core_province = 262	# Krakow
-			owns_core_province = 257	# Warszawa
-			owns_core_province = 254	# Poznan
-			owns_core_province = 255	# Kalish
-			owns_core_province = 258	# Sieradz
-			owns_core_province = 259	# Sandomierz
-			owns_core_province = 1939	# Leczyca
+			is_at_war = no
+			madagascar_highlands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			betsimasaraka_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sakalava_area = {
+				type = all
+				owned_by = ROOT
+			}
+			southern_madagascar = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
-			change_tag = POL # Country TAG
-			set_country_flag = formed_poland_flag # Country Formation Flag
-			custom_tooltip = form_poland_tt_2 # New Missions
+			change_tag = MGS # Country TAG
+			set_country_flag = formed_madagascar_nation_flag # Country Formation Flag
+			custom_tooltip = form_madagascar_tt_2 # New Missions
+			custom_tooltip = form_madagascar_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank
-			if = {
-				limit = {
-					NOT = {
-						primary_culture = polish
-					}
-				}
-				change_primary_culture = polish
-			}
-			POL = { # Capital change and bonuses
-				set_capital = 262 # Krakow
-				262 = {
+			MGS = { # Capital change and bonuses
+				set_capital = 1792 # Merina
+				1792 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -86,6 +84,7 @@ country_decisions = {
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
+				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
@@ -96,8 +95,13 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Culture
 					# Claims
+					mozambique_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MGS
+					}
 					# Government Rank change
 					if = {
 						limit = {
@@ -121,7 +125,7 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = POL_ideas }
+						NOT = { has_idea_group = MGS_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -130,7 +134,7 @@ country_decisions = {
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_polish_uprising
+					name = dec1_united_the_kingdom_of_merina
 					duration = 49275
 				}
 				# Increased Centralization
@@ -143,7 +147,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #If there is no Poland then Polish minors will prioritize reforming it.
+		ai_importance = 400
 	}
-
 }

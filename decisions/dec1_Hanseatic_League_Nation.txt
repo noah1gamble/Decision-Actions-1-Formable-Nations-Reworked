@@ -1,7 +1,7 @@
 country_decisions = {
 
 	# TODO: split simple formation and complicated formation between government types
-	# (Republics can see the simple formation, Monarchies cannot. 
+	# (Republics can see the simple formation, Monarchies cannot.
 	# Monarchies see complicated formation but not simple formation.)
 
 	hanseatic_league_nation = {
@@ -9,8 +9,8 @@ country_decisions = {
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
-			is_colonial_nation = no			
-			NOT = { 
+			is_colonial_nation = no
+			NOT = {
 				has_country_flag = formed_hanseatic_league_flag
 				exists = HNS
 				tag = HNS
@@ -59,13 +59,13 @@ country_decisions = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-		}		
+		}
 		allow = {
 			adm_tech = 5
-			NOT = { exists = HNS }			
+			NOT = { exists = HNS }
 			is_subject = no
 			is_at_war = no
-			OR = { 
+			OR = {
 				AND = { # Simple formation of Hansa (Must be a republic)
 					government = republic
 					owns_core_province = 44 # Hamburg
@@ -117,7 +117,7 @@ country_decisions = {
 					livonia_area = {
 						type = all
 						owned_by = ROOT
-					}					
+					}
 				}
 			}
 		}
@@ -125,7 +125,7 @@ country_decisions = {
 			change_tag = HNS # Country TAG
 			set_country_flag = formed_hanseatic_league_flag # Country Formation Flag
 			custom_tooltip = form_hanseatic_league_tt_2 # New Missions
-			custom_tooltip = dec1_decisions_blank				
+			custom_tooltip = dec1_decisions_blank
 			HNS = { # Capital change and bonuses
 				set_capital = 44 # Hamburg
 				44 = {
@@ -133,7 +133,7 @@ country_decisions = {
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_2 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -141,19 +141,19 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}			
+				}
 				add_government_reform = autocracy_reform
-				custom_tooltip = dec1_decisions_blank											
+				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
 						is_part_of_hre = yes
 					}
-					country_event = { id = dec1_events.1 }	
-				}	
+					country_event = { id = dec1_events.1 }
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Claims
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -172,7 +172,7 @@ country_decisions = {
 						change_government = monarchy
 					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -187,13 +187,13 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_the_hansa
 					duration = 49275
-				}				
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization
 					duration = -1
 				}
-			}			
+			}
 		}
 		ai_will_do = {
 			factor = 1
