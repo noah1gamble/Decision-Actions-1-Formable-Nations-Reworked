@@ -1,15 +1,16 @@
  country_decisions = {
 
-	tibetan_nation = {
+	bhutan_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
 			NOT = {
-				has_country_flag = formed_tibetan_empire_nation_flag
-				exists = TIE
-				exists = TIB
+				num_of_cities = 2 # Will not show if more than 2 cities owned
+				has_country_flag = formed_bhutan_nation_flag
+				exists = BHU
+				tag = BHU
 				tag = TIB
 				tag = TIE
 				tag = PAP
@@ -19,53 +20,38 @@
 				tag = HIM
 			}
 			OR = {
-				primary_culture = nepali
+				culture_group = eastern_aryan
 				primary_culture = tibetan
-				primary_culture = bai
-				primary_culture = yi
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 1
 				}
 			}
 		}
 		provinces_to_highlight = {
-			OR = { # Tibetan Cores
-				province_id = 565
-				province_id = 677
-				province_id = 678
-				province_id = 2135
-				province_id = 4516
-			}
+			province_id = 565 # Bhutan
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
-			NOT = { exists = TIB }
+			NOT = { exists = BHU }
 			is_at_war = no
 			is_nomad = no
-			religion = vajrayana
-			owns_core_province = 565
-			owns_core_province = 677
-			owns_core_province = 678
-			owns_core_province = 2135
-			owns_core_province = 4471
-			owns_core_province = 4516
+			owns_core_province = 565 # Bhutan
 		}
 		effect = {
-			change_tag = TIB # Country TAG
-			set_country_flag = formed_tibetan_nation_flag # Country Formation Flag
-			custom_tooltip = form_tibet_tt_2 # New Missions
-			custom_tooltip = form_tibet_tt_3 # Region/Area Claims
+			change_tag = BHU # Country TAG
+			set_country_flag = formed_bhutan_nation_flag # Country Formation Flag
+			custom_tooltip = form_bhutan_tt_2 # New Missions
 			custom_tooltip = dec1_decisions_blank
-			TIB = { # Capital change and bonuses
-				set_capital = 677 # Lhasa
-				677 = {
+			BHU = { # Capital change and bonuses
+				set_capital = 565 # Bhutan
+				565 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -90,19 +76,7 @@
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Region/Area Claims
-					tibet_region = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = TIB
-					}
-					shanshan_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = TIB
-					}
+					# Region/Area Claims (none little bhutan.. I am sorry)
 					# Government Rank change
 					if = {
 						limit = {
@@ -126,7 +100,7 @@
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = TIB_ideas }
+						NOT = { has_idea_group = BHU_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -135,7 +109,7 @@
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_legacy_of_the_tibetan_empire
+					name = dec1_dragon_kingdom
 					duration = 49275
 				}
 				# Increased Centralization

@@ -103,7 +103,6 @@ country_decisions = {
 			change_tag = TTS # Country TAG
 			set_country_flag = formed_two_sicilies_nation_flag # Country Formation Flag
 			custom_tooltip = form_two_sicilies_tt_2 # New Missions
-			custom_tooltip = form_two_sicilies_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank
 			TTS = { # Capital change and bonuses
 				set_capital = 121 # Napoli
@@ -125,13 +124,6 @@ country_decisions = {
 				# Reform Change
 				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
-				# Claims
-				italy_region = {
-					limit = {
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = TTS
-				}
 				# Our Place in the Empire Custom Event
 				if = {
 					limit = {
@@ -163,9 +155,9 @@ country_decisions = {
 				if = {
 					limit = {
 						has_custom_ideas = no
+						NOT = { has_idea_group = TTS_ideas }
 					}
 					country_event = { id = ideagroups.1 }
-					custom_tooltip = dec1_decisions_blank
 				}
                 country_event = { id = dec1_events.3 }
                 custom_tooltip = dec1_decisions_blank

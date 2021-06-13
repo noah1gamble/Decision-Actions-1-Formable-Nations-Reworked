@@ -91,15 +91,15 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			OR = {
-				# Northern Italy (less reqs, less difficult)
+				# Northern Italy (less reqs, less difficult.. KING IN THE NORTH!)
 				custom_trigger_tooltip = {
 					tooltip = form_italy_tt_4
 						# Liguria
-					owns = 102					
+					owns = 102
 					owns = 2992
 					owns = 101
 						# Piedmont
-					owns = 1875	
+					owns = 1875
 					owns = 103
 					owns = 2981
 					owns = 2979
@@ -107,78 +107,73 @@ country_decisions = {
 					owns = 104
 					owns = 107
 					owns = 1862
-					owns = 109	
+					owns = 109
 						# Venetia
 					owns = 108
 					owns = 1774
 					owns = 111
-					owns = 112	
+					owns = 112
 						# Emilia-Romagna
 					owns = 113
 					owns = 114
 					owns = 106
-					owns = 105								
+					owns = 105
 				}
-				# ALL of Italy (pretty hard)
-				italy_region = {
-					type = all
-					owned_by = ROOT
-				}								
 				# Southern Italy (requires some extra reqs, more difficult)
 				AND = {
 					custom_trigger_tooltip = {
 						tooltip = form_italy_tt_5
 						owns = 2984
-						2984 = {
-							culture = neapolitan
-						}						
+						2984 = { culture = neapolitan }
 						owns = 1934
-						1934 = {
-							culture = neapolitan
-						}	
+						1934 = { culture = neapolitan }
 						owns = 122
-						122 = {
-							culture = neapolitan
-						}	
+						122 = { culture = neapolitan }
 						owns = 2983
-						2983 = {
-							culture = neapolitan
-						}	
+						2983 = { culture = neapolitan }
 						owns = 2985
-						2985 = {
-							culture = neapolitan
-						}	
+						2985 = { culture = neapolitan }
 						owns = 120
-						120 = {
-							culture = neapolitan
-						}	
+						120 = { culture = neapolitan }
 						owns = 121
-						121 = {
-							culture = neapolitan
-						}	
+						121 = { culture = neapolitan }
 					}
 					121 = {
-						development = 37 # Raised to 37 for balance
+						development = 35
 						base_tax = 10
 					}
-					PAP = {
-						OR = {
-							AND = {
-								war_with = ROOT # Is at war with the pope
-								NOT = { # Siege down the Pope
-									controls = 118
-								}
+					OR = {
+						AND = {
+							war_with = PAP # Is at war with the pope
+							PAP = {
+								NOT = { controls = 118 }
 							}
-							AND = { # Pope is a subject of ROOT and does not control Rome
+							ROOT = { # Siege down the Pope!
+								controls = 118
+							}
+						}
+						AND = { # Pope is a subject of ROOT and does not control Rome
+							PAP = {
 								is_subject = yes
 								is_subject_of = ROOT
-								NOT = { 
-									owns = 118 
+								NOT = {
+									owns = 118
 								}
 							}
 						}
 					}
-				}					
+				}
+				# At least 24 provinces in Italy with accepted culture (moderate difficulty, requires assimilation)
+				num_of_owned_provinces_with = {
+					value = 24
+					region = italy_region
+					has_owner_accepted_culture = yes
+				}
+				# ALL of Italy (pretty hard)
+				italy_region = {
+					type = all
+					owned_by = ROOT
+				}
 			}
 		}
 		effect = {
@@ -186,16 +181,16 @@ country_decisions = {
 			set_country_flag = formed_italian_nation_flag # Country Formation Flag
 			custom_tooltip = form_italy_tt_1 # New Missions
 			custom_tooltip = form_italy_tt_2 # Region/Area Claims
-			custom_tooltip = form_italy_tt_3 # Region/Area Claims	
-			custom_tooltip = dec1_decisions_blank	
-			ITA = { # Capital change and bonuses				
+			custom_tooltip = form_italy_tt_3 # Region/Area Claims
+			custom_tooltip = dec1_decisions_blank
+			ITA = { # Capital change and bonuses
 				set_capital = 118 # Roma
 				118 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
 				}
-				custom_tooltip = dec1_decisions_blank				
+				custom_tooltip = dec1_decisions_blank
 				custom_tooltip = dec1_government_rank_3 # Government Rank Change
 				# Dharma DLC check to prevent ugly tooltip
 				if = {
@@ -203,9 +198,9 @@ country_decisions = {
 						has_dlc = "Dharma"
 					}
 					custom_tooltip = dec1_government_change_monarchy # Government Type Change
-				}				
+				}
 				# Reform Change
-				add_government_reform = autocracy_reform						
+				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -213,7 +208,7 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					country_event = { id = dec1_events.1 }
-				}	
+				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
 					# Region/Area Claims
 					italy_region = {
@@ -228,7 +223,7 @@ country_decisions = {
 						}
 						add_permanent_claim = ITA
 					}
-					# Government Rank change				
+					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
@@ -245,9 +240,9 @@ country_decisions = {
 								}
 							}
 						change_government = monarchy
-					}																		
+					}
 				}
-				# Custom Ideas check and change		
+				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -262,7 +257,7 @@ country_decisions = {
 				add_country_modifier = {
 					name = dec1_the_crown_of_lombardy
 					duration = 49275
-				}					
+				}
 				# Increased Centralization
 				add_country_modifier = {
 					name = dec1_increased_centralization

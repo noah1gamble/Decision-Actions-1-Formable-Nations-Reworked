@@ -1,46 +1,27 @@
 country_decisions = {
 
-	franco_iberia_nation = {
+	#####################
+	# Republic of Malta #
+	#####################
+
+	malta_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			owns = 126 # Malta
 			NOT = {
-				has_country_flag = formed_franco_iberia_nation_flag
-				exists = FIB
+				num_of_cities = 8 # Cannot have more than 8 cities for this to show
+				has_country_flag = formed_malta_nation_flag
+				exists = MLT
+				tag = MLT
 				tag = PAP
-				tag = HLR
-				tag = KNI
-				tag = GRA
-				tag = ADU
-				tag = EUR
-				tag = LSE
-				tag = KOJ
-				tag = BSQ
-				tag = CEU
-				tag = FRE
-				tag = IBE
-				tag = ROP
-			}
-			OR = {
-				culture_group = iberian
-				culture_group = french
-				primary_culture = basque
-				primary_culture = breton
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 8
-				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = france_region
-				region = iberia_region
+				province_id = 126 # Malta
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -48,31 +29,21 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 15
-			NOT = { exists = FIB }
+			adm_tech = 5
+			NOT = { exists = MLT }
 			is_subject = no
 			is_at_war = no
-			france_region = {
-				type = all
-				owned_by = ROOT
-			}
-			owns_core_province = 183
-			iberia_region = {
-				type = all
-				owned_by = ROOT
-			}
-			owns_core_province = 219
+			owns = 126
 		}
-	 	effect = {
-			change_tag = FIB # Country TAG
-			set_country_flag = formed_franco_iberia_nation_flag # Country Formation Flag
-			custom_tooltip = form_franco_iberia_tt_2 # New Missions
-			custom_tooltip = form_franco_iberia_tt_3 # Claims
-			custom_tooltip = form_franco_iberia_tt_4 # Claims
+		effect = {
+			change_tag = MLT # Country TAG
+			set_country_flag = formed_malta_nation_flag # Country Formation Flag
+			custom_tooltip = form_malta_tt_1 # New Missions
+			custom_tooltip = form_malta_tt_2 # Region/Area Claims
 			custom_tooltip = dec1_decisions_blank
-			FIB = { # Capital change and bonuses
-				set_capital = 210 # Navarra
-				210 = {
+			MLT = { # Capital change and bonuses
+				set_capital = 126 # Malta
+				126 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -84,10 +55,10 @@ country_decisions = {
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_monarchy # Government Type Change
+					custom_tooltip = dec1_government_change_republic # Government Type Change
 				}
 				# Reform Change
-				add_government_reform = autocracy_reform
+				add_government_reform = oligarchy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -97,39 +68,45 @@ country_decisions = {
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
+					# Region/Area Claims
+					western_sicily_area = {
+						limit = {
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = MLT
+					}
 					# Government Rank change
 					if = {
 						limit = {
 							NOT = {
-								government_rank = 3
+								government_rank = 2
 								}
 							}
-						set_government_rank = 3
+						set_government_rank = 2
 					}
 					# Government Type Change
 					if = {
 						limit = {
 							NOT = {
-								government = monarchy
+								government = republic
 								}
 							}
-						change_government = monarchy
+						change_government = republic
 					}
 				}
 				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = FIB_ideas }
+						NOT = { has_idea_group = MLT_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
-				# Custom Missions check and change
-				country_event = { id = dec1_events.3 }
+                country_event = { id = dec1_events.3 }
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_castilian_franco_cultural_unity
+					name = dec1_the_kingdom_of_malta
 					duration = 49275
 				}
 				# Increased Centralization
@@ -144,4 +121,7 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+
+	# TODO: unique event for any nation that owns Malta to become Malta.. higher chance for Sicily
+
 }

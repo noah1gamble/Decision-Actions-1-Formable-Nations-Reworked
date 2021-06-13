@@ -474,7 +474,7 @@
  form_shan_tt_1: "Country obtains §YShan§! missions."
 
  form_sokoto_tt_2: "Country obtains §YSokoto§! missions."
- form_sokoto_tt_3: "Country gains a permanent claim on §YSokoto§! cores"
+ form_sokoto_tt_3: "Country gains a permanent claim on §YSokoto§! cores."
 
  form_tripoli_tt_2: "Country obtains §YTripoli§! missions."
 
@@ -482,7 +482,9 @@
  form_tuscany_tt_3: "Country gains a permanent claim on all provinces with §YTuscan§! culture."
 
  form_two_sicilies_tt_2: "Country obtains §YTwo Sicilies§! missions."
- form_two_sicilies_tt_3: "Country gains a permanent claim on §YItaly§! region."
+
+ form_mali_empire_tt_2: "Country obtains §YEmpire of Mali§! missions."
+ form_mali_empire_tt_3: "Country gains a permanent claim on §YGuinea Coast§! area."
 
  ############################
  # COLONIAL NATION TOOLTIPS #
@@ -589,6 +591,8 @@
  form_tibet_tt_2: "Country obtains §YTibet§! missions."
  form_tibet_tt_2: "Country gains a permanent claim on §Tibet§! region."
  form_tibet_tt_2: "Country gains a permanent claim on §Shanshan§! area."
+
+ form_bhutan_tt_2: "Country obtains §YBhutan§! missions."
 
  #######################
  # UNIQUE LOCALISATION #

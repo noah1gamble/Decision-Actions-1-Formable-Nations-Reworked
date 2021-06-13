@@ -282,12 +282,8 @@ dec1_british_parliament_british_naval_concessions = {
 		# French Empire
 
 	dec1_the_emperor_general = {
-		monarch_admin_power = 2
-		monarch_diplomatic_power = 2
-		monarch_military_power = 2
-		army_tradition_decay = -0.1
-		heir_chance = 0.5
-		war_exhaustion = 0.2 # Debuff
+		army_tradition_decay = -0.05
+		war_exhaustion = -0.1
 	}
 
 		# Frieslande

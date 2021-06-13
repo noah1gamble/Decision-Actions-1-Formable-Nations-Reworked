@@ -153,7 +153,11 @@
  MGS: "Madagascar"
  MGS_ADJ: "Malagasy"
  OCT: "Occitania"
- OCT: "Occitan"
+ OCT_ADJ: "Occitan"
+ MLT: "Malta"
+ MLT_ADJ: "Maltese"
+ MLE: "Empire of Mali"
+ MLE: "Malian"
  # Vanilla Countries
  ARB: "Arabian Empire"
  ARB_ADJ: "Arabian"

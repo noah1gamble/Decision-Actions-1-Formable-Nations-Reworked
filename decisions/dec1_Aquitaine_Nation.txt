@@ -1,71 +1,68 @@
- country_decisions = {
+country_decisions = {
 
-	tibetan_nation = {
+	aquitaine_nation = {
 		major = yes
 		potential = {
 			is_former_colonial_nation = no
 			is_playing_custom_nation = no
 			is_colonial_nation = no
+			primary_culture = gascon
 			NOT = {
-				has_country_flag = formed_tibetan_empire_nation_flag
-				exists = TIE
-				exists = TIB
-				tag = TIB
-				tag = TIE
+				has_country_flag = formed_occitania_nation_flag
+				exists = OCT
+				tag = OCT
+				tag = FRA
+				tag = FRE
+				tag = HLR
 				tag = PAP
-				tag = HIN
-				tag = BHA
-				tag = TIB
-				tag = HIM
-			}
-			OR = {
-				primary_culture = nepali
-				primary_culture = tibetan
-				primary_culture = bai
-				primary_culture = yi
 			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3
+					num_of_cities = 6
 				}
 			}
 		}
-		provinces_to_highlight = {
-			OR = { # Tibetan Cores
-				province_id = 565
-				province_id = 677
-				province_id = 678
-				province_id = 2135
-				province_id = 4516
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
 		allow = {
-			NOT = { exists = TIB }
+			adm_tech = 10
+			NOT = { exists = AQI }
+			is_subject = no
 			is_at_war = no
-			is_nomad = no
-			religion = vajrayana
-			owns_core_province = 565
-			owns_core_province = 677
-			owns_core_province = 678
-			owns_core_province = 2135
-			owns_core_province = 4471
-			owns_core_province = 4516
+			pyrenees_area = {
+				type = all
+				owned_by = ROOT
+			}
+			languedoc_area = {
+				type = all
+				owned_by = ROOT
+			}
+			guyenne_area = {
+				type = all
+				owned_by = ROOT
+			}
+			poitou_area = {
+				type = all
+				owned_by = ROOT
+			}
+			massif_central_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_all_provinces = {
+				continent = europe
+				culture = gascon
+			}
 		}
 		effect = {
-			change_tag = TIB # Country TAG
-			set_country_flag = formed_tibetan_nation_flag # Country Formation Flag
-			custom_tooltip = form_tibet_tt_2 # New Missions
-			custom_tooltip = form_tibet_tt_3 # Region/Area Claims
+			change_tag = AQI # Country TAG
+			set_country_flag = formed_occitania_nation_flag # Country Formation Flag
+			custom_tooltip = form_occitania_nation_tt_2 # New Missions
+			custom_tooltip = form_occitania_nation_tt_3 # Claims
 			custom_tooltip = dec1_decisions_blank
-			TIB = { # Capital change and bonuses
-				set_capital = 677 # Lhasa
-				677 = {
+			AQI = { # Capital change and bonuses
+				set_capital = 196 # Toulouse
+				196 = {
 					add_base_tax = 1
 					add_base_production = 1
 					add_base_manpower = 1
@@ -78,9 +75,10 @@
 					limit = {
 						has_dlc = "Dharma"
 					}
-					custom_tooltip = dec1_government_change_theocracy # Government Type Change
+					custom_tooltip = dec1_government_change_monarchy # Government Type Change
 				}
-				add_government_reform = monastic_order_reform
+				# Reform Change
+				add_government_reform = autocracy_reform
 				custom_tooltip = dec1_decisions_blank
 				# Our Place in the Empire Custom Event
 				if = {
@@ -90,18 +88,13 @@
 					country_event = { id = dec1_events.1 }
 				}
 				hidden_effect = { # Hidden Effects to fix bad tooltips
-					# Region/Area Claims
-					tibet_region = {
+					# Claims
+					france_region = {
 						limit = {
 							NOT = { owned_by = ROOT }
+							culture = gascon
 						}
-						add_permanent_claim = TIB
-					}
-					shanshan_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = TIB
+						add_permanent_claim = OCT
 					}
 					# Government Rank change
 					if = {
@@ -116,17 +109,17 @@
 					if = {
 						limit = {
 							NOT = {
-								government = theocracy
+								government = monarchy
 								}
 							}
-						change_government = theocracy
+						change_government = monarchy
 					}
 				}
 				# Custom Ideas check and change
 				if = {
 					limit = {
 						has_custom_ideas = no
-						NOT = { has_idea_group = TIB_ideas }
+						NOT = { has_idea_group = OCT_ideas }
 					}
 					country_event = { id = ideagroups.1 }
 				}
@@ -135,7 +128,7 @@
 				custom_tooltip = dec1_decisions_blank
 				# National Ability
 				add_country_modifier = {
-					name = dec1_legacy_of_the_tibetan_empire
+					name = dec1_anti_french_policy
 					duration = 49275
 				}
 				# Increased Centralization

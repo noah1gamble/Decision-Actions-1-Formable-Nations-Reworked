@@ -279,6 +279,12 @@
     occitania_nation_title: "@OCT Occitania"
     occitania_nation_desc: ""
 
+    malta_nation_title: "@MLT Republic of Malta"
+    malta_nation_desc: ""
+
+    mali_empire_nation_title: "@MLE The Empire of Mali"
+    mali_empire_nation_desc: ""
+
       ############################
       # Reworked Vanilla Nations #
       ############################
@@ -292,8 +298,11 @@
     bharat_nation_title: "@BHA Unite the lands of Bharat"
     bharat_nation_desc: "Form the mighty Bharat and bring all the lands of the Indian subcontinent under your rule."
 
+    bhutan_nation_title: "@BHU Dragon Kingdom"
+    bhutan_nation_desc: ""
+
     bukhara_nation_title: "@BUK Settle into the Silk Roads"
-    bukhara_nation_desc: "Giving up the wild steppe for the ancient settled cities of the Silk Road in Transoxania will allow us to settle in the lands whose very names vall to midn fabulous wealth, but if we push this far south into settled land our wild cousins to the north will no longer accept our authority." 
+    bukhara_nation_desc: "Giving up the wild steppe for the ancient settled cities of the Silk Road in Transoxania will allow us to settle in the lands whose very names vall to midn fabulous wealth, but if we push this far south into settled land our wild cousins to the north will no longer accept our authority."
 
     commonwealth_poland_nation_title: "@PLC Polish-Lithuanian Commonwealth"
     commonwealth_poland_nation_desc: "Replace the personal union between Poland and Lithuania with a real union, welding the two countries together into one powerful state, capable of withstanding our enemies."
